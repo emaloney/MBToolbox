@@ -18,7 +18,7 @@ replacement methods.</Abstract>
 			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)replaceRegexMatches:(id)pattern withTemplate:(id)templ</Declaration>
+			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -39,7 +39,7 @@ replacement methods.</Abstract>
 			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)replaceRegexMatches:(id)pattern withTemplate:(id)templ options:(id)options</Declaration>
+			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -64,7 +64,7 @@ replacement methods.</Abstract>
 			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)replaceRegexMatches:(id)pattern withTemplate:(id)templ options:(id)options range:(id)range</Declaration>
+			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -93,7 +93,7 @@ replacement methods.</Abstract>
 			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)replaceRegexMatches:(id)pattern withTemplate:(id)templ options:(id)options range:(id)range error:(id)errPtr</Declaration>
+			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -123,7 +123,6 @@ replacement methods.</Abstract>
             <NodeRef refid="30"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

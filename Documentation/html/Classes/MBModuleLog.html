@@ -231,7 +231,7 @@ given <a href="../Protocols/MBModule.html"><code>MBModule</code></a>.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)logForModule:(id)<em>module</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)logForModule:(NSObject&lt;MBModule&gt; *)<em>module</em></code></div>
 
     
 	
@@ -290,7 +290,7 @@ implementation class.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)logForModuleClass:(id)<em>moduleCls</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)logForModuleClass:(Class)<em>moduleCls</em></code></div>
 
     
 	
@@ -357,7 +357,7 @@ implementation class.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarning:(id)<em>warning</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarning:(NSString *)<em>warning</em></code></div>
 
     
 	
@@ -409,7 +409,7 @@ implementation class.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarningWithFormat:(id)<em>format</em>, <em>...</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarningWithFormat:(NSString *)<em>format</em>, <em>...</em></code></div>
 
     
 	
@@ -468,7 +468,7 @@ implementation class.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedError:(id)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedError:(NSString *)<em>error</em></code></div>
 
     
 	
@@ -520,7 +520,7 @@ implementation class.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedErrorWithFormat:(id)<em>format</em>, <em>...</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedErrorWithFormat:(NSString *)<em>format</em>, <em>...</em></code></div>
 
     
 	
@@ -572,9 +572,6 @@ implementation class.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>

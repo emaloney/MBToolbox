@@ -318,7 +318,7 @@ for additional information.</p><div class="warning"><p><strong>Warning:</strong>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSUInteger)attachCountForService:(id)<em>service</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)attachCountForService:(MBService *)<em>service</em></code></div>
 
     
 	
@@ -369,7 +369,7 @@ for additional information.</p><div class="warning"><p><strong>Warning:</strong>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)attachToService:(id)<em>service</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)attachToService:(MBService *)<em>service</em></code></div>
 
     
 	
@@ -423,7 +423,7 @@ count by one.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)attachToServiceClass:(id)<em>serviceClass</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)attachToServiceClass:(Class)<em>serviceClass</em></code></div>
 
     
 	
@@ -483,7 +483,7 @@ count by one.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)attachToServiceClassNamed:(id)<em>serviceClassName</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)attachToServiceClassNamed:(NSString *)<em>serviceClassName</em></code></div>
 
     
 	
@@ -542,7 +542,7 @@ count by one.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)detachFromService:(id)<em>service</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)detachFromService:(MBService *)<em>service</em></code></div>
 
     
 	
@@ -596,7 +596,7 @@ count by one.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)detachFromServiceClass:(id)<em>serviceClass</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)detachFromServiceClass:(Class)<em>serviceClass</em></code></div>
 
     
 	
@@ -657,7 +657,7 @@ count by one.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)detachFromServiceClassNamed:(id)<em>serviceClassName</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)detachFromServiceClassNamed:(NSString *)<em>serviceClassName</em></code></div>
 
     
 	
@@ -717,7 +717,7 @@ decreases to zero.</p><div class="note"><p><strong>Note:</strong> Code should on
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)isServiceRunning:(id)<em>service</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)isServiceRunning:(MBService *)<em>service</em></code></div>
 
     
 	
@@ -773,7 +773,7 @@ decreases to zero.</p><div class="note"><p><strong>Note:</strong> Code should on
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)serviceForClass:(id)<em>serviceClass</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)serviceForClass:(Class)<em>serviceClass</em></code></div>
 
     
 	
@@ -826,7 +826,7 @@ the specified name.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)serviceForClassName:(id)<em>serviceClassName</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)serviceForClassName:(NSString *)<em>serviceClassName</em></code></div>
 
     
 	
@@ -872,9 +872,6 @@ the specified name.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>

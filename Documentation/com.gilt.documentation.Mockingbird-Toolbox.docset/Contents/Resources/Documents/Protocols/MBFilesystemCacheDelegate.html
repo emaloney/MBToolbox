@@ -339,7 +339,7 @@ Used to convert a file into an object.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)objectFromCacheData:(id)<em>cacheData</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)objectFromCacheData:(NSData *)<em>cacheData</em></code></div>
 
     
 	
@@ -397,7 +397,7 @@ filesystem cache.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)shouldStoreObject:(id)<em>cacheObj</em> forKey:(id)<em>key</em> inFilesystemCache:(id)<em>cache</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)shouldStoreObject:(id)<em>cacheObj</em> forKey:(id)<em>key</em> inFilesystemCache:(MBFilesystemCache *)<em>cache</em></code></div>
 
     
 	
@@ -466,7 +466,7 @@ memory cache.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)shouldStoreObject:(id)<em>cacheObj</em> forKey:(id)<em>key</em> inMemoryCache:(id)<em>cache</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)shouldStoreObject:(id)<em>cacheObj</em> forKey:(id)<em>key</em> inMemoryCache:(MBFilesystemCache *)<em>cache</em></code></div>
 
     
 	
@@ -527,9 +527,6 @@ memory cache.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>

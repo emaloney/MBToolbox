@@ -79,7 +79,7 @@ the given cache key.</Abstract>
 			<Abstract type="html">Loads the cache object contained in the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (id)objectFromCacheFile:(id)path</Declaration>
+			<Declaration>- (id)objectFromCacheFile:(NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -157,7 +157,6 @@ cache.</Abstract>
             <NodeRef refid="26"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

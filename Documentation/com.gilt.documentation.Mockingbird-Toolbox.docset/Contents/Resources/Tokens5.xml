@@ -19,7 +19,7 @@ for cache objects.</Abstract>
 a cache object to a file.</Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>+ (MBCacheWriteOperation *)operationForWritingObject:(id)obj toFile:(id)path forCache:(id)fc</Declaration>
+			<Declaration>+ (MBCacheWriteOperation *)operationForWritingObject:(id)obj toFile:(NSString *)path forCache:(MBFilesystemCache *)fc</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>obj</Name>
@@ -44,7 +44,7 @@ a cache object to a file.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to write to the specified file.</Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithObject:(id)obj inCache:(id)fc forFilePath:(id)path</Declaration>
+			<Declaration>- (id)initWithObject:(id)obj inCache:(MBFilesystemCache *)fc forFilePath:(NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>obj</Name>
@@ -142,7 +142,6 @@ a cache object to a file.</Abstract>
             <NodeRef refid="5"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

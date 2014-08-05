@@ -56,7 +56,7 @@ written to a file.</Abstract>
 Used to convert a file into an object.</Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
-			<Declaration>- (id)objectFromCacheData:(id)cacheData</Declaration>
+			<Declaration>- (id)objectFromCacheData:(NSData *)cacheData</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cacheData</Name>
@@ -74,7 +74,7 @@ Used to convert a file into an object.</Abstract>
 memory cache.</Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)shouldStoreObject:(id)cacheObj forKey:(id)key inMemoryCache:(id)cache</Declaration>
+			<Declaration>- (BOOL)shouldStoreObject:(id)cacheObj forKey:(id)key inMemoryCache:(MBFilesystemCache *)cache</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cacheObj</Name>
@@ -99,7 +99,7 @@ memory cache.</Abstract>
 filesystem cache.</Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)shouldStoreObject:(id)cacheObj forKey:(id)key inFilesystemCache:(id)cache</Declaration>
+			<Declaration>- (BOOL)shouldStoreObject:(id)cacheObj forKey:(id)key inFilesystemCache:(MBFilesystemCache *)cache</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cacheObj</Name>
@@ -118,7 +118,6 @@ filesystem cache.</Abstract>
             <NodeRef refid="38"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

@@ -32,7 +32,7 @@ individual lines within a string.</Abstract>
 specified number of tab (0x09) characters.</Abstract>
 			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByIndentingEachLineWithTabs:(id)numberOfTabs</Declaration>
+			<Declaration>- (NSString *)stringByIndentingEachLineWithTabs:(NSUInteger)numberOfTabs</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>numberOfTabs</Name>
@@ -51,7 +51,7 @@ specified number of tab (0x09) characters.</Abstract>
 string.</Abstract>
 			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByIndentingEachLineWithPrefix:(id)prefix</Declaration>
+			<Declaration>- (NSString *)stringByIndentingEachLineWithPrefix:(NSString *)prefix</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>prefix</Name>
@@ -63,7 +63,6 @@ string.</Abstract>
             <NodeRef refid="31"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

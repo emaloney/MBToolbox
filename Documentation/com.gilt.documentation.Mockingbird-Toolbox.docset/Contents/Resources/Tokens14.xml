@@ -20,7 +20,7 @@ console log output.</Abstract>
 MBFieldListFormatter instance.</Abstract>
 			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>- (void)addDescriptionFieldsTo:(id)fmt</Declaration>
+			<Declaration>- (void)addDescriptionFieldsTo:(MBFieldListFormatter *)fmt</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fmt</Name>
@@ -86,7 +86,6 @@ consoleDescription.</Abstract>
             <NodeRef refid="14"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

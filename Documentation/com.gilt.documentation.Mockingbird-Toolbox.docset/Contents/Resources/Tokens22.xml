@@ -17,7 +17,7 @@
 			<Abstract type="html">Returns a corner radius sized appropriately for the given rectangle.</Abstract>
 			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
 			
-			<Declaration>+ (CGFloat)cornerRadiusSizedForRect:(id)rect</Declaration>
+			<Declaration>+ (CGFloat)cornerRadiusSizedForRect:(CGRect)rect</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>rect</Name>
@@ -38,7 +38,7 @@ radius supplied for the given rectangle when that rectangle is inset by the
 specified amount.</Abstract>
 			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
 			
-			<Declaration>+ (CGFloat)adjustCornerRadius:(id)radius fromRect:(id)rect withInset:(id)inset</Declaration>
+			<Declaration>+ (CGFloat)adjustCornerRadius:(CGFloat)radius fromRect:(CGRect)rect withInset:(CGFloat)inset</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>radius</Name>
@@ -66,7 +66,7 @@ specified amount.</Abstract>
 a corner radius used for a rectangle of a different size.</Abstract>
 			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
 			
-			<Declaration>+ (CGFloat)adjustCornerRadius:(id)radius fromRect:(id)fromRect toRect:(id)toRect</Declaration>
+			<Declaration>+ (CGFloat)adjustCornerRadius:(CGFloat)radius fromRect:(CGRect)fromRect toRect:(CGRect)toRect</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>radius</Name>
@@ -91,7 +91,7 @@ a corner radius used for a rectangle of a different size.</Abstract>
 that on non-Retina displays, subpixel rendering will not occur.</Abstract>
 			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
 			
-			<Declaration>+ (CGPathRef)newRoundedPathForRectangle:(id)rect withRadius:(id)radius</Declaration>
+			<Declaration>+ (CGPathRef)newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>rect</Name>
@@ -113,7 +113,7 @@ that the stroke falls entirely within the bounds of the path, and that odd
 stroke widths do not result in subpixel rendering on non-Retina displays.</Abstract>
 			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
 			
-			<Declaration>+ (CGPathRef)newRoundedPathForRectangle:(id)rect withRadius:(id)radius forStrokeWidth:(id)width</Declaration>
+			<Declaration>+ (CGPathRef)newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius forStrokeWidth:(CGFloat)width</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>rect</Name>
@@ -139,7 +139,7 @@ specified inset, but is not otherwise adjusted to account for stroke widths
 or subpixel rendering on non-Retina displays.</Abstract>
 			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
 			
-			<Declaration>+ (CGPathRef)newRoundedPathForRectangle:(id)rect withRadius:(id)radius insetBy:(id)inset</Declaration>
+			<Declaration>+ (CGPathRef)newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius insetBy:(CGFloat)inset</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>rect</Name>
@@ -161,7 +161,6 @@ or subpixel rendering on non-Retina displays.</Abstract>
             <NodeRef refid="22"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

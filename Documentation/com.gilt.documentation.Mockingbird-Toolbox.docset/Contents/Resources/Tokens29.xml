@@ -18,7 +18,7 @@
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(id)code</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>code</Name>
@@ -36,7 +36,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(id)code userInfo:(id)dict</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfo:(NSDictionary *)dict</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>code</Name>
@@ -57,7 +57,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(id)code userInfoKey:(id)key value:(id)val</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(NSString *)key value:(id)val</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>code</Name>
@@ -82,7 +82,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(id)desc</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>desc</Name>
@@ -102,7 +102,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(id)desc code:(id)code</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc code:(NSInteger)code</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>desc</Name>
@@ -125,7 +125,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(id)desc code:(id)code userInfoKey:(id)key value:(id)val</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc code:(NSInteger)code userInfoKey:(NSString *)key value:(id)val</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>desc</Name>
@@ -155,7 +155,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithException:(id)ex</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithException:(NSException *)ex</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>ex</Name>
@@ -173,7 +173,7 @@ kMBErrorDomain constant.</Abstract>
 dictionary value to that of the receiver.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (NSError *)errorByAddingUserInfoKey:(id)key value:(id)val</Declaration>
+			<Declaration>- (NSError *)errorByAddingUserInfoKey:(NSString *)key value:(id)val</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>
@@ -190,7 +190,6 @@ dictionary value to that of the receiver.</Abstract>
             <NodeRef refid="29"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

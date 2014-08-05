@@ -421,7 +421,7 @@ length of the string is greater than <code>truncateAt</code>.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)truncateString:(id)<em>val</em> atCharacter:(id)<em>truncateAt</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)truncateString:(NSString *)<em>val</em> atCharacter:(NSUInteger)<em>truncateAt</em></code></div>
 
     
 	
@@ -627,7 +627,7 @@ console output.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSString *)asStringWithIndentation:(id)<em>indentation</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)asStringWithIndentation:(NSString *)<em>indentation</em></code></div>
 
     
 	
@@ -684,7 +684,7 @@ returned string.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setField:(id)<em>fieldName</em> boolean:(id)<em>val</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> boolean:(BOOL)<em>val</em></code></div>
 
     
 	
@@ -737,7 +737,7 @@ longer than the number of characters specified by the value of the constant
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setField:(id)<em>fieldName</em> byTruncating:(id)<em>val</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> byTruncating:(NSString *)<em>val</em></code></div>
 
     
 	
@@ -796,7 +796,7 @@ longer than <code>truncateAt</code> characters.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setField:(id)<em>fieldName</em> byTruncating:(id)<em>val</em> atCharacter:(id)<em>truncateAt</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> byTruncating:(NSString *)<em>val</em> atCharacter:(NSUInteger)<em>truncateAt</em></code></div>
 
     
 	
@@ -863,7 +863,7 @@ that were removed by the truncation process.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setField:(id)<em>fieldName</em> container:(id)<em>val</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> container:(id)<em>val</em></code></div>
 
     
 	
@@ -920,7 +920,7 @@ count of its contents.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setField:(id)<em>fieldName</em> debug:(id)<em>obj</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> debug:(id)<em>obj</em></code></div>
 
     
 	
@@ -978,7 +978,7 @@ and an optional debug descriptor. The debug descriptor is included if
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setField:(id)<em>fieldName</em> instance:(id)<em>obj</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> instance:(id)<em>obj</em></code></div>
 
     
 	
@@ -1034,7 +1034,7 @@ and an optional debug descriptor. The debug descriptor is included if
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setField:(id)<em>fieldName</em> pointer:(id)<em>ptr</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> pointer:(void *)<em>ptr</em></code></div>
 
     
 	
@@ -1085,7 +1085,7 @@ and an optional debug descriptor. The debug descriptor is included if
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setField:(id)<em>fieldName</em> value:(id)<em>val</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> value:(id)<em>val</em></code></div>
 
     
 	
@@ -1143,7 +1143,7 @@ passed-in dictionary.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setFields:(id)<em>fields</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setFields:(NSDictionary *)<em>fields</em></code></div>
 
     
 	
@@ -1183,9 +1183,6 @@ passed-in dictionary.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>

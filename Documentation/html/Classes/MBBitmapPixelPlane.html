@@ -736,7 +736,7 @@ without needing to worry about the internal representation of the pixels.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithBitmapContext:(id)<em>bitmap</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithBitmapContext:(CGContextRef)<em>bitmap</em></code></div>
 
     
 	
@@ -790,7 +790,7 @@ data contained in the <code>CGImageRef</code> provided.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithCGImage:(id)<em>image</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithCGImage:(CGImageRef)<em>image</em></code></div>
 
     
 	
@@ -843,7 +843,7 @@ rows and columns.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithColumns:(id)<em>cols</em> rows:(id)<em>rows</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithColumns:(NSUInteger)<em>cols</em> rows:(NSUInteger)<em>rows</em></code></div>
 
     
 	
@@ -906,7 +906,7 @@ rows and columns.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithSize:(id)<em>size</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithSize:(CGSize)<em>size</em></code></div>
 
     
 	
@@ -965,7 +965,7 @@ having 8 bits per channel using the device&rsquo;s native byte ordering.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithSize:(id)<em>size</em> bitsPerChannel:(id)<em>bits</em> colorSpace:(id)<em>space</em> bitmapInfo:(id)<em>info</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithSize:(CGSize)<em>size</em> bitsPerChannel:(NSUInteger)<em>bits</em> colorSpace:(CGColorSpaceRef)<em>space</em> bitmapInfo:(CGBitmapInfo)<em>info</em></code></div>
 
     
 	
@@ -1035,7 +1035,7 @@ data contained in the <code>UIImage</code> instance provided.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithUIImage:(id)<em>image</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)bitmapWithUIImage:(UIImage *)<em>image</em></code></div>
 
     
 	
@@ -1096,7 +1096,7 @@ data contained in the <code>UIImage</code> instance provided.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)getPixel:(id)<em>pixelPtr</em> atColumn:(id)<em>col</em> row:(id)<em>row</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)getPixel:(MBBitmapPixel *)<em>pixelPtr</em> atColumn:(NSUInteger)<em>col</em> row:(NSUInteger)<em>row</em></code></div>
 
     
 	
@@ -1159,7 +1159,7 @@ data contained in the <code>UIImage</code> instance provided.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)getPixel:(id)<em>pixelPtr</em> atIndex:(id)<em>index</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)getPixel:(MBBitmapPixel *)<em>pixelPtr</em> atIndex:(NSUInteger)<em>index</em></code></div>
 
     
 	
@@ -1219,7 +1219,7 @@ data contained in the <code>UIImage</code> instance provided.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)getPixel:(id)<em>pixelPtr</em> atPoint:(id)<em>point</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)getPixel:(MBBitmapPixel *)<em>pixelPtr</em> atPoint:(CGPoint)<em>point</em></code></div>
 
     
 	
@@ -1323,7 +1323,7 @@ coordinate) and row (y coordinate).</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)setPixel:(id)<em>pixel</em> atColumn:(id)<em>col</em> row:(id)<em>row</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)setPixel:(MBBitmapPixel)<em>pixel</em> atColumn:(NSUInteger)<em>col</em> row:(NSUInteger)<em>row</em></code></div>
 
     
 	
@@ -1392,7 +1392,7 @@ ignored.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)setPixel:(id)<em>pixel</em> atIndex:(id)<em>index</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)setPixel:(MBBitmapPixel)<em>pixel</em> atIndex:(NSUInteger)<em>index</em></code></div>
 
     
 	
@@ -1458,7 +1458,7 @@ ignored.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)setPixel:(id)<em>pixel</em> atPoint:(id)<em>point</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)setPixel:(MBBitmapPixel)<em>pixel</em> atPoint:(CGPoint)<em>point</em></code></div>
 
     
 	
@@ -1518,9 +1518,6 @@ ignored.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>

@@ -30,7 +30,7 @@ operation queues used within Mockingbird.</Abstract>
 			<Abstract type="html">Initializes the queue.</Abstract>
 			<DeclaredIn>MBOperationQueue.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithMaxConcurrentOperationCount:(id)cnt</Declaration>
+			<Declaration>- (id)initWithMaxConcurrentOperationCount:(NSInteger)cnt</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cnt</Name>
@@ -42,7 +42,6 @@ operation queues used within Mockingbird.</Abstract>
             <NodeRef refid="20"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

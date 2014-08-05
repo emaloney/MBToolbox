@@ -19,7 +19,7 @@ given MBModule.</Abstract>
 implementation class.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)logForModuleClass:(id)moduleCls</Declaration>
+			<Declaration>+ (instancetype)logForModuleClass:(Class)moduleCls</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>moduleCls</Name>
@@ -37,7 +37,7 @@ implementation class.</Abstract>
 			<Abstract type="html">Creates and returns a new MBModuleLog instance for the specified module.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)logForModule:(id)module</Declaration>
+			<Declaration>+ (instancetype)logForModule:(NSObject&lt;MBModule&gt; *)module</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>module</Name>
@@ -54,7 +54,7 @@ implementation class.</Abstract>
 			<Abstract type="html">Issues a deprecation warning from the module associated with the receiver.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)issueDeprecationWarning:(id)warning</Declaration>
+			<Declaration>- (void)issueDeprecationWarning:(NSString *)warning</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>warning</Name>
@@ -71,7 +71,7 @@ implementation class.</Abstract>
 			<Abstract type="html">Issues a deprecation warning from the module associated with the receiver.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)issueDeprecationWarningWithFormat:(id)format, ...</Declaration>
+			<Declaration>- (void)issueDeprecationWarningWithFormat:(NSString *)format, ...</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>format</Name>
@@ -93,7 +93,7 @@ implementation class.</Abstract>
 			<Abstract type="html">Issues a not supported error from the module associated with the receiver.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)issueNotSupportedError:(id)error</Declaration>
+			<Declaration>- (void)issueNotSupportedError:(NSString *)error</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>error</Name>
@@ -110,7 +110,7 @@ implementation class.</Abstract>
 			<Abstract type="html">Issues a not supported error from the module associated with the receiver.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)issueNotSupportedErrorWithFormat:(id)format, ...</Declaration>
+			<Declaration>- (void)issueNotSupportedErrorWithFormat:(NSString *)format, ...</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>format</Name>
@@ -127,7 +127,6 @@ implementation class.</Abstract>
             <NodeRef refid="17"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

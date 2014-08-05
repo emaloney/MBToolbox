@@ -55,7 +55,7 @@ for the receiver by adjusting the receiver&apos;s brightness.</Abstract>
 receiver by a given factor.</Abstract>
 			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (UIColor *)colorWithBrightnessAdjustedByFactor:(id)adjustFactor</Declaration>
+			<Declaration>- (UIColor *)colorWithBrightnessAdjustedByFactor:(CGFloat)adjustFactor</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>adjustFactor</Name>
@@ -67,7 +67,6 @@ receiver by a given factor.</Abstract>
             <NodeRef refid="34"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

@@ -18,7 +18,7 @@
 contents of the file specified.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>+ (MBFileReadOperation *)operationForReadingFromFile:(id)path delegate:(id)delegate</Declaration>
+			<Declaration>+ (MBFileReadOperation *)operationForReadingFromFile:(NSString *)path delegate:(NSObject&lt;MBFileReadOperationDelegate&gt; *)delegate</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -40,7 +40,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to read from the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (id)initForFilePath:(id)path delegate:(id)delegate</Declaration>
+			<Declaration>- (id)initForFilePath:(NSString *)path delegate:(NSObject&lt;MBFileReadOperationDelegate&gt; *)delegate</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -136,7 +136,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Called internally to read the file and convert its data into an object.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (id)readObjectFromFile:(id)path error:(id)errPtr</Declaration>
+			<Declaration>- (id)readObjectFromFile:(NSString *)path error:(NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -176,7 +176,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Called internally when readObjectFromFile:error: fails.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (void)readFailedWithError:(id)err</Declaration>
+			<Declaration>- (void)readFailedWithError:(NSError *)err</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>err</Name>
@@ -189,7 +189,6 @@ contents of the file specified.</Abstract>
             <NodeRef refid="10"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

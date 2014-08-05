@@ -317,7 +317,7 @@ without needing to worry about the internal representation of the pixels.</Abstr
 rows and columns.</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)bitmapWithColumns:(id)cols rows:(id)rows</Declaration>
+			<Declaration>+ (instancetype)bitmapWithColumns:(NSUInteger)cols rows:(NSUInteger)rows</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cols</Name>
@@ -338,7 +338,7 @@ rows and columns.</Abstract>
 rows and columns.</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)bitmapWithSize:(id)size</Declaration>
+			<Declaration>+ (instancetype)bitmapWithSize:(CGSize)size</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>size</Name>
@@ -357,7 +357,7 @@ rows and columns.</Abstract>
 			<Abstract type="html">Creates a new MBBitmapPixelPlane having the specified settings.</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)bitmapWithSize:(id)size bitsPerChannel:(id)bits colorSpace:(id)space bitmapInfo:(id)info</Declaration>
+			<Declaration>+ (instancetype)bitmapWithSize:(CGSize)size bitsPerChannel:(NSUInteger)bits colorSpace:(CGColorSpaceRef)space bitmapInfo:(CGBitmapInfo)info</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>size</Name>
@@ -387,7 +387,7 @@ rows and columns.</Abstract>
 data contained in the UIImage instance provided.</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)bitmapWithUIImage:(id)image</Declaration>
+			<Declaration>+ (instancetype)bitmapWithUIImage:(UIImage *)image</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>image</Name>
@@ -406,7 +406,7 @@ data contained in the UIImage instance provided.</Abstract>
 data contained in the CGImageRef provided.</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)bitmapWithCGImage:(id)image</Declaration>
+			<Declaration>+ (instancetype)bitmapWithCGImage:(CGImageRef)image</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>image</Name>
@@ -425,7 +425,7 @@ data contained in the CGImageRef provided.</Abstract>
 image data contained in the CGContextRef provided.</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)bitmapWithBitmapContext:(id)bitmap</Declaration>
+			<Declaration>+ (instancetype)bitmapWithBitmapContext:(CGContextRef)bitmap</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>bitmap</Name>
@@ -445,7 +445,7 @@ image data contained in the CGContextRef provided.</Abstract>
 (x coordinate) and row (y coordinate).</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)getPixel:(id)pixelPtr atColumn:(id)col row:(id)row</Declaration>
+			<Declaration>- (BOOL)getPixel:(MBBitmapPixel *)pixelPtr atColumn:(NSUInteger)col row:(NSUInteger)row</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pixelPtr</Name>
@@ -470,7 +470,7 @@ image data contained in the CGContextRef provided.</Abstract>
 			<Abstract type="html">Retrieves the color channel values for the pixel at the specified point.</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)getPixel:(id)pixelPtr atPoint:(id)point</Declaration>
+			<Declaration>- (BOOL)getPixel:(MBBitmapPixel *)pixelPtr atPoint:(CGPoint)point</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pixelPtr</Name>
@@ -495,7 +495,7 @@ image data contained in the CGContextRef provided.</Abstract>
 			<Abstract type="html">Retrieves the color channel values for the pixel at the specified index.</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)getPixel:(id)pixelPtr atIndex:(id)index</Declaration>
+			<Declaration>- (BOOL)getPixel:(MBBitmapPixel *)pixelPtr atIndex:(NSUInteger)index</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pixelPtr</Name>
@@ -520,7 +520,7 @@ image data contained in the CGContextRef provided.</Abstract>
 coordinate) and row (y coordinate).</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)setPixel:(id)pixel atColumn:(id)col row:(id)row</Declaration>
+			<Declaration>- (BOOL)setPixel:(MBBitmapPixel)pixel atColumn:(NSUInteger)col row:(NSUInteger)row</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pixel</Name>
@@ -545,7 +545,7 @@ coordinate) and row (y coordinate).</Abstract>
 			<Abstract type="html">Sets the color channel values for the pixel at the specified point.</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)setPixel:(id)pixel atPoint:(id)point</Declaration>
+			<Declaration>- (BOOL)setPixel:(MBBitmapPixel)pixel atPoint:(CGPoint)point</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pixel</Name>
@@ -570,7 +570,7 @@ coordinate) and row (y coordinate).</Abstract>
 			<Abstract type="html">Sets the color channel values for the pixel at the specified index.</Abstract>
 			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)setPixel:(id)pixel atIndex:(id)index</Declaration>
+			<Declaration>- (BOOL)setPixel:(MBBitmapPixel)pixel atIndex:(NSUInteger)index</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pixel</Name>
@@ -602,7 +602,6 @@ contents of the receiver.</Abstract>
             <NodeRef refid="3"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

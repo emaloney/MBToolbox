@@ -19,7 +19,7 @@ MBService protocol.</Abstract>
 the specified name.</Abstract>
 			<DeclaredIn>MBServiceManager.h</DeclaredIn>
 			
-			<Declaration>- (id)serviceForClassName:(id)serviceClassName</Declaration>
+			<Declaration>- (id)serviceForClassName:(NSString *)serviceClassName</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>serviceClassName</Name>
@@ -38,7 +38,7 @@ the specified name.</Abstract>
 			<Abstract type="html">Returns the singleton instance of the service implemented the specified class.</Abstract>
 			<DeclaredIn>MBServiceManager.h</DeclaredIn>
 			
-			<Declaration>- (id)serviceForClass:(id)serviceClass</Declaration>
+			<Declaration>- (id)serviceForClass:(Class)serviceClass</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>serviceClass</Name>
@@ -56,7 +56,7 @@ the specified name.</Abstract>
 			<Abstract type="html">Attaches to the specified service, incrementing its attach count by one.</Abstract>
 			<DeclaredIn>MBServiceManager.h</DeclaredIn>
 			
-			<Declaration>- (void)attachToService:(id)service</Declaration>
+			<Declaration>- (void)attachToService:(MBService *)service</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>service</Name>
@@ -74,7 +74,7 @@ the specified name.</Abstract>
 count by one.</Abstract>
 			<DeclaredIn>MBServiceManager.h</DeclaredIn>
 			
-			<Declaration>- (id)attachToServiceClass:(id)serviceClass</Declaration>
+			<Declaration>- (id)attachToServiceClass:(Class)serviceClass</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>serviceClass</Name>
@@ -93,7 +93,7 @@ count by one.</Abstract>
 count by one.</Abstract>
 			<DeclaredIn>MBServiceManager.h</DeclaredIn>
 			
-			<Declaration>- (id)attachToServiceClassNamed:(id)serviceClassName</Declaration>
+			<Declaration>- (id)attachToServiceClassNamed:(NSString *)serviceClassName</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>serviceClassName</Name>
@@ -111,7 +111,7 @@ count by one.</Abstract>
 			<Abstract type="html">Detaches from the specified service, decrementing its attach count by one.</Abstract>
 			<DeclaredIn>MBServiceManager.h</DeclaredIn>
 			
-			<Declaration>- (void)detachFromService:(id)service</Declaration>
+			<Declaration>- (void)detachFromService:(MBService *)service</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>service</Name>
@@ -129,7 +129,7 @@ count by one.</Abstract>
 count by one.</Abstract>
 			<DeclaredIn>MBServiceManager.h</DeclaredIn>
 			
-			<Declaration>- (void)detachFromServiceClass:(id)serviceClass</Declaration>
+			<Declaration>- (void)detachFromServiceClass:(Class)serviceClass</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>serviceClass</Name>
@@ -148,7 +148,7 @@ count by one.</Abstract>
 count by one.</Abstract>
 			<DeclaredIn>MBServiceManager.h</DeclaredIn>
 			
-			<Declaration>- (void)detachFromServiceClassNamed:(id)serviceClassName</Declaration>
+			<Declaration>- (void)detachFromServiceClassNamed:(NSString *)serviceClassName</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>serviceClassName</Name>
@@ -166,7 +166,7 @@ count by one.</Abstract>
 			<Abstract type="html">Determines whether the specified service is running.</Abstract>
 			<DeclaredIn>MBServiceManager.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)isServiceRunning:(id)service</Declaration>
+			<Declaration>- (BOOL)isServiceRunning:(MBService *)service</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>service</Name>
@@ -184,7 +184,7 @@ count by one.</Abstract>
   </Abstract>
 			<DeclaredIn>MBServiceManager.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)attachCountForService:(id)service</Declaration>
+			<Declaration>- (NSUInteger)attachCountForService:(MBService *)service</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>service</Name>
@@ -196,7 +196,6 @@ count by one.</Abstract>
             <NodeRef refid="23"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

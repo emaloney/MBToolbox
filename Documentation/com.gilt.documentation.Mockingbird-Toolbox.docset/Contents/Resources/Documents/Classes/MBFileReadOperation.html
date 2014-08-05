@@ -345,7 +345,7 @@ contents of the file specified.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (MBFileReadOperation *)operationForReadingFromFile:(id)<em>path</em> delegate:(id)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (MBFileReadOperation *)operationForReadingFromFile:(NSString *)<em>path</em> delegate:(NSObject&lt;MBFileReadOperationDelegate&gt; *)<em>delegate</em></code></div>
 
     
 	
@@ -411,7 +411,7 @@ contents of the file specified.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)initForFilePath:(id)<em>path</em> delegate:(id)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initForFilePath:(NSString *)<em>path</em> delegate:(NSObject&lt;MBFileReadOperationDelegate&gt; *)<em>delegate</em></code></div>
 
     
 	
@@ -522,7 +522,7 @@ contents of the file specified.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)readFailedWithError:(id)<em>err</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)readFailedWithError:(NSError *)<em>err</em></code></div>
 
     
 	
@@ -576,7 +576,7 @@ contents of the file specified.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)readObjectFromFile:(id)<em>path</em> error:(id)<em>errPtr</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)readObjectFromFile:(NSString *)<em>path</em> error:(NSError **)<em>errPtr</em></code></div>
 
     
 	
@@ -633,9 +633,6 @@ override this method to return other types of objects.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>

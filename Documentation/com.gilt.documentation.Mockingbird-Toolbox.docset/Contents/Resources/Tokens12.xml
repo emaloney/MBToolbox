@@ -18,7 +18,7 @@ filesystem.</Abstract>
 			<Abstract type="html">Initializes the receiver with the given name.</Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithName:(id)name</Declaration>
+			<Declaration>- (id)initWithName:(NSString *)name</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>name</Name>
@@ -38,7 +38,7 @@ filesystem.</Abstract>
 			<Abstract type="html">Initializes the receiver with the given name.</Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithName:(id)name cacheDelegate:(id)delegate</Declaration>
+			<Declaration>- (id)initWithName:(NSString *)name cacheDelegate:(id)delegate</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>name</Name>
@@ -346,7 +346,7 @@ in the filesystem cache.</Abstract>
 			<Abstract type="html">Deletes all cache files older than a certain age.</Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
-			<Declaration>- (void)purgeCacheFilesOlderThan:(id)ageInSeconds</Declaration>
+			<Declaration>- (void)purgeCacheFilesOlderThan:(NSTimeInterval)ageInSeconds</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>ageInSeconds</Name>
@@ -372,7 +372,6 @@ maxAgeOfCacheFiles property.</Abstract>
             <NodeRef refid="12"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

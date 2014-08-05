@@ -302,7 +302,7 @@ a <a href="#//api/name/cache">cache</a> object to a file.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (MBCacheWriteOperation *)operationForWritingObject:(id)<em>obj</em> toFile:(id)<em>path</em> forCache:(id)<em>fc</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (MBCacheWriteOperation *)operationForWritingObject:(id)<em>obj</em> toFile:(NSString *)<em>path</em> forCache:(MBFilesystemCache *)<em>fc</em></code></div>
 
     
 	
@@ -373,7 +373,7 @@ a <a href="#//api/name/cache">cache</a> object to a file.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)initWithObject:(id)<em>obj</em> inCache:(id)<em>fc</em> forFilePath:(id)<em>path</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initWithObject:(id)<em>obj</em> inCache:(MBFilesystemCache *)<em>fc</em> forFilePath:(NSString *)<em>path</em></code></div>
 
     
 	
@@ -429,9 +429,6 @@ a <a href="#//api/name/cache">cache</a> object to a file.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>

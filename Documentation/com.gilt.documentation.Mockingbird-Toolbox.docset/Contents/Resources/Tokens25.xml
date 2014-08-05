@@ -18,7 +18,7 @@ among multiple threads simultaneously.</Abstract>
 			<Abstract type="html">Initializes a new MBThreadsafeCache instance.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithExceptionProtection:(id)protect ignoreMemoryWarnings:(id)ignore</Declaration>
+			<Declaration>- (id)initWithExceptionProtection:(BOOL)protect ignoreMemoryWarnings:(BOOL)ignore</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>protect</Name>
@@ -209,7 +209,6 @@ cache was explicitly initialized to ignore memory warnings.</Abstract>
             <NodeRef refid="25"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

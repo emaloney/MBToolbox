@@ -18,7 +18,7 @@ completion status of MBFileReadOperations.</Abstract>
 			<Abstract type="html">Called when an MBFileReadOperation completes successfully.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (void)readCompletedWithObject:(id)readObj forOperation:(id)op</Declaration>
+			<Declaration>- (void)readCompletedWithObject:(id)readObj forOperation:(MBFileReadOperation *)op</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>readObj</Name>
@@ -42,7 +42,7 @@ completion status of MBFileReadOperations.</Abstract>
 			<Abstract type="html">Called when an MBFileReadOperation fails.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (void)readFailedWithError:(id)err forOperation:(id)op</Declaration>
+			<Declaration>- (void)readFailedWithError:(NSError *)err forOperation:(MBFileReadOperation *)op</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>err</Name>
@@ -57,7 +57,6 @@ completion status of MBFileReadOperations.</Abstract>
             <NodeRef refid="37"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

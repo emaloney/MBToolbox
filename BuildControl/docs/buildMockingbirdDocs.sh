@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+# set -x
 
 # constant values
 DOCSET_PUBLISHER_NAME="Gilt Groupe"

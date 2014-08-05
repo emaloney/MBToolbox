@@ -289,7 +289,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSData *)MD5DataForString:(id)<em>src</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSData *)MD5DataForString:(NSString *)<em>src</em></code></div>
 
     
 	
@@ -340,7 +340,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)MD5ForBytes:(id)<em>bytes</em> length:(id)<em>len</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)MD5ForBytes:(const void *)<em>bytes</em> length:(size_t)<em>len</em></code></div>
 
     
 	
@@ -396,7 +396,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)MD5ForData:(id)<em>src</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)MD5ForData:(NSData *)<em>src</em></code></div>
 
     
 	
@@ -447,7 +447,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)MD5ForFileAtPath:(id)<em>path</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)MD5ForFileAtPath:(NSString *)<em>path</em></code></div>
 
     
 	
@@ -501,7 +501,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)MD5ForFileAtPath:(id)<em>path</em> error:(id)<em>errPtr</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)MD5ForFileAtPath:(NSString *)<em>path</em> error:(NSError **)<em>errPtr</em></code></div>
 
     
 	
@@ -561,7 +561,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)MD5ForString:(id)<em>src</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)MD5ForString:(NSString *)<em>src</em></code></div>
 
     
 	
@@ -612,7 +612,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSData *)SHA1DataForString:(id)<em>src</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSData *)SHA1DataForString:(NSString *)<em>src</em></code></div>
 
     
 	
@@ -663,7 +663,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)SHA1ForBytes:(id)<em>bytes</em> length:(id)<em>len</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)SHA1ForBytes:(const void *)<em>bytes</em> length:(size_t)<em>len</em></code></div>
 
     
 	
@@ -719,7 +719,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)SHA1ForData:(id)<em>src</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)SHA1ForData:(NSData *)<em>src</em></code></div>
 
     
 	
@@ -770,7 +770,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)SHA1ForFileAtPath:(id)<em>path</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)SHA1ForFileAtPath:(NSString *)<em>path</em></code></div>
 
     
 	
@@ -824,7 +824,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)SHA1ForFileAtPath:(id)<em>path</em> error:(id)<em>errPtr</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)SHA1ForFileAtPath:(NSString *)<em>path</em> error:(NSError **)<em>errPtr</em></code></div>
 
     
 	
@@ -884,7 +884,7 @@ classes allowing message digests to be computed on such instances directly.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)SHA1ForString:(id)<em>src</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)SHA1ForString:(NSString *)<em>src</em></code></div>
 
     
 	
@@ -930,9 +930,6 @@ classes allowing message digests to be computed on such instances directly.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>

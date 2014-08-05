@@ -19,7 +19,7 @@ filesystem.</Abstract>
 file from the filesystem.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>+ (MBFileDeleteOperation *)operationForDeletingFile:(id)path</Declaration>
+			<Declaration>+ (MBFileDeleteOperation *)operationForDeletingFile:(NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -37,7 +37,7 @@ file from the filesystem.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to delete the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithFilePath:(id)path</Declaration>
+			<Declaration>- (id)initWithFilePath:(NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -54,7 +54,7 @@ file from the filesystem.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to delete the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithFilePath:(id)path moveImmediately:(id)moveNow</Declaration>
+			<Declaration>- (id)initWithFilePath:(NSString *)path moveImmediately:(BOOL)moveNow</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -109,7 +109,6 @@ file from the filesystem.</Abstract>
             <NodeRef refid="9"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

@@ -36,7 +36,7 @@ the specified object.</Abstract>
 			<Abstract type="html">Sets an object instance field on the formatter.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>- (void)setField:(id)fieldName value:(id)val</Declaration>
+			<Declaration>- (void)setField:(NSString *)fieldName value:(id)val</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fieldName</Name>
@@ -58,7 +58,7 @@ longer than the number of characters specified by the value of the constant
 kMBFieldListDefaultTruncateAtCharacter.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>- (void)setField:(id)fieldName byTruncating:(id)val</Declaration>
+			<Declaration>- (void)setField:(NSString *)fieldName byTruncating:(NSString *)val</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fieldName</Name>
@@ -79,7 +79,7 @@ kMBFieldListDefaultTruncateAtCharacter.</Abstract>
 longer than truncateAt characters.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>- (void)setField:(id)fieldName byTruncating:(id)val atCharacter:(id)truncateAt</Declaration>
+			<Declaration>- (void)setField:(NSString *)fieldName byTruncating:(NSString *)val atCharacter:(NSUInteger)truncateAt</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fieldName</Name>
@@ -105,7 +105,7 @@ longer than truncateAt characters.</Abstract>
 			<Abstract type="html">Sets an object instance field on the formatter.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>- (void)setField:(id)fieldName instance:(id)obj</Declaration>
+			<Declaration>- (void)setField:(NSString *)fieldName instance:(id)obj</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fieldName</Name>
@@ -125,7 +125,7 @@ longer than truncateAt characters.</Abstract>
 			<Abstract type="html">Sets an debug object instance field on the formatter.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>- (void)setField:(id)fieldName debug:(id)obj</Declaration>
+			<Declaration>- (void)setField:(NSString *)fieldName debug:(id)obj</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fieldName</Name>
@@ -145,7 +145,7 @@ longer than truncateAt characters.</Abstract>
 			<Abstract type="html">Sets a memory pointer field on the formatter.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>- (void)setField:(id)fieldName pointer:(id)ptr</Declaration>
+			<Declaration>- (void)setField:(NSString *)fieldName pointer:(void *)ptr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fieldName</Name>
@@ -165,7 +165,7 @@ longer than truncateAt characters.</Abstract>
 			<Abstract type="html">Sets a boolean field on the formatter.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>- (void)setField:(id)fieldName boolean:(id)val</Declaration>
+			<Declaration>- (void)setField:(NSString *)fieldName boolean:(BOOL)val</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fieldName</Name>
@@ -186,7 +186,7 @@ longer than truncateAt characters.</Abstract>
 NSArray, NSSet, and NSDictionary that respond to the selector count.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>- (void)setField:(id)fieldName container:(id)val</Declaration>
+			<Declaration>- (void)setField:(NSString *)fieldName container:(id)val</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fieldName</Name>
@@ -207,7 +207,7 @@ NSArray, NSSet, and NSDictionary that respond to the selector count.</Abstract>
 passed-in dictionary.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>- (void)setFields:(id)fields</Declaration>
+			<Declaration>- (void)setFields:(NSDictionary *)fields</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fields</Name>
@@ -226,7 +226,7 @@ passed-in dictionary.</Abstract>
 length of the string is greater than truncateAt.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)truncateString:(id)val atCharacter:(id)truncateAt</Declaration>
+			<Declaration>+ (NSString *)truncateString:(NSString *)val atCharacter:(NSUInteger)truncateAt</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>val</Name>
@@ -259,7 +259,7 @@ length of the string is greater than truncateAt.</Abstract>
 			<Abstract type="html">Converts the fields in the receiver into a string representation.</Abstract>
 			<DeclaredIn>MBFieldListFormatter.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)asStringWithIndentation:(id)indentation</Declaration>
+			<Declaration>- (NSString *)asStringWithIndentation:(NSString *)indentation</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>indentation</Name>
@@ -296,7 +296,6 @@ an object&apos;s description method.</Abstract>
             <NodeRef refid="8"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

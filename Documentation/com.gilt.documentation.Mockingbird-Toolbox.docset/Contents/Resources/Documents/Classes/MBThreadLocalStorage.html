@@ -1,0 +1,752 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>MBThreadLocalStorage Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Mockingbird Toolbox </a></h1>
+				<a id="developerHome" href="../index.html">Gilt Groupe</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">MBThreadLocalStorage Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/cachedValueForClass:usingInstantiator:">&nbsp;&nbsp;&nbsp;&nbsp;+ cachedValueForClass:usingInstantiator:</option>
+	
+	<option value="//api/name/cachedValueForClass:withKey:usingInstantiator:">&nbsp;&nbsp;&nbsp;&nbsp;+ cachedValueForClass:withKey:usingInstantiator:</option>
+	
+	<option value="//api/name/setValue:forClass:">&nbsp;&nbsp;&nbsp;&nbsp;+ setValue:forClass:</option>
+	
+	<option value="//api/name/setValue:forClass:withKey:">&nbsp;&nbsp;&nbsp;&nbsp;+ setValue:forClass:withKey:</option>
+	
+	<option value="//api/name/valueForClass:">&nbsp;&nbsp;&nbsp;&nbsp;+ valueForClass:</option>
+	
+	<option value="//api/name/valueForClass:withKey:">&nbsp;&nbsp;&nbsp;&nbsp;+ valueForClass:withKey:</option>
+	
+	
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing thread-local values">Accessing thread-local values</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Setting thread-local values">Setting thread-local values</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Using thread-local storage as a cache">Using thread-local storage as a cache</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cachedValueForClass:usingInstantiator:">cachedValueForClass:usingInstantiator:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cachedValueForClass:withKey:usingInstantiator:">cachedValueForClass:withKey:usingInstantiator:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setValue:forClass:">setValue:forClass:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setValue:forClass:withKey:">setValue:forClass:withKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/valueForClass:">valueForClass:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/valueForClass:withKey:">valueForClass:withKey:</a></span></li>
+	
+</ul></li>
+
+
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="MBThreadLocalStorage Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">MBThreadLocalStorage Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">MBThreadLocalStorage.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Provides a mechanism for storing thread-specific data in a way that&rsquo;s designed
+to avoid key naming clashes.</p>
+
+<p>Under the hood, values are stored using the <code>threadDictionary</code> of the calling
+<code>NSThread</code>.</p>
+
+<h3>Avoiding key clashes</h3>
+
+<p>To prevent clashes between different code using thread-local storage, values
+are accessed by specifying the requesting <code>Class</code>.</p>
+
+<p>Classes that wish to store multiple values can also provide a unique key
+string for each value.</p>
+
+<h3>Lock-free caching</h3>
+
+<p>The <code>MBThreadLocalStorage</code> class also provides methods that allow treating
+thread-local storage as a lock-free cache. Objects that are expensive to
+create, such as <code>NSDateFormatter</code> instances, can be cached in thread-local
+storage without incurring the locking overhead that would be required by an
+object cache shared among multiple threads.</p>
+
+<p>Of course, the flipside to this is that a new cached object instance will be
+created for each individual <code>NSThread</code> that attempts to access the value.</p>
+
+<p>This mechanism is best suited for cases where the long-term expense of
+acquiring read locks every time the object is accessed is greater than the
+expense of creating a new instance multiplied by the number of unique threads
+that will access the value.</p>
+
+<p>For example, an ideal use-case would be for caching values that are only
+accessed from the main thread.</p><div class="note"><p><strong>Note:</strong> As the class name implies, values set using <code>MBThreadLocalStorage</code>
+            are only visible to the thread that set those values.</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Accessing thread-local values" name="task_Accessing thread-local values"></a>
+						<h3 class="subsubtitle task-title">Accessing thread-local values</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/valueForClass:">+&nbsp;valueForClass:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/valueForClass:withKey:">+&nbsp;valueForClass:withKey:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Setting thread-local values" name="task_Setting thread-local values"></a>
+						<h3 class="subsubtitle task-title">Setting thread-local values</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setValue:forClass:">+&nbsp;setValue:forClass:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setValue:forClass:withKey:">+&nbsp;setValue:forClass:withKey:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Using thread-local storage as a cache" name="task_Using thread-local storage as a cache"></a>
+						<h3 class="subsubtitle task-title">Using thread-local storage as a cache</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cachedValueForClass:usingInstantiator:">+&nbsp;cachedValueForClass:usingInstantiator:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cachedValueForClass:withKey:usingInstantiator:">+&nbsp;cachedValueForClass:withKey:usingInstantiator:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cachedValueForClass:usingInstantiator:" title="cachedValueForClass:usingInstantiator:"></a>
+	<h3 class="subsubtitle method-title">cachedValueForClass:usingInstantiator:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allows use of thread-local storage as a lock-free cache. If the requested
+value is not in the cache, the block provided will be executed to create a
+new instance.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (id)cachedValueForClass:(id)<em>cls</em> usingInstantiator:(id)<em>instantiator</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cls</em></dt>
+			<dd><p>The <code>Class</code> responsible for the thread-local value. Must
+            not be <code>NULL</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>instantiator</em></dt>
+			<dd><p>A block used to create a new cached object instance.
+            This block will be executed only when there is not an existing
+            cached value in thread-local storage. It is considered an error
+            for the instantiator block to return <code>nil</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The cached object, which should not be <code>nil</code> unless there is an
+            error within the instantiator block.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If there is already a thread-local value associated with the given class,
+it is returned.</p>
+
+<p>If there is no thread-local value already set for the given class, the
+instantiator block is called to create a new object instance. That object
+is then placed in thread-local storage and returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBThreadLocalStorage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/cachedValueForClass:withKey:usingInstantiator:" title="cachedValueForClass:withKey:usingInstantiator:"></a>
+	<h3 class="subsubtitle method-title">cachedValueForClass:withKey:usingInstantiator:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allows use of thread-local storage as a lock-free cache. If the requested
+value is not in the cache, the block provided will be executed to create a
+new instance.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (id)cachedValueForClass:(id)<em>cls</em> withKey:(id)<em>key</em> usingInstantiator:(id)<em>instantiator</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cls</em></dt>
+			<dd><p>The <code>Class</code> responsible for the thread-local value. Must
+            not be <code>NULL</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The key associated with the cached value. If <code>nil</code>, the effect
+            is the same as calling <a href="#//api/name/cachedValueForClass:usingInstantiator:"><code>cachedValueForClass:usingInstantiator:</code></a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>instantiator</em></dt>
+			<dd><p>A block used to create a new cached object instance.
+            This block will be executed only when there is not an existing
+            cached value in thread-local storage. It is considered an error
+            for the instantiator block to return <code>nil</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The cached object, which should not be <code>nil</code> unless there is an
+            error within the instantiator block.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If there is already a thread-local value associated with the given class
+and key, it is returned.</p>
+
+<p>If there is no thread-local value already set for the given class and key,
+the instantiator block is called to create a new object instance. That object
+is then placed in thread-local storage and returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBThreadLocalStorage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setValue:forClass:" title="setValue:forClass:"></a>
+	<h3 class="subsubtitle method-title">setValue:forClass:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a thread-local value for the given class.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setValue:(id)<em>val</em> forClass:(id)<em>cls</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>val</em></dt>
+			<dd><p>The value to store. Passing <code>nil</code> will remove a value stored
+            previously.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cls</em></dt>
+			<dd><p>The <code>Class</code> responsible for the thread-local value. Must
+            not be <code>NULL</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBThreadLocalStorage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setValue:forClass:withKey:" title="setValue:forClass:withKey:"></a>
+	<h3 class="subsubtitle method-title">setValue:forClass:withKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a thread-local value for the given class.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setValue:(id)<em>val</em> forClass:(id)<em>cls</em> withKey:(id)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>val</em></dt>
+			<dd><p>The value to store. Passing <code>nil</code> will remove a value stored
+            previously.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cls</em></dt>
+			<dd><p>The <code>Class</code> responsible for the thread-local value. Must
+            not be <code>NULL</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The key associated with the value being set. If <code>nil</code>, the
+            effect is the same as calling <a href="#//api/name/setValue:forClass:"><code>setValue:forClass:</code></a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBThreadLocalStorage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/valueForClass:" title="valueForClass:"></a>
+	<h3 class="subsubtitle method-title">valueForClass:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the thread-local value associated with the specified class.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (id)valueForClass:(id)<em>cls</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cls</em></dt>
+			<dd><p>The <code>Class</code> responsible for the thread-local value. Must
+            not be <code>NULL</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The thread-local value, or <code>nil</code> if one was not previously set
+            on the calling thread for the specified class.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBThreadLocalStorage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/valueForClass:withKey:" title="valueForClass:withKey:"></a>
+	<h3 class="subsubtitle method-title">valueForClass:withKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the thread-local value associated with the specified class and key.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (id)valueForClass:(id)<em>cls</em> withKey:(id)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cls</em></dt>
+			<dd><p>The <code>Class</code> responsible for the thread-local value. Must
+            not be <code>NULL</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The key associated with the value to retrieve. If <code>nil</code>, the
+            effect is the same as calling <a href="#//api/name/valueForClass:"><code>valueForClass:</code></a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The thread-local value, or <code>nil</code> if one was not previously set
+            on the calling thread for the specified class.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBThreadLocalStorage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+                    
+                    
+                    
+                    
+
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Gilt Groupe. All rights reserved. (Last updated: 2014-08-05)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

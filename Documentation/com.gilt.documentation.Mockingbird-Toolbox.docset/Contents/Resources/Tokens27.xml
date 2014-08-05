@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/MBThreadsafeCache+ForSubclassEyesOnly.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/MBThreadsafeCache(ForSubclassEyesOnly)</TokenIdentifier>
+			<Abstract type="html">The class extensions in this header file are intended for internal use only by
+MBThreadsafeCache implementations.</Abstract>
+			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
+            
+			
+			<NodeRef refid="27"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBThreadsafeCache/internalCache</TokenIdentifier>
+			<Abstract type="html">Returns the internal NSMutableDictionary where in-memory cached objects are
+stored.</Abstract>
+			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (NSMutableDictionary *)internalCache</Declaration>
+			
+			
+			<Anchor>//api/name/internalCache</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBThreadsafeCache/internalIsKeyInCache:</TokenIdentifier>
+			<Abstract type="html">Called internally to determine whether a given key has a corresponding value
+in the cache.</Abstract>
+			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)internalIsKeyInCache:(id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if there is a value for the given key in the cache; NO
+            otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/internalIsKeyInCache:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBThreadsafeCache/internalObjectForKey:</TokenIdentifier>
+			<Abstract type="html">Called internally to retrieve a cached object value given its key.</Abstract>
+			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (id)internalObjectForKey:(id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key whose associated value is to be retrieved.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The value associated with key. May be nil.</Abstract></ReturnValue>
+			<Anchor>//api/name/internalObjectForKey:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBThreadsafeCache/internalSetObject:forKey:</TokenIdentifier>
+			<Abstract type="html">Called internally to set a cached object value and associates it with the
+given key.</Abstract>
+			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (void)internalSetObject:(id)obj forKey:(id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>obj</Name>
+					<Abstract type="html">The new cached value.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key whose associated value is to be set.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/internalSetObject:forKey:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBThreadsafeCache/internalRemoveObjectForKey:</TokenIdentifier>
+			<Abstract type="html">Called internally to remove from the cache the object associated with the given
+key.</Abstract>
+			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (void)internalRemoveObjectForKey:(id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key whose associated value is to be removed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/internalRemoveObjectForKey:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBThreadsafeCache/internalClearMemoryCache</TokenIdentifier>
+			<Abstract type="html">Called internally to empty the in-memory object cache.</Abstract>
+			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (void)internalClearMemoryCache</Declaration>
+			
+			
+			<Anchor>//api/name/internalClearMemoryCache</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

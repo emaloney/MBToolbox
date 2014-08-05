@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/MBFileReadOperationDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/MBFileReadOperationDelegate</TokenIdentifier>
+			<Abstract type="html">This protocol is adopted by classes that wish to be notified about the
+completion status of MBFileReadOperations.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+            
+			
+			<NodeRef refid="37"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBFileReadOperationDelegate/readCompletedWithObject:forOperation:</TokenIdentifier>
+			<Abstract type="html">Called when an MBFileReadOperation completes successfully.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			
+			<Declaration>- (void)readCompletedWithObject:(id)readObj forOperation:(id)op</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>readObj</Name>
+					<Abstract type="html">The object that was read from the filesystem. Typically,
+            this is an NSData object containing the byte data of the file.
+            However, MBFileReadOperation subclasses are free to construct any
+            type of object. For example, an implementation for an image cache
+            may pass UIImage instances.</Abstract>
+				</Parameter><Parameter>
+					<Name>op</Name>
+					<Abstract type="html">The operation that completed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/readCompletedWithObject:forOperation:</Anchor>
+            <NodeRef refid="37"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBFileReadOperationDelegate/readFailedWithError:forOperation:</TokenIdentifier>
+			<Abstract type="html">Called when an MBFileReadOperation fails.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			
+			<Declaration>- (void)readFailedWithError:(id)err forOperation:(id)op</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>err</Name>
+					<Abstract type="html">An NSError instance describing the error that occurred.</Abstract>
+				</Parameter><Parameter>
+					<Name>op</Name>
+					<Abstract type="html">The operation that failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/readFailedWithError:forOperation:</Anchor>
+            <NodeRef refid="37"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

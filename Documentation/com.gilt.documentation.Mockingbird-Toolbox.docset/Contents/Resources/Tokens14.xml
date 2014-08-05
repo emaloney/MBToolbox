@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBFormattedDescriptionObject.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBFormattedDescriptionObject</TokenIdentifier>
+			<Abstract type="html">Provides support for basing an object&apos;s description method on the
+MBFieldListFormatter, for giving objects a way to create more legible
+console log output.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
+            
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFormattedDescriptionObject/addDescriptionFieldsTo:</TokenIdentifier>
+			<Abstract type="html">Asks the receiver to add any relevant fields to the passed-in
+MBFieldListFormatter instance.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
+			
+			<Declaration>- (void)addDescriptionFieldsTo:(id)fmt</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fmt</Name>
+					<Abstract type="html">The formatter to which description fields should be added.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addDescriptionFieldsTo:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFormattedDescriptionObject/debugDescriptor</TokenIdentifier>
+			<Abstract type="html">Implemented by subclasses that wish to provide an additional means of
+identifying an object instance within the debug console.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)debugDescriptor</Declaration>
+			
+			<ReturnValue><Abstract type="html">If a non-nil value is returned by this method, a field named
+            &quot;debugDescriptor&quot; will be added to the consoleDescription.</Abstract></ReturnValue>
+			<Anchor>//api/name/debugDescriptor</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFormattedDescriptionObject/consoleDescription</TokenIdentifier>
+			<Abstract type="html">Uses an MBFieldListFormatter instance in conjunction with the
+addDescriptionFieldsTo: method to construct a description of the
+receiver intended for output to the console.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)consoleDescription</Declaration>
+			
+			<ReturnValue><Abstract type="html">The console description.</Abstract></ReturnValue>
+			<Anchor>//api/name/consoleDescription</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFormattedDescriptionObject/dump</TokenIdentifier>
+			<Abstract type="html">Writes the output of the receiver&apos;s consoleDescription method to the console
+log.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
+			
+			<Declaration>- (void)dump</Declaration>
+			
+			
+			<Anchor>//api/name/dump</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFormattedDescriptionObject/description</TokenIdentifier>
+			<Abstract type="html">Overrides the NSObject implementation to return the output of
+consoleDescription.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)description</Declaration>
+			
+			<ReturnValue><Abstract type="html">The return value of calling the consoleDescription</Abstract></ReturnValue>
+			<Anchor>//api/name/description</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

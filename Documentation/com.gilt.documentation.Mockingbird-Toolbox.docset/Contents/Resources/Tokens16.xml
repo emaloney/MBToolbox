@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBModuleBase.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBModuleBase</TokenIdentifier>
+			<Abstract type="html">Modules are the mechanism by which functionality is added to Mockingbird.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+            
+			
+			<NodeRef refid="16"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleBase/setLog:</TokenIdentifier>
+			<Abstract type="html">Returns the MBModuleLog associated with the receiver.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) MBModuleLog *log</Declaration>
+			
+			
+			<Anchor>//api/name/log</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleBase/log</TokenIdentifier>
+			<Abstract type="html">Returns the MBModuleLog associated with the receiver.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) MBModuleLog *log</Declaration>
+			
+			
+			<Anchor>//api/name/log</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBModuleBase/log</TokenIdentifier>
+			<Abstract type="html">Returns the MBModuleLog associated with the receiver.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) MBModuleLog *log</Declaration>
+			
+			
+			<Anchor>//api/name/log</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleBase/environmentLoaderClasses</TokenIdentifier>
+			<Abstract type="html">Modules that participate in the environment loading process may override this
+method to indicate the environment loaders it uses. When the module is
+activated, its associated environment loaders will be used to populate the
+current environment.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)environmentLoaderClasses</Declaration>
+			
+			<ReturnValue><Abstract type="html">The environment loader classes used by the module. The default
+            implementation returns nil to indicate that the module
+            has no associated environment loaders.</Abstract></ReturnValue>
+			<Anchor>//api/name/environmentLoaderClasses</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

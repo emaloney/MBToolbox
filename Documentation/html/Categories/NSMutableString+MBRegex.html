@@ -1,0 +1,606 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>NSMutableString(MBRegex) Category Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Mockingbird Toolbox </a></h1>
+				<a id="developerHome" href="../index.html">Gilt Groupe</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">NSMutableString(MBRegex) Category Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/replaceRegexMatches:withTemplate:">&nbsp;&nbsp;&nbsp;&nbsp;- replaceRegexMatches:withTemplate:</option>
+	
+	<option value="//api/name/replaceRegexMatches:withTemplate:options:">&nbsp;&nbsp;&nbsp;&nbsp;- replaceRegexMatches:withTemplate:options:</option>
+	
+	<option value="//api/name/replaceRegexMatches:withTemplate:options:range:">&nbsp;&nbsp;&nbsp;&nbsp;- replaceRegexMatches:withTemplate:options:range:</option>
+	
+	<option value="//api/name/replaceRegexMatches:withTemplate:options:range:error:">&nbsp;&nbsp;&nbsp;&nbsp;- replaceRegexMatches:withTemplate:options:range:error:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Performing regex replacements in a mutable string">Performing regex replacements in a mutable string</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/replaceRegexMatches:withTemplate:">replaceRegexMatches:withTemplate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/replaceRegexMatches:withTemplate:options:">replaceRegexMatches:withTemplate:options:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/replaceRegexMatches:withTemplate:options:range:">replaceRegexMatches:withTemplate:options:range:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/replaceRegexMatches:withTemplate:options:range:error:">replaceRegexMatches:withTemplate:options:range:error:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="NSMutableString(MBRegex) Category Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">NSMutableString(MBRegex) Category Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">NSString+MBRegex.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An <code>NSMutableString</code> class extension that provides regular expression
+replacement methods.</p>
+
+<p>To improve performance, these methods utilize the <a href="../Classes/MBRegexCache.html"><code>MBRegexCache</code></a> when
+possible.</p>
+
+<p>For additional information on the workings of regular expressions, see the
+Apple documentation for <code>NSRegularExpression</code>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Performing regex replacements in a mutable string" name="task_Performing regex replacements in a mutable string"></a>
+						
+<h3 class="subsubtitle task-title">Performing regex replacements in a mutable string</h3>
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/replaceRegexMatches:withTemplate:">&ndash;&nbsp;replaceRegexMatches:withTemplate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/replaceRegexMatches:withTemplate:options:">&ndash;&nbsp;replaceRegexMatches:withTemplate:options:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/replaceRegexMatches:withTemplate:options:range:">&ndash;&nbsp;replaceRegexMatches:withTemplate:options:range:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/replaceRegexMatches:withTemplate:options:range:error:">&ndash;&nbsp;replaceRegexMatches:withTemplate:options:range:error:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/replaceRegexMatches:withTemplate:" title="replaceRegexMatches:withTemplate:"></a>
+	<h3 class="subsubtitle method-title">replaceRegexMatches:withTemplate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs a regular expression string replacement on the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)replaceRegexMatches:(id)<em>pattern</em> withTemplate:(id)<em>templ</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pattern</em></dt>
+			<dd><p>The regular expression pattern to match.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>templ</em></dt>
+			<dd><p>The template to use for performing replacements of any
+            matches found in the receiver.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The number of matches performed.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the receiver contains any matches for the specified regular expression
+pattern, the receiver will be modified so that those matches are replaced
+according to the template provided.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+MBRegex.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/replaceRegexMatches:withTemplate:options:" title="replaceRegexMatches:withTemplate:options:"></a>
+	<h3 class="subsubtitle method-title">replaceRegexMatches:withTemplate:options:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs a regular expression string replacement on the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)replaceRegexMatches:(id)<em>pattern</em> withTemplate:(id)<em>templ</em> options:(id)<em>options</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pattern</em></dt>
+			<dd><p>The regular expression pattern to match.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>templ</em></dt>
+			<dd><p>The template to use for performing replacements of any
+            matches found in the receiver.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options that govern the behavior of the returned
+            regular expression.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The number of matches performed.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the receiver contains any matches for the specified regular expression
+pattern, the receiver will be modified so that those matches are replaced
+according to the template provided.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+MBRegex.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/replaceRegexMatches:withTemplate:options:range:" title="replaceRegexMatches:withTemplate:options:range:"></a>
+	<h3 class="subsubtitle method-title">replaceRegexMatches:withTemplate:options:range:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs a regular expression string replacement on the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)replaceRegexMatches:(id)<em>pattern</em> withTemplate:(id)<em>templ</em> options:(id)<em>options</em> range:(id)<em>range</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pattern</em></dt>
+			<dd><p>The regular expression pattern to match.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>templ</em></dt>
+			<dd><p>The template to use for performing replacements of any
+            matches found in the receiver.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options that govern the behavior of the returned
+            regular expression.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>range</em></dt>
+			<dd><p>The range of characters in the receiver within which matching
+            will occur. Characters outside this range will not be affected.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The number of matches performed.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the receiver contains any matches for the specified regular expression
+pattern, the receiver will be modified so that those matches are replaced
+according to the template provided.</p>
+
+<p>Matching is constrained to the given range within the receiver.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+MBRegex.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/replaceRegexMatches:withTemplate:options:range:error:" title="replaceRegexMatches:withTemplate:options:range:error:"></a>
+	<h3 class="subsubtitle method-title">replaceRegexMatches:withTemplate:options:range:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs a regular expression string replacement on the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)replaceRegexMatches:(id)<em>pattern</em> withTemplate:(id)<em>templ</em> options:(id)<em>options</em> range:(id)<em>range</em> error:(id)<em>errPtr</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pattern</em></dt>
+			<dd><p>The regular expression pattern to match.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>templ</em></dt>
+			<dd><p>The template to use for performing replacements of any
+            matches found in the receiver.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options that govern the behavior of the returned
+            regular expression.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>range</em></dt>
+			<dd><p>The range of characters in the receiver within which matching
+            will occur. Characters outside this range will not be affected.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>errPtr</em></dt>
+			<dd><p>An optional pointer to storage for an <code>NSError</code> instance.
+            If this parameter is non-<code>nil</code> and an error occurs, the memory
+            location pointed to by this parameter will be modified to reference
+            an <code>NSError</code> instance describing the problem.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The number of matches performed.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the receiver contains any matches for the specified regular expression
+pattern, the receiver will be modified so that those matches are replaced
+according to the template provided.</p>
+
+<p>Matching is constrained to the given range within the receiver.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+MBRegex.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+                    
+                    
+
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Gilt Groupe. All rights reserved. (Last updated: 2014-08-05)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

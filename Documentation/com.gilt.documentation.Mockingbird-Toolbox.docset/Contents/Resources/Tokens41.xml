@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/MBModule.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/MBModule</TokenIdentifier>
+			<Abstract type="html">Modules are the mechanism by which functionality is added to Mockingbird.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+            
+			
+			<NodeRef refid="41"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModule/log</TokenIdentifier>
+			<Abstract type="html">Returns the MBModuleLog associated with the receiving module.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>+ (MBModuleLog *)log</Declaration>
+			
+			<ReturnValue><Abstract type="html">The module log.</Abstract></ReturnValue>
+			<Anchor>//api/name/log</Anchor>
+            <NodeRef refid="41"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModule/environmentLoaderClasses</TokenIdentifier>
+			<Abstract type="html">This optional method is implemented by modules that participate in the
+environment loading process. When the module is activated, its associated
+environment loaders will be used to populate the current environment.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)environmentLoaderClasses</Declaration>
+			
+			<ReturnValue><Abstract type="html">The environment loader classes used by the module. nil is
+            an acceptable return value to indicate that the module
+            has no associated environment loaders.</Abstract></ReturnValue>
+			<Anchor>//api/name/environmentLoaderClasses</Anchor>
+            <NodeRef refid="41"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

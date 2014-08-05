@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIColor+MBToolbox.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIColor(MBToolbox)</TokenIdentifier>
+			<Abstract type="html">A class extension for UIColor that exposes additional color information.</Abstract>
+			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
+            
+			
+			<NodeRef refid="34"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/isOpaque</TokenIdentifier>
+			<Abstract type="html">Determines whether the receiver represents an opaque color.</Abstract>
+			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isOpaque</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the receiver is an opaque color; NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/isOpaque</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/isDark</TokenIdentifier>
+			<Abstract type="html">Determines whether the receiver represents a dark color.</Abstract>
+			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isDark</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the receiver is a dark color; NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/isDark</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/highlightColor</TokenIdentifier>
+			<Abstract type="html">Returns a new UIColor instance containing an appropriate highlight color
+for the receiver by adjusting the receiver&apos;s brightness.</Abstract>
+			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>- (UIColor *)highlightColor</Declaration>
+			
+			<ReturnValue><Abstract type="html">A highlight color based on the receiver.</Abstract></ReturnValue>
+			<Anchor>//api/name/highlightColor</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/colorWithBrightnessAdjustedByFactor:</TokenIdentifier>
+			<Abstract type="html">Returns a new UIColor instance by adjusting the brightness value of the
+receiver by a given factor.</Abstract>
+			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>- (UIColor *)colorWithBrightnessAdjustedByFactor:(id)adjustFactor</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>adjustFactor</Name>
+					<Abstract type="html">The adjustment factor.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The adjusted color.</Abstract></ReturnValue>
+			<Anchor>//api/name/colorWithBrightnessAdjustedByFactor:</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

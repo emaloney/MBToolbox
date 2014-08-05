@@ -1,0 +1,784 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>MBFilesystemCache(ForSubclassEyesOnly) Category Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Mockingbird Toolbox </a></h1>
+				<a id="developerHome" href="../index.html">Gilt Groupe</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">MBFilesystemCache(ForSubclassEyesOnly) Category Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/ensureCacheDirectory">&nbsp;&nbsp;&nbsp;&nbsp;- ensureCacheDirectory</option>
+	
+	<option value="//api/name/fileExtensionForCacheKey:">&nbsp;&nbsp;&nbsp;&nbsp;- fileExtensionForCacheKey:</option>
+	
+	<option value="//api/name/fileManager">&nbsp;&nbsp;&nbsp;&nbsp;- fileManager</option>
+	
+	<option value="//api/name/filePathForCacheKey:">&nbsp;&nbsp;&nbsp;&nbsp;- filePathForCacheKey:</option>
+	
+	<option value="//api/name/objectFromCacheFile:">&nbsp;&nbsp;&nbsp;&nbsp;- objectFromCacheFile:</option>
+	
+	<option value="//api/name/objectLoaded:forKey:">&nbsp;&nbsp;&nbsp;&nbsp;- objectLoaded:forKey:</option>
+	
+	<option value="//api/name/storeObjectInFilesystemCacheIfAppropriate:forKey:">&nbsp;&nbsp;&nbsp;&nbsp;- storeObjectInFilesystemCacheIfAppropriate:forKey:</option>
+	
+	<option value="//api/name/storeObjectInMemoryCacheIfAppropriate:forKey:">&nbsp;&nbsp;&nbsp;&nbsp;- storeObjectInMemoryCacheIfAppropriate:forKey:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_File management">File management</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Loading cache objects">Loading cache objects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Storing objects in the cache">Storing objects in the cache</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ensureCacheDirectory">ensureCacheDirectory</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileExtensionForCacheKey:">fileExtensionForCacheKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileManager">fileManager</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/filePathForCacheKey:">filePathForCacheKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectFromCacheFile:">objectFromCacheFile:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectLoaded:forKey:">objectLoaded:forKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/storeObjectInFilesystemCacheIfAppropriate:forKey:">storeObjectInFilesystemCacheIfAppropriate:forKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/storeObjectInMemoryCacheIfAppropriate:forKey:">storeObjectInMemoryCacheIfAppropriate:forKey:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="MBFilesystemCache(ForSubclassEyesOnly) Category Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">MBFilesystemCache(ForSubclassEyesOnly) Category Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">MBFilesystemCache+Subclassing.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The class extensions in this header file are intended for internal use only by
+<a href="../Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> implementations.</p>
+
+<p>Code external to <a href="../Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> should never call these methods directly.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="File management" name="task_File management"></a>
+						<h3 class="subsubtitle task-title">File management</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fileManager">&ndash;&nbsp;fileManager</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ensureCacheDirectory">&ndash;&nbsp;ensureCacheDirectory</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fileExtensionForCacheKey:">&ndash;&nbsp;fileExtensionForCacheKey:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/filePathForCacheKey:">&ndash;&nbsp;filePathForCacheKey:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Loading cache objects" name="task_Loading cache objects"></a>
+						<h3 class="subsubtitle task-title">Loading cache objects</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectFromCacheFile:">&ndash;&nbsp;objectFromCacheFile:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectLoaded:forKey:">&ndash;&nbsp;objectLoaded:forKey:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Storing objects in the cache" name="task_Storing objects in the cache"></a>
+						<h3 class="subsubtitle task-title">Storing objects in the cache</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/storeObjectInMemoryCacheIfAppropriate:forKey:">&ndash;&nbsp;storeObjectInMemoryCacheIfAppropriate:forKey:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/storeObjectInFilesystemCacheIfAppropriate:forKey:">&ndash;&nbsp;storeObjectInFilesystemCacheIfAppropriate:forKey:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/ensureCacheDirectory" title="ensureCacheDirectory"></a>
+	<h3 class="subsubtitle method-title">ensureCacheDirectory</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Ensures that the cache directory used by the receiver exists. If the directory
+does not exist, it will be created.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)ensureCacheDirectory</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBFilesystemCache+Subclassing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fileExtensionForCacheKey:" title="fileExtensionForCacheKey:"></a>
+	<h3 class="subsubtitle method-title">fileExtensionForCacheKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the file extension that should be used for the file associated with
+the given cache key.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)fileExtensionForCacheKey:(id)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The cache key for which the file extension is sought.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The file extension.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBFilesystemCache+Subclassing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fileManager" title="fileManager"></a>
+	<h3 class="subsubtitle method-title">fileManager</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Accesses the <code>NSFileManager</code> instance used internally by the cache.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSFileManager *)fileManager</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The file manager.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBFilesystemCache+Subclassing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/filePathForCacheKey:" title="filePathForCacheKey:"></a>
+	<h3 class="subsubtitle method-title">filePathForCacheKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the file path that should be used for the file associated with
+the given cache key.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)filePathForCacheKey:(id)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The cache key for which the file path is sought.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The file path.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBFilesystemCache+Subclassing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectFromCacheFile:" title="objectFromCacheFile:"></a>
+	<h3 class="subsubtitle method-title">objectFromCacheFile:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads the cache object contained in the specified file.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)objectFromCacheFile:(id)<em>path</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>path</em></dt>
+			<dd><p>The path of the file to read.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The cache object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The default implementation reads the file into an <code>NSData</code> instance and then
+returns the result of calling <code>objectFromCacheData:</code> with that <code>NSData</code>.</p>
+
+<p>Subclasses may override this method to provide a more efficient mechanism
+for reconstituting objects from files.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBFilesystemCache+Subclassing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectLoaded:forKey:" title="objectLoaded:forKey:"></a>
+	<h3 class="subsubtitle method-title">objectLoaded:forKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Notifies the cache that a cache object has been loaded into memory for the
+given key.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)objectLoaded:(id)<em>cacheObj</em> forKey:(id)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cacheObj</em></dt>
+			<dd><p>The cache object that was loaded.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The cache key associated with the cache object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Subclasses should call this method if they provide another mechanism for
+loading cache objects. For example, a cache that fetches objects via HTTP
+can call this method when an HTTP request has completed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBFilesystemCache+Subclassing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/storeObjectInFilesystemCacheIfAppropriate:forKey:" title="storeObjectInFilesystemCacheIfAppropriate:forKey:"></a>
+	<h3 class="subsubtitle method-title">storeObjectInFilesystemCacheIfAppropriate:forKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Consults the delegate&rsquo;s <code>shouldStoreObject:forKey:inFilesystemCache:</code> method
+to determine whether the specified object should be stored in the filesystem
+cache.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)storeObjectInFilesystemCacheIfAppropriate:(id)<em>cacheObj</em> forKey:(id)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cacheObj</em></dt>
+			<dd><p>The object that may be stored in the cache.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The cache key to associate with <code>cacheObj</code> if the delegate
+            permits storage in the cache.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the delegate method returns <code>YES</code>, the object will be stored in the cache
+and associated with the specified key.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBFilesystemCache+Subclassing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/storeObjectInMemoryCacheIfAppropriate:forKey:" title="storeObjectInMemoryCacheIfAppropriate:forKey:"></a>
+	<h3 class="subsubtitle method-title">storeObjectInMemoryCacheIfAppropriate:forKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Consults the delegate&rsquo;s <code>shouldStoreObject:forKey:inMemoryCache:</code> method
+to determine whether the specified object should be stored in the memory cache.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)storeObjectInMemoryCacheIfAppropriate:(id)<em>cacheObj</em> forKey:(id)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cacheObj</em></dt>
+			<dd><p>The object that may be stored in the cache.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The cache key to associate with <code>cacheObj</code> if the delegate
+            permits storage in the cache.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the delegate method returns <code>YES</code>, the object will be stored in the cache
+and associated with the specified key.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBFilesystemCache+Subclassing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+                    
+                    
+
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Gilt Groupe. All rights reserved. (Last updated: 2014-08-05)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

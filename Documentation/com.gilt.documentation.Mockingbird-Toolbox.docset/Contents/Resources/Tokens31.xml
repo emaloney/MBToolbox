@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSString+MBIndentation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSString(MBIndentation)</TokenIdentifier>
+			<Abstract type="html">An NSString class extension that provides methods for indenting
+individual lines within a string.</Abstract>
+			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
+            
+			
+			<NodeRef refid="31"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSString/stringByIndentingEachLineWithTab</TokenIdentifier>
+			<Abstract type="html">Creates a new string by prefixing each line in the receiver with the tab
+(0x09) character.</Abstract>
+			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)stringByIndentingEachLineWithTab</Declaration>
+			
+			<ReturnValue><Abstract type="html">The indented string.</Abstract></ReturnValue>
+			<Anchor>//api/name/stringByIndentingEachLineWithTab</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSString/stringByIndentingEachLineWithTabs:</TokenIdentifier>
+			<Abstract type="html">Creates a new string by prefixing each line in the receiver with the
+specified number of tab (0x09) characters.</Abstract>
+			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)stringByIndentingEachLineWithTabs:(id)numberOfTabs</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>numberOfTabs</Name>
+					<Abstract type="html">The number of tab characters to use for intenting
+            lines.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The indented string.</Abstract></ReturnValue>
+			<Anchor>//api/name/stringByIndentingEachLineWithTabs:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSString/stringByIndentingEachLineWithPrefix:</TokenIdentifier>
+			<Abstract type="html">Creates a new string by prefixing each line in the receiver with the given
+string.</Abstract>
+			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)stringByIndentingEachLineWithPrefix:(id)prefix</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>prefix</Name>
+					<Abstract type="html">The prefix to use for indenting lines.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The indented string.</Abstract></ReturnValue>
+			<Anchor>//api/name/stringByIndentingEachLineWithPrefix:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

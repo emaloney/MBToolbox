@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBServiceManager.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBServiceManager</TokenIdentifier>
+			<Abstract type="html">This class manages the lifecycle of various runtime services that adopt the
+MBService protocol.</Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+            
+			
+			<NodeRef refid="23"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBServiceManager/serviceForClassName:</TokenIdentifier>
+			<Abstract type="html">Returns the singleton instance of the service implemented by the class with
+the specified name.</Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+			
+			<Declaration>- (id)serviceForClassName:(id)serviceClassName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serviceClassName</Name>
+					<Abstract type="html">The name of the class implementing the
+            MBService protocol.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A pointer to the singleton MBService with the specified class
+            name, or nil if there isn&apos;t one.</Abstract></ReturnValue>
+			<Anchor>//api/name/serviceForClassName:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBServiceManager/serviceForClass:</TokenIdentifier>
+			<Abstract type="html">Returns the singleton instance of the service implemented the specified class.</Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+			
+			<Declaration>- (id)serviceForClass:(id)serviceClass</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serviceClass</Name>
+					<Abstract type="html">The Class implementing the MBService protocol.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A pointer to the singleton MBService of the specified class,
+            or nil if there isn&apos;t one.</Abstract></ReturnValue>
+			<Anchor>//api/name/serviceForClass:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBServiceManager/attachToService:</TokenIdentifier>
+			<Abstract type="html">Attaches to the specified service, incrementing its attach count by one.</Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+			
+			<Declaration>- (void)attachToService:(id)service</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The service being attached.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/attachToService:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBServiceManager/attachToServiceClass:</TokenIdentifier>
+			<Abstract type="html">Attaches to the service with the given class name, incrementing its attach
+count by one.</Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+			
+			<Declaration>- (id)attachToServiceClass:(id)serviceClass</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serviceClass</Name>
+					<Abstract type="html">The implementing class of the service class to attach.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">If successful, the MBService instance that was attached. Will
+            return nil on failure.</Abstract></ReturnValue>
+			<Anchor>//api/name/attachToServiceClass:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBServiceManager/attachToServiceClassNamed:</TokenIdentifier>
+			<Abstract type="html">Attaches to the service with the given class name, incrementing its attach
+count by one.</Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+			
+			<Declaration>- (id)attachToServiceClassNamed:(id)serviceClassName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serviceClassName</Name>
+					<Abstract type="html">The name of the service class to attach.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">If successful, the MBService instance that was attached. Will
+            return nil on failure.</Abstract></ReturnValue>
+			<Anchor>//api/name/attachToServiceClassNamed:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBServiceManager/detachFromService:</TokenIdentifier>
+			<Abstract type="html">Detaches from the specified service, decrementing its attach count by one.</Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+			
+			<Declaration>- (void)detachFromService:(id)service</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The service being attached.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/detachFromService:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBServiceManager/detachFromServiceClass:</TokenIdentifier>
+			<Abstract type="html">Detaches from the service with the given class name, decrementing its attach
+count by one.</Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+			
+			<Declaration>- (void)detachFromServiceClass:(id)serviceClass</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serviceClass</Name>
+					<Abstract type="html">The implementing class of the service class to detach.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">If successful, the MBService instance that was attached. Will
+            return nil on failure.</Abstract></ReturnValue>
+			<Anchor>//api/name/detachFromServiceClass:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBServiceManager/detachFromServiceClassNamed:</TokenIdentifier>
+			<Abstract type="html">Detaches from the service with the given class name, decrementing its attach
+count by one.</Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+			
+			<Declaration>- (void)detachFromServiceClassNamed:(id)serviceClassName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serviceClassName</Name>
+					<Abstract type="html">The name of the service class to attach.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">If successful, the MBService instance that was attached. Will
+            return nil on failure.</Abstract></ReturnValue>
+			<Anchor>//api/name/detachFromServiceClassNamed:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBServiceManager/isServiceRunning:</TokenIdentifier>
+			<Abstract type="html">Determines whether the specified service is running.</Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isServiceRunning:(id)service</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The service whose status is sought.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the service is running; NO if it is not.</Abstract></ReturnValue>
+			<Anchor>//api/name/isServiceRunning:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBServiceManager/attachCountForService:</TokenIdentifier>
+			<Abstract type="html">Determines the current attach count of a service.
+  </Abstract>
+			<DeclaredIn>MBServiceManager.h</DeclaredIn>
+			
+			<Declaration>- (NSUInteger)attachCountForService:(id)service</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The service whose attach count is sought.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The service&apos;s current attach count.</Abstract></ReturnValue>
+			<Anchor>//api/name/attachCountForService:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

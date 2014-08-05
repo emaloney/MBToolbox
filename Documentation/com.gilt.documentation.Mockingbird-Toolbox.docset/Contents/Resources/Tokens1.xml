@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBBatteryMonitor.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBBatteryMonitor</TokenIdentifier>
+			<Abstract type="html">The MBBatteryMonitor is a service that fires event notifications when
+there are changes to device&apos;s battery state, battery level, and plugged-in
+status.</Abstract>
+			<DeclaredIn>MBBatteryMonitor.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBBatteryMonitor/currentBatteryState</TokenIdentifier>
+			<Abstract type="html">Determines the current battery state when the MBBatteryMonitor service
+is running.</Abstract>
+			<DeclaredIn>MBBatteryMonitor.h</DeclaredIn>
+			
+			<Declaration>- (MBBatteryState *)currentBatteryState</Declaration>
+			
+			<ReturnValue><Abstract type="html">An MBBatteryState instance whose properties reflect the
+            current state of the device&apos;s battery. Will be nil if the
+            MBBatteryMonitor service is not running.</Abstract></ReturnValue>
+			<Anchor>//api/name/currentBatteryState</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

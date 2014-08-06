@@ -64,3 +64,20 @@ That's just a quick summary.
 
 For further details, start with [the Mockingbird Toolbox API documentation](https://rawgit.com/gilt/mockingbird-toolbox/master/Documentation/html/index.html).
 
+## About Mockingbird Toolbox
+
+The Mockingbird Toolbox represents the base set of components that comprise the Mockingbird Library.
+
+![Mockingbird Library Module Layers](Documentation/images/mockingbird-module-layers.png)
+
+Mockingbird began life as AppFramework, created by Jesse Boyes.
+
+AppFramework found a home at Gilt Groupe and eventually became Mockingbird Library.
+
+In recent years, Mockingbird Library has been developed and maintained by Evan Coyne Maloney, Gilt Groupe's principal iOS engineer.
+
+### Copyright & License
+
+Mockingbird Library © Copyright 2009-2014, Gilt Groupe.
+
+Licensed under [the MIT license](LICENSE).

@@ -1,6 +1,8 @@
 # Mockingbird Toolbox
 
-The Mockingbird Toolbox is a set of general-use utility code for iOS. The Toolbox represents the lowest-level module in the Mockingbird open-source project from Gilt Groupe.
+The Mockingbird Toolbox is a set of general-purpose utility code for use in iOS applications.
+
+The Toolbox is the lowest-level module in the Mockingbird open-source project from Gilt Groupe.
 
 ## Highlights
 
@@ -48,19 +50,17 @@ The `MBNetworkIndicator` class provides a mechanism to coordinate the display of
 
 Mockingbird Toolbox includes various utilities for creating, examining, and manipulating colors.
 
-
 ### Images
 
 The Toolbox contains a `UIImage` class extension that adds methods for scaling images, as well as a `UIView` class extension for capturing the contents of a view as a `UIImage`, `CIImage` or `CGImageRef`.
 
 ### Bitmaps
 
-[The `MBBitmapPixelPlane` class](Classes/MBBitmapPixelPlane.html) represents a plane of pixels that can be accessed individually, regardless of the underlying pixel format. This allows direct extraction and manipulation of pixel data within a bitmap.
+The `MBBitmapPixelPlane` class represents a plane of pixels that can be accessed individually, regardless of the underlying pixel format. This allows direct extraction and manipulation of pixel data within a bitmap.
 
 ### ...and more
 
-There's even more to Mockingbird Toolbox.
+That's just a quick summary.
 
 For further details, start with [the Mockingbird Toolbox API documentation](https://rawgit.com/gilt/mockingbird-toolbox/master/Documentation/html/index.html).
-
 

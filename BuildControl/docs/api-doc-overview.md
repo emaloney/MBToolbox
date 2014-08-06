@@ -40,6 +40,15 @@ The storage behavior of an `MBFilesystemCache` instance can be customized throug
 The `MBFilesystemCache` implements an age-based expiration mechanism, but the class also provides ample hooks for subclasses to supply alternate implementations.
 
 
+### Thread-Local Storage
+
+[The `MBThreadLocalStorage` class](Classes/MBThreadLocalStorage.html) provides an interface for safely sharing thread-local storage among unrelated units of code.
+
+To prevent key clashes between different code using thread-local storage, values are accessed by specifying the requesting `Class`. Classes can store multiple values by providing an additional key string for each value.
+
+The `MBThreadLocalStorage` class also provides methods that allow treating thread-local storage as a lock-free cache. Objects that are expensive to create, such as `NSDateFormatter` instances, can be cached in thread-local storage without incurring the locking overhead required by a shared object cache like `MBThreadsafeCache`.
+
+
 ### Regular Expressions
 
 To simplify working with regular expressions, the Mockingbird Toolbox provides [an `NSString` class extension](Categories/NSString+MBRegex.html) and [an `NSMutableString` class extension](Categories/NSMutableString+MBRegex.html) to help create, manipulate, and execute regular expressions.

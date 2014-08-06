@@ -19,5 +19,5 @@ Mockingbird Toolbox features include:
 * A manager for coordinating the use of shared runtime services
 * Debugging tools
 
-For further details, start with [the documentation](http://htmlpreview.github.com/?Documentation/html/index.html).
+For further details, start with [the documentation](https://htmlpreview.github.com/gilt/mockingbird-toolbox/Documentation/html/index.html).
 

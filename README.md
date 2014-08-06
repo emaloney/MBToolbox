@@ -68,7 +68,7 @@ For further details, start with [the Mockingbird Toolbox API documentation](http
 
 ## About Mockingbird Toolbox
 
-The Mockingbird Toolbox represents the base set of components that comprise the Mockingbird Library.
+The Mockingbird Toolbox represents the foundation of the Mockingbird Library.
 
 Over the years, Gilt Groupe has used and refined Mockingbird Library as the base platform for its various iOS projects.
 

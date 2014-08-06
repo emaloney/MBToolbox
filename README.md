@@ -68,6 +68,8 @@ For further details, start with [the Mockingbird Toolbox API documentation](http
 
 The Mockingbird Toolbox represents the base set of components that comprise the Mockingbird Library.
 
+Over the years, Gilt Groupe has used and refined Mockingbird Library as the base platform for its various iOS projects.
+
 ![Mockingbird Library Module Layers](Documentation/images/mockingbird-module-layers.png)
 
 Mockingbird began life as AppFramework, created by Jesse Boyes.

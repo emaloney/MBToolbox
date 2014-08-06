@@ -1,18 +1,22 @@
 Mockingbird Documentation
 -------------------------
-This directory contains [automatically-generated Mockingbird API documentation](html/index.html).
+This directory contains [automatically-generated Mockingbird API documentation](https://rawgit.com/gilt/mockingbird-toolbox/master/Documentation/html/index.html).
 
 Building
 --------
 You can generate this documentation from within the Mockingbird Xcode project if you have [the **appledoc** utility](https://github.com/tomaz/appledoc) installed along with appledoc's default templates.
 
-When you build the Documentation target in the Xcode project, the contents of this directory are deleted, and the documentation is re-generated using your local copy of the source code.
+As of this writing, we recommend using appledoc 2.2 (build 963) available from:
+
+	https://github.com/tomaz/appledoc/releases/tag/v2.2-963
+
+When you build the documentation target in the Xcode project, the contents of this directory are deleted, and the documentation is re-generated using your local copy of the source code.
 
 Documentation is generated as HTML, and as an Xcode-compatible docset bundle.
 
 Xcode Integration
 -----------------
-When the Documentation target is successfully built, the docset will be exposed to Xcode by copying it to:
+When the documentation target is successfully built, the docset will be exposed to Xcode by copying it to:
 
 	~/Library/Developer/Shared/Documentation/DocSets
 

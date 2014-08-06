@@ -2,7 +2,9 @@
 
 The Mockingbird Toolbox is a set of general-purpose utility code for use in iOS applications.
 
-The Toolbox is the lowest-level module in the Mockingbird open-source project from Gilt Groupe.
+The Toolbox is the lowest-level module in the Mockingbird Library open-source project from Gilt Groupe.
+
+![Gilt Tech logo](Documentation/images/gilt-tech-logo.png)
 
 ## Highlights
 

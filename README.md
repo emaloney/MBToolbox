@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/gilt/mockingbird-toolbox.svg?branch=master)](https://travis-ci.org/gilt/mockingbird-toolbox)
+Current build status: [![Build Status](https://travis-ci.org/gilt/mockingbird-toolbox.svg?branch=master)](https://travis-ci.org/gilt/mockingbird-toolbox)
 
 # Mockingbird Toolbox
 

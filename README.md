@@ -28,7 +28,7 @@ A subclass, `MBFilesystemCache`, adds a filesystem backing store to the memory c
 
 ### Thread-Local Storage
 
-The `MBThreadLocalStorage` provides an interface for safely sharing thread-local storage among unrelated units of code.
+`MBThreadLocalStorage` provides an interface for safely sharing thread-local storage among unrelated units of code.
 
 The class can also be used as a lock-free cache: Objects that are expensive to create, such as `NSDateFormatter` instances, can be cached in thread-local storage without incurring the locking overhead required by a shared object cache like `MBThreadsafeCache`.
 

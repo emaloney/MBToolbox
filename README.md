@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/gilt/mockingbird-toolbox.svg?branch=master)](https://travis-ci.org/gilt/mockingbird-toolbox)
+
 # Mockingbird Toolbox
 
 The Mockingbird Toolbox is a set of general-purpose utility code for use in iOS applications.

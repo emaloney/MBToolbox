@@ -3,10 +3,6 @@ xcode_project: MBToolbox.xcodeproj
 xcode_scheme: MBToolbox
 xcode_sdk: iphonesimulator7.1
 
-branches:
-  only:
-    - master
-
 before_install:
   - sudo systemsetup -settimezone America/New_York
 

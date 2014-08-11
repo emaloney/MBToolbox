@@ -82,6 +82,7 @@
 		3B3832EB198831B0006A771F /* MBStringFunctions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CBC198811BD009A2126 /* MBStringFunctions.h */; };
 		3B3832EC198831B0006A771F /* NSString+MBIndentation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CBD198811BD009A2126 /* NSString+MBIndentation.h */; };
 		3B3832ED198831B0006A771F /* MBThreadLocalStorage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CC0198811BD009A2126 /* MBThreadLocalStorage.h */; };
+		3B6ED5341995C87A004652EB /* Test-MBStringFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */; };
 		3B968ED5198FF2380061DA66 /* libMBToolbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2EF74B19880F31009AD107 /* libMBToolbox.a */; };
 		3B968EE2198FF28D0061DA66 /* Test-MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */; };
 		3B968EE3198FF28D0061DA66 /* Test-NSString+MBIndentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EE0198FF28D0061DA66 /* Test-NSString+MBIndentation.m */; };
@@ -240,6 +241,7 @@
 		3B3831AB19882B62006A771F /* MBDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDebug.h; sourceTree = "<group>"; };
 		3B3831AC19882B62006A771F /* MBRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRuntime.h; sourceTree = "<group>"; };
 		3B3831B019882B93006A771F /* Mockingbird-Toolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mockingbird-Toolbox.h"; sourceTree = "<group>"; };
+		3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBStringFunctions.m"; sourceTree = "<group>"; };
 		3B968ECF198FF2380061DA66 /* MBToolbox-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MBToolbox-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B968EDE198FF28D0061DA66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBMessageDigest.m"; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 			children = (
 				3B968EDE198FF28D0061DA66 /* Info.plist */,
 				3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */,
+				3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */,
 				3B968EE0198FF28D0061DA66 /* Test-NSString+MBIndentation.m */,
 			);
 			path = Tests;
@@ -642,6 +645,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6ED5341995C87A004652EB /* Test-MBStringFunctions.m in Sources */,
 				3B968EE3198FF28D0061DA66 /* Test-NSString+MBIndentation.m in Sources */,
 				3B968EE2198FF28D0061DA66 /* Test-MBMessageDigest.m in Sources */,
 			);

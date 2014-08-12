@@ -95,7 +95,7 @@ DOCSET_INSTALL_DIR="${PROJECT_DIR}/Documentation/${DOCSET_FILENAME}"
 XCODE_DOCSET_INSTALL_DIR="${HOME}/Library/Developer/Shared/Documentation/DocSets/${DOCSET_FILENAME}"
 
 # verify that we can find the code
-CODE_DIR="${PROJECT_DIR}/${CODE_DIR_NAME}"
+CODE_DIR="${PROJECT_DIR}/Code"
 if [[ -z "$CODE_DIR" || ! -d "$CODE_DIR" ]]; then
 	exitWithError "Couldn't find source directory: $CODE_DIR";
 fi

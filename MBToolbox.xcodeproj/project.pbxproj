@@ -47,49 +47,12 @@
 		3B0F8CDA198811BD009A2126 /* MBServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CB8198811BD009A2126 /* MBServiceManager.m */; };
 		3B0F8CDB198811BD009A2126 /* NSString+MBIndentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CBE198811BD009A2126 /* NSString+MBIndentation.m */; };
 		3B0F8CDC198811BD009A2126 /* MBThreadLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CC1198811BD009A2126 /* MBThreadLocalStorage.m */; };
-		3B3832C9198831B0006A771F /* Mockingbird-Toolbox.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B3831B019882B93006A771F /* Mockingbird-Toolbox.h */; };
-		3B3832CA198831B0006A771F /* MBBatteryMonitor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C73198811BD009A2126 /* MBBatteryMonitor.h */; };
-		3B3832CB198831B0006A771F /* MBCacheOperations.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C76198811BD009A2126 /* MBCacheOperations.h */; };
-		3B3832CC198831B0006A771F /* MBFilesystemCache+Subclassing.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C78198811BD009A2126 /* MBFilesystemCache+Subclassing.h */; };
-		3B3832CD198831B0006A771F /* MBFilesystemCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C79198811BD009A2126 /* MBFilesystemCache.h */; };
-		3B3832CE198831B0006A771F /* MBThreadsafeCache+Subclassing.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C7B198811BD009A2126 /* MBThreadsafeCache+Subclassing.h */; };
-		3B3832CF198831B0006A771F /* MBThreadsafeCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C7C198811BD009A2126 /* MBThreadsafeCache.h */; };
-		3B3832D0198831B0006A771F /* NSError+MBToolbox.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C84198811BD009A2126 /* NSError+MBToolbox.h */; };
-		3B3832D1198831B0006A771F /* MBEvents.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C87198811BD009A2126 /* MBEvents.h */; };
-		3B3832D2198831B0006A771F /* MBFieldListFormatter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C8A198811BD009A2126 /* MBFieldListFormatter.h */; };
-		3B3832D3198831B0006A771F /* MBFormattedDescriptionObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C8C198811BD009A2126 /* MBFormattedDescriptionObject.h */; };
-		3B3832D4198831B0006A771F /* MBBitmapPixelPlane.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C8F198811BD009A2126 /* MBBitmapPixelPlane.h */; };
-		3B3832D5198831B0006A771F /* MBColorTools.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C91198811BD009A2126 /* MBColorTools.h */; };
-		3B3832D6198831B0006A771F /* MBRoundedRectTools.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C92198811BD009A2126 /* MBRoundedRectTools.h */; };
-		3B3832D7198831B0006A771F /* UIColor+MBToolbox.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C94198811BD009A2126 /* UIColor+MBToolbox.h */; };
-		3B3832D8198831B0006A771F /* UIImage+MBImageScaling.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C96198811BD009A2126 /* UIImage+MBImageScaling.h */; };
-		3B3832D9198831B0006A771F /* UIView+MBSnapshotImage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C98198811BD009A2126 /* UIView+MBSnapshotImage.h */; };
-		3B3832DA198831B0006A771F /* MBAssert.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B3831AA19882B62006A771F /* MBAssert.h */; };
-		3B3832DB198831B0006A771F /* MBDebug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B3831AB19882B62006A771F /* MBDebug.h */; };
-		3B3832DC198831B0006A771F /* MBRuntime.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B3831AC19882B62006A771F /* MBRuntime.h */; };
-		3B3832DD198831B0006A771F /* MBMessageDigest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C9B198811BD009A2126 /* MBMessageDigest.h */; };
-		3B3832DE198831B0006A771F /* NSData+MBMessageDigest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C9D198811BD009A2126 /* NSData+MBMessageDigest.h */; };
-		3B3832DF198831B0006A771F /* NSString+MBMessageDigest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8C9F198811BD009A2126 /* NSString+MBMessageDigest.h */; };
-		3B3832E2198831B0006A771F /* MBNetworkIndicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CA7198811BD009A2126 /* MBNetworkIndicator.h */; };
-		3B3832E3198831B0006A771F /* MBNetworkMonitor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CA9198811BD009A2126 /* MBNetworkMonitor.h */; };
-		3B3832E4198831B0006A771F /* MBFilesystemOperations.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CAC198811BD009A2126 /* MBFilesystemOperations.h */; };
-		3B3832E5198831B0006A771F /* MBOperationQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CAE198811BD009A2126 /* MBOperationQueue.h */; };
-		3B3832E6198831B0006A771F /* MBRegexCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CB1198811BD009A2126 /* MBRegexCache.h */; };
-		3B3832E7198831B0006A771F /* NSString+MBRegex.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CB3198811BD009A2126 /* NSString+MBRegex.h */; };
-		3B3832E8198831B0006A771F /* MBService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CB6198811BD009A2126 /* MBService.h */; };
-		3B3832E9198831B0006A771F /* MBServiceManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CB7198811BD009A2126 /* MBServiceManager.h */; };
-		3B3832EA198831B0006A771F /* MBSingleton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CBA198811BD009A2126 /* MBSingleton.h */; };
-		3B3832EB198831B0006A771F /* MBStringFunctions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CBC198811BD009A2126 /* MBStringFunctions.h */; };
-		3B3832EC198831B0006A771F /* NSString+MBIndentation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CBD198811BD009A2126 /* NSString+MBIndentation.h */; };
-		3B3832ED198831B0006A771F /* MBThreadLocalStorage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0F8CC0198811BD009A2126 /* MBThreadLocalStorage.h */; };
 		3B6ED5341995C87A004652EB /* Test-MBStringFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */; };
 		3B968ED5198FF2380061DA66 /* libMBToolbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2EF74B19880F31009AD107 /* libMBToolbox.a */; };
 		3B968EE2198FF28D0061DA66 /* Test-MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */; };
 		3B968EE3198FF28D0061DA66 /* Test-NSString+MBIndentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EE0198FF28D0061DA66 /* Test-NSString+MBIndentation.m */; };
 		3BAC5A5E19894520003005AC /* MBModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC5A5B19894520003005AC /* MBModule.m */; };
 		3BAC5A5F19894520003005AC /* MBModuleLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC5A5D19894520003005AC /* MBModuleLog.m */; };
-		3BAC5A6019894867003005AC /* MBModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BAC5A5A19894520003005AC /* MBModule.h */; };
-		3BAC5A6119894867003005AC /* MBModuleLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BAC5A5C19894520003005AC /* MBModuleLog.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,55 +92,6 @@
 			remoteInfo = MBToolbox;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3B2EF74919880F31009AD107 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				3B3832C9198831B0006A771F /* Mockingbird-Toolbox.h in CopyFiles */,
-				3B3832CA198831B0006A771F /* MBBatteryMonitor.h in CopyFiles */,
-				3B3832CB198831B0006A771F /* MBCacheOperations.h in CopyFiles */,
-				3B3832CC198831B0006A771F /* MBFilesystemCache+Subclassing.h in CopyFiles */,
-				3B3832CD198831B0006A771F /* MBFilesystemCache.h in CopyFiles */,
-				3B3832CE198831B0006A771F /* MBThreadsafeCache+Subclassing.h in CopyFiles */,
-				3B3832CF198831B0006A771F /* MBThreadsafeCache.h in CopyFiles */,
-				3B3832D0198831B0006A771F /* NSError+MBToolbox.h in CopyFiles */,
-				3B3832D1198831B0006A771F /* MBEvents.h in CopyFiles */,
-				3B3832D2198831B0006A771F /* MBFieldListFormatter.h in CopyFiles */,
-				3B3832D3198831B0006A771F /* MBFormattedDescriptionObject.h in CopyFiles */,
-				3B3832D4198831B0006A771F /* MBBitmapPixelPlane.h in CopyFiles */,
-				3B3832D5198831B0006A771F /* MBColorTools.h in CopyFiles */,
-				3B3832D6198831B0006A771F /* MBRoundedRectTools.h in CopyFiles */,
-				3B3832D7198831B0006A771F /* UIColor+MBToolbox.h in CopyFiles */,
-				3B3832D8198831B0006A771F /* UIImage+MBImageScaling.h in CopyFiles */,
-				3B3832D9198831B0006A771F /* UIView+MBSnapshotImage.h in CopyFiles */,
-				3B3832DA198831B0006A771F /* MBAssert.h in CopyFiles */,
-				3B3832DB198831B0006A771F /* MBDebug.h in CopyFiles */,
-				3BAC5A6019894867003005AC /* MBModule.h in CopyFiles */,
-				3BAC5A6119894867003005AC /* MBModuleLog.h in CopyFiles */,
-				3B3832DC198831B0006A771F /* MBRuntime.h in CopyFiles */,
-				3B3832DD198831B0006A771F /* MBMessageDigest.h in CopyFiles */,
-				3B3832DE198831B0006A771F /* NSData+MBMessageDigest.h in CopyFiles */,
-				3B3832DF198831B0006A771F /* NSString+MBMessageDigest.h in CopyFiles */,
-				3B3832E2198831B0006A771F /* MBNetworkIndicator.h in CopyFiles */,
-				3B3832E3198831B0006A771F /* MBNetworkMonitor.h in CopyFiles */,
-				3B3832E4198831B0006A771F /* MBFilesystemOperations.h in CopyFiles */,
-				3B3832E5198831B0006A771F /* MBOperationQueue.h in CopyFiles */,
-				3B3832E6198831B0006A771F /* MBRegexCache.h in CopyFiles */,
-				3B3832E7198831B0006A771F /* NSString+MBRegex.h in CopyFiles */,
-				3B3832E8198831B0006A771F /* MBService.h in CopyFiles */,
-				3B3832E9198831B0006A771F /* MBServiceManager.h in CopyFiles */,
-				3B3832EA198831B0006A771F /* MBSingleton.h in CopyFiles */,
-				3B3832EB198831B0006A771F /* MBStringFunctions.h in CopyFiles */,
-				3B3832EC198831B0006A771F /* NSString+MBIndentation.h in CopyFiles */,
-				3B3832ED198831B0006A771F /* MBThreadLocalStorage.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B0F8C73198811BD009A2126 /* MBBatteryMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBatteryMonitor.h; sourceTree = "<group>"; };
@@ -508,7 +422,7 @@
 			buildPhases = (
 				3B2EF74719880F31009AD107 /* Sources */,
 				3B2EF74819880F31009AD107 /* Frameworks */,
-				3B2EF74919880F31009AD107 /* CopyFiles */,
+				3BE3BEFB19993F39007DD101 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -603,6 +517,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "$PROJECT_DIR/BuildControl/docs/buildMockingbirdDocs.sh --module \"Toolbox\"";
+		};
+		3BE3BEFB19993F39007DD101 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./$(PROJECT_DIR)/BuildControl/lib/packageMockingbirdLibrary.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 

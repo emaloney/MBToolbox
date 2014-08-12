@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		3B7621FE199A8A8E00998306 /* MBToolboxUniversal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3B762201199A8A8E00998306 /* Build configuration list for PBXAggregateTarget "MBToolboxUniversal" */;
+			buildPhases = (
+				3B762204199A8AA900998306 /* Run Script */,
+			);
+			dependencies = (
+			);
+			name = MBToolboxUniversal;
+			productName = MBToolboxUniversal;
+		};
 		3B968EE4199008E10061DA66 /* MBToolbox-Docs */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 3B968EE7199008E10061DA66 /* Build configuration list for PBXAggregateTarget "MBToolbox-Docs" */;
@@ -167,13 +178,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B2EF74819880F31009AD107 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3B968ECC198FF2380061DA66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,8 +425,7 @@
 			buildConfigurationList = 3B2EF75F19880F31009AD107 /* Build configuration list for PBXNativeTarget "MBToolbox" */;
 			buildPhases = (
 				3B2EF74719880F31009AD107 /* Sources */,
-				3B2EF74819880F31009AD107 /* Frameworks */,
-				3BE3BEFB19993F39007DD101 /* ShellScript */,
+				3B762206199A8D6600998306 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -466,6 +469,9 @@
 					3B2EF74A19880F31009AD107 = {
 						CreatedOnToolsVersion = 6.0;
 					};
+					3B7621FE199A8A8E00998306 = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					3B968ECE198FF2380061DA66 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 3B2EF74A19880F31009AD107;
@@ -488,6 +494,7 @@
 			projectRoot = "";
 			targets = (
 				3B2EF74A19880F31009AD107 /* MBToolbox */,
+				3B7621FE199A8A8E00998306 /* MBToolboxUniversal */,
 				3B968ECE198FF2380061DA66 /* MBToolbox-Tests */,
 				3B968EE4199008E10061DA66 /* MBToolbox-Docs */,
 			);
@@ -505,6 +512,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3B762204199A8AA900998306 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BuildControl/lib/buildUniversalBinary.sh MBToolbox";
+			showEnvVarsInLog = 0;
+		};
+		3B762206199A8D6600998306 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = BuildControl/lib/packageMockingbirdLibrary.sh;
+			showEnvVarsInLog = 0;
+		};
 		3B968EEC199008FB0061DA66 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,19 +553,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "$PROJECT_DIR/BuildControl/docs/buildMockingbirdDocs.sh --module \"Toolbox\"";
-		};
-		3BE3BEFB19993F39007DD101 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./$(PROJECT_DIR)/BuildControl/lib/packageMockingbirdLibrary.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -702,6 +725,20 @@
 			};
 			name = Release;
 		};
+		3B7621FF199A8A8E00998306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3B762200199A8A8E00998306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3B968ED8198FF2380061DA66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -774,6 +811,15 @@
 			buildConfigurations = (
 				3B2EF76019880F31009AD107 /* Debug */,
 				3B2EF76119880F31009AD107 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B762201199A8A8E00998306 /* Build configuration list for PBXAggregateTarget "MBToolboxUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B7621FF199A8A8E00998306 /* Debug */,
+				3B762200199A8A8E00998306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

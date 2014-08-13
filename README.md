@@ -203,7 +203,7 @@ Once you've built the static library you want to use, you will need to add the l
 
 5. Copy `Headers` directory and the appropriate library file from within `Products/MBToolbox` into a new directory within your project.
 
-6. Drag the new directory onto your project within the Xcode **Project Navigator**. This will bring up a dialog box allowing you to select the targets to which the Mockingbird Toolbox will be added. Select the appropriate checkbox(es) and click the “Finish” button.
+6. Drag the new directory onto your project within the Xcode **Project Navigator**. This will bring up a dialog box allowing you to select the targets to which the Mockingbird Toolbox will be added. Select the appropriate checkbox(es) and click the **Finish** button.
 
 If you’ve successfully completed the steps above, you can now begin using Mockingbird Toolbox from within your project.
 

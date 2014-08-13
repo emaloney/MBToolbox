@@ -76,7 +76,6 @@ There are several ways you can make use of Mockingbird Toolbox:
 
 * [Embedding the Project File](#embedding-the-project-file)
 * [Building the Static Libraries](#building-the-static-libraries)
-* Building the Framework — __*support coming soon*__ (only for iOS 8+)
 * Using Cocoapods — __*support coming soon*__
 
 ### Embedding the Project File

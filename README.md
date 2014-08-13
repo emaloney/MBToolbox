@@ -117,7 +117,7 @@ Not only will this be a good sanity check to make sure everything’s working as
 
 4. Now, find the “Other Linker Flags” build setting. Double-click the current value to bring up the editor, and then click the “+” button to add a new linker flag.
 
-5. Add the text `-ObjC` to the linker flags.
+5. Add the value `-ObjC` to the linker flags if it isn't there already.
 
 #### IV. Dependencies & Linking
 
@@ -199,7 +199,7 @@ Once you've built the static library you want to use, you will need to add the l
 
 3. Find the “Other Linker Flags” build setting. Double-click the current value to bring up the editor, and then click the “+” button to add a new linker flag.
 
-4. Add the value `-ObjC` to the linker flags.
+4. Add the value `-ObjC` to the linker flags if it isn't there already.
 
 5. Copy `Headers` directory and the appropriate library file from within `Products/MBToolbox` into a new directory within your project.
 

@@ -1,18 +1,18 @@
 #!/bin/bash
 
-OUTPUT_DIR="$PROJECT_DIR/Products/$PRODUCT_NAME"
-OUTPUT_INCLUDE_DIR="$PROJECT_DIR/Products/$PRODUCT_NAME/include"
+PRODUCTS_DIR="$PROJECT_DIR/Products/$PRODUCT_NAME"
+HEADERS_DIR="$PRODUCTS_DIR/Headers"
 
 # create the output dir if necessary
-if [[ ! -e "$OUTPUT_DIR" ]]; then
-    mkdir -p "$OUTPUT_DIR"
+if [[ ! -e "$PRODUCTS_DIR" ]]; then
+    mkdir -p "$PRODUCTS_DIR"
 fi
 
 # ensure a clean include dir
-if [[ -e "$OUTPUT_INCLUDE_DIR" ]]; then
-    rm -rf "$OUTPUT_INCLUDE_DIR/*"
-elif [[ ! -e "$OUTPUT_INCLUDE_DIR" ]]; then
-	mkdir -p "$OUTPUT_INCLUDE_DIR"
+if [[ -e "$HEADERS_DIR" ]]; then
+    rm -rf "$HEADERS_DIR/*"
+elif [[ ! -e "$HEADERS_DIR" ]]; then
+	mkdir -p "$HEADERS_DIR"
 fi
 
 # figure out what to call this thingamajiggy
@@ -32,9 +32,8 @@ esac
 
 # copy the product to the output directory
 MAIN_PRODUCT_PATH="$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME"
-cp "$MAIN_PRODUCT_PATH" "$OUTPUT_DIR/$LIBRARY_FILENAME"
+cp "$MAIN_PRODUCT_PATH" "$PRODUCTS_DIR/$LIBRARY_FILENAME"
 
 # copy the headers to the include directory
-CODE_DIR="$PROJECT_DIR/Code"
-find "$CODE_DIR" -name "*.h" ! -path "*/Private/*" -exec cp "{}" "$OUTPUT_INCLUDE_DIR/." \;
+find "$PROJECT_DIR/Code" -name "*.h" ! -path "*/Private/*" -exec cp "{}" "$HEADERS_DIR/." \;
 

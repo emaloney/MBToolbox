@@ -524,7 +524,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BuildControl/lib/buildUniversalBinary.sh MBToolbox";
+			shellScript = BuildControl/lib/buildUniversalBinary.sh;
 			showEnvVarsInLog = 0;
 		};
 		3B762206199A8D6600998306 /* ShellScript */ = {

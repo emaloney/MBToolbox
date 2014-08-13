@@ -6,11 +6,7 @@ exitWithError()
 	exit 2
 }
 
-if [[ -z $1 ]]; then
-	exitWithError "Expecting first parameter to be underlying product"
-fi
-
-UNDERLYING_PRODUCT=$1
+UNDERLYING_PRODUCT="$PROJECT_NAME"
 
 PRODUCTS_DIR="$PROJECT_DIR/Products/$UNDERLYING_PRODUCT"
 

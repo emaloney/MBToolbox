@@ -15,10 +15,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+// import the various macros
 #import "MBAssert.h"
 #import "MBDebug.h"
 #import "MBRuntime.h"
-#import "MBStringFunctions.h"
 
 #endif
 

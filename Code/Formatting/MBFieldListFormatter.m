@@ -7,7 +7,6 @@
 //
 
 #import "MBFieldListFormatter.h"
-#import "MBFormattedDescriptionObject.h"
 
 #define DEBUG_LOCAL     01
 
@@ -16,6 +15,17 @@
 /******************************************************************************/
 
 const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
+
+/******************************************************************************/
+#pragma mark -
+#pragma mark MBFieldListFormatterDebugDescriptor protocol
+/******************************************************************************/
+
+// declaration needed to get our reference to it in setField:debug: to compile
+// without ugly #pragmas or a dependency on MBFormattedDescriptionObject
+@protocol MBFieldListFormatterDebugDescriptor <NSObject>
+- (NSString*) debugDescriptor;
+@end
 
 /******************************************************************************/
 #pragma mark -
@@ -188,4 +198,3 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
 }
 
 @end
-

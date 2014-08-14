@@ -15,7 +15,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-// import the various macros
+// import the common headers
 #import "MBAssert.h"
 #import "MBDebug.h"
 #import "MBRuntime.h"

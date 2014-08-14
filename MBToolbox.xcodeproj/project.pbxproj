@@ -162,9 +162,6 @@
 		3B0F8CC0198811BD009A2126 /* MBThreadLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBThreadLocalStorage.h; sourceTree = "<group>"; };
 		3B0F8CC1198811BD009A2126 /* MBThreadLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBThreadLocalStorage.m; sourceTree = "<group>"; };
 		3B2EF74B19880F31009AD107 /* libMBToolbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBToolbox.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B3831AA19882B62006A771F /* MBAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAssert.h; sourceTree = "<group>"; };
-		3B3831AB19882B62006A771F /* MBDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDebug.h; sourceTree = "<group>"; };
-		3B3831AC19882B62006A771F /* MBRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRuntime.h; sourceTree = "<group>"; };
 		3B3831B019882B93006A771F /* Mockingbird-Toolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mockingbird-Toolbox.h"; sourceTree = "<group>"; };
 		3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBStringFunctions.m"; sourceTree = "<group>"; };
 		3B968ECF198FF2380061DA66 /* MBToolbox-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MBToolbox-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +172,9 @@
 		3BAC5A5B19894520003005AC /* MBModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBModule.m; sourceTree = "<group>"; };
 		3BAC5A5C19894520003005AC /* MBModuleLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBModuleLog.h; sourceTree = "<group>"; };
 		3BAC5A5D19894520003005AC /* MBModuleLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBModuleLog.m; sourceTree = "<group>"; };
+		3BF2D491199C915B002F0639 /* MBAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAssert.h; sourceTree = "<group>"; };
+		3BF2D492199C915B002F0639 /* MBDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDebug.h; sourceTree = "<group>"; };
+		3BF2D493199C915B002F0639 /* MBRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRuntime.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,11 +195,11 @@
 				3B3831B019882B93006A771F /* Mockingbird-Toolbox.h */,
 				3B0F8C72198811BD009A2126 /* Battery */,
 				3B0F8C75198811BD009A2126 /* Caching */,
+				3BF2D490199C915B002F0639 /* Common */,
 				3B0F8C83198811BD009A2126 /* Error */,
 				3B0F8C86198811BD009A2126 /* Events */,
 				3B0F8C89198811BD009A2126 /* Formatting */,
 				3B0F8C8E198811BD009A2126 /* Graphics */,
-				3B3831A919882B62006A771F /* Macros */,
 				3B0F8C9A198811BD009A2126 /* MessageDigest */,
 				3BAC5A5919894520003005AC /* Module */,
 				3B0F8CA6198811BD009A2126 /* Network */,
@@ -385,16 +385,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B3831A919882B62006A771F /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				3B3831AA19882B62006A771F /* MBAssert.h */,
-				3B3831AB19882B62006A771F /* MBDebug.h */,
-				3B3831AC19882B62006A771F /* MBRuntime.h */,
-			);
-			path = Macros;
-			sourceTree = "<group>";
-		};
 		3B968EDD198FF28D0061DA66 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +405,16 @@
 				3BAC5A5D19894520003005AC /* MBModuleLog.m */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		3BF2D490199C915B002F0639 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3BF2D491199C915B002F0639 /* MBAssert.h */,
+				3BF2D492199C915B002F0639 /* MBDebug.h */,
+				3BF2D493199C915B002F0639 /* MBRuntime.h */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

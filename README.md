@@ -140,15 +140,15 @@ Among the subspecs provided are:
 * **BitmapPixelPlane** - includes the `MBBitmapPixelPlane` class and related items
 * **ColorTools** - specifies the declarations within the `MBColorTools.h` file
 * **RoundedRectTools** - specifies the `MBRoundedRectTools` class
-* **MBToolbox-`UIColor`** - a `UIColor` class extension that adds several methods for getting information about and modifying colors
-* **ImageScaling-`UIImage`** - a `UIImage` class extension that adds methods for scaling images
-* **SnapshotImage-`UIView`** - a `UIView` class extension that adds methods for acquiring image snapshots of a view's contents
+* **MBToolbox-UIColor** - a `UIColor` class extension that adds several methods for getting information about and modifying colors
+* **ImageScaling-UIImage** - a `UIImage` class extension that adds methods for scaling images
+* **SnapshotImage-UIView** - a `UIView` class extension that adds methods for acquiring image snapshots of a view's contents
 
 ##### Message Digests
 
 * **MessageDigest** - specifies the `MBMessageDigest` class
-* **MessageDigest-`NSString`** - includes the `MBMessageDigest` class and an `NSString` class extension providing related convenience methods
-* **MessageDigest-`NSData`** - includes the `MBMessageDigest` class and an `NSData` class extension providing related convenience methods
+* **MessageDigest-NSString** - includes the `MBMessageDigest` class and an `NSString` class extension providing related convenience methods
+* **MessageDigest-NSData** - includes the `MBMessageDigest` class and an `NSData` class extension providing related convenience methods
 * **MessageDigest-Extensions** - includes the `MBMessageDigest` class and all related class extensions
 
 ##### Network
@@ -164,7 +164,7 @@ Among the subspecs provided are:
 ##### Regular Expressions
 
 * **RegexCache** - specifies the `MBRegexCache` singleton
-* **Regex-`NSString`** - class extensions for `NSString` and `NSMutableString` that provide convenience methods for handling regular expressions using the `MBRegexCache` for improved performance
+* **Regex-NSString** - class extensions for `NSString` and `NSMutableString` that provide convenience methods for handling regular expressions using the `MBRegexCache` for improved performance
 
 ##### Runtime Services
 

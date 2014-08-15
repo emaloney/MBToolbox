@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name            		= "mockingbird-toolbox"
-	s.version          		= "0.9.3"
+	s.version          		= "0.9.4"
 	s.summary          		= "Mockingbird Toolbox: General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
 	s.homepage         		= "https://github.com/gilt/mockingbird-toolbox"
 	s.license          		= { :type => 'MIT', :file => 'LICENSE' }
@@ -268,6 +268,8 @@ Pod::Spec.new do |s|
 	s.subspec 'NetworkMonitor' do |ss|
 		ss.dependency 'mockingbird-toolbox/Events'
 		ss.dependency 'mockingbird-toolbox/ServiceManager'
+		ss.framework = 'SystemConfiguration'
+		ss.framework = 'CoreTelephony'
 		ss.source_files = 'Code/Network/MBNetworkMonitor.{h,m}'
 		ss.public_header_files = 'Code/Network/MBNetworkMonitor.h'
 	end

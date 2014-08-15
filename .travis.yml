@@ -5,6 +5,10 @@ xcode_sdk: iphonesimulator7.1
 
 before_install:
   - sudo systemsetup -settimezone America/New_York
+  - brew update
+  - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+
+script: xctool -project MBToolbox.xcodeproj -scheme MBToolbox -sdk iphonesimulator clean build test
 
 notifications:
   email:

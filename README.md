@@ -172,7 +172,7 @@ Among the subspecs provided are:
 
 ##### Singletons
 
-* *Singleton* - declares the `MBSingleton` and `MBInstanceVendor` protocols, and the preprocessor macro `MBImplementSingleton()` which provides a default implementation of `+ (instancetype) instance;` based on `dispatch_once()`
+* *Singleton* - declares the `MBSingleton` and `MBInstanceVendor` protocols, and the preprocessor macro `MBImplementSingleton()` which provides a default singleton implementation based on `dispatch_once()`
 
 ##### String Manipulation
 

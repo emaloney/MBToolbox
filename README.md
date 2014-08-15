@@ -123,65 +123,65 @@ Among the subspecs provided are:
 
 ##### Battery & Power Monitoring
 
-* **BatteryMonitor** - includes the `MBBatteryMonitor` class and related items
+* *BatteryMonitor* - includes the `MBBatteryMonitor` class and related items
 
 ##### Caching
 
-* **ThreadsafeCache** - includes the `MBThreadsafeCache` class and related items
-* **FilesystemCache** - includes the `MBFilesystemCache` class and related items
+* *ThreadsafeCache* - includes the `MBThreadsafeCache` class and related items
+* *FilesystemCache* - includes the `MBFilesystemCache` class and related items
 
 ##### Field Formatting
 
-* **FieldListFormatter** - specifies the `MBFieldListFormatter` class
-* **FormattedDescriptionObject** - specifies the `MBFieldListFormatter` and `MBFormattedDescriptionObject` classes
+* *FieldListFormatter* - specifies the `MBFieldListFormatter` class
+* *FormattedDescriptionObject* - specifies the `MBFieldListFormatter` and `MBFormattedDescriptionObject` classes
 
 ##### Graphics
 
-* **BitmapPixelPlane** - includes the `MBBitmapPixelPlane` class and related items
-* **ColorTools** - specifies the declarations within the `MBColorTools.h` file
-* **RoundedRectTools** - specifies the `MBRoundedRectTools` class
-* **MBToolbox-UIColor** - a `UIColor` class extension that adds several methods for getting information about and modifying colors
-* **ImageScaling-UIImage** - a `UIImage` class extension that adds methods for scaling images
-* **SnapshotImage-UIView** - a `UIView` class extension that adds methods for acquiring image snapshots of a view's contents
+* *BitmapPixelPlane* - includes the `MBBitmapPixelPlane` class and related items
+* *ColorTools* - specifies the declarations within the `MBColorTools.h` file
+* *RoundedRectTools* - specifies the `MBRoundedRectTools` class
+* *MBToolbox-UIColor* - a `UIColor` class extension that adds several methods for getting information about and modifying colors
+* *ImageScaling-UIImage* - a `UIImage` class extension that adds methods for scaling images
+* *SnapshotImage-UIView* - a `UIView` class extension that adds methods for acquiring image snapshots of a view's contents
 
 ##### Message Digests
 
-* **MessageDigest** - specifies the `MBMessageDigest` class
-* **MessageDigest-NSString** - includes the `MBMessageDigest` class and an `NSString` class extension providing related convenience methods
-* **MessageDigest-NSData** - includes the `MBMessageDigest` class and an `NSData` class extension providing related convenience methods
-* **MessageDigest-Extensions** - includes the `MBMessageDigest` class and all related class extensions
+* *MessageDigest* - specifies the `MBMessageDigest` class
+* *MessageDigest-NSString* - includes the `MBMessageDigest` class and an `NSString` class extension providing related convenience methods
+* *MessageDigest-NSData* - includes the `MBMessageDigest` class and an `NSData` class extension providing related convenience methods
+* *MessageDigest-Extensions* - includes the `MBMessageDigest` class and all related class extensions
 
 ##### Network
 
-* **NetworkIndicator** - specifies the `MBNetworkIndicator` singleton
-* **NetworkMonitor** - specifies the `MBNetworkMonitor` service, a high-level replacement for `Reachability` that provides additional functionality
+* *NetworkIndicator* - specifies the `MBNetworkIndicator` singleton
+* *NetworkMonitor* - specifies the `MBNetworkMonitor` service, a high-level replacement for `Reachability` that provides additional functionality
 
 ##### `NSOperation`s
 
-* **OperationQueue** - specifies the `MBOperationQueue` class
-* **FilesystemOperations** - includes the `MBOperationQueue` class and various filesystem operations
+* *OperationQueue* - specifies the `MBOperationQueue` class
+* *FilesystemOperations* - includes the `MBOperationQueue` class and various filesystem operations
 
 ##### Regular Expressions
 
-* **RegexCache** - specifies the `MBRegexCache` singleton
-* **Regex-NSString** - class extensions for `NSString` and `NSMutableString` that provide convenience methods for handling regular expressions using the `MBRegexCache` for improved performance
+* *RegexCache* - specifies the `MBRegexCache` singleton
+* *Regex-NSString* - class extensions for `NSString` and `NSMutableString` that provide convenience methods for handling regular expressions using the `MBRegexCache` for improved performance
 
 ##### Runtime Services
 
-* **ServiceManager** - specifies the `MBServiceManager` singleton and the `MBService` protocol
+* *ServiceManager* - specifies the `MBServiceManager` singleton and the `MBService` protocol
 
 ##### Singletons
 
-* **Singleton** - declares the `MBSingleton` and `MBInstanceVendor` protocols, and the preprocessor macro `MBImplementSingleton()` which provides a default implementation of `+ (instancetype) instance;` based on `dispatch_once()`
+* *Singleton* - declares the `MBSingleton` and `MBInstanceVendor` protocols, and the preprocessor macro `MBImplementSingleton()` which provides a default implementation of `+ (instancetype) instance;` based on `dispatch_once()`
 
 ##### String Manipulation
 
-* **StringFunctions** - declares the `MBForceString()` and `MBTrimString()` inline functions, and the `MBStringify()` preprocessor macro
-* **Indentation-NSString** - an `NSString` class extension that adds methods for indenting the individual lines in a string using tabs and arbitrary prefixes
+* *StringFunctions* - declares the `MBForceString()` and `MBTrimString()` inline functions, and the `MBStringify()` preprocessor macro
+* *Indentation-NSString* - an `NSString` class extension that adds methods for indenting the individual lines in a string using tabs and arbitrary prefixes
 
 ##### Thread-Local Storage
 
-* **ThreadLocalStorage** - specifies the `MBThreadLocalStorage` class
+* *ThreadLocalStorage* - specifies the `MBThreadLocalStorage` class
 
 ##### ...and more
 

@@ -74,71 +74,124 @@ For further details, start with [the Mockingbird Toolbox API documentation](http
 
 There are several ways you can make use of Mockingbird Toolbox:
 
-* [Embedding the Project File](#embedding-the-project-file)
+* [Using Cocoapods](#using-cocoapods)
 * [Building the Static Libraries](#building-the-static-libraries)
-* Using Cocoapods — __*support coming soon*__
+* [Embedding the Project File](#embedding-the-project-file)
 
-### Embedding the Project File
+Each technique has its benefits and drawbacks, and we'll leave it to you to decide what works best with your development workflow.
 
-You can add Mockingbird Toolbox to an existing Xcode project by embedding the `MBToolbox.xcodeproj` project file.
+We recommend using Cocoapods if you don't have a strong reason to use another method. We've configured the podspec to give you the most fine-grained control over what ends up in your final binary. You can use just what you need, and you won't incur any overhead for unused features. In the long-run, Cocoapods will give you a simple way to keep up-to-date with any critical changes.
 
-If your project relies on the default “Debug” and “Release” build configurations created by Xcode, your selection for that setting will cascade down to the Toolbox when it is built. This is handy if you find yourself needing to do debugging within the Toolbox itself.
+### Using Cocoapods
 
-When you embed the project file, you will need to modify your current project’s build settings to ensure your targets can link against the library binary and Xcode can find the necessary header files.
+Cocoapods give you an easy way to incorporate third-party libraries in your own Xcode projects.
 
-Here’s how you can incorporate Mockingbird Toolbox through project file embedding:
+Once you've got Cocoapods up and running—[visit this page](http://guides.cocoapods.org/using/index.html) for details—you can add Mockingbird Toolbox to your project just by adding a line to your `Podfile`:
 
-#### I. Embedding
-
-1. In Xcode, Open the project file to which you want to add Mockingbird Toolbox. 
-
-2. In the Navigator sidebar, select the first tab, the **Project Navigator**. You can display it quickly by pressing ⌘1.
-
-3. Select the item representing your project in the Project Navigator. Unless you have a complicated project structure, your project will be the topmost item in the tree.
-
-4. In the **File** menu, select “Add Files to...”.
-
-5. Locate the `MBToolbox.xcodeproj` file, select it, and press the **Add** button.
-
-#### II. Build “MBToolbox”
-
-Once you’ve embedded the project file, perform an Xcode build using the “MBToolbox” scheme.
-
-Not only will this be a good sanity check to make sure everything’s working as expected, a successful build ensures that the appropriate header files are copied to the `Products/MBToolbox/Headers` directory within your local copy of the `mockingbird-toolbox` repository.
-
-#### III. Configure Build Settings
-
-1. With your project selected in the **Project Navigator**, select your project in the main portion of the window and select the **Build Settings** pane
-
-2. Find the setting for “User Header Search Paths” and double-click the current value. This will pop up an editor for the setting’s value. In the lower-left corner of the editor, click the “+” button. A new text entry box will appear below any values already listed in the editor.
-
-3. Enter the filesystem path pointing to the `Products/MBToolbox/Headers` directory within your local copy of the `mockingbird-toolbox` repository. This can be relative to the directory containing your project file, or it can be an absolute path. The exact value depends on where you’ve put `mockingbird-toolbox` in your filesystem.
-
-4. Now, find the “Other Linker Flags” build setting. Double-click the current value to bring up the editor, and then click the “+” button to add a new linker flag.
-
-5. Add the value `-ObjC` to the linker flags if it isn't there already.
-
-#### IV. Dependencies & Linking
-
-For each target in your project that will use the Toolbox, do the following:
-
-1. With your project selected in the **Project Navigator**, select your target in the main portion of the window and select the **Build Phases** settings pane
-
-2. In the “Target Dependencies” section, click the “+” button and add the `MBToolbox` library as a target dependency.
-
-3. In “Link Binary With Libraries” section, click the “+” button and add `libMBToolbox.a`. 
-
-#### V. You’re done!
-
-If you’ve successfully completed the steps above, you can now begin using Mockingbird Toolbox from within your project.
-
-**Note:**  When you integrate Mockingbird Toolbox through project file embedding, you will need to reference headers with “user header” import notation, eg.:
-
-```objc
-	#import "MBDebug.h"
+```ruby
+	pod 'mockingbird-toolbox'
 ```
 
+The line above specifies that all the code in Mockingbird Toolbox should be added to your project.
+
+Once you've added Mockingbird Toolbox to your `Podfile`, you can then install the Cocoapod from the command line.
+
+From within your project directory, issue the command:
+
+```bash
+	pod install
+```
+
+If all goes well, that's all you need to do!
+
+**Important:** Take note of the output of the `pod install` command. If you were not previously using an Xcode workspace for your project, Cocoapods will create one for you that includes your project and any installed Cocoapods. Going forward, you will need to use that workspace for development instead of your old project file.
+
+#### Cocoapod Subspecs
+
+If you only want to use *some* of what's available in the Toolbox, we've provided a number of Cocoapod subspecs that allow you to pick and choose the components you want to use from Mockingbird Toolbox.
+
+Subspecs are added to your `Podfile` as follows:
+
+```ruby
+	pod 'mockingbird-toolbox/BatteryMonitor'
+	pod 'mockingbird-toolbox/BitmapPixelPlane'
+```
+
+The lines above would add just the BatteryMonitor and BitmapPixelPlane portions of the Mockingbird Toolbox to your project.
+
+Among the subspecs provided are:
+
+##### Battery & Power Monitoring
+
+* **BatteryMonitor** - includes the `MBBatteryMonitor` class and related items
+
+##### Caching
+
+* **ThreadsafeCache** - includes the `MBThreadsafeCache` class and related items
+* **FilesystemCache** - includes the `MBFilesystemCache` class and related items
+
+##### Field Formatting
+
+* **FieldListFormatter** - specifies the `MBFieldListFormatter` class
+* **FormattedDescriptionObject** - specifies the `MBFieldListFormatter` and `MBFormattedDescriptionObject` classes
+
+##### Graphics
+
+* **BitmapPixelPlane** - includes the `MBBitmapPixelPlane` class and related items
+* **ColorTools** - specifies the declarations within the `MBColorTools.h` file
+* **RoundedRectTools** - specifies the `MBRoundedRectTools` class
+* **MBToolbox-`UIColor`** - a `UIColor` class extension that adds several methods for getting information about and modifying colors
+* **ImageScaling-`UIImage`** - a `UIImage` class extension that adds methods for scaling images
+* **SnapshotImage-`UIView`** - a `UIView` class extension that adds methods for acquiring image snapshots of a view's contents
+
+##### Message Digests
+
+* **MessageDigest** - specifies the `MBMessageDigest` class
+* **MessageDigest-`NSString`** - includes the `MBMessageDigest` class and an `NSString` class extension providing related convenience methods
+* **MessageDigest-`NSData`** - includes the `MBMessageDigest` class and an `NSData` class extension providing related convenience methods
+* **MessageDigest-Extensions** - includes the `MBMessageDigest` class and all related class extensions
+
+##### Network
+
+* **NetworkIndicator** - specifies the `MBNetworkIndicator` singleton
+* **NetworkMonitor** - specifies the `MBNetworkMonitor` service, a high-level replacement for `Reachability` that provides additional functionality
+
+##### `NSOperation`s
+
+* **OperationQueue** - specifies the `MBOperationQueue` class
+* **FilesystemOperations** - includes the `MBOperationQueue` class and various filesystem operations
+
+##### Regular Expressions
+
+* **RegexCache** - specifies the `MBRegexCache` singleton
+* **Regex-`NSString`** - class extensions for `NSString` and `NSMutableString` that provide convenience methods for handling regular expressions using the `MBRegexCache` for improved performance
+
+##### Runtime Services
+
+* **ServiceManager** - specifies the `MBServiceManager` singleton and the `MBService` protocol
+
+##### Singletons
+
+* **Singleton** - declares the `MBSingleton` and `MBInstanceVendor` protocols, and the preprocessor macro `MBImplementSingleton()` which provides a default implementation of `+ (instancetype) instance;` based on `dispatch_once()`
+
+##### String Manipulation
+
+* **StringFunctions** - declares the `MBForceString()` and `MBTrimString()` inline functions, and the `MBStringify()` preprocessor macro
+* **Indentation-NSString** - an `NSString` class extension that adds methods for indenting the individual lines in a string using tabs and arbitrary prefixes
+
+##### Thread-Local Storage
+
+* **ThreadLocalStorage** - specifies the `MBThreadLocalStorage` class
+
+##### ...and more
+
+Additional subspecs are declared and documented in [the podspec](https://github.com/gilt/mockingbird-toolbox/blob/master/mockingbird-toolbox.podspec).
+
 ### Building the Static Libraries
+
+By building a static library, you end up with a binary library file that you can include in any project, along with a set of header files containing the library's public API.
+
+This allows you to avoid needing to integrate a third-party package manager like Cocoapods, and doesn't require you to embed our project file within yours.
 
 You can build Mockingbird Toolbox as one of three types of static libraries:
 
@@ -207,6 +260,66 @@ Once you've built the static library you want to use, you will need to add the l
 If you’ve successfully completed the steps above, you can now begin using Mockingbird Toolbox from within your project.
 
 **Note:**  When you integrate Mockingbird Toolbox using a static library, you will need to reference headers with “user header” import notation, eg.:
+
+```objc
+	#import "MBDebug.h"
+```
+
+### Embedding the Project File
+
+You can add Mockingbird Toolbox to an existing Xcode project by embedding the `MBToolbox.xcodeproj` project file.
+
+If your project relies on the default “Debug” and “Release” build configurations created by Xcode, your selection for that setting will cascade down to the Toolbox when it is built. This is handy if you find yourself needing to do debugging within the Toolbox itself.
+
+When you embed the project file, you will need to modify your current project’s build settings to ensure your targets can link against the library binary and Xcode can find the necessary header files.
+
+Here’s how you can incorporate Mockingbird Toolbox through project file embedding:
+
+#### I. Embedding
+
+1. In Xcode, Open the project file to which you want to add Mockingbird Toolbox. 
+
+2. In the Navigator sidebar, select the first tab, the **Project Navigator**. You can display it quickly by pressing ⌘1.
+
+3. Select the item representing your project in the Project Navigator. Unless you have a complicated project structure, your project will be the topmost item in the tree.
+
+4. In the **File** menu, select “Add Files to...”.
+
+5. Locate the `MBToolbox.xcodeproj` file, select it, and press the **Add** button.
+
+#### II. Build “MBToolbox”
+
+Once you’ve embedded the project file, perform an Xcode build using the “MBToolbox” scheme.
+
+Not only will this be a good sanity check to make sure everything’s working as expected, a successful build ensures that the appropriate header files are copied to the `Products/MBToolbox/Headers` directory within your local copy of the `mockingbird-toolbox` repository.
+
+#### III. Configure Build Settings
+
+1. With your project selected in the **Project Navigator**, select your project in the main portion of the window and select the **Build Settings** pane
+
+2. Find the setting for “User Header Search Paths” and double-click the current value. This will pop up an editor for the setting’s value. In the lower-left corner of the editor, click the “+” button. A new text entry box will appear below any values already listed in the editor.
+
+3. Enter the filesystem path pointing to the `Products/MBToolbox/Headers` directory within your local copy of the `mockingbird-toolbox` repository. This can be relative to the directory containing your project file, or it can be an absolute path. The exact value depends on where you’ve put `mockingbird-toolbox` in your filesystem.
+
+4. Now, find the “Other Linker Flags” build setting. Double-click the current value to bring up the editor, and then click the “+” button to add a new linker flag.
+
+5. Add the value `-ObjC` to the linker flags if it isn't there already.
+
+#### IV. Dependencies & Linking
+
+For each target in your project that will use the Toolbox, do the following:
+
+1. With your project selected in the **Project Navigator**, select your target in the main portion of the window and select the **Build Phases** settings pane
+
+2. In the “Target Dependencies” section, click the “+” button and add the `MBToolbox` library as a target dependency.
+
+3. In “Link Binary With Libraries” section, click the “+” button and add `libMBToolbox.a`. 
+
+#### V. You’re done!
+
+If you’ve successfully completed the steps above, you can now begin using Mockingbird Toolbox from within your project.
+
+**Note:**  When you integrate Mockingbird Toolbox through project file embedding, you will need to reference headers with “user header” import notation, eg.:
 
 ```objc
 	#import "MBDebug.h"

@@ -153,7 +153,7 @@ Among the subspecs provided are:
 
 ##### Network
 
-* *NetworkIndicator* - specifies the `MBNetworkIndicator` singleton
+* *NetworkIndicator* - specifies the `MBNetworkIndicator` class
 * *NetworkMonitor* - specifies the `MBNetworkMonitor` service, a high-level replacement for `Reachability` that provides additional functionality
 
 ##### `NSOperation`s

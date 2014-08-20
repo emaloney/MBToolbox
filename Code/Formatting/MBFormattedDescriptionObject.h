@@ -3,7 +3,7 @@
 //  Mockingbird Toolbox
 //
 //  Created by Evan Coyne Maloney on 4/17/14.
-//  Copyright (c) 2014 Evan Coyne Maloney. All rights reserved.
+//  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
 #import "MBFieldListFormatter.h"

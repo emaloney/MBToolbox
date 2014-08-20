@@ -3,11 +3,10 @@
 //  Mockingbird Toolbox
 //
 //  Created by Evan Coyne Maloney on 3/20/14.
-//  Copyright (c) 2014 Evan Coyne Maloney. All rights reserved.
+//  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
 #import "MBFieldListFormatter.h"
-#import "MBFormattedDescriptionObject.h"
 
 #define DEBUG_LOCAL     0
 
@@ -16,6 +15,17 @@
 /******************************************************************************/
 
 const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
+
+/******************************************************************************/
+#pragma mark -
+#pragma mark MBFieldListFormatterDebugDescriptor protocol
+/******************************************************************************/
+
+// declaration needed to get our reference to it in setField:debug: to compile
+// without ugly #pragmas or a dependency on MBFormattedDescriptionObject
+@protocol MBFieldListFormatterDebugDescriptor <NSObject>
+- (NSString*) debugDescriptor;
+@end
 
 /******************************************************************************/
 #pragma mark -
@@ -188,4 +198,3 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
 }
 
 @end
-

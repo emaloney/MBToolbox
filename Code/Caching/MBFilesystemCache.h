@@ -203,7 +203,8 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
 
 /*! Returns the maximum age of the files in the cache, in seconds. Files that
     are older than this value will not be used by the cache and will
-    eventually be deleted. */
+    eventually be deleted. This defaults to the value of the constant 
+    `kMBFilesystemCacheDefaultMaxAge` (currently, 36 hours). */
 @property(nonatomic, assign) NSTimeInterval maxAgeOfCacheFiles;
 
 /*----------------------------------------------------------------------------*/

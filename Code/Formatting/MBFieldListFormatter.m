@@ -9,7 +9,7 @@
 #import "MBFieldListFormatter.h"
 #import "MBFormattedDescriptionObject.h"
 
-#define DEBUG_LOCAL     01
+#define DEBUG_LOCAL     0
 
 /******************************************************************************/
 #pragma mark Constants

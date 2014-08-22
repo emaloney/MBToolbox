@@ -94,7 +94,7 @@ Once you've got Cocoapods up and running—[visit this page](http://guides.cocoa
 
 The line above specifies that all the code in Mockingbird Toolbox should be added to your project.
 
-Once you've added Mockingbird Toolbox to your `Podfile`, you can then install the Cocoapod from the command line.
+After you've added Mockingbird Toolbox to your `Podfile`, you can then install the Cocoapod from the command line.
 
 From within your project directory, issue the command:
 

@@ -217,7 +217,8 @@ filesystem.</Abstract>
 			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/setMaxAgeOfCacheFiles:</TokenIdentifier>
 			<Abstract type="html">Returns the maximum age of the files in the cache, in seconds. Files that
     are older than this value will not be used by the cache and will
-    eventually be deleted. </Abstract>
+    eventually be deleted. This defaults to the value of the constant 
+    kMBFilesystemCacheDefaultMaxAge (currently, 36 hours). </Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) NSTimeInterval maxAgeOfCacheFiles</Declaration>
@@ -231,7 +232,8 @@ filesystem.</Abstract>
 			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/maxAgeOfCacheFiles</TokenIdentifier>
 			<Abstract type="html">Returns the maximum age of the files in the cache, in seconds. Files that
     are older than this value will not be used by the cache and will
-    eventually be deleted. </Abstract>
+    eventually be deleted. This defaults to the value of the constant 
+    kMBFilesystemCacheDefaultMaxAge (currently, 36 hours). </Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) NSTimeInterval maxAgeOfCacheFiles</Declaration>
@@ -245,7 +247,8 @@ filesystem.</Abstract>
 			<TokenIdentifier>//apple_ref/occ/instp/MBFilesystemCache/maxAgeOfCacheFiles</TokenIdentifier>
 			<Abstract type="html">Returns the maximum age of the files in the cache, in seconds. Files that
     are older than this value will not be used by the cache and will
-    eventually be deleted. </Abstract>
+    eventually be deleted. This defaults to the value of the constant 
+    kMBFilesystemCacheDefaultMaxAge (currently, 36 hours). </Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) NSTimeInterval maxAgeOfCacheFiles</Declaration>

@@ -177,18 +177,24 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (BOOL) shouldStoreObjectInMemoryCache:(id)cacheObj forKey:(id)key
 {
-    if ([_cacheDelegate respondsToSelector:kCacheDelegateSelectorShouldStoreInMemory]) {
-        return [_cacheDelegate shouldStoreObject:cacheObj forKey:key inMemoryCache:self];
+    if (cacheObj) {
+        if ([_cacheDelegate respondsToSelector:kCacheDelegateSelectorShouldStoreInMemory]) {
+            return [_cacheDelegate shouldStoreObject:cacheObj forKey:key inMemoryCache:self];
+        }
+        return YES;
     }
-    return YES;
+    return NO;
 }
 
 - (BOOL) shouldStoreObjectInFilesystemCache:(id)cacheObj forKey:(id)key
 {
-    if ([_cacheDelegate respondsToSelector:kCacheDelegateSelectorShouldStoreInFilesystem]) {
-        return [_cacheDelegate shouldStoreObject:cacheObj forKey:key inFilesystemCache:self];
+    if (cacheObj) {
+        if ([_cacheDelegate respondsToSelector:kCacheDelegateSelectorShouldStoreInFilesystem]) {
+            return [_cacheDelegate shouldStoreObject:cacheObj forKey:key inFilesystemCache:self];
+        }
+        return YES;
     }
-    return YES;
+    return NO;
 }
 
 - (void) storeObjectInMemoryCacheIfAppropriate:(id)cacheObj forKey:(id)key

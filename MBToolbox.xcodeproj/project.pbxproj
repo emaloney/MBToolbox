@@ -58,6 +58,7 @@
 		3B0F8CDA198811BD009A2126 /* MBServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CB8198811BD009A2126 /* MBServiceManager.m */; };
 		3B0F8CDB198811BD009A2126 /* NSString+MBIndentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CBE198811BD009A2126 /* NSString+MBIndentation.m */; };
 		3B0F8CDC198811BD009A2126 /* MBThreadLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CC1198811BD009A2126 /* MBThreadLocalStorage.m */; };
+		3B47588A19C0DF8000619FF1 /* UIFont+MBStringSizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B47588919C0DF8000619FF1 /* UIFont+MBStringSizing.m */; };
 		3B6ED5341995C87A004652EB /* Test-MBStringFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */; };
 		3B968ED5198FF2380061DA66 /* libMBToolbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2EF74B19880F31009AD107 /* libMBToolbox.a */; };
 		3B968EE2198FF28D0061DA66 /* Test-MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */; };
@@ -163,6 +164,8 @@
 		3B0F8CC1198811BD009A2126 /* MBThreadLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBThreadLocalStorage.m; sourceTree = "<group>"; };
 		3B2EF74B19880F31009AD107 /* libMBToolbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBToolbox.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3831B019882B93006A771F /* Mockingbird-Toolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mockingbird-Toolbox.h"; sourceTree = "<group>"; };
+		3B47588819C0DF8000619FF1 /* UIFont+MBStringSizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MBStringSizing.h"; sourceTree = "<group>"; };
+		3B47588919C0DF8000619FF1 /* UIFont+MBStringSizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MBStringSizing.m"; sourceTree = "<group>"; };
 		3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBStringFunctions.m"; sourceTree = "<group>"; };
 		3B968ECF198FF2380061DA66 /* MBToolbox-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MBToolbox-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B968EDE198FF28D0061DA66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 				3B0F8CBC198811BD009A2126 /* MBStringFunctions.h */,
 				3B0F8CBD198811BD009A2126 /* NSString+MBIndentation.h */,
 				3B0F8CBE198811BD009A2126 /* NSString+MBIndentation.m */,
+				3B47588819C0DF8000619FF1 /* UIFont+MBStringSizing.h */,
+				3B47588919C0DF8000619FF1 /* UIFont+MBStringSizing.m */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				3B0F8CC2198811BD009A2126 /* MBBatteryMonitor.m in Sources */,
 				3B0F8CC7198811BD009A2126 /* MBEvents.m in Sources */,
 				3B0F8CD7198811BD009A2126 /* MBOperationQueue.m in Sources */,
+				3B47588A19C0DF8000619FF1 /* UIFont+MBStringSizing.m in Sources */,
 				3B0F8CDC198811BD009A2126 /* MBThreadLocalStorage.m in Sources */,
 				3B0F8CCB198811BD009A2126 /* MBRoundedRectTools.m in Sources */,
 				3B0F8CDB198811BD009A2126 /* NSString+MBIndentation.m in Sources */,

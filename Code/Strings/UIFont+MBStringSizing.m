@@ -1,6 +1,6 @@
 //
 //  UIFont+MBStringSizing.m
-//  Mockingbird Library
+//  Mockingbird Toolbox
 //
 //  Created by Evan Coyne Maloney on 9/5/14.
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.

@@ -156,7 +156,7 @@ Among the subspecs provided are:
 * *NetworkIndicator* - specifies the `MBNetworkIndicator` class
 * *NetworkMonitor* - specifies the `MBNetworkMonitor` service, a high-level replacement for `Reachability` that provides additional functionality
 
-##### `NSOperation`s
+##### NSOperations
 
 * *OperationQueue* - specifies the `MBOperationQueue` class
 * *FilesystemOperations* - includes the `MBOperationQueue` class and various filesystem operations
@@ -178,6 +178,7 @@ Among the subspecs provided are:
 
 * *StringFunctions* - declares the `MBForceString()` and `MBTrimString()` inline functions, and the `MBStringify()` preprocessor macro
 * *Indentation-NSString* - an `NSString` class extension that adds methods for indenting the individual lines in a string using tabs and arbitrary prefixes
+* *StringSizing-UIFont* - a `UIFont` class extension that adds methods for performing common text measurement tasks
 
 ##### Thread-Local Storage
 

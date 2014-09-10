@@ -124,7 +124,12 @@ The static inline C function `MBForceString()` takes an `id` as a parameter and 
 
 The static inline C function `MBTrimString()` takes an `id` as a parameter and is guaranteed to return a non-`nil` `NSString` with no leading or trailing whitespace or newline characters.
 
-Finally, [the `MBFieldListFormatter` class](Classes/MBFieldListFormatter.html) can be used to create lists of fields that are displayed in an easy-to-read format when rendered in a monospaced font.
+[The `MBFieldListFormatter` class](Classes/MBFieldListFormatter.html) can be used to create lists of fields that are displayed in an easy-to-read format when rendered in a monospaced font.
+
+
+### String Measurement
+
+There's also [a `UIFont` class extension](Categories/UIFont+MBStringSizing.html) that provides a simple API for performing common text measurement tasks.
 
 
 ### ...and more

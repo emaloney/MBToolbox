@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "mockingbird-toolbox"
-	s.version               = "0.9.5"
+	s.version               = "0.9.6"
 	s.summary               = "Mockingbird Toolbox: General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
 	s.homepage         	    = "https://github.com/gilt/mockingbird-toolbox"
 	s.license               = { :type => 'MIT', :file => 'LICENSE' }

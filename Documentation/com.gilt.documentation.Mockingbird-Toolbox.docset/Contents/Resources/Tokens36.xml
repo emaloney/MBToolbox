@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/UIView+MBSnapshotImage.html">
+	<File path="Categories/UIImage+MBImageScaling.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/UIView(MBSnapshotImage)</TokenIdentifier>
-			<Abstract type="html">A UIView class extension that provides methods for creating snapshot images
-of a view.</Abstract>
-			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/UIImage(MBImageScaling)</TokenIdentifier>
+			<Abstract type="html">A class extension for UIImage that provides methods for resizing images.</Abstract>
+			<DeclaredIn>UIImage+MBImageScaling.h</DeclaredIn>
             
 			
 			<NodeRef refid="36"/>
@@ -14,40 +13,86 @@ of a view.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIView/snapshotImage</TokenIdentifier>
-			<Abstract type="html">Returns a UIImage instance containing a rendering of the receiver&apos;s content.</Abstract>
-			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UIImage/imageScaledToSize:quality:</TokenIdentifier>
+			<Abstract type="html">Scales the receiver to the specified size.</Abstract>
+			<DeclaredIn>UIImage+MBImageScaling.h</DeclaredIn>
 			
-			<Declaration>- (UIImage *)snapshotImage</Declaration>
-			
-			<ReturnValue><Abstract type="html">The image.</Abstract></ReturnValue>
-			<Anchor>//api/name/snapshotImage</Anchor>
+			<Declaration>- (UIImage *)imageScaledToSize:(CGSize)newSize quality:(CGInterpolationQuality)quality</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>newSize</Name>
+					<Abstract type="html">The size of the UIImage to be returned. If this is the
+            same size as the receiver, no scaling is performed and self is
+            returned.</Abstract>
+				</Parameter><Parameter>
+					<Name>quality</Name>
+					<Abstract type="html">The interpolation quality to use for scaling the image.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The resulting image.</Abstract></ReturnValue>
+			<Anchor>//api/name/imageScaledToSize:quality:</Anchor>
             <NodeRef refid="36"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIView/coreImageSnapshot</TokenIdentifier>
-			<Abstract type="html">Returns a CoreImage CIImage instance containing a rendering of the receiver&apos;s
-content.</Abstract>
-			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UIImage/imageScaledToSize:</TokenIdentifier>
+			<Abstract type="html">Scales the receiver to the specified size.</Abstract>
+			<DeclaredIn>UIImage+MBImageScaling.h</DeclaredIn>
 			
-			<Declaration>- (CIImage *)coreImageSnapshot</Declaration>
-			
-			<ReturnValue><Abstract type="html">The image.</Abstract></ReturnValue>
-			<Anchor>//api/name/coreImageSnapshot</Anchor>
+			<Declaration>- (UIImage *)imageScaledToSize:(CGSize)newSize</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>newSize</Name>
+					<Abstract type="html">The size of the UIImage to be returned. If this is the
+            same size as the receiver, no scaling is performed and self is
+            returned.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The resulting image.</Abstract></ReturnValue>
+			<Anchor>//api/name/imageScaledToSize:</Anchor>
             <NodeRef refid="36"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIView/coreGraphicsSnapshot</TokenIdentifier>
-			<Abstract type="html">Returns a CoreGraphics CGImageRef containing a rendering of the receiver&apos;s
-content.</Abstract>
-			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UIImage/imageScaledByFactor:quality:</TokenIdentifier>
+			<Abstract type="html">Scales the receiver to a new size by applying the specified scale factor.</Abstract>
+			<DeclaredIn>UIImage+MBImageScaling.h</DeclaredIn>
 			
-			<Declaration>- (CGImageRef)coreGraphicsSnapshot</Declaration>
+			<Declaration>- (UIImage *)imageScaledByFactor:(CGFloat)scale quality:(CGInterpolationQuality)quality</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>scale</Name>
+					<Abstract type="html">The scale factor that determines the size of the returned
+            image. Numbers less than 1.0 result in a smaller image; numbers
+            greater than 1.0 result in a larger image. If this value is
+            1.0 exactly, no scaling is performed and self is returned.</Abstract>
+				</Parameter><Parameter>
+					<Name>quality</Name>
+					<Abstract type="html">The interpolation quality to use for scaling the image.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The resulting image.</Abstract></ReturnValue>
+			<Anchor>//api/name/imageScaledByFactor:quality:</Anchor>
+            <NodeRef refid="36"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIImage/imageScaledByFactor:</TokenIdentifier>
+			<Abstract type="html">Scales the receiver to a new size by applying the specified scale factor.</Abstract>
+			<DeclaredIn>UIImage+MBImageScaling.h</DeclaredIn>
 			
-			<ReturnValue><Abstract type="html">The image.</Abstract></ReturnValue>
-			<Anchor>//api/name/coreGraphicsSnapshot</Anchor>
+			<Declaration>- (UIImage *)imageScaledByFactor:(CGFloat)scale</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>scale</Name>
+					<Abstract type="html">The scale factor that determines the size of the returned
+            image. Numbers less than 1.0 result in a smaller image; numbers
+            greater than 1.0 result in a larger image. If this value is
+            1.0 exactly, no scaling is performed and self is returned.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The resulting image.</Abstract></ReturnValue>
+			<Anchor>//api/name/imageScaledByFactor:</Anchor>
             <NodeRef refid="36"/>
 		</Token>
 		

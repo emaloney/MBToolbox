@@ -1,0 +1,1731 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>UIFont(MBStringSizing) Category Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Mockingbird Toolbox </a></h1>
+				<a id="developerHome" href="../index.html">Gilt Groupe</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">UIFont(MBStringSizing) Category Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/sizeString:maxSize:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxSize:</option>
+	
+	<option value="//api/name/sizeString:maxSize:fractional:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxSize:fractional:</option>
+	
+	<option value="//api/name/sizeString:maxSize:lineBreakMode:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxSize:lineBreakMode:</option>
+	
+	<option value="//api/name/sizeString:maxSize:lineBreakMode:fractional:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxSize:lineBreakMode:fractional:</option>
+	
+	<option value="//api/name/sizeString:maxSize:paragraphStyle:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxSize:paragraphStyle:</option>
+	
+	<option value="//api/name/sizeString:maxSize:paragraphStyle:fractional:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxSize:paragraphStyle:fractional:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:fractional:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:fractional:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:lineBreakMode:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:lineBreakMode:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:lineBreakMode:fractional:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:lineBreakMode:fractional:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:maxHeight:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:maxHeight:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:maxHeight:fractional:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:maxHeight:fractional:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:maxHeight:lineBreakMode:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:maxHeight:lineBreakMode:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:maxHeight:lineBreakMode:fractional:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:maxHeight:lineBreakMode:fractional:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:maxHeight:paragraphStyle:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:maxHeight:paragraphStyle:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:maxHeight:paragraphStyle:fractional:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:maxHeight:paragraphStyle:fractional:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:paragraphStyle:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:paragraphStyle:</option>
+	
+	<option value="//api/name/sizeString:maxWidth:paragraphStyle:fractional:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeString:maxWidth:paragraphStyle:fractional:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Measuring whole pixels with word wrapping">Measuring whole pixels with word wrapping</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Measuring fractional pixels with word wrapping">Measuring fractional pixels with word wrapping</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Measuring whole pixels with a specific line break mode">Measuring whole pixels with a specific line break mode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Measuring fractional pixels with a specific line break mode">Measuring fractional pixels with a specific line break mode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Measuring whole pixels with a specific paragraph style">Measuring whole pixels with a specific paragraph style</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Measuring fractional pixels with a specific paragraph style">Measuring fractional pixels with a specific paragraph style</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxSize:">sizeString:maxSize:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxSize:fractional:">sizeString:maxSize:fractional:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxSize:lineBreakMode:">sizeString:maxSize:lineBreakMode:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxSize:lineBreakMode:fractional:">sizeString:maxSize:lineBreakMode:fractional:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxSize:paragraphStyle:">sizeString:maxSize:paragraphStyle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxSize:paragraphStyle:fractional:">sizeString:maxSize:paragraphStyle:fractional:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:">sizeString:maxWidth:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:fractional:">sizeString:maxWidth:fractional:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:lineBreakMode:">sizeString:maxWidth:lineBreakMode:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:lineBreakMode:fractional:">sizeString:maxWidth:lineBreakMode:fractional:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:maxHeight:">sizeString:maxWidth:maxHeight:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:maxHeight:fractional:">sizeString:maxWidth:maxHeight:fractional:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:maxHeight:lineBreakMode:">sizeString:maxWidth:maxHeight:lineBreakMode:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:maxHeight:lineBreakMode:fractional:">sizeString:maxWidth:maxHeight:lineBreakMode:fractional:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:maxHeight:paragraphStyle:">sizeString:maxWidth:maxHeight:paragraphStyle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:maxHeight:paragraphStyle:fractional:">sizeString:maxWidth:maxHeight:paragraphStyle:fractional:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:paragraphStyle:">sizeString:maxWidth:paragraphStyle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeString:maxWidth:paragraphStyle:fractional:">sizeString:maxWidth:paragraphStyle:fractional:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="UIFont(MBStringSizing) Category Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">UIFont(MBStringSizing) Category Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">UIFont+MBStringSizing.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A <code>UIFont</code> class extension that adds an API for performing common string
+measurement tasks.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Measuring whole pixels with word wrapping" name="task_Measuring whole pixels with word wrapping"></a>
+						<h3 class="subsubtitle task-title">Measuring whole pixels with word wrapping</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:">&ndash;&nbsp;sizeString:maxWidth:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:maxHeight:">&ndash;&nbsp;sizeString:maxWidth:maxHeight:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxSize:">&ndash;&nbsp;sizeString:maxSize:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Measuring fractional pixels with word wrapping" name="task_Measuring fractional pixels with word wrapping"></a>
+						<h3 class="subsubtitle task-title">Measuring fractional pixels with word wrapping</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:fractional:">&ndash;&nbsp;sizeString:maxWidth:fractional:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:maxHeight:fractional:">&ndash;&nbsp;sizeString:maxWidth:maxHeight:fractional:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxSize:fractional:">&ndash;&nbsp;sizeString:maxSize:fractional:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Measuring whole pixels with a specific line break mode" name="task_Measuring whole pixels with a specific line break mode"></a>
+						<h3 class="subsubtitle task-title">Measuring whole pixels with a specific line break mode</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:lineBreakMode:">&ndash;&nbsp;sizeString:maxWidth:lineBreakMode:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:maxHeight:lineBreakMode:">&ndash;&nbsp;sizeString:maxWidth:maxHeight:lineBreakMode:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxSize:lineBreakMode:">&ndash;&nbsp;sizeString:maxSize:lineBreakMode:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Measuring fractional pixels with a specific line break mode" name="task_Measuring fractional pixels with a specific line break mode"></a>
+						<h3 class="subsubtitle task-title">Measuring fractional pixels with a specific line break mode</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:lineBreakMode:fractional:">&ndash;&nbsp;sizeString:maxWidth:lineBreakMode:fractional:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:maxHeight:lineBreakMode:fractional:">&ndash;&nbsp;sizeString:maxWidth:maxHeight:lineBreakMode:fractional:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxSize:lineBreakMode:fractional:">&ndash;&nbsp;sizeString:maxSize:lineBreakMode:fractional:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Measuring whole pixels with a specific paragraph style" name="task_Measuring whole pixels with a specific paragraph style"></a>
+						<h3 class="subsubtitle task-title">Measuring whole pixels with a specific paragraph style</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:paragraphStyle:">&ndash;&nbsp;sizeString:maxWidth:paragraphStyle:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:maxHeight:paragraphStyle:">&ndash;&nbsp;sizeString:maxWidth:maxHeight:paragraphStyle:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxSize:paragraphStyle:">&ndash;&nbsp;sizeString:maxSize:paragraphStyle:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Measuring fractional pixels with a specific paragraph style" name="task_Measuring fractional pixels with a specific paragraph style"></a>
+						<h3 class="subsubtitle task-title">Measuring fractional pixels with a specific paragraph style</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:paragraphStyle:fractional:">&ndash;&nbsp;sizeString:maxWidth:paragraphStyle:fractional:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxWidth:maxHeight:paragraphStyle:fractional:">&ndash;&nbsp;sizeString:maxWidth:maxHeight:paragraphStyle:fractional:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeString:maxSize:paragraphStyle:fractional:">&ndash;&nbsp;sizeString:maxSize:paragraphStyle:fractional:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxSize:" title="sizeString:maxSize:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxSize:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxSize:(CGSize)<em>maxSize</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxSize</em></dt>
+			<dd><p>The maximum size allowed for the text. If <code>str</code> would
+            not fit within <code>maxSize.width</code> on a single line, it will be wrapped
+            according to the line break mode <code>NSLineBreakByWordWrapping</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string, with the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxSize:fractional:" title="sizeString:maxSize:fractional:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxSize:fractional:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxSize:(CGSize)<em>maxSize</em> fractional:(BOOL)<em>allowFractionalSize</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxSize</em></dt>
+			<dd><p>The maximum size allowed for the text. If <code>str</code> would
+            not fit within <code>maxSize.width</code> on a single line, it will be wrapped
+            according to the line break mode <code>NSLineBreakByWordWrapping</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowFractionalSize</em></dt>
+			<dd><p>If <code>YES</code>, the returned size may contain
+            fractional (sub-pixel) values. If <code>NO</code>, the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxSize:lineBreakMode:" title="sizeString:maxSize:lineBreakMode:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxSize:lineBreakMode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxSize:(CGSize)<em>maxSize</em> lineBreakMode:(NSLineBreakMode)<em>lineMode</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxSize</em></dt>
+			<dd><p>The maximum size allowed for the text. If <code>str</code> would
+            not fit within <code>maxSize.width</code> on a single line, it will be wrapped
+            according to the line break mode <code>NSLineBreakByWordWrapping</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lineMode</em></dt>
+			<dd><p>The line break mode to use for measuring the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string, with the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxSize:lineBreakMode:fractional:" title="sizeString:maxSize:lineBreakMode:fractional:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxSize:lineBreakMode:fractional:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxSize:(CGSize)<em>maxSize</em> lineBreakMode:(NSLineBreakMode)<em>lineMode</em> fractional:(BOOL)<em>allowFractionalSize</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxSize</em></dt>
+			<dd><p>The maximum size allowed for the text. If <code>str</code> would
+            not fit within <code>maxSize.width</code> on a single line, it may be wrapped
+            according to the specified line break mode.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lineMode</em></dt>
+			<dd><p>The line break mode to use for measuring the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowFractionalSize</em></dt>
+			<dd><p>If <code>YES</code>, the returned size may contain
+            fractional (sub-pixel) values. If <code>NO</code>, the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxSize:paragraphStyle:" title="sizeString:maxSize:paragraphStyle:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxSize:paragraphStyle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxSize:(CGSize)<em>maxSize</em> paragraphStyle:(NSParagraphStyle *)<em>style</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxSize</em></dt>
+			<dd><p>The maximum size allowed for the text. If <code>str</code> would
+            not fit within <code>maxSize.width</code> on a single line, it may be wrapped
+            according to the specified paragraph style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>style</em></dt>
+			<dd><p>The paragraph style for the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string, with the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxSize:paragraphStyle:fractional:" title="sizeString:maxSize:paragraphStyle:fractional:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxSize:paragraphStyle:fractional:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxSize:(CGSize)<em>maxSize</em> paragraphStyle:(NSParagraphStyle *)<em>style</em> fractional:(BOOL)<em>allowFractionalSize</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxSize</em></dt>
+			<dd><p>The maximum size allowed for the text. If <code>str</code> would
+            not fit within <code>maxSize.width</code> on a single line, it may be wrapped
+            according to the specified paragraph style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>style</em></dt>
+			<dd><p>The paragraph style for the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowFractionalSize</em></dt>
+			<dd><p>If <code>YES</code>, the returned size may contain
+            fractional (sub-pixel) values. If <code>NO</code>, the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:" title="sizeString:maxWidth:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it will be wrapped according
+            to the line break mode <code>NSLineBreakByWordWrapping</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string, with the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:fractional:" title="sizeString:maxWidth:fractional:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:fractional:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> fractional:(BOOL)<em>allowFractionalSize</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it will be wrapped according
+            to the line break mode <code>NSLineBreakByWordWrapping</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowFractionalSize</em></dt>
+			<dd><p>If <code>YES</code>, the returned size may contain
+            fractional (sub-pixel) values. If <code>NO</code>, the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:lineBreakMode:" title="sizeString:maxWidth:lineBreakMode:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:lineBreakMode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> lineBreakMode:(NSLineBreakMode)<em>lineMode</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it may be wrapped according
+            to the specified line break mode.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lineMode</em></dt>
+			<dd><p>The line break mode to use for measuring the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string, with the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:lineBreakMode:fractional:" title="sizeString:maxWidth:lineBreakMode:fractional:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:lineBreakMode:fractional:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> lineBreakMode:(NSLineBreakMode)<em>lineMode</em> fractional:(BOOL)<em>allowFractionalSize</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it may be wrapped according
+            to the specified line break mode.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lineMode</em></dt>
+			<dd><p>The line break mode to use for measuring the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowFractionalSize</em></dt>
+			<dd><p>If <code>YES</code>, the returned size may contain
+            fractional (sub-pixel) values. If <code>NO</code>, the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:maxHeight:" title="sizeString:maxWidth:maxHeight:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:maxHeight:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> maxHeight:(CGFloat)<em>maxHeight</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it will be wrapped according
+            to the line break mode <code>NSLineBreakByWordWrapping</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxHeight</em></dt>
+			<dd><p>The maximum height allowed for the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string, with the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:maxHeight:fractional:" title="sizeString:maxWidth:maxHeight:fractional:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:maxHeight:fractional:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> maxHeight:(CGFloat)<em>maxHeight</em> fractional:(BOOL)<em>allowFractionalSize</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it will be wrapped according
+            to the line break mode <code>NSLineBreakByWordWrapping</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxHeight</em></dt>
+			<dd><p>The maximum height allowed for the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowFractionalSize</em></dt>
+			<dd><p>If <code>YES</code>, the returned size may contain
+            fractional (sub-pixel) values. If <code>NO</code>, the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:maxHeight:lineBreakMode:" title="sizeString:maxWidth:maxHeight:lineBreakMode:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:maxHeight:lineBreakMode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> maxHeight:(CGFloat)<em>maxHeight</em> lineBreakMode:(NSLineBreakMode)<em>lineMode</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it may be wrapped according
+            to the specified line break mode.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxHeight</em></dt>
+			<dd><p>The maximum height allowed for the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lineMode</em></dt>
+			<dd><p>The line break mode to use for measuring the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string, with the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:maxHeight:lineBreakMode:fractional:" title="sizeString:maxWidth:maxHeight:lineBreakMode:fractional:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:maxHeight:lineBreakMode:fractional:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> maxHeight:(CGFloat)<em>maxHeight</em> lineBreakMode:(NSLineBreakMode)<em>lineMode</em> fractional:(BOOL)<em>allowFractionalSize</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it may be wrapped according
+            to the specified line break mode.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxHeight</em></dt>
+			<dd><p>The maximum height allowed for the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lineMode</em></dt>
+			<dd><p>The line break mode to use for measuring the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowFractionalSize</em></dt>
+			<dd><p>If <code>YES</code>, the returned size may contain
+            fractional (sub-pixel) values. If <code>NO</code>, the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:maxHeight:paragraphStyle:" title="sizeString:maxWidth:maxHeight:paragraphStyle:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:maxHeight:paragraphStyle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> maxHeight:(CGFloat)<em>maxHeight</em> paragraphStyle:(NSParagraphStyle *)<em>style</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it may be wrapped according
+            to the specified paragraph style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxHeight</em></dt>
+			<dd><p>The maximum height allowed for the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>style</em></dt>
+			<dd><p>The paragraph style for the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string, with the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:maxHeight:paragraphStyle:fractional:" title="sizeString:maxWidth:maxHeight:paragraphStyle:fractional:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:maxHeight:paragraphStyle:fractional:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> maxHeight:(CGFloat)<em>maxHeight</em> paragraphStyle:(NSParagraphStyle *)<em>style</em> fractional:(BOOL)<em>allowFractionalSize</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it may be wrapped according
+            to the specified paragraph style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxHeight</em></dt>
+			<dd><p>The maximum height allowed for the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>style</em></dt>
+			<dd><p>The paragraph style for the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowFractionalSize</em></dt>
+			<dd><p>If <code>YES</code>, the returned size may contain
+            fractional (sub-pixel) values. If <code>NO</code>, the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:paragraphStyle:" title="sizeString:maxWidth:paragraphStyle:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:paragraphStyle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> paragraphStyle:(NSParagraphStyle *)<em>style</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it may be wrapped according
+            to the specified paragraph style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>style</em></dt>
+			<dd><p>The paragraph style for the text.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string, with the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeString:maxWidth:paragraphStyle:fractional:" title="sizeString:maxWidth:paragraphStyle:fractional:"></a>
+	<h3 class="subsubtitle method-title">sizeString:maxWidth:paragraphStyle:fractional:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculates the size of the bounding rectangle required to draw a given text
+string in the font represented by the receiver.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)sizeString:(NSString *)<em>str</em> maxWidth:(CGFloat)<em>maxWidth</em> paragraphStyle:(NSParagraphStyle *)<em>style</em> fractional:(BOOL)<em>allowFractionalSize</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>str</em></dt>
+			<dd><p>The text string to measure.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxWidth</em></dt>
+			<dd><p>The maximum width allowed for the text. If <code>str</code> would not
+            fit within <code>maxWidth</code> on a single line, it may be wrapped according
+            to the specified paragraph style.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>style</em></dt>
+			<dd><p>The paragraph style for the text.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowFractionalSize</em></dt>
+			<dd><p>If <code>YES</code>, the returned size may contain
+            fractional (sub-pixel) values. If <code>NO</code>, the width and
+            height components rounded up to the nearest integer (whole-pixel)
+            value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The size required to draw the text string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIFont+MBStringSizing.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Gilt Groupe. All rights reserved. (Last updated: 2014-09-10)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

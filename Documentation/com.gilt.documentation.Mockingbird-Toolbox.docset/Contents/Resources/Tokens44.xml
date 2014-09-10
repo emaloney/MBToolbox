@@ -1,75 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/MBBitmapPixelType.html">
+	<File path="Protocols/MBSingleton.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/MBBitmapPixelType</TokenIdentifier>
-			<Abstract type="html">Indicates how an MBBitmapPixelPlane represents the color and alpha
-channels within the pixel data.</Abstract>
-			<DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/MBSingleton</TokenIdentifier>
+			<Abstract type="html">Adopted by classes that act as singletons.</Abstract>
+			<DeclaredIn>MBSingleton.h</DeclaredIn>
             
 			
 			<NodeRef refid="44"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MBBitmapPixelTypeUnknown</TokenIdentifier>
-            <Abstract type="html">The pixel type of the underlying bitmap is not known. MBBitmapPixel
-        data is undefined and should not be relied upon. </Abstract>
-            <Declaration>MBBitmapPixelTypeUnknown</Declaration>
-            
-            <DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBSingleton/instance</TokenIdentifier>
+			<Abstract type="html">Retreives the singleton instance of the receiving class.</Abstract>
+			<DeclaredIn>MBSingleton.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)instance</Declaration>
+			
+			<ReturnValue><Abstract type="html">The singleton instance. This value should never change during
+            the running lifetime of the application.</Abstract></ReturnValue>
+			<Anchor>//api/name/instance</Anchor>
             <NodeRef refid="44"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MBBitmapPixelTypeIncompatible</TokenIdentifier>
-            <Abstract type="html">The pixel type of the underlying bitmap is not compatible with the
-        MBBitmapPixelPlane class. MBBitmapPixel data is undefined and 
-        should not be relied upon. </Abstract>
-            <Declaration>MBBitmapPixelTypeIncompatible</Declaration>
-            
-            <DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
-            
-            <NodeRef refid="44"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MBBitmapPixelTypeAlpha</TokenIdentifier>
-            <Abstract type="html">The bitmap uses the alpha channel (channel4) component of the
-        MBBitmapPixel and no others. </Abstract>
-            <Declaration>MBBitmapPixelTypeAlpha</Declaration>
-            
-            <DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
-            
-            <NodeRef refid="44"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MBBitmapPixelTypeMonochrome</TokenIdentifier>
-            <Abstract type="html">The bitmap uses the white channel (channel1) and potentially the
-        alpha channel (channel4) of the MBBitmapPixel. </Abstract>
-            <Declaration>MBBitmapPixelTypeMonochrome</Declaration>
-            
-            <DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
-            
-            <NodeRef refid="44"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/MBBitmapPixelTypeRGB</TokenIdentifier>
-            <Abstract type="html">The bitmap uses the red (channel1), green (channel2) and blue
-        (channel3) channels and potentially the alpha channel
-        (channel4) of the MBBitmapPixel. </Abstract>
-            <Declaration>MBBitmapPixelTypeRGB</Declaration>
-            
-            <DeclaredIn>MBBitmapPixelPlane.h</DeclaredIn>
-            
-            <NodeRef refid="44"/>
-        </Token>
+		</Token>
+		
         
 	</File>
 </Tokens>

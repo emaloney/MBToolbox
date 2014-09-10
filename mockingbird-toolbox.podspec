@@ -9,15 +9,15 @@
 
 Pod::Spec.new do |s|
 
-	s.name            		= "mockingbird-toolbox"
-	s.version          		= "0.9.5"
-	s.summary          		= "Mockingbird Toolbox: General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
-	s.homepage         		= "https://github.com/gilt/mockingbird-toolbox"
-	s.license          		= { :type => 'MIT', :file => 'LICENSE' }
-	s.author           		= { "Evan Coyne Maloney" => "emaloney@gilt.com" }
-	s.platform     			= :ios, '8.0'
-	s.ios.deployment_target 	= '7.0'
-	s.requires_arc 			= true
+	s.name                  = "mockingbird-toolbox"
+	s.version               = "0.9.5"
+	s.summary               = "Mockingbird Toolbox: General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
+	s.homepage         	    = "https://github.com/gilt/mockingbird-toolbox"
+	s.license               = { :type => 'MIT', :file => 'LICENSE' }
+	s.author                = { "Evan Coyne Maloney" => "emaloney@gilt.com" }
+	s.platform              = :ios, '8.0'
+	s.ios.deployment_target = '7.0'
+	s.requires_arc          = true
 
 	s.source = {
 		:git => 'https://github.com/gilt/mockingbird-toolbox.git',
@@ -379,6 +379,16 @@ Pod::Spec.new do |s|
 		ss.public_header_files = 'Code/Strings/NSString+MBIndentation.h'
 	end
 	
+	#
+	# a UIFont class extension that adds some simple text measurement
+	# methods
+	#
+	s.subspec 'StringSizing-UIFont' do |ss|
+		ss.dependency 'mockingbird-toolbox/Common'
+		ss.source_files = 'Code/Strings/UIFont+MBStringSizing.{h,m}'
+		ss.public_header_files = 'Code/Strings/UIFont+MBStringSizing.h'
+	end
+
 	#----------------------------------------------------------------
 	# Code/Threads
 	#----------------------------------------------------------------

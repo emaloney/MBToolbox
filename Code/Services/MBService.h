@@ -67,5 +67,18 @@ typedef NSObject<MBService, MBSingleton> MBService;
 @optional
 - (void) stopService;
 
+/*!
+ Configures the service according to the keys and values contained in the
+ specified dictionary. Acceptable configuration values are service-specific.
+
+ This method is optional; services that do not support configuration do not need
+ to implement.
+ 
+ @note Services should log a console error but otherwise ignore any unrecognized
+ keys or unsupported values passed to this method.
+*/
+@optional
+- (void) configureService:(NSDictionary*)params;
+
 @end
 

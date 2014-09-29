@@ -38,6 +38,19 @@ application.</Abstract>
             <NodeRef refid="43"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBService/configureService:</TokenIdentifier>
+			<Abstract type="html">Configures the service according to the keys and values contained in the
+specified dictionary. Acceptable configuration values are service-specific.</Abstract>
+			<DeclaredIn>MBService.h</DeclaredIn>
+			
+			<Declaration>- (void)configureService:(NSDictionary *)params</Declaration>
+			
+			
+			<Anchor>//api/name/configureService:</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
         
 	</File>
 </Tokens>

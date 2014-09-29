@@ -9,10 +9,10 @@
 
 Pod::Spec.new do |s|
 
-	s.name                  = "mockingbird-toolbox"
-	s.version               = "0.9.6"
+	s.name                  = "MBToolbox"
+	s.version               = "1.0.0"
 	s.summary               = "Mockingbird Toolbox: General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
-	s.homepage         	    = "https://github.com/gilt/mockingbird-toolbox"
+	s.homepage         	    = "https://github.com/gilt/MBToolbox"
 	s.license               = { :type => 'MIT', :file => 'LICENSE' }
 	s.author                = { "Evan Coyne Maloney" => "emaloney@gilt.com" }
 	s.platform              = :ios, '8.0'
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 	s.requires_arc          = true
 
 	s.source = {
-		:git => 'https://github.com/gilt/mockingbird-toolbox.git',
+		:git => 'https://github.com/gilt/MBToolbox.git',
 		:tag => s.version.to_s
 	}
 	
@@ -51,8 +51,8 @@ Pod::Spec.new do |s|
 	# specifies the MBBatteryMonitor class and related items
 	#
 	s.subspec 'BatteryMonitor' do |ss|
-		ss.dependency 'mockingbird-toolbox/Events'
-		ss.dependency 'mockingbird-toolbox/ServiceManager'
+		ss.dependency 'MBToolbox/Events'
+		ss.dependency 'MBToolbox/ServiceManager'
 		ss.source_files = 'Code/Battery/*.{h,m}'
 		ss.public_header_files = 'Code/Battery/*.h'
 	end
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
 	# specifies the MBThreadsafeCache class and related items
 	#
 	s.subspec 'ThreadsafeCache' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Caching/MBThreadsafeCache*.{h,m}'
 		ss.public_header_files = 'Code/Caching/MBThreadsafeCache*.h'
 	end
@@ -74,9 +74,9 @@ Pod::Spec.new do |s|
 	# specifies the MBFilesystemCache class and related items
 	#
 	s.subspec 'FilesystemCache' do |ss|
-		ss.dependency 'mockingbird-toolbox/ThreadsafeCache'
-		ss.dependency 'mockingbird-toolbox/FilesystemOperations'
-		ss.dependency 'mockingbird-toolbox/MessageDigest-NSString'
+		ss.dependency 'MBToolbox/ThreadsafeCache'
+		ss.dependency 'MBToolbox/FilesystemOperations'
+		ss.dependency 'MBToolbox/MessageDigest-NSString'
 		ss.source_files = ['Code/Caching/MBFilesystemCache*.{h,m}', 'Code/Caching/MBCacheOperations.{h,m}']
 		ss.public_header_files = ['Code/Caching/MBFilesystemCache*.h', 'Code/Caching/MBCacheOperations.h']
 	end
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
 	# to create, populate and manipulate NSError instances
 	#
 	s.subspec 'MBToolbox-NSError' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Error/*.{h,m}'
 		ss.public_header_files = 'Code/Error/*.h'
 	end
@@ -104,7 +104,7 @@ Pod::Spec.new do |s|
 	# of NSNotification events
 	#
 	s.subspec 'Events' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Events/*.{h,m}'
 		ss.public_header_files = 'Code/Events/*.h'
 	end
@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
 	# specifies the MBFieldListFormatter class
 	#
 	s.subspec 'FieldListFormatter' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Formatting/MBFieldListFormatter.{h,m}'
 		ss.public_header_files = 'Code/Formatting/MBFieldListFormatter.h'
 	end
@@ -127,7 +127,7 @@ Pod::Spec.new do |s|
 	# MBFormattedDescriptionObject classes
 	#
 	s.subspec 'FormattedDescriptionObject' do |ss|
-		ss.dependency 'mockingbird-toolbox/FieldListFormatter'
+		ss.dependency 'MBToolbox/FieldListFormatter'
 		ss.source_files = 'Code/Formatting/MBFormattedDescriptionObject.{h,m}'
 		ss.public_header_files = 'Code/Formatting/MBFormattedDescriptionObject.h'
 	end
@@ -140,7 +140,7 @@ Pod::Spec.new do |s|
 	# specifies the MBBitmapPixelPlane class and related items
 	#
 	s.subspec 'BitmapPixelPlane' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Graphics/MBBitmapPixelPlane.{h,m}'
 		ss.public_header_files = 'Code/Graphics/MBBitmapPixelPlane.h'
 	end
@@ -157,7 +157,7 @@ Pod::Spec.new do |s|
 	# specifies the MBRoundedRectTools class
 	#
 	s.subspec 'RoundedRectTools' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Graphics/MBRoundedRectTools.{h,m}'
 		ss.public_header_files = 'Code/Graphics/MBRoundedRectTools.h'
 	end
@@ -167,7 +167,7 @@ Pod::Spec.new do |s|
 	# getting information about and modifying colors
 	#
 	s.subspec 'MBToolbox-UIColor' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Strings/UIColor+MBToolbox.{h,m}'
 		ss.public_header_files = 'Code/Strings/UIColor+MBToolbox.h'
 	end
@@ -176,7 +176,7 @@ Pod::Spec.new do |s|
 	# a UIImage class extension that adds methods for scaling images
 	#
 	s.subspec 'ImageScaling-UIImage' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Strings/UIImage+MBImageScaling.{h,m}'
 		ss.public_header_files = 'Code/Strings/UIImage+MBImageScaling.h'
 	end
@@ -186,7 +186,7 @@ Pod::Spec.new do |s|
 	# image snapshots of a view's contents
 	#
 	s.subspec 'SnapshotImage-UIView' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Strings/UIView+MBSnapshotImage.{h,m}'
 		ss.public_header_files = 'Code/Strings/UIView+MBSnapshotImage.h'
 	end
@@ -199,7 +199,7 @@ Pod::Spec.new do |s|
 	# specifies the MBMessageDigest class
 	#
 	s.subspec 'MessageDigest' do |ss|
-		ss.dependency 'mockingbird-toolbox/MBToolbox-NSError'
+		ss.dependency 'MBToolbox/MBToolbox-NSError'
 		ss.frameworks = 'Security'
 		ss.source_files = 'Code/MessageDigest/MBMessageDigest.{h,m}'
 		ss.public_header_files = 'Code/MessageDigest/MBMessageDigest.h'
@@ -210,7 +210,7 @@ Pod::Spec.new do |s|
 	# extension providing related convenience methods
 	# 
 	s.subspec 'MessageDigest-NSString' do |ss|
-		ss.dependency 'mockingbird-toolbox/MessageDigest'
+		ss.dependency 'MBToolbox/MessageDigest'
 		ss.source_files = 'Code/MessageDigest/NSString+MBMessageDigest.{h,m}'
 		ss.public_header_files = 'Code/MessageDigest/NSString+MBMessageDigest.h'
 	end
@@ -220,7 +220,7 @@ Pod::Spec.new do |s|
 	# extension providing related convenience methods
 	# 
 	s.subspec 'MessageDigest-NSData' do |ss|
-		ss.dependency 'mockingbird-toolbox/MessageDigest'
+		ss.dependency 'MBToolbox/MessageDigest'
 		ss.source_files = 'Code/MessageDigest/NSData+MBMessageDigest.{h,m}'
 		ss.public_header_files = 'Code/MessageDigest/NSData+MBMessageDigest.h'
 	end
@@ -230,8 +230,8 @@ Pod::Spec.new do |s|
 	# extensions
 	# 
 	s.subspec 'MessageDigest-Extensions' do |ss|
-		ss.dependency 'mockingbird-toolbox/MessageDigest-NSString'
-		ss.dependency 'mockingbird-toolbox/MessageDigest-NSData'
+		ss.dependency 'MBToolbox/MessageDigest-NSString'
+		ss.dependency 'MBToolbox/MessageDigest-NSData'
 	end
 
 	#----------------------------------------------------------------
@@ -242,9 +242,9 @@ Pod::Spec.new do |s|
 	# specifies the MBModule class and related items
 	#
 	s.subspec 'Module' do |ss|
-		ss.dependency 'mockingbird-toolbox/Singleton'
-		ss.dependency 'mockingbird-toolbox/Indentation-NSString'
-		ss.dependency 'mockingbird-toolbox/ThreadLocalStorage'
+		ss.dependency 'MBToolbox/Singleton'
+		ss.dependency 'MBToolbox/Indentation-NSString'
+		ss.dependency 'MBToolbox/ThreadLocalStorage'
 		ss.source_files = 'Code/Module/*.{h,m}'
 		ss.public_header_files = 'Code/Module/*.h'
 	end
@@ -257,8 +257,8 @@ Pod::Spec.new do |s|
 	# specifies the MBNetworkIndicator singleton
 	#
 	s.subspec 'NetworkIndicator' do |ss|
-		ss.dependency 'mockingbird-toolbox/Events'
-		ss.dependency 'mockingbird-toolbox/Singleton'
+		ss.dependency 'MBToolbox/Events'
+		ss.dependency 'MBToolbox/Singleton'
 		ss.source_files = 'Code/Network/MBNetworkIndicator.{h,m}'
 		ss.public_header_files = 'Code/Network/MBNetworkIndicator.h'
 	end
@@ -267,8 +267,8 @@ Pod::Spec.new do |s|
 	# specifies the MBNetworkMonitor service
 	#
 	s.subspec 'NetworkMonitor' do |ss|
-		ss.dependency 'mockingbird-toolbox/Events'
-		ss.dependency 'mockingbird-toolbox/ServiceManager'
+		ss.dependency 'MBToolbox/Events'
+		ss.dependency 'MBToolbox/ServiceManager'
 		ss.framework = 'SystemConfiguration'
 		ss.framework = 'CoreTelephony'
 		ss.source_files = 'Code/Network/MBNetworkMonitor.{h,m}'
@@ -283,7 +283,7 @@ Pod::Spec.new do |s|
 	# specifies the MBOperationQueue class
 	#
 	s.subspec 'OperationQueue' do |ss|
-		ss.dependency 'mockingbird-toolbox/MBToolbox-NSError'
+		ss.dependency 'MBToolbox/MBToolbox-NSError'
 		ss.source_files = 'Code/Operations/MBOperationQueue.{h,m}'
 		ss.public_header_files = 'Code/Operations/MBOperationQueue.h'
 	end
@@ -293,8 +293,8 @@ Pod::Spec.new do |s|
 	# operations
 	#
 	s.subspec 'FilesystemOperations' do |ss|
-		ss.dependency 'mockingbird-toolbox/OperationQueue'
-		ss.dependency 'mockingbird-toolbox/Singleton'
+		ss.dependency 'MBToolbox/OperationQueue'
+		ss.dependency 'MBToolbox/Singleton'
 		ss.source_files = 'Code/Operations/MBFilesystemOperations.{h,m}'
 		ss.public_header_files = 'Code/Operations/MBFilesystemOperations.h'
 	end
@@ -307,8 +307,8 @@ Pod::Spec.new do |s|
 	# specifies the MBRegexCache singleton
 	#
 	s.subspec 'RegexCache' do |ss|
-		ss.dependency 'mockingbird-toolbox/ThreadsafeCache'
-		ss.dependency 'mockingbird-toolbox/Singleton'
+		ss.dependency 'MBToolbox/ThreadsafeCache'
+		ss.dependency 'MBToolbox/Singleton'
 		ss.source_files = 'Code/Regex/MBRegexCache.{h,m}'
 		ss.public_header_files = 'Code/Regex/MBRegexCache.h'
 	end
@@ -319,7 +319,7 @@ Pod::Spec.new do |s|
 	# for efficiency, these implementations use the MBRegexCache
 	#
 	s.subspec 'Regex-NSString' do |ss|
-		ss.dependency 'mockingbird-toolbox/RegexCache'
+		ss.dependency 'MBToolbox/RegexCache'
 		ss.source_files = 'Code/Regex/NSString+MBRegex.{h,m}'
 		ss.public_header_files = 'Code/Regex/NSString+MBRegex.h'
 	end
@@ -333,7 +333,7 @@ Pod::Spec.new do |s|
 	# protocol
 	#
 	s.subspec 'ServiceManager' do |ss|
-		ss.dependency 'mockingbird-toolbox/Singleton'
+		ss.dependency 'MBToolbox/Singleton'
 		ss.source_files = 'Code/Services/*.{h,m}'
 		ss.public_header_files = 'Code/Services/*.h'
 	end
@@ -349,7 +349,7 @@ Pod::Spec.new do |s|
 	# dispatch_once().
 	# 
 	s.subspec 'Singleton' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Singleton/MBSingleton.h'
 		ss.public_header_files = 'Code/Singleton/MBSingleton.h'
 	end
@@ -363,7 +363,7 @@ Pod::Spec.new do |s|
 	# functions, and the MBStringify() preprocessor macro
 	#
 	s.subspec 'StringFunctions' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Strings/MBStringFunctions.h'
 		ss.public_header_files = 'Code/Strings/MBStringFunctions.h'
 	end
@@ -374,7 +374,7 @@ Pod::Spec.new do |s|
 	# prefixes
 	#
 	s.subspec 'Indentation-NSString' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Strings/NSString+MBIndentation.{h,m}'
 		ss.public_header_files = 'Code/Strings/NSString+MBIndentation.h'
 	end
@@ -384,7 +384,7 @@ Pod::Spec.new do |s|
 	# methods
 	#
 	s.subspec 'StringSizing-UIFont' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Strings/UIFont+MBStringSizing.{h,m}'
 		ss.public_header_files = 'Code/Strings/UIFont+MBStringSizing.h'
 	end
@@ -397,7 +397,7 @@ Pod::Spec.new do |s|
 	# specifies the MBThreadLocalStorage class
 	#
 	s.subspec 'ThreadLocalStorage' do |ss|
-		ss.dependency 'mockingbird-toolbox/Common'
+		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Threads/MBThreadLocalStorage.{h,m}'
 		ss.public_header_files = 'Code/Threads/MBThreadLocalStorage.h'
 	end
@@ -440,9 +440,9 @@ Pod::Spec.new do |s|
 	# specifies the common Mockingbird Toolbox headers
 	#
 	s.subspec 'Common' do |ss|
-		ss.dependency 'mockingbird-toolbox/Assert'
-		ss.dependency 'mockingbird-toolbox/Debug'
-		ss.dependency 'mockingbird-toolbox/Runtime'
+		ss.dependency 'MBToolbox/Assert'
+		ss.dependency 'MBToolbox/Debug'
+		ss.dependency 'MBToolbox/Runtime'
 		ss.source_files = 'Code/Mockingbird-Toolbox.h'
 		ss.public_header_files = 'Code/Mockingbird-Toolbox.h'
 	end

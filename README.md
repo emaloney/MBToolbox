@@ -102,11 +102,13 @@ Once you've run the `pod install` command, you will be able to use the code you'
 
 #### Importing Headers
 
-Note that with CocoaPods, you will need to reference Mockingbird Toolbox headers with “library header” import notation, eg.:
+When you integrate Mockingbird Toolbox using CocoaPods, you should reference header files using the “library header” import notation, eg.:
 
 ```objc
 	#import <MBToolbox/MBDebug.h>
 ```
+
+In the future, we may issue binary releases of Mockingbird Toolbox as iOS frameworks; using the notation above will allow you to seamlessly transition to using a framework.
 
 If you are not using CocoaPods and are instead copying the Mockingbird Toolbox source into your project directly, you will need to reference those headers with “user header” notation:
 

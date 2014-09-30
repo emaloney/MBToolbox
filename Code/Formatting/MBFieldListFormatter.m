@@ -7,6 +7,7 @@
 //
 
 #import "MBFieldListFormatter.h"
+#import "MBAssert.h"
 
 #define DEBUG_LOCAL     0
 

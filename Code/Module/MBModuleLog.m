@@ -6,10 +6,13 @@
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 #import "MBModuleLog.h"
 #import "MBModule.h"
 #import "NSString+MBIndentation.h"
 #import "MBThreadLocalStorage.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL     0
 

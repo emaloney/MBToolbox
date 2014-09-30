@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
-#import "Mockingbird-Toolbox.h"
+#import <Foundation/Foundation.h>
 
 /******************************************************************************/
 #pragma mark -

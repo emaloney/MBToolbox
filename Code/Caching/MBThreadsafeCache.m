@@ -6,7 +6,10 @@
 //  Copyright (c) 2010 Gilt Groupe. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 #import "MBThreadsafeCache.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL     0
 

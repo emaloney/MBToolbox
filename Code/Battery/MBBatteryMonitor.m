@@ -6,8 +6,11 @@
 //  Copyright (c) 2011 Gilt Groupe. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 #import "MBBatteryMonitor.h"
 #import "MBEvents.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL		0
 

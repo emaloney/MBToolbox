@@ -6,10 +6,13 @@
 //  Copyright (c) 2011 Gilt Groupe. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 #import "MBFilesystemCache.h"
 #import "MBCacheOperations.h"
 #import "NSString+MBMessageDigest.h"
 #import "MBThreadsafeCache+Subclassing.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL     0
 

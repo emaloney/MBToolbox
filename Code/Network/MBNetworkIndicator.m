@@ -6,11 +6,13 @@
 //  Copyright (c) 2012 Gilt Groupe. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <libkern/OSAtomic.h>
 
 #import "MBNetworkIndicator.h"
 #import "MBEvents.h"
 #import "MBSingleton.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL     0
 

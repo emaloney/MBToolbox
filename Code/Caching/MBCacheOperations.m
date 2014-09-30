@@ -7,6 +7,7 @@
 //
 
 #import "MBCacheOperations.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL     0
 #define DEBUG_VERBOSE   0

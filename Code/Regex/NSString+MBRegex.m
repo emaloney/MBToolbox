@@ -8,6 +8,7 @@
 
 #import "NSString+MBRegex.h"
 #import "MBRegexCache.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL     0
 

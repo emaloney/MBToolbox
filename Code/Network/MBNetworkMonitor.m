@@ -20,6 +20,7 @@
 #import "MBNetworkMonitor.h"
 #import "MBServiceManager.h"
 #import "MBEvents.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL		0
 

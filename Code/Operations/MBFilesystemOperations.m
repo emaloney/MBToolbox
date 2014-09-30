@@ -8,6 +8,7 @@
 
 #import "MBFilesystemOperations.h"
 #import "NSError+MBToolbox.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL     0
 

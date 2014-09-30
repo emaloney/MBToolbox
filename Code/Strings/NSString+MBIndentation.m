@@ -7,6 +7,7 @@
 //
 
 #import "NSString+MBIndentation.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL     0
 

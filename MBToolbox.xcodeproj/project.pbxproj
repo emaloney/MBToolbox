@@ -163,7 +163,7 @@
 		3B0F8CC0198811BD009A2126 /* MBThreadLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBThreadLocalStorage.h; sourceTree = "<group>"; };
 		3B0F8CC1198811BD009A2126 /* MBThreadLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBThreadLocalStorage.m; sourceTree = "<group>"; };
 		3B2EF74B19880F31009AD107 /* libMBToolbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBToolbox.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B3831B019882B93006A771F /* Mockingbird-Toolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mockingbird-Toolbox.h"; sourceTree = "<group>"; };
+		3B3831B019882B93006A771F /* MBToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBToolbox.h; sourceTree = "<group>"; };
 		3B47588819C0DF8000619FF1 /* UIFont+MBStringSizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MBStringSizing.h"; sourceTree = "<group>"; };
 		3B47588919C0DF8000619FF1 /* UIFont+MBStringSizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MBStringSizing.m"; sourceTree = "<group>"; };
 		3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBStringFunctions.m"; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		3B0F8C71198811BD009A2126 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				3B3831B019882B93006A771F /* Mockingbird-Toolbox.h */,
+				3B3831B019882B93006A771F /* MBToolbox.h */,
 				3B0F8C72198811BD009A2126 /* Battery */,
 				3B0F8C75198811BD009A2126 /* Caching */,
 				3BF2D490199C915B002F0639 /* Common */,

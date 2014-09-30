@@ -7,6 +7,7 @@
 //
 
 #import "MBRegexCache.h"
+#import "MBDebug.h"
 
 #define DEBUG_LOCAL                 0
 #define DEBUG_DISABLE_CACHING       0

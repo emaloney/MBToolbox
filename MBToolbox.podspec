@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBToolbox"
-	s.version               = "1.0.2"
+	s.version               = "1.0.3"
 	s.summary               = "Mockingbird Toolbox"
 	s.description			= "General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
 	s.homepage				= "https://github.com/gilt/MBToolbox"
@@ -169,8 +169,8 @@ Pod::Spec.new do |s|
 	#
 	s.subspec 'MBToolbox-UIColor' do |ss|
 		ss.dependency 'MBToolbox/Common'
-		ss.source_files = 'Code/Strings/UIColor+MBToolbox.{h,m}'
-		ss.public_header_files = 'Code/Strings/UIColor+MBToolbox.h'
+		ss.source_files = 'Code/Graphics/UIColor+MBToolbox.{h,m}'
+		ss.public_header_files = 'Code/Graphics/UIColor+MBToolbox.h'
 	end
 
 	#
@@ -178,8 +178,8 @@ Pod::Spec.new do |s|
 	#
 	s.subspec 'ImageScaling-UIImage' do |ss|
 		ss.dependency 'MBToolbox/Common'
-		ss.source_files = 'Code/Strings/UIImage+MBImageScaling.{h,m}'
-		ss.public_header_files = 'Code/Strings/UIImage+MBImageScaling.h'
+		ss.source_files = 'Code/Graphics/UIImage+MBImageScaling.{h,m}'
+		ss.public_header_files = 'Code/Graphics/UIImage+MBImageScaling.h'
 	end
 
 	#
@@ -188,8 +188,8 @@ Pod::Spec.new do |s|
 	#
 	s.subspec 'SnapshotImage-UIView' do |ss|
 		ss.dependency 'MBToolbox/Common'
-		ss.source_files = 'Code/Strings/UIView+MBSnapshotImage.{h,m}'
-		ss.public_header_files = 'Code/Strings/UIView+MBSnapshotImage.h'
+		ss.source_files = 'Code/Graphics/UIView+MBSnapshotImage.{h,m}'
+		ss.public_header_files = 'Code/Graphics/UIView+MBSnapshotImage.h'
 	end
 
 	#----------------------------------------------------------------

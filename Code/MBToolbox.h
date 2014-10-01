@@ -12,6 +12,11 @@
 
 #else
 
+//
+// NOTE: This header file is indended for external use. It should *not* be
+//       included from within code in the Mockingbird Toolbox itself.
+//
+
 // import the public headers
 #import <MBToolbox/MBBatteryMonitor.h>
 #import <MBToolbox/MBCacheOperations.h>

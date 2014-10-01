@@ -41,11 +41,17 @@ application.</Abstract>
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/MBService/configureService:</TokenIdentifier>
 			<Abstract type="html">Configures the service according to the keys and values contained in the
-specified dictionary. Acceptable configuration values are service-specific.</Abstract>
+specified dictionary.</Abstract>
 			<DeclaredIn>MBService.h</DeclaredIn>
 			
 			<Declaration>- (void)configureService:(NSDictionary *)params</Declaration>
-			
+			<Parameters>
+				<Parameter>
+					<Name>params</Name>
+					<Abstract type="html">The configuration parameters for the service. Acceptable
+            configuration values are service-specific.</Abstract>
+				</Parameter>
+			</Parameters>
 			
 			<Anchor>//api/name/configureService:</Anchor>
             <NodeRef refid="43"/>

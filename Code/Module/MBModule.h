@@ -45,6 +45,17 @@
  */
 + (NSArray*) environmentLoaderClasses;
 
+/*!
+ This optional method is implemented by modules that need a specific
+ environment file included whenever a new environment is loaded. If the
+ method is not implemented or if it returns `nil`, no attempt will
+ be made to load an environment file for the module.
+ 
+ @return    The name of the environment file to load. Note that this is
+            a filename and not a full pathname.
+ */
++ (NSString*) moduleEnvironmentFilename;
+
 @end
 
 /******************************************************************************/

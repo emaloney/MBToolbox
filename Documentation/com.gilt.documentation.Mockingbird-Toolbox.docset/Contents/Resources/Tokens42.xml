@@ -40,6 +40,22 @@ environment loaders will be used to populate the current environment.</Abstract>
             <NodeRef refid="42"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModule/moduleEnvironmentFilename</TokenIdentifier>
+			<Abstract type="html">This optional method is implemented by modules that need a specific
+environment file included whenever a new environment is loaded. If the
+method is not implemented or if it returns nil, no attempt will
+be made to load an environment file for the module.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)moduleEnvironmentFilename</Declaration>
+			
+			<ReturnValue><Abstract type="html">The name of the environment file to load. Note that this is
+            a filename and not a full pathname.</Abstract></ReturnValue>
+			<Anchor>//api/name/moduleEnvironmentFilename</Anchor>
+            <NodeRef refid="42"/>
+		</Token>
+		
         
 	</File>
 </Tokens>

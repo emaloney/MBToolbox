@@ -70,16 +70,4 @@
  */
 @property(nonatomic, readonly) MBModuleLog* log;
 
-/*!
- Modules that participate in the environment loading process may override this
- method to indicate the environment loaders it uses. When the module is
- activated, its associated environment loaders will be used to populate the
- current environment.
- 
- @return    The environment loader classes used by the module. The default
-            implementation returns `nil` to indicate that the module
-            has no associated environment loaders.
- */
-+ (NSArray*) environmentLoaderClasses;
-
 @end

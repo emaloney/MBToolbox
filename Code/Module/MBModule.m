@@ -50,9 +50,4 @@ MBImplementSingleton();
     return _log;
 }
 
-+ (NSArray*) environmentLoaderClasses
-{
-    return nil;
-}
-
 @end

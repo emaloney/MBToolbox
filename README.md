@@ -8,7 +8,7 @@ The Toolbox is the lowest-level module in the Mockingbird Library open-source pr
 
 **Master branch status:**
 
-[![Build Status](https://travis-ci.org/gilt/MBToolbox.svg?branch=master)](https://travis-ci.org/gilt/MBToolbox)
+[![Build Status](https://travis-ci.org/emaloney/MBToolbox.svg?branch=master)](https://travis-ci.org/emaloney/MBToolbox)
 
 ## Highlights
 
@@ -68,7 +68,7 @@ The `MBBitmapPixelPlane` class represents a plane of pixels that can be accessed
 
 That’s just a quick summary.
 
-For further details, start with [the Mockingbird Toolbox API documentation](https://rawgit.com/gilt/MBToolbox/master/Documentation/html/index.html).
+For further details, start with [the Mockingbird Toolbox API documentation](https://rawgit.com/emaloney/MBToolbox/master/Documentation/html/index.html).
 
 ## Integrating with Mockingbird Toolbox
 
@@ -196,7 +196,7 @@ Among the subspecs provided are:
 
 ##### ...and more
 
-Additional subspecs are declared and documented in [the podspec](https://github.com/gilt/MBToolbox/blob/master/MBToolbox.podspec).
+Additional subspecs are declared and documented in [the podspec](https://github.com/emaloney/MBToolbox/blob/master/MBToolbox.podspec).
 
 ## About Mockingbird Toolbox
 

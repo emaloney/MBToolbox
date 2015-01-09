@@ -26,6 +26,20 @@
 @protocol MBModule <MBInstanceVendor>
 
 /*!
+ Returns the name of the module.
+ 
+ @return    The module name.
+ */
++ (NSString*) moduleName;
+
+/*
+ Returns an `NSBundle` instance representing the resource bundle of the module.
+ 
+ @return    The module's resource bundle, or `nil` if one doesn't exist.
+ */
++ (NSBundle*) resourceBundle;
+
+/*!
  Returns the `MBModuleLog` associated with the receiving module.
  
  @return    The module log.

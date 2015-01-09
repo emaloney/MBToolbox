@@ -37,7 +37,27 @@ MBImplementSingleton();
 }
 
 /******************************************************************************/
-#pragma mark Implementation
+#pragma mark Getting module information
+/******************************************************************************/
+
++ (NSString*) moduleName
+{
+    NSString* name = [self description];
+    if ([name hasSuffix:@"Module"]) {
+        return [name substringToIndex:name.length - 6];
+    }
+    return name;
+}
+
++ (NSBundle*) resourceBundle
+{
+    NSBundle* containingBundle = [NSBundle bundleForClass:self];
+    NSString* moduleBundlePath = [containingBundle pathForResource:[self moduleName] ofType:@"bundle"];
+    return [NSBundle bundleWithPath:moduleBundlePath];
+}
+
+/******************************************************************************/
+#pragma mark Accessing the module log
 /******************************************************************************/
 
 + (MBModuleLog*) log

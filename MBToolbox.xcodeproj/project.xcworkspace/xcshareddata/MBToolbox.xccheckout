@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>37FA968C093116720594F4C60DD8AD8ABC99C21A</key>
-		<string>https://github.com/gilt/mockingbird-toolbox.git</string>
+		<string>https://github.com/emaloney/MBToolbox.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MBToolbox.xcodeproj/project.xcworkspace</string>
+	<string>MBToolbox.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>37FA968C093116720594F4C60DD8AD8ABC99C21A</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/gilt/mockingbird-toolbox.git</string>
+	<string>https://github.com/emaloney/MBToolbox.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>37FA968C093116720594F4C60DD8AD8ABC99C21A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>mockingbird-toolbox</string>
+			<string>MBToolbox</string>
 		</dict>
 	</array>
 </dict>

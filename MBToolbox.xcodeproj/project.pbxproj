@@ -529,8 +529,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = BuildControl/lib/buildUniversalBinary.sh;
-			showEnvVarsInLog = 0;
+			shellScript = $PROJECT_DIR/BuildControl/lib/buildUniversalBinary.sh;
 		};
 		3B762206199A8D6600998306 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

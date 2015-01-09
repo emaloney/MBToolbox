@@ -10,10 +10,10 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBToolbox"
-	s.version               = "1.0.5"
+	s.version               = "1.0.6"
 	s.summary               = "Mockingbird Toolbox"
 	s.description			= "General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
-	s.homepage				= "https://github.com/gilt/MBToolbox"
+	s.homepage				= "https://github.com/emaloney/MBToolbox"
 	s.license               = { :type => 'MIT', :file => 'LICENSE' }
 	s.author                = { "Evan Coyne Maloney" => "emaloney@gilt.com" }
 	s.platform              = :ios, '8.0'
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 	s.requires_arc          = true
 
 	s.source = {
-		:git => 'https://github.com/gilt/MBToolbox.git',
+		:git => 'https://github.com/emaloney/MBToolbox.git',
 		:tag => s.version.to_s
 	}
 	

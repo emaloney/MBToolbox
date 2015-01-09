@@ -136,7 +136,7 @@ There's also [a `UIFont` class extension](Categories/UIFont+MBStringSizing.html)
 
 There's even more to Mockingbird Toolbox, but we want to leave you with at least a few treats to find on your own!
 
-Discover more in the API documentation below, and also in the freely-available [Mockingbird Toolbox source code](https://github.com/gilt/MBToolbox/).
+Discover more in the API documentation below, and also in the freely-available [Mockingbird Toolbox source code](https://github.com/emaloney/MBToolbox/).
 
 
 ## API Reference

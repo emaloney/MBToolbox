@@ -87,12 +87,14 @@ validateArgValue module "$MOCKINGBIRD_MODULE"
 DOCSET_FEEDNAME="Mockingbird $MOCKINGBIRD_MODULE"
 DOCSET_BUNDLE_ID="${DOCSET_PUBLISHER_ID}.Mockingbird-${MOCKINGBIRD_MODULE}"
 APPLEDOC_OUTPUT_DIR="${TARGET_TEMP_DIR}/appledoc-generated"
+INDEX_OUTPUT_FILE="${TARGET_TEMP_DIR}/README-rewritten.md"
 HTML_OUTPUT_DIR="${APPLEDOC_OUTPUT_DIR}/html"
 HTML_INSTALL_DIR="${PROJECT_DIR}/Documentation/html"
 DOCSET_OUTPUT_DIR="${APPLEDOC_OUTPUT_DIR}/docset"
 DOCSET_FILENAME="${DOCSET_BUNDLE_ID}.docset"
 DOCSET_INSTALL_DIR="${PROJECT_DIR}/Documentation/${DOCSET_FILENAME}"
 XCODE_DOCSET_INSTALL_DIR="${HOME}/Library/Developer/Shared/Documentation/DocSets/${DOCSET_FILENAME}"
+ONLINE_ROOT_URL="https://rawgit.com/emaloney/${PROJECT_NAME}/master/Documentation/html/"
 
 # verify that we can find the code
 CODE_DIR="${PROJECT_DIR}/Code"
@@ -100,6 +102,9 @@ if [[ -z "$CODE_DIR" || ! -d "$CODE_DIR" ]]; then
 	exitWithError "Couldn't find source directory: $CODE_DIR";
 fi
 
+# rewrite the links in the Code/README.md file to work properly in the docset
+cat "${PROJECT_DIR}/Code/README.md" | sed sq${ONLINE_ROOT_URL}qqg > "${INDEX_OUTPUT_FILE}"
+	
 # create the documentation
 find "$CODE_DIR" -name "*.h" ! -path "*/Private/*" -print0 | xargs -0 \
 $APPLEDOC_PATH \
@@ -119,7 +124,7 @@ $APPLEDOC_PATH \
 	--no-repeat-first-par \
 	--no-merge-categories \
 	--logformat xcode \
-	--index-desc "${PROJECT_DIR}/BuildControl/docs/api-doc-overview.md" > /dev/null
+	--index-desc "${INDEX_OUTPUT_FILE}" > /dev/null
 
 if [[ $? != 0 ]]; then
 	echo "warning: HTML documentation generation finished with errors or warnings."

@@ -215,6 +215,6 @@ In recent years, Mockingbird Library has been developed and maintained by Evan C
 
 ### Copyright & License
 
-Mockingbird Library and Mockingbird Toolbox © Copyright 2009-2014, Gilt Groupe.
+Mockingbird Library and Mockingbird Toolbox © Copyright 2009-2015, Gilt Groupe.
 
 Licensed under [the MIT license](LICENSE).

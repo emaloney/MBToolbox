@@ -138,7 +138,4 @@ There's also [a `UIFont` class extension](https://rawgit.com/emaloney/MBToolbox/
 
 There's even more to Mockingbird Toolbox, but we want to leave you with at least a few treats to find on your own!
 
-Discover more in the API documentation below, and also in the freely-available [Mockingbird Toolbox source code](https://rawgit.com/emaloney/MBToolbox/master/Documentation/html/https://github.com/emaloney/MBToolbox/).
-
-
-## API Reference
+Discover more in the API documentation below, and also in the freely-available [Mockingbird Toolbox source code](https://github.com/emaloney/MBToolbox/).

@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B7621FE199A8A8E00998306"
-               BuildableName = "MBToolboxUniversal"
-               BlueprintName = "MBToolboxUniversal"
+               BlueprintIdentifier = "3B58E9A61A65B7D300FDCB66"
+               BuildableName = "MBToolbox.framework"
+               BlueprintName = "MBToolbox"
+               ReferencedContainer = "container:MBToolbox.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B58E9B01A65B7D300FDCB66"
+               BuildableName = "MBToolboxTests.xctest"
+               BlueprintName = "MBToolboxTests"
                ReferencedContainer = "container:MBToolbox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,11 +42,30 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B58E9B01A65B7D300FDCB66"
+               BuildableName = "MBToolboxTests.xctest"
+               BlueprintName = "MBToolboxTests"
+               ReferencedContainer = "container:MBToolbox.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3B58E9A61A65B7D300FDCB66"
+            BuildableName = "MBToolbox.framework"
+            BlueprintName = "MBToolbox"
+            ReferencedContainer = "container:MBToolbox.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
-      selectedDebuggerIdentifier = ""
-      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
@@ -42,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B7621FE199A8A8E00998306"
-            BuildableName = "MBToolboxUniversal"
-            BlueprintName = "MBToolboxUniversal"
+            BlueprintIdentifier = "3B58E9A61A65B7D300FDCB66"
+            BuildableName = "MBToolbox.framework"
+            BlueprintName = "MBToolbox"
             ReferencedContainer = "container:MBToolbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,15 +93,15 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B7621FE199A8A8E00998306"
-            BuildableName = "MBToolboxUniversal"
-            BlueprintName = "MBToolboxUniversal"
+            BlueprintIdentifier = "3B58E9A61A65B7D300FDCB66"
+            BuildableName = "MBToolbox.framework"
+            BlueprintName = "MBToolbox"
             ReferencedContainer = "container:MBToolbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Release">
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"

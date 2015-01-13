@@ -12,6 +12,14 @@
 
 #else
 
+#import <Foundation/Foundation.h>
+
+//! Project version number for MBToolbox.
+FOUNDATION_EXPORT double MBToolboxVersionNumber;
+
+//! Project version string for MBToolbox.
+FOUNDATION_EXPORT const unsigned char MBToolboxVersionString[];
+
 //
 // NOTE: This header file is indended for external use. It should *not* be
 //       included from within code in the Mockingbird Toolbox itself.

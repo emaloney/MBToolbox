@@ -7,101 +7,100 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		3B7621FE199A8A8E00998306 /* MBToolboxUniversal */ = {
+		3B968EE4199008E10061DA66 /* MBToolboxDocumentation */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 3B762201199A8A8E00998306 /* Build configuration list for PBXAggregateTarget "MBToolboxUniversal" */;
-			buildPhases = (
-				3B762204199A8AA900998306 /* Run Script */,
-			);
-			dependencies = (
-			);
-			name = MBToolboxUniversal;
-			productName = MBToolboxUniversal;
-		};
-		3B968EE4199008E10061DA66 /* MBToolbox-Docs */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 3B968EE7199008E10061DA66 /* Build configuration list for PBXAggregateTarget "MBToolbox-Docs" */;
+			buildConfigurationList = 3B968EE7199008E10061DA66 /* Build configuration list for PBXAggregateTarget "MBToolboxDocumentation" */;
 			buildPhases = (
 				3B968EEC199008FB0061DA66 /* ShellScript */,
 			);
 			dependencies = (
-				3B968EEE199009020061DA66 /* PBXTargetDependency */,
 			);
-			name = "MBToolbox-Docs";
+			name = MBToolboxDocumentation;
 			productName = "MBToolbox-Docs";
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3B0F8CC2198811BD009A2126 /* MBBatteryMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C74198811BD009A2126 /* MBBatteryMonitor.m */; };
-		3B0F8CC3198811BD009A2126 /* MBCacheOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C77198811BD009A2126 /* MBCacheOperations.m */; };
-		3B0F8CC4198811BD009A2126 /* MBFilesystemCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C7A198811BD009A2126 /* MBFilesystemCache.m */; };
-		3B0F8CC5198811BD009A2126 /* MBThreadsafeCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C7D198811BD009A2126 /* MBThreadsafeCache.m */; };
-		3B0F8CC6198811BD009A2126 /* NSError+MBToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C85198811BD009A2126 /* NSError+MBToolbox.m */; };
-		3B0F8CC7198811BD009A2126 /* MBEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C88198811BD009A2126 /* MBEvents.m */; };
-		3B0F8CC8198811BD009A2126 /* MBFieldListFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C8B198811BD009A2126 /* MBFieldListFormatter.m */; };
-		3B0F8CC9198811BD009A2126 /* MBFormattedDescriptionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C8D198811BD009A2126 /* MBFormattedDescriptionObject.m */; };
-		3B0F8CCA198811BD009A2126 /* MBBitmapPixelPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C90198811BD009A2126 /* MBBitmapPixelPlane.m */; };
-		3B0F8CCB198811BD009A2126 /* MBRoundedRectTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C93198811BD009A2126 /* MBRoundedRectTools.m */; };
-		3B0F8CCC198811BD009A2126 /* UIColor+MBToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C95198811BD009A2126 /* UIColor+MBToolbox.m */; };
-		3B0F8CCD198811BD009A2126 /* UIImage+MBImageScaling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C97198811BD009A2126 /* UIImage+MBImageScaling.m */; };
-		3B0F8CCE198811BD009A2126 /* UIView+MBSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C99198811BD009A2126 /* UIView+MBSnapshotImage.m */; };
-		3B0F8CCF198811BD009A2126 /* MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C9C198811BD009A2126 /* MBMessageDigest.m */; };
-		3B0F8CD0198811BD009A2126 /* NSData+MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C9E198811BD009A2126 /* NSData+MBMessageDigest.m */; };
-		3B0F8CD1198811BD009A2126 /* NSString+MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CA0198811BD009A2126 /* NSString+MBMessageDigest.m */; };
-		3B0F8CD4198811BD009A2126 /* MBNetworkIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CA8198811BD009A2126 /* MBNetworkIndicator.m */; };
-		3B0F8CD5198811BD009A2126 /* MBNetworkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CAA198811BD009A2126 /* MBNetworkMonitor.m */; };
-		3B0F8CD6198811BD009A2126 /* MBFilesystemOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CAD198811BD009A2126 /* MBFilesystemOperations.m */; };
-		3B0F8CD7198811BD009A2126 /* MBOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CAF198811BD009A2126 /* MBOperationQueue.m */; };
-		3B0F8CD8198811BD009A2126 /* MBRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CB2198811BD009A2126 /* MBRegexCache.m */; };
-		3B0F8CD9198811BD009A2126 /* NSString+MBRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CB4198811BD009A2126 /* NSString+MBRegex.m */; };
-		3B0F8CDA198811BD009A2126 /* MBServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CB8198811BD009A2126 /* MBServiceManager.m */; };
-		3B0F8CDB198811BD009A2126 /* NSString+MBIndentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CBE198811BD009A2126 /* NSString+MBIndentation.m */; };
-		3B47588A19C0DF8000619FF1 /* UIFont+MBStringSizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B47588919C0DF8000619FF1 /* UIFont+MBStringSizing.m */; };
-		3B58E9821A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B58E97F1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m */; };
-		3B58E9831A65911E00FDCB66 /* MBThreadLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B58E9811A65911E00FDCB66 /* MBThreadLocalStorage.m */; };
-		3B6ED5341995C87A004652EB /* Test-MBStringFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */; };
-		3B968ED5198FF2380061DA66 /* libMBToolbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2EF74B19880F31009AD107 /* libMBToolbox.a */; };
-		3B968EE2198FF28D0061DA66 /* Test-MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */; };
-		3B968EE3198FF28D0061DA66 /* Test-NSString+MBIndentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EE0198FF28D0061DA66 /* Test-NSString+MBIndentation.m */; };
-		3BAC5A5E19894520003005AC /* MBModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC5A5B19894520003005AC /* MBModule.m */; };
-		3BAC5A5F19894520003005AC /* MBModuleLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC5A5D19894520003005AC /* MBModuleLog.m */; };
+		3B58E9B21A65B7D300FDCB66 /* MBToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B58E9A71A65B7D300FDCB66 /* MBToolbox.framework */; };
+		3B58E9C01A65B90F00FDCB66 /* Test-MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */; };
+		3B58E9C11A65B90F00FDCB66 /* Test-MBStringFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */; };
+		3B58E9C21A65B90F00FDCB66 /* Test-NSString+MBIndentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EE0198FF28D0061DA66 /* Test-NSString+MBIndentation.m */; };
+		3B58E9C31A65BB0B00FDCB66 /* MBBatteryMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C74198811BD009A2126 /* MBBatteryMonitor.m */; };
+		3B58E9C41A65BB0B00FDCB66 /* MBCacheOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C77198811BD009A2126 /* MBCacheOperations.m */; };
+		3B58E9C51A65BB0B00FDCB66 /* MBFilesystemCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C7A198811BD009A2126 /* MBFilesystemCache.m */; };
+		3B58E9C61A65BB0B00FDCB66 /* MBThreadsafeCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C7D198811BD009A2126 /* MBThreadsafeCache.m */; };
+		3B58E9C71A65BB0C00FDCB66 /* MBConcurrentReadWriteCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B58E97F1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m */; };
+		3B58E9C81A65BB0C00FDCB66 /* MBThreadLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B58E9811A65911E00FDCB66 /* MBThreadLocalStorage.m */; };
+		3B58E9C91A65BB0C00FDCB66 /* NSError+MBToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C85198811BD009A2126 /* NSError+MBToolbox.m */; };
+		3B58E9CA1A65BB0C00FDCB66 /* MBEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C88198811BD009A2126 /* MBEvents.m */; };
+		3B58E9CB1A65BB0C00FDCB66 /* MBFieldListFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C8B198811BD009A2126 /* MBFieldListFormatter.m */; };
+		3B58E9CC1A65BB0C00FDCB66 /* MBFormattedDescriptionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C8D198811BD009A2126 /* MBFormattedDescriptionObject.m */; };
+		3B58E9CD1A65BB0C00FDCB66 /* MBBitmapPixelPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C90198811BD009A2126 /* MBBitmapPixelPlane.m */; };
+		3B58E9CE1A65BB0C00FDCB66 /* MBRoundedRectTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C93198811BD009A2126 /* MBRoundedRectTools.m */; };
+		3B58E9CF1A65BB0C00FDCB66 /* UIColor+MBToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C95198811BD009A2126 /* UIColor+MBToolbox.m */; };
+		3B58E9D01A65BB0C00FDCB66 /* UIImage+MBImageScaling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C97198811BD009A2126 /* UIImage+MBImageScaling.m */; };
+		3B58E9D11A65BB0C00FDCB66 /* UIView+MBSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C99198811BD009A2126 /* UIView+MBSnapshotImage.m */; };
+		3B58E9D21A65BB0C00FDCB66 /* MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C9C198811BD009A2126 /* MBMessageDigest.m */; };
+		3B58E9D31A65BB0C00FDCB66 /* NSData+MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C9E198811BD009A2126 /* NSData+MBMessageDigest.m */; };
+		3B58E9D41A65BB0C00FDCB66 /* NSString+MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CA0198811BD009A2126 /* NSString+MBMessageDigest.m */; };
+		3B58E9D51A65BB0C00FDCB66 /* MBModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC5A5B19894520003005AC /* MBModule.m */; };
+		3B58E9D61A65BB0C00FDCB66 /* MBModuleLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC5A5D19894520003005AC /* MBModuleLog.m */; };
+		3B58E9D71A65BB0C00FDCB66 /* MBNetworkIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CA8198811BD009A2126 /* MBNetworkIndicator.m */; };
+		3B58E9D81A65BB0C00FDCB66 /* MBNetworkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CAA198811BD009A2126 /* MBNetworkMonitor.m */; };
+		3B58E9D91A65BB0C00FDCB66 /* MBFilesystemOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CAD198811BD009A2126 /* MBFilesystemOperations.m */; };
+		3B58E9DA1A65BB0C00FDCB66 /* MBOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CAF198811BD009A2126 /* MBOperationQueue.m */; };
+		3B58E9DB1A65BB0C00FDCB66 /* MBRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CB2198811BD009A2126 /* MBRegexCache.m */; };
+		3B58E9DC1A65BB0C00FDCB66 /* NSString+MBRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CB4198811BD009A2126 /* NSString+MBRegex.m */; };
+		3B58E9DD1A65BB0C00FDCB66 /* MBServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CB8198811BD009A2126 /* MBServiceManager.m */; };
+		3B58E9DE1A65BB0C00FDCB66 /* NSString+MBIndentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CBE198811BD009A2126 /* NSString+MBIndentation.m */; };
+		3B58E9DF1A65BB0C00FDCB66 /* UIFont+MBStringSizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B47588919C0DF8000619FF1 /* UIFont+MBStringSizing.m */; };
+		3B58E9E01A65BB2900FDCB66 /* MBToolbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3831B019882B93006A771F /* MBToolbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9E11A65BB5700FDCB66 /* MBBatteryMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C73198811BD009A2126 /* MBBatteryMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9E21A65BB5700FDCB66 /* MBCacheOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C76198811BD009A2126 /* MBCacheOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9E31A65BB5700FDCB66 /* MBFilesystemCache+Subclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C78198811BD009A2126 /* MBFilesystemCache+Subclassing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9E41A65BB5700FDCB66 /* MBFilesystemCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C79198811BD009A2126 /* MBFilesystemCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9E51A65BB5700FDCB66 /* MBThreadsafeCache+Subclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C7B198811BD009A2126 /* MBThreadsafeCache+Subclassing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9E61A65BB5700FDCB66 /* MBThreadsafeCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C7C198811BD009A2126 /* MBThreadsafeCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9E71A65BB5700FDCB66 /* MBAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF2D491199C915B002F0639 /* MBAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9E81A65BB5700FDCB66 /* MBDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF2D492199C915B002F0639 /* MBDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9E91A65BB5700FDCB66 /* MBRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF2D493199C915B002F0639 /* MBRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9EA1A65BB5700FDCB66 /* MBConcurrentReadWriteCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B58E97E1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9EB1A65BB5700FDCB66 /* MBThreadLocalStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B58E9801A65911E00FDCB66 /* MBThreadLocalStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9EC1A65BB5700FDCB66 /* NSError+MBToolbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C84198811BD009A2126 /* NSError+MBToolbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9ED1A65BB5700FDCB66 /* MBEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C87198811BD009A2126 /* MBEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9EE1A65BB5700FDCB66 /* MBFieldListFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C8A198811BD009A2126 /* MBFieldListFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9EF1A65BB5700FDCB66 /* MBFormattedDescriptionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C8C198811BD009A2126 /* MBFormattedDescriptionObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9F01A65BB5700FDCB66 /* MBBitmapPixelPlane.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C8F198811BD009A2126 /* MBBitmapPixelPlane.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9F11A65BB5700FDCB66 /* MBColorTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C91198811BD009A2126 /* MBColorTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9F21A65BB5700FDCB66 /* MBRoundedRectTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C92198811BD009A2126 /* MBRoundedRectTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9F31A65BB5700FDCB66 /* UIColor+MBToolbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C94198811BD009A2126 /* UIColor+MBToolbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9F41A65BB5700FDCB66 /* UIImage+MBImageScaling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C96198811BD009A2126 /* UIImage+MBImageScaling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9F51A65BB5700FDCB66 /* UIView+MBSnapshotImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C98198811BD009A2126 /* UIView+MBSnapshotImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9F61A65BB5700FDCB66 /* MBMessageDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C9B198811BD009A2126 /* MBMessageDigest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9F71A65BB5700FDCB66 /* NSData+MBMessageDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C9D198811BD009A2126 /* NSData+MBMessageDigest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9F81A65BB5700FDCB66 /* NSString+MBMessageDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C9F198811BD009A2126 /* NSString+MBMessageDigest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9F91A65BB5700FDCB66 /* MBModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BAC5A5A19894520003005AC /* MBModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9FA1A65BB5700FDCB66 /* MBModuleLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BAC5A5C19894520003005AC /* MBModuleLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9FB1A65BB5700FDCB66 /* MBNetworkIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CA7198811BD009A2126 /* MBNetworkIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9FC1A65BB5700FDCB66 /* MBNetworkMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CA9198811BD009A2126 /* MBNetworkMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9FD1A65BB5700FDCB66 /* MBFilesystemOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CAC198811BD009A2126 /* MBFilesystemOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9FE1A65BB5700FDCB66 /* MBOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CAE198811BD009A2126 /* MBOperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58E9FF1A65BB5800FDCB66 /* MBRegexCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CB1198811BD009A2126 /* MBRegexCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58EA001A65BB5800FDCB66 /* NSString+MBRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CB3198811BD009A2126 /* NSString+MBRegex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58EA011A65BB5800FDCB66 /* MBService.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CB6198811BD009A2126 /* MBService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58EA021A65BB5800FDCB66 /* MBServiceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CB7198811BD009A2126 /* MBServiceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58EA031A65BB5800FDCB66 /* MBSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CBA198811BD009A2126 /* MBSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58EA041A65BB5800FDCB66 /* MBStringFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CBC198811BD009A2126 /* MBStringFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58EA051A65BB5800FDCB66 /* NSString+MBIndentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CBD198811BD009A2126 /* NSString+MBIndentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B58EA061A65BB5800FDCB66 /* UIFont+MBStringSizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B47588819C0DF8000619FF1 /* UIFont+MBStringSizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B968ED6198FF2380061DA66 /* PBXContainerItemProxy */ = {
+		3B58E9B31A65B7D300FDCB66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B2EF74319880F31009AD107 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3B2EF74A19880F31009AD107;
-			remoteInfo = MBToolbox;
-		};
-		3B968EDB198FF2390061DA66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B2EF74319880F31009AD107 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B2EF74A19880F31009AD107;
-			remoteInfo = MBToolbox;
-		};
-		3B968EE5199008E10061DA66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B2EF74319880F31009AD107 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B2EF74A19880F31009AD107;
-			remoteInfo = MBToolbox;
-		};
-		3B968EED199009020061DA66 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B2EF74319880F31009AD107 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B2EF74A19880F31009AD107;
-			remoteInfo = MBToolbox;
-		};
-		3BAB226E19908D38009E9F25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B2EF74319880F31009AD107 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B2EF74A19880F31009AD107;
+			remoteGlobalIDString = 3B58E9A61A65B7D300FDCB66;
 			remoteInfo = MBToolbox;
 		};
 /* End PBXContainerItemProxy section */
@@ -161,7 +160,6 @@
 		3B0F8CBC198811BD009A2126 /* MBStringFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBStringFunctions.h; sourceTree = "<group>"; };
 		3B0F8CBD198811BD009A2126 /* NSString+MBIndentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MBIndentation.h"; sourceTree = "<group>"; };
 		3B0F8CBE198811BD009A2126 /* NSString+MBIndentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MBIndentation.m"; sourceTree = "<group>"; };
-		3B2EF74B19880F31009AD107 /* libMBToolbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBToolbox.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3831B019882B93006A771F /* MBToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBToolbox.h; sourceTree = "<group>"; };
 		3B47588819C0DF8000619FF1 /* UIFont+MBStringSizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MBStringSizing.h"; sourceTree = "<group>"; };
 		3B47588919C0DF8000619FF1 /* UIFont+MBStringSizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MBStringSizing.m"; sourceTree = "<group>"; };
@@ -169,9 +167,9 @@
 		3B58E97F1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBConcurrentReadWriteCoordinator.m; sourceTree = "<group>"; };
 		3B58E9801A65911E00FDCB66 /* MBThreadLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBThreadLocalStorage.h; sourceTree = "<group>"; };
 		3B58E9811A65911E00FDCB66 /* MBThreadLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBThreadLocalStorage.m; sourceTree = "<group>"; };
+		3B58E9A71A65B7D300FDCB66 /* MBToolbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBToolbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B58E9B11A65B7D300FDCB66 /* MBToolboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBToolboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBStringFunctions.m"; sourceTree = "<group>"; };
-		3B968ECF198FF2380061DA66 /* MBToolbox-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MBToolbox-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B968EDE198FF28D0061DA66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBMessageDigest.m"; sourceTree = "<group>"; };
 		3B968EE0198FF28D0061DA66 /* Test-NSString+MBIndentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-NSString+MBIndentation.m"; sourceTree = "<group>"; };
 		3BAC5A5A19894520003005AC /* MBModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBModule.h; sourceTree = "<group>"; };
@@ -184,11 +182,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B968ECC198FF2380061DA66 /* Frameworks */ = {
+		3B58E9A31A65B7D300FDCB66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B968ED5198FF2380061DA66 /* libMBToolbox.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B58E9AE1A65B7D300FDCB66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B58E9B21A65B7D300FDCB66 /* MBToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +383,8 @@
 		3B2EF74C19880F31009AD107 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B2EF74B19880F31009AD107 /* libMBToolbox.a */,
-				3B968ECF198FF2380061DA66 /* MBToolbox-Tests.xctest */,
+				3B58E9A71A65B7D300FDCB66 /* MBToolbox.framework */,
+				3B58E9B11A65B7D300FDCB66 /* MBToolboxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,7 +403,6 @@
 		3B968EDD198FF28D0061DA66 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3B968EDE198FF28D0061DA66 /* Info.plist */,
 				3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */,
 				3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */,
 				3B968EE0198FF28D0061DA66 /* Test-NSString+MBIndentation.m */,
@@ -429,13 +433,64 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		3B58E9A41A65B7D300FDCB66 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B58E9E01A65BB2900FDCB66 /* MBToolbox.h in Headers */,
+				3B58E9E11A65BB5700FDCB66 /* MBBatteryMonitor.h in Headers */,
+				3B58E9E21A65BB5700FDCB66 /* MBCacheOperations.h in Headers */,
+				3B58E9E31A65BB5700FDCB66 /* MBFilesystemCache+Subclassing.h in Headers */,
+				3B58E9E41A65BB5700FDCB66 /* MBFilesystemCache.h in Headers */,
+				3B58E9E51A65BB5700FDCB66 /* MBThreadsafeCache+Subclassing.h in Headers */,
+				3B58E9E61A65BB5700FDCB66 /* MBThreadsafeCache.h in Headers */,
+				3B58E9E71A65BB5700FDCB66 /* MBAssert.h in Headers */,
+				3B58E9E81A65BB5700FDCB66 /* MBDebug.h in Headers */,
+				3B58E9E91A65BB5700FDCB66 /* MBRuntime.h in Headers */,
+				3B58E9EA1A65BB5700FDCB66 /* MBConcurrentReadWriteCoordinator.h in Headers */,
+				3B58E9EB1A65BB5700FDCB66 /* MBThreadLocalStorage.h in Headers */,
+				3B58E9EC1A65BB5700FDCB66 /* NSError+MBToolbox.h in Headers */,
+				3B58E9ED1A65BB5700FDCB66 /* MBEvents.h in Headers */,
+				3B58E9EE1A65BB5700FDCB66 /* MBFieldListFormatter.h in Headers */,
+				3B58E9EF1A65BB5700FDCB66 /* MBFormattedDescriptionObject.h in Headers */,
+				3B58E9F01A65BB5700FDCB66 /* MBBitmapPixelPlane.h in Headers */,
+				3B58E9F11A65BB5700FDCB66 /* MBColorTools.h in Headers */,
+				3B58E9F21A65BB5700FDCB66 /* MBRoundedRectTools.h in Headers */,
+				3B58E9F31A65BB5700FDCB66 /* UIColor+MBToolbox.h in Headers */,
+				3B58E9F41A65BB5700FDCB66 /* UIImage+MBImageScaling.h in Headers */,
+				3B58E9F51A65BB5700FDCB66 /* UIView+MBSnapshotImage.h in Headers */,
+				3B58E9F61A65BB5700FDCB66 /* MBMessageDigest.h in Headers */,
+				3B58E9F71A65BB5700FDCB66 /* NSData+MBMessageDigest.h in Headers */,
+				3B58E9F81A65BB5700FDCB66 /* NSString+MBMessageDigest.h in Headers */,
+				3B58E9F91A65BB5700FDCB66 /* MBModule.h in Headers */,
+				3B58E9FA1A65BB5700FDCB66 /* MBModuleLog.h in Headers */,
+				3B58E9FB1A65BB5700FDCB66 /* MBNetworkIndicator.h in Headers */,
+				3B58E9FC1A65BB5700FDCB66 /* MBNetworkMonitor.h in Headers */,
+				3B58E9FD1A65BB5700FDCB66 /* MBFilesystemOperations.h in Headers */,
+				3B58E9FE1A65BB5700FDCB66 /* MBOperationQueue.h in Headers */,
+				3B58E9FF1A65BB5800FDCB66 /* MBRegexCache.h in Headers */,
+				3B58EA001A65BB5800FDCB66 /* NSString+MBRegex.h in Headers */,
+				3B58EA011A65BB5800FDCB66 /* MBService.h in Headers */,
+				3B58EA021A65BB5800FDCB66 /* MBServiceManager.h in Headers */,
+				3B58EA031A65BB5800FDCB66 /* MBSingleton.h in Headers */,
+				3B58EA041A65BB5800FDCB66 /* MBStringFunctions.h in Headers */,
+				3B58EA051A65BB5800FDCB66 /* NSString+MBIndentation.h in Headers */,
+				3B58EA061A65BB5800FDCB66 /* UIFont+MBStringSizing.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		3B2EF74A19880F31009AD107 /* MBToolbox */ = {
+		3B58E9A61A65B7D300FDCB66 /* MBToolbox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B2EF75F19880F31009AD107 /* Build configuration list for PBXNativeTarget "MBToolbox" */;
+			buildConfigurationList = 3B58E9BA1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolbox" */;
 			buildPhases = (
-				3B2EF74719880F31009AD107 /* Sources */,
-				3B762206199A8D6600998306 /* ShellScript */,
+				3B58E9A21A65B7D300FDCB66 /* Sources */,
+				3B58E9A31A65B7D300FDCB66 /* Frameworks */,
+				3B58E9A41A65B7D300FDCB66 /* Headers */,
+				3B58E9A51A65B7D300FDCB66 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -443,28 +498,25 @@
 			);
 			name = MBToolbox;
 			productName = MBToolbox;
-			productReference = 3B2EF74B19880F31009AD107 /* libMBToolbox.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 3B58E9A71A65B7D300FDCB66 /* MBToolbox.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		3B968ECE198FF2380061DA66 /* MBToolbox-Tests */ = {
+		3B58E9B01A65B7D300FDCB66 /* MBToolboxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B968EDA198FF2380061DA66 /* Build configuration list for PBXNativeTarget "MBToolbox-Tests" */;
+			buildConfigurationList = 3B58E9BD1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolboxTests" */;
 			buildPhases = (
-				3B968ECB198FF2380061DA66 /* Sources */,
-				3B968ECC198FF2380061DA66 /* Frameworks */,
-				3B968ECD198FF2380061DA66 /* Resources */,
+				3B58E9AD1A65B7D300FDCB66 /* Sources */,
+				3B58E9AE1A65B7D300FDCB66 /* Frameworks */,
+				3B58E9AF1A65B7D300FDCB66 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3B968ED7198FF2380061DA66 /* PBXTargetDependency */,
-				3B968EDC198FF2390061DA66 /* PBXTargetDependency */,
-				3B968EE6199008E10061DA66 /* PBXTargetDependency */,
-				3BAB226F19908D38009E9F25 /* PBXTargetDependency */,
+				3B58E9B41A65B7D300FDCB66 /* PBXTargetDependency */,
 			);
-			name = "MBToolbox-Tests";
-			productName = "MBToolbox-Tests";
-			productReference = 3B968ECF198FF2380061DA66 /* MBToolbox-Tests.xctest */;
+			name = MBToolboxTests;
+			productName = MBToolboxTests;
+			productReference = 3B58E9B11A65B7D300FDCB66 /* MBToolboxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -476,15 +528,11 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Gilt Groupe";
 				TargetAttributes = {
-					3B2EF74A19880F31009AD107 = {
-						CreatedOnToolsVersion = 6.0;
+					3B58E9A61A65B7D300FDCB66 = {
+						CreatedOnToolsVersion = 6.2;
 					};
-					3B7621FE199A8A8E00998306 = {
-						CreatedOnToolsVersion = 6.0;
-					};
-					3B968ECE198FF2380061DA66 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 3B2EF74A19880F31009AD107;
+					3B58E9B01A65B7D300FDCB66 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 					3B968EE4199008E10061DA66 = {
 						CreatedOnToolsVersion = 6.0;
@@ -503,16 +551,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B2EF74A19880F31009AD107 /* MBToolbox */,
-				3B7621FE199A8A8E00998306 /* MBToolboxUniversal */,
-				3B968ECE198FF2380061DA66 /* MBToolbox-Tests */,
-				3B968EE4199008E10061DA66 /* MBToolbox-Docs */,
+				3B58E9A61A65B7D300FDCB66 /* MBToolbox */,
+				3B58E9B01A65B7D300FDCB66 /* MBToolboxTests */,
+				3B968EE4199008E10061DA66 /* MBToolboxDocumentation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3B968ECD198FF2380061DA66 /* Resources */ = {
+		3B58E9A51A65B7D300FDCB66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B58E9AF1A65B7D300FDCB66 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -522,34 +576,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3B762204199A8AA900998306 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = $PROJECT_DIR/BuildControl/lib/buildUniversalBinary.sh;
-		};
-		3B762206199A8D6600998306 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = BuildControl/lib/packageMockingbirdLibrary.sh;
-			showEnvVarsInLog = 0;
-		};
 		3B968EEC199008FB0061DA66 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -561,84 +587,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PROJECT_DIR/BuildControl/docs/buildMockingbirdDocs.sh --module \"Toolbox\"";
+			shellScript = "$PROJECT_DIR/BuildControl/buildMockingbirdDocumentation.sh --module \"Toolbox\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3B2EF74719880F31009AD107 /* Sources */ = {
+		3B58E9A21A65B7D300FDCB66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B58E9821A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m in Sources */,
-				3BAC5A5E19894520003005AC /* MBModule.m in Sources */,
-				3B0F8CC6198811BD009A2126 /* NSError+MBToolbox.m in Sources */,
-				3B0F8CC9198811BD009A2126 /* MBFormattedDescriptionObject.m in Sources */,
-				3B0F8CCD198811BD009A2126 /* UIImage+MBImageScaling.m in Sources */,
-				3B0F8CD0198811BD009A2126 /* NSData+MBMessageDigest.m in Sources */,
-				3B0F8CD6198811BD009A2126 /* MBFilesystemOperations.m in Sources */,
-				3B0F8CCC198811BD009A2126 /* UIColor+MBToolbox.m in Sources */,
-				3B0F8CCF198811BD009A2126 /* MBMessageDigest.m in Sources */,
-				3B0F8CCA198811BD009A2126 /* MBBitmapPixelPlane.m in Sources */,
-				3BAC5A5F19894520003005AC /* MBModuleLog.m in Sources */,
-				3B0F8CDA198811BD009A2126 /* MBServiceManager.m in Sources */,
-				3B0F8CC5198811BD009A2126 /* MBThreadsafeCache.m in Sources */,
-				3B0F8CD9198811BD009A2126 /* NSString+MBRegex.m in Sources */,
-				3B0F8CC2198811BD009A2126 /* MBBatteryMonitor.m in Sources */,
-				3B0F8CC7198811BD009A2126 /* MBEvents.m in Sources */,
-				3B0F8CD7198811BD009A2126 /* MBOperationQueue.m in Sources */,
-				3B47588A19C0DF8000619FF1 /* UIFont+MBStringSizing.m in Sources */,
-				3B58E9831A65911E00FDCB66 /* MBThreadLocalStorage.m in Sources */,
-				3B0F8CCB198811BD009A2126 /* MBRoundedRectTools.m in Sources */,
-				3B0F8CDB198811BD009A2126 /* NSString+MBIndentation.m in Sources */,
-				3B0F8CD4198811BD009A2126 /* MBNetworkIndicator.m in Sources */,
-				3B0F8CCE198811BD009A2126 /* UIView+MBSnapshotImage.m in Sources */,
-				3B0F8CD1198811BD009A2126 /* NSString+MBMessageDigest.m in Sources */,
-				3B0F8CC8198811BD009A2126 /* MBFieldListFormatter.m in Sources */,
-				3B0F8CD8198811BD009A2126 /* MBRegexCache.m in Sources */,
-				3B0F8CC4198811BD009A2126 /* MBFilesystemCache.m in Sources */,
-				3B0F8CD5198811BD009A2126 /* MBNetworkMonitor.m in Sources */,
-				3B0F8CC3198811BD009A2126 /* MBCacheOperations.m in Sources */,
+				3B58E9C31A65BB0B00FDCB66 /* MBBatteryMonitor.m in Sources */,
+				3B58E9C41A65BB0B00FDCB66 /* MBCacheOperations.m in Sources */,
+				3B58E9C51A65BB0B00FDCB66 /* MBFilesystemCache.m in Sources */,
+				3B58E9C61A65BB0B00FDCB66 /* MBThreadsafeCache.m in Sources */,
+				3B58E9C71A65BB0C00FDCB66 /* MBConcurrentReadWriteCoordinator.m in Sources */,
+				3B58E9C81A65BB0C00FDCB66 /* MBThreadLocalStorage.m in Sources */,
+				3B58E9C91A65BB0C00FDCB66 /* NSError+MBToolbox.m in Sources */,
+				3B58E9CA1A65BB0C00FDCB66 /* MBEvents.m in Sources */,
+				3B58E9CB1A65BB0C00FDCB66 /* MBFieldListFormatter.m in Sources */,
+				3B58E9CC1A65BB0C00FDCB66 /* MBFormattedDescriptionObject.m in Sources */,
+				3B58E9CD1A65BB0C00FDCB66 /* MBBitmapPixelPlane.m in Sources */,
+				3B58E9CE1A65BB0C00FDCB66 /* MBRoundedRectTools.m in Sources */,
+				3B58E9CF1A65BB0C00FDCB66 /* UIColor+MBToolbox.m in Sources */,
+				3B58E9D01A65BB0C00FDCB66 /* UIImage+MBImageScaling.m in Sources */,
+				3B58E9D11A65BB0C00FDCB66 /* UIView+MBSnapshotImage.m in Sources */,
+				3B58E9D21A65BB0C00FDCB66 /* MBMessageDigest.m in Sources */,
+				3B58E9D31A65BB0C00FDCB66 /* NSData+MBMessageDigest.m in Sources */,
+				3B58E9D41A65BB0C00FDCB66 /* NSString+MBMessageDigest.m in Sources */,
+				3B58E9D51A65BB0C00FDCB66 /* MBModule.m in Sources */,
+				3B58E9D61A65BB0C00FDCB66 /* MBModuleLog.m in Sources */,
+				3B58E9D71A65BB0C00FDCB66 /* MBNetworkIndicator.m in Sources */,
+				3B58E9D81A65BB0C00FDCB66 /* MBNetworkMonitor.m in Sources */,
+				3B58E9D91A65BB0C00FDCB66 /* MBFilesystemOperations.m in Sources */,
+				3B58E9DA1A65BB0C00FDCB66 /* MBOperationQueue.m in Sources */,
+				3B58E9DB1A65BB0C00FDCB66 /* MBRegexCache.m in Sources */,
+				3B58E9DC1A65BB0C00FDCB66 /* NSString+MBRegex.m in Sources */,
+				3B58E9DD1A65BB0C00FDCB66 /* MBServiceManager.m in Sources */,
+				3B58E9DE1A65BB0C00FDCB66 /* NSString+MBIndentation.m in Sources */,
+				3B58E9DF1A65BB0C00FDCB66 /* UIFont+MBStringSizing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B968ECB198FF2380061DA66 /* Sources */ = {
+		3B58E9AD1A65B7D300FDCB66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B6ED5341995C87A004652EB /* Test-MBStringFunctions.m in Sources */,
-				3B968EE3198FF28D0061DA66 /* Test-NSString+MBIndentation.m in Sources */,
-				3B968EE2198FF28D0061DA66 /* Test-MBMessageDigest.m in Sources */,
+				3B58E9C01A65B90F00FDCB66 /* Test-MBMessageDigest.m in Sources */,
+				3B58E9C11A65B90F00FDCB66 /* Test-MBStringFunctions.m in Sources */,
+				3B58E9C21A65B90F00FDCB66 /* Test-NSString+MBIndentation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B968ED7198FF2380061DA66 /* PBXTargetDependency */ = {
+		3B58E9B41A65B7D300FDCB66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B2EF74A19880F31009AD107 /* MBToolbox */;
-			targetProxy = 3B968ED6198FF2380061DA66 /* PBXContainerItemProxy */;
-		};
-		3B968EDC198FF2390061DA66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B2EF74A19880F31009AD107 /* MBToolbox */;
-			targetProxy = 3B968EDB198FF2390061DA66 /* PBXContainerItemProxy */;
-		};
-		3B968EE6199008E10061DA66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B2EF74A19880F31009AD107 /* MBToolbox */;
-			targetProxy = 3B968EE5199008E10061DA66 /* PBXContainerItemProxy */;
-		};
-		3B968EEE199009020061DA66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B2EF74A19880F31009AD107 /* MBToolbox */;
-			targetProxy = 3B968EED199009020061DA66 /* PBXContainerItemProxy */;
-		};
-		3BAB226F19908D38009E9F25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B2EF74A19880F31009AD107 /* MBToolbox */;
-			targetProxy = 3BAB226E19908D38009E9F25 /* PBXContainerItemProxy */;
+			target = 3B58E9A61A65B7D300FDCB66 /* MBToolbox */;
+			targetProxy = 3B58E9B31A65B7D300FDCB66 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -719,73 +725,74 @@
 			};
 			name = Release;
 		};
-		3B2EF76019880F31009AD107 /* Debug */ = {
+		3B58E9BB1A65B7D300FDCB66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "BuildControl/private/Framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		3B2EF76119880F31009AD107 /* Release */ = {
+		3B58E9BC1A65B7D300FDCB66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "BuildControl/private/Framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		3B7621FF199A8A8E00998306 /* Debug */ = {
+		3B58E9BE1A65B7D300FDCB66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		3B762200199A8A8E00998306 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		3B968ED8198FF2380061DA66 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "BuildControl/private/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		3B968ED9198FF2380061DA66 /* Release */ = {
+		3B58E9BF1A65B7D300FDCB66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "BuildControl/private/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -816,34 +823,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B2EF75F19880F31009AD107 /* Build configuration list for PBXNativeTarget "MBToolbox" */ = {
+		3B58E9BA1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B2EF76019880F31009AD107 /* Debug */,
-				3B2EF76119880F31009AD107 /* Release */,
+				3B58E9BB1A65B7D300FDCB66 /* Debug */,
+				3B58E9BC1A65B7D300FDCB66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B762201199A8A8E00998306 /* Build configuration list for PBXAggregateTarget "MBToolboxUniversal" */ = {
+		3B58E9BD1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolboxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B7621FF199A8A8E00998306 /* Debug */,
-				3B762200199A8A8E00998306 /* Release */,
+				3B58E9BE1A65B7D300FDCB66 /* Debug */,
+				3B58E9BF1A65B7D300FDCB66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B968EDA198FF2380061DA66 /* Build configuration list for PBXNativeTarget "MBToolbox-Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B968ED8198FF2380061DA66 /* Debug */,
-				3B968ED9198FF2380061DA66 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B968EE7199008E10061DA66 /* Build configuration list for PBXAggregateTarget "MBToolbox-Docs" */ = {
+		3B968EE7199008E10061DA66 /* Build configuration list for PBXAggregateTarget "MBToolboxDocumentation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B968EE8199008E10061DA66 /* Debug */,

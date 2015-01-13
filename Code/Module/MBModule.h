@@ -41,7 +41,7 @@
 
 @optional
 
-/*
+/*!
  Returns an `NSBundle` instance representing the resource bundle of the module.
 
  @return    The module's resource bundle, or `nil` if one doesn't exist.

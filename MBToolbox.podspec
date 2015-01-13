@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBToolbox"
-	s.version               = "1.0.9"
+	s.version               = "1.0.10"
 	s.summary               = "Mockingbird Toolbox"
 	s.description			= "General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
 	s.homepage				= "https://github.com/emaloney/MBToolbox"
@@ -87,12 +87,12 @@ Pod::Spec.new do |s|
 	#----------------------------------------------------------------
 
 	#
-	# specifies the MBThreadLocalStorage class
+	# specifies the MBConcurrentReadWriteCoordinator class
 	#
 	s.subspec 'ConcurrentReadWriteCoordinator' do |ss|
 		ss.dependency 'MBToolbox/Common'
-		ss.source_files = 'Code/Concurrency/MBThreadLocalStorage.{h,m}'
-		ss.public_header_files = 'Code/Concurrency/MBThreadLocalStorage.h'
+		ss.source_files = 'Code/Concurrency/MBConcurrentReadWriteCoordinator.{h,m}'
+		ss.public_header_files = 'Code/Concurrency/MBConcurrentReadWriteCoordinator.h'
 	end
 
 	#

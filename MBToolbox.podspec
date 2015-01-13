@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBToolbox"
-	s.version               = "1.0.8"
+	s.version               = "1.0.9"
 	s.summary               = "Mockingbird Toolbox"
 	s.description			= "General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
 	s.homepage				= "https://github.com/emaloney/MBToolbox"
@@ -80,6 +80,28 @@ Pod::Spec.new do |s|
 		ss.dependency 'MBToolbox/MessageDigest-NSString'
 		ss.source_files = ['Code/Caching/MBFilesystemCache*.{h,m}', 'Code/Caching/MBCacheOperations.{h,m}']
 		ss.public_header_files = ['Code/Caching/MBFilesystemCache*.h', 'Code/Caching/MBCacheOperations.h']
+	end
+
+	#----------------------------------------------------------------
+	# Code/Concurrency
+	#----------------------------------------------------------------
+
+	#
+	# specifies the MBThreadLocalStorage class
+	#
+	s.subspec 'ConcurrentReadWriteCoordinator' do |ss|
+		ss.dependency 'MBToolbox/Common'
+		ss.source_files = 'Code/Concurrency/MBThreadLocalStorage.{h,m}'
+		ss.public_header_files = 'Code/Concurrency/MBThreadLocalStorage.h'
+	end
+
+	#
+	# specifies the MBThreadLocalStorage class
+	#
+	s.subspec 'ThreadLocalStorage' do |ss|
+		ss.dependency 'MBToolbox/Common'
+		ss.source_files = 'Code/Concurrency/MBThreadLocalStorage.{h,m}'
+		ss.public_header_files = 'Code/Concurrency/MBThreadLocalStorage.h'
 	end
 
 	#----------------------------------------------------------------
@@ -388,19 +410,6 @@ Pod::Spec.new do |s|
 		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Strings/UIFont+MBStringSizing.{h,m}'
 		ss.public_header_files = 'Code/Strings/UIFont+MBStringSizing.h'
-	end
-
-	#----------------------------------------------------------------
-	# Code/Threads
-	#----------------------------------------------------------------
-
-	#
-	# specifies the MBThreadLocalStorage class
-	#
-	s.subspec 'ThreadLocalStorage' do |ss|
-		ss.dependency 'MBToolbox/Common'
-		ss.source_files = 'Code/Threads/MBThreadLocalStorage.{h,m}'
-		ss.public_header_files = 'Code/Threads/MBThreadLocalStorage.h'
 	end
 
 

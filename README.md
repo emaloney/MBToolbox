@@ -30,11 +30,11 @@ The `MBThreadsafeCache` class implements a basic memory cache that can be safely
 
 A subclass, `MBFilesystemCache`, adds a filesystem backing store to the memory cache.
 
-### Thread-Local Storage
+### Concurrency & Threading
 
-`MBThreadLocalStorage` provides an interface for safely sharing thread-local storage among unrelated units of code.
+The `MBConcurrentReadWriteCoordinator` class uses Grand Central Dispatch to provide an efficient mechanism for enforcing orderly read/write access to a shared resource.
 
-The class can also be used as a lock-free cache: Objects that are expensive to create, such as `NSDateFormatter` instances, can be cached in thread-local storage without incurring the locking overhead required by a shared object cache like `MBThreadsafeCache`.
+`MBThreadLocalStorage` provides an interface for safely sharing thread-local storage among unrelated units of code. The class can also be used as a lock-free cache: Objects that are expensive to create, such as `NSDateFormatter` instances, can be cached in thread-local storage without incurring the locking overhead required by a shared object cache like `MBThreadsafeCache`.
 
 ### Regular Expressions
 
@@ -140,6 +140,11 @@ Among the subspecs provided are:
 * *ThreadsafeCache* - includes the `MBThreadsafeCache` class and related items
 * *FilesystemCache* - includes the `MBFilesystemCache` class and related items
 
+##### Concurrency & Threading
+
+* *ConcurrentReadWriteCoordinator* - specifies the `MBConcurrentReadWriteCoordinator` class
+* *ThreadLocalStorage* - specifies the `MBThreadLocalStorage` class
+
 ##### Field Formatting
 
 * *FieldListFormatter* - specifies the `MBFieldListFormatter` class
@@ -189,10 +194,6 @@ Among the subspecs provided are:
 * *StringFunctions* - declares the `MBForceString()` and `MBTrimString()` inline functions, and the `MBStringify()` preprocessor macro
 * *Indentation-NSString* - an `NSString` class extension that adds methods for indenting the individual lines in a string using tabs and arbitrary prefixes
 * *StringSizing-UIFont* - a `UIFont` class extension that adds methods for performing common text measurement tasks
-
-##### Thread-Local Storage
-
-* *ThreadLocalStorage* - specifies the `MBThreadLocalStorage` class
 
 ##### ...and more
 

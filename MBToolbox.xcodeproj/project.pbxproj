@@ -57,8 +57,9 @@
 		3B0F8CD9198811BD009A2126 /* NSString+MBRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CB4198811BD009A2126 /* NSString+MBRegex.m */; };
 		3B0F8CDA198811BD009A2126 /* MBServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CB8198811BD009A2126 /* MBServiceManager.m */; };
 		3B0F8CDB198811BD009A2126 /* NSString+MBIndentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CBE198811BD009A2126 /* NSString+MBIndentation.m */; };
-		3B0F8CDC198811BD009A2126 /* MBThreadLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8CC1198811BD009A2126 /* MBThreadLocalStorage.m */; };
 		3B47588A19C0DF8000619FF1 /* UIFont+MBStringSizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B47588919C0DF8000619FF1 /* UIFont+MBStringSizing.m */; };
+		3B58E9821A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B58E97F1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m */; };
+		3B58E9831A65911E00FDCB66 /* MBThreadLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B58E9811A65911E00FDCB66 /* MBThreadLocalStorage.m */; };
 		3B6ED5341995C87A004652EB /* Test-MBStringFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */; };
 		3B968ED5198FF2380061DA66 /* libMBToolbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2EF74B19880F31009AD107 /* libMBToolbox.a */; };
 		3B968EE2198FF28D0061DA66 /* Test-MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */; };
@@ -160,12 +161,14 @@
 		3B0F8CBC198811BD009A2126 /* MBStringFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBStringFunctions.h; sourceTree = "<group>"; };
 		3B0F8CBD198811BD009A2126 /* NSString+MBIndentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MBIndentation.h"; sourceTree = "<group>"; };
 		3B0F8CBE198811BD009A2126 /* NSString+MBIndentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MBIndentation.m"; sourceTree = "<group>"; };
-		3B0F8CC0198811BD009A2126 /* MBThreadLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBThreadLocalStorage.h; sourceTree = "<group>"; };
-		3B0F8CC1198811BD009A2126 /* MBThreadLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBThreadLocalStorage.m; sourceTree = "<group>"; };
 		3B2EF74B19880F31009AD107 /* libMBToolbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBToolbox.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3831B019882B93006A771F /* MBToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBToolbox.h; sourceTree = "<group>"; };
 		3B47588819C0DF8000619FF1 /* UIFont+MBStringSizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MBStringSizing.h"; sourceTree = "<group>"; };
 		3B47588919C0DF8000619FF1 /* UIFont+MBStringSizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MBStringSizing.m"; sourceTree = "<group>"; };
+		3B58E97E1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBConcurrentReadWriteCoordinator.h; sourceTree = "<group>"; };
+		3B58E97F1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBConcurrentReadWriteCoordinator.m; sourceTree = "<group>"; };
+		3B58E9801A65911E00FDCB66 /* MBThreadLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBThreadLocalStorage.h; sourceTree = "<group>"; };
+		3B58E9811A65911E00FDCB66 /* MBThreadLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBThreadLocalStorage.m; sourceTree = "<group>"; };
 		3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBStringFunctions.m"; sourceTree = "<group>"; };
 		3B968ECF198FF2380061DA66 /* MBToolbox-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MBToolbox-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B968EDE198FF28D0061DA66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -199,6 +202,7 @@
 				3B0F8C72198811BD009A2126 /* Battery */,
 				3B0F8C75198811BD009A2126 /* Caching */,
 				3BF2D490199C915B002F0639 /* Common */,
+				3B58E97D1A65911E00FDCB66 /* Concurrency */,
 				3B0F8C83198811BD009A2126 /* Error */,
 				3B0F8C86198811BD009A2126 /* Events */,
 				3B0F8C89198811BD009A2126 /* Formatting */,
@@ -211,7 +215,6 @@
 				3B0F8CB5198811BD009A2126 /* Services */,
 				3B0F8CB9198811BD009A2126 /* Singleton */,
 				3B0F8CBB198811BD009A2126 /* Strings */,
-				3B0F8CBF198811BD009A2126 /* Threads */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -363,15 +366,6 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
-		3B0F8CBF198811BD009A2126 /* Threads */ = {
-			isa = PBXGroup;
-			children = (
-				3B0F8CC0198811BD009A2126 /* MBThreadLocalStorage.h */,
-				3B0F8CC1198811BD009A2126 /* MBThreadLocalStorage.m */,
-			);
-			path = Threads;
-			sourceTree = "<group>";
-		};
 		3B2EF74219880F31009AD107 = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +382,17 @@
 				3B968ECF198FF2380061DA66 /* MBToolbox-Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3B58E97D1A65911E00FDCB66 /* Concurrency */ = {
+			isa = PBXGroup;
+			children = (
+				3B58E97E1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.h */,
+				3B58E97F1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m */,
+				3B58E9801A65911E00FDCB66 /* MBThreadLocalStorage.h */,
+				3B58E9811A65911E00FDCB66 /* MBThreadLocalStorage.m */,
+			);
+			path = Concurrency;
 			sourceTree = "<group>";
 		};
 		3B968EDD198FF28D0061DA66 /* Tests */ = {
@@ -468,7 +473,7 @@
 		3B2EF74319880F31009AD107 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Gilt Groupe";
 				TargetAttributes = {
 					3B2EF74A19880F31009AD107 = {
@@ -565,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B58E9821A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m in Sources */,
 				3BAC5A5E19894520003005AC /* MBModule.m in Sources */,
 				3B0F8CC6198811BD009A2126 /* NSError+MBToolbox.m in Sources */,
 				3B0F8CC9198811BD009A2126 /* MBFormattedDescriptionObject.m in Sources */,
@@ -582,7 +588,7 @@
 				3B0F8CC7198811BD009A2126 /* MBEvents.m in Sources */,
 				3B0F8CD7198811BD009A2126 /* MBOperationQueue.m in Sources */,
 				3B47588A19C0DF8000619FF1 /* UIFont+MBStringSizing.m in Sources */,
-				3B0F8CDC198811BD009A2126 /* MBThreadLocalStorage.m in Sources */,
+				3B58E9831A65911E00FDCB66 /* MBThreadLocalStorage.m in Sources */,
 				3B0F8CCB198811BD009A2126 /* MBRoundedRectTools.m in Sources */,
 				3B0F8CDB198811BD009A2126 /* NSString+MBIndentation.m in Sources */,
 				3B0F8CD4198811BD009A2126 /* MBNetworkIndicator.m in Sources */,
@@ -672,6 +678,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

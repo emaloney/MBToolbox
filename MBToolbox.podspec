@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBToolbox"
-	s.version               = "1.0.12"
+	s.version               = "1.0.13"
 	s.summary               = "Mockingbird Toolbox"
 	s.description           = "General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
 	s.homepage              = "https://github.com/emaloney/MBToolbox"
@@ -470,7 +470,7 @@ Pod::Spec.new do |s|
 
 	s.subspec 'BuildControl' do |ss|
 		ss.preserve_paths = 'BuildControl/**'
-		ss.exclude_files = 'BuildControl/private"
+		ss.exclude_files = 'BuildControl/private'
 	end
 
 end

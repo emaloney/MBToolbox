@@ -33,12 +33,12 @@
 
 + (instancetype) logForModuleClass:(Class)moduleCls
 {
-    return [[self alloc] initWithName:[moduleCls description]];
+    return [[self alloc] initWithName:[moduleCls moduleName]];
 }
 
 + (instancetype) logForModule:(NSObject<MBModule>*)module
 {
-    return [[self alloc] initWithName:[[module class] description]];
+    return [[self alloc] initWithName:[[module class] moduleName]];
 }
 
 - (id) initWithName:(NSString*)moduleName

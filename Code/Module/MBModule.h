@@ -32,13 +32,6 @@
  */
 + (NSString*) moduleName;
 
-/*
- Returns an `NSBundle` instance representing the resource bundle of the module.
- 
- @return    The module's resource bundle, or `nil` if one doesn't exist.
- */
-+ (NSBundle*) resourceBundle;
-
 /*!
  Returns the `MBModuleLog` associated with the receiving module.
  
@@ -47,6 +40,13 @@
 + (MBModuleLog*) log;
 
 @optional
+
+/*
+ Returns an `NSBundle` instance representing the resource bundle of the module.
+
+ @return    The module's resource bundle, or `nil` if one doesn't exist.
+ */
++ (NSBundle*) resourceBundle;
 
 /*!
  This optional method is implemented by modules that participate in the

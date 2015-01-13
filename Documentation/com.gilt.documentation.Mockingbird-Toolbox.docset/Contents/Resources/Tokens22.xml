@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MBRoundedRectTools.html">
+	<File path="Classes/MBRegexCache.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MBRoundedRectTools</TokenIdentifier>
-			<Abstract type="html">A few tools for creating rounded rectangle paths and managing corner radii.</Abstract>
-			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MBRegexCache</TokenIdentifier>
+			<Abstract type="html">Regular expressions can be expensive to instantiate, so we implement our
+own thread-safe singleton MBRegexCache. The cache is automatically populated
+as you call the methods for getting regular expressions, and it also empties
+itself when memory warnings occur.</Abstract>
+			<DeclaredIn>MBRegexCache.h</DeclaredIn>
             
 			
 			<NodeRef refid="22"/>
@@ -13,151 +16,158 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBRoundedRectTools/cornerRadiusSizedForRect:</TokenIdentifier>
-			<Abstract type="html">Returns a corner radius sized appropriately for the given rectangle.</Abstract>
-			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/MBRegexCache/regularExpressionWithPattern:options:error:</TokenIdentifier>
+			<Abstract type="html">Returns an NSRegularExpression instance for the given regular
+expression pattern and options.</Abstract>
+			<DeclaredIn>MBRegexCache.h</DeclaredIn>
 			
-			<Declaration>+ (CGFloat)cornerRadiusSizedForRect:(CGRect)rect</Declaration>
+			<Declaration>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The rectangle for which a corner radius is desired.</Abstract>
+					<Name>pattern</Name>
+					<Abstract type="html">The regular expression pattern</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">The NSRegularExpressionOptions specifying
+            the regular expression options</Abstract>
+				</Parameter><Parameter>
+					<Name>errPtr</Name>
+					<Abstract type="html">If this method returns nil and this parameter is non-nil,
+            it will be used to store a pointer to an NSError instance that 
+            contains further information about the error. If nil and an error
+            occurs, a message will be logged to the console.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">A corner radius that should look good when used with rect.
-            (Or, since &quot;good&quot; is subjective, a corner radius that shouldn&apos;t
-            look ridiculous when used with rect.)</Abstract></ReturnValue>
-			<Anchor>//api/name/cornerRadiusSizedForRect:</Anchor>
+			<ReturnValue><Abstract type="html">A pointer to an NSRegularExpression instance, or
+            nil if the passed-in pattern could not be interpreted 
+            as a valid regular expression.</Abstract></ReturnValue>
+			<Anchor>//api/name/regularExpressionWithPattern:options:error:</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBRoundedRectTools/adjustCornerRadius:fromRect:withInset:</TokenIdentifier>
-			<Abstract type="html">Returns a corner radius that approximates the curvature of the corner
-radius supplied for the given rectangle when that rectangle is inset by the
-specified amount.</Abstract>
-			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/MBRegexCache/regularExpressionWithPattern:options:</TokenIdentifier>
+			<Abstract type="html">Returns an NSRegularExpression instance for the given regular
+expression pattern and options.</Abstract>
+			<DeclaredIn>MBRegexCache.h</DeclaredIn>
 			
-			<Declaration>+ (CGFloat)adjustCornerRadius:(CGFloat)radius fromRect:(CGRect)rect withInset:(CGFloat)inset</Declaration>
+			<Declaration>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>radius</Name>
-					<Abstract type="html">The radius used with rect.</Abstract>
+					<Name>pattern</Name>
+					<Abstract type="html">The regular expression pattern</Abstract>
 				</Parameter><Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The rectangle to be adjusted by inset.</Abstract>
-				</Parameter><Parameter>
-					<Name>inset</Name>
-					<Abstract type="html">The number of points each edge of rect will be inset
-            to create the rectangle used for calculating the returned corner
-            radius. The width and height dimensions of rect are each reduced
-            by 2 ✕ inset; a positive inset results in a rectangle smaller
-            than rect, while a negative inset results in a larger rectangle.</Abstract>
+					<Name>options</Name>
+					<Abstract type="html">The NSRegularExpressionOptions specifying
+            the regular expression options</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">A corner radius for the adjusted rectangle.</Abstract></ReturnValue>
-			<Anchor>//api/name/adjustCornerRadius:fromRect:withInset:</Anchor>
+			<ReturnValue><Abstract type="html">A pointer to an NSRegularExpression instance, or
+            nil if the passed-in pattern could not be interpreted 
+            as a valid regular expression. If an error occurs causing 
+            nil to be returned, a message will be logged to the
+            console.</Abstract></ReturnValue>
+			<Anchor>//api/name/regularExpressionWithPattern:options:</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBRoundedRectTools/adjustCornerRadius:fromRect:toRect:</TokenIdentifier>
-			<Abstract type="html">Returns a corner radius for a rectangle that approximates the curvature of
-a corner radius used for a rectangle of a different size.</Abstract>
-			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/MBRegexCache/regularExpressionWithPattern:</TokenIdentifier>
+			<Abstract type="html">Returns an NSRegularExpression instance for the given regular
+expression pattern.</Abstract>
+			<DeclaredIn>MBRegexCache.h</DeclaredIn>
 			
-			<Declaration>+ (CGFloat)adjustCornerRadius:(CGFloat)radius fromRect:(CGRect)fromRect toRect:(CGRect)toRect</Declaration>
+			<Declaration>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>radius</Name>
-					<Abstract type="html">The radius used with fromRect.</Abstract>
-				</Parameter><Parameter>
-					<Name>fromRect</Name>
-					<Abstract type="html">The rectangle that uses the corner radius radius.</Abstract>
-				</Parameter><Parameter>
-					<Name>toRect</Name>
-					<Abstract type="html">The rectangle for which the corner radius will be returned.</Abstract>
+					<Name>pattern</Name>
+					<Abstract type="html">The regular expression pattern</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">A corner radius for toRect that approximates the curvature
-            of the corner arc resulting from using radius with fromRect.</Abstract></ReturnValue>
-			<Anchor>//api/name/adjustCornerRadius:fromRect:toRect:</Anchor>
+			<ReturnValue><Abstract type="html">A pointer to an NSRegularExpression instance, or
+            nil if the passed-in pattern could not be interpreted 
+            as a valid regular expression. If an error occurs causing 
+            nil to be returned, a message will be logged to the
+            console.</Abstract></ReturnValue>
+			<Anchor>//api/name/regularExpressionWithPattern:</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBRoundedRectTools/newRoundedPathForRectangle:withRadius:</TokenIdentifier>
-			<Abstract type="html">Creates a new path for a rounded rectangle. The path will be adjusted to ensure
-that on non-Retina displays, subpixel rendering will not occur.</Abstract>
-			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBRegexCache/regularExpressionWithPattern:options:error:</TokenIdentifier>
+			<Abstract type="html">Returns an NSRegularExpression instance for the given regular
+expression pattern and options.</Abstract>
+			<DeclaredIn>MBRegexCache.h</DeclaredIn>
 			
-			<Declaration>+ (CGPathRef)newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius</Declaration>
+			<Declaration>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The rectangle for which a rounded rectangle path is desired.</Abstract>
+					<Name>pattern</Name>
+					<Abstract type="html">The regular expression pattern</Abstract>
 				</Parameter><Parameter>
-					<Name>radius</Name>
-					<Abstract type="html">The corner radius to be used by the returned path.</Abstract>
+					<Name>options</Name>
+					<Abstract type="html">The NSRegularExpressionOptions specifying
+            the regular expression options</Abstract>
+				</Parameter><Parameter>
+					<Name>errPtr</Name>
+					<Abstract type="html">If this method returns nil and this parameter is non-nil,
+            it will be used to store a pointer to an NSError instance that 
+            contains further information about the error. If nil and an error
+            occurs, a message will be logged to the console.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">A new CGPathRef usable for drawing the rounded rectangle path.</Abstract></ReturnValue>
-			<Anchor>//api/name/newRoundedPathForRectangle:withRadius:</Anchor>
+			<ReturnValue><Abstract type="html">A pointer to an NSRegularExpression instance, or
+            nil if the passed-in pattern could not be interpreted 
+            as a valid regular expression.</Abstract></ReturnValue>
+			<Anchor>//api/name/regularExpressionWithPattern:options:error:</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBRoundedRectTools/newRoundedPathForRectangle:withRadius:forStrokeWidth:</TokenIdentifier>
-			<Abstract type="html">Creates a new path for a rounded rectangle. The rectangle is adjusted to ensure
-that the stroke falls entirely within the bounds of the path, and that odd
-stroke widths do not result in subpixel rendering on non-Retina displays.</Abstract>
-			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBRegexCache/regularExpressionWithPattern:options:</TokenIdentifier>
+			<Abstract type="html">Returns an NSRegularExpression instance for the given regular
+expression pattern and options.</Abstract>
+			<DeclaredIn>MBRegexCache.h</DeclaredIn>
 			
-			<Declaration>+ (CGPathRef)newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius forStrokeWidth:(CGFloat)width</Declaration>
+			<Declaration>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The rectangle for which a rounded rectangle path is desired.</Abstract>
+					<Name>pattern</Name>
+					<Abstract type="html">The regular expression pattern</Abstract>
 				</Parameter><Parameter>
-					<Name>radius</Name>
-					<Abstract type="html">The corner radius to be used by the returned path.</Abstract>
-				</Parameter><Parameter>
-					<Name>width</Name>
-					<Abstract type="html">The stroke width that will be used when drawing the returned
-            path.</Abstract>
+					<Name>options</Name>
+					<Abstract type="html">The NSRegularExpressionOptions specifying
+            the regular expression options</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">A new CGPathRef usable for drawing the rounded rectangle path.</Abstract></ReturnValue>
-			<Anchor>//api/name/newRoundedPathForRectangle:withRadius:forStrokeWidth:</Anchor>
+			<ReturnValue><Abstract type="html">A pointer to an NSRegularExpression instance, or
+            nil if the passed-in pattern could not be interpreted 
+            as a valid regular expression. If an error occurs causing 
+            nil to be returned, a message will be logged to the
+            console.</Abstract></ReturnValue>
+			<Anchor>//api/name/regularExpressionWithPattern:options:</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBRoundedRectTools/newRoundedPathForRectangle:withRadius:insetBy:</TokenIdentifier>
-			<Abstract type="html">Creates a new path for a rounded rectangle. The rectangle is adjusted by the
-specified inset, but is not otherwise adjusted to account for stroke widths
-or subpixel rendering on non-Retina displays.</Abstract>
-			<DeclaredIn>MBRoundedRectTools.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBRegexCache/regularExpressionWithPattern:</TokenIdentifier>
+			<Abstract type="html">Returns an NSRegularExpression instance for the given regular
+expression pattern.</Abstract>
+			<DeclaredIn>MBRegexCache.h</DeclaredIn>
 			
-			<Declaration>+ (CGPathRef)newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius insetBy:(CGFloat)inset</Declaration>
+			<Declaration>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>rect</Name>
-					<Abstract type="html">The rectangle for which a rounded rectangle path is desired.</Abstract>
-				</Parameter><Parameter>
-					<Name>radius</Name>
-					<Abstract type="html">The corner radius to be used by the returned path.</Abstract>
-				</Parameter><Parameter>
-					<Name>inset</Name>
-					<Abstract type="html">The number of points each edge of rect will be inset
-            to create the rounded rectangle path. The width and height
-            dimensions of rect are each reduced by 2 ✕ inset; a positive 
-            inset results in a rectangle smaller than rect, while a negative
-            inset results in a larger rectangle.</Abstract>
+					<Name>pattern</Name>
+					<Abstract type="html">The regular expression pattern</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">A new CGPathRef usable for drawing the rounded rectangle path.</Abstract></ReturnValue>
-			<Anchor>//api/name/newRoundedPathForRectangle:withRadius:insetBy:</Anchor>
+			<ReturnValue><Abstract type="html">A pointer to an NSRegularExpression instance, or
+            nil if the passed-in pattern could not be interpreted 
+            as a valid regular expression. If an error occurs causing 
+            nil to be returned, a message will be logged to the
+            console.</Abstract></ReturnValue>
+			<Anchor>//api/name/regularExpressionWithPattern:</Anchor>
             <NodeRef refid="22"/>
 		</Token>
 		

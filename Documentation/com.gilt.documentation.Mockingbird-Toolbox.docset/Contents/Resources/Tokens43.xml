@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/MBService.html">
+	<File path="Protocols/MBModule.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/MBService</TokenIdentifier>
-			<Abstract type="html">The MBService protocol is implemented by classes that provide runtime
-services that might not need to be running during the entire lifetime of the
-application.</Abstract>
-			<DeclaredIn>MBService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/MBModule</TokenIdentifier>
+			<Abstract type="html">Modules are the mechanism by which functionality is added to Mockingbird.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
             
 			
 			<NodeRef refid="43"/>
@@ -15,45 +13,70 @@ application.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBService/startService</TokenIdentifier>
-			<Abstract type="html">Requests that the service start running.</Abstract>
-			<DeclaredIn>MBService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModule/moduleName</TokenIdentifier>
+			<Abstract type="html">Returns the name of the module.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>- (void)startService</Declaration>
+			<Declaration>+ (NSString *)moduleName</Declaration>
 			
-			
-			<Anchor>//api/name/startService</Anchor>
+			<ReturnValue><Abstract type="html">The module name.</Abstract></ReturnValue>
+			<Anchor>//api/name/moduleName</Anchor>
             <NodeRef refid="43"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBService/stopService</TokenIdentifier>
-			<Abstract type="html">Requests that the service stop running.</Abstract>
-			<DeclaredIn>MBService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModule/log</TokenIdentifier>
+			<Abstract type="html">Returns the MBModuleLog associated with the receiving module.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>- (void)stopService</Declaration>
+			<Declaration>+ (MBModuleLog *)log</Declaration>
 			
-			
-			<Anchor>//api/name/stopService</Anchor>
+			<ReturnValue><Abstract type="html">The module log.</Abstract></ReturnValue>
+			<Anchor>//api/name/log</Anchor>
             <NodeRef refid="43"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBService/configureService:</TokenIdentifier>
-			<Abstract type="html">Configures the service according to the keys and values contained in the
-specified dictionary.</Abstract>
-			<DeclaredIn>MBService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModule/resourceBundle</TokenIdentifier>
+			<Abstract type="html">Returns an NSBundle instance representing the resource bundle of the module.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>- (void)configureService:(NSDictionary *)params</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>params</Name>
-					<Abstract type="html">The configuration parameters for the service. Acceptable
-            configuration values are service-specific.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>+ (NSBundle *)resourceBundle</Declaration>
 			
-			<Anchor>//api/name/configureService:</Anchor>
+			<ReturnValue><Abstract type="html">The module&apos;s resource bundle, or nil if one doesn&apos;t exist.</Abstract></ReturnValue>
+			<Anchor>//api/name/resourceBundle</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModule/environmentLoaderClasses</TokenIdentifier>
+			<Abstract type="html">This optional method is implemented by modules that participate in the
+environment loading process. When the module is activated, its associated
+environment loaders will be used to populate the current environment.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)environmentLoaderClasses</Declaration>
+			
+			<ReturnValue><Abstract type="html">The environment loader classes used by the module. nil is
+            an acceptable return value to indicate that the module
+            has no associated environment loaders.</Abstract></ReturnValue>
+			<Anchor>//api/name/environmentLoaderClasses</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModule/moduleEnvironmentFilename</TokenIdentifier>
+			<Abstract type="html">This optional method is implemented by modules that need a specific
+environment file included whenever a new environment is loaded. If the
+method is not implemented or if it returns nil, no attempt will
+be made to load an environment file for the module.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)moduleEnvironmentFilename</Declaration>
+			
+			<ReturnValue><Abstract type="html">The name of the environment file to load. Note that this is
+            a filename and not a full pathname.</Abstract></ReturnValue>
+			<Anchor>//api/name/moduleEnvironmentFilename</Anchor>
             <NodeRef refid="43"/>
 		</Token>
 		

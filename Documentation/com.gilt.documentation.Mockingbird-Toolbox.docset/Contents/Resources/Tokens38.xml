@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/MBFileReadOperationDelegate.html">
+	<File path="Categories/UIView+MBSnapshotImage.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/MBFileReadOperationDelegate</TokenIdentifier>
-			<Abstract type="html">This protocol is adopted by classes that wish to be notified about the
-completion status of MBFileReadOperations.</Abstract>
-			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/UIView(MBSnapshotImage)</TokenIdentifier>
+			<Abstract type="html">A UIView class extension that provides methods for creating snapshot images
+of a view.</Abstract>
+			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
             
 			
 			<NodeRef refid="38"/>
@@ -14,46 +14,40 @@ completion status of MBFileReadOperations.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBFileReadOperationDelegate/readCompletedWithObject:forOperation:</TokenIdentifier>
-			<Abstract type="html">Called when an MBFileReadOperation completes successfully.</Abstract>
-			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/snapshotImage</TokenIdentifier>
+			<Abstract type="html">Returns a UIImage instance containing a rendering of the receiver&apos;s content.</Abstract>
+			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
 			
-			<Declaration>- (void)readCompletedWithObject:(id)readObj forOperation:(MBFileReadOperation *)op</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>readObj</Name>
-					<Abstract type="html">The object that was read from the filesystem. Typically,
-            this is an NSData object containing the byte data of the file.
-            However, MBFileReadOperation subclasses are free to construct any
-            type of object. For example, an implementation for an image cache
-            may pass UIImage instances.</Abstract>
-				</Parameter><Parameter>
-					<Name>op</Name>
-					<Abstract type="html">The operation that completed.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>- (UIImage *)snapshotImage</Declaration>
 			
-			<Anchor>//api/name/readCompletedWithObject:forOperation:</Anchor>
+			<ReturnValue><Abstract type="html">The image.</Abstract></ReturnValue>
+			<Anchor>//api/name/snapshotImage</Anchor>
             <NodeRef refid="38"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBFileReadOperationDelegate/readFailedWithError:forOperation:</TokenIdentifier>
-			<Abstract type="html">Called when an MBFileReadOperation fails.</Abstract>
-			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/coreImageSnapshot</TokenIdentifier>
+			<Abstract type="html">Returns a CoreImage CIImage instance containing a rendering of the receiver&apos;s
+content.</Abstract>
+			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
 			
-			<Declaration>- (void)readFailedWithError:(NSError *)err forOperation:(MBFileReadOperation *)op</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>err</Name>
-					<Abstract type="html">An NSError instance describing the error that occurred.</Abstract>
-				</Parameter><Parameter>
-					<Name>op</Name>
-					<Abstract type="html">The operation that failed.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>- (CIImage *)coreImageSnapshot</Declaration>
 			
-			<Anchor>//api/name/readFailedWithError:forOperation:</Anchor>
+			<ReturnValue><Abstract type="html">The image.</Abstract></ReturnValue>
+			<Anchor>//api/name/coreImageSnapshot</Anchor>
+            <NodeRef refid="38"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/coreGraphicsSnapshot</TokenIdentifier>
+			<Abstract type="html">Returns a CoreGraphics CGImageRef containing a rendering of the receiver&apos;s
+content.</Abstract>
+			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
+			
+			<Declaration>- (CGImageRef)coreGraphicsSnapshot</Declaration>
+			
+			<ReturnValue><Abstract type="html">The image.</Abstract></ReturnValue>
+			<Anchor>//api/name/coreGraphicsSnapshot</Anchor>
             <NodeRef refid="38"/>
 		</Token>
 		

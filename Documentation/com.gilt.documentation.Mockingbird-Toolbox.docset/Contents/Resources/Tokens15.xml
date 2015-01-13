@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MBMessageDigest.html">
+	<File path="Classes/MBFormattedDescriptionObject.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MBMessageDigest</TokenIdentifier>
-			<Abstract type="html">Provides a mechanism for computing secure one-way hashes from various data
-sources.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MBFormattedDescriptionObject</TokenIdentifier>
+			<Abstract type="html">Provides support for basing an object&apos;s description method on the
+MBFieldListFormatter, for giving objects a way to create more legible
+console log output.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
             
 			
 			<NodeRef refid="15"/>
@@ -14,232 +15,74 @@ sources.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/MD5DataForString:</TokenIdentifier>
-			<Abstract type="html">Computes an MD5 hash given an input string.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFormattedDescriptionObject/addDescriptionFieldsTo:</TokenIdentifier>
+			<Abstract type="html">Asks the receiver to add any relevant fields to the passed-in
+MBFieldListFormatter instance.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>+ (NSData *)MD5DataForString:(NSString *)src</Declaration>
+			<Declaration>- (void)addDescriptionFieldsTo:(MBFieldListFormatter *)fmt</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>src</Name>
-					<Abstract type="html">the string for which the MD5 will be computed</Abstract>
+					<Name>fmt</Name>
+					<Abstract type="html">The formatter to which description fields should be added.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">the MD5 hash, as binary NSData</Abstract></ReturnValue>
-			<Anchor>//api/name/MD5DataForString:</Anchor>
+			
+			<Anchor>//api/name/addDescriptionFieldsTo:</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/MD5ForString:</TokenIdentifier>
-			<Abstract type="html">Computes an MD5 hash given an input string.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFormattedDescriptionObject/debugDescriptor</TokenIdentifier>
+			<Abstract type="html">Implemented by subclasses that wish to provide an additional means of
+identifying an object instance within the debug console.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForString:(NSString *)src</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>src</Name>
-					<Abstract type="html">the string for which the MD5 will be computed</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the MD5 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
-			<Anchor>//api/name/MD5ForString:</Anchor>
+			<Declaration>- (NSString *)debugDescriptor</Declaration>
+			
+			<ReturnValue><Abstract type="html">If a non-nil value is returned by this method, a field named
+            &quot;debugDescriptor&quot; will be added to the consoleDescription.</Abstract></ReturnValue>
+			<Anchor>//api/name/debugDescriptor</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/MD5ForData:</TokenIdentifier>
-			<Abstract type="html">Computes an MD5 hash from an NSData instance.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFormattedDescriptionObject/consoleDescription</TokenIdentifier>
+			<Abstract type="html">Uses an MBFieldListFormatter instance in conjunction with the
+addDescriptionFieldsTo: method to construct a description of the
+receiver intended for output to the console.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForData:(NSData *)src</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>src</Name>
-					<Abstract type="html">the data for which the MD5 will be computed</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the MD5 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
-			<Anchor>//api/name/MD5ForData:</Anchor>
+			<Declaration>- (NSString *)consoleDescription</Declaration>
+			
+			<ReturnValue><Abstract type="html">The console description.</Abstract></ReturnValue>
+			<Anchor>//api/name/consoleDescription</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/MD5ForBytes:length:</TokenIdentifier>
-			<Abstract type="html">Computes an MD5 hash from an array of bytes.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFormattedDescriptionObject/dump</TokenIdentifier>
+			<Abstract type="html">Writes the output of the receiver&apos;s consoleDescription method to the console
+log.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForBytes:(const void *)bytes length:(size_t)len</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>bytes</Name>
-					<Abstract type="html">the byte array for which the MD5 will be computed</Abstract>
-				</Parameter><Parameter>
-					<Name>len</Name>
-					<Abstract type="html">the length of the byte array</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the MD5 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
-			<Anchor>//api/name/MD5ForBytes:length:</Anchor>
+			<Declaration>- (void)dump</Declaration>
+			
+			
+			<Anchor>//api/name/dump</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/MD5ForFileAtPath:error:</TokenIdentifier>
-			<Abstract type="html">Computes an MD5 hash for the contents of a file.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFormattedDescriptionObject/description</TokenIdentifier>
+			<Abstract type="html">Overrides the NSObject implementation to return the output of
+consoleDescription.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForFileAtPath:(NSString *)path error:(NSError **)errPtr</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>path</Name>
-					<Abstract type="html">the filesystem path of the file for which the MD5 will
-            be computed</Abstract>
-				</Parameter><Parameter>
-					<Name>errPtr</Name>
-					<Abstract type="html">if an error occurs and this parameter is non-nil,
-            the error will be stored here upon return</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the MD5 hash, as a lowercase hexadecimal string; if an error
-            occurs while attempting to read the file, nil
-            is returned</Abstract></ReturnValue>
-			<Anchor>//api/name/MD5ForFileAtPath:error:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/MD5ForFileAtPath:</TokenIdentifier>
-			<Abstract type="html">Computes an MD5 hash for the contents of a file.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
+			<Declaration>- (NSString *)description</Declaration>
 			
-			<Declaration>+ (NSString *)MD5ForFileAtPath:(NSString *)path</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>path</Name>
-					<Abstract type="html">the filesystem path of the file for which the MD5 will
-            be computed</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the MD5 hash, as a lowercase hexadecimal string; if an error
-            occurs while attempting to read the file, nil
-            is returned</Abstract></ReturnValue>
-			<Anchor>//api/name/MD5ForFileAtPath:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/SHA1DataForString:</TokenIdentifier>
-			<Abstract type="html">Computes an SHA-1 hash given an input string.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
-			
-			<Declaration>+ (NSData *)SHA1DataForString:(NSString *)src</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>src</Name>
-					<Abstract type="html">the string for which the SHA-1 will be computed</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the SHA-1 hash, as binary NSData</Abstract></ReturnValue>
-			<Anchor>//api/name/SHA1DataForString:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/SHA1ForString:</TokenIdentifier>
-			<Abstract type="html">Computes an SHA-1 hash given an input string.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
-			
-			<Declaration>+ (NSString *)SHA1ForString:(NSString *)src</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>src</Name>
-					<Abstract type="html">the string for which the SHA-1 will be computed</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the SHA-1 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
-			<Anchor>//api/name/SHA1ForString:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/SHA1ForData:</TokenIdentifier>
-			<Abstract type="html">Computes an SHA-1 hash from an NSData instance.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
-			
-			<Declaration>+ (NSString *)SHA1ForData:(NSData *)src</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>src</Name>
-					<Abstract type="html">the data for which the SHA-1 will be computed</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the SHA-1 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
-			<Anchor>//api/name/SHA1ForData:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/SHA1ForBytes:length:</TokenIdentifier>
-			<Abstract type="html">Computes an SHA-1 hash from an array of bytes.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
-			
-			<Declaration>+ (NSString *)SHA1ForBytes:(const void *)bytes length:(size_t)len</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>bytes</Name>
-					<Abstract type="html">the byte array for which the SHA-1 will be computed</Abstract>
-				</Parameter><Parameter>
-					<Name>len</Name>
-					<Abstract type="html">the length of the byte array</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the SHA-1 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
-			<Anchor>//api/name/SHA1ForBytes:length:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/SHA1ForFileAtPath:error:</TokenIdentifier>
-			<Abstract type="html">Computes an SHA-1 hash for the contents of a file.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
-			
-			<Declaration>+ (NSString *)SHA1ForFileAtPath:(NSString *)path error:(NSError **)errPtr</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>path</Name>
-					<Abstract type="html">the filesystem path of the file for which the SHA-1 will
-            be computed</Abstract>
-				</Parameter><Parameter>
-					<Name>errPtr</Name>
-					<Abstract type="html">if an error occurs and this parameter is non-nil,
-            the error will be stored here upon return</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the SHA-1 hash, as a lowercase hexadecimal string; if an error
-            occurs while attempting to read the file, nil
-            is returned</Abstract></ReturnValue>
-			<Anchor>//api/name/SHA1ForFileAtPath:error:</Anchor>
-            <NodeRef refid="15"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBMessageDigest/SHA1ForFileAtPath:</TokenIdentifier>
-			<Abstract type="html">Computes an SHA-1 hash for the contents of a file.</Abstract>
-			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
-			
-			<Declaration>+ (NSString *)SHA1ForFileAtPath:(NSString *)path</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>path</Name>
-					<Abstract type="html">the filesystem path of the file for which the SHA-1 will
-            be computed</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">the SHA-1 hash, as a lowercase hexadecimal string; if an error
-            occurs while attempting to read the file, nil
-            is returned</Abstract></ReturnValue>
-			<Anchor>//api/name/SHA1ForFileAtPath:</Anchor>
+			<ReturnValue><Abstract type="html">The return value of calling the consoleDescription</Abstract></ReturnValue>
+			<Anchor>//api/name/description</Anchor>
             <NodeRef refid="15"/>
 		</Token>
 		

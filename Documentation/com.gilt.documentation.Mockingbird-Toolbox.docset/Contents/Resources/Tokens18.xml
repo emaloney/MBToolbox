@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MBNetworkIndicator.html">
+	<File path="Classes/MBModuleLog.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MBNetworkIndicator</TokenIdentifier>
-			<Abstract type="html">This class provides a mechanism that coordinates the use of the network
-activity indicator, so network-based client code can indicate when activity
-is occurring.</Abstract>
-			<DeclaredIn>MBNetworkIndicator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MBModuleLog</TokenIdentifier>
+			<Abstract type="html">Instances of this class are used to issue log messages associated with a
+given MBModule.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
             
 			
 			<NodeRef refid="18"/>
@@ -15,38 +14,116 @@ is occurring.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkIndicator/operationStarted</TokenIdentifier>
-			<Abstract type="html">Indicates that a new network operation has begun.</Abstract>
-			<DeclaredIn>MBNetworkIndicator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/logForModuleClass:</TokenIdentifier>
+			<Abstract type="html">Creates and returns a new MBModuleLog instance for the specified module
+implementation class.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)operationStarted</Declaration>
-			
-			
-			<Anchor>//api/name/operationStarted</Anchor>
+			<Declaration>+ (instancetype)logForModuleClass:(Class)moduleCls</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>moduleCls</Name>
+					<Abstract type="html">The implementing class of the MBModule for which a
+            log is being created.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new MBModuleLog.</Abstract></ReturnValue>
+			<Anchor>//api/name/logForModuleClass:</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkIndicator/operationFinished</TokenIdentifier>
-			<Abstract type="html">Indicates that an in-progress network operation has completed.</Abstract>
-			<DeclaredIn>MBNetworkIndicator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/logForModule:</TokenIdentifier>
+			<Abstract type="html">Creates and returns a new MBModuleLog instance for the specified module.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)operationFinished</Declaration>
-			
-			
-			<Anchor>//api/name/operationFinished</Anchor>
+			<Declaration>+ (instancetype)logForModule:(NSObject&lt;MBModule&gt; *)module</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>module</Name>
+					<Abstract type="html">The MBModule for which a log is being created.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new MBModuleLog.</Abstract></ReturnValue>
+			<Anchor>//api/name/logForModule:</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkIndicator/cancelOperations</TokenIdentifier>
-			<Abstract type="html">Cancels all in-progress network operations associated with the receiver.</Abstract>
-			<DeclaredIn>MBNetworkIndicator.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleLog/issueDeprecationWarning:</TokenIdentifier>
+			<Abstract type="html">Issues a deprecation warning from the module associated with the receiver.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)cancelOperations</Declaration>
+			<Declaration>- (void)issueDeprecationWarning:(NSString *)warning</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>warning</Name>
+					<Abstract type="html">The warning message.</Abstract>
+				</Parameter>
+			</Parameters>
 			
+			<Anchor>//api/name/issueDeprecationWarning:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleLog/issueDeprecationWarningWithFormat:</TokenIdentifier>
+			<Abstract type="html">Issues a deprecation warning from the module associated with the receiver.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Anchor>//api/name/cancelOperations</Anchor>
+			<Declaration>- (void)issueDeprecationWarningWithFormat:(NSString *)format, ...</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>format</Name>
+					<Abstract type="html">The format for the warning message, followed by zero or more
+            format parameters.</Abstract>
+				</Parameter><Parameter>
+					<Name>...</Name>
+					<Abstract type="html">A variable argument list of zero or more values referenced
+            within the format string.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/issueDeprecationWarningWithFormat:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleLog/issueNotSupportedError:</TokenIdentifier>
+			<Abstract type="html">Issues a not supported error from the module associated with the receiver.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>- (void)issueNotSupportedError:(NSString *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error message.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/issueNotSupportedError:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleLog/issueNotSupportedErrorWithFormat:</TokenIdentifier>
+			<Abstract type="html">Issues a not supported error from the module associated with the receiver.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>- (void)issueNotSupportedErrorWithFormat:(NSString *)format, ...</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>format</Name>
+					<Abstract type="html">The format for the error message, followed by zero or more
+            format parameters.</Abstract>
+				</Parameter><Parameter>
+					<Name>...</Name>
+					<Abstract type="html">A variable argument list of zero or more values referenced
+            within the format string.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/issueNotSupportedErrorWithFormat:</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSString+MBMessageDigest.html">
+	<File path="Categories/NSString+MBIndentation.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSString(MBMessageDigest)</TokenIdentifier>
-			<Abstract type="html">Extends the NSString class by adding methods for computing secure, one-way
-message digest hashes.</Abstract>
-			<DeclaredIn>NSString+MBMessageDigest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSString(MBIndentation)</TokenIdentifier>
+			<Abstract type="html">An NSString class extension that provides methods for indenting
+individual lines within a string.</Abstract>
+			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
             
 			
 			<NodeRef refid="32"/>
@@ -14,26 +14,52 @@ message digest hashes.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSString/MD5</TokenIdentifier>
-			<Abstract type="html">Computes an MD5 hash from the contents of the receiver.</Abstract>
-			<DeclaredIn>NSString+MBMessageDigest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSString/stringByIndentingEachLineWithTab</TokenIdentifier>
+			<Abstract type="html">Creates a new string by prefixing each line in the receiver with the tab
+(0x09) character.</Abstract>
+			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)MD5</Declaration>
+			<Declaration>- (NSString *)stringByIndentingEachLineWithTab</Declaration>
 			
-			<ReturnValue><Abstract type="html">the MD5 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
-			<Anchor>//api/name/MD5</Anchor>
+			<ReturnValue><Abstract type="html">The indented string.</Abstract></ReturnValue>
+			<Anchor>//api/name/stringByIndentingEachLineWithTab</Anchor>
             <NodeRef refid="32"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSString/SHA1</TokenIdentifier>
-			<Abstract type="html">Computes an SHA-1 hash from the contents of the receiver.</Abstract>
-			<DeclaredIn>NSString+MBMessageDigest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSString/stringByIndentingEachLineWithTabs:</TokenIdentifier>
+			<Abstract type="html">Creates a new string by prefixing each line in the receiver with the
+specified number of tab (0x09) characters.</Abstract>
+			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)SHA1</Declaration>
+			<Declaration>- (NSString *)stringByIndentingEachLineWithTabs:(NSUInteger)numberOfTabs</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>numberOfTabs</Name>
+					<Abstract type="html">The number of tab characters to use for intenting
+            lines.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The indented string.</Abstract></ReturnValue>
+			<Anchor>//api/name/stringByIndentingEachLineWithTabs:</Anchor>
+            <NodeRef refid="32"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSString/stringByIndentingEachLineWithPrefix:</TokenIdentifier>
+			<Abstract type="html">Creates a new string by prefixing each line in the receiver with the given
+string.</Abstract>
+			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
 			
-			<ReturnValue><Abstract type="html">the SHA-1 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
-			<Anchor>//api/name/SHA1</Anchor>
+			<Declaration>- (NSString *)stringByIndentingEachLineWithPrefix:(NSString *)prefix</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>prefix</Name>
+					<Abstract type="html">The prefix to use for indenting lines.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The indented string.</Abstract></ReturnValue>
+			<Anchor>//api/name/stringByIndentingEachLineWithPrefix:</Anchor>
             <NodeRef refid="32"/>
 		</Token>
 		

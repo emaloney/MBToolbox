@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/MBNetworkMonitor.html">
+	<File path="Classes/MBNetworkIndicator.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/MBNetworkMonitor</TokenIdentifier>
-			<Abstract type="html">Provides a mechanism for determining network availability and requesting
-updates about network status changes.</Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/MBNetworkIndicator</TokenIdentifier>
+			<Abstract type="html">This class provides a mechanism that coordinates the use of the network
+activity indicator, so network-based client code can indicate when activity
+is occurring.</Abstract>
+			<DeclaredIn>MBNetworkIndicator.h</DeclaredIn>
             
 			
 			<NodeRef refid="19"/>
@@ -14,410 +15,38 @@ updates about network status changes.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/setIsOnline:</TokenIdentifier>
-			<Abstract type="html">Indicates whether a network is currently available to the device. If called
-    repeatedly, it is more efficient to have the service running to avoid 
-    querying SCNetworkReachabilityGetFlags directly. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkIndicator/operationStarted</TokenIdentifier>
+			<Abstract type="html">Indicates that a new network operation has begun.</Abstract>
+			<DeclaredIn>MBNetworkIndicator.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isOnline</Declaration>
+			<Declaration>- (void)operationStarted</Declaration>
 			
 			
-			<Anchor>//api/name/isOnline</Anchor>
+			<Anchor>//api/name/operationStarted</Anchor>
             <NodeRef refid="19"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/isOnline</TokenIdentifier>
-			<Abstract type="html">Indicates whether a network is currently available to the device. If called
-    repeatedly, it is more efficient to have the service running to avoid 
-    querying SCNetworkReachabilityGetFlags directly. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkIndicator/operationFinished</TokenIdentifier>
+			<Abstract type="html">Indicates that an in-progress network operation has completed.</Abstract>
+			<DeclaredIn>MBNetworkIndicator.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isOnline</Declaration>
+			<Declaration>- (void)operationFinished</Declaration>
 			
 			
-			<Anchor>//api/name/isOnline</Anchor>
+			<Anchor>//api/name/operationFinished</Anchor>
             <NodeRef refid="19"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MBNetworkMonitor/isOnline</TokenIdentifier>
-			<Abstract type="html">Indicates whether a network is currently available to the device. If called
-    repeatedly, it is more efficient to have the service running to avoid 
-    querying SCNetworkReachabilityGetFlags directly. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkIndicator/cancelOperations</TokenIdentifier>
+			<Abstract type="html">Cancels all in-progress network operations associated with the receiver.</Abstract>
+			<DeclaredIn>MBNetworkIndicator.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isOnline</Declaration>
+			<Declaration>- (void)cancelOperations</Declaration>
 			
 			
-			<Anchor>//api/name/isOnline</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/setIsWifiConnected:</TokenIdentifier>
-			<Abstract type="html">Indicates whether the network connection (if any) is via wifi. If called
-    repeatedly, it is more efficient to have the service running to avoid
-    querying SCNetworkReachabilityGetFlags directly. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isWifiConnected</Declaration>
-			
-			
-			<Anchor>//api/name/isWifiConnected</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/isWifiConnected</TokenIdentifier>
-			<Abstract type="html">Indicates whether the network connection (if any) is via wifi. If called
-    repeatedly, it is more efficient to have the service running to avoid
-    querying SCNetworkReachabilityGetFlags directly. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isWifiConnected</Declaration>
-			
-			
-			<Anchor>//api/name/isWifiConnected</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MBNetworkMonitor/isWifiConnected</TokenIdentifier>
-			<Abstract type="html">Indicates whether the network connection (if any) is via wifi. If called
-    repeatedly, it is more efficient to have the service running to avoid
-    querying SCNetworkReachabilityGetFlags directly. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign, readonly) BOOL isWifiConnected</Declaration>
-			
-			
-			<Anchor>//api/name/isWifiConnected</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/setHasCellularCarrier:</TokenIdentifier>
-			<Abstract type="html">Determines whether the device currently has an associated cellular
-    carrier. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) BOOL hasCellularCarrier</Declaration>
-			
-			
-			<Anchor>//api/name/hasCellularCarrier</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/hasCellularCarrier</TokenIdentifier>
-			<Abstract type="html">Determines whether the device currently has an associated cellular
-    carrier. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) BOOL hasCellularCarrier</Declaration>
-			
-			
-			<Anchor>//api/name/hasCellularCarrier</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MBNetworkMonitor/hasCellularCarrier</TokenIdentifier>
-			<Abstract type="html">Determines whether the device currently has an associated cellular
-    carrier. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) BOOL hasCellularCarrier</Declaration>
-			
-			
-			<Anchor>//api/name/hasCellularCarrier</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/setCellularCarrierName:</TokenIdentifier>
-			<Abstract type="html">Returns the name of the cellular carrier currently associated with the
-    device. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierName</Declaration>
-			
-			
-			<Anchor>//api/name/cellularCarrierName</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/cellularCarrierName</TokenIdentifier>
-			<Abstract type="html">Returns the name of the cellular carrier currently associated with the
-    device. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierName</Declaration>
-			
-			
-			<Anchor>//api/name/cellularCarrierName</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MBNetworkMonitor/cellularCarrierName</TokenIdentifier>
-			<Abstract type="html">Returns the name of the cellular carrier currently associated with the
-    device. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierName</Declaration>
-			
-			
-			<Anchor>//api/name/cellularCarrierName</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/setCellularCarrierCountry:</TokenIdentifier>
-			<Abstract type="html">Returns the ISO country code of the cellular carrier currently associated
-    with the device. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierCountry</Declaration>
-			
-			
-			<Anchor>//api/name/cellularCarrierCountry</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/cellularCarrierCountry</TokenIdentifier>
-			<Abstract type="html">Returns the ISO country code of the cellular carrier currently associated
-    with the device. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierCountry</Declaration>
-			
-			
-			<Anchor>//api/name/cellularCarrierCountry</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MBNetworkMonitor/cellularCarrierCountry</TokenIdentifier>
-			<Abstract type="html">Returns the ISO country code of the cellular carrier currently associated
-    with the device. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierCountry</Declaration>
-			
-			
-			<Anchor>//api/name/cellularCarrierCountry</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/setCellularConnectionType:</TokenIdentifier>
-			<Abstract type="html">Returns a string identifying the type of cellular connection currently in
-    use by the device. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularConnectionType</Declaration>
-			
-			
-			<Anchor>//api/name/cellularConnectionType</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/cellularConnectionType</TokenIdentifier>
-			<Abstract type="html">Returns a string identifying the type of cellular connection currently in
-    use by the device. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularConnectionType</Declaration>
-			
-			
-			<Anchor>//api/name/cellularConnectionType</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MBNetworkMonitor/cellularConnectionType</TokenIdentifier>
-			<Abstract type="html">Returns a string identifying the type of cellular connection currently in
-    use by the device. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularConnectionType</Declaration>
-			
-			
-			<Anchor>//api/name/cellularConnectionType</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/setCarrierStatusDescription:</TokenIdentifier>
-			<Abstract type="html">Returns a human-readable string describing the current state of the
-    cellular carrier connection. Returns the constant
-    kMBNetworkNoCarrierStatusDescription when the hasCellularCarrier
-    property would return NO. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *carrierStatusDescription</Declaration>
-			
-			
-			<Anchor>//api/name/carrierStatusDescription</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/carrierStatusDescription</TokenIdentifier>
-			<Abstract type="html">Returns a human-readable string describing the current state of the
-    cellular carrier connection. Returns the constant
-    kMBNetworkNoCarrierStatusDescription when the hasCellularCarrier
-    property would return NO. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *carrierStatusDescription</Declaration>
-			
-			
-			<Anchor>//api/name/carrierStatusDescription</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MBNetworkMonitor/carrierStatusDescription</TokenIdentifier>
-			<Abstract type="html">Returns a human-readable string describing the current state of the
-    cellular carrier connection. Returns the constant
-    kMBNetworkNoCarrierStatusDescription when the hasCellularCarrier
-    property would return NO. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *carrierStatusDescription</Declaration>
-			
-			
-			<Anchor>//api/name/carrierStatusDescription</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/setNetworkAvailability:</TokenIdentifier>
-			<Abstract type="html">Indicates the current status of network availability by querying
-    SCNetworkReachabilityGetFlags directly. Not very processor-efficient for
-    repeated use; it&apos;s better to turn on the service and rely on the event-based 
-    mechanism. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign, readonly) MBNetworkAvailabilityFlags networkAvailability</Declaration>
-			
-			
-			<Anchor>//api/name/networkAvailability</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/networkAvailability</TokenIdentifier>
-			<Abstract type="html">Indicates the current status of network availability by querying
-    SCNetworkReachabilityGetFlags directly. Not very processor-efficient for
-    repeated use; it&apos;s better to turn on the service and rely on the event-based 
-    mechanism. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign, readonly) MBNetworkAvailabilityFlags networkAvailability</Declaration>
-			
-			
-			<Anchor>//api/name/networkAvailability</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MBNetworkMonitor/networkAvailability</TokenIdentifier>
-			<Abstract type="html">Indicates the current status of network availability by querying
-    SCNetworkReachabilityGetFlags directly. Not very processor-efficient for
-    repeated use; it&apos;s better to turn on the service and rely on the event-based 
-    mechanism. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign, readonly) MBNetworkAvailabilityFlags networkAvailability</Declaration>
-			
-			
-			<Anchor>//api/name/networkAvailability</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/setNetworkAvailabilityDescription:</TokenIdentifier>
-			<Abstract type="html">Returns a string describing the current networkAvailability property in
-    human-readable form. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *networkAvailabilityDescription</Declaration>
-			
-			
-			<Anchor>//api/name/networkAvailabilityDescription</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/networkAvailabilityDescription</TokenIdentifier>
-			<Abstract type="html">Returns a string describing the current networkAvailability property in
-    human-readable form. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *networkAvailabilityDescription</Declaration>
-			
-			
-			<Anchor>//api/name/networkAvailabilityDescription</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MBNetworkMonitor/networkAvailabilityDescription</TokenIdentifier>
-			<Abstract type="html">Returns a string describing the current networkAvailability property in
-    human-readable form. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *networkAvailabilityDescription</Declaration>
-			
-			
-			<Anchor>//api/name/networkAvailabilityDescription</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/setReachabilityFlagsDescription:</TokenIdentifier>
-			<Abstract type="html">Returns the SCNetworkReachabilityFlags in a human-readable string form.
-    Intended for use with debugging possible connectivity problems. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *reachabilityFlagsDescription</Declaration>
-			
-			
-			<Anchor>//api/name/reachabilityFlagsDescription</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/MBNetworkMonitor/reachabilityFlagsDescription</TokenIdentifier>
-			<Abstract type="html">Returns the SCNetworkReachabilityFlags in a human-readable string form.
-    Intended for use with debugging possible connectivity problems. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *reachabilityFlagsDescription</Declaration>
-			
-			
-			<Anchor>//api/name/reachabilityFlagsDescription</Anchor>
-            <NodeRef refid="19"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/MBNetworkMonitor/reachabilityFlagsDescription</TokenIdentifier>
-			<Abstract type="html">Returns the SCNetworkReachabilityFlags in a human-readable string form.
-    Intended for use with debugging possible connectivity problems. </Abstract>
-			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly) NSString *reachabilityFlagsDescription</Declaration>
-			
-			
-			<Anchor>//api/name/reachabilityFlagsDescription</Anchor>
+			<Anchor>//api/name/cancelOperations</Anchor>
             <NodeRef refid="19"/>
 		</Token>
 		

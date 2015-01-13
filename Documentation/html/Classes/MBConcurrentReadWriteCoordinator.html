@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>MBCacheReadQueue Class Reference</title>
+		<title>MBConcurrentReadWriteCoordinator Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">MBCacheReadQueue Class Reference</h1>
+				<h1 class="hideInXcode">MBConcurrentReadWriteCoordinator Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -31,12 +31,21 @@
 	
 	
 	
+	<option value="tasks">Tasks</option>
 	
 	
 	
 	
 	
 	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/enqueueWrite:">&nbsp;&nbsp;&nbsp;&nbsp;- enqueueWrite:</option>
+	
+	<option value="//api/name/read:">&nbsp;&nbsp;&nbsp;&nbsp;- read:</option>
 	
 	
 	
@@ -52,6 +61,9 @@
 
 
 
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
 
 
 
@@ -59,13 +71,22 @@
 
 
 
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enqueueWrite:">enqueueWrite:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/read:">read:</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="MBCacheReadQueue Class Reference" name="top"></a>
+				<a title="MBConcurrentReadWriteCoordinator Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -74,7 +95,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">MBCacheReadQueue Class Reference</h1>
+						<h1 class="title title-header">MBConcurrentReadWriteCoordinator Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -82,13 +103,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/MBOperationQueue.html">MBOperationQueue</a> : NSOperationQueue</td>
-</tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value"><a href="../Protocols/MBSingleton.html">MBSingleton</a></td>
+	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">MBCacheOperations.h</td>
+	<td class="specification-value">MBConcurrentReadWriteCoordinator.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -98,10 +116,56 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A singleton <code>NSOperationQueue</code> intended to be used for performing cache
-read operations.</p><div class="warning"><p><strong>Warning:</strong> You <em>must not</em> create instances of this class yourself; this class
-            is a singleton. Call the <code>instance</code> class method (declared by the
-            <a href="../Protocols/MBSingleton.html"><code>MBSingleton</code></a> protocol) to acquire the singleton instance.</p></div>
+						<p>The <code>MBConcurrentReadWriteCoordinator</code> uses Grand Central Dispatch to provide
+an efficient mechanism for enforcing orderly read/write access to a shared
+resource.</p>
+
+<p>The coordinator ensures that concurrent access to the shared resource
+follows these rules:</p>
+
+<ul>
+<li><p>A <em>read operation</em> never executes at the same time as a <em>write operation</em></p></li>
+<li><p>Multiple <em>read operations</em> may execute simultaneously</p></li>
+<li><p>Only one <em>write operation</em> may be executing at any given time</p></li>
+<li><p><em>Read operations</em> occur synchronously</p></li>
+<li><p><em>Write operations</em> occur asynchronously</p></li>
+</ul>
+
+
+<p>Because of the underlying GCD mechanism used, when used properly, the
+implementation ensures serial order with respect to reads and writes.
+That is, a call to perform a read operation will always return the results
+of the most-recently enqueued write operation.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/read:">&ndash;&nbsp;read:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enqueueWrite:">&ndash;&nbsp;enqueueWrite:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
 					</div>
 					
 					
@@ -112,9 +176,114 @@ read operations.</p><div class="warning"><p><strong>Warning:</strong> You <em>mu
 					
 					
 					
-					
-					
-					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/enqueueWrite:" title="enqueueWrite:"></a>
+	<h3 class="subsubtitle method-title">enqueueWrite:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enqueues a write operation for eventual execution. The passed-in block will be
+executed only when there are no other readers or writers.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)enqueueWrite:(void ( ^ ) ( ))<em>writeOperation</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>writeOperation</em></dt>
+			<dd><p>The write operation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Any calls to the receiver&rsquo;s <a href="#//api/name/read:"><code>read:</code></a> method that are issued after a call
+to <code>enqueueWrite:</code> are guaranteed to execute after its <code>writeOperation</code>
+block finishes executing. This ensures that reads and writes can occur in
+a predictable order.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBConcurrentReadWriteCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/read:" title="read:"></a>
+	<h3 class="subsubtitle method-title">read:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Synchronously executes the read operation contained in the passed-in block.
+If a writer is executing when this method is called, the calling thread will
+be blocked until writing finishes. Multiple readers may execute simultaneously.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)read:(void ( ^ ) ( ))<em>readOperation</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>readOperation</em></dt>
+			<dd><p>The read operation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MBConcurrentReadWriteCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
                     

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSString+MBIndentation.html">
+	<File path="Categories/NSMutableString+MBRegex.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSString(MBIndentation)</TokenIdentifier>
-			<Abstract type="html">An NSString class extension that provides methods for indenting
-individual lines within a string.</Abstract>
-			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSMutableString(MBRegex)</TokenIdentifier>
+			<Abstract type="html">An NSMutableString class extension that provides regular expression
+replacement methods.</Abstract>
+			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
             
 			
 			<NodeRef refid="31"/>
@@ -14,52 +14,112 @@ individual lines within a string.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSString/stringByIndentingEachLineWithTab</TokenIdentifier>
-			<Abstract type="html">Creates a new string by prefixing each line in the receiver with the tab
-(0x09) character.</Abstract>
-			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSMutableString/replaceRegexMatches:withTemplate:</TokenIdentifier>
+			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
+			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByIndentingEachLineWithTab</Declaration>
-			
-			<ReturnValue><Abstract type="html">The indented string.</Abstract></ReturnValue>
-			<Anchor>//api/name/stringByIndentingEachLineWithTab</Anchor>
+			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>pattern</Name>
+					<Abstract type="html">The regular expression pattern to match.</Abstract>
+				</Parameter><Parameter>
+					<Name>templ</Name>
+					<Abstract type="html">The template to use for performing replacements of any
+            matches found in the receiver.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The number of matches performed.</Abstract></ReturnValue>
+			<Anchor>//api/name/replaceRegexMatches:withTemplate:</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSString/stringByIndentingEachLineWithTabs:</TokenIdentifier>
-			<Abstract type="html">Creates a new string by prefixing each line in the receiver with the
-specified number of tab (0x09) characters.</Abstract>
-			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSMutableString/replaceRegexMatches:withTemplate:options:</TokenIdentifier>
+			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
+			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByIndentingEachLineWithTabs:(NSUInteger)numberOfTabs</Declaration>
+			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>numberOfTabs</Name>
-					<Abstract type="html">The number of tab characters to use for intenting
-            lines.</Abstract>
+					<Name>pattern</Name>
+					<Abstract type="html">The regular expression pattern to match.</Abstract>
+				</Parameter><Parameter>
+					<Name>templ</Name>
+					<Abstract type="html">The template to use for performing replacements of any
+            matches found in the receiver.</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">The options that govern the behavior of the returned
+            regular expression.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The indented string.</Abstract></ReturnValue>
-			<Anchor>//api/name/stringByIndentingEachLineWithTabs:</Anchor>
+			<ReturnValue><Abstract type="html">The number of matches performed.</Abstract></ReturnValue>
+			<Anchor>//api/name/replaceRegexMatches:withTemplate:options:</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSString/stringByIndentingEachLineWithPrefix:</TokenIdentifier>
-			<Abstract type="html">Creates a new string by prefixing each line in the receiver with the given
-string.</Abstract>
-			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSMutableString/replaceRegexMatches:withTemplate:options:range:</TokenIdentifier>
+			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
+			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByIndentingEachLineWithPrefix:(NSString *)prefix</Declaration>
+			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>prefix</Name>
-					<Abstract type="html">The prefix to use for indenting lines.</Abstract>
+					<Name>pattern</Name>
+					<Abstract type="html">The regular expression pattern to match.</Abstract>
+				</Parameter><Parameter>
+					<Name>templ</Name>
+					<Abstract type="html">The template to use for performing replacements of any
+            matches found in the receiver.</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">The options that govern the behavior of the returned
+            regular expression.</Abstract>
+				</Parameter><Parameter>
+					<Name>range</Name>
+					<Abstract type="html">The range of characters in the receiver within which matching
+            will occur. Characters outside this range will not be affected.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The indented string.</Abstract></ReturnValue>
-			<Anchor>//api/name/stringByIndentingEachLineWithPrefix:</Anchor>
+			<ReturnValue><Abstract type="html">The number of matches performed.</Abstract></ReturnValue>
+			<Anchor>//api/name/replaceRegexMatches:withTemplate:options:range:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSMutableString/replaceRegexMatches:withTemplate:options:range:error:</TokenIdentifier>
+			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
+			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
+			
+			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSError **)errPtr</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>pattern</Name>
+					<Abstract type="html">The regular expression pattern to match.</Abstract>
+				</Parameter><Parameter>
+					<Name>templ</Name>
+					<Abstract type="html">The template to use for performing replacements of any
+            matches found in the receiver.</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">The options that govern the behavior of the returned
+            regular expression.</Abstract>
+				</Parameter><Parameter>
+					<Name>range</Name>
+					<Abstract type="html">The range of characters in the receiver within which matching
+            will occur. Characters outside this range will not be affected.</Abstract>
+				</Parameter><Parameter>
+					<Name>errPtr</Name>
+					<Abstract type="html">An optional pointer to storage for an NSError instance.
+            If this parameter is non-nil and an error occurs, the memory
+            location pointed to by this parameter will be modified to reference
+            an NSError instance describing the problem.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The number of matches performed.</Abstract></ReturnValue>
+			<Anchor>//api/name/replaceRegexMatches:withTemplate:options:range:error:</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/MBInstanceVendor.html">
+	<File path="Protocols/MBFormattedDescription.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/MBInstanceVendor</TokenIdentifier>
-			<Abstract type="html">Adopted by classes that provide instance accessors but that don&apos;t
-necessarily abide by singleton behavior.</Abstract>
-			<DeclaredIn>MBSingleton.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/MBFormattedDescription</TokenIdentifier>
+			<Abstract type="html">Adopted by classes that utilize an MBFieldListFormatter instance to create
+formatted output for an object&apos;s description method.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
             
 			
 			<NodeRef refid="41"/>
@@ -14,15 +14,20 @@ necessarily abide by singleton behavior.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBInstanceVendor/instance</TokenIdentifier>
-			<Abstract type="html">Retreives the object instance currently vended by the receiver.</Abstract>
-			<DeclaredIn>MBSingleton.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBFormattedDescription/addDescriptionFieldsTo:</TokenIdentifier>
+			<Abstract type="html">Asks the receiver to add any relevant fields to the passed-in
+MBFieldListFormatter instance.</Abstract>
+			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)instance</Declaration>
+			<Declaration>- (void)addDescriptionFieldsTo:(MBFieldListFormatter *)fmt</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fmt</Name>
+					<Abstract type="html">The formatter to which description fields should be added.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			<ReturnValue><Abstract type="html">The current instance. Callers should not assume that the return
-            value will be the same every time this method is invoked.</Abstract></ReturnValue>
-			<Anchor>//api/name/instance</Anchor>
+			<Anchor>//api/name/addDescriptionFieldsTo:</Anchor>
             <NodeRef refid="41"/>
 		</Token>
 		

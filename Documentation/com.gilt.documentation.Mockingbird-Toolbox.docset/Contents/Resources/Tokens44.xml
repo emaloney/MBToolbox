@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/MBSingleton.html">
+	<File path="Protocols/MBService.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/MBSingleton</TokenIdentifier>
-			<Abstract type="html">Adopted by classes that act as singletons.</Abstract>
-			<DeclaredIn>MBSingleton.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/MBService</TokenIdentifier>
+			<Abstract type="html">The MBService protocol is implemented by classes that provide runtime
+services that might not need to be running during the entire lifetime of the
+application.</Abstract>
+			<DeclaredIn>MBService.h</DeclaredIn>
             
 			
 			<NodeRef refid="44"/>
@@ -13,15 +15,45 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBSingleton/instance</TokenIdentifier>
-			<Abstract type="html">Retreives the singleton instance of the receiving class.</Abstract>
-			<DeclaredIn>MBSingleton.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBService/startService</TokenIdentifier>
+			<Abstract type="html">Requests that the service start running.</Abstract>
+			<DeclaredIn>MBService.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)instance</Declaration>
+			<Declaration>- (void)startService</Declaration>
 			
-			<ReturnValue><Abstract type="html">The singleton instance. This value should never change during
-            the running lifetime of the application.</Abstract></ReturnValue>
-			<Anchor>//api/name/instance</Anchor>
+			
+			<Anchor>//api/name/startService</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBService/stopService</TokenIdentifier>
+			<Abstract type="html">Requests that the service stop running.</Abstract>
+			<DeclaredIn>MBService.h</DeclaredIn>
+			
+			<Declaration>- (void)stopService</Declaration>
+			
+			
+			<Anchor>//api/name/stopService</Anchor>
+            <NodeRef refid="44"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBService/configureService:</TokenIdentifier>
+			<Abstract type="html">Configures the service according to the keys and values contained in the
+specified dictionary.</Abstract>
+			<DeclaredIn>MBService.h</DeclaredIn>
+			
+			<Declaration>- (void)configureService:(NSDictionary *)params</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>params</Name>
+					<Abstract type="html">The configuration parameters for the service. Acceptable
+            configuration values are service-specific.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/configureService:</Anchor>
             <NodeRef refid="44"/>
 		</Token>
 		

@@ -457,4 +457,19 @@ Pod::Spec.new do |s|
 		ss.public_header_files = 'Code/MBToolbox.h'
 	end
 	
+	#################################################################
+	#
+	# BUILD CONTROL
+	#
+	# This directory contains scripts and common resources used for
+	# building Mockingird Toolbox. It is published in the Cocoapod
+	# because it is used by other Mockingbird Library modules such 
+	# as the Mockingbird Data Environment.
+	#
+	#################################################################
+
+	s.subspec 'BuildControl' do |ss|
+		ss.preserve_paths = 'BuildControl/**'
+	end
+
 end

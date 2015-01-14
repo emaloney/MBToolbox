@@ -469,8 +469,7 @@ Pod::Spec.new do |s|
 	#################################################################
 
 	s.subspec 'BuildControl' do |ss|
-		ss.preserve_paths = 'BuildControl/**'
-		ss.exclude_files = 'BuildControl/private/**'
+		ss.preserve_paths = 'BuildControl/public/**'
 	end
 
 end

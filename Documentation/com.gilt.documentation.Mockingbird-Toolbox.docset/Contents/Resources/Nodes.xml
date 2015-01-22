@@ -58,6 +58,7 @@
 						<NodeRef refid="36"/>
 						<NodeRef refid="37"/>
 						<NodeRef refid="38"/>
+						<NodeRef refid="39"/>
 						
 					</Subnodes>
 				</Node>
@@ -67,13 +68,13 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="39"/>
 						<NodeRef refid="40"/>
 						<NodeRef refid="41"/>
 						<NodeRef refid="42"/>
 						<NodeRef refid="43"/>
 						<NodeRef refid="44"/>
 						<NodeRef refid="45"/>
+						<NodeRef refid="46"/>
 						
 					</Subnodes>
 				</Node>
@@ -83,8 +84,8 @@
 					<Name>Constants</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="46"/>
 						<NodeRef refid="47"/>
+						<NodeRef refid="48"/>
 						
 					</Subnodes>
 				</Node>
@@ -897,6 +898,39 @@
             
         </Node>
 		<Node id="30" type="file" documentType="reference">
+            <Name>NSData(MBStringConversion)</Name>
+            <Path>Categories/NSData+MBStringConversion.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Categories/NSData+MBStringConversion.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Categories/NSData+MBStringConversion.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Categories/NSData+MBStringConversion.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Categories/NSData+MBStringConversion.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="31" type="file" documentType="reference">
             <Name>NSError(MBToolbox)</Name>
             <Path>Categories/NSError+MBToolbox.html</Path>
             
@@ -929,7 +963,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="31" type="file" documentType="reference">
+		<Node id="32" type="file" documentType="reference">
             <Name>NSMutableString(MBRegex)</Name>
             <Path>Categories/NSMutableString+MBRegex.html</Path>
             
@@ -956,7 +990,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="32" type="file" documentType="reference">
+		<Node id="33" type="file" documentType="reference">
             <Name>NSString(MBIndentation)</Name>
             <Path>Categories/NSString+MBIndentation.html</Path>
             
@@ -983,7 +1017,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="33" type="file" documentType="reference">
+		<Node id="34" type="file" documentType="reference">
             <Name>NSString(MBMessageDigest)</Name>
             <Path>Categories/NSString+MBMessageDigest.html</Path>
             
@@ -1010,7 +1044,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="34" type="file" documentType="reference">
+		<Node id="35" type="file" documentType="reference">
             <Name>NSString(MBRegex)</Name>
             <Path>Categories/NSString+MBRegex.html</Path>
             
@@ -1037,7 +1071,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="35" type="file" documentType="reference">
+		<Node id="36" type="file" documentType="reference">
             <Name>UIColor(MBToolbox)</Name>
             <Path>Categories/UIColor+MBToolbox.html</Path>
             
@@ -1064,7 +1098,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="36" type="file" documentType="reference">
+		<Node id="37" type="file" documentType="reference">
             <Name>UIFont(MBStringSizing)</Name>
             <Path>Categories/UIFont+MBStringSizing.html</Path>
             
@@ -1091,7 +1125,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="37" type="file" documentType="reference">
+		<Node id="38" type="file" documentType="reference">
             <Name>UIImage(MBImageScaling)</Name>
             <Path>Categories/UIImage+MBImageScaling.html</Path>
             
@@ -1118,7 +1152,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="38" type="file" documentType="reference">
+		<Node id="39" type="file" documentType="reference">
             <Name>UIView(MBSnapshotImage)</Name>
             <Path>Categories/UIView+MBSnapshotImage.html</Path>
             
@@ -1146,7 +1180,7 @@
             
         </Node>
 		
-        <Node id="39" type="file" documentType="reference">
+        <Node id="40" type="file" documentType="reference">
             <Name>MBFileReadOperationDelegate</Name>
             <Path>Protocols/MBFileReadOperationDelegate.html</Path>
             
@@ -1173,7 +1207,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="40" type="file" documentType="reference">
+		<Node id="41" type="file" documentType="reference">
             <Name>MBFilesystemCacheDelegate</Name>
             <Path>Protocols/MBFilesystemCacheDelegate.html</Path>
             
@@ -1200,7 +1234,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="41" type="file" documentType="reference">
+		<Node id="42" type="file" documentType="reference">
             <Name>MBFormattedDescription</Name>
             <Path>Protocols/MBFormattedDescription.html</Path>
             
@@ -1227,7 +1261,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="42" type="file" documentType="reference">
+		<Node id="43" type="file" documentType="reference">
             <Name>MBInstanceVendor</Name>
             <Path>Protocols/MBInstanceVendor.html</Path>
             
@@ -1254,7 +1288,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="43" type="file" documentType="reference">
+		<Node id="44" type="file" documentType="reference">
             <Name>MBModule</Name>
             <Path>Protocols/MBModule.html</Path>
             
@@ -1281,7 +1315,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="44" type="file" documentType="reference">
+		<Node id="45" type="file" documentType="reference">
             <Name>MBService</Name>
             <Path>Protocols/MBService.html</Path>
             
@@ -1308,7 +1342,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="45" type="file" documentType="reference">
+		<Node id="46" type="file" documentType="reference">
             <Name>MBSingleton</Name>
             <Path>Protocols/MBSingleton.html</Path>
             
@@ -1336,12 +1370,12 @@
             
         </Node>
 		
-        <Node id="46" type="file" documentType="reference">
+        <Node id="47" type="file" documentType="reference">
             <Name>MBBitmapPixelType</Name>
             <Path>Constants/MBBitmapPixelType.html</Path>
             
         </Node>
-		<Node id="47" type="file" documentType="reference">
+		<Node id="48" type="file" documentType="reference">
             <Name>MBNetworkAvailabilityFlags</Name>
             <Path>Constants/MBNetworkAvailabilityFlags.html</Path>
             

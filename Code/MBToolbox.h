@@ -61,6 +61,7 @@ FOUNDATION_EXPORT const unsigned char MBToolboxVersionString[];
 #import <MBToolbox/MBServiceManager.h>
 #import <MBToolbox/MBSingleton.h>
 #import <MBToolbox/MBStringFunctions.h>
+#import <MBToolbox/NSData+MBStringConversion.h>
 #import <MBToolbox/NSString+MBIndentation.h>
 #import <MBToolbox/UIFont+MBStringSizing.h>
 #import <MBToolbox/MBThreadLocalStorage.h>

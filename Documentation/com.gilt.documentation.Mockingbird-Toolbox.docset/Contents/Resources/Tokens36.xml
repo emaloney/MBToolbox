@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/UIFont+MBStringSizing.html">
+	<File path="Categories/UIColor+MBToolbox.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/UIFont(MBStringSizing)</TokenIdentifier>
-			<Abstract type="html">A UIFont class extension that adds an API for performing common string
-measurement tasks.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/UIColor(MBToolbox)</TokenIdentifier>
+			<Abstract type="html">A class extension for UIColor that exposes additional color information.</Abstract>
+			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
             
 			
 			<NodeRef refid="36"/>
@@ -14,542 +13,57 @@ measurement tasks.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/isOpaque</TokenIdentifier>
+			<Abstract type="html">Determines whether the receiver represents an opaque color.</Abstract>
+			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it will be wrapped according
-            to the line break mode NSLineBreakByWordWrapping.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string, with the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:</Anchor>
+			<Declaration>- (BOOL)isOpaque</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the receiver is an opaque color; NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/isOpaque</Anchor>
             <NodeRef refid="36"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:maxHeight:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/isDark</TokenIdentifier>
+			<Abstract type="html">Determines whether the receiver represents a dark color.</Abstract>
+			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it will be wrapped according
-            to the line break mode NSLineBreakByWordWrapping.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxHeight</Name>
-					<Abstract type="html">The maximum height allowed for the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string, with the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:maxHeight:</Anchor>
+			<Declaration>- (BOOL)isDark</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the receiver is a dark color; NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/isDark</Anchor>
             <NodeRef refid="36"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxSize:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/highlightColor</TokenIdentifier>
+			<Abstract type="html">Returns a new UIColor instance containing an appropriate highlight color
+for the receiver by adjusting the receiver&apos;s brightness.</Abstract>
+			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxSize</Name>
-					<Abstract type="html">The maximum size allowed for the text. If str would
-            not fit within maxSize.width on a single line, it will be wrapped
-            according to the line break mode NSLineBreakByWordWrapping.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string, with the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxSize:</Anchor>
+			<Declaration>- (UIColor *)highlightColor</Declaration>
+			
+			<ReturnValue><Abstract type="html">A highlight color based on the receiver.</Abstract></ReturnValue>
+			<Anchor>//api/name/highlightColor</Anchor>
             <NodeRef refid="36"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:fractional:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/UIColor/colorWithBrightnessAdjustedByFactor:</TokenIdentifier>
+			<Abstract type="html">Returns a new UIColor instance by adjusting the brightness value of the
+receiver by a given factor.</Abstract>
+			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth fractional:(BOOL)allowFractionalSize</Declaration>
+			<Declaration>- (UIColor *)colorWithBrightnessAdjustedByFactor:(CGFloat)adjustFactor</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it will be wrapped according
-            to the line break mode NSLineBreakByWordWrapping.</Abstract>
-				</Parameter><Parameter>
-					<Name>allowFractionalSize</Name>
-					<Abstract type="html">If YES, the returned size may contain
-            fractional (sub-pixel) values. If NO, the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract>
+					<Name>adjustFactor</Name>
+					<Abstract type="html">The adjustment factor.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:fractional:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:maxHeight:fractional:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight fractional:(BOOL)allowFractionalSize</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it will be wrapped according
-            to the line break mode NSLineBreakByWordWrapping.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxHeight</Name>
-					<Abstract type="html">The maximum height allowed for the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>allowFractionalSize</Name>
-					<Abstract type="html">If YES, the returned size may contain
-            fractional (sub-pixel) values. If NO, the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:maxHeight:fractional:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxSize:fractional:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize fractional:(BOOL)allowFractionalSize</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxSize</Name>
-					<Abstract type="html">The maximum size allowed for the text. If str would
-            not fit within maxSize.width on a single line, it will be wrapped
-            according to the line break mode NSLineBreakByWordWrapping.</Abstract>
-				</Parameter><Parameter>
-					<Name>allowFractionalSize</Name>
-					<Abstract type="html">If YES, the returned size may contain
-            fractional (sub-pixel) values. If NO, the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxSize:fractional:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:lineBreakMode:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth lineBreakMode:(NSLineBreakMode)lineMode</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it may be wrapped according
-            to the specified line break mode.</Abstract>
-				</Parameter><Parameter>
-					<Name>lineMode</Name>
-					<Abstract type="html">The line break mode to use for measuring the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string, with the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:lineBreakMode:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:maxHeight:lineBreakMode:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight lineBreakMode:(NSLineBreakMode)lineMode</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it may be wrapped according
-            to the specified line break mode.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxHeight</Name>
-					<Abstract type="html">The maximum height allowed for the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>lineMode</Name>
-					<Abstract type="html">The line break mode to use for measuring the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string, with the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:maxHeight:lineBreakMode:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxSize:lineBreakMode:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize lineBreakMode:(NSLineBreakMode)lineMode</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxSize</Name>
-					<Abstract type="html">The maximum size allowed for the text. If str would
-            not fit within maxSize.width on a single line, it will be wrapped
-            according to the line break mode NSLineBreakByWordWrapping.</Abstract>
-				</Parameter><Parameter>
-					<Name>lineMode</Name>
-					<Abstract type="html">The line break mode to use for measuring the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string, with the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxSize:lineBreakMode:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:lineBreakMode:fractional:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth lineBreakMode:(NSLineBreakMode)lineMode fractional:(BOOL)allowFractionalSize</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it may be wrapped according
-            to the specified line break mode.</Abstract>
-				</Parameter><Parameter>
-					<Name>lineMode</Name>
-					<Abstract type="html">The line break mode to use for measuring the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>allowFractionalSize</Name>
-					<Abstract type="html">If YES, the returned size may contain
-            fractional (sub-pixel) values. If NO, the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:lineBreakMode:fractional:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:maxHeight:lineBreakMode:fractional:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight lineBreakMode:(NSLineBreakMode)lineMode fractional:(BOOL)allowFractionalSize</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it may be wrapped according
-            to the specified line break mode.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxHeight</Name>
-					<Abstract type="html">The maximum height allowed for the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>lineMode</Name>
-					<Abstract type="html">The line break mode to use for measuring the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>allowFractionalSize</Name>
-					<Abstract type="html">If YES, the returned size may contain
-            fractional (sub-pixel) values. If NO, the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:maxHeight:lineBreakMode:fractional:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxSize:lineBreakMode:fractional:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize lineBreakMode:(NSLineBreakMode)lineMode fractional:(BOOL)allowFractionalSize</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxSize</Name>
-					<Abstract type="html">The maximum size allowed for the text. If str would
-            not fit within maxSize.width on a single line, it may be wrapped
-            according to the specified line break mode.</Abstract>
-				</Parameter><Parameter>
-					<Name>lineMode</Name>
-					<Abstract type="html">The line break mode to use for measuring the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>allowFractionalSize</Name>
-					<Abstract type="html">If YES, the returned size may contain
-            fractional (sub-pixel) values. If NO, the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxSize:lineBreakMode:fractional:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:paragraphStyle:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth paragraphStyle:(NSParagraphStyle *)style</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it may be wrapped according
-            to the specified paragraph style.</Abstract>
-				</Parameter><Parameter>
-					<Name>style</Name>
-					<Abstract type="html">The paragraph style for the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string, with the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:paragraphStyle:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:maxHeight:paragraphStyle:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight paragraphStyle:(NSParagraphStyle *)style</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it may be wrapped according
-            to the specified paragraph style.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxHeight</Name>
-					<Abstract type="html">The maximum height allowed for the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>style</Name>
-					<Abstract type="html">The paragraph style for the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string, with the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:maxHeight:paragraphStyle:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxSize:paragraphStyle:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize paragraphStyle:(NSParagraphStyle *)style</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxSize</Name>
-					<Abstract type="html">The maximum size allowed for the text. If str would
-            not fit within maxSize.width on a single line, it may be wrapped
-            according to the specified paragraph style.</Abstract>
-				</Parameter><Parameter>
-					<Name>style</Name>
-					<Abstract type="html">The paragraph style for the text.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string, with the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxSize:paragraphStyle:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:paragraphStyle:fractional:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth paragraphStyle:(NSParagraphStyle *)style fractional:(BOOL)allowFractionalSize</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it may be wrapped according
-            to the specified paragraph style.</Abstract>
-				</Parameter><Parameter>
-					<Name>style</Name>
-					<Abstract type="html">The paragraph style for the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>allowFractionalSize</Name>
-					<Abstract type="html">If YES, the returned size may contain
-            fractional (sub-pixel) values. If NO, the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:paragraphStyle:fractional:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxWidth:maxHeight:paragraphStyle:fractional:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight paragraphStyle:(NSParagraphStyle *)style fractional:(BOOL)allowFractionalSize</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxWidth</Name>
-					<Abstract type="html">The maximum width allowed for the text. If str would not
-            fit within maxWidth on a single line, it may be wrapped according
-            to the specified paragraph style.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxHeight</Name>
-					<Abstract type="html">The maximum height allowed for the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>style</Name>
-					<Abstract type="html">The paragraph style for the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>allowFractionalSize</Name>
-					<Abstract type="html">If YES, the returned size may contain
-            fractional (sub-pixel) values. If NO, the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxWidth:maxHeight:paragraphStyle:fractional:</Anchor>
-            <NodeRef refid="36"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/UIFont/sizeString:maxSize:paragraphStyle:fractional:</TokenIdentifier>
-			<Abstract type="html">Calculates the size of the bounding rectangle required to draw a given text
-string in the font represented by the receiver.</Abstract>
-			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
-			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize paragraphStyle:(NSParagraphStyle *)style fractional:(BOOL)allowFractionalSize</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>str</Name>
-					<Abstract type="html">The text string to measure.</Abstract>
-				</Parameter><Parameter>
-					<Name>maxSize</Name>
-					<Abstract type="html">The maximum size allowed for the text. If str would
-            not fit within maxSize.width on a single line, it may be wrapped
-            according to the specified paragraph style.</Abstract>
-				</Parameter><Parameter>
-					<Name>style</Name>
-					<Abstract type="html">The paragraph style for the text.</Abstract>
-				</Parameter><Parameter>
-					<Name>allowFractionalSize</Name>
-					<Abstract type="html">If YES, the returned size may contain
-            fractional (sub-pixel) values. If NO, the width and
-            height components rounded up to the nearest integer (whole-pixel)
-            value.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The size required to draw the text string.</Abstract></ReturnValue>
-			<Anchor>//api/name/sizeString:maxSize:paragraphStyle:fractional:</Anchor>
+			<ReturnValue><Abstract type="html">The adjusted color.</Abstract></ReturnValue>
+			<Anchor>//api/name/colorWithBrightnessAdjustedByFactor:</Anchor>
             <NodeRef refid="36"/>
 		</Token>
 		

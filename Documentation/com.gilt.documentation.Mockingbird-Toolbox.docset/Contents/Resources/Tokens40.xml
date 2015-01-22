@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/MBFilesystemCacheDelegate.html">
+	<File path="Protocols/MBFileReadOperationDelegate.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/MBFilesystemCacheDelegate</TokenIdentifier>
-			<Abstract type="html">This protocol is adopted by classes that wish to control the behavior of an
-MBFilesystemCache instance.</Abstract>
-			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/MBFileReadOperationDelegate</TokenIdentifier>
+			<Abstract type="html">This protocol is adopted by classes that wish to be notified about the
+completion status of MBFileReadOperations.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
             
 			
 			<NodeRef refid="40"/>
@@ -14,107 +14,46 @@ MBFilesystemCache instance.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBFilesystemCacheDelegate/filenameForCacheKey:</TokenIdentifier>
-			<Abstract type="html">Called by the MBFilesystemCache to create a filename for a given cache
-key.</Abstract>
-			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBFileReadOperationDelegate/readCompletedWithObject:forOperation:</TokenIdentifier>
+			<Abstract type="html">Called when an MBFileReadOperation completes successfully.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)filenameForCacheKey:(id)key</Declaration>
+			<Declaration>- (void)readCompletedWithObject:(id)readObj forOperation:(MBFileReadOperation *)op</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>key</Name>
-					<Abstract type="html">The cache key for which the filename is sought.</Abstract>
+					<Name>readObj</Name>
+					<Abstract type="html">The object that was read from the filesystem. Typically,
+            this is an NSData object containing the byte data of the file.
+            However, MBFileReadOperation subclasses are free to construct any
+            type of object. For example, an implementation for an image cache
+            may pass UIImage instances.</Abstract>
+				</Parameter><Parameter>
+					<Name>op</Name>
+					<Abstract type="html">The operation that completed.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The filename for the given cache key.</Abstract></ReturnValue>
-			<Anchor>//api/name/filenameForCacheKey:</Anchor>
+			
+			<Anchor>//api/name/readCompletedWithObject:forOperation:</Anchor>
             <NodeRef refid="40"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBFilesystemCacheDelegate/cacheDataFromObject:</TokenIdentifier>
-			<Abstract type="html">Converts the specified cache object into an NSData instance that can be
-written to a file.</Abstract>
-			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBFileReadOperationDelegate/readFailedWithError:forOperation:</TokenIdentifier>
+			<Abstract type="html">Called when an MBFileReadOperation fails.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (NSData *)cacheDataFromObject:(id)cacheObj</Declaration>
+			<Declaration>- (void)readFailedWithError:(NSError *)err forOperation:(MBFileReadOperation *)op</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>cacheObj</Name>
-					<Abstract type="html">The cache object for which the raw data should be
-            returned.</Abstract>
+					<Name>err</Name>
+					<Abstract type="html">An NSError instance describing the error that occurred.</Abstract>
+				</Parameter><Parameter>
+					<Name>op</Name>
+					<Abstract type="html">The operation that failed.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">An NSData representation of the given cache object.</Abstract></ReturnValue>
-			<Anchor>//api/name/cacheDataFromObject:</Anchor>
-            <NodeRef refid="40"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBFilesystemCacheDelegate/objectFromCacheData:</TokenIdentifier>
-			<Abstract type="html">Converts raw data representing a cache object into the cache object itself.
-Used to convert a file into an object.</Abstract>
-			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
-			<Declaration>- (id)objectFromCacheData:(NSData *)cacheData</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>cacheData</Name>
-					<Abstract type="html">The raw data representing the cache object.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The cache object created from the raw cache data.</Abstract></ReturnValue>
-			<Anchor>//api/name/objectFromCacheData:</Anchor>
-            <NodeRef refid="40"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBFilesystemCacheDelegate/shouldStoreObject:forKey:inMemoryCache:</TokenIdentifier>
-			<Abstract type="html">Asks the delegate whether or not the specified object should be stored in the
-memory cache.</Abstract>
-			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
-			
-			<Declaration>- (BOOL)shouldStoreObject:(id)cacheObj forKey:(id)key inMemoryCache:(MBFilesystemCache *)cache</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>cacheObj</Name>
-					<Abstract type="html">The object that may be stored in the memory cache.</Abstract>
-				</Parameter><Parameter>
-					<Name>key</Name>
-					<Abstract type="html">The cache key associated with cacheObj.</Abstract>
-				</Parameter><Parameter>
-					<Name>cache</Name>
-					<Abstract type="html">The MBFilesystemCache in which the object may be cached.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the cacheObj should be stored in the memory cache of
-            cache; NO otherwise.</Abstract></ReturnValue>
-			<Anchor>//api/name/shouldStoreObject:forKey:inMemoryCache:</Anchor>
-            <NodeRef refid="40"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBFilesystemCacheDelegate/shouldStoreObject:forKey:inFilesystemCache:</TokenIdentifier>
-			<Abstract type="html">Asks the delegate whether or not the specified object should be stored in the
-filesystem cache.</Abstract>
-			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
-			
-			<Declaration>- (BOOL)shouldStoreObject:(id)cacheObj forKey:(id)key inFilesystemCache:(MBFilesystemCache *)cache</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>cacheObj</Name>
-					<Abstract type="html">The object that may be stored in the filesystem cache.</Abstract>
-				</Parameter><Parameter>
-					<Name>key</Name>
-					<Abstract type="html">The cache key associated with cacheObj.</Abstract>
-				</Parameter><Parameter>
-					<Name>cache</Name>
-					<Abstract type="html">The MBFilesystemCache in which the object may be cached.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">YES if the cacheObj should be stored in the filesystem cache of
-            cache; NO otherwise.</Abstract></ReturnValue>
-			<Anchor>//api/name/shouldStoreObject:forKey:inFilesystemCache:</Anchor>
+			<Anchor>//api/name/readFailedWithError:forOperation:</Anchor>
             <NodeRef refid="40"/>
 		</Token>
 		

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/MBNetworkAvailabilityFlags.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/MBNetworkAvailabilityFlags</TokenIdentifier>
+			<Abstract type="html">Flags used to indicate the device&apos;s current network availability status.</Abstract>
+			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
+            
+			
+			<NodeRef refid="48"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MBNetworkAvailabilityOffline</TokenIdentifier>
+            <Abstract type="html">The device has no network connection available.</Abstract>
+            <Declaration>MBNetworkAvailabilityOffline</Declaration>
+            
+            <DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
+            
+            <NodeRef refid="48"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MBNetworkAvailabilityOnline</TokenIdentifier>
+            <Abstract type="html">A network connection is available on the device.</Abstract>
+            <Declaration>MBNetworkAvailabilityOnline</Declaration>
+            
+            <DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
+            
+            <NodeRef refid="48"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MBNetworkAvailabilityViaWifi</TokenIdentifier>
+            <Abstract type="html">Network connectivity is being provided by a wifi connection.</Abstract>
+            <Declaration>MBNetworkAvailabilityViaWifi</Declaration>
+            
+            <DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
+            
+            <NodeRef refid="48"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/MBNetworkAvailabilityViaCarrier</TokenIdentifier>
+            <Abstract type="html">Network connectivity is being provided by a carrier connection.</Abstract>
+            <Declaration>MBNetworkAvailabilityViaCarrier</Declaration>
+            
+            <DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
+            
+            <NodeRef refid="48"/>
+        </Token>
+        
+	</File>
+</Tokens>

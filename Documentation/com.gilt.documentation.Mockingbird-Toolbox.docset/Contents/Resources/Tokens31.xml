@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSMutableString+MBRegex.html">
+	<File path="Categories/NSError+MBToolbox.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSMutableString(MBRegex)</TokenIdentifier>
-			<Abstract type="html">An NSMutableString class extension that provides regular expression
-replacement methods.</Abstract>
-			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSError(MBToolbox)</TokenIdentifier>
+			<Abstract type="html">An NSError class extension that provides Mockingbird-specific functionality.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
             
 			
 			<NodeRef refid="31"/>
@@ -14,112 +13,180 @@ replacement methods.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSMutableString/replaceRegexMatches:withTemplate:</TokenIdentifier>
-			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
-			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithCode:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>pattern</Name>
-					<Abstract type="html">The regular expression pattern to match.</Abstract>
-				</Parameter><Parameter>
-					<Name>templ</Name>
-					<Abstract type="html">The template to use for performing replacements of any
-            matches found in the receiver.</Abstract>
+					<Name>code</Name>
+					<Abstract type="html">The error code.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The number of matches performed.</Abstract></ReturnValue>
-			<Anchor>//api/name/replaceRegexMatches:withTemplate:</Anchor>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithCode:</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSMutableString/replaceRegexMatches:withTemplate:options:</TokenIdentifier>
-			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
-			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithCode:userInfo:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfo:(NSDictionary *)dict</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>pattern</Name>
-					<Abstract type="html">The regular expression pattern to match.</Abstract>
+					<Name>code</Name>
+					<Abstract type="html">The error code.</Abstract>
 				</Parameter><Parameter>
-					<Name>templ</Name>
-					<Abstract type="html">The template to use for performing replacements of any
-            matches found in the receiver.</Abstract>
-				</Parameter><Parameter>
-					<Name>options</Name>
-					<Abstract type="html">The options that govern the behavior of the returned
-            regular expression.</Abstract>
+					<Name>dict</Name>
+					<Abstract type="html">The user info dictionary for the returned error.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The number of matches performed.</Abstract></ReturnValue>
-			<Anchor>//api/name/replaceRegexMatches:withTemplate:options:</Anchor>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithCode:userInfo:</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSMutableString/replaceRegexMatches:withTemplate:options:range:</TokenIdentifier>
-			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
-			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithCode:userInfoKey:value:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(NSString *)key value:(id)val</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>pattern</Name>
-					<Abstract type="html">The regular expression pattern to match.</Abstract>
+					<Name>code</Name>
+					<Abstract type="html">The error code.</Abstract>
 				</Parameter><Parameter>
-					<Name>templ</Name>
-					<Abstract type="html">The template to use for performing replacements of any
-            matches found in the receiver.</Abstract>
+					<Name>key</Name>
+					<Abstract type="html">The key whose corresponding value will be stored in the
+            returned error&apos;s user info dictionary.</Abstract>
 				</Parameter><Parameter>
-					<Name>options</Name>
-					<Abstract type="html">The options that govern the behavior of the returned
-            regular expression.</Abstract>
-				</Parameter><Parameter>
-					<Name>range</Name>
-					<Abstract type="html">The range of characters in the receiver within which matching
-            will occur. Characters outside this range will not be affected.</Abstract>
+					<Name>val</Name>
+					<Abstract type="html">The value that will be associated with key.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The number of matches performed.</Abstract></ReturnValue>
-			<Anchor>//api/name/replaceRegexMatches:withTemplate:options:range:</Anchor>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithCode:userInfoKey:value:</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSMutableString/replaceRegexMatches:withTemplate:options:range:error:</TokenIdentifier>
-			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
-			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithDescription:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSError **)errPtr</Declaration>
+			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>pattern</Name>
-					<Abstract type="html">The regular expression pattern to match.</Abstract>
-				</Parameter><Parameter>
-					<Name>templ</Name>
-					<Abstract type="html">The template to use for performing replacements of any
-            matches found in the receiver.</Abstract>
-				</Parameter><Parameter>
-					<Name>options</Name>
-					<Abstract type="html">The options that govern the behavior of the returned
-            regular expression.</Abstract>
-				</Parameter><Parameter>
-					<Name>range</Name>
-					<Abstract type="html">The range of characters in the receiver within which matching
-            will occur. Characters outside this range will not be affected.</Abstract>
-				</Parameter><Parameter>
-					<Name>errPtr</Name>
-					<Abstract type="html">An optional pointer to storage for an NSError instance.
-            If this parameter is non-nil and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an NSError instance describing the problem.</Abstract>
+					<Name>desc</Name>
+					<Abstract type="html">The description of the error, which will be available through
+            the user info key NSLocalizedDescriptionKey as well as the
+            error&apos;s localizedDescription method.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The number of matches performed.</Abstract></ReturnValue>
-			<Anchor>//api/name/replaceRegexMatches:withTemplate:options:range:error:</Anchor>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithDescription:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithDescription:code:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc code:(NSInteger)code</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>desc</Name>
+					<Abstract type="html">The description of the error, which will be available through
+            the user info key NSLocalizedDescriptionKey as well as the
+            error&apos;s localizedDescription method.</Abstract>
+				</Parameter><Parameter>
+					<Name>code</Name>
+					<Abstract type="html">The error code.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithDescription:code:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithDescription:code:userInfoKey:value:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc code:(NSInteger)code userInfoKey:(NSString *)key value:(id)val</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>desc</Name>
+					<Abstract type="html">The description of the error, which will be available through
+            the user info key NSLocalizedDescriptionKey as well as the
+            error&apos;s localizedDescription method.</Abstract>
+				</Parameter><Parameter>
+					<Name>code</Name>
+					<Abstract type="html">The error code.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key whose corresponding value will be stored in the
+            returned error&apos;s user info dictionary.</Abstract>
+				</Parameter><Parameter>
+					<Name>val</Name>
+					<Abstract type="html">The value that will be associated with key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithDescription:code:userInfoKey:value:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithException:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>+ (NSError *)mockingbirdErrorWithException:(NSException *)ex</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>ex</Name>
+					<Abstract type="html">The NSException to wrap in the returned error.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithException:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/errorByAddingUserInfoKey:value:</TokenIdentifier>
+			<Abstract type="html">Creates a new NSError instance by adding the specified user info
+dictionary value to that of the receiver.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>- (NSError *)errorByAddingUserInfoKey:(NSString *)key value:(id)val</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key whose corresponding value will be stored in the
+            returned error&apos;s user info dictionary.</Abstract>
+				</Parameter><Parameter>
+					<Name>val</Name>
+					<Abstract type="html">The value that will be associated with key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the same settings as the receiver,
+            but with the specified user info value added.</Abstract></ReturnValue>
+			<Anchor>//api/name/errorByAddingUserInfoKey:value:</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		

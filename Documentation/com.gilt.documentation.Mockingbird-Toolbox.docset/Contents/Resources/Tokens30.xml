@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSError+MBToolbox.html">
+	<File path="Categories/NSData+MBStringConversion.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSError(MBToolbox)</TokenIdentifier>
-			<Abstract type="html">An NSError class extension that provides Mockingbird-specific functionality.</Abstract>
-			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cat/NSData(MBStringConversion)</TokenIdentifier>
+			<Abstract type="html">An NSData class extension that adds methods for converting between
+NSString and NSData instances.</Abstract>
+			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
             
 			
 			<NodeRef refid="30"/>
@@ -13,180 +14,93 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithCode:</TokenIdentifier>
-			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
-kMBErrorDomain constant.</Abstract>
-			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/dataWithHexString:</TokenIdentifier>
+			<Abstract type="html">Creates a new NSData instance by interpreting the passed-in string as
+a hexadecimal-encoded byte array.</Abstract>
+			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code</Declaration>
+			<Declaration>+ (NSData *)dataWithHexString:(NSString *)hexString</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>code</Name>
-					<Abstract type="html">The error code.</Abstract>
+					<Name>hexString</Name>
+					<Abstract type="html">The string to interpret as a hexadecimal representation
+            of byte data.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
-			<Anchor>//api/name/mockingbirdErrorWithCode:</Anchor>
+			<ReturnValue><Abstract type="html">An NSData instance, or nil if hexString could not be
+            intepreted as hexadecimal.</Abstract></ReturnValue>
+			<Anchor>//api/name/dataWithHexString:</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithCode:userInfo:</TokenIdentifier>
-			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
-kMBErrorDomain constant.</Abstract>
-			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/hexString</TokenIdentifier>
+			<Abstract type="html">Returns a string containing a hexadecimal representation of the bytes
+contained in the receiver.</Abstract>
+			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfo:(NSDictionary *)dict</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>code</Name>
-					<Abstract type="html">The error code.</Abstract>
-				</Parameter><Parameter>
-					<Name>dict</Name>
-					<Abstract type="html">The user info dictionary for the returned error.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
-			<Anchor>//api/name/mockingbirdErrorWithCode:userInfo:</Anchor>
+			<Declaration>- (NSString *)hexString</Declaration>
+			
+			<ReturnValue><Abstract type="html">A hex string.</Abstract></ReturnValue>
+			<Anchor>//api/name/hexString</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithCode:userInfoKey:value:</TokenIdentifier>
-			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
-kMBErrorDomain constant.</Abstract>
-			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/toStringUsingEncoding:</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a byte-encoded string using the given encoding.</Abstract>
+			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(NSString *)key value:(id)val</Declaration>
+			<Declaration>- (NSString *)toStringUsingEncoding:(NSStringEncoding)encoding</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>code</Name>
-					<Abstract type="html">The error code.</Abstract>
-				</Parameter><Parameter>
-					<Name>key</Name>
-					<Abstract type="html">The key whose corresponding value will be stored in the
-            returned error&apos;s user info dictionary.</Abstract>
-				</Parameter><Parameter>
-					<Name>val</Name>
-					<Abstract type="html">The value that will be associated with key.</Abstract>
+					<Name>encoding</Name>
+					<Abstract type="html">The NSStringEncoding to use for interpreting the
+            receiver.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
-			<Anchor>//api/name/mockingbirdErrorWithCode:userInfoKey:value:</Anchor>
+			<ReturnValue><Abstract type="html">An NSString containing the receiver&apos;s bytes interpreted
+            in ASCII format.</Abstract></ReturnValue>
+			<Anchor>//api/name/toStringUsingEncoding:</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithDescription:</TokenIdentifier>
-			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
-kMBErrorDomain constant.</Abstract>
-			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/toStringASCII</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a byte-encoded ASCII string.</Abstract>
+			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>desc</Name>
-					<Abstract type="html">The description of the error, which will be available through
-            the user info key NSLocalizedDescriptionKey as well as the
-            error&apos;s localizedDescription method.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
-			<Anchor>//api/name/mockingbirdErrorWithDescription:</Anchor>
+			<Declaration>- (NSString *)toStringASCII</Declaration>
+			
+			<ReturnValue><Abstract type="html">An NSString containing the receiver&apos;s bytes interpreted
+            in ASCII format.</Abstract></ReturnValue>
+			<Anchor>//api/name/toStringASCII</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithDescription:code:</TokenIdentifier>
-			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
-kMBErrorDomain constant.</Abstract>
-			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/toStringUTF8</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a byte-encoded UTF-8 string.</Abstract>
+			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc code:(NSInteger)code</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>desc</Name>
-					<Abstract type="html">The description of the error, which will be available through
-            the user info key NSLocalizedDescriptionKey as well as the
-            error&apos;s localizedDescription method.</Abstract>
-				</Parameter><Parameter>
-					<Name>code</Name>
-					<Abstract type="html">The error code.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
-			<Anchor>//api/name/mockingbirdErrorWithDescription:code:</Anchor>
+			<Declaration>- (NSString *)toStringUTF8</Declaration>
+			
+			<ReturnValue><Abstract type="html">An NSString containing the receiver&apos;s bytes interpreted
+            in UTF-8 format.</Abstract></ReturnValue>
+			<Anchor>//api/name/toStringUTF8</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithDescription:code:userInfoKey:value:</TokenIdentifier>
-			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
-kMBErrorDomain constant.</Abstract>
-			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/toString</TokenIdentifier>
+			<Abstract type="html">An alias for the toStringUTF8 method.</Abstract>
+			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc code:(NSInteger)code userInfoKey:(NSString *)key value:(id)val</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>desc</Name>
-					<Abstract type="html">The description of the error, which will be available through
-            the user info key NSLocalizedDescriptionKey as well as the
-            error&apos;s localizedDescription method.</Abstract>
-				</Parameter><Parameter>
-					<Name>code</Name>
-					<Abstract type="html">The error code.</Abstract>
-				</Parameter><Parameter>
-					<Name>key</Name>
-					<Abstract type="html">The key whose corresponding value will be stored in the
-            returned error&apos;s user info dictionary.</Abstract>
-				</Parameter><Parameter>
-					<Name>val</Name>
-					<Abstract type="html">The value that will be associated with key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
-			<Anchor>//api/name/mockingbirdErrorWithDescription:code:userInfoKey:value:</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithException:</TokenIdentifier>
-			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
-kMBErrorDomain constant.</Abstract>
-			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			<Declaration>- (NSString *)toString</Declaration>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithException:(NSException *)ex</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>ex</Name>
-					<Abstract type="html">The NSException to wrap in the returned error.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
-			<Anchor>//api/name/mockingbirdErrorWithException:</Anchor>
-            <NodeRef refid="30"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSError/errorByAddingUserInfoKey:value:</TokenIdentifier>
-			<Abstract type="html">Creates a new NSError instance by adding the specified user info
-dictionary value to that of the receiver.</Abstract>
-			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
-			
-			<Declaration>- (NSError *)errorByAddingUserInfoKey:(NSString *)key value:(id)val</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>key</Name>
-					<Abstract type="html">The key whose corresponding value will be stored in the
-            returned error&apos;s user info dictionary.</Abstract>
-				</Parameter><Parameter>
-					<Name>val</Name>
-					<Abstract type="html">The value that will be associated with key.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">A new NSError instance with the same settings as the receiver,
-            but with the specified user info value added.</Abstract></ReturnValue>
-			<Anchor>//api/name/errorByAddingUserInfoKey:value:</Anchor>
+			<ReturnValue><Abstract type="html">An NSString containing the receiver&apos;s bytes interpreted
+            in UTF-8 format.</Abstract></ReturnValue>
+			<Anchor>//api/name/toString</Anchor>
             <NodeRef refid="30"/>
 		</Token>
 		

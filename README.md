@@ -192,6 +192,7 @@ Among the subspecs provided are:
 ##### String Manipulation
 
 * *StringFunctions* - declares the `MBForceString()` and `MBTrimString()` inline functions, and the `MBStringify()` preprocessor macro
+* *StringConversions-NSData* - an `NSData` class extension that adds methods for converting between hexadecimal strings and `NSData` instances, and also provides methods for interpreting `NSData` instances as byte data for `NSString`s of various encodings
 * *Indentation-NSString* - an `NSString` class extension that adds methods for indenting the individual lines in a string using tabs and arbitrary prefixes
 * *StringSizing-UIFont* - a `UIFont` class extension that adds methods for performing common text measurement tasks
 

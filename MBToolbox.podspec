@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBToolbox"
-	s.version               = "1.0.16"
+	s.version               = "1.0.17"
 	s.summary               = "Mockingbird Toolbox"
 	s.description           = "General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
 	s.homepage              = "https://github.com/emaloney/MBToolbox"
@@ -389,6 +389,16 @@ Pod::Spec.new do |s|
 		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Strings/MBStringFunctions.h'
 		ss.public_header_files = 'Code/Strings/MBStringFunctions.h'
+	end
+	
+	#
+	# an NSData class extension that adds methods for converting
+	# between NSString and NSData instances
+	#
+	s.subspec 'StringConversions-NSData' do |ss|
+		ss.dependency 'MBToolbox/Common'
+		ss.source_files = 'Code/Strings/NSData+MBStringConversion.m'
+		ss.public_header_files = 'Code/Strings/NSData+MBStringConversion.h'
 	end
 	
 	#

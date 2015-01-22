@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UIImage(MBImageScaling) Category Reference</title>
+		<title>NSData(MBStringConversion) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UIImage(MBImageScaling) Category Reference</h1>
+				<h1 class="hideInXcode">NSData(MBStringConversion) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,17 +39,24 @@
 	
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/dataWithHexString:">&nbsp;&nbsp;&nbsp;&nbsp;+ dataWithHexString:</option>
+	
+	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/imageScaledByFactor:">&nbsp;&nbsp;&nbsp;&nbsp;- imageScaledByFactor:</option>
+	<option value="//api/name/hexString">&nbsp;&nbsp;&nbsp;&nbsp;- hexString</option>
 	
-	<option value="//api/name/imageScaledByFactor:quality:">&nbsp;&nbsp;&nbsp;&nbsp;- imageScaledByFactor:quality:</option>
+	<option value="//api/name/toString">&nbsp;&nbsp;&nbsp;&nbsp;- toString</option>
 	
-	<option value="//api/name/imageScaledToSize:">&nbsp;&nbsp;&nbsp;&nbsp;- imageScaledToSize:</option>
+	<option value="//api/name/toStringASCII">&nbsp;&nbsp;&nbsp;&nbsp;- toStringASCII</option>
 	
-	<option value="//api/name/imageScaledToSize:quality:">&nbsp;&nbsp;&nbsp;&nbsp;- imageScaledToSize:quality:</option>
+	<option value="//api/name/toStringUTF8">&nbsp;&nbsp;&nbsp;&nbsp;- toStringUTF8</option>
+	
+	<option value="//api/name/toStringUsingEncoding:">&nbsp;&nbsp;&nbsp;&nbsp;- toStringUsingEncoding:</option>
 	
 	
 	
@@ -67,9 +74,9 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Scaling images to a specific size">Scaling images to a specific size</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Converting to and from hexadecimal representation">Converting to and from hexadecimal representation</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Scaling images by a percentage of the original">Scaling images by a percentage of the original</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Interpreting bytes as strings">Interpreting bytes as strings</a></span></li>
 	
 </ul></li>
 
@@ -79,17 +86,25 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataWithHexString:">dataWithHexString:</a></span></li>
+	
+</ul></li>
+
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageScaledByFactor:">imageScaledByFactor:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hexString">hexString</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageScaledByFactor:quality:">imageScaledByFactor:quality:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toString">toString</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageScaledToSize:">imageScaledToSize:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toStringASCII">toStringASCII</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageScaledToSize:quality:">imageScaledToSize:quality:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toStringUTF8">toStringUTF8</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toStringUsingEncoding:">toStringUsingEncoding:</a></span></li>
 	
 </ul></li>
 
@@ -98,7 +113,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UIImage(MBImageScaling) Category Reference" name="top"></a>
+				<a title="NSData(MBStringConversion) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -107,7 +122,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UIImage(MBImageScaling) Category Reference</h1>
+						<h1 class="title title-header">NSData(MBStringConversion) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -115,7 +130,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UIImage+MBImageScaling.h</td>
+	<td class="specification-value">NSData+MBStringConversion.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -125,7 +140,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A class extension for <code>UIImage</code> that provides methods for resizing images.</p>
+						<p>An <code>NSData</code> class extension that adds methods for converting between
+<code>NSString</code> and <code>NSData</code> instances.</p>
 					</div>
 					
 					
@@ -137,19 +153,19 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="Scaling images to a specific size" name="task_Scaling images to a specific size"></a>
-						<h3 class="subsubtitle task-title">Scaling images to a specific size</h3>
+						<a title="Converting to and from hexadecimal representation" name="task_Converting to and from hexadecimal representation"></a>
+						<h3 class="subsubtitle task-title">Converting to and from hexadecimal representation</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/imageScaledToSize:quality:">&ndash;&nbsp;imageScaledToSize:quality:</a></code>
+		<code><a href="#//api/name/dataWithHexString:">+&nbsp;dataWithHexString:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/imageScaledToSize:">&ndash;&nbsp;imageScaledToSize:</a></code>
+		<code><a href="#//api/name/hexString">&ndash;&nbsp;hexString</a></code>
 	</span>
 	
 	
@@ -157,19 +173,31 @@
 						</ul>
 						
 						
-						<a title="Scaling images by a percentage of the original" name="task_Scaling images by a percentage of the original"></a>
-						<h3 class="subsubtitle task-title">Scaling images by a percentage of the original</h3>
+						<a title="Interpreting bytes as strings" name="task_Interpreting bytes as strings"></a>
+						<h3 class="subsubtitle task-title">Interpreting bytes as strings</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/imageScaledByFactor:quality:">&ndash;&nbsp;imageScaledByFactor:quality:</a></code>
+		<code><a href="#//api/name/toStringUsingEncoding:">&ndash;&nbsp;toStringUsingEncoding:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/imageScaledByFactor:">&ndash;&nbsp;imageScaledByFactor:</a></code>
+		<code><a href="#//api/name/toStringASCII">&ndash;&nbsp;toStringASCII</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/toStringUTF8">&ndash;&nbsp;toStringUTF8</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/toString">&ndash;&nbsp;toString</a></code>
 	</span>
 	
 	
@@ -184,6 +212,66 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/dataWithHexString:" title="dataWithHexString:"></a>
+	<h3 class="subsubtitle method-title">dataWithHexString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a new <code>NSData</code> instance by interpreting the passed-in string as
+a hexadecimal-encoded byte array.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSData *)dataWithHexString:(NSString *)<em>hexString</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hexString</em></dt>
+			<dd><p>The string to interpret as a hexadecimal representation
+            of byte data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An <code>NSData</code> instance, or <code>nil</code> if <a href="#//api/name/hexString"><code>hexString</code></a> could not be
+            intepreted as hexadecimal.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSData+MBStringConversion.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
 					
 					<div class="section section-methods">
@@ -191,53 +279,32 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/imageScaledByFactor:" title="imageScaledByFactor:"></a>
-	<h3 class="subsubtitle method-title">imageScaledByFactor:</h3>
+	<a name="//api/name/hexString" title="hexString"></a>
+	<h3 class="subsubtitle method-title">hexString</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Scales the receiver to a new size by applying the specified scale factor.</p>
+		<p>Returns a string containing a hexadecimal representation of the bytes
+contained in the receiver.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (UIImage *)imageScaledByFactor:(CGFloat)<em>scale</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)hexString</code></div>
 
     
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>scale</em></dt>
-			<dd><p>The scale factor that determines the size of the returned
-            image. Numbers less than <code>1.0</code> result in a smaller image; numbers
-            greater than <code>1.0</code> result in a larger image. If this value is
-            <code>1.0</code> exactly, no scaling is performed and <code>self</code> is returned.</p></dd>
-		</dl>
-		
-	</div>
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The resulting image.</p>
+		<p>A hex string.</p>
 	</div>
 	
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The new size is determined by multiplying the width and height by the
-scale factor.</p>
-
-<p>Scaling will be performed using the <code>kCGInterpolationDefault</code> interpolation
-quality.</p>
-	</div>
 	
 	
 	
@@ -247,62 +314,39 @@ quality.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIImage+MBImageScaling.h</code><br />
+		<code class="declared-in-ref">NSData+MBStringConversion.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/imageScaledByFactor:quality:" title="imageScaledByFactor:quality:"></a>
-	<h3 class="subsubtitle method-title">imageScaledByFactor:quality:</h3>
+	<a name="//api/name/toString" title="toString"></a>
+	<h3 class="subsubtitle method-title">toString</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Scales the receiver to a new size by applying the specified scale factor.</p>
+		<p>An alias for the <a href="#//api/name/toStringUTF8"><code>toStringUTF8</code></a> method.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (UIImage *)imageScaledByFactor:(CGFloat)<em>scale</em> quality:(CGInterpolationQuality)<em>quality</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)toString</code></div>
 
     
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>scale</em></dt>
-			<dd><p>The scale factor that determines the size of the returned
-            image. Numbers less than <code>1.0</code> result in a smaller image; numbers
-            greater than <code>1.0</code> result in a larger image. If this value is
-            <code>1.0</code> exactly, no scaling is performed and <code>self</code> is returned.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>quality</em></dt>
-			<dd><p>The interpolation quality to use for scaling the image.</p></dd>
-		</dl>
-		
-	</div>
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The resulting image.</p>
+		<p>An <code>NSString</code> containing the receiver&rsquo;s bytes interpreted
+            in UTF-8 format.</p>
 	</div>
 	
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The new size is determined by multiplying the width and height by the
-scale factor.</p>
-	</div>
 	
 	
 	
@@ -312,56 +356,39 @@ scale factor.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIImage+MBImageScaling.h</code><br />
+		<code class="declared-in-ref">NSData+MBStringConversion.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/imageScaledToSize:" title="imageScaledToSize:"></a>
-	<h3 class="subsubtitle method-title">imageScaledToSize:</h3>
+	<a name="//api/name/toStringASCII" title="toStringASCII"></a>
+	<h3 class="subsubtitle method-title">toStringASCII</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Scales the receiver to the specified size.</p>
+		<p>Interprets the receiver as a byte-encoded ASCII string.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (UIImage *)imageScaledToSize:(CGSize)<em>newSize</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)toStringASCII</code></div>
 
     
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>newSize</em></dt>
-			<dd><p>The size of the <code>UIImage</code> to be returned. If this is the
-            same size as the receiver, no scaling is performed and <code>self</code> is
-            returned.</p></dd>
-		</dl>
-		
-	</div>
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The resulting image.</p>
+		<p>An <code>NSString</code> containing the receiver&rsquo;s bytes interpreted
+            in ASCII format.</p>
 	</div>
 	
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Scaling will be performed using the <code>kCGInterpolationDefault</code> interpolation
-quality.</p>
-	</div>
 	
 	
 	
@@ -371,50 +398,34 @@ quality.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIImage+MBImageScaling.h</code><br />
+		<code class="declared-in-ref">NSData+MBStringConversion.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/imageScaledToSize:quality:" title="imageScaledToSize:quality:"></a>
-	<h3 class="subsubtitle method-title">imageScaledToSize:quality:</h3>
+	<a name="//api/name/toStringUTF8" title="toStringUTF8"></a>
+	<h3 class="subsubtitle method-title">toStringUTF8</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Scales the receiver to the specified size.</p>
+		<p>Interprets the receiver as a byte-encoded UTF-8 string.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (UIImage *)imageScaledToSize:(CGSize)<em>newSize</em> quality:(CGInterpolationQuality)<em>quality</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)toStringUTF8</code></div>
 
     
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>newSize</em></dt>
-			<dd><p>The size of the <code>UIImage</code> to be returned. If this is the
-            same size as the receiver, no scaling is performed and <code>self</code> is
-            returned.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>quality</em></dt>
-			<dd><p>The interpolation quality to use for scaling the image.</p></dd>
-		</dl>
-		
-	</div>
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The resulting image.</p>
+		<p>An <code>NSString</code> containing the receiver&rsquo;s bytes interpreted
+            in UTF-8 format.</p>
 	</div>
 	
 	
@@ -429,7 +440,60 @@ quality.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIImage+MBImageScaling.h</code><br />
+		<code class="declared-in-ref">NSData+MBStringConversion.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/toStringUsingEncoding:" title="toStringUsingEncoding:"></a>
+	<h3 class="subsubtitle method-title">toStringUsingEncoding:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Interprets the receiver as a byte-encoded string using the given encoding.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)toStringUsingEncoding:(NSStringEncoding)<em>encoding</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>encoding</em></dt>
+			<dd><p>The <code>NSStringEncoding</code> to use for interpreting the
+            receiver.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An <code>NSString</code> containing the receiver&rsquo;s bytes interpreted
+            in ASCII format.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSData+MBStringConversion.h</code><br />
 	</div>				
 	
 	

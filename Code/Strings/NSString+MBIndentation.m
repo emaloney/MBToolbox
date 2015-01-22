@@ -13,7 +13,7 @@
 
 /******************************************************************************/
 #pragma mark -
-#pragma mark NSString class additions
+#pragma mark NSString extensions for indenting lines
 /******************************************************************************/
 
 @implementation NSString (MBIndentation)

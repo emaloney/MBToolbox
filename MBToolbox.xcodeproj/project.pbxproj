@@ -93,7 +93,7 @@
 		3B58EA041A65BB5800FDCB66 /* MBStringFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CBC198811BD009A2126 /* MBStringFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B58EA051A65BB5800FDCB66 /* NSString+MBIndentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8CBD198811BD009A2126 /* NSString+MBIndentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B58EA061A65BB5800FDCB66 /* UIFont+MBStringSizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B47588819C0DF8000619FF1 /* UIFont+MBStringSizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B6A2DDB1A71589B00A5ED84 /* NSData+MBStringConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B6A2DD91A71589B00A5ED84 /* NSData+MBStringConversion.h */; };
+		3B6A2DDB1A71589B00A5ED84 /* NSData+MBStringConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B6A2DD91A71589B00A5ED84 /* NSData+MBStringConversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B6A2DDC1A71589B00A5ED84 /* NSData+MBStringConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A2DDA1A71589B00A5ED84 /* NSData+MBStringConversion.m */; };
 /* End PBXBuildFile section */
 
@@ -471,9 +471,9 @@
 				3B58E9F81A65BB5700FDCB66 /* NSString+MBMessageDigest.h in Headers */,
 				3B58E9F91A65BB5700FDCB66 /* MBModule.h in Headers */,
 				3B58E9FA1A65BB5700FDCB66 /* MBModuleLog.h in Headers */,
-				3B6A2DDB1A71589B00A5ED84 /* NSData+MBStringConversion.h in Headers */,
 				3B58E9FB1A65BB5700FDCB66 /* MBNetworkIndicator.h in Headers */,
 				3B58E9FC1A65BB5700FDCB66 /* MBNetworkMonitor.h in Headers */,
+				3B6A2DDB1A71589B00A5ED84 /* NSData+MBStringConversion.h in Headers */,
 				3B58E9FD1A65BB5700FDCB66 /* MBFilesystemOperations.h in Headers */,
 				3B58E9FE1A65BB5700FDCB66 /* MBOperationQueue.h in Headers */,
 				3B58E9FF1A65BB5800FDCB66 /* MBRegexCache.h in Headers */,

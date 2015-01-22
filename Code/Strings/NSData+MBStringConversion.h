@@ -13,6 +13,10 @@
 #pragma mark NSData extensions for string conversion
 /******************************************************************************/
 
+/*!
+ An `NSData` class extension that adds methods for converting between
+ `NSString` and `NSData` instances.
+ */
 @interface NSData (MBStringConversion)
 
 /*----------------------------------------------------------------------------*/

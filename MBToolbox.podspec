@@ -397,7 +397,7 @@ Pod::Spec.new do |s|
 	#
 	s.subspec 'StringConversions-NSData' do |ss|
 		ss.dependency 'MBToolbox/Common'
-		ss.source_files = 'Code/Strings/NSData+MBStringConversion.m'
+		ss.source_files = 'Code/Strings/NSData+MBStringConversion.{h,m}'
 		ss.public_header_files = 'Code/Strings/NSData+MBStringConversion.h'
 	end
 	

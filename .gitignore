@@ -2,3 +2,5 @@
 xcuserdata
 *.xccheckout
 Products/
+build/
+

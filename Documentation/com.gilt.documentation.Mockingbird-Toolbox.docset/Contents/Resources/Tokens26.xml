@@ -18,7 +18,7 @@ among multiple threads simultaneously.</Abstract>
 			<Abstract type="html">Initializes a new MBThreadsafeCache instance.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithExceptionProtection:(BOOL)protect ignoreMemoryWarnings:(BOOL)ignore</Declaration>
+			<Declaration>- (instancetype)initWithExceptionProtection:(BOOL)protect ignoreMemoryWarnings:(BOOL)ignore</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>protect</Name>
@@ -42,7 +42,7 @@ among multiple threads simultaneously.</Abstract>
 			<Abstract type="html">The default initializer for MBThreadsafeCache instances.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (id)init</Declaration>
+			<Declaration>- (instancetype)init</Declaration>
 			
 			
 			<Anchor>//api/name/init</Anchor>

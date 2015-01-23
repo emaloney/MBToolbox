@@ -44,7 +44,7 @@ a cache object to a file.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to write to the specified file.</Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithObject:(id)obj inCache:(MBFilesystemCache *)fc forFilePath:(NSString *)path</Declaration>
+			<Declaration>- (instancetype)initWithObject:(id)obj inCache:(MBFilesystemCache *)fc forFilePath:(NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>obj</Name>

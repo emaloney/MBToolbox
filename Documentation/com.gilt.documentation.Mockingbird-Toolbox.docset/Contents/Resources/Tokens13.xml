@@ -18,7 +18,7 @@ filesystem.</Abstract>
 			<Abstract type="html">Initializes the receiver with the given name.</Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithName:(NSString *)name</Declaration>
+			<Declaration>- (instancetype)initWithName:(NSString *)name</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>name</Name>
@@ -38,7 +38,7 @@ filesystem.</Abstract>
 			<Abstract type="html">Initializes the receiver with the given name.</Abstract>
 			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithName:(NSString *)name cacheDelegate:(id)delegate</Declaration>
+			<Declaration>- (instancetype)initWithName:(NSString *)name cacheDelegate:(id)delegate</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>name</Name>

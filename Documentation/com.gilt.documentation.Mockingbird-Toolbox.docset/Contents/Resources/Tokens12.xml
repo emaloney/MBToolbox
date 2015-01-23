@@ -40,7 +40,7 @@ data to a file.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to write to the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (id)initWithData:(NSData *)data forFilePath:(NSString *)path</Declaration>
+			<Declaration>- (instancetype)initWithData:(NSData *)data forFilePath:(NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>data</Name>

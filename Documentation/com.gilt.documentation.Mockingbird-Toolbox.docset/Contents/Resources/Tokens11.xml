@@ -40,7 +40,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to read from the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (id)initForFilePath:(NSString *)path delegate:(NSObject&lt;MBFileReadOperationDelegate&gt; *)delegate</Declaration>
+			<Declaration>- (instancetype)initForFilePath:(NSString *)path delegate:(NSObject&lt;MBFileReadOperationDelegate&gt; *)delegate</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>

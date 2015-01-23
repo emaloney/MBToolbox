@@ -91,9 +91,9 @@
 
  @return    The receiver.
  */
-- (id) initWithObject:(id)obj
-              inCache:(MBFilesystemCache*)fc
-          forFilePath:(NSString*)path;
+- (instancetype) initWithObject:(id)obj
+                        inCache:(MBFilesystemCache*)fc
+                    forFilePath:(NSString*)path;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting information about the operation

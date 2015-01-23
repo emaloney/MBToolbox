@@ -25,7 +25,7 @@ MBImplementSingleton();
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-- (id) init
+- (instancetype) init
 {
     if (DEBUG_FLAG(DEBUG_DISABLE_CACHING)) {
         errorLog(@"WARNING: %@ compiled with regular expression caching DISABLED!", [self class]);

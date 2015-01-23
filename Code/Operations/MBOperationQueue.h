@@ -27,7 +27,7 @@
  
  @return    self
  */
-- (id) init;
+- (instancetype) init;
 
 /*!
  Initializes the queue.
@@ -36,6 +36,6 @@
  
  @return    self
  */
-- (id) initWithMaxConcurrentOperationCount:(NSInteger)cnt;
+- (instancetype) initWithMaxConcurrentOperationCount:(NSInteger)cnt;
 
 @end

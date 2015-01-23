@@ -39,7 +39,7 @@
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-- (id) initWithBitmapContext:(CGContextRef)bitmap
+- (instancetype) initWithBitmapContext:(CGContextRef)bitmap
 {
     self = [super init];
     if (self) {

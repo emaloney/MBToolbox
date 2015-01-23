@@ -160,7 +160,7 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
  
  @return    The receiver.
  */
-- (id) initWithName:(NSString*)name;
+- (instancetype) initWithName:(NSString*)name;
 
 /*!
  Initializes the receiver with the given name.
@@ -178,7 +178,7 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
  
  @return    The receiver.
  */
-- (id) initWithName:(NSString*)name cacheDelegate:(id)delegate;
+- (instancetype) initWithName:(NSString*)name cacheDelegate:(id)delegate;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Cache properties

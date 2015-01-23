@@ -42,7 +42,7 @@ MBImplementSingleton();
     return [[self alloc] initForFilePath:path delegate:del];
 }
 
-- (id) initForFilePath:(NSString*)path delegate:(NSObject<MBFileReadOperationDelegate>*)del
+- (instancetype) initForFilePath:(NSString*)path delegate:(NSObject<MBFileReadOperationDelegate>*)del
 {
     self = [super init];
     if (self) {
@@ -154,7 +154,7 @@ MBImplementSingleton();
     return [[self alloc] initWithData:data forFilePath:path];
 }
 
-- (id) initWithData:(NSData*)data forFilePath:(NSString*)path
+- (instancetype) initWithData:(NSData*)data forFilePath:(NSString*)path
 {
     self = [super init];
     if (self) {
@@ -218,12 +218,12 @@ MBImplementSingleton();
     return [[self alloc] initWithFilePath:path moveImmediately:YES];
 }
 
-- (id) initWithFilePath:(NSString*)path
+- (instancetype) initWithFilePath:(NSString*)path
 {
     return [self initWithFilePath:path moveImmediately:YES];
 }
 
-- (id) initWithFilePath:(NSString*)path moveImmediately:(BOOL)moveNow
+- (instancetype) initWithFilePath:(NSString*)path moveImmediately:(BOOL)moveNow
 {
     self = [super init];
     if (self) {

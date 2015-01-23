@@ -56,9 +56,9 @@ MBImplementSingleton();
     return [[self alloc] initWithObject:obj inCache:fc forFilePath:path];
 }
 
-- (id) initWithObject:(id)obj 
-              inCache:(MBFilesystemCache*)fc
-          forFilePath:(NSString*)path
+- (instancetype) initWithObject:(id)obj 
+                        inCache:(MBFilesystemCache*)fc
+                    forFilePath:(NSString*)path
 {
     self = [super initWithData:nil forFilePath:path];
     if (self) {

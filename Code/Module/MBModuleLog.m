@@ -41,7 +41,7 @@
     return [[self alloc] initWithName:[[module class] moduleName]];
 }
 
-- (id) initWithName:(NSString*)moduleName
+- (instancetype) initWithName:(NSString*)moduleName
 {
     self = [super init];
     if (self) {

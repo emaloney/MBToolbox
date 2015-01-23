@@ -17,12 +17,12 @@
 
 @implementation MBOperationQueue
 
-- (id) init
+- (instancetype) init
 {
     return [self initWithMaxConcurrentOperationCount:NSOperationQueueDefaultMaxConcurrentOperationCount];
 }
 
-- (id) initWithMaxConcurrentOperationCount:(NSInteger)cnt
+- (instancetype) initWithMaxConcurrentOperationCount:(NSInteger)cnt
 {
     self = [super init];
     if (self) {

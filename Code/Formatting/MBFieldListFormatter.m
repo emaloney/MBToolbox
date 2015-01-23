@@ -50,7 +50,7 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
     return fields;
 }
 
-- (id) init
+- (instancetype) init
 {
     self = [super init];
     if (self) {

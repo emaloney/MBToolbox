@@ -112,7 +112,7 @@
  
  @return    The receiver.
  */
-- (id) initForFilePath:(NSString*)path delegate:(NSObject<MBFileReadOperationDelegate>*)delegate;
+- (instancetype) initForFilePath:(NSString*)path delegate:(NSObject<MBFileReadOperationDelegate>*)delegate;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting information about the operation
@@ -222,7 +222,7 @@
 
  @return    The receiver.
  */
-- (id) initWithData:(NSData*)data forFilePath:(NSString*)path;
+- (instancetype) initWithData:(NSData*)data forFilePath:(NSString*)path;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting information about the operation
@@ -306,7 +306,7 @@
 
  @return    The receiver.
  */
-- (id) initWithFilePath:(NSString*)path;
+- (instancetype) initWithFilePath:(NSString*)path;
 
 /*!
  Initializes the receiver so it can be used to delete the specified file.
@@ -321,7 +321,7 @@
 
  @return    The receiver.
  */
-- (id) initWithFilePath:(NSString*)path moveImmediately:(BOOL)moveNow;
+- (instancetype) initWithFilePath:(NSString*)path moveImmediately:(BOOL)moveNow;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting information about the operation

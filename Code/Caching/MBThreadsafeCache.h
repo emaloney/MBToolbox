@@ -42,15 +42,15 @@
  @param     ignore If `YES`, the cache will not automatically clear itself when
             a memory warning occurs.
  */
-- (id) initWithExceptionProtection:(BOOL)protect
-              ignoreMemoryWarnings:(BOOL)ignore;
+- (instancetype) initWithExceptionProtection:(BOOL)protect
+                        ignoreMemoryWarnings:(BOOL)ignore;
 
 /*!
  The default initializer for `MBThreadsafeCache` instances.
 
  Equivalent to calling `initWithExceptionProtection:NO ignoreMemoryWarnings:NO`.
  */
-- (id) init;
+- (instancetype) init;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Accessing cached items

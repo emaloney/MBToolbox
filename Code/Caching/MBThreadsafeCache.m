@@ -30,13 +30,13 @@
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-- (id) init
+- (instancetype) init
 {
     return [self initWithExceptionProtection:NO ignoreMemoryWarnings:NO];
 }
 
-- (id) initWithExceptionProtection:(BOOL)protect
-              ignoreMemoryWarnings:(BOOL)ignore
+- (instancetype) initWithExceptionProtection:(BOOL)protect
+                        ignoreMemoryWarnings:(BOOL)ignore
 {
     self = [super init];
     if (self) {

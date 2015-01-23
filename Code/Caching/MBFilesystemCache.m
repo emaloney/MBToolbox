@@ -63,7 +63,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-- (id) initWithName:(NSString*)name cacheDelegate:(id)delegate
+- (instancetype) initWithName:(NSString*)name cacheDelegate:(id)delegate
 {
     self = [super init];
     if (self) {
@@ -81,7 +81,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
     return self;
 }
 
-- (id) initWithName:(NSString*)name
+- (instancetype) initWithName:(NSString*)name
 {
     return [self initWithName:name cacheDelegate:self];
 }
@@ -448,7 +448,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
     return cpo;
 }
 
-- (id) init
+- (instancetype) init
 {
     self = [super init];
     if (self) {

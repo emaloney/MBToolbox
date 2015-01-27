@@ -93,7 +93,7 @@ replacement methods.</Abstract>
 			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSError **)errPtr</Declaration>
+			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -113,9 +113,8 @@ replacement methods.</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
 					<Abstract type="html">An optional pointer to storage for an NSError instance.
-            If this parameter is non-nil and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an NSError instance describing the problem.</Abstract>
+            If this parameter is non-nil and an error occurs, *errPtr
+            will be updated to point to an NSError describing the problem.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">The number of matches performed.</Abstract></ReturnValue>

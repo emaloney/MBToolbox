@@ -116,9 +116,8 @@
             will occur. Characters outside this range will not be affected.
 
  @param     errPtr An optional pointer to storage for an `NSError` instance.
-            If this parameter is non-`nil` and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an `NSError` instance describing the problem.
+            If this parameter is non-`nil` and an error occurs, `*errPtr`
+            will be updated to point to an `NSError` describing the problem.
 
  @return    The number of matches performed.
  */
@@ -126,7 +125,7 @@
                       withTemplate:(NSString*)templ
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
-                             error:(NSError**)errPtr;
+                             error:(out NSError**)errPtr;
 @end
 
 /******************************************************************************/
@@ -180,15 +179,14 @@
             regular expression.
  
  @param     errPtr An optional pointer to storage for an `NSError` instance.
-            If this parameter is non-`nil` and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an `NSError` instance describing the problem.
+            If this parameter is non-`nil` and an error occurs, `*errPtr`
+            will be updated to point to an `NSError` describing the problem.
 
  @return    The regular expression, or `nil` if the receiver could not be
             interpreted as a valid regular expression.
  */
 - (NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options
-                                                error:(NSError**)errPtr;
+                                                error:(out NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Escaping
@@ -274,9 +272,8 @@
             will occur.
 
  @param     errPtr An optional pointer to storage for an `NSError` instance.
-            If this parameter is non-`nil` and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an `NSError` instance describing the problem.
+            If this parameter is non-`nil` and an error occurs, `*errPtr`
+            will be updated to point to an `NSError` describing the problem.
 
  @return    An array of `NSTextCheckingResult` objects representing the regular
             expression pattern matches found within the receiver.
@@ -284,7 +281,7 @@
 - (NSArray*) matchesWithRegex:(NSString*)pattern
                       options:(NSRegularExpressionOptions)options
                         range:(NSRange)range
-                        error:(NSError**)errPtr;
+                        error:(out NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Testing for pattern matches
@@ -349,9 +346,8 @@
             will occur.
 
  @param     errPtr An optional pointer to storage for an `NSError` instance.
-            If this parameter is non-`nil` and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an `NSError` instance describing the problem.
+            If this parameter is non-`nil` and an error occurs, `*errPtr`
+            will be updated to point to an `NSError` describing the problem.
 
  @return    `YES` if the receiver contained at least one match of `pattern`;
             `NO` if there were no matches.
@@ -359,7 +355,7 @@
 - (BOOL) isMatchedByRegex:(NSString*)pattern
                   options:(NSRegularExpressionOptions)options
                     range:(NSRange)range
-                    error:(NSError**)errPtr;
+                    error:(out NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Counting pattern matches
@@ -421,16 +417,15 @@
             will occur.
 
  @param     errPtr An optional pointer to storage for an `NSError` instance.
-            If this parameter is non-`nil` and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an `NSError` instance describing the problem.
+            If this parameter is non-`nil` and an error occurs, `*errPtr`
+            will be updated to point to an `NSError` describing the problem.
 
  @return    The number of matches.
  */
 - (NSUInteger) numberOfRegexMatches:(NSString*)pattern
                             options:(NSRegularExpressionOptions)options
                               range:(NSRange)range
-                              error:(NSError**)errPtr;
+                              error:(out NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Finding the first pattern match
@@ -495,9 +490,8 @@
             will occur.
 
  @param     errPtr An optional pointer to storage for an `NSError` instance.
-            If this parameter is non-`nil` and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an `NSError` instance describing the problem.
+            If this parameter is non-`nil` and an error occurs, `*errPtr`
+            will be updated to point to an `NSError` describing the problem.
 
  @return    An `NSTextCheckingResult` instance containing the results of the
             match.
@@ -505,7 +499,7 @@
 - (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern
                                   options:(NSRegularExpressionOptions)options
                                     range:(NSRange)range
-                                    error:(NSError**)errPtr;
+                                    error:(out NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting the range of the first pattern match
@@ -570,9 +564,8 @@
             will occur.
 
  @param     errPtr An optional pointer to storage for an `NSError` instance.
-            If this parameter is non-`nil` and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an `NSError` instance describing the problem.
+            If this parameter is non-`nil` and an error occurs, `*errPtr`
+            will be updated to point to an `NSError` describing the problem.
 
  @return    The range of the first match. Will be {`NSNotFound`, `0`} if there
             is no match.
@@ -580,7 +573,7 @@
 - (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
-                             error:(NSError**)errPtr;
+                             error:(out NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Creating a new string by replacing pattern matches
@@ -661,9 +654,8 @@
             will occur.
 
  @param     errPtr An optional pointer to storage for an `NSError` instance.
-            If this parameter is non-`nil` and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an `NSError` instance describing the problem.
+            If this parameter is non-`nil` and an error occurs, `*errPtr`
+            will be updated to point to an `NSError` describing the problem.
 
  @return    The resulting string.
  */
@@ -671,6 +663,6 @@
                                withTemplate:(NSString*)templ
                                     options:(NSRegularExpressionOptions)options
                                       range:(NSRange)range
-                                      error:(NSError**)errPtr;
+                                      error:(out NSError**)errPtr;
 
 @end

@@ -73,14 +73,15 @@
  @param     path the filesystem path of the file for which the MD5 will
             be computed
  
- @param     errPtr if an error occurs and this parameter is non-`nil`,
-            the error will be stored here upon return
- 
+ @param     errPtr If an error occurs and this parameter is non-`nil`,
+             `*errPtr` will be updated to point to an `NSError` instance
+            containing further information about the error.
+
  @return    the MD5 hash, as a lowercase hexadecimal string; if an error
             occurs while attempting to read the file, `nil`
             is returned
  */
-+ (NSString*) MD5ForFileAtPath:(NSString*)path error:(NSError**)errPtr;
++ (NSString*) MD5ForFileAtPath:(NSString*)path error:(out NSError**)errPtr;
 
 /*!
  Computes an MD5 hash for the contents of a file.
@@ -143,14 +144,15 @@
  @param     path the filesystem path of the file for which the SHA-1 will
             be computed
  
- @param     errPtr if an error occurs and this parameter is non-`nil`,
-            the error will be stored here upon return
+ @param     errPtr If an error occurs and this parameter is non-`nil`,
+             `*errPtr` will be updated to point to an `NSError` instance
+            containing further information about the error.
  
  @return    the SHA-1 hash, as a lowercase hexadecimal string; if an error
             occurs while attempting to read the file, `nil`
             is returned
  */
-+ (NSString*) SHA1ForFileAtPath:(NSString*)path error:(NSError**)errPtr;
++ (NSString*) SHA1ForFileAtPath:(NSString*)path error:(out NSError**)errPtr;
 
 /*!
  Computes an SHA-1 hash for the contents of a file.

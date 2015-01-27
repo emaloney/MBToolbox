@@ -53,7 +53,7 @@ regular expression pattern string.</Abstract>
 regular expression pattern string.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)options error:(NSError **)errPtr</Declaration>
+			<Declaration>- (NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)options error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>options</Name>
@@ -62,9 +62,8 @@ regular expression pattern string.</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
 					<Abstract type="html">An optional pointer to storage for an NSError instance.
-            If this parameter is non-nil and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an NSError instance describing the problem.</Abstract>
+            If this parameter is non-nil and an error occurs, *errPtr
+            will be updated to point to an NSError describing the problem.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">The regular expression, or nil if the receiver could not be
@@ -170,7 +169,7 @@ contained in the receiver.</Abstract>
 			<Abstract type="html">Matches the specified regular expression against the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSArray *)matchesWithRegex:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSError **)errPtr</Declaration>
+			<Declaration>- (NSArray *)matchesWithRegex:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -186,9 +185,8 @@ contained in the receiver.</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
 					<Abstract type="html">An optional pointer to storage for an NSError instance.
-            If this parameter is non-nil and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an NSError instance describing the problem.</Abstract>
+            If this parameter is non-nil and an error occurs, *errPtr
+            will be updated to point to an NSError describing the problem.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An array of NSTextCheckingResult objects representing the regular
@@ -272,7 +270,7 @@ regular expression pattern within the specified range.</Abstract>
 regular expression pattern within the specified range.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)isMatchedByRegex:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSError **)errPtr</Declaration>
+			<Declaration>- (BOOL)isMatchedByRegex:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -288,9 +286,8 @@ regular expression pattern within the specified range.</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
 					<Abstract type="html">An optional pointer to storage for an NSError instance.
-            If this parameter is non-nil and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an NSError instance describing the problem.</Abstract>
+            If this parameter is non-nil and an error occurs, *errPtr
+            will be updated to point to an NSError describing the problem.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">YES if the receiver contained at least one match of pattern;
@@ -371,7 +368,7 @@ expression pattern.</Abstract>
 expression pattern.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)numberOfRegexMatches:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSError **)errPtr</Declaration>
+			<Declaration>- (NSUInteger)numberOfRegexMatches:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -387,9 +384,8 @@ expression pattern.</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
 					<Abstract type="html">An optional pointer to storage for an NSError instance.
-            If this parameter is non-nil and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an NSError instance describing the problem.</Abstract>
+            If this parameter is non-nil and an error occurs, *errPtr
+            will be updated to point to an NSError describing the problem.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">The number of matches.</Abstract></ReturnValue>
@@ -472,7 +468,7 @@ found within the receiver.</Abstract>
 found within the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSTextCheckingResult *)firstRegexMatch:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSError **)errPtr</Declaration>
+			<Declaration>- (NSTextCheckingResult *)firstRegexMatch:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -488,9 +484,8 @@ found within the receiver.</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
 					<Abstract type="html">An optional pointer to storage for an NSError instance.
-            If this parameter is non-nil and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an NSError instance describing the problem.</Abstract>
+            If this parameter is non-nil and an error occurs, *errPtr
+            will be updated to point to an NSError describing the problem.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An NSTextCheckingResult instance containing the results of the
@@ -574,7 +569,7 @@ the receiver.</Abstract>
 the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSRange)rangeOfFirstRegexMatch:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSError **)errPtr</Declaration>
+			<Declaration>- (NSRange)rangeOfFirstRegexMatch:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -590,9 +585,8 @@ the receiver.</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
 					<Abstract type="html">An optional pointer to storage for an NSError instance.
-            If this parameter is non-nil and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an NSError instance describing the problem.</Abstract>
+            If this parameter is non-nil and an error occurs, *errPtr
+            will be updated to point to an NSError describing the problem.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">The range of the first match. Will be {NSNotFound, 0} if there
@@ -685,7 +679,7 @@ expression pattern with the replacement template provided.</Abstract>
 expression pattern with the replacement template provided.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByReplacingRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSError **)errPtr</Declaration>
+			<Declaration>- (NSString *)stringByReplacingRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -705,9 +699,8 @@ expression pattern with the replacement template provided.</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
 					<Abstract type="html">An optional pointer to storage for an NSError instance.
-            If this parameter is non-nil and an error occurs, the memory
-            location pointed to by this parameter will be modified to reference
-            an NSError instance describing the problem.</Abstract>
+            If this parameter is non-nil and an error occurs, *errPtr
+            will be updated to point to an NSError describing the problem.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">The resulting string.</Abstract></ReturnValue>

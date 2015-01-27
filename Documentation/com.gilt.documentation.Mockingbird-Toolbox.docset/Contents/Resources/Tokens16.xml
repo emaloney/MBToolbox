@@ -89,7 +89,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an MD5 hash for the contents of a file.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForFileAtPath:(NSString *)path error:(NSError **)errPtr</Declaration>
+			<Declaration>+ (NSString *)MD5ForFileAtPath:(NSString *)path error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -97,8 +97,9 @@ sources.</Abstract>
             be computed</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
-					<Abstract type="html">if an error occurs and this parameter is non-nil,
-            the error will be stored here upon return</Abstract>
+					<Abstract type="html">If an error occurs and this parameter is non-nil,
+             *errPtr will be updated to point to an NSError instance
+            containing further information about the error.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">the MD5 hash, as a lowercase hexadecimal string; if an error
@@ -204,7 +205,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an SHA-1 hash for the contents of a file.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)SHA1ForFileAtPath:(NSString *)path error:(NSError **)errPtr</Declaration>
+			<Declaration>+ (NSString *)SHA1ForFileAtPath:(NSString *)path error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -212,8 +213,9 @@ sources.</Abstract>
             be computed</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
-					<Abstract type="html">if an error occurs and this parameter is non-nil,
-            the error will be stored here upon return</Abstract>
+					<Abstract type="html">If an error occurs and this parameter is non-nil,
+             *errPtr will be updated to point to an NSError instance
+            containing further information about the error.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">the SHA-1 hash, as a lowercase hexadecimal string; if an error

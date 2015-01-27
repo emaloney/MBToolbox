@@ -21,7 +21,7 @@ itself when memory warnings occur.</Abstract>
 expression pattern and options.</Abstract>
 			<DeclaredIn>MBRegexCache.h</DeclaredIn>
 			
-			<Declaration>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(NSError **)errPtr</Declaration>
+			<Declaration>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -33,9 +33,9 @@ expression pattern and options.</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
 					<Abstract type="html">If this method returns nil and this parameter is non-nil,
-            it will be used to store a pointer to an NSError instance that 
-            contains further information about the error. If nil and an error
-            occurs, a message will be logged to the console.</Abstract>
+            *errPtr will be updated to point to an NSError instance
+            containing further information about the error. If nil and an
+            error occurs, a message will be logged to the console.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">A pointer to an NSRegularExpression instance, or
@@ -99,7 +99,7 @@ expression pattern.</Abstract>
 expression pattern and options.</Abstract>
 			<DeclaredIn>MBRegexCache.h</DeclaredIn>
 			
-			<Declaration>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(NSError **)errPtr</Declaration>
+			<Declaration>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(out NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -111,9 +111,9 @@ expression pattern and options.</Abstract>
 				</Parameter><Parameter>
 					<Name>errPtr</Name>
 					<Abstract type="html">If this method returns nil and this parameter is non-nil,
-            it will be used to store a pointer to an NSError instance that 
-            contains further information about the error. If nil and an error
-            occurs, a message will be logged to the console.</Abstract>
+            *errPtr will be updated to point to an NSError instance
+            containing further information about the error. If nil and an
+            error occurs, a message will be logged to the console.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">A pointer to an NSRegularExpression instance, or

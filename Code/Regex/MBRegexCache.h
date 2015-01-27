@@ -48,9 +48,9 @@
             the regular expression options
  
  @param     errPtr If this method returns `nil` and this parameter is non-`nil`,
-            it will be used to store a pointer to an `NSError` instance that 
-            contains further information about the error. If `nil` and an error
-            occurs, a message will be logged to the console.
+            `*errPtr` will be updated to point to an `NSError` instance
+            containing further information about the error. If `nil` and an
+            error occurs, a message will be logged to the console.
  
  @return    A pointer to an `NSRegularExpression` instance, or 
             `nil` if the passed-in pattern could not be interpreted 
@@ -58,7 +58,7 @@
  */
 + (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern 
                                               options:(NSRegularExpressionOptions)options 
-                                                error:(NSError**)errPtr;
+                                                error:(out NSError**)errPtr;
 
 /*!
  Returns an `NSRegularExpression` instance for the given regular 
@@ -107,9 +107,9 @@
             the regular expression options
 
  @param     errPtr If this method returns `nil` and this parameter is non-`nil`,
-            it will be used to store a pointer to an `NSError` instance that 
-            contains further information about the error. If `nil` and an error
-            occurs, a message will be logged to the console.
+            `*errPtr` will be updated to point to an `NSError` instance
+            containing further information about the error. If `nil` and an
+            error occurs, a message will be logged to the console.
 
  @return    A pointer to an `NSRegularExpression` instance, or 
             `nil` if the passed-in pattern could not be interpreted 
@@ -117,7 +117,7 @@
  */
 - (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern
                                               options:(NSRegularExpressionOptions)options
-                                                error:(NSError**)errPtr;
+                                                error:(out NSError**)errPtr;
 
 /*!
  Returns an `NSRegularExpression` instance for the given regular 

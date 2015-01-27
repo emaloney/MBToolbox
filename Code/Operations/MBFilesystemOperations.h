@@ -140,12 +140,12 @@
  @param     path The filesystem path of the file to read.
 
  @param     errPtr If this method returns `nil` and this parameter is
-            non-`nil`, it will be used to store a pointer to an `NSError`
+            non-`nil`, `*errPtr` will be updated to point to an `NSError`
             instance containing further information about the error.
  
  @return    The object that was read from the file.
  */
-- (id) readObjectFromFile:(NSString*)path error:(NSError**)errPtr;
+- (id) readObjectFromFile:(NSString*)path error:(out NSError**)errPtr;
 
 /*!
  Called internally when `readObjectFromFile:error:` completes successfully.

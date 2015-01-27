@@ -27,7 +27,7 @@
                       withTemplate:(NSString*)templ
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
-                             error:(NSError**)errPtr
+                             error:(out NSError**)errPtr
 {
     debugTrace();
     
@@ -92,7 +92,7 @@
 }
 
 - (NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options 
-                                                error:(NSError**)errPtr
+                                                error:(out NSError**)errPtr
 {
     return [MBRegexCache regularExpressionWithPattern:self options:options error:errPtr];
 }
@@ -122,7 +122,7 @@
 - (NSArray*) matchesWithRegex:(NSString*)pattern
                       options:(NSRegularExpressionOptions)options
                         range:(NSRange)range
-                        error:(NSError**)errPtr
+                        error:(out NSError**)errPtr
 {
     debugTrace();
     
@@ -169,7 +169,7 @@
 - (BOOL) isMatchedByRegex:(NSString*)pattern
                   options:(NSRegularExpressionOptions)options
                     range:(NSRange)range
-                    error:(NSError**)errPtr
+                    error:(out NSError**)errPtr
 {
     return ([self numberOfRegexMatches:pattern options:options range:range error:errPtr] > 0);
 }
@@ -199,7 +199,7 @@
 - (NSUInteger) numberOfRegexMatches:(NSString*)pattern
                             options:(NSRegularExpressionOptions)options
                               range:(NSRange)range
-                              error:(NSError**)errPtr;
+                              error:(out NSError**)errPtr;
 {
     debugTrace();
     
@@ -244,7 +244,7 @@
 - (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern
                                   options:(NSRegularExpressionOptions)options
                                     range:(NSRange)range
-                                    error:(NSError**)errPtr
+                                    error:(out NSError**)errPtr
 {
     debugTrace();
     
@@ -289,7 +289,7 @@
 - (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
-                             error:(NSError**)errPtr
+                             error:(out NSError**)errPtr
 {
     debugTrace();
     
@@ -335,7 +335,7 @@
                                withTemplate:(NSString*)templ
                                     options:(NSRegularExpressionOptions)options
                                       range:(NSRange)range
-                                      error:(NSError**)errPtr
+                                      error:(out NSError**)errPtr
 {
     debugTrace();
     

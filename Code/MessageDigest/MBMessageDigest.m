@@ -31,7 +31,7 @@
 #pragma mark Private methods
 /******************************************************************************/
 
-+ (id) _processError:(NSError**)err code:(NSInteger)errCode infoKey:(NSString*)key value:(id)val
++ (id) _processError:(out NSError**)err code:(NSInteger)errCode infoKey:(NSString*)key value:(id)val
 {
     if (err) {
         if (key && val) {
@@ -44,7 +44,7 @@
     return nil;     // always return nil to indicate error
 }
 
-+ (id) _processError:(NSError**)err code:(NSInteger)errCode
++ (id) _processError:(out NSError**)err code:(NSInteger)errCode
 {
     return [self _processError:err code:errCode infoKey:nil value:nil];
 }
@@ -105,7 +105,7 @@
     return [self _hexStringForMD5:hash];
 }
 
-+ (NSString*) MD5ForFileAtPath:(NSString*)path error:(NSError**)err
++ (NSString*) MD5ForFileAtPath:(NSString*)path error:(out NSError**)err
 {
     // make sure our path looks legit
     if (!path || path.length == 0) {
@@ -226,7 +226,7 @@
     return [self _hexStringForSHA1:hash];
 }
 
-+ (NSString*) SHA1ForFileAtPath:(NSString*)path error:(NSError**)err
++ (NSString*) SHA1ForFileAtPath:(NSString*)path error:(out NSError**)err
 {
     // make sure our path looks legit
     if (!path || path.length == 0) {

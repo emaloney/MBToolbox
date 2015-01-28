@@ -89,7 +89,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an MD5 hash for the contents of a file.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForFileAtPath:(NSString *)path error:(out NSError **)errPtr</Declaration>
+			<Declaration>+ (NSString *)MD5ForFileAtPath:(NSString *)path error:(inout NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -205,7 +205,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an SHA-1 hash for the contents of a file.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)SHA1ForFileAtPath:(NSString *)path error:(out NSError **)errPtr</Declaration>
+			<Declaration>+ (NSString *)SHA1ForFileAtPath:(NSString *)path error:(inout NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>

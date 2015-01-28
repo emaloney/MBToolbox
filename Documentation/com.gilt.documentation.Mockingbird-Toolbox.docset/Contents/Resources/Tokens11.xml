@@ -136,7 +136,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Called internally to read the file and convert its data into an object.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (id)readObjectFromFile:(NSString *)path error:(out NSError **)errPtr</Declaration>
+			<Declaration>- (id)readObjectFromFile:(NSString *)path error:(inout NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>

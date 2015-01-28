@@ -21,7 +21,7 @@ itself when memory warnings occur.</Abstract>
 expression pattern and options.</Abstract>
 			<DeclaredIn>MBRegexCache.h</DeclaredIn>
 			
-			<Declaration>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(out NSError **)errPtr</Declaration>
+			<Declaration>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(inout NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -99,7 +99,7 @@ expression pattern.</Abstract>
 expression pattern and options.</Abstract>
 			<DeclaredIn>MBRegexCache.h</DeclaredIn>
 			
-			<Declaration>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(out NSError **)errPtr</Declaration>
+			<Declaration>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(inout NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>

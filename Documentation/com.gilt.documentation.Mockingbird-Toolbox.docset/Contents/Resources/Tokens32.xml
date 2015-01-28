@@ -93,7 +93,7 @@ replacement methods.</Abstract>
 			<Abstract type="html">Performs a regular expression string replacement on the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(out NSError **)errPtr</Declaration>
+			<Declaration>- (NSUInteger)replaceRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(inout NSError **)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>

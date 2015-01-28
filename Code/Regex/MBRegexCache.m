@@ -40,7 +40,7 @@ MBImplementSingleton();
 
 - (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern
                                               options:(NSRegularExpressionOptions)options
-                                                error:(out NSError**)errPtr
+                                                error:(inout NSError**)errPtr
 {
     debugTrace();
     
@@ -86,7 +86,7 @@ MBImplementSingleton();
 
 + (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern 
                                               options:(NSRegularExpressionOptions)options 
-                                                error:(out NSError**)errPtr
+                                                error:(inout NSError**)errPtr
 {
     return [[self instance] regularExpressionWithPattern:pattern options:options error:errPtr];
 }

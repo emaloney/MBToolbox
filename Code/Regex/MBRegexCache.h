@@ -58,7 +58,7 @@
  */
 + (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern 
                                               options:(NSRegularExpressionOptions)options 
-                                                error:(out NSError**)errPtr;
+                                                error:(inout NSError**)errPtr;
 
 /*!
  Returns an `NSRegularExpression` instance for the given regular 
@@ -117,7 +117,7 @@
  */
 - (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern
                                               options:(NSRegularExpressionOptions)options
-                                                error:(out NSError**)errPtr;
+                                                error:(inout NSError**)errPtr;
 
 /*!
  Returns an `NSRegularExpression` instance for the given regular 

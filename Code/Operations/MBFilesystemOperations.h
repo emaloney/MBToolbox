@@ -145,7 +145,7 @@
  
  @return    The object that was read from the file.
  */
-- (id) readObjectFromFile:(NSString*)path error:(out NSError**)errPtr;
+- (id) readObjectFromFile:(NSString*)path error:(inout NSError**)errPtr;
 
 /*!
  Called internally when `readObjectFromFile:error:` completes successfully.

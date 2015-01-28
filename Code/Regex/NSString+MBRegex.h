@@ -125,7 +125,7 @@
                       withTemplate:(NSString*)templ
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
-                             error:(out NSError**)errPtr;
+                             error:(inout NSError**)errPtr;
 @end
 
 /******************************************************************************/
@@ -186,7 +186,7 @@
             interpreted as a valid regular expression.
  */
 - (NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options
-                                                error:(out NSError**)errPtr;
+                                                error:(inout NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Escaping
@@ -281,7 +281,7 @@
 - (NSArray*) matchesWithRegex:(NSString*)pattern
                       options:(NSRegularExpressionOptions)options
                         range:(NSRange)range
-                        error:(out NSError**)errPtr;
+                        error:(inout NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Testing for pattern matches
@@ -355,7 +355,7 @@
 - (BOOL) isMatchedByRegex:(NSString*)pattern
                   options:(NSRegularExpressionOptions)options
                     range:(NSRange)range
-                    error:(out NSError**)errPtr;
+                    error:(inout NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Counting pattern matches
@@ -425,7 +425,7 @@
 - (NSUInteger) numberOfRegexMatches:(NSString*)pattern
                             options:(NSRegularExpressionOptions)options
                               range:(NSRange)range
-                              error:(out NSError**)errPtr;
+                              error:(inout NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Finding the first pattern match
@@ -499,7 +499,7 @@
 - (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern
                                   options:(NSRegularExpressionOptions)options
                                     range:(NSRange)range
-                                    error:(out NSError**)errPtr;
+                                    error:(inout NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting the range of the first pattern match
@@ -573,7 +573,7 @@
 - (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
-                             error:(out NSError**)errPtr;
+                             error:(inout NSError**)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Creating a new string by replacing pattern matches
@@ -663,6 +663,6 @@
                                withTemplate:(NSString*)templ
                                     options:(NSRegularExpressionOptions)options
                                       range:(NSRange)range
-                                      error:(out NSError**)errPtr;
+                                      error:(inout NSError**)errPtr;
 
 @end

@@ -81,7 +81,7 @@
             occurs while attempting to read the file, `nil`
             is returned
  */
-+ (NSString*) MD5ForFileAtPath:(NSString*)path error:(out NSError**)errPtr;
++ (NSString*) MD5ForFileAtPath:(NSString*)path error:(inout NSError**)errPtr;
 
 /*!
  Computes an MD5 hash for the contents of a file.
@@ -152,7 +152,7 @@
             occurs while attempting to read the file, `nil`
             is returned
  */
-+ (NSString*) SHA1ForFileAtPath:(NSString*)path error:(out NSError**)errPtr;
++ (NSString*) SHA1ForFileAtPath:(NSString*)path error:(inout NSError**)errPtr;
 
 /*!
  Computes an SHA-1 hash for the contents of a file.

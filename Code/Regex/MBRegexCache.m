@@ -47,7 +47,7 @@ MBImplementSingleton();
     NSString* cacheKey = [NSString stringWithFormat:@"%@ 0x%lx", pattern, (unsigned long)options];
     NSRegularExpression* regex = nil;
     if (!DEBUG_FLAG(DEBUG_DISABLE_CACHING)) {
-        regex = [self objectForKey:cacheKey];
+        regex = self[cacheKey];
     }
     if (!regex) {
         NSError* logError = nil;

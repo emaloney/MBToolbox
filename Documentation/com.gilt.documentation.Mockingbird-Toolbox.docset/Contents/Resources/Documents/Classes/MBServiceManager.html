@@ -1,159 +1,117 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>MBServiceManager Class Reference</title>
-		<meta id="xcode-display" name="xcode-display" content="render"/>
-		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
-		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
-	</head>
-	<body>
-		<header id="top_header">
-			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Mockingbird Toolbox </a></h1>
-				<a id="developerHome" href="../index.html">Gilt Groupe</a>
-			</div>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBServiceManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
 			
-			<div id="title" role="banner">
-				<h1 class="hideInXcode">MBServiceManager Class Reference</h1>
-			</div>
-			<ul id="headerButtons" role="toolbar">
-				<li id="toc_button">
-					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
-				</li>
-				<li id="jumpto_button" role="navigation">
-					<select id="jumpTo">
+			<h1 id="library-title">
+				<a href="../index.html">Mockingbird Toolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
 	<option value="overview">Overview</option>
 	
-	
+
 	
 	
 	<option value="tasks">Tasks</option>
 	
 	
+
 	
 	
+
 	
+
 	
-	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/attachCountForService:">&nbsp;&nbsp;&nbsp;&nbsp;- attachCountForService:</option>
-	
-	<option value="//api/name/attachToService:">&nbsp;&nbsp;&nbsp;&nbsp;- attachToService:</option>
-	
-	<option value="//api/name/attachToServiceClass:">&nbsp;&nbsp;&nbsp;&nbsp;- attachToServiceClass:</option>
-	
-	<option value="//api/name/attachToServiceClassNamed:">&nbsp;&nbsp;&nbsp;&nbsp;- attachToServiceClassNamed:</option>
-	
-	<option value="//api/name/detachFromService:">&nbsp;&nbsp;&nbsp;&nbsp;- detachFromService:</option>
-	
-	<option value="//api/name/detachFromServiceClass:">&nbsp;&nbsp;&nbsp;&nbsp;- detachFromServiceClass:</option>
-	
-	<option value="//api/name/detachFromServiceClassNamed:">&nbsp;&nbsp;&nbsp;&nbsp;- detachFromServiceClassNamed:</option>
-	
-	<option value="//api/name/isServiceRunning:">&nbsp;&nbsp;&nbsp;&nbsp;- isServiceRunning:</option>
-	
-	<option value="//api/name/serviceForClass:">&nbsp;&nbsp;&nbsp;&nbsp;- serviceForClass:</option>
-	
-	<option value="//api/name/serviceForClassName:">&nbsp;&nbsp;&nbsp;&nbsp;- serviceForClassName:</option>
-	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/attachCountForService:">- attachCountForService:</option>
+		
+		<option value="//api/name/attachToService:">- attachToService:</option>
+		
+		<option value="//api/name/attachToServiceClass:">- attachToServiceClass:</option>
+		
+		<option value="//api/name/attachToServiceClassNamed:">- attachToServiceClassNamed:</option>
+		
+		<option value="//api/name/detachFromService:">- detachFromService:</option>
+		
+		<option value="//api/name/detachFromServiceClass:">- detachFromServiceClass:</option>
+		
+		<option value="//api/name/detachFromServiceClassNamed:">- detachFromServiceClassNamed:</option>
+		
+		<option value="//api/name/isServiceRunning:">- isServiceRunning:</option>
+		
+		<option value="//api/name/serviceForClass:">- serviceForClass:</option>
+		
+		<option value="//api/name/serviceForClassName:">- serviceForClassName:</option>
+		
+	</optgroup>
 	
 	
 </select>
-				</li>
-			</ul>
-		</header>
-		<nav id="tocContainer" class="isShowingTOC">
-			<ul id="toc" role="tree">
-				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
 
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBServiceManager Class Reference</h1>
 
-
-
-<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Acquiring service instances">Acquiring service instances</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Attaching to services">Attaching to services</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Detaching from services">Detaching from services</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Querying the status of services">Querying the status of services</a></span></li>
-	
-</ul></li>
-
-
-
-
-
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attachCountForService:">attachCountForService:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attachToService:">attachToService:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attachToServiceClass:">attachToServiceClass:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attachToServiceClassNamed:">attachToServiceClassNamed:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/detachFromService:">detachFromService:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/detachFromServiceClass:">detachFromServiceClass:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/detachFromServiceClassNamed:">detachFromServiceClassNamed:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isServiceRunning:">isServiceRunning:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/serviceForClass:">serviceForClass:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/serviceForClassName:">serviceForClassName:</a></span></li>
-	
-</ul></li>
-
-
-			</ul>
-		</nav>
-		<article>
-			<div id="contents" class="isShowingTOC" role="main">
-				<a title="MBServiceManager Class Reference" name="top"></a>
-				<div class="main-navigation navigation-top">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="header">
-					<div class="section-header">
-						<h1 class="title title-header">MBServiceManager Class Reference</h1>
-					</div>		
-				</div>
-				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
+	<th>Inherits from</th>
+	<td>NSObject</td>
 </tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value"><a href="../Protocols/MBSingleton.html">MBSingleton</a></td>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/MBSingleton.html">MBSingleton</a></td>
 </tr><tr>
-	<td class="specification-title">Declared in</td>
-	<td class="specification-value">MBServiceManager.h</td>
+	<th>Declared in</th>
+	<td>MBServiceManager.h</td>
 </tr>
 						</tbody></table></div>
 					
-                    
+
                     
 					
 					<div class="section section-overview">
@@ -193,793 +151,696 @@ for additional information.</p><div class="warning"><p><strong>Warning:</strong>
 					</div>
 					
 					
-					
+
 					
 					
 					<div class="section section-tasks">
 						<a title="Tasks" name="tasks"></a>
-						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
-						
+
 						<a title="Acquiring service instances" name="task_Acquiring service instances"></a>
-						<h3 class="subsubtitle task-title">Acquiring service instances</h3>
+						<h2 class="task-title">Acquiring service instances</h2>
 
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/serviceForClassName:">&ndash;&nbsp;serviceForClassName:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/serviceForClass:">&ndash;&nbsp;serviceForClass:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/serviceForClassName:" title="serviceForClassName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serviceForClassName:">&ndash;&nbsp;serviceForClassName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the singleton instance of the service implemented by the class with
+the specified name.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)serviceForClassName:(NSString *)<em>serviceClassName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serviceClassName</code></th>
+						<td><p>The name of the class implementing the
+            <a href="../Protocols/MBService.html"><code>MBService</code></a> protocol.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A pointer to the singleton <a href="../Protocols/MBService.html"><code>MBService</code></a> with the specified class
+            name, or <code>nil</code> if there isn&rsquo;t one.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBServiceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/serviceForClass:" title="serviceForClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serviceForClass:">&ndash;&nbsp;serviceForClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the singleton instance of the service implemented the specified class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)serviceForClass:(Class)<em>serviceClass</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serviceClass</code></th>
+						<td><p>The <code>Class</code> implementing the <a href="../Protocols/MBService.html"><code>MBService</code></a> protocol.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A pointer to the singleton <a href="../Protocols/MBService.html"><code>MBService</code></a> of the specified class,
+            or <code>nil</code> if there isn&rsquo;t one.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBServiceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
 						
-						
+
 						<a title="Attaching to services" name="task_Attaching to services"></a>
-						<h3 class="subsubtitle task-title">Attaching to services</h3>
+						<h2 class="task-title">Attaching to services</h2>
 
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/attachToService:">&ndash;&nbsp;attachToService:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/attachToServiceClass:">&ndash;&nbsp;attachToServiceClass:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/attachToServiceClassNamed:">&ndash;&nbsp;attachToServiceClassNamed:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Detaching from services" name="task_Detaching from services"></a>
-						<h3 class="subsubtitle task-title">Detaching from services</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/detachFromService:">&ndash;&nbsp;detachFromService:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/detachFromServiceClass:">&ndash;&nbsp;detachFromServiceClass:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/detachFromServiceClassNamed:">&ndash;&nbsp;detachFromServiceClassNamed:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Querying the status of services" name="task_Querying the status of services"></a>
-						<h3 class="subsubtitle task-title">Querying the status of services</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/isServiceRunning:">&ndash;&nbsp;isServiceRunning:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/attachCountForService:">&ndash;&nbsp;attachCountForService:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-					</div>
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/attachCountForService:" title="attachCountForService:"></a>
-	<h3 class="subsubtitle method-title">attachCountForService:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Determines the current attach count of a service.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSUInteger)attachCountForService:(MBService *)<em>service</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>service</em></dt>
-			<dd><p>The service whose attach count is sought.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The service&rsquo;s current attach count.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBServiceManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
+						<div class="task-list">
+							<div class="section-method">
 	<a name="//api/name/attachToService:" title="attachToService:"></a>
-	<h3 class="subsubtitle method-title">attachToService:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Attaches to the specified service, incrementing its attach count by one.</p>
-	</div>		
-	
-    
+	<h3 class="method-title"><code><a href="#//api/name/attachToService:">&ndash;&nbsp;attachToService:</a></code>
+</h3>
 
-	<div class="method-subsection method-declaration"><code>- (void)attachToService:(MBService *)<em>service</em></code></div>
+	<div class="method-info">
+		<div class="pointy-thing"></div>
 
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>service</em></dt>
-			<dd><p>The service being attached.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Services with an attach count greater than zero will be kept running by the
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Attaches to the specified service, incrementing its attach count by one.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)attachToService:(MBService *)<em>service</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The service being attached.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Services with an attach count greater than zero will be kept running by the
 <code>MBServiceManager</code>.</p><div class="note"><p><strong>Note:</strong> When the service is no longer needed, the caller should be sure to
             detach the service.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBServiceManager.h</code></p>
+			</div>
+			
+			
+		</div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBServiceManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
+</div><div class="section-method">
 	<a name="//api/name/attachToServiceClass:" title="attachToServiceClass:"></a>
-	<h3 class="subsubtitle method-title">attachToServiceClass:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Attaches to the service with the given class name, incrementing its attach
+	<h3 class="method-title"><code><a href="#//api/name/attachToServiceClass:">&ndash;&nbsp;attachToServiceClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Attaches to the service with the given class name, incrementing its attach
 count by one.</p>
-	</div>		
-	
-    
+			</div>
+			
+		    
 
-	<div class="method-subsection method-declaration"><code>- (id)attachToServiceClass:(Class)<em>serviceClass</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (id)attachToServiceClass:(Class)<em>serviceClass</em></code></div>
 
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>serviceClass</em></dt>
-			<dd><p>The implementing class of the service class to attach.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>If successful, the <a href="../Protocols/MBService.html"><code>MBService</code></a> instance that was attached. Will
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serviceClass</code></th>
+						<td><p>The implementing class of the service class to attach.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>If successful, the <a href="../Protocols/MBService.html"><code>MBService</code></a> instance that was attached. Will
             return <code>nil</code> on failure.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Services with an attach count greater than zero will be kept running by the
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Services with an attach count greater than zero will be kept running by the
 <code>MBServiceManager</code>.</p><div class="note"><p><strong>Note:</strong> When the service is no longer needed, the caller should be sure to
             detach the service.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBServiceManager.h</code></p>
+			</div>
+			
+			
+		</div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBServiceManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
+</div><div class="section-method">
 	<a name="//api/name/attachToServiceClassNamed:" title="attachToServiceClassNamed:"></a>
-	<h3 class="subsubtitle method-title">attachToServiceClassNamed:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Attaches to the service with the given class name, incrementing its attach
+	<h3 class="method-title"><code><a href="#//api/name/attachToServiceClassNamed:">&ndash;&nbsp;attachToServiceClassNamed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Attaches to the service with the given class name, incrementing its attach
 count by one.</p>
-	</div>		
-	
-    
+			</div>
+			
+		    
 
-	<div class="method-subsection method-declaration"><code>- (id)attachToServiceClassNamed:(NSString *)<em>serviceClassName</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (id)attachToServiceClassNamed:(NSString *)<em>serviceClassName</em></code></div>
 
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>serviceClassName</em></dt>
-			<dd><p>The name of the service class to attach.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>If successful, the <a href="../Protocols/MBService.html"><code>MBService</code></a> instance that was attached. Will
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serviceClassName</code></th>
+						<td><p>The name of the service class to attach.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>If successful, the <a href="../Protocols/MBService.html"><code>MBService</code></a> instance that was attached. Will
             return <code>nil</code> on failure.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Services with an attach count greater than zero will be kept running by the
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Services with an attach count greater than zero will be kept running by the
 <code>MBServiceManager</code>.</p><div class="note"><p><strong>Note:</strong> When the service is no longer needed, the caller should be sure to
             detach the service.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBServiceManager.h</code></p>
+			</div>
+			
+			
+		</div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBServiceManager.h</code><br />
-	</div>				
-	
-	
 </div>
+						</div>
 						
-						<div class="section-method">
+
+						<a title="Detaching from services" name="task_Detaching from services"></a>
+						<h2 class="task-title">Detaching from services</h2>
+
+						<div class="task-list">
+							<div class="section-method">
 	<a name="//api/name/detachFromService:" title="detachFromService:"></a>
-	<h3 class="subsubtitle method-title">detachFromService:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Detaches from the specified service, decrementing its attach count by one.</p>
-	</div>		
-	
-    
+	<h3 class="method-title"><code><a href="#//api/name/detachFromService:">&ndash;&nbsp;detachFromService:</a></code>
+</h3>
 
-	<div class="method-subsection method-declaration"><code>- (void)detachFromService:(MBService *)<em>service</em></code></div>
+	<div class="method-info">
+		<div class="pointy-thing"></div>
 
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>service</em></dt>
-			<dd><p>The service being attached.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Services are stopped by the <code>MBServiceManager</code> when their attach count
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Detaches from the specified service, decrementing its attach count by one.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)detachFromService:(MBService *)<em>service</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The service being attached.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Services are stopped by the <code>MBServiceManager</code> when their attach count
 decreases to zero.</p><div class="note"><p><strong>Note:</strong> Code should only detach from a service if it previously attached
             to the same service.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBServiceManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/detachFromServiceClass:" title="detachFromServiceClass:"></a>
-	<h3 class="subsubtitle method-title">detachFromServiceClass:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Detaches from the service with the given class name, decrementing its attach
-count by one.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)detachFromServiceClass:(Class)<em>serviceClass</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>serviceClass</em></dt>
-			<dd><p>The implementing class of the service class to detach.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>If successful, the <a href="../Protocols/MBService.html"><code>MBService</code></a> instance that was attached. Will
-            return <code>nil</code> on failure.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Services are stopped by the <code>MBServiceManager</code> when their attach count
-decreases to zero.</p><div class="note"><p><strong>Note:</strong> Code should only detach from a service if it previously attached
-            to the same service. Detach requests are ignored if the service
-            isn&rsquo;t already running.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBServiceManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/detachFromServiceClassNamed:" title="detachFromServiceClassNamed:"></a>
-	<h3 class="subsubtitle method-title">detachFromServiceClassNamed:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Detaches from the service with the given class name, decrementing its attach
-count by one.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)detachFromServiceClassNamed:(NSString *)<em>serviceClassName</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>serviceClassName</em></dt>
-			<dd><p>The name of the service class to attach.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>If successful, the <a href="../Protocols/MBService.html"><code>MBService</code></a> instance that was attached. Will
-            return <code>nil</code> on failure.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Services are stopped by the <code>MBServiceManager</code> when their attach count
-decreases to zero.</p><div class="note"><p><strong>Note:</strong> Code should only detach from a service if it previously attached
-            to the same service. Detach requests are ignored if the service
-            isn&rsquo;t already running.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBServiceManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/isServiceRunning:" title="isServiceRunning:"></a>
-	<h3 class="subsubtitle method-title">isServiceRunning:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Determines whether the specified service is running.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (BOOL)isServiceRunning:(MBService *)<em>service</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>service</em></dt>
-			<dd><p>The service whose status is sought.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p><code>YES</code> if the service is running; <code>NO</code> if it is not.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>A service will remain running as long as its attach count is greater than zero.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBServiceManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/serviceForClass:" title="serviceForClass:"></a>
-	<h3 class="subsubtitle method-title">serviceForClass:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns the singleton instance of the service implemented the specified class.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (id)serviceForClass:(Class)<em>serviceClass</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>serviceClass</em></dt>
-			<dd><p>The <code>Class</code> implementing the <a href="../Protocols/MBService.html"><code>MBService</code></a> protocol.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A pointer to the singleton <a href="../Protocols/MBService.html"><code>MBService</code></a> of the specified class,
-            or <code>nil</code> if there isn&rsquo;t one.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBServiceManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/serviceForClassName:" title="serviceForClassName:"></a>
-	<h3 class="subsubtitle method-title">serviceForClassName:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns the singleton instance of the service implemented by the class with
-the specified name.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (id)serviceForClassName:(NSString *)<em>serviceClassName</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>serviceClassName</em></dt>
-			<dd><p>The name of the class implementing the
-            <a href="../Protocols/MBService.html"><code>MBService</code></a> protocol.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A pointer to the singleton <a href="../Protocols/MBService.html"><code>MBService</code></a> with the specified class
-            name, or <code>nil</code> if there isn&rsquo;t one.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBServiceManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-                    
-                    
-				</div>
-				<div class="main-navigation navigation-bottom">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="footer">
-					<hr />
-					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Gilt Groupe. All rights reserved. (Last updated: 2015-01-28)</span><br />
-						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
-						
-					</div>
-				</div>
 			</div>
-		</article>
-		<script type="text/javascript">
-			function jumpToChange()
-			{
-				window.location.hash = this.options[this.selectedIndex].value;
-			}
 			
-			function toggleTOC()
-			{
-				var contents = document.getElementById('contents');
-				var tocContainer = document.getElementById('tocContainer');
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBServiceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/detachFromServiceClass:" title="detachFromServiceClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/detachFromServiceClass:">&ndash;&nbsp;detachFromServiceClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Detaches from the service with the given class name, decrementing its attach
+count by one.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)detachFromServiceClass:(Class)<em>serviceClass</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
 				
-				if (this.getAttribute('class') == 'open')
-				{
-					this.setAttribute('class', '');
-					contents.setAttribute('class', '');
-					tocContainer.setAttribute('class', '');
+					<tr>
+						<th scope="row" class="argument-name"><code>serviceClass</code></th>
+						<td><p>The implementing class of the service class to detach.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>If successful, the <a href="../Protocols/MBService.html"><code>MBService</code></a> instance that was attached. Will
+            return <code>nil</code> on failure.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Services are stopped by the <code>MBServiceManager</code> when their attach count
+decreases to zero.</p><div class="note"><p><strong>Note:</strong> Code should only detach from a service if it previously attached
+            to the same service. Detach requests are ignored if the service
+            isn&rsquo;t already running.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBServiceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/detachFromServiceClassNamed:" title="detachFromServiceClassNamed:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/detachFromServiceClassNamed:">&ndash;&nbsp;detachFromServiceClassNamed:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Detaches from the service with the given class name, decrementing its attach
+count by one.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)detachFromServiceClassNamed:(NSString *)<em>serviceClassName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serviceClassName</code></th>
+						<td><p>The name of the service class to attach.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>If successful, the <a href="../Protocols/MBService.html"><code>MBService</code></a> instance that was attached. Will
+            return <code>nil</code> on failure.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Services are stopped by the <code>MBServiceManager</code> when their attach count
+decreases to zero.</p><div class="note"><p><strong>Note:</strong> Code should only detach from a service if it previously attached
+            to the same service. Detach requests are ignored if the service
+            isn&rsquo;t already running.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBServiceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Querying the status of services" name="task_Querying the status of services"></a>
+						<h2 class="task-title">Querying the status of services</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/isServiceRunning:" title="isServiceRunning:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isServiceRunning:">&ndash;&nbsp;isServiceRunning:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines whether the specified service is running.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isServiceRunning:(MBService *)<em>service</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The service whose status is sought.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the service is running; <code>NO</code> if it is not.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A service will remain running as long as its attach count is greater than zero.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBServiceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/attachCountForService:" title="attachCountForService:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attachCountForService:">&ndash;&nbsp;attachCountForService:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines the current attach count of a service.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)attachCountForService:(MBService *)<em>service</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The service whose attach count is sought.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The service&rsquo;s current attach count.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBServiceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
 					
-					window.name = "hideTOC";
-				}
-				else
-				{
-					this.setAttribute('class', 'open');
-					contents.setAttribute('class', 'isShowingTOC');
-					tocContainer.setAttribute('class', 'isShowingTOC');
 					
-					window.name = "";
-				}
-				return false;
-			}
-			
-			function toggleTOCEntryChildren(e)
-			{
-				e.stopPropagation();
-				var currentClass = this.getAttribute('class');
-				if (currentClass == 'children') {
-					this.setAttribute('class', 'children open');
-				}
-				else if (currentClass == 'children open') {
-					this.setAttribute('class', 'children');
-				}
-				return false;
-			}
-			
-			function tocEntryClick(e)
-			{
-				e.stopPropagation();
-				return true;
-			}
-			
-			function init()
-			{
-				var selectElement = document.getElementById('jumpTo');
-				selectElement.addEventListener('change', jumpToChange, false);
-				
-				var tocButton = document.getElementById('table_of_contents');
-				tocButton.addEventListener('click', toggleTOC, false);
-				
-				var taskTreeItem = document.getElementById('task_treeitem');
-				if (taskTreeItem.getElementsByTagName('li').length > 0)
-				{
-					taskTreeItem.setAttribute('class', 'children');
-					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
-				}
-				
-				var tocList = document.getElementById('toc');
-				
-				var tocEntries = tocList.getElementsByTagName('li');
-				for (var i = 0; i < tocEntries.length; i++) {
-					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
-				}
-				
-				var tocLinks = tocList.getElementsByTagName('a');
-				for (var i = 0; i < tocLinks.length; i++) {
-					tocLinks[i].addEventListener('click', tocEntryClick, false);
-				}
-				
-				if (window.name == "hideTOC") {
-					toggleTOC.call(tocButton);
-				}
-			}
-			
-			window.onload = init;
-			
-			// If showing in Xcode, hide the TOC and Header
-			if (navigator.userAgent.match(/xcode/i)) {
-				document.getElementById("contents").className = "hideInXcode"
-				document.getElementById("tocContainer").className = "hideInXcode"
-				document.getElementById("top_header").className = "hideInXcode"
-			}
-			
-		</script>
-	</body>
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-02-02</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
 </html>

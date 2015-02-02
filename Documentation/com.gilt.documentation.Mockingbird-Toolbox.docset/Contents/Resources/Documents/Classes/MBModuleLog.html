@@ -1,143 +1,110 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>MBModuleLog Class Reference</title>
-		<meta id="xcode-display" name="xcode-display" content="render"/>
-		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
-		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
-	</head>
-	<body>
-		<header id="top_header">
-			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Mockingbird Toolbox </a></h1>
-				<a id="developerHome" href="../index.html">Gilt Groupe</a>
-			</div>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBModuleLog Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
 			
-			<div id="title" role="banner">
-				<h1 class="hideInXcode">MBModuleLog Class Reference</h1>
-			</div>
-			<ul id="headerButtons" role="toolbar">
-				<li id="toc_button">
-					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
-				</li>
-				<li id="jumpto_button" role="navigation">
-					<select id="jumpTo">
+			<h1 id="library-title">
+				<a href="../index.html">Mockingbird Toolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
 	<option value="overview">Overview</option>
 	
-	
+
 	
 	
 	<option value="tasks">Tasks</option>
 	
 	
+
 	
 	
+
 	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/logForModule:">+ logForModule:</option>
+		
+		<option value="//api/name/logForModuleClass:">+ logForModuleClass:</option>
+		
+	</optgroup>
 	
+
 	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/logForModule:">&nbsp;&nbsp;&nbsp;&nbsp;+ logForModule:</option>
-	
-	<option value="//api/name/logForModuleClass:">&nbsp;&nbsp;&nbsp;&nbsp;+ logForModuleClass:</option>
-	
-	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/issueDeprecationWarning:">&nbsp;&nbsp;&nbsp;&nbsp;- issueDeprecationWarning:</option>
-	
-	<option value="//api/name/issueDeprecationWarningWithFormat:">&nbsp;&nbsp;&nbsp;&nbsp;- issueDeprecationWarningWithFormat:</option>
-	
-	<option value="//api/name/issueNotSupportedError:">&nbsp;&nbsp;&nbsp;&nbsp;- issueNotSupportedError:</option>
-	
-	<option value="//api/name/issueNotSupportedErrorWithFormat:">&nbsp;&nbsp;&nbsp;&nbsp;- issueNotSupportedErrorWithFormat:</option>
-	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/issueDeprecationWarning:">- issueDeprecationWarning:</option>
+		
+		<option value="//api/name/issueDeprecationWarningWithFormat:">- issueDeprecationWarningWithFormat:</option>
+		
+		<option value="//api/name/issueNotSupportedError:">- issueNotSupportedError:</option>
+		
+		<option value="//api/name/issueNotSupportedErrorWithFormat:">- issueNotSupportedErrorWithFormat:</option>
+		
+	</optgroup>
 	
 	
 </select>
-				</li>
-			</ul>
-		</header>
-		<nav id="tocContainer" class="isShowingTOC">
-			<ul id="toc" role="tree">
-				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
 
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBModuleLog Class Reference</h1>
 
-
-
-<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Object lifecycle">Object lifecycle</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Warnings &amp; Errors">Warnings &amp; Errors</a></span></li>
-	
-</ul></li>
-
-
-
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/logForModule:">logForModule:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/logForModuleClass:">logForModuleClass:</a></span></li>
-	
-</ul></li>
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/issueDeprecationWarning:">issueDeprecationWarning:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/issueDeprecationWarningWithFormat:">issueDeprecationWarningWithFormat:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/issueNotSupportedError:">issueNotSupportedError:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/issueNotSupportedErrorWithFormat:">issueNotSupportedErrorWithFormat:</a></span></li>
-	
-</ul></li>
-
-
-			</ul>
-		</nav>
-		<article>
-			<div id="contents" class="isShowingTOC" role="main">
-				<a title="MBModuleLog Class Reference" name="top"></a>
-				<div class="main-navigation navigation-top">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="header">
-					<div class="section-header">
-						<h1 class="title title-header">MBModuleLog Class Reference</h1>
-					</div>		
-				</div>
-				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
+	<th>Inherits from</th>
+	<td>NSObject</td>
 </tr><tr>
-	<td class="specification-title">Declared in</td>
-	<td class="specification-value">MBModuleLog.h</td>
+	<th>Declared in</th>
+	<td>MBModuleLog.h</td>
 </tr>
 						</tbody></table></div>
 					
-                    
+
                     
 					
 					<div class="section section-overview">
@@ -148,538 +115,431 @@ given <a href="../Protocols/MBModule.html"><code>MBModule</code></a>.</p>
 					</div>
 					
 					
-					
+
 					
 					
 					<div class="section section-tasks">
 						<a title="Tasks" name="tasks"></a>
-						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
-						
+
 						<a title="Object lifecycle" name="task_Object lifecycle"></a>
-						<h3 class="subsubtitle task-title">Object lifecycle</h3>
+						<h2 class="task-title">Object lifecycle</h2>
 
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/logForModuleClass:">+&nbsp;logForModuleClass:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/logForModule:">+&nbsp;logForModule:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Warnings &amp; Errors" name="task_Warnings &amp; Errors"></a>
-						<h3 class="subsubtitle task-title">Warnings &amp; Errors</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/issueDeprecationWarning:">&ndash;&nbsp;issueDeprecationWarning:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/issueDeprecationWarningWithFormat:">&ndash;&nbsp;issueDeprecationWarningWithFormat:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/issueNotSupportedError:">&ndash;&nbsp;issueNotSupportedError:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/issueNotSupportedErrorWithFormat:">&ndash;&nbsp;issueNotSupportedErrorWithFormat:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-					</div>
-					
-					
-					
-					
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/logForModule:" title="logForModule:"></a>
-	<h3 class="subsubtitle method-title">logForModule:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Creates and returns a new <code>MBModuleLog</code> instance for the specified module.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (instancetype)logForModule:(NSObject&lt;MBModule&gt; *)<em>module</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>module</em></dt>
-			<dd><p>The <a href="../Protocols/MBModule.html"><code>MBModule</code></a> for which a log is being created.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A new <code>MBModuleLog</code>.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> This method is intended to be used only by <a href="../Protocols/MBModule.html"><code>MBModule</code></a>
-            implementations themselves. To retrieve the <code>MBModuleLog</code> for
-            a given module, acquire it from the module itself.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBModuleLog.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
+						<div class="task-list">
+							<div class="section-method">
 	<a name="//api/name/logForModuleClass:" title="logForModuleClass:"></a>
-	<h3 class="subsubtitle method-title">logForModuleClass:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Creates and returns a new <code>MBModuleLog</code> instance for the specified module
+	<h3 class="method-title"><code><a href="#//api/name/logForModuleClass:">+&nbsp;logForModuleClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a new <code>MBModuleLog</code> instance for the specified module
 implementation class.</p>
-	</div>		
-	
-    
+			</div>
+			
+		    
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)logForModuleClass:(Class)<em>moduleCls</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (instancetype)logForModuleClass:(Class)<em>moduleCls</em></code></div>
 
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>moduleCls</em></dt>
-			<dd><p>The implementing class of the <a href="../Protocols/MBModule.html"><code>MBModule</code></a> for which a
-            log is being created.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A new <code>MBModuleLog</code>.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> This method is intended to be used only by <a href="../Protocols/MBModule.html"><code>MBModule</code></a>
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>moduleCls</code></th>
+						<td><p>The implementing class of the <a href="../Protocols/MBModule.html"><code>MBModule</code></a> for which a
+            log is being created.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new <code>MBModuleLog</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> This method is intended to be used only by <a href="../Protocols/MBModule.html"><code>MBModule</code></a>
             implementations themselves. To retrieve the <code>MBModuleLog</code> for
             a given module, acquire it from the module itself.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBModuleLog.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/issueDeprecationWarning:" title="issueDeprecationWarning:"></a>
-	<h3 class="subsubtitle method-title">issueDeprecationWarning:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Issues a deprecation warning from the module associated with the receiver.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarning:(NSString *)<em>warning</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>warning</em></dt>
-			<dd><p>The warning message.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> The warning will be written to the console, possibly asynchronously.
-            Repeated issuances of the same warning may be squelched.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBModuleLog.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/issueDeprecationWarningWithFormat:" title="issueDeprecationWarningWithFormat:"></a>
-	<h3 class="subsubtitle method-title">issueDeprecationWarningWithFormat:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Issues a deprecation warning from the module associated with the receiver.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarningWithFormat:(NSString *)<em>format</em>, <em>...</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>format</em></dt>
-			<dd><p>The format for the warning message, followed by zero or more
-            format parameters.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>...</em></dt>
-			<dd><p>A variable argument list of zero or more values referenced
-            within the <code>format</code> string.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> The warning will be written to the console, possibly asynchronously.
-            Repeated issuances of the same warning may be squelched.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBModuleLog.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/issueNotSupportedError:" title="issueNotSupportedError:"></a>
-	<h3 class="subsubtitle method-title">issueNotSupportedError:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Issues a not supported error from the module associated with the receiver.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedError:(NSString *)<em>error</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>error</em></dt>
-			<dd><p>The error message.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> The error will be written to the console, possibly asynchronously.
-            Repeated issuances of the same error may be squelched.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBModuleLog.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/issueNotSupportedErrorWithFormat:" title="issueNotSupportedErrorWithFormat:"></a>
-	<h3 class="subsubtitle method-title">issueNotSupportedErrorWithFormat:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Issues a not supported error from the module associated with the receiver.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedErrorWithFormat:(NSString *)<em>format</em>, <em>...</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>format</em></dt>
-			<dd><p>The format for the error message, followed by zero or more
-            format parameters.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>...</em></dt>
-			<dd><p>A variable argument list of zero or more values referenced
-            within the <code>format</code> string.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> The error will be written to the console, possibly asynchronously.
-            Repeated issuances of the same error may be squelched.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBModuleLog.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-                    
-                    
-				</div>
-				<div class="main-navigation navigation-bottom">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="footer">
-					<hr />
-					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Gilt Groupe. All rights reserved. (Last updated: 2015-01-28)</span><br />
-						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
-						
-					</div>
-				</div>
 			</div>
-		</article>
-		<script type="text/javascript">
-			function jumpToChange()
-			{
-				window.location.hash = this.options[this.selectedIndex].value;
-			}
 			
-			function toggleTOC()
-			{
-				var contents = document.getElementById('contents');
-				var tocContainer = document.getElementById('tocContainer');
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logForModule:" title="logForModule:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logForModule:">+&nbsp;logForModule:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a new <code>MBModuleLog</code> instance for the specified module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)logForModule:(NSObject&lt;MBModule&gt; *)<em>module</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
 				
-				if (this.getAttribute('class') == 'open')
-				{
-					this.setAttribute('class', '');
-					contents.setAttribute('class', '');
-					tocContainer.setAttribute('class', '');
+					<tr>
+						<th scope="row" class="argument-name"><code>module</code></th>
+						<td><p>The <a href="../Protocols/MBModule.html"><code>MBModule</code></a> for which a log is being created.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new <code>MBModuleLog</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> This method is intended to be used only by <a href="../Protocols/MBModule.html"><code>MBModule</code></a>
+            implementations themselves. To retrieve the <code>MBModuleLog</code> for
+            a given module, acquire it from the module itself.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Warnings &amp; Errors" name="task_Warnings &amp; Errors"></a>
+						<h2 class="task-title">Warnings &amp; Errors</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/issueDeprecationWarning:" title="issueDeprecationWarning:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/issueDeprecationWarning:">&ndash;&nbsp;issueDeprecationWarning:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Issues a deprecation warning from the module associated with the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarning:(NSString *)<em>warning</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>warning</code></th>
+						<td><p>The warning message.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The warning will be written to the console, possibly asynchronously.
+            Repeated issuances of the same warning may be squelched.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/issueDeprecationWarningWithFormat:" title="issueDeprecationWarningWithFormat:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/issueDeprecationWarningWithFormat:">&ndash;&nbsp;issueDeprecationWarningWithFormat:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Issues a deprecation warning from the module associated with the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarningWithFormat:(NSString *)<em>format</em>, <em>...</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>format</code></th>
+						<td><p>The format for the warning message, followed by zero or more
+            format parameters.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>...</code></th>
+						<td><p>A variable argument list of zero or more values referenced
+            within the <code>format</code> string.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The warning will be written to the console, possibly asynchronously.
+            Repeated issuances of the same warning may be squelched.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/issueNotSupportedError:" title="issueNotSupportedError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/issueNotSupportedError:">&ndash;&nbsp;issueNotSupportedError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Issues a not supported error from the module associated with the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedError:(NSString *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error message.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The error will be written to the console, possibly asynchronously.
+            Repeated issuances of the same error may be squelched.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/issueNotSupportedErrorWithFormat:" title="issueNotSupportedErrorWithFormat:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/issueNotSupportedErrorWithFormat:">&ndash;&nbsp;issueNotSupportedErrorWithFormat:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Issues a not supported error from the module associated with the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedErrorWithFormat:(NSString *)<em>format</em>, <em>...</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>format</code></th>
+						<td><p>The format for the error message, followed by zero or more
+            format parameters.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>...</code></th>
+						<td><p>A variable argument list of zero or more values referenced
+            within the <code>format</code> string.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The error will be written to the console, possibly asynchronously.
+            Repeated issuances of the same error may be squelched.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
 					
-					window.name = "hideTOC";
-				}
-				else
-				{
-					this.setAttribute('class', 'open');
-					contents.setAttribute('class', 'isShowingTOC');
-					tocContainer.setAttribute('class', 'isShowingTOC');
 					
-					window.name = "";
-				}
-				return false;
-			}
-			
-			function toggleTOCEntryChildren(e)
-			{
-				e.stopPropagation();
-				var currentClass = this.getAttribute('class');
-				if (currentClass == 'children') {
-					this.setAttribute('class', 'children open');
-				}
-				else if (currentClass == 'children open') {
-					this.setAttribute('class', 'children');
-				}
-				return false;
-			}
-			
-			function tocEntryClick(e)
-			{
-				e.stopPropagation();
-				return true;
-			}
-			
-			function init()
-			{
-				var selectElement = document.getElementById('jumpTo');
-				selectElement.addEventListener('change', jumpToChange, false);
-				
-				var tocButton = document.getElementById('table_of_contents');
-				tocButton.addEventListener('click', toggleTOC, false);
-				
-				var taskTreeItem = document.getElementById('task_treeitem');
-				if (taskTreeItem.getElementsByTagName('li').length > 0)
-				{
-					taskTreeItem.setAttribute('class', 'children');
-					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
-				}
-				
-				var tocList = document.getElementById('toc');
-				
-				var tocEntries = tocList.getElementsByTagName('li');
-				for (var i = 0; i < tocEntries.length; i++) {
-					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
-				}
-				
-				var tocLinks = tocList.getElementsByTagName('a');
-				for (var i = 0; i < tocLinks.length; i++) {
-					tocLinks[i].addEventListener('click', tocEntryClick, false);
-				}
-				
-				if (window.name == "hideTOC") {
-					toggleTOC.call(tocButton);
-				}
-			}
-			
-			window.onload = init;
-			
-			// If showing in Xcode, hide the TOC and Header
-			if (navigator.userAgent.match(/xcode/i)) {
-				document.getElementById("contents").className = "hideInXcode"
-				document.getElementById("tocContainer").className = "hideInXcode"
-				document.getElementById("top_header").className = "hideInXcode"
-			}
-			
-		</script>
-	</body>
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-02-02</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
 </html>

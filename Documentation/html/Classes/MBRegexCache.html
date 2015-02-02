@@ -1,146 +1,113 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>MBRegexCache Class Reference</title>
-		<meta id="xcode-display" name="xcode-display" content="render"/>
-		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
-		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
-	</head>
-	<body>
-		<header id="top_header">
-			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Mockingbird Toolbox </a></h1>
-				<a id="developerHome" href="../index.html">Gilt Groupe</a>
-			</div>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBRegexCache Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
 			
-			<div id="title" role="banner">
-				<h1 class="hideInXcode">MBRegexCache Class Reference</h1>
-			</div>
-			<ul id="headerButtons" role="toolbar">
-				<li id="toc_button">
-					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
-				</li>
-				<li id="jumpto_button" role="navigation">
-					<select id="jumpTo">
+			<h1 id="library-title">
+				<a href="../index.html">Mockingbird Toolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
 	<option value="overview">Overview</option>
 	
-	
+
 	
 	
 	<option value="tasks">Tasks</option>
 	
 	
+
 	
 	
+
 	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/regularExpressionWithPattern:">+ regularExpressionWithPattern:</option>
+		
+		<option value="//api/name/regularExpressionWithPattern:options:">+ regularExpressionWithPattern:options:</option>
+		
+		<option value="//api/name/regularExpressionWithPattern:options:error:">+ regularExpressionWithPattern:options:error:</option>
+		
+	</optgroup>
 	
+
 	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/regularExpressionWithPattern:">&nbsp;&nbsp;&nbsp;&nbsp;+ regularExpressionWithPattern:</option>
-	
-	<option value="//api/name/regularExpressionWithPattern:options:">&nbsp;&nbsp;&nbsp;&nbsp;+ regularExpressionWithPattern:options:</option>
-	
-	<option value="//api/name/regularExpressionWithPattern:options:error:">&nbsp;&nbsp;&nbsp;&nbsp;+ regularExpressionWithPattern:options:error:</option>
-	
-	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/regularExpressionWithPattern:">&nbsp;&nbsp;&nbsp;&nbsp;- regularExpressionWithPattern:</option>
-	
-	<option value="//api/name/regularExpressionWithPattern:options:">&nbsp;&nbsp;&nbsp;&nbsp;- regularExpressionWithPattern:options:</option>
-	
-	<option value="//api/name/regularExpressionWithPattern:options:error:">&nbsp;&nbsp;&nbsp;&nbsp;- regularExpressionWithPattern:options:error:</option>
-	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/regularExpressionWithPattern:">- regularExpressionWithPattern:</option>
+		
+		<option value="//api/name/regularExpressionWithPattern:options:">- regularExpressionWithPattern:options:</option>
+		
+		<option value="//api/name/regularExpressionWithPattern:options:error:">- regularExpressionWithPattern:options:error:</option>
+		
+	</optgroup>
 	
 	
 </select>
-				</li>
-			</ul>
-		</header>
-		<nav id="tocContainer" class="isShowingTOC">
-			<ul id="toc" role="tree">
-				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
 
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBRegexCache Class Reference</h1>
 
-
-
-<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Class-level methods, for convenience">Class-level methods, for convenience</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Instance-level methods, for efficiency">Instance-level methods, for efficiency</a></span></li>
-	
-</ul></li>
-
-
-
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/regularExpressionWithPattern:">regularExpressionWithPattern:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/regularExpressionWithPattern:options:">regularExpressionWithPattern:options:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/regularExpressionWithPattern:options:error:">regularExpressionWithPattern:options:error:</a></span></li>
-	
-</ul></li>
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/regularExpressionWithPattern:">regularExpressionWithPattern:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/regularExpressionWithPattern:options:">regularExpressionWithPattern:options:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/regularExpressionWithPattern:options:error:">regularExpressionWithPattern:options:error:</a></span></li>
-	
-</ul></li>
-
-
-			</ul>
-		</nav>
-		<article>
-			<div id="contents" class="isShowingTOC" role="main">
-				<a title="MBRegexCache Class Reference" name="top"></a>
-				<div class="main-navigation navigation-top">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="header">
-					<div class="section-header">
-						<h1 class="title title-header">MBRegexCache Class Reference</h1>
-					</div>		
-				</div>
-				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/MBThreadsafeCache.html">MBThreadsafeCache</a> : NSObject</td>
+	<th>Inherits from</th>
+	<td><a href="../Classes/MBThreadsafeCache.html">MBThreadsafeCache</a> : NSObject</td>
 </tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value"><a href="../Protocols/MBSingleton.html">MBSingleton</a></td>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/MBSingleton.html">MBSingleton</a></td>
 </tr><tr>
-	<td class="specification-title">Declared in</td>
-	<td class="specification-value">MBRegexCache.h</td>
+	<th>Declared in</th>
+	<td>MBRegexCache.h</td>
 </tr>
 						</tbody></table></div>
 					
-                    
+
                     
 					
 					<div class="section section-overview">
@@ -162,570 +129,463 @@ the <code>MBRegexCache</code>.</p><div class="warning"><p><strong>Warning:</stro
 					</div>
 					
 					
-					
+
 					
 					
 					<div class="section section-tasks">
 						<a title="Tasks" name="tasks"></a>
-						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
-						
+
 						<a title="Class-level methods, for convenience" name="task_Class-level methods, for convenience"></a>
-						<h3 class="subsubtitle task-title">Class-level methods, for convenience</h3>
+						<h2 class="task-title">Class-level methods, for convenience</h2>
 
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/regularExpressionWithPattern:options:error:">+&nbsp;regularExpressionWithPattern:options:error:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/regularExpressionWithPattern:options:">+&nbsp;regularExpressionWithPattern:options:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/regularExpressionWithPattern:">+&nbsp;regularExpressionWithPattern:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Instance-level methods, for efficiency" name="task_Instance-level methods, for efficiency"></a>
-						<h3 class="subsubtitle task-title">Instance-level methods, for efficiency</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/regularExpressionWithPattern:options:error:">&ndash;&nbsp;regularExpressionWithPattern:options:error:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/regularExpressionWithPattern:options:">&ndash;&nbsp;regularExpressionWithPattern:options:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/regularExpressionWithPattern:">&ndash;&nbsp;regularExpressionWithPattern:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-					</div>
-					
-					
-					
-					
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/regularExpressionWithPattern:" title="regularExpressionWithPattern:"></a>
-	<h3 class="subsubtitle method-title">regularExpressionWithPattern:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns an <code>NSRegularExpression</code> instance for the given regular
-expression pattern.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>pattern</em></dt>
-			<dd><p>The regular expression pattern</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A pointer to an <code>NSRegularExpression</code> instance, or
-            <code>nil</code> if the passed-in pattern could not be interpreted
-            as a valid regular expression. If an error occurs causing
-            <code>nil</code> to be returned, a message will be logged to the
-            console.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBRegexCache.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/regularExpressionWithPattern:options:" title="regularExpressionWithPattern:options:"></a>
-	<h3 class="subsubtitle method-title">regularExpressionWithPattern:options:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns an <code>NSRegularExpression</code> instance for the given regular
-expression pattern and options.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>pattern</em></dt>
-			<dd><p>The regular expression pattern</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>options</em></dt>
-			<dd><p>The <code>NSRegularExpressionOptions</code> specifying
-            the regular expression options</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A pointer to an <code>NSRegularExpression</code> instance, or
-            <code>nil</code> if the passed-in pattern could not be interpreted
-            as a valid regular expression. If an error occurs causing
-            <code>nil</code> to be returned, a message will be logged to the
-            console.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBRegexCache.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
+						<div class="task-list">
+							<div class="section-method">
 	<a name="//api/name/regularExpressionWithPattern:options:error:" title="regularExpressionWithPattern:options:error:"></a>
-	<h3 class="subsubtitle method-title">regularExpressionWithPattern:options:error:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns an <code>NSRegularExpression</code> instance for the given regular
+	<h3 class="method-title"><code><a href="#//api/name/regularExpressionWithPattern:options:error:">+&nbsp;regularExpressionWithPattern:options:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <code>NSRegularExpression</code> instance for the given regular
 expression pattern and options.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> error:(inout NSError **)<em>errPtr</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>pattern</em></dt>
-			<dd><p>The regular expression pattern</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>options</em></dt>
-			<dd><p>The <code>NSRegularExpressionOptions</code> specifying
-            the regular expression options</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>errPtr</em></dt>
-			<dd><p>If this method returns <code>nil</code> and this parameter is non-<code>nil</code>,
-            <code>*errPtr</code> will be updated to point to an <code>NSError</code> instance
-            containing further information about the error. If <code>nil</code> and an
-            error occurs, a message will be logged to the console.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A pointer to an <code>NSRegularExpression</code> instance, or
-            <code>nil</code> if the passed-in pattern could not be interpreted
-            as a valid regular expression.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBRegexCache.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/regularExpressionWithPattern:" title="regularExpressionWithPattern:"></a>
-	<h3 class="subsubtitle method-title">regularExpressionWithPattern:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns an <code>NSRegularExpression</code> instance for the given regular
-expression pattern.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>pattern</em></dt>
-			<dd><p>The regular expression pattern</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A pointer to an <code>NSRegularExpression</code> instance, or
-            <code>nil</code> if the passed-in pattern could not be interpreted
-            as a valid regular expression. If an error occurs causing
-            <code>nil</code> to be returned, a message will be logged to the
-            console.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBRegexCache.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/regularExpressionWithPattern:options:" title="regularExpressionWithPattern:options:"></a>
-	<h3 class="subsubtitle method-title">regularExpressionWithPattern:options:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns an <code>NSRegularExpression</code> instance for the given regular
-expression pattern and options.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>pattern</em></dt>
-			<dd><p>The regular expression pattern</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>options</em></dt>
-			<dd><p>The <code>NSRegularExpressionOptions</code> specifying
-            the regular expression options</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A pointer to an <code>NSRegularExpression</code> instance, or
-            <code>nil</code> if the passed-in pattern could not be interpreted
-            as a valid regular expression. If an error occurs causing
-            <code>nil</code> to be returned, a message will be logged to the
-            console.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBRegexCache.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/regularExpressionWithPattern:options:error:" title="regularExpressionWithPattern:options:error:"></a>
-	<h3 class="subsubtitle method-title">regularExpressionWithPattern:options:error:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns an <code>NSRegularExpression</code> instance for the given regular
-expression pattern and options.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> error:(inout NSError **)<em>errPtr</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>pattern</em></dt>
-			<dd><p>The regular expression pattern</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>options</em></dt>
-			<dd><p>The <code>NSRegularExpressionOptions</code> specifying
-            the regular expression options</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>errPtr</em></dt>
-			<dd><p>If this method returns <code>nil</code> and this parameter is non-<code>nil</code>,
-            <code>*errPtr</code> will be updated to point to an <code>NSError</code> instance
-            containing further information about the error. If <code>nil</code> and an
-            error occurs, a message will be logged to the console.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A pointer to an <code>NSRegularExpression</code> instance, or
-            <code>nil</code> if the passed-in pattern could not be interpreted
-            as a valid regular expression.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">MBRegexCache.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
-					
-                    
-                    
-				</div>
-				<div class="main-navigation navigation-bottom">
-					<ul>
-	<li><a href="../index.html">Index</a></li>
-	<li><a href="../hierarchy.html">Hierarchy</a></li>
-</ul>
-				</div>
-				<div id="footer">
-					<hr />
-					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Gilt Groupe. All rights reserved. (Last updated: 2015-01-28)</span><br />
-						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
-						
-					</div>
-				</div>
 			</div>
-		</article>
-		<script type="text/javascript">
-			function jumpToChange()
-			{
-				window.location.hash = this.options[this.selectedIndex].value;
-			}
 			
-			function toggleTOC()
-			{
-				var contents = document.getElementById('contents');
-				var tocContainer = document.getElementById('tocContainer');
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> error:(inout NSError **)<em>errPtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
 				
-				if (this.getAttribute('class') == 'open')
-				{
-					this.setAttribute('class', '');
-					contents.setAttribute('class', '');
-					tocContainer.setAttribute('class', '');
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The <code>NSRegularExpressionOptions</code> specifying
+            the regular expression options</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errPtr</code></th>
+						<td><p>If this method returns <code>nil</code> and this parameter is non-<code>nil</code>,
+            <code>*errPtr</code> will be updated to point to an <code>NSError</code> instance
+            containing further information about the error. If <code>nil</code> and an
+            error occurs, a message will be logged to the console.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A pointer to an <code>NSRegularExpression</code> instance, or
+            <code>nil</code> if the passed-in pattern could not be interpreted
+            as a valid regular expression.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRegexCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/regularExpressionWithPattern:options:" title="regularExpressionWithPattern:options:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/regularExpressionWithPattern:options:">+&nbsp;regularExpressionWithPattern:options:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <code>NSRegularExpression</code> instance for the given regular
+expression pattern and options.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The <code>NSRegularExpressionOptions</code> specifying
+            the regular expression options</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A pointer to an <code>NSRegularExpression</code> instance, or
+            <code>nil</code> if the passed-in pattern could not be interpreted
+            as a valid regular expression. If an error occurs causing
+            <code>nil</code> to be returned, a message will be logged to the
+            console.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRegexCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/regularExpressionWithPattern:" title="regularExpressionWithPattern:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/regularExpressionWithPattern:">+&nbsp;regularExpressionWithPattern:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <code>NSRegularExpression</code> instance for the given regular
+expression pattern.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A pointer to an <code>NSRegularExpression</code> instance, or
+            <code>nil</code> if the passed-in pattern could not be interpreted
+            as a valid regular expression. If an error occurs causing
+            <code>nil</code> to be returned, a message will be logged to the
+            console.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRegexCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Instance-level methods, for efficiency" name="task_Instance-level methods, for efficiency"></a>
+						<h2 class="task-title">Instance-level methods, for efficiency</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/regularExpressionWithPattern:options:error:" title="regularExpressionWithPattern:options:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/regularExpressionWithPattern:options:error:">&ndash;&nbsp;regularExpressionWithPattern:options:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <code>NSRegularExpression</code> instance for the given regular
+expression pattern and options.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> error:(inout NSError **)<em>errPtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The <code>NSRegularExpressionOptions</code> specifying
+            the regular expression options</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errPtr</code></th>
+						<td><p>If this method returns <code>nil</code> and this parameter is non-<code>nil</code>,
+            <code>*errPtr</code> will be updated to point to an <code>NSError</code> instance
+            containing further information about the error. If <code>nil</code> and an
+            error occurs, a message will be logged to the console.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A pointer to an <code>NSRegularExpression</code> instance, or
+            <code>nil</code> if the passed-in pattern could not be interpreted
+            as a valid regular expression.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRegexCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/regularExpressionWithPattern:options:" title="regularExpressionWithPattern:options:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/regularExpressionWithPattern:options:">&ndash;&nbsp;regularExpressionWithPattern:options:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <code>NSRegularExpression</code> instance for the given regular
+expression pattern and options.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The <code>NSRegularExpressionOptions</code> specifying
+            the regular expression options</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A pointer to an <code>NSRegularExpression</code> instance, or
+            <code>nil</code> if the passed-in pattern could not be interpreted
+            as a valid regular expression. If an error occurs causing
+            <code>nil</code> to be returned, a message will be logged to the
+            console.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRegexCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/regularExpressionWithPattern:" title="regularExpressionWithPattern:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/regularExpressionWithPattern:">&ndash;&nbsp;regularExpressionWithPattern:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <code>NSRegularExpression</code> instance for the given regular
+expression pattern.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSRegularExpression *)regularExpressionWithPattern:(NSString *)<em>pattern</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A pointer to an <code>NSRegularExpression</code> instance, or
+            <code>nil</code> if the passed-in pattern could not be interpreted
+            as a valid regular expression. If an error occurs causing
+            <code>nil</code> to be returned, a message will be logged to the
+            console.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBRegexCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
 					
-					window.name = "hideTOC";
-				}
-				else
-				{
-					this.setAttribute('class', 'open');
-					contents.setAttribute('class', 'isShowingTOC');
-					tocContainer.setAttribute('class', 'isShowingTOC');
 					
-					window.name = "";
-				}
-				return false;
-			}
-			
-			function toggleTOCEntryChildren(e)
-			{
-				e.stopPropagation();
-				var currentClass = this.getAttribute('class');
-				if (currentClass == 'children') {
-					this.setAttribute('class', 'children open');
-				}
-				else if (currentClass == 'children open') {
-					this.setAttribute('class', 'children');
-				}
-				return false;
-			}
-			
-			function tocEntryClick(e)
-			{
-				e.stopPropagation();
-				return true;
-			}
-			
-			function init()
-			{
-				var selectElement = document.getElementById('jumpTo');
-				selectElement.addEventListener('change', jumpToChange, false);
-				
-				var tocButton = document.getElementById('table_of_contents');
-				tocButton.addEventListener('click', toggleTOC, false);
-				
-				var taskTreeItem = document.getElementById('task_treeitem');
-				if (taskTreeItem.getElementsByTagName('li').length > 0)
-				{
-					taskTreeItem.setAttribute('class', 'children');
-					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
-				}
-				
-				var tocList = document.getElementById('toc');
-				
-				var tocEntries = tocList.getElementsByTagName('li');
-				for (var i = 0; i < tocEntries.length; i++) {
-					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
-				}
-				
-				var tocLinks = tocList.getElementsByTagName('a');
-				for (var i = 0; i < tocLinks.length; i++) {
-					tocLinks[i].addEventListener('click', tocEntryClick, false);
-				}
-				
-				if (window.name == "hideTOC") {
-					toggleTOC.call(tocButton);
-				}
-			}
-			
-			window.onload = init;
-			
-			// If showing in Xcode, hide the TOC and Header
-			if (navigator.userAgent.match(/xcode/i)) {
-				document.getElementById("contents").className = "hideInXcode"
-				document.getElementById("tocContainer").className = "hideInXcode"
-				document.getElementById("top_header").className = "hideInXcode"
-			}
-			
-		</script>
-	</body>
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-02-02</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
 </html>

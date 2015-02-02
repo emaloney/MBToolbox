@@ -200,7 +200,7 @@ Among the subspecs provided are:
 
 Additional subspecs are declared and documented in [the podspec](https://github.com/emaloney/MBToolbox/blob/master/MBToolbox.podspec).
 
-## About Mockingbird Toolbox
+## About Mockingbird Library
 
 The Mockingbird Toolbox represents the foundation of the Mockingbird Library.
 

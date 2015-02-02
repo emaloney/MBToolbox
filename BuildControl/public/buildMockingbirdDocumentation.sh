@@ -104,7 +104,6 @@ fi
 
 # rewrite the links in the Code/README.md file to work properly in the docset
 cat "${PROJECT_DIR}/Code/README.md" | sed sq${ONLINE_ROOT_URL}qqg > "${INDEX_OUTPUT_FILE}"
-printf "\n## API Reference\n" >> "${INDEX_OUTPUT_FILE}"
 
 # create the documentation
 find "$CODE_DIR" -name "*.h" ! -path "*/Private/*" -print0 | xargs -0 \

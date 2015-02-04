@@ -56,7 +56,6 @@ pre > code, .method-declaration code {
 	border-left: 5px solid rgba(0, 155, 51, .2);
 
 	&:before {
-		content: "Objective-C";
 		display: block;
 
 		font: 9px/1 $body-font;
@@ -65,6 +64,10 @@ pre > code, .method-declaration code {
 		letter-spacing: 2px;
 		padding-bottom: 6px;
 	}
+}
+
+.method-declaration:before {
+	content: "Objective-C";
 }
 
 pre > code {

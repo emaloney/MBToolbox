@@ -24,13 +24,13 @@
  
  @return    the MD5 hash, as a lowercase hexadecimal string
  */
-- (NSString*) MD5;
+- (nonnull NSString*) MD5;
 
 /*!
  Computes an SHA-1 hash from the contents of the receiver.
 
  @return    the SHA-1 hash, as a lowercase hexadecimal string
  */
-- (NSString*) SHA1;
+- (nonnull NSString*) SHA1;
 
 @end

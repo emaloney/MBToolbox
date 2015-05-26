@@ -38,7 +38,7 @@
 
  @return    A new `MBModuleLog`.
  */
-+ (instancetype) logForModuleClass:(Class)moduleCls;
++ (nonnull instancetype) logForModuleClass:(nonnull Class)moduleCls;
 
 /*!
  Creates and returns a new `MBModuleLog` instance for the specified module.
@@ -51,7 +51,7 @@
 
  @return    A new `MBModuleLog`.
  */
-+ (instancetype) logForModule:(NSObject<MBModule>*)module;
++ (nonnull instancetype) logForModule:(nonnull NSObject<MBModule>*)module;
 
 /*******************************************************************************
  @name Warnings & Errors
@@ -65,7 +65,7 @@
  @note      The warning will be written to the console, possibly asynchronously.
             Repeated issuances of the same warning may be squelched.
  */
-- (void) issueDeprecationWarning:(NSString*)warning;
+- (void) issueDeprecationWarning:(nonnull NSString*)warning;
 
 /*!
  Issues a deprecation warning from the module associated with the receiver.
@@ -79,7 +79,7 @@
  @note      The warning will be written to the console, possibly asynchronously.
             Repeated issuances of the same warning may be squelched.
  */
-- (void) issueDeprecationWarningWithFormat:(NSString*)format, ...;
+- (void) issueDeprecationWarningWithFormat:(nonnull NSString*)format, ...;
 
 /*!
  Issues a not supported error from the module associated with the receiver.
@@ -89,7 +89,7 @@
  @note      The error will be written to the console, possibly asynchronously.
             Repeated issuances of the same error may be squelched.
  */
-- (void) issueNotSupportedError:(NSString*)error;
+- (void) issueNotSupportedError:(nonnull NSString*)error;
 
 /*!
  Issues a not supported error from the module associated with the receiver.
@@ -103,6 +103,6 @@
  @note      The error will be written to the console, possibly asynchronously.
             Repeated issuances of the same error may be squelched.
  */
-- (void) issueNotSupportedErrorWithFormat:(NSString*)format, ...;
+- (void) issueNotSupportedErrorWithFormat:(nonnull NSString*)format, ...;
 
 @end

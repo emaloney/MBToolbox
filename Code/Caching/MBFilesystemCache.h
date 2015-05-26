@@ -41,7 +41,7 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
  
  @return    The filename for the given cache key.
  */
-- (NSString*) filenameForCacheKey:(id)key;
+- (nonnull NSString*) filenameForCacheKey:(nonnull id)key;
 
 @optional
 
@@ -60,9 +60,10 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
  @param     cacheObj The cache object for which the raw data should be
             returned.
 
- @return    An `NSData` representation of the given cache object.
+ @return    An `NSData` representation of the given cache object, or `nil` if
+            it could not be created.
  */
-- (NSData*) cacheDataFromObject:(id)cacheObj;
+- (nullable NSData*) cacheDataFromObject:(nonnull id)cacheObj;
 
 /*!
  Converts raw data representing a cache object into the cache object itself.
@@ -73,9 +74,10 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
 
  @param     cacheData The raw data representing the cache object.
 
- @return    The cache object created from the raw cache data.
+ @return    The cache object created from the raw cache data, or `nil`
+            if it could not be created.
  */
-- (id) objectFromCacheData:(NSData*)cacheData;
+- (nullable id) objectFromCacheData:(nonnull NSData*)cacheData;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Controlling what gets stored in the cache
@@ -98,7 +100,9 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
  @return    `YES` if the `cacheObj` should be stored in the memory cache of
             `cache`; `NO` otherwise.
  */
-- (BOOL) shouldStoreObject:(id)cacheObj forKey:(id)key inMemoryCache:(MBFilesystemCache*)cache;
+- (BOOL) shouldStoreObject:(nonnull id)cacheObj
+                    forKey:(nonnull id)key
+             inMemoryCache:(nonnull MBFilesystemCache*)cache;
 
 /*!
  Asks the delegate whether or not the specified object should be stored in the
@@ -116,7 +120,9 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
  @return    `YES` if the `cacheObj` should be stored in the filesystem cache of
             `cache`; `NO` otherwise.
  */
-- (BOOL) shouldStoreObject:(id)cacheObj forKey:(id)key inFilesystemCache:(MBFilesystemCache*)cache;
+- (BOOL) shouldStoreObject:(nonnull id)cacheObj
+                    forKey:(nonnull id)key
+         inFilesystemCache:(nonnull MBFilesystemCache*)cache;
 
 @end
 
@@ -160,7 +166,7 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
  
  @return    The receiver.
  */
-- (instancetype) initWithName:(NSString*)name;
+- (nonnull instancetype) initWithName:(nonnull NSString*)name;
 
 /*!
  Initializes the receiver with the given name.
@@ -174,11 +180,12 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
             the directory in which the receiver's files will be stored.
  
  @param     delegate The `MBFilesystemCacheDelegate` that will be used as
-            the receiver's delegate.
+            the receiver's delegate. Must not be `nil`.
  
  @return    The receiver.
  */
-- (instancetype) initWithName:(NSString*)name cacheDelegate:(id)delegate;
+- (nonnull instancetype) initWithName:(nonnull NSString*)name
+                        cacheDelegate:(nonnull id)delegate;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Cache properties
@@ -187,19 +194,19 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
 
 /*! Returns the operation queue that will be used for performing filesystem
     cache read operations. */
-@property(nonatomic, readonly) MBCacheReadQueue* readQueue;
+@property(nonnull, nonatomic, readonly) MBCacheReadQueue* readQueue;
 
 /*! Returns the operation queue that will be used for performing filesystem
     cache write operations. */
-@property(nonatomic, readonly) MBCacheWriteQueue* writeQueue;
+@property(nonnull, nonatomic, readonly) MBCacheWriteQueue* writeQueue;
 
 /*! Returns the name of the cache, which is used to determine the directory
     in which cache files are stored. This is name provided when the receiver
     is initialized. */
-@property(nonatomic, readonly) NSString* cacheName;
+@property(nonnull, nonatomic, readonly) NSString* cacheName;
 
 /*! Returns the `MBFilesystemCacheDelegate` used by the receiver. */
-@property(nonatomic, weak) id cacheDelegate;
+@property(nonnull, nonatomic, weak) id cacheDelegate;
 
 /*! Returns the maximum age of the files in the cache, in seconds. Files that
     are older than this value will not be used by the cache and will
@@ -224,7 +231,7 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
  @return    `YES` if there is an object associated with `key` in either the
             filesystem or the memory cache; `NO` otherwise.
  */
-- (BOOL) isKeyInCache:(id)key;
+- (BOOL) isKeyInCache:(nonnull id)key;
 
 /*!
  Determines whether the specified cache key represents an object currently
@@ -235,7 +242,7 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
  @return    `YES` if there is an object associated with `key` in the memory
             cache; `NO` otherwise.
  */
-- (BOOL) isKeyInMemoryCache:(id)key;
+- (BOOL) isKeyInMemoryCache:(nonnull id)key;
 
 /*!
  Determines whether the specified cache key represents an object currently
@@ -246,7 +253,7 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
  @return    `YES` if there is an object associated with `key` in the filesystem
             cache; `NO` otherwise.
  */
-- (BOOL) isKeyInFilesystemCache:(id)key;
+- (BOOL) isKeyInFilesystemCache:(nonnull id)key;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Retrieving objects from the cache
@@ -262,8 +269,10 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
             of whether they're in the memory or filesystem caches.
  
  @param     key The cache key of the object to retrieve.
+ 
+ @return    The object instance, or `nil` if it was not in the cache.
  */
-- (id) objectForKeyInMemoryCache:(id)key;
+- (nullable id) objectForKeyInMemoryCache:(nonnull id)key;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Managing the filesystem cache

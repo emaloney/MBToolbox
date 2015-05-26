@@ -12,14 +12,22 @@
 #pragma mark Constants
 /******************************************************************************/
 
-extern NSString* const kMBErrorDomain;                      //!< @"MockingbirdErrorDomain"
+/*! To avoid the pain of this declaration, we'll use `NSErrorPtrPtr` for
+ specifying the `NSError**` type. */
+typedef NSError *__autoreleasing  __nullable * __nullable NSErrorPtrPtr;
+
+/******************************************************************************/
+#pragma mark Constants
+/******************************************************************************/
+
+extern NSString* const __nonnull kMBErrorDomain;                      //!< @"MockingbirdErrorDomain"
 
 // NSError user info keys
-extern NSString* const kMBErrorUserInfoKeyURL;              //!< @"URL"
-extern NSString* const kMBErrorUserInfoKeyFilePath;         //!< @"filePath"
-extern NSString* const kMBErrorUserInfoKeyException;        //!< @"exception"
-extern NSString* const kMBErrorUserInfoKeyExceptionName;    //!< @"exceptionName"
-extern NSString* const kMBErrorUserInfoKeyExceptionReason;  //!< @"exceptionReason"
+extern NSString* const __nonnull kMBErrorUserInfoKeyURL;              //!< @"URL"
+extern NSString* const __nonnull kMBErrorUserInfoKeyFilePath;         //!< @"filePath"
+extern NSString* const __nonnull kMBErrorUserInfoKeyException;        //!< @"exception"
+extern NSString* const __nonnull kMBErrorUserInfoKeyExceptionName;    //!< @"exceptionName"
+extern NSString* const __nonnull kMBErrorUserInfoKeyExceptionReason;  //!< @"exceptionReason"
 
 // error codes
 extern const NSInteger kMBErrorException;                   //!< 100
@@ -54,7 +62,7 @@ extern const NSInteger kMBErrorMessageInDescription;        //!< 999 - generic e
  
  @return    A new `NSError` instance with the specified settings.
  */
-+ (NSError*) mockingbirdErrorWithCode:(NSInteger)code;
++ (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code;
 
 /*!
  Constructs a new `NSError` instance in the error domain specified by the 
@@ -66,7 +74,7 @@ extern const NSInteger kMBErrorMessageInDescription;        //!< 999 - generic e
  
  @return    A new `NSError` instance with the specified settings.
  */
-+ (NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfo:(NSDictionary*)dict;
++ (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfo:(nullable NSDictionary*)dict;
 
 /*!
  Constructs a new `NSError` instance in the error domain specified by the 
@@ -83,7 +91,7 @@ extern const NSInteger kMBErrorMessageInDescription;        //!< 999 - generic e
 
  @return    A new `NSError` instance with the specified settings.
  */
-+ (NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(NSString*)key value:(id)val;
++ (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(nonnull NSString*)key value:(nonnull id)val;
 
 /*!
  Constructs a new `NSError` instance in the error domain specified by the 
@@ -97,7 +105,7 @@ extern const NSInteger kMBErrorMessageInDescription;        //!< 999 - generic e
 
  @return    A new `NSError` instance with the specified settings.
  */
-+ (NSError*) mockingbirdErrorWithDescription:(NSString*)desc;
++ (nonnull NSError*) mockingbirdErrorWithDescription:(nonnull NSString*)desc;
 
 /*!
  Constructs a new `NSError` instance in the error domain specified by the 
@@ -111,7 +119,7 @@ extern const NSInteger kMBErrorMessageInDescription;        //!< 999 - generic e
 
  @return    A new `NSError` instance with the specified settings.
  */
-+ (NSError*) mockingbirdErrorWithDescription:(NSString*)desc code:(NSInteger)code;
++ (nonnull NSError*) mockingbirdErrorWithDescription:(nonnull NSString*)desc code:(NSInteger)code;
 
 /*!
  Constructs a new `NSError` instance in the error domain specified by the 
@@ -132,7 +140,7 @@ extern const NSInteger kMBErrorMessageInDescription;        //!< 999 - generic e
 
  @return    A new `NSError` instance with the specified settings.
  */
-+ (NSError*) mockingbirdErrorWithDescription:(NSString*)desc code:(NSInteger)code userInfoKey:(NSString*)key value:(id)val;
++ (nonnull NSError*) mockingbirdErrorWithDescription:(nonnull NSString*)desc code:(NSInteger)code userInfoKey:(nonnull NSString*)key value:(nonnull id)val;
 
 /*!
  Constructs a new `NSError` instance in the error domain specified by the
@@ -144,7 +152,7 @@ extern const NSInteger kMBErrorMessageInDescription;        //!< 999 - generic e
 
  @return    A new `NSError` instance with the specified settings.
  */
-+ (NSError*) mockingbirdErrorWithException:(NSException*)ex;
++ (nonnull NSError*) mockingbirdErrorWithException:(nonnull NSException*)ex;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Creating derived errors
@@ -152,17 +160,18 @@ extern const NSInteger kMBErrorMessageInDescription;        //!< 999 - generic e
 /*----------------------------------------------------------------------------*/
 
 /*!
- Creates a new `NSError` instance by adding the specified user info 
- dictionary value to that of the receiver.
+ Creates and returns a new `NSError` instance based on the receiver by adding
+ or removing the user info dictionary value for the given key.
  
  @param     key The key whose corresponding value will be stored in the
             returned error's user info dictionary.
 
- @param     val The value that will be associated with `key`.
+ @param     val The value that will be associated with `key`. If `nil`, any
+            existing value for `key` will be removed instead.
 
  @return    A new `NSError` instance with the same settings as the receiver,
             but with the specified user info value added.
  */
-- (NSError*) errorByAddingUserInfoKey:(NSString*)key value:(id)val;
+- (nonnull NSError*) errorByAddingOrRemovingUserInfoKey:(nonnull NSString*)key value:(nullable id)val;
 
 @end

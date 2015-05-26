@@ -35,7 +35,7 @@
             this method directly or perform mutations on the returned
             dictionary must only do so when the cache is locked.
  */
-- (NSMutableDictionary*) internalCache;
+- (nonnull NSMutableDictionary*) internalCache;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Accessing cached items
@@ -55,7 +55,7 @@
             `MBThreadsafeCache` superclass implementation; subclasses that call
             this method directly must only do so when the cache is locked.
  */
-- (BOOL) internalIsKeyInCache:(id)key;
+- (BOOL) internalIsKeyInCache:(nonnull id)key;
 
 /*!
  Called internally to retrieve a cached object value given its key.
@@ -68,7 +68,7 @@
             `MBThreadsafeCache` superclass implementation; subclasses that call
             this method directly must only do so when the cache is locked.
  */
-- (id) internalObjectForKey:(id)key;
+- (nullable id) internalObjectForKey:(nonnull id)key;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Modifying the cache
@@ -87,7 +87,7 @@
             `MBThreadsafeCache` superclass implementation; subclasses that call
             this method directly must only do so when the cache is locked.
  */
-- (void) internalSetObject:(id)obj forKey:(id)key;
+- (void) internalSetObject:(nonnull id)obj forKey:(nonnull id)key;
 
 /*!
  Called internally to remove from the cache the object associated with the given
@@ -99,7 +99,7 @@
             `MBThreadsafeCache` superclass implementation; subclasses that call
             this method directly must only do so when the cache is locked.
  */
-- (void) internalRemoveObjectForKey:(id)key;
+- (void) internalRemoveObjectForKey:(nonnull id)key;
 
 /*!
  Called internally to empty the in-memory object cache.

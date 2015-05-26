@@ -18,7 +18,7 @@
 
 @implementation NSString (MBIndentation)
 
-- (NSString*) stringByIndentingEachLineWithPrefix:(NSString*)prefix
+- (nonnull NSString*) stringByIndentingEachLineWithPrefix:(nonnull NSString*)prefix
 {
     debugTrace();
 
@@ -84,12 +84,12 @@
     return indented;
 }
 
-- (NSString*) stringByIndentingEachLineWithTab
+- (nonnull NSString*) stringByIndentingEachLineWithTab
 {
     return [self stringByIndentingEachLineWithPrefix:@"\t"];
 }
 
-- (NSString*) stringByIndentingEachLineWithTabs:(NSUInteger)numberOfTabs
+- (nonnull NSString*) stringByIndentingEachLineWithTabs:(NSUInteger)numberOfTabs
 {
     NSString* indentStr = [@"" stringByPaddingToLength:numberOfTabs
                                             withString:@"\t"

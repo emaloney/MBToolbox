@@ -8,6 +8,7 @@
 
 #import "MBSingleton.h"
 #import "MBThreadsafeCache.h"
+#import "NSError+MBToolbox.h"
 
 /******************************************************************************/
 #pragma mark -
@@ -56,9 +57,9 @@
             `nil` if the passed-in pattern could not be interpreted 
             as a valid regular expression.
  */
-+ (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern 
-                                              options:(NSRegularExpressionOptions)options 
-                                                error:(inout NSError**)errPtr;
++ (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern
+                                                       options:(NSRegularExpressionOptions)options
+                                                         error:(NSErrorPtrPtr)errPtr;
 
 /*!
  Returns an `NSRegularExpression` instance for the given regular 
@@ -75,8 +76,8 @@
             `nil` to be returned, a message will be logged to the
             console.
  */
-+ (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern 
-                                              options:(NSRegularExpressionOptions)options;
++ (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern 
+                                                       options:(NSRegularExpressionOptions)options;
 
 /*!
  Returns an `NSRegularExpression` instance for the given regular 
@@ -90,7 +91,7 @@
             `nil` to be returned, a message will be logged to the
             console.
  */
-+ (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern;
++ (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Instance-level methods, for efficiency
@@ -115,9 +116,9 @@
             `nil` if the passed-in pattern could not be interpreted 
             as a valid regular expression.
  */
-- (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern
-                                              options:(NSRegularExpressionOptions)options
-                                                error:(inout NSError**)errPtr;
+- (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern
+                                                       options:(NSRegularExpressionOptions)options
+                                                         error:(NSErrorPtrPtr)errPtr;
 
 /*!
  Returns an `NSRegularExpression` instance for the given regular 
@@ -134,8 +135,8 @@
             `nil` to be returned, a message will be logged to the
             console.
  */
-- (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern 
-                                              options:(NSRegularExpressionOptions)options;
+- (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern 
+                                                       options:(NSRegularExpressionOptions)options;
 
 /*!
  Returns an `NSRegularExpression` instance for the given regular 
@@ -149,6 +150,6 @@
             `nil` to be returned, a message will be logged to the
             console.
  */
-- (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern;
+- (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern;
 
 @end

@@ -187,17 +187,17 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
     return _carrierNetworkInfo.subscriberCellularProvider != nil;
 }
 
-- (NSString*) cellularCarrierName
+- (nullable NSString*) cellularCarrierName
 {
     return _carrierNetworkInfo.subscriberCellularProvider.carrierName;
 }
 
-- (NSString*) cellularCarrierCountry
+- (nullable NSString*) cellularCarrierCountry
 {
     return _carrierNetworkInfo.subscriberCellularProvider.isoCountryCode;
 }
 
-- (NSString*) cellularConnectionType
+- (nullable NSString*) cellularConnectionType
 {
     NSString* radioType = _carrierNetworkInfo.currentRadioAccessTechnology;
     if ([radioType hasPrefix:kMBNetworkRadioAccessTechnologyPrefix]) {
@@ -206,7 +206,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
     return nil;
 }
 
-- (NSString*) carrierStatusDescription
+- (nonnull NSString*) carrierStatusDescription
 {
     if (self.hasCellularCarrier) {
         NSString* connectionType = self.cellularConnectionType;
@@ -238,7 +238,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
     }
 }
 
-- (NSString*) networkAvailabilityDescription
+- (nonnull NSString*) networkAvailabilityDescription
 {
     MBNetworkAvailabilityFlags flags = self.networkAvailability;
     if (flags == MBNetworkAvailabilityOffline) {
@@ -255,7 +255,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
     return @"unknown";
 }
 
-- (NSString*) reachabilityFlagsDescription
+- (nullable NSString*) reachabilityFlagsDescription
 {
     SCNetworkReachabilityFlags flags = 0;
 	if (SCNetworkReachabilityGetFlags(_networkReach, &flags)) {

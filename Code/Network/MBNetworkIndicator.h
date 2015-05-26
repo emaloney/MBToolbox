@@ -13,16 +13,16 @@
 /******************************************************************************/
 
 //!< Fired when there are no active operations and a new operation starts
-extern NSString* const kMBNetworkActivityStartedEvent;       // "MBNetwork:activityStarted"
+extern NSString* const __nonnull kMBNetworkActivityStartedEvent;       // "MBNetwork:activityStarted"
 
 //!< Fired when there is only one active operation and it completes
-extern NSString* const kMBNetworkActivityFinishedEvent;      // "MBNetwork:activityFinished"
+extern NSString* const __nonnull kMBNetworkActivityFinishedEvent;      // "MBNetwork:activityFinished"
 
 //!< Fired when a network operation starts
-extern NSString* const kMBNetworkOperationStartedEvent;      // "MBNetwork:operationStarted"
+extern NSString* const __nonnull kMBNetworkOperationStartedEvent;      // "MBNetwork:operationStarted"
 
 //!< Fired when a network operation completes
-extern NSString* const kMBNetworkOperationFinishedEvent;     // "MBNetwork:operationFinished"
+extern NSString* const __nonnull kMBNetworkOperationFinishedEvent;     // "MBNetwork:operationFinished"
 
 /******************************************************************************/
 #pragma mark -

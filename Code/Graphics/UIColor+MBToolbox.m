@@ -38,7 +38,7 @@ const CGFloat kHiliteColorBrightnessAdjust = 0.35;
     return brightness < 0.5;
 }
 
-- (UIColor*) highlightColor
+- (nonnull UIColor*) highlightColor
 {
     debugTrace();
     
@@ -49,7 +49,7 @@ const CGFloat kHiliteColorBrightnessAdjust = 0.35;
     return [UIColor colorWithHue:h saturation:s brightness:b alpha:a];
 }
 
-- (UIColor*) colorWithBrightnessAdjustedByFactor:(CGFloat)adjustFactor
+- (nonnull UIColor*) colorWithBrightnessAdjustedByFactor:(CGFloat)adjustFactor
 {
     debugTrace();
     

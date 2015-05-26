@@ -20,10 +20,10 @@
 #pragma mark Constants
 /******************************************************************************/
 
-NSString* const kMBNetworkActivityStartedEvent   = @"MBNetwork:activityStarted";
-NSString* const kMBNetworkActivityFinishedEvent  = @"MBNetwork:activityFinished";
-NSString* const kMBNetworkOperationStartedEvent  = @"MBNetwork:operationStarted";
-NSString* const kMBNetworkOperationFinishedEvent = @"MBNetwork:operationFinished";
+NSString* const __nonnull kMBNetworkActivityStartedEvent   = @"MBNetwork:activityStarted";
+NSString* const __nonnull kMBNetworkActivityFinishedEvent  = @"MBNetwork:activityFinished";
+NSString* const __nonnull kMBNetworkOperationStartedEvent  = @"MBNetwork:operationStarted";
+NSString* const __nonnull kMBNetworkOperationFinishedEvent = @"MBNetwork:operationFinished";
 
 /******************************************************************************/
 #pragma mark -

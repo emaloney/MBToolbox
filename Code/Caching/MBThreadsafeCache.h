@@ -42,15 +42,15 @@
  @param     ignore If `YES`, the cache will not automatically clear itself when
             a memory warning occurs.
  */
-- (instancetype) initWithExceptionProtection:(BOOL)protect
-                        ignoreMemoryWarnings:(BOOL)ignore;
+- (nonnull instancetype) initWithExceptionProtection:(BOOL)protect
+                                ignoreMemoryWarnings:(BOOL)ignore;
 
 /*!
  The default initializer for `MBThreadsafeCache` instances.
 
  Equivalent to calling `initWithExceptionProtection:NO ignoreMemoryWarnings:NO`.
  */
-- (instancetype) init;
+- (nonnull instancetype) init;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Accessing cached items
@@ -65,7 +65,7 @@
  @return    `YES` if there is a value for the given key in the cache; `NO`
             otherwise.
  */
-- (BOOL) isKeyInCache:(id)key;
+- (BOOL) isKeyInCache:(nonnull id)key;
 
 /*!
  Retrieves a cached object value given its key.
@@ -74,7 +74,7 @@
  
  @return    The value associated with `key`. May be `nil`.
  */
-- (id) objectForKey:(id)key;
+- (nullable id) objectForKey:(nonnull id)key;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Modifying the cache
@@ -88,14 +88,14 @@
 
  @param     key The key whose associated value is to be set.
  */
-- (void) setObject:(id)obj forKey:(id)key;
+- (void) setObject:(nonnull id)obj forKey:(nonnull id)key;
 
 /*!
  Removes from the cache the object associated with the given key.
 
  @param     key The key whose associated value is to be removed.
  */
-- (void) removeObjectForKey:(id)key;
+- (void) removeObjectForKey:(nonnull id)key;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Keyed subscripting support
@@ -110,7 +110,7 @@
  
  @return    The value associated with `key`. May be `nil`.
  */
-- (id) objectForKeyedSubscript:(id)key;
+- (nullable id) objectForKeyedSubscript:(nonnull id)key;
 
 /*!
  Allows setting a cached value using the Objective-C keyed subscripting
@@ -120,7 +120,7 @@
 
  @param     key The key whose associated value is to be set.
  */
-- (void) setObject:(id)obj forKeyedSubscript:(id)key;
+- (void) setObject:(nonnull id)obj forKeyedSubscript:(nonnull id)key;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Memory management

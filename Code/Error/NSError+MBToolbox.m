@@ -39,21 +39,21 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 @implementation NSError (MBToolbox)
 
-+ (NSError*) mockingbirdErrorWithCode:(NSInteger)code
++ (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code
 {
     debugTrace();
 
     return [NSError errorWithDomain:kMBErrorDomain code:code userInfo:nil];
 }
 
-+ (NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfo:(NSDictionary*)dict
++ (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfo:(nullable NSDictionary*)dict
 {
     debugTrace();
     
     return [NSError errorWithDomain:kMBErrorDomain code:code userInfo:dict];
 }
 
-+ (NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(NSString*)key value:(id)val
++ (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(nonnull NSString*)key value:(nonnull id)val
 {
     debugTrace();
     
@@ -62,12 +62,12 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
                            userInfo:@{key: val}];
 }
 
-+ (NSError*) mockingbirdErrorWithDescription:(NSString*)desc
++ (nonnull NSError*) mockingbirdErrorWithDescription:(nonnull NSString*)desc
 {
     return [self mockingbirdErrorWithDescription:desc code:kMBErrorMessageInDescription];
 }
 
-+ (NSError*) mockingbirdErrorWithDescription:(NSString*)desc code:(NSInteger)code
++ (nonnull NSError*) mockingbirdErrorWithDescription:(nonnull NSString*)desc code:(NSInteger)code
 {
     debugTrace();
     
@@ -76,13 +76,9 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
                            userInfo:@{NSLocalizedDescriptionKey: desc}];
 }
 
-+ (NSError*) mockingbirdErrorWithDescription:(NSString*)desc code:(NSInteger)code userInfoKey:(NSString*)key value:(id)val
++ (nonnull NSError*) mockingbirdErrorWithDescription:(nonnull NSString*)desc code:(NSInteger)code userInfoKey:(nonnull NSString*)key value:(id)val
 {
     debugTrace();
-
-    if (!key || !val) {
-        return [self mockingbirdErrorWithDescription:desc code:code];
-    }
 
     return [NSError errorWithDomain:kMBErrorDomain
                                code:code
@@ -90,7 +86,7 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
                                       key: val}];
 }
 
-+ (NSError*) mockingbirdErrorWithException:(NSException*)ex
++ (nonnull NSError*) mockingbirdErrorWithException:(nonnull NSException*)ex
 {
     debugTrace();
     
@@ -105,24 +101,21 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
                            userInfo:userInfo];
 }
 
-- (NSError*) errorByAddingUserInfoKey:(NSString*)key value:(id)val
+- (nonnull NSError*) errorByAddingOrRemovingUserInfoKey:(nonnull NSString*)key value:(nullable id)val
 {
     debugTrace();
 
-    if (key) {
-        NSMutableDictionary* userInfo = [self.userInfo mutableCopy];
-        if (!userInfo) {
-            userInfo = [NSMutableDictionary new];
-        }
-        if (val) {
-            userInfo[key] = val;
-        } else {
-            [userInfo removeObjectForKey:key];
-        }
-
-        return [[self class] errorWithDomain:self.domain code:self.code userInfo:userInfo];
+    NSMutableDictionary* userInfo = [self.userInfo mutableCopy];
+    if (!userInfo) {
+        userInfo = [NSMutableDictionary new];
     }
-    return self;
+    if (val) {
+        userInfo[key] = val;
+    } else {
+        [userInfo removeObjectForKey:key];
+    }
+
+    return [[self class] errorWithDomain:self.domain code:self.code userInfo:userInfo];
 }
 
 @end

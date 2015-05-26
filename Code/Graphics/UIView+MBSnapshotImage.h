@@ -30,7 +30,7 @@
  
  @return    The image.
  */
-- (UIImage*) snapshotImage;
+- (nonnull UIImage*) snapshotImage;
 
 /*!
  Returns a CoreImage `CIImage` instance containing a rendering of the receiver's
@@ -38,7 +38,7 @@
  
  @return    The image.
  */
-- (CIImage*) coreImageSnapshot;
+- (nonnull CIImage*) coreImageSnapshot;
 
 /*!
  Returns a CoreGraphics `CGImageRef` containing a rendering of the receiver's 
@@ -46,6 +46,6 @@
  
  @return    The image.
  */
-- (CGImageRef) coreGraphicsSnapshot;
+- (nonnull CGImageRef) coreGraphicsSnapshot;
 
 @end

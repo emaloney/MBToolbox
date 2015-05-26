@@ -25,7 +25,7 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
 // declaration needed to get our reference to it in setField:debug: to compile
 // without ugly #pragmas or a dependency on MBFormattedDescriptionObject
 @protocol MBFieldListFormatterDebugDescriptor <NSObject>
-- (NSString*) debugDescriptor;
+- (nonnull NSString*) debugDescriptor;
 @end
 
 /******************************************************************************/
@@ -40,7 +40,7 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
     NSUInteger _longestFieldName;
 }
 
-+ (instancetype) formatterForObject:(id)obj
++ (nonnull instancetype) formatterForObject:(nonnull id)obj
 {
     MBFieldListFormatter* fields = [self new];
 
@@ -50,7 +50,7 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
     return fields;
 }
 
-- (instancetype) init
+- (nonnull instancetype) init
 {
     self = [super init];
     if (self) {
@@ -60,7 +60,7 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
     return self;
 }
 
-- (void) setField:(NSString*)fieldName value:(id)val
+- (void) setField:(nonnull NSString*)fieldName value:(nullable id)val
 {
     MBArgNonNil(fieldName);
 
@@ -74,14 +74,14 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
     }
 }
 
-- (void) setField:(NSString*)fieldName byTruncating:(NSString*)val
+- (void) setField:(nonnull NSString*)fieldName byTruncating:(nonnull NSString*)val
 {
     [self setField:fieldName
       byTruncating:val
        atCharacter:kMBFieldListDefaultTruncateAtCharacter];
 }
 
-+ (NSString*) truncateString:(NSString*)val atCharacter:(NSUInteger)truncateAt
++ (nonnull NSString*) truncateString:(nonnull NSString*)val atCharacter:(NSUInteger)truncateAt
 {
     if (val) {
         NSUInteger len = val.length;
@@ -92,14 +92,16 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
     return val;
 }
 
-- (void) setField:(NSString*)fieldName byTruncating:(NSString*)val atCharacter:(NSUInteger)truncateAt
+- (void) setField:(nonnull NSString*)fieldName
+     byTruncating:(nonnull NSString*)val
+      atCharacter:(NSUInteger)truncateAt
 {
     MBArgNonNil(fieldName);
 
     [self setField:fieldName value:[[self class] truncateString:val atCharacter:truncateAt]];
 }
 
-- (void) setField:(NSString*)fieldName instance:(id)obj
+- (void) setField:(nonnull NSString*)fieldName instance:(nullable id)obj
 {
     if (obj) {
         [self setField:fieldName
@@ -107,7 +109,7 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
     }
 }
 
-- (void) setField:(NSString*)fieldName debug:(id)obj
+- (void) setField:(nonnull NSString*)fieldName debug:(nullable id)obj
 {
     if (obj) {
         NSString* debug = nil;
@@ -126,31 +128,35 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
     }
 }
 
-- (void) setField:(NSString*)fieldName pointer:(void*)ptr
+- (void) setField:(nonnull NSString*)fieldName pointer:(nullable void*)ptr
 {
     if (ptr) {
         [self setField:fieldName
                  value:[NSString stringWithFormat:@"<(void*): %p>", ptr]];
     }
+    else {
+        [self setField:fieldName
+                 value:@"<(void*): NULL>"];
+    }
 }
 
-- (void) setField:(NSString*)fieldName boolean:(BOOL)val
+- (void) setField:(nonnull NSString*)fieldName boolean:(BOOL)val
 {
     [self setField:fieldName value:(val ? @"YES" : @"NO")];
 }
 
-- (void) setField:(NSString*)fieldName container:(id)container
+- (void) setField:(nonnull NSString*)fieldName container:(nullable id)val
 {
-    if (container) {
-        MBExpect([container respondsToSelector:@selector(count)]);
+    if (val) {
+        MBExpect([val respondsToSelector:@selector(count)]);
 
-        NSUInteger count = [container count];
+        NSUInteger count = [val count];
         [self setField:fieldName
-                 value:[NSString stringWithFormat:@"<%@: %p; %lu entr%s>", [container class], container, (unsigned long)count, (count == 1 ? "y" : "ies")]];
+                 value:[NSString stringWithFormat:@"<%@: %p; %lu entr%s>", [val class], val, (unsigned long)count, (count == 1 ? "y" : "ies")]];
     }
 }
 
-- (void) setFields:(NSDictionary*)fields
+- (void) setFields:(nonnull NSDictionary*)fields
 {
     MBArgNonNil(fields);
 
@@ -159,12 +165,12 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
     }
 }
 
-- (NSString*) asString
+- (nonnull NSString*) asString
 {
     return [self asStringWithIndentation:@""];
 }
 
-- (NSString*) asStringWithIndentation:(NSString*)indentation
+- (nonnull NSString*) asStringWithIndentation:(NSString*)indentation
 {
     MBArgNonNil(indentation);
 
@@ -180,17 +186,17 @@ const NSUInteger kMBFieldListDefaultTruncateAtCharacter    = 70;
     return string;
 }
 
-- (NSString*) asStringWithIndentation
+- (nonnull NSString*) asStringWithIndentation
 {
     return [self asStringWithIndentation:@"\t"];
 }
 
-- (NSString*) asDescription
+- (nonnull NSString*) asDescription
 {
     return [NSString stringWithFormat:@"\n\n%@\n", [self asStringWithIndentation]];
 }
 
-- (NSString*) description
+- (nonnull NSString*) description
 {
     NSMutableString* desc = [NSMutableString stringWithFormat:@"<%@: %p;\n", [self class], self];
     [desc appendString:[self asStringWithIndentation:@"\t"]];

@@ -143,8 +143,9 @@ typedef struct {
  @param     rows The number of pixel rows in the returned bitmap.
  
  @return    A new `MBBitmapPixelPlane` instance with the specified settings.
+            Returns `nil` if an error occurred.
  */
-+ (instancetype) bitmapWithColumns:(NSUInteger)cols rows:(NSUInteger)rows;
++ (nullable instancetype) bitmapWithColumns:(NSUInteger)cols rows:(NSUInteger)rows;
 
 /*!
  Creates a new `MBBitmapPixelPlane` containing the specified number of
@@ -158,8 +159,9 @@ typedef struct {
             height will be rounded up to the next integer value.
 
  @return    A new `MBBitmapPixelPlane` instance with the specified settings.
+            Returns `nil` if an error occurred.
  */
-+ (instancetype) bitmapWithSize:(CGSize)size;
++ (nullable instancetype) bitmapWithSize:(CGSize)size;
 
 /*!
  Creates a new `MBBitmapPixelPlane` having the specified settings.
@@ -176,11 +178,12 @@ typedef struct {
             color channels.
 
  @return    A new `MBBitmapPixelPlane` instance with the specified settings.
+            Returns `nil` if an error occurred.
  */
-+ (instancetype) bitmapWithSize:(CGSize)size
-                 bitsPerChannel:(NSUInteger)bits
-                     colorSpace:(CGColorSpaceRef)space
-                     bitmapInfo:(CGBitmapInfo)info;
++ (nullable instancetype) bitmapWithSize:(CGSize)size
+                          bitsPerChannel:(NSUInteger)bits
+                              colorSpace:(nonnull CGColorSpaceRef)space
+                              bitmapInfo:(CGBitmapInfo)info;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Creating bitmaps from images
@@ -195,8 +198,9 @@ typedef struct {
             returned `MBBitmapPixelPlane`.
 
  @return    A new `MBBitmapPixelPlane` instance containing the image specified.
+            Returns `nil` if an error occurred.
  */
-+ (instancetype) bitmapWithUIImage:(UIImage*)image;
++ (nullable instancetype) bitmapWithUIImage:(nonnull UIImage*)image;
 
 /*!
  Creates a new `MBBitmapPixelPlane` populated using the content of the image
@@ -206,8 +210,9 @@ typedef struct {
             returned `MBBitmapPixelPlane`.
 
  @return    A new `MBBitmapPixelPlane` instance containing the image specified.
+            Returns `nil` if an error occurred.
  */
-+ (instancetype) bitmapWithCGImage:(CGImageRef)image;
++ (nullable instancetype) bitmapWithCGImage:(nonnull CGImageRef)image;
 
 /*! Creates a `MBBitmapPixelPlane` using the specified bitmap-based
     `CGContext` as a source. */
@@ -221,8 +226,9 @@ typedef struct {
             be bitmap-based.
 
  @return    A new `MBBitmapPixelPlane` instance containing the image specified.
+            Returns `nil` if an error occurred.
  */
-+ (instancetype) bitmapWithBitmapContext:(CGContextRef)bitmap;
++ (nullable instancetype) bitmapWithBitmapContext:(nonnull CGContextRef)bitmap;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting individual pixel data
@@ -243,7 +249,7 @@ typedef struct {
  @return    `YES` on success. `NO` will be returned if `pixel` is `nil` or if
             the specified pixel falls outside the bounds of the bitmap.
  */
-- (BOOL) getPixel:(MBBitmapPixel*)pixelPtr atColumn:(NSUInteger)col row:(NSUInteger)row;
+- (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixelPtr atColumn:(NSUInteger)col row:(NSUInteger)row;
 
 /*!
  Retrieves the color channel values for the pixel at the specified point.
@@ -259,7 +265,7 @@ typedef struct {
  @return    `YES` on success. `NO` will be returned if `pixel` is `nil` or if
             the specified pixel falls outside the bounds of the bitmap.
  */
-- (BOOL) getPixel:(MBBitmapPixel*)pixelPtr atPoint:(CGPoint)point;
+- (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixelPtr atPoint:(CGPoint)point;
 
 /*!
  Retrieves the color channel values for the pixel at the specified index.
@@ -274,7 +280,7 @@ typedef struct {
  @return    `YES` on success. `NO` will be returned if `pixel` is `nil` or if
             the specified pixel falls outside the bounds of the bitmap.
  */
-- (BOOL) getPixel:(MBBitmapPixel*)pixelPtr atIndex:(NSUInteger)index;
+- (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixelPtr atIndex:(NSUInteger)index;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Setting individual pixel data
@@ -348,6 +354,6 @@ typedef struct {
  
  @return        A new `UIImage`.
  */
-- (UIImage*) image;
+- (nonnull UIImage*) image;
 
 @end

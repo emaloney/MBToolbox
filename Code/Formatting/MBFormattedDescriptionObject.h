@@ -25,7 +25,7 @@
  
  @param     fmt The formatter to which description fields should be added.
  */
-- (void) addDescriptionFieldsTo:(MBFieldListFormatter*)fmt;
+- (void) addDescriptionFieldsTo:(nonnull MBFieldListFormatter*)fmt;
 
 @end
 
@@ -57,7 +57,7 @@ Asks the receiver to add any relevant fields to the passed-in
 
  @param     fmt The formatter to which description fields should be added.
 */
-- (void) addDescriptionFieldsTo:(MBFieldListFormatter*)fmt;
+- (void) addDescriptionFieldsTo:(nonnull MBFieldListFormatter*)fmt;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Debugging output
@@ -73,7 +73,7 @@ Asks the receiver to add any relevant fields to the passed-in
  @return    If a non-`nil` value is returned by this method, a field named
             "`debugDescriptor`" will be added to the `consoleDescription`.
  */
-- (NSString*) debugDescriptor;
+- (nullable NSString*) debugDescriptor;
 
 /*!
  Uses an `MBFieldListFormatter` instance in conjunction with the
@@ -82,7 +82,7 @@ Asks the receiver to add any relevant fields to the passed-in
  
  @return    The console description.
  */
-- (NSString*) consoleDescription;
+- (nonnull NSString*) consoleDescription;
 
 /*!
  Writes the output of the receiver's `consoleDescription` method to the console
@@ -101,6 +101,6 @@ Asks the receiver to add any relevant fields to the passed-in
  
  @return    The return value of calling the `consoleDescription`
  */
-- (NSString*) description;
+- (nonnull NSString*) description;
 
 @end

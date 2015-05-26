@@ -22,7 +22,7 @@
 #pragma mark Acquiring images from views
 /******************************************************************************/
 
-- (UIImage*) snapshotImage
+- (nonnull UIImage*) snapshotImage
 {
     debugTrace();
 
@@ -33,14 +33,14 @@
     return image;
 }
 
-- (CIImage*) coreImageSnapshot
+- (nonnull CIImage*) coreImageSnapshot
 {
     debugTrace();
     
     return [CIImage imageWithCGImage:[self coreGraphicsSnapshot]];
 }
 
-- (CGImageRef) coreGraphicsSnapshot
+- (nonnull CGImageRef) coreGraphicsSnapshot
 {
     debugTrace();
     

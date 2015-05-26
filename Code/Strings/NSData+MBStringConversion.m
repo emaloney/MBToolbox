@@ -18,7 +18,7 @@
 
 @implementation NSData (MBStringConversion)
 
-+ (NSData*) dataWithHexString:(NSString*) hexString
++ (nullable NSData*) dataWithHexString:(nonnull NSString*)hexString
 {
     debugTrace();
 
@@ -44,7 +44,7 @@
     return data;
 }
 
-- (NSString*) hexString
+- (nonnull NSString*) hexString
 {
     debugTrace();
 
@@ -65,24 +65,24 @@
     return string;
 }
 
-- (NSString*) toStringUsingEncoding:(NSStringEncoding)encoding
+- (nullable NSString*) toStringUsingEncoding:(NSStringEncoding)encoding
 {
     debugTrace();
     
     return [[NSString alloc] initWithData:self encoding:encoding];
 }
 
-- (NSString*) toStringASCII
+- (nullable NSString*) toStringASCII
 {
     return [self toStringUsingEncoding:NSASCIIStringEncoding];
 }
 
-- (NSString*) toStringUTF8
+- (nullable NSString*) toStringUTF8
 {
     return [self toStringUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSString*) toString
+- (nullable NSString*) toString
 {
     return [self toStringUsingEncoding:NSUTF8StringEncoding];
 }

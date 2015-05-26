@@ -31,7 +31,7 @@
  
  @return    The file manager.
  */
-- (NSFileManager*) fileManager;
+- (nonnull NSFileManager*) fileManager;
 
 /*!
  Ensures that the cache directory used by the receiver exists. If the directory
@@ -47,7 +47,7 @@
  
  @return    The file extension.
  */
-- (NSString*) fileExtensionForCacheKey:(id)key;
+- (nonnull NSString*) fileExtensionForCacheKey:(nonnull id)key;
 
 /*!
  Returns the file path that should be used for the file associated with
@@ -57,7 +57,7 @@
 
  @return    The file path.
  */
-- (NSString*) filePathForCacheKey:(id)key;
+- (nonnull NSString*) filePathForCacheKey:(nonnull id)key;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Loading cache objects
@@ -75,9 +75,9 @@
  
  @param     path The path of the file to read.
  
- @return    The cache object.
+ @return    The cache object, or `nil` if it couldn't be read..
  */
-- (id) objectFromCacheFile:(NSString*)path;
+- (nullable id) objectFromCacheFile:(nonnull NSString*)path;
 
 /*!
  Notifies the cache that a cache object has been loaded into memory for the
@@ -91,7 +91,8 @@
  
  @param     key The cache key associated with the cache object.
  */
-- (void) objectLoaded:(id)cacheObj forKey:(id)key;
+- (void) objectLoaded:(nonnull id)cacheObj
+               forKey:(nonnull id)key;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Storing objects in the cache
@@ -110,7 +111,7 @@
  @param     key The cache key to associate with `cacheObj` if the delegate
             permits storage in the cache.
  */
-- (void) storeObjectInMemoryCacheIfAppropriate:(id)cacheObj forKey:(id)key;
+- (void) storeObjectInMemoryCacheIfAppropriate:(nonnull id)cacheObj forKey:(nonnull id)key;
 
 /*!
  Consults the delegate's `shouldStoreObject:forKey:inFilesystemCache:` method
@@ -125,6 +126,6 @@
  @param     key The cache key to associate with `cacheObj` if the delegate
             permits storage in the cache.
  */
-- (void) storeObjectInFilesystemCacheIfAppropriate:(id)cacheObj forKey:(id)key;
+- (void) storeObjectInFilesystemCacheIfAppropriate:(nonnull id)cacheObj forKey:(nonnull id)key;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "MBSingleton.h"
 #import "MBOperationQueue.h"
+#import "NSError+MBToolbox.h"
 
 @class MBFileReadOperation;
 
@@ -51,7 +52,8 @@
 
  @param     op The operation that completed.
  */
-- (void) readCompletedWithObject:(id)readObj forOperation:(MBFileReadOperation*)op;
+- (void) readCompletedWithObject:(nonnull id)readObj
+                    forOperation:(nonnull MBFileReadOperation*)op;
 
 /*!
  Called when an `MBFileReadOperation` fails.
@@ -60,7 +62,8 @@
 
  @param     op The operation that failed.
  */
-- (void) readFailedWithError:(NSError*)err forOperation:(MBFileReadOperation*)op;
+- (void) readFailedWithError:(nonnull NSError*)err
+                forOperation:(nonnull MBFileReadOperation*)op;
 
 @end
 
@@ -99,8 +102,8 @@
  
  @return    The newly-created `MBFileReadOperation` instance.
  */
-+ (MBFileReadOperation*) operationForReadingFromFile:(NSString*)path
-                                            delegate:(NSObject<MBFileReadOperationDelegate>*)delegate;
++ (nonnull instancetype) operationForReadingFromFile:(nonnull NSString*)path
+                                            delegate:(nonnull NSObject<MBFileReadOperationDelegate>*)delegate;
 
 /*!
  Initializes the receiver so it can be used to read from the specified file.
@@ -112,7 +115,8 @@
  
  @return    The receiver.
  */
-- (instancetype) initForFilePath:(NSString*)path delegate:(NSObject<MBFileReadOperationDelegate>*)delegate;
+- (nonnull instancetype) initForFilePath:(nonnull NSString*)path
+                                delegate:(nonnull NSObject<MBFileReadOperationDelegate>*)delegate;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting information about the operation
@@ -120,11 +124,11 @@
 /*----------------------------------------------------------------------------*/
 
 /*! Returns the filesystem path of the file to be read by the operation. */
-@property(nonatomic, readonly) NSString* filePath;
+@property(nonnull, nonatomic, readonly) NSString* filePath;
 
 /*! Returns the `MBFileReadOperationDelegate` that will be notified when the
     operation completes. */
-@property(nonatomic, readonly) NSObject<MBFileReadOperationDelegate>* delegate;
+@property(nonnull, nonatomic, readonly) NSObject<MBFileReadOperationDelegate>* delegate;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Subclassing hooks
@@ -145,7 +149,7 @@
  
  @return    The object that was read from the file.
  */
-- (id) readObjectFromFile:(NSString*)path error:(inout NSError**)errPtr;
+- (nullable id) readObjectFromFile:(nonnull NSString*)path error:(NSErrorPtrPtr)errPtr;
 
 /*!
  Called internally when `readObjectFromFile:error:` completes successfully.
@@ -157,7 +161,7 @@
  @param     readObj The object that was read from the filesystem, as returned
             by `readObjectFromFile:error:`.
  */
-- (void) readCompletedWithObject:(id)readObj;
+- (void) readCompletedWithObject:(nonnull id)readObj;
 
 /*!
  Called internally when `readObjectFromFile:error:` fails.
@@ -169,7 +173,7 @@
  @param     err The error describing the reason that `readObjectFromFile:error:`
             failed.
  */
-- (void) readFailedWithError:(NSError*)err;
+- (void) readFailedWithError:(nonnull NSError*)err;
 
 @end
 
@@ -209,8 +213,8 @@
 
  @return    The newly-created `MBFileWriteOperation` instance.
  */
-+ (MBFileWriteOperation*) operationForWritingData:(NSData*)data
-                                           toFile:(NSString*)path;
++ (nonnull instancetype) operationForWritingData:(nullable NSData*)data
+                                          toFile:(nonnull NSString*)path;
 
 /*!
  Initializes the receiver so it can be used to write to the specified file.
@@ -222,7 +226,7 @@
 
  @return    The receiver.
  */
-- (instancetype) initWithData:(NSData*)data forFilePath:(NSString*)path;
+- (nonnull instancetype) initWithData:(nullable NSData*)data forFilePath:(nonnull NSString*)path;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting information about the operation
@@ -230,10 +234,10 @@
 /*----------------------------------------------------------------------------*/
 
 /*! Returns the filesystem path of the file to be written by the operation. */
-@property(nonatomic, readonly) NSString* filePath;
+@property(nonnull, nonatomic, readonly) NSString* filePath;
 
 /*! Returns the data that will be written to the file by the operation. */
-@property(nonatomic, readonly) NSData* fileData;
+@property(nonnull, nonatomic, readonly) NSData* fileData;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Subclassing hooks
@@ -249,7 +253,7 @@
  
  @return    The data to write to the file.
  */
-- (NSData*) dataForOperation;
+- (nonnull NSData*) dataForOperation;
 
 @end
 
@@ -292,7 +296,7 @@
 
  @return    The newly-created `MBFileDeleteOperation` instance.
  */
-+ (MBFileDeleteOperation*) operationForDeletingFile:(NSString*)path;
++ (nonnull instancetype) operationForDeletingFile:(nonnull NSString*)path;
 
 /*!
  Initializes the receiver so it can be used to delete the specified file.
@@ -306,7 +310,7 @@
 
  @return    The receiver.
  */
-- (instancetype) initWithFilePath:(NSString*)path;
+- (nonnull instancetype) initWithFilePath:(nonnull NSString*)path;
 
 /*!
  Initializes the receiver so it can be used to delete the specified file.
@@ -321,7 +325,7 @@
 
  @return    The receiver.
  */
-- (instancetype) initWithFilePath:(NSString*)path moveImmediately:(BOOL)moveNow;
+- (nonnull instancetype) initWithFilePath:(nonnull NSString*)path moveImmediately:(BOOL)moveNow;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting information about the operation
@@ -329,6 +333,6 @@
 /*----------------------------------------------------------------------------*/
 
 /*! Returns the filesystem path of the file to be deleted by the operation. */
-@property(nonatomic, readonly) NSString* filePath;
+@property(nonnull, nonatomic, readonly) NSString* filePath;
 
 @end

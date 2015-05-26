@@ -54,7 +54,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
  
  @return    A new `MBFieldListFormatter`.
  */
-+ (instancetype) formatterForObject:(id)obj;
++ (nonnull instancetype) formatterForObject:(nonnull id)obj;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Adding field values
@@ -71,7 +71,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
 
  @param     val An object instance representing the field value.
  */
-- (void) setField:(NSString*)fieldName value:(id)val;
+- (void) setField:(nonnull NSString*)fieldName value:(nullable id)val;
 
 /*!
  Sets a string field on the formatter. The string is truncated if it is
@@ -86,7 +86,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
  
  @param     val A string representing the field value.
  */
-- (void) setField:(NSString*)fieldName byTruncating:(NSString*)val;
+- (void) setField:(nonnull NSString*)fieldName byTruncating:(nonnull NSString*)val;
 
 /*!
  Sets a string field on the formatter. The string is truncated if it is
@@ -105,7 +105,9 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
             character at index `truncatAt` will not be included in the
             value stored in the formatter.
  */
-- (void) setField:(NSString*)fieldName byTruncating:(NSString*)val atCharacter:(NSUInteger)truncateAt;
+- (void) setField:(nonnull NSString*)fieldName
+     byTruncating:(nonnull NSString*)val
+      atCharacter:(NSUInteger)truncateAt;
 
 /*!
  Sets an object instance field on the formatter.
@@ -116,7 +118,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
  
  @param     obj An object instance representing the field value.
  */
-- (void) setField:(NSString*)fieldName instance:(id)obj;
+- (void) setField:(nonnull NSString*)fieldName instance:(nullable id)obj;
 
 /*!
  Sets an debug object instance field on the formatter.
@@ -129,7 +131,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
 
  @param     obj An object instance representing the field value.
  */
-- (void) setField:(NSString*)fieldName debug:(id)obj;
+- (void) setField:(nonnull NSString*)fieldName debug:(nullable id)obj;
 
 /*!
  Sets a memory pointer field on the formatter.
@@ -138,7 +140,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
  
  @param     ptr A pointer representing the field value.
  */
-- (void) setField:(NSString*)fieldName pointer:(void*)ptr;
+- (void) setField:(nonnull NSString*)fieldName pointer:(nullable void*)ptr;
 
 /*!
  Sets a boolean field on the formatter.
@@ -147,7 +149,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
 
  @param     val The boolean field value.
  */
-- (void) setField:(NSString*)fieldName boolean:(BOOL)val;
+- (void) setField:(nonnull NSString*)fieldName boolean:(BOOL)val;
 
 /*!
  Sets a container field on the formatter. Containers are objects such as
@@ -160,7 +162,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
  
  @param     val A container object instance representing the field value.
  */
-- (void) setField:(NSString*)fieldName container:(id)val;
+- (void) setField:(nonnull NSString*)fieldName container:(nullable id)val;
 
 /*!
  Sets a field on the receiver for each key/value pair contained in the
@@ -169,7 +171,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
  @param     fields The dictionary whose key/value pairs will be added as
             fields.
  */
-- (void) setFields:(NSDictionary*)fields;
+- (void) setFields:(nonnull NSDictionary*)fields;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Truncating strings
@@ -192,7 +194,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
  @param     truncateAt The index of the character at which `val` should be
             truncated.
  */
-+ (NSString*) truncateString:(NSString*)val atCharacter:(NSUInteger)truncateAt;
++ (nonnull NSString*) truncateString:(nonnull NSString*)val atCharacter:(NSUInteger)truncateAt;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Converting the fields into strings
@@ -204,7 +206,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
 
  @return    The string representation of the receiver's fields.
  */
-- (NSString*) asString;
+- (nonnull NSString*) asString;
 
 /*!
  Converts the fields in the receiver into a string representation.
@@ -216,7 +218,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
 
  @return    The string representation of the receiver's fields.
  */
-- (NSString*) asStringWithIndentation:(NSString*)indentation;
+- (nonnull NSString*) asStringWithIndentation:(nonnull NSString*)indentation;
 
 /*!
  Converts the fields in the receiver into a string representation.
@@ -225,7 +227,7 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
 
  @return    The string representation of the receiver's fields.
  */
-- (NSString*) asStringWithIndentation;
+- (nonnull NSString*) asStringWithIndentation;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Debugging output
@@ -242,6 +244,6 @@ extern const NSUInteger kMBFieldListDefaultTruncateAtCharacter;
 
  @return    The description.
  */
-- (NSString*) asDescription;
+- (nonnull NSString*) asDescription;
 
 @end

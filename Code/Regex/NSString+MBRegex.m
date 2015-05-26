@@ -23,11 +23,11 @@
 #pragma mark Performing regex replacements in a mutable string
 /******************************************************************************/
 
-- (NSUInteger) replaceRegexMatches:(NSString*)pattern 
-                      withTemplate:(NSString*)templ
+- (NSUInteger) replaceRegexMatches:(nonnull NSString*)pattern
+                      withTemplate:(nonnull NSString*)templ
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
-                             error:(inout NSError**)errPtr
+                             error:(NSErrorPtrPtr)errPtr
 {
     debugTrace();
     
@@ -47,23 +47,23 @@
     return [regex replaceMatchesInString:self options:0 range:range withTemplate:templ];
 }
 
-- (NSUInteger) replaceRegexMatches:(NSString*)pattern 
-                      withTemplate:(NSString*)templ
+- (NSUInteger) replaceRegexMatches:(nonnull NSString*)pattern
+                      withTemplate:(nonnull NSString*)templ
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
 {
     return [self replaceRegexMatches:pattern withTemplate:templ options:options range:NSMakeRange(0, self.length) error:nil];
 }
 
-- (NSUInteger) replaceRegexMatches:(NSString*)pattern
-                      withTemplate:(NSString*)templ
+- (NSUInteger) replaceRegexMatches:(nonnull NSString*)pattern
+                      withTemplate:(nonnull NSString*)templ
                            options:(NSRegularExpressionOptions)options
 {
     return [self replaceRegexMatches:pattern withTemplate:templ options:options range:NSMakeRange(0, self.length) error:nil];
 }
 
-- (NSUInteger) replaceRegexMatches:(NSString*)pattern
-                      withTemplate:(NSString*)templ
+- (NSUInteger) replaceRegexMatches:(nonnull NSString*)pattern
+                      withTemplate:(nonnull NSString*)templ
 {
     return [self replaceRegexMatches:pattern withTemplate:templ options:0 range:NSMakeRange(0, self.length) error:nil];
 }
@@ -81,18 +81,18 @@
 #pragma mark Creating regular expressions
 /******************************************************************************/
 
-- (NSRegularExpression*) regularExpression
+- (nullable NSRegularExpression*) regularExpression
 {
     return [MBRegexCache regularExpressionWithPattern:self];
 }
 
-- (NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options
+- (nullable NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options
 {
     return [MBRegexCache regularExpressionWithPattern:self options:options];
 }
 
-- (NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options 
-                                                error:(inout NSError**)errPtr
+- (nullable NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options
+                                                         error:(NSErrorPtrPtr)errPtr
 {
     return [MBRegexCache regularExpressionWithPattern:self options:options error:errPtr];
 }
@@ -101,14 +101,14 @@
 #pragma mark Escaping
 /******************************************************************************/
 
-- (NSString*) escapedRegexPattern
+- (nonnull NSString*) escapedRegexPattern
 {
     debugTrace();
     
     return [NSRegularExpression escapedPatternForString:self];
 }
 
-- (NSString*) escapedRegexTemplate
+- (nonnull NSString*) escapedRegexTemplate
 {
     debugTrace();
     
@@ -119,10 +119,10 @@
 #pragma mark Getting all matches in the receiver
 /******************************************************************************/
 
-- (NSArray*) matchesWithRegex:(NSString*)pattern
-                      options:(NSRegularExpressionOptions)options
-                        range:(NSRange)range
-                        error:(inout NSError**)errPtr
+- (nullable NSArray*) matchesWithRegex:(nonnull NSString*)pattern
+                               options:(NSRegularExpressionOptions)options
+                                 range:(NSRange)range
+                                 error:(NSErrorPtrPtr)errPtr
 {
     debugTrace();
     
@@ -142,22 +142,22 @@
     return [regex matchesInString:self options:0 range:range];
 }
 
-- (NSArray*) matchesWithRegex:(NSString*)pattern
-                      options:(NSRegularExpressionOptions)options
-                        range:(NSRange)range
+- (nullable NSArray*) matchesWithRegex:(nonnull NSString*)pattern
+                               options:(NSRegularExpressionOptions)options
+                                 range:(NSRange)range
 {
     debugTrace();
 
     return [self matchesWithRegex:pattern options:options range:NSMakeRange(0, self.length) error:nil];
 }
 
-- (NSArray*) matchesWithRegex:(NSString*)pattern
-                      options:(NSRegularExpressionOptions)options
+- (nullable NSArray*) matchesWithRegex:(nonnull NSString*)pattern
+                               options:(NSRegularExpressionOptions)options
 {
     return [self matchesWithRegex:pattern options:options range:NSMakeRange(0, self.length) error:nil];
 }
 
-- (NSArray*) matchesWithRegex:(NSString*)pattern
+- (nullable NSArray*) matchesWithRegex:(nonnull NSString*)pattern
 {
     return [self matchesWithRegex:pattern options:0 range:NSMakeRange(0, self.length) error:nil];
 }
@@ -166,28 +166,28 @@
 #pragma mark Testing whether the pattern matches the receiver
 /******************************************************************************/
 
-- (BOOL) isMatchedByRegex:(NSString*)pattern
+- (BOOL) isMatchedByRegex:(nonnull NSString*)pattern
                   options:(NSRegularExpressionOptions)options
                     range:(NSRange)range
-                    error:(inout NSError**)errPtr
+                    error:(NSErrorPtrPtr)errPtr
 {
     return ([self numberOfRegexMatches:pattern options:options range:range error:errPtr] > 0);
 }
 
-- (BOOL) isMatchedByRegex:(NSString*)pattern
+- (BOOL) isMatchedByRegex:(nonnull NSString*)pattern
                   options:(NSRegularExpressionOptions)options
                     range:(NSRange)range
 {
     return ([self numberOfRegexMatches:pattern options:options range:range error:nil] > 0);
 }
 
-- (BOOL) isMatchedByRegex:(NSString*)pattern
+- (BOOL) isMatchedByRegex:(nonnull NSString*)pattern
                   options:(NSRegularExpressionOptions)options
 {
     return ([self numberOfRegexMatches:pattern options:options range:NSMakeRange(0, self.length) error:nil] > 0);
 }
 
-- (BOOL) isMatchedByRegex:(NSString*)pattern
+- (BOOL) isMatchedByRegex:(nonnull NSString*)pattern
 {
     return ([self numberOfRegexMatches:pattern options:0 range:NSMakeRange(0, self.length) error:nil] > 0);
 }
@@ -196,10 +196,10 @@
 #pragma mark Counting the matches in the receiver
 /******************************************************************************/
 
-- (NSUInteger) numberOfRegexMatches:(NSString*)pattern
+- (NSUInteger) numberOfRegexMatches:(nonnull NSString*)pattern
                             options:(NSRegularExpressionOptions)options
                               range:(NSRange)range
-                              error:(inout NSError**)errPtr;
+                              error:(NSErrorPtrPtr)errPtr
 {
     debugTrace();
     
@@ -219,20 +219,20 @@
     return [regex numberOfMatchesInString:self options:0 range:range];
 }
 
-- (NSUInteger) numberOfRegexMatches:(NSString*)pattern
+- (NSUInteger) numberOfRegexMatches:(nonnull NSString*)pattern
                             options:(NSRegularExpressionOptions)options
                               range:(NSRange)range
 {
     return [self numberOfRegexMatches:pattern options:options range:range error:nil];
 }
 
-- (NSUInteger) numberOfRegexMatches:(NSString*)pattern
+- (NSUInteger) numberOfRegexMatches:(nonnull NSString*)pattern
                             options:(NSRegularExpressionOptions)options
 {
     return [self numberOfRegexMatches:pattern options:options range:NSMakeRange(0, self.length) error:nil];
 }
 
-- (NSUInteger) numberOfRegexMatches:(NSString*)pattern
+- (NSUInteger) numberOfRegexMatches:(nonnull NSString*)pattern
 {
     return [self numberOfRegexMatches:pattern options:0 range:NSMakeRange(0, self.length) error:nil];
 }
@@ -241,10 +241,10 @@
 #pragma mark Getting the first match in the receiver
 /******************************************************************************/
 
-- (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern
-                                  options:(NSRegularExpressionOptions)options
-                                    range:(NSRange)range
-                                    error:(inout NSError**)errPtr
+- (nullable NSTextCheckingResult*) firstRegexMatch:(nonnull NSString*)pattern
+                                           options:(NSRegularExpressionOptions)options
+                                             range:(NSRange)range
+                                             error:(NSErrorPtrPtr)errPtr
 {
     debugTrace();
     
@@ -264,20 +264,20 @@
     return [regex firstMatchInString:self options:0 range:range];
 }
 
-- (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern
-                                  options:(NSRegularExpressionOptions)options
-                                    range:(NSRange)range
+- (nullable NSTextCheckingResult*) firstRegexMatch:(nonnull NSString*)pattern
+                                           options:(NSRegularExpressionOptions)options
+                                             range:(NSRange)range
 {
     return [self firstRegexMatch:pattern options:options range:range error:nil];
 }
 
-- (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern
-                                  options:(NSRegularExpressionOptions)options
+- (nullable NSTextCheckingResult*) firstRegexMatch:(nonnull NSString*)pattern
+                                           options:(NSRegularExpressionOptions)options
 {
     return [self firstRegexMatch:pattern options:options range:NSMakeRange(0, self.length) error:nil];
 }
 
-- (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern
+- (nullable NSTextCheckingResult*) firstRegexMatch:(nonnull NSString*)pattern
 {
     return [self firstRegexMatch:pattern options:0 range:NSMakeRange(0, self.length) error:nil];
 }
@@ -286,10 +286,10 @@
 #pragma mark Getting the NSRange of the first match in the receiver
 /******************************************************************************/
 
-- (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern
+- (NSRange) rangeOfFirstRegexMatch:(nonnull NSString*)pattern
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
-                             error:(inout NSError**)errPtr
+                             error:(NSErrorPtrPtr)errPtr
 {
     debugTrace();
     
@@ -309,20 +309,20 @@
     return [regex rangeOfFirstMatchInString:self options:0 range:range];
 }
 
-- (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern
+- (NSRange) rangeOfFirstRegexMatch:(nonnull NSString*)pattern
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
 {
     return [self rangeOfFirstRegexMatch:pattern options:options range:range error:nil];
 }
 
-- (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern
+- (NSRange) rangeOfFirstRegexMatch:(nonnull NSString*)pattern
                            options:(NSRegularExpressionOptions)options
 {
     return [self rangeOfFirstRegexMatch:pattern options:options range:NSMakeRange(0, self.length) error:nil];
 }
 
-- (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern
+- (NSRange) rangeOfFirstRegexMatch:(nonnull NSString*)pattern
 {
     return [self rangeOfFirstRegexMatch:pattern options:0 range:NSMakeRange(0, self.length) error:nil];
 }
@@ -331,11 +331,11 @@
 #pragma mark Creating a new string by replacing the matches in the receiver
 /******************************************************************************/
 
-- (NSString*) stringByReplacingRegexMatches:(NSString*)pattern
-                               withTemplate:(NSString*)templ
-                                    options:(NSRegularExpressionOptions)options
-                                      range:(NSRange)range
-                                      error:(inout NSError**)errPtr
+- (nullable NSString*) stringByReplacingRegexMatches:(nonnull NSString*)pattern
+                                        withTemplate:(nonnull NSString*)templ
+                                             options:(NSRegularExpressionOptions)options
+                                               range:(NSRange)range
+                                               error:(NSErrorPtrPtr)errPtr
 {
     debugTrace();
     
@@ -355,23 +355,23 @@
     return [regex stringByReplacingMatchesInString:self options:0 range:range withTemplate:templ];
 }
 
-- (NSString*) stringByReplacingRegexMatches:(NSString*)pattern
-                               withTemplate:(NSString*)templ
-                                    options:(NSRegularExpressionOptions)options
-                                      range:(NSRange)range
+- (nullable NSString*) stringByReplacingRegexMatches:(nonnull NSString*)pattern
+                                        withTemplate:(nonnull NSString*)templ
+                                             options:(NSRegularExpressionOptions)options
+                                               range:(NSRange)range
 {
     return [self stringByReplacingRegexMatches:pattern withTemplate:templ options:options range:range error:nil];
 }
 
-- (NSString*) stringByReplacingRegexMatches:(NSString*)pattern
-                               withTemplate:(NSString*)templ
-                                    options:(NSRegularExpressionOptions)options
+- (nullable NSString*) stringByReplacingRegexMatches:(nonnull NSString*)pattern
+                                        withTemplate:(nonnull NSString*)templ
+                                             options:(NSRegularExpressionOptions)options
 {
     return [self stringByReplacingRegexMatches:pattern withTemplate:templ options:options range:NSMakeRange(0, self.length) error:nil];
 }
 
-- (NSString*) stringByReplacingRegexMatches:(NSString*)pattern
-                               withTemplate:(NSString*)templ
+- (nullable NSString*) stringByReplacingRegexMatches:(nonnull NSString*)pattern
+                                        withTemplate:(nonnull NSString*)templ
 {
     return [self stringByReplacingRegexMatches:pattern withTemplate:templ options:0 range:NSMakeRange(0, self.length) error:nil];
 }

@@ -18,7 +18,7 @@
 #pragma mark Constants
 /******************************************************************************/
 
-NSString* const kMBBatteryMonitorUpdateEvent    = @"MBBatteryMonitor:update";
+NSString* const __nonnull kMBBatteryMonitorUpdateEvent    = @"MBBatteryMonitor:update";
 
 /******************************************************************************/
 #pragma mark -
@@ -80,7 +80,7 @@ MBImplementSingleton();
 #pragma mark Battery state monitoring
 /******************************************************************************/
 
-- (MBBatteryState*) currentBatteryState
+- (nullable MBBatteryState*) currentBatteryState
 {
     UIDevice* device = [UIDevice currentDevice];
     UIDeviceBatteryState batteryState = device.batteryState;

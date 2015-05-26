@@ -19,19 +19,14 @@
 
 @implementation NSString (MBMessageDigest)
 
-- (NSString*) MD5
+- (nonnull NSString*) MD5
 {
-    debugTrace();
-
     return [MBMessageDigest MD5ForString:self];
 }
 
-- (NSString*) SHA1
+- (nonnull NSString*) SHA1
 {
-    debugTrace();
-
     return [MBMessageDigest SHA1ForString:self];
 }
 
 @end
-

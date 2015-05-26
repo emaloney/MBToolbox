@@ -26,7 +26,12 @@
 
 #if defined(__OBJC__)
 // applies when compiled into an Objective-C app
-#define consoleLog(...)                 NSLog(@"(%@:%u) <%p> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, self, [NSString stringWithFormat:__VA_ARGS__])
+#import "MBModuleLog.h"
+#define consoleLog(...)                 [[MBModuleLog loggerClass] logMessage:[NSString stringWithFormat:__VA_ARGS__] \
+                                                                callingObject:self \
+                                                             callingSignature:[NSString stringWithUTF8String:__PRETTY_FUNCTION__] \
+                                                              callingFilePath:[NSString stringWithUTF8String:__FILE__] \
+                                                              callingFileLine:__LINE__]
 #else
 // applies when compiled into a C/C++ app
 #define consoleLog(...)                 NSLog(@"(%@:%u) %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:__VA_ARGS__])
@@ -34,25 +39,25 @@
 
 #define consoleTrace()                  consoleLog(@"%s", __PRETTY_FUNCTION__)
 
-#define consoleObj(x)                   consoleLog(@"%@ = %@@%p: %@", @"" # x, [x class], x, [x description]);
+#define consoleObj(x)                   consoleLog(@"%@ = %@@%p: %@", @"" # x, [x class], x, [x description])
 
-#define consoleStr(x)                   consoleLog(@"\"%@\" (length: %lu)", x, (unsigned long)[x length]);
+#define consoleStr(x)                   consoleLog(@"\"%@\" (length: %lu)", x, (unsigned long)[x length])
 
 /******************************************************************************/
 #pragma mark Exception logging
 /******************************************************************************/
 
-#define exceptionLog(x)                 NSLog(@"\n%@", x);
+#define exceptionLog(x)                 consoleLog(@"\n%@", x)
 
 /******************************************************************************/
 #pragma mark Error logging
 /******************************************************************************/
 
-#define errorLog(...)                   consoleLog(@"\n\n+++ %@ +++\n\n", [NSString stringWithFormat:__VA_ARGS__]);
+#define errorLog(...)                   consoleLog(@"\n\n+++ %@ +++\n\n", [NSString stringWithFormat:__VA_ARGS__])
 
-#define errorStr(x)                     errorLog(@"%@", x);
+#define errorStr(x)                     errorLog(@"%@", x)
 
-#define errorObj(x)                     errorLog(@"%@: %@", [x class], [x description]);
+#define errorObj(x)                     errorLog(@"%@: %@", [x class], [x description])
 
 /******************************************************************************/
 #pragma mark Debug logging

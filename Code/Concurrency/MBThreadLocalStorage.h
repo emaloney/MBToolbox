@@ -66,7 +66,7 @@
  @return    The thread-local value, or `nil` if one was not previously set
             on the calling thread for the specified class.
  */
-+ (id) valueForClass:(Class)cls;
++ (nullable id) valueForClass:(nonnull Class)cls;
 
 /*!
  Returns the thread-local value associated with the specified class and key.
@@ -80,7 +80,7 @@
  @return    The thread-local value, or `nil` if one was not previously set
             on the calling thread for the specified class.
  */
-+ (id) valueForClass:(Class)cls withKey:(NSString*)key;
++ (nullable id) valueForClass:(nonnull Class)cls withKey:(nullable NSString*)key;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Setting thread-local values
@@ -96,7 +96,7 @@
  @param     cls The `Class` responsible for the thread-local value. Must
             not be `NULL`.
  */
-+ (void) setValue:(id)val forClass:(Class)cls;
++ (void) setValue:(nullable id)val forClass:(nonnull Class)cls;
 
 /*!
  Sets a thread-local value for the given class.
@@ -110,7 +110,7 @@
  @param     key The key associated with the value being set. If `nil`, the
             effect is the same as calling `setValue:forClass:`.
  */
-+ (void) setValue:(id)val forClass:(Class)cls withKey:(NSString*)key;
++ (void) setValue:(nullable id)val forClass:(nonnull Class)cls withKey:(nullable NSString*)key;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Using thread-local storage as a cache
@@ -137,10 +137,11 @@
             cached value in thread-local storage. It is considered an error
             for the instantiator block to return `nil`.
 
- @return    The cached object, which should not be `nil` unless there is an
-            error within the instantiator block.
+ @return    The cached object, which should not be `nil` unless there is a
+            programming error within the instantiator block.
  */
-+ (id) cachedValueForClass:(Class)cls usingInstantiator:(id (^)())instantiator;
++ (nonnull id) cachedValueForClass:(nonnull Class)cls
+                 usingInstantiator:(__nonnull id (^ __nonnull)())instantiator;
 
 /*!
  Allows use of thread-local storage as a lock-free cache. If the requested
@@ -165,10 +166,12 @@
             cached value in thread-local storage. It is considered an error
             for the instantiator block to return `nil`.
 
- @return    The cached object, which should not be `nil` unless there is an
-            error within the instantiator block.
+ @return    The cached object, which should not be `nil` unless there is a
+            programming error within the instantiator block.
  */
-+ (id) cachedValueForClass:(Class)cls withKey:(NSString*)key usingInstantiator:(id (^)())instantiator;
++ (nonnull id) cachedValueForClass:(nonnull Class)cls
+                           withKey:(nullable NSString*)key
+                 usingInstantiator:(__nonnull id (^ __nonnull)())instantiator;
 
 @end
 

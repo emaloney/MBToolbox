@@ -48,7 +48,7 @@
  
  @return    A highlight color based on the receiver.
  */
-- (UIColor*) highlightColor;
+- (nonnull UIColor*) highlightColor;
 
 /*!
  Returns a new `UIColor` instance by adjusting the brightness value of the
@@ -62,7 +62,7 @@
  
  @return    The adjusted color.
  */
-- (UIColor*) colorWithBrightnessAdjustedByFactor:(CGFloat)adjustFactor;
+- (nonnull UIColor*) colorWithBrightnessAdjustedByFactor:(CGFloat)adjustFactor;
 
 @end
 

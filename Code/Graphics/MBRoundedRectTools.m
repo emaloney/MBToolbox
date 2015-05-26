@@ -68,17 +68,17 @@
 #pragma mark Rounded rectangle creation
 /******************************************************************************/
 
-+ (CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius 
++ (nonnull CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius 
 {
     return [self newRoundedPathForRectangle:rect withRadius:radius forStrokeWidth:0.0];
 }
 
-+ (CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius forStrokeWidth:(CGFloat)width
++ (nonnull CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius forStrokeWidth:(CGFloat)width
 {
     return [self newRoundedPathForRectangle:rect withRadius:radius insetBy:(width/2)];
 }
 
-+ (CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius insetBy:(CGFloat)inset
++ (nonnull CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius insetBy:(CGFloat)inset
 {
     debugTrace();
     

@@ -12,6 +12,75 @@
 
 /******************************************************************************/
 #pragma mark -
+#pragma mark MBModuleLogSeverity protocol
+/******************************************************************************/
+
+/*!
+ Specifies the relative importance of a log message.
+ */
+typedef NS_ENUM(NSUInteger, MBModuleLogSeverity) {
+    /*! The lowest severity, used for detailed or frequently occurring 
+        debugging and diagnostic information. Not intended for use in
+        production code. */
+    MBModuleLogSeverityVerbose  = 1,
+
+    /*! Used for debugging and diagnostic information. Not intended for 
+        use in production code. */
+    MBModuleLogSeverityDebug    = 2,
+
+    /*! Used to indicate something of interest that is not problematic. */
+    MBModuleLogSeverityInfo     = 3,
+
+    /*! Used to indicate that something appears amiss and potentially 
+        problematic. The situation bears looking into before a larger
+        problem arises. */
+    MBModuleLogSeverityWarning  = 4,
+
+    /*! The highest severity, used to indicate that something has gone wrong; 
+        a fatal error may be imminent. */
+    MBModuleLogSeverityError    = 5
+};
+
+/******************************************************************************/
+#pragma mark -
+#pragma mark MBModuleLogger protocol
+/******************************************************************************/
+
+/*!
+ This protocol is adopted by classes that wish to be used as loggers by the
+ `MBModuleLog`.
+ */
+@protocol MBModuleLogger <NSObject>
+
+/*!
+ Records the log message to the underlying logging subsystem. 
+ 
+ @param     msg The message to record.
+ 
+ @param     severity The severity level of the log message.
+
+ @param     caller The object responsible for issuing this request to
+            log `msg`. May be `nil` if not called from an object scope.
+ 
+ @param     signature The signature of the calling method or function.
+ 
+ @param     filePath The filesystem path of the source code file containing
+            the calling method or function.
+ 
+ @param     fileLine The line number within `filePath` specifying the
+            location of the code responsible for this request to log `msg`.
+ */
++ (void) logMessage:(nonnull NSString*)msg
+         atSeverity:(MBModuleLogSeverity)severity
+      callingObject:(nullable id)caller
+   callingSignature:(nonnull NSString*)signature
+    callingFilePath:(nonnull NSString*)filePath
+    callingFileLine:(NSUInteger)fileLine;
+
+@end
+
+/******************************************************************************/
+#pragma mark -
 #pragma mark MBModuleLog class
 /******************************************************************************/
 
@@ -19,7 +88,27 @@
  Instances of this class are used to issue log messages associated with a 
  given `MBModule`.
  */
-@interface MBModuleLog : NSObject
+@interface MBModuleLog : NSObject < MBModuleLogger >
+
+/*******************************************************************************
+ @name MBModuleLogger support
+ ******************************************************************************/
+
+/*!
+ Sets the logger class used to log messages through `MBModuleLog`. By
+ default, `MBModuleLog` is the logger class, unless overridden by a call
+ to this method.
+ 
+ @param     loggerClass The `Class` implementing `MBModuleLogger` that
+            should be used as the logger. If `nil` is passed, the value is
+            reset to the default of `MBModuleLog`.
+ */
++ (void) setLoggerClass:(nullable Class<MBModuleLogger>)loggerClass;
+
+/*!
+ Returns the logger class used to log messages through `MBModuleLog`.
+ */
++ (nonnull Class<MBModuleLogger>) loggerClass;
 
 /*******************************************************************************
  @name Object lifecycle

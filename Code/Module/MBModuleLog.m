@@ -12,9 +12,13 @@
 #import "MBModule.h"
 #import "NSString+MBIndentation.h"
 #import "MBThreadLocalStorage.h"
+#import "MBConcurrentReadWriteCoordinator.h"
 #import "MBDebug.h"
 
 #define DEBUG_LOCAL     0
+
+static Class<MBModuleLogger> s_logger = nil;
+static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 
 /******************************************************************************/
 #pragma mark -
@@ -25,6 +29,72 @@
 {
     NSString* _name;
     BOOL _registeredForMemoryWarnings;
+}
+
++ (void) initialize
+{
+    if (self == [MBModuleLog class]) {
+        s_readerWriter = [MBConcurrentReadWriteCoordinator new];
+        s_logger = self;
+    }
+}
+
++ (void) setLoggerClass:(nullable Class<MBModuleLogger>)loggerClass
+{
+    [s_readerWriter enqueueWrite:^{
+        if (loggerClass) {
+            s_logger = loggerClass;
+        } else {
+            s_logger = [MBModuleLog class];
+        }
+    }];
+}
+
++ (nonnull Class<MBModuleLogger>) loggerClass
+{
+    __block Class<MBModuleLogger> logger = nil;
+    [s_readerWriter read:^{
+        logger = s_logger;
+    }];
+    return logger;
+}
+
++ (nonnull NSString*) logTagForSeverity:(MBModuleLogSeverity)severity
+{
+    switch (severity) {
+        case MBModuleLogSeverityVerbose:
+            return @"VERBOSE";
+
+        case MBModuleLogSeverityDebug:
+            return @"  DEBUG";
+
+        case MBModuleLogSeverityInfo:
+            return @"   INFO";
+
+        case MBModuleLogSeverityWarning:
+            return @"WARNING";
+
+        case MBModuleLogSeverityError:
+            return @"  ERROR";
+
+        default:
+            return @"unknown";
+    }
+}
+
++ (void) logMessage:(nonnull NSString*)msg
+         atSeverity:(MBModuleLogSeverity)severity
+      callingObject:(nullable id)caller
+   callingSignature:(nonnull NSString*)signature
+    callingFilePath:(nonnull NSString*)filePath
+    callingFileLine:(NSUInteger)fileLine
+{
+    NSString* logTag = [self logTagForSeverity:severity];
+    if (caller) {
+        NSLog(@"%@ | (%@:%lu) <%p> %@", logTag, [filePath lastPathComponent], (unsigned long)fileLine, caller, msg);
+    } else {
+        NSLog(@"%@ | (%@:%lu) %@", logTag, [filePath lastPathComponent], (unsigned long)fileLine, msg);
+    }
 }
 
 /******************************************************************************/

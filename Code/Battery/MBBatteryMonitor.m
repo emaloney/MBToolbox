@@ -18,7 +18,7 @@
 #pragma mark Constants
 /******************************************************************************/
 
-NSString* const __nonnull kMBBatteryMonitorUpdateEvent    = @"MBBatteryMonitor:update";
+NSString* const kMBBatteryMonitorUpdateEvent    = @"MBBatteryMonitor:update";
 
 /******************************************************************************/
 #pragma mark -

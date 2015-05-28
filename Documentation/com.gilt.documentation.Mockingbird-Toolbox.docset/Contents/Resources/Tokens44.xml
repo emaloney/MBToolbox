@@ -17,7 +17,7 @@
 			<Abstract type="html">Returns the name of the module.</Abstract>
 			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)moduleName</Declaration>
+			<Declaration>+ (nonnull NSString *)moduleName</Declaration>
 			
 			<ReturnValue><Abstract type="html">The module name.</Abstract></ReturnValue>
 			<Anchor>//api/name/moduleName</Anchor>
@@ -29,7 +29,7 @@
 			<Abstract type="html">Returns the MBModuleLog associated with the receiving module.</Abstract>
 			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>+ (MBModuleLog *)log</Declaration>
+			<Declaration>+ (nonnull MBModuleLog *)log</Declaration>
 			
 			<ReturnValue><Abstract type="html">The module log.</Abstract></ReturnValue>
 			<Anchor>//api/name/log</Anchor>
@@ -41,7 +41,7 @@
 			<Abstract type="html">Returns an NSBundle instance representing the resource bundle of the module.</Abstract>
 			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>+ (NSBundle *)resourceBundle</Declaration>
+			<Declaration>+ (nullable NSBundle *)resourceBundle</Declaration>
 			
 			<ReturnValue><Abstract type="html">The module&apos;s resource bundle, or nil if one doesn&apos;t exist.</Abstract></ReturnValue>
 			<Anchor>//api/name/resourceBundle</Anchor>
@@ -55,7 +55,7 @@ environment loading process. When the module is activated, its associated
 environment loaders will be used to populate the current environment.</Abstract>
 			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>+ (NSArray *)environmentLoaderClasses</Declaration>
+			<Declaration>+ (nullable NSArray *)environmentLoaderClasses</Declaration>
 			
 			<ReturnValue><Abstract type="html">The environment loader classes used by the module. nil is
             an acceptable return value to indicate that the module
@@ -72,7 +72,7 @@ method is not implemented or if it returns nil, no attempt will
 be made to load an environment file for the module.</Abstract>
 			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)moduleEnvironmentFilename</Declaration>
+			<Declaration>+ (nullable NSString *)moduleEnvironmentFilename</Declaration>
 			
 			<ReturnValue><Abstract type="html">The name of the environment file to load. Note that this is
             a filename and not a full pathname.</Abstract></ReturnValue>

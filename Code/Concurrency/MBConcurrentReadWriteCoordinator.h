@@ -45,7 +45,7 @@
 
  @param     readOperation The read operation.
  */
-- (void) read:(void (^)())readOperation;
+- (void) read:(nonnull void (^)())readOperation;
 
 /*!
  Enqueues a write operation for eventual execution. The passed-in block will be
@@ -58,7 +58,7 @@
 
  @param     writeOperation The write operation.
  */
-- (void) enqueueWrite:(void (^)())writeOperation;
+- (void) enqueueWrite:(nonnull void (^)())writeOperation;
 
 @end
 

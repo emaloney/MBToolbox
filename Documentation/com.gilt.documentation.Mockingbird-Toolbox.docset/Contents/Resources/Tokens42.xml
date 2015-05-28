@@ -19,7 +19,7 @@ formatted output for an object&apos;s description method.</Abstract>
 MBFieldListFormatter instance.</Abstract>
 			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>- (void)addDescriptionFieldsTo:(MBFieldListFormatter *)fmt</Declaration>
+			<Declaration>- (void)addDescriptionFieldsTo:(nonnull MBFieldListFormatter *)fmt</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fmt</Name>

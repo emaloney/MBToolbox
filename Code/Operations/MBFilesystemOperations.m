@@ -36,13 +36,14 @@ MBImplementSingleton();
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-+ (MBFileReadOperation*) operationForReadingFromFile:(NSString*)path
-                                            delegate:(NSObject<MBFileReadOperationDelegate>*)del
++ (nonnull instancetype) operationForReadingFromFile:(nonnull NSString*)path
+                                            delegate:(nonnull NSObject<MBFileReadOperationDelegate>*)del
 {
     return [[self alloc] initForFilePath:path delegate:del];
 }
 
-- (instancetype) initForFilePath:(NSString*)path delegate:(NSObject<MBFileReadOperationDelegate>*)del
+- (nonnull instancetype) initForFilePath:(nonnull NSString*)path
+                                delegate:(nonnull NSObject<MBFileReadOperationDelegate>*)del
 {
     self = [super init];
     if (self) {
@@ -56,12 +57,12 @@ MBImplementSingleton();
 #pragma mark Private - Delegate calls
 /******************************************************************************/
 
-- (void) _delegateReadCompletedWithObject:(id)readObj
+- (void) _delegateReadCompletedWithObject:(nonnull id)readObj
 {
     [_delegate readCompletedWithObject:readObj forOperation:self];
 }
 
-- (void) _delegateReadFailedWithError:(NSError*)err
+- (void) _delegateReadFailedWithError:(nonnull NSError*)err
 {
     [_delegate readFailedWithError:err forOperation:self];
 }
@@ -70,7 +71,7 @@ MBImplementSingleton();
 #pragma mark Subclass hooks
 /******************************************************************************/
 
-- (id) readObjectFromFile:(NSString*)path error:(NSError**)err
+- (nullable id) readObjectFromFile:(nonnull NSString*)path error:(inout NSError**)err
 {
     debugTrace();
     
@@ -82,7 +83,7 @@ MBImplementSingleton();
     return fileData;
 }
 
-- (void) readCompletedWithObject:(id)readObj
+- (void) readCompletedWithObject:(nonnull id)readObj
 {
     debugTrace();
     
@@ -91,7 +92,7 @@ MBImplementSingleton();
     }
 }
 
-- (void) readFailedWithError:(NSError*)err
+- (void) readFailedWithError:(nonnull NSError*)err
 {
     debugTrace();
     
@@ -148,13 +149,14 @@ MBImplementSingleton();
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-+ (MBFileWriteOperation*) operationForWritingData:(NSData*)data
-                                           toFile:(NSString*)path
++ (nonnull instancetype) operationForWritingData:(nullable NSData*)data
+                                          toFile:(nonnull NSString*)path
 {
     return [[self alloc] initWithData:data forFilePath:path];
 }
 
-- (instancetype) initWithData:(NSData*)data forFilePath:(NSString*)path
+- (nonnull instancetype) initWithData:(nullable NSData*)data
+                          forFilePath:(nonnull NSString*)path
 {
     self = [super init];
     if (self) {
@@ -164,11 +166,20 @@ MBImplementSingleton();
     return self;
 }
 
+- (nonnull instancetype) initForWritingToFile:(nonnull NSString*)path
+{
+    self = [super init];
+    if (self) {
+        _filePath = path;
+    }
+    return self;
+}
+
 /******************************************************************************/
 #pragma mark Operation implementation
 /******************************************************************************/
 
-- (NSData*) dataForOperation
+- (nonnull NSData*) dataForOperation
 {
     return _fileData;
 }
@@ -213,17 +224,18 @@ MBImplementSingleton();
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-+ (MBFileDeleteOperation*) operationForDeletingFile:(NSString*)path
++ (nonnull instancetype) operationForDeletingFile:(nonnull NSString*)path
 {
     return [[self alloc] initWithFilePath:path moveImmediately:YES];
 }
 
-- (instancetype) initWithFilePath:(NSString*)path
+- (nonnull instancetype) initWithFilePath:(nonnull NSString*)path
 {
     return [self initWithFilePath:path moveImmediately:YES];
 }
 
-- (instancetype) initWithFilePath:(NSString*)path moveImmediately:(BOOL)moveNow
+- (nonnull instancetype) initWithFilePath:(nonnull NSString*)path
+                          moveImmediately:(BOOL)moveNow
 {
     self = [super init];
     if (self) {

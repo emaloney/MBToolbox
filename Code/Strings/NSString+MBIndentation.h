@@ -30,7 +30,7 @@
 
  @return    The indented string.
  */
-- (NSString*) stringByIndentingEachLineWithTab;
+- (nonnull NSString*) stringByIndentingEachLineWithTab;
 
 /*!
  Creates a new string by prefixing each line in the receiver with the 
@@ -41,7 +41,7 @@
 
  @return    The indented string.
  */
-- (NSString*) stringByIndentingEachLineWithTabs:(NSUInteger)numberOfTabs;
+- (nonnull NSString*) stringByIndentingEachLineWithTabs:(NSUInteger)numberOfTabs;
 
 /*!
  Creates a new string by prefixing each line in the receiver with the given
@@ -51,6 +51,6 @@
  
  @return    The indented string.
  */
-- (NSString*) stringByIndentingEachLineWithPrefix:(NSString*)prefix;
+- (nonnull NSString*) stringByIndentingEachLineWithPrefix:(nonnull NSString*)prefix;
 
 @end

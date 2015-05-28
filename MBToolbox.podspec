@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBToolbox"
-	s.version               = "1.0.22"
+	s.version               = "1.1.0"
 	s.summary               = "Mockingbird Toolbox"
 	s.description           = "General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
 	s.homepage              = "https://github.com/emaloney/MBToolbox"
@@ -450,6 +450,14 @@ Pod::Spec.new do |s|
 	end
 
 	#
+	# specifies the contents of the MBLog.h file
+	#
+	s.subspec 'Log' do |ss|
+		ss.source_files = 'Code/Common/MBLog.h'
+		ss.public_header_files = 'Code/Common/MBLog.h'
+	end
+
+	#
 	# specifies the contents of the MBRuntime.h file
 	#
 	s.subspec 'Runtime' do |ss|
@@ -463,6 +471,7 @@ Pod::Spec.new do |s|
 	s.subspec 'Common' do |ss|
 		ss.dependency 'MBToolbox/Assert'
 		ss.dependency 'MBToolbox/Debug'
+		ss.dependency 'MBToolbox/Log'
 		ss.dependency 'MBToolbox/Runtime'
 		ss.source_files = 'Code/MBToolbox.h'
 		ss.public_header_files = 'Code/MBToolbox.h'

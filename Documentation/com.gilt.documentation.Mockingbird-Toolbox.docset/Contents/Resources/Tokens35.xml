@@ -19,7 +19,7 @@ and utilizing regular expressions.</Abstract>
 regular expression pattern string.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSRegularExpression *)regularExpression</Declaration>
+			<Declaration>- (nullable NSRegularExpression *)regularExpression</Declaration>
 			
 			<ReturnValue><Abstract type="html">The regular expression, or nil if the receiver could not be
             interpreted as a valid regular expression.</Abstract></ReturnValue>
@@ -33,7 +33,7 @@ regular expression pattern string.</Abstract>
 regular expression pattern string.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)options</Declaration>
+			<Declaration>- (nullable NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>options</Name>
@@ -53,7 +53,7 @@ regular expression pattern string.</Abstract>
 regular expression pattern string.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)options error:(inout NSError **)errPtr</Declaration>
+			<Declaration>- (nullable NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)options error:(NSErrorPtrPtr)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>options</Name>
@@ -78,7 +78,7 @@ regular expression pattern string.</Abstract>
 contained in the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)escapedRegexPattern</Declaration>
+			<Declaration>- (nonnull NSString *)escapedRegexPattern</Declaration>
 			
 			<ReturnValue><Abstract type="html">The escaped pattern string.</Abstract></ReturnValue>
 			<Anchor>//api/name/escapedRegexPattern</Anchor>
@@ -91,7 +91,7 @@ contained in the receiver.</Abstract>
 contained in the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)escapedRegexTemplate</Declaration>
+			<Declaration>- (nonnull NSString *)escapedRegexTemplate</Declaration>
 			
 			<ReturnValue><Abstract type="html">The escaped template string.</Abstract></ReturnValue>
 			<Anchor>//api/name/escapedRegexTemplate</Anchor>
@@ -103,7 +103,7 @@ contained in the receiver.</Abstract>
 			<Abstract type="html">Matches the specified regular expression against the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSArray *)matchesWithRegex:(NSString *)pattern</Declaration>
+			<Declaration>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)pattern</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -111,7 +111,8 @@ contained in the receiver.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An array of NSTextCheckingResult objects representing the regular
-            expression pattern matches found within the receiver.</Abstract></ReturnValue>
+            expression pattern matches found within the receiver, or nil
+            if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/matchesWithRegex:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -121,7 +122,7 @@ contained in the receiver.</Abstract>
 			<Abstract type="html">Matches the specified regular expression against the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSArray *)matchesWithRegex:(NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
+			<Declaration>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -133,7 +134,8 @@ contained in the receiver.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An array of NSTextCheckingResult objects representing the regular
-            expression pattern matches found within the receiver.</Abstract></ReturnValue>
+            expression pattern matches found within the receiver, or nil
+            if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/matchesWithRegex:options:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -143,7 +145,7 @@ contained in the receiver.</Abstract>
 			<Abstract type="html">Matches the specified regular expression against the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSArray *)matchesWithRegex:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
+			<Declaration>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -159,7 +161,8 @@ contained in the receiver.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An array of NSTextCheckingResult objects representing the regular
-            expression pattern matches found within the receiver.</Abstract></ReturnValue>
+            expression pattern matches found within the receiver, or nil
+            if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/matchesWithRegex:options:range:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -169,7 +172,7 @@ contained in the receiver.</Abstract>
 			<Abstract type="html">Matches the specified regular expression against the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSArray *)matchesWithRegex:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(inout NSError **)errPtr</Declaration>
+			<Declaration>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSErrorPtrPtr)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -190,7 +193,8 @@ contained in the receiver.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An array of NSTextCheckingResult objects representing the regular
-            expression pattern matches found within the receiver.</Abstract></ReturnValue>
+            expression pattern matches found within the receiver, or nil
+            if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/matchesWithRegex:options:range:error:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -201,7 +205,7 @@ contained in the receiver.</Abstract>
 regular expression pattern.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)isMatchedByRegex:(NSString *)pattern</Declaration>
+			<Declaration>- (BOOL)isMatchedByRegex:(nonnull NSString *)pattern</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -220,7 +224,7 @@ regular expression pattern.</Abstract>
 regular expression pattern.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)isMatchedByRegex:(NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
+			<Declaration>- (BOOL)isMatchedByRegex:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -243,7 +247,7 @@ regular expression pattern.</Abstract>
 regular expression pattern within the specified range.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)isMatchedByRegex:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
+			<Declaration>- (BOOL)isMatchedByRegex:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -270,7 +274,7 @@ regular expression pattern within the specified range.</Abstract>
 regular expression pattern within the specified range.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)isMatchedByRegex:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(inout NSError **)errPtr</Declaration>
+			<Declaration>- (BOOL)isMatchedByRegex:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSErrorPtrPtr)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -302,7 +306,7 @@ regular expression pattern within the specified range.</Abstract>
 expression pattern.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)numberOfRegexMatches:(NSString *)pattern</Declaration>
+			<Declaration>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)pattern</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -320,7 +324,7 @@ expression pattern.</Abstract>
 expression pattern.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)numberOfRegexMatches:(NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
+			<Declaration>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -342,7 +346,7 @@ expression pattern.</Abstract>
 expression pattern.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)numberOfRegexMatches:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
+			<Declaration>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -368,7 +372,7 @@ expression pattern.</Abstract>
 expression pattern.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSUInteger)numberOfRegexMatches:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(inout NSError **)errPtr</Declaration>
+			<Declaration>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSErrorPtrPtr)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -399,7 +403,7 @@ expression pattern.</Abstract>
 found within the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSTextCheckingResult *)firstRegexMatch:(NSString *)pattern</Declaration>
+			<Declaration>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)pattern</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -407,7 +411,7 @@ found within the receiver.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An NSTextCheckingResult instance containing the results of the
-            match.</Abstract></ReturnValue>
+            match, or nil if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/firstRegexMatch:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -418,7 +422,7 @@ found within the receiver.</Abstract>
 found within the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSTextCheckingResult *)firstRegexMatch:(NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
+			<Declaration>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -430,7 +434,7 @@ found within the receiver.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An NSTextCheckingResult instance containing the results of the
-            match.</Abstract></ReturnValue>
+            match, or nil if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/firstRegexMatch:options:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -441,7 +445,7 @@ found within the receiver.</Abstract>
 found within the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSTextCheckingResult *)firstRegexMatch:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
+			<Declaration>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -457,7 +461,7 @@ found within the receiver.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An NSTextCheckingResult instance containing the results of the
-            match.</Abstract></ReturnValue>
+            match, or nil if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/firstRegexMatch:options:range:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -468,7 +472,7 @@ found within the receiver.</Abstract>
 found within the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSTextCheckingResult *)firstRegexMatch:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(inout NSError **)errPtr</Declaration>
+			<Declaration>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSErrorPtrPtr)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -489,7 +493,7 @@ found within the receiver.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An NSTextCheckingResult instance containing the results of the
-            match.</Abstract></ReturnValue>
+            match, or nil if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/firstRegexMatch:options:range:error:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -500,7 +504,7 @@ found within the receiver.</Abstract>
 the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSRange)rangeOfFirstRegexMatch:(NSString *)pattern</Declaration>
+			<Declaration>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)pattern</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -519,7 +523,7 @@ the receiver.</Abstract>
 the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSRange)rangeOfFirstRegexMatch:(NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
+			<Declaration>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -542,7 +546,7 @@ the receiver.</Abstract>
 the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSRange)rangeOfFirstRegexMatch:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
+			<Declaration>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -569,7 +573,7 @@ the receiver.</Abstract>
 the receiver.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSRange)rangeOfFirstRegexMatch:(NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(inout NSError **)errPtr</Declaration>
+			<Declaration>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)pattern options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSErrorPtrPtr)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -601,7 +605,7 @@ the receiver.</Abstract>
 expression pattern with the replacement template provided.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByReplacingRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ</Declaration>
+			<Declaration>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)pattern withTemplate:(nonnull NSString *)templ</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -612,7 +616,7 @@ expression pattern with the replacement template provided.</Abstract>
             matches.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The resulting string.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">The resulting string, or nil if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/stringByReplacingRegexMatches:withTemplate:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -623,7 +627,7 @@ expression pattern with the replacement template provided.</Abstract>
 expression pattern with the replacement template provided.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByReplacingRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options</Declaration>
+			<Declaration>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)pattern withTemplate:(nonnull NSString *)templ options:(NSRegularExpressionOptions)options</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -638,7 +642,7 @@ expression pattern with the replacement template provided.</Abstract>
             will occur.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The resulting string.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">The resulting string, or nil if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/stringByReplacingRegexMatches:withTemplate:options:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -649,7 +653,7 @@ expression pattern with the replacement template provided.</Abstract>
 expression pattern with the replacement template provided.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByReplacingRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
+			<Declaration>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)pattern withTemplate:(nonnull NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -668,7 +672,7 @@ expression pattern with the replacement template provided.</Abstract>
             will occur.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The resulting string.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">The resulting string, or nil if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/stringByReplacingRegexMatches:withTemplate:options:range:</Anchor>
             <NodeRef refid="35"/>
 		</Token>
@@ -679,7 +683,7 @@ expression pattern with the replacement template provided.</Abstract>
 expression pattern with the replacement template provided.</Abstract>
 			<DeclaredIn>NSString+MBRegex.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByReplacingRegexMatches:(NSString *)pattern withTemplate:(NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(inout NSError **)errPtr</Declaration>
+			<Declaration>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)pattern withTemplate:(nonnull NSString *)templ options:(NSRegularExpressionOptions)options range:(NSRange)range error:(NSErrorPtrPtr)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>pattern</Name>
@@ -703,7 +707,7 @@ expression pattern with the replacement template provided.</Abstract>
             will be updated to point to an NSError describing the problem.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The resulting string.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">The resulting string, or nil if an error occurred.</Abstract></ReturnValue>
 			<Anchor>//api/name/stringByReplacingRegexMatches:withTemplate:options:range:error:</Anchor>
             <NodeRef refid="35"/>
 		</Token>

@@ -19,7 +19,7 @@
 
 @implementation UIFont (MBStringSizing)
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
 {
     verboseDebugTrace();
@@ -30,7 +30,7 @@
                  fractional:NO];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
 {
@@ -42,7 +42,7 @@
                  fractional:NO];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
 {
     verboseDebugTrace();
@@ -53,7 +53,7 @@
                  fractional:NO];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
            fractional:(BOOL)allowFractionalSize
 {
@@ -65,7 +65,7 @@
                  fractional:allowFractionalSize];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
            fractional:(BOOL)allowFractionalSize
@@ -78,7 +78,7 @@
                  fractional:allowFractionalSize];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
            fractional:(BOOL)allowFractionalSize
 {
@@ -90,7 +90,7 @@
                  fractional:allowFractionalSize];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
         lineBreakMode:(NSLineBreakMode)lineMode
 {
@@ -102,7 +102,7 @@
                  fractional:NO];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
         lineBreakMode:(NSLineBreakMode)lineMode
@@ -115,7 +115,7 @@
                  fractional:NO];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
         lineBreakMode:(NSLineBreakMode)lineMode
 {
@@ -127,7 +127,7 @@
                  fractional:NO];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
         lineBreakMode:(NSLineBreakMode)lineMode
            fractional:(BOOL)allowFractionalSize
@@ -140,7 +140,7 @@
                  fractional:allowFractionalSize];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
         lineBreakMode:(NSLineBreakMode)lineMode
@@ -154,7 +154,7 @@
                  fractional:allowFractionalSize];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
         lineBreakMode:(NSLineBreakMode)lineMode
            fractional:(BOOL)allowFractionalSize
@@ -170,9 +170,9 @@
                  fractional:allowFractionalSize];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
-       paragraphStyle:(NSParagraphStyle*)style
+       paragraphStyle:(nonnull NSParagraphStyle*)style
 {
     verboseDebugTrace();
     
@@ -182,10 +182,10 @@
                  fractional:NO];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
-       paragraphStyle:(NSParagraphStyle*)style
+       paragraphStyle:(nonnull NSParagraphStyle*)style
 {
     verboseDebugTrace();
     
@@ -195,9 +195,9 @@
                  fractional:NO];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
-       paragraphStyle:(NSParagraphStyle*)style
+       paragraphStyle:(nonnull NSParagraphStyle*)style
 {
     verboseDebugTrace();
     
@@ -207,9 +207,9 @@
                  fractional:NO];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
-       paragraphStyle:(NSParagraphStyle*)style
+       paragraphStyle:(nonnull NSParagraphStyle*)style
            fractional:(BOOL)allowFractionalSize
 {
     verboseDebugTrace();
@@ -220,10 +220,10 @@
                  fractional:allowFractionalSize];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
-       paragraphStyle:(NSParagraphStyle*)style
+       paragraphStyle:(nonnull NSParagraphStyle*)style
            fractional:(BOOL)allowFractionalSize
 {
     verboseDebugTrace();
@@ -234,9 +234,9 @@
                  fractional:allowFractionalSize];
 }
 
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
-       paragraphStyle:(NSParagraphStyle*)style
+       paragraphStyle:(nonnull NSParagraphStyle*)style
            fractional:(BOOL)allowFractionalSize
 {
     debugTrace();

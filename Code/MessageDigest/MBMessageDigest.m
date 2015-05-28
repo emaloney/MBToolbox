@@ -72,7 +72,7 @@
 #pragma mark Creating MD5 message digests
 /******************************************************************************/
 
-+ (NSData*) MD5DataForString:(NSString*)src
++ (nonnull NSData*) MD5DataForString:(nonnull NSString*)src
 {
     const char* data = [src UTF8String];
     CC_LONG dataSize = (CC_LONG) strlen(data);
@@ -83,21 +83,21 @@
     return [NSData dataWithBytes:hash length:CC_MD5_DIGEST_LENGTH];
 }
 
-+ (NSString*) MD5ForString:(NSString*)src
++ (nonnull NSString*) MD5ForString:(nonnull NSString*)src
 {
     const char* data = [src UTF8String];
     CC_LONG dataSize = (CC_LONG) strlen(data);
     return [self MD5ForBytes:data length:dataSize];
 }
 
-+ (NSString*) MD5ForData:(NSData*)src
++ (nonnull NSString*) MD5ForData:(nonnull NSData*)src
 {
     const void* data = [src bytes];
     CC_LONG dataSize = (CC_LONG) [src length];
     return [self MD5ForBytes:data length:dataSize];
 }
 
-+ (NSString*) MD5ForBytes:(const void*)bytes length:(size_t)len
++ (nonnull NSString*) MD5ForBytes:(nonnull const void*)bytes length:(size_t)len;
 {
     unsigned char hash[CC_MD5_DIGEST_LENGTH];
     CC_MD5(bytes, (CC_LONG)len, hash);
@@ -179,7 +179,7 @@
     return hexHash;
 }
 
-+ (NSString*) MD5ForFileAtPath:(NSString*)path
++ (nullable NSString*) MD5ForFileAtPath:(nonnull NSString*)path
 {
     NSError* err = nil;
     NSString* md5 = [self MD5ForFileAtPath:path error:&err];
@@ -193,7 +193,7 @@
 #pragma mark Creating SHA-1 message digests
 /******************************************************************************/
 
-+ (NSData*) SHA1DataForString:(NSString*)src
++ (nonnull NSData*) SHA1DataForString:(nonnull NSString*)src
 {
     const char* data = [src UTF8String];
     CC_LONG dataSize = (CC_LONG) strlen(data);
@@ -204,21 +204,21 @@
     return [NSData dataWithBytes:hash length:CC_SHA1_DIGEST_LENGTH];
 }
 
-+ (NSString*) SHA1ForString:(NSString*)src
++ (nonnull NSString*) SHA1ForString:(nonnull NSString*)src
 {
     const char* data = [src UTF8String];
     CC_LONG dataSize = (CC_LONG) strlen(data);
     return [self SHA1ForBytes:data length:dataSize];
 }
 
-+ (NSString*) SHA1ForData:(NSData*)src
++ (nonnull NSString*) SHA1ForData:(nonnull NSData*)src
 {
     const void* data = [src bytes];
     CC_LONG dataSize = (CC_LONG) [src length];
     return [self SHA1ForBytes:data length:dataSize];
 }
 
-+ (NSString*) SHA1ForBytes:(const void*)bytes length:(size_t)len
++ (nonnull NSString*) SHA1ForBytes:(nonnull const void*)bytes length:(size_t)len
 {
     unsigned char hash[CC_SHA1_DIGEST_LENGTH];
     CC_SHA1(bytes, (CC_LONG)len, hash);
@@ -300,7 +300,7 @@
     return hexHash;
 }
 
-+ (NSString*) SHA1ForFileAtPath:(NSString*)path
++ (nullable NSString*) SHA1ForFileAtPath:(nonnull NSString*)path;
 {
     NSError* err = nil;
     NSString* sha1 = [self SHA1ForFileAtPath:path error:&err];
@@ -311,42 +311,3 @@
 }
 
 @end
-
-/******************************************************************************/
-#pragma mark -
-#pragma mark NSString MD5 Category
-/******************************************************************************/
-
-@implementation NSString (MBMessageDigest)
-
-- (NSString*) MD5
-{
-    return [MBMessageDigest MD5ForString:self];
-}
-
-- (NSString*) SHA1
-{
-    return [MBMessageDigest SHA1ForString:self];
-}
-
-@end
-
-/******************************************************************************/
-#pragma mark -
-#pragma mark NSData MD5 Category
-/******************************************************************************/
-
-@implementation NSData (MBMessageDigest)
-
-- (NSString*) MD5
-{
-    return [MBMessageDigest MD5ForData:self];
-}
-
-- (NSString*) SHA1
-{
-    return [MBMessageDigest SHA1ForData:self];
-}
-
-@end
-

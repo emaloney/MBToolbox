@@ -18,7 +18,7 @@
 data to a file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>+ (MBFileWriteOperation *)operationForWritingData:(NSData *)data toFile:(NSString *)path</Declaration>
+			<Declaration>+ (nonnull instancetype)operationForWritingData:(nullable NSData *)data toFile:(nonnull NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>data</Name>
@@ -40,7 +40,7 @@ data to a file.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to write to the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithData:(NSData *)data forFilePath:(NSString *)path</Declaration>
+			<Declaration>- (nonnull instancetype)initWithData:(nullable NSData *)data forFilePath:(nonnull NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>data</Name>
@@ -61,7 +61,7 @@ data to a file.</Abstract>
 			<Abstract type="html">Returns the filesystem path of the file to be written by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *filePath</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
 			<Anchor>//api/name/filePath</Anchor>
@@ -73,7 +73,7 @@ data to a file.</Abstract>
 			<Abstract type="html">Returns the filesystem path of the file to be written by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *filePath</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
 			<Anchor>//api/name/filePath</Anchor>
@@ -85,7 +85,7 @@ data to a file.</Abstract>
 			<Abstract type="html">Returns the filesystem path of the file to be written by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *filePath</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
 			<Anchor>//api/name/filePath</Anchor>
@@ -97,7 +97,7 @@ data to a file.</Abstract>
 			<Abstract type="html">Returns the data that will be written to the file by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSData *fileData</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSData *fileData</Declaration>
 			
 			
 			<Anchor>//api/name/fileData</Anchor>
@@ -109,7 +109,7 @@ data to a file.</Abstract>
 			<Abstract type="html">Returns the data that will be written to the file by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSData *fileData</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSData *fileData</Declaration>
 			
 			
 			<Anchor>//api/name/fileData</Anchor>
@@ -121,7 +121,7 @@ data to a file.</Abstract>
 			<Abstract type="html">Returns the data that will be written to the file by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSData *fileData</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSData *fileData</Declaration>
 			
 			
 			<Anchor>//api/name/fileData</Anchor>
@@ -133,7 +133,7 @@ data to a file.</Abstract>
 			<Abstract type="html">Returns the data that will be written to the file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (NSData *)dataForOperation</Declaration>
+			<Declaration>- (nonnull NSData *)dataForOperation</Declaration>
 			
 			<ReturnValue><Abstract type="html">The data to write to the file.</Abstract></ReturnValue>
 			<Anchor>//api/name/dataForOperation</Anchor>

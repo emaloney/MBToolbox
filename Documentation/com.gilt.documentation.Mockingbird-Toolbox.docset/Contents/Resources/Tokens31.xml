@@ -18,7 +18,7 @@
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code</Declaration>
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithCode:(NSInteger)code</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>code</Name>
@@ -36,7 +36,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfo:(NSDictionary *)dict</Declaration>
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfo:(nullable NSDictionary *)dict</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>code</Name>
@@ -57,7 +57,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(NSString *)key value:(id)val</Declaration>
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(nonnull NSString *)key value:(nonnull id)val</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>code</Name>
@@ -82,7 +82,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc</Declaration>
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithDescription:(nonnull NSString *)desc</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>desc</Name>
@@ -102,7 +102,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc code:(NSInteger)code</Declaration>
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithDescription:(nonnull NSString *)desc code:(NSInteger)code</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>desc</Name>
@@ -125,7 +125,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)desc code:(NSInteger)code userInfoKey:(NSString *)key value:(id)val</Declaration>
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithDescription:(nonnull NSString *)desc code:(NSInteger)code userInfoKey:(nonnull NSString *)key value:(nonnull id)val</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>desc</Name>
@@ -155,7 +155,7 @@ kMBErrorDomain constant.</Abstract>
 kMBErrorDomain constant.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>+ (NSError *)mockingbirdErrorWithException:(NSException *)ex</Declaration>
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithException:(nonnull NSException *)ex</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>ex</Name>
@@ -168,12 +168,12 @@ kMBErrorDomain constant.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/NSError/errorByAddingUserInfoKey:value:</TokenIdentifier>
-			<Abstract type="html">Creates a new NSError instance by adding the specified user info
-dictionary value to that of the receiver.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/errorByAddingOrRemovingUserInfoKey:value:</TokenIdentifier>
+			<Abstract type="html">Creates and returns a new NSError instance based on the receiver by adding
+or removing the user info dictionary value for the given key.</Abstract>
 			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (NSError *)errorByAddingUserInfoKey:(NSString *)key value:(id)val</Declaration>
+			<Declaration>- (nonnull NSError *)errorByAddingOrRemovingUserInfoKey:(nonnull NSString *)key value:(nullable id)val</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>
@@ -181,12 +181,13 @@ dictionary value to that of the receiver.</Abstract>
             returned error&apos;s user info dictionary.</Abstract>
 				</Parameter><Parameter>
 					<Name>val</Name>
-					<Abstract type="html">The value that will be associated with key.</Abstract>
+					<Abstract type="html">The value that will be associated with key. If nil, any
+            existing value for key will be removed instead.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">A new NSError instance with the same settings as the receiver,
             but with the specified user info value added.</Abstract></ReturnValue>
-			<Anchor>//api/name/errorByAddingUserInfoKey:value:</Anchor>
+			<Anchor>//api/name/errorByAddingOrRemovingUserInfoKey:value:</Anchor>
             <NodeRef refid="31"/>
 		</Token>
 		

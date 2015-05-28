@@ -30,14 +30,14 @@
  
  @return    The module name.
  */
-+ (NSString*) moduleName;
++ (nonnull NSString*) moduleName;
 
 /*!
  Returns the `MBModuleLog` associated with the receiving module.
  
  @return    The module log.
  */
-+ (MBModuleLog*) log;
++ (nonnull MBModuleLog*) log;
 
 @optional
 
@@ -46,7 +46,7 @@
 
  @return    The module's resource bundle, or `nil` if one doesn't exist.
  */
-+ (NSBundle*) resourceBundle;
++ (nullable NSBundle*) resourceBundle;
 
 /*!
  This optional method is implemented by modules that participate in the
@@ -57,7 +57,7 @@
             an acceptable return value to indicate that the module
             has no associated environment loaders.
  */
-+ (NSArray*) environmentLoaderClasses;
++ (nullable NSArray*) environmentLoaderClasses;
 
 /*!
  This optional method is implemented by modules that need a specific
@@ -68,7 +68,7 @@
  @return    The name of the environment file to load. Note that this is
             a filename and not a full pathname.
  */
-+ (NSString*) moduleEnvironmentFilename;
++ (nullable NSString*) moduleEnvironmentFilename;
 
 @end
 
@@ -93,6 +93,6 @@
 
  The log can be used to record notable runtime occurrances to the console.
  */
-@property(nonatomic, readonly) MBModuleLog* log;
+@property(nonnull, nonatomic, readonly) MBModuleLog* log;
 
 @end

@@ -25,7 +25,7 @@ MBImplementSingleton();
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-- (instancetype) init
+- (nonnull instancetype) init
 {
     if (DEBUG_FLAG(DEBUG_DISABLE_CACHING)) {
         errorLog(@"WARNING: %@ compiled with regular expression caching DISABLED!", [self class]);
@@ -38,9 +38,9 @@ MBImplementSingleton();
 #pragma mark Public API (singleton instance class level)
 /******************************************************************************/
 
-- (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern
-                                              options:(NSRegularExpressionOptions)options
-                                                error:(inout NSError**)errPtr
+- (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern
+                                                       options:(NSRegularExpressionOptions)options
+                                                         error:(NSErrorPtrPtr)errPtr
 {
     debugTrace();
     
@@ -69,13 +69,13 @@ MBImplementSingleton();
     return regex;
 }
 
-- (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern 
-                                              options:(NSRegularExpressionOptions)options
+- (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern
+                                                       options:(NSRegularExpressionOptions)options
 {
     return [self regularExpressionWithPattern:pattern options:options error:nil];
 }
 
-- (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern
+- (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern
 {
     return [self regularExpressionWithPattern:pattern options:0 error:nil];
 }
@@ -84,20 +84,20 @@ MBImplementSingleton();
 #pragma mark Public API (class level, for convenience)
 /******************************************************************************/
 
-+ (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern 
-                                              options:(NSRegularExpressionOptions)options 
-                                                error:(inout NSError**)errPtr
++ (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern
+                                                       options:(NSRegularExpressionOptions)options
+                                                         error:(NSErrorPtrPtr)errPtr
 {
     return [[self instance] regularExpressionWithPattern:pattern options:options error:errPtr];
 }
 
-+ (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern 
-                                              options:(NSRegularExpressionOptions)options
++ (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern
+                                                       options:(NSRegularExpressionOptions)options
 {
     return [[self instance] regularExpressionWithPattern:pattern options:options error:nil];
 }
 
-+ (NSRegularExpression*) regularExpressionWithPattern:(NSString*)pattern
++ (nullable NSRegularExpression*) regularExpressionWithPattern:(nonnull NSString*)pattern
 {
     return [[self instance] regularExpressionWithPattern:pattern options:0 error:nil];
 }

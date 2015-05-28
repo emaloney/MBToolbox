@@ -42,7 +42,7 @@
 for the receiver by adjusting the receiver&apos;s brightness.</Abstract>
 			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (UIColor *)highlightColor</Declaration>
+			<Declaration>- (nonnull UIColor *)highlightColor</Declaration>
 			
 			<ReturnValue><Abstract type="html">A highlight color based on the receiver.</Abstract></ReturnValue>
 			<Anchor>//api/name/highlightColor</Anchor>
@@ -55,7 +55,7 @@ for the receiver by adjusting the receiver&apos;s brightness.</Abstract>
 receiver by a given factor.</Abstract>
 			<DeclaredIn>UIColor+MBToolbox.h</DeclaredIn>
 			
-			<Declaration>- (UIColor *)colorWithBrightnessAdjustedByFactor:(CGFloat)adjustFactor</Declaration>
+			<Declaration>- (nonnull UIColor *)colorWithBrightnessAdjustedByFactor:(CGFloat)adjustFactor</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>adjustFactor</Name>

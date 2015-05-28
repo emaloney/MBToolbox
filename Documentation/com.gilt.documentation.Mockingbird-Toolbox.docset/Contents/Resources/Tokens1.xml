@@ -20,7 +20,7 @@ status.</Abstract>
 is running.</Abstract>
 			<DeclaredIn>MBBatteryMonitor.h</DeclaredIn>
 			
-			<Declaration>- (MBBatteryState *)currentBatteryState</Declaration>
+			<Declaration>- (nullable MBBatteryState *)currentBatteryState</Declaration>
 			
 			<ReturnValue><Abstract type="html">An MBBatteryState instance whose properties reflect the
             current state of the device&apos;s battery. Will be nil if the

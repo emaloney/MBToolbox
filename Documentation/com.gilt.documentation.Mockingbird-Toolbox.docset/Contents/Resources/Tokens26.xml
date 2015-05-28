@@ -18,7 +18,7 @@ among multiple threads simultaneously.</Abstract>
 			<Abstract type="html">Initializes a new MBThreadsafeCache instance.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithExceptionProtection:(BOOL)protect ignoreMemoryWarnings:(BOOL)ignore</Declaration>
+			<Declaration>- (nonnull instancetype)initWithExceptionProtection:(BOOL)protect ignoreMemoryWarnings:(BOOL)ignore</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>protect</Name>
@@ -42,7 +42,7 @@ among multiple threads simultaneously.</Abstract>
 			<Abstract type="html">The default initializer for MBThreadsafeCache instances.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)init</Declaration>
+			<Declaration>- (nonnull instancetype)init</Declaration>
 			
 			
 			<Anchor>//api/name/init</Anchor>
@@ -54,7 +54,7 @@ among multiple threads simultaneously.</Abstract>
 			<Abstract type="html">Determines whether a given key has a corresponding value in the cache.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)isKeyInCache:(id)key</Declaration>
+			<Declaration>- (BOOL)isKeyInCache:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>
@@ -72,7 +72,7 @@ among multiple threads simultaneously.</Abstract>
 			<Abstract type="html">Retrieves a cached object value given its key.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (id)objectForKey:(id)key</Declaration>
+			<Declaration>- (nullable id)objectForKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>
@@ -89,7 +89,7 @@ among multiple threads simultaneously.</Abstract>
 			<Abstract type="html">Sets a cached object value and associates it with the given key.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (void)setObject:(id)obj forKey:(id)key</Declaration>
+			<Declaration>- (void)setObject:(nonnull id)obj forKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>obj</Name>
@@ -109,7 +109,7 @@ among multiple threads simultaneously.</Abstract>
 			<Abstract type="html">Removes from the cache the object associated with the given key.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (void)removeObjectForKey:(id)key</Declaration>
+			<Declaration>- (void)removeObjectForKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>
@@ -127,7 +127,7 @@ among multiple threads simultaneously.</Abstract>
 notation.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (id)objectForKeyedSubscript:(id)key</Declaration>
+			<Declaration>- (nullable id)objectForKeyedSubscript:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>
@@ -145,7 +145,7 @@ notation.</Abstract>
 notation.</Abstract>
 			<DeclaredIn>MBThreadsafeCache.h</DeclaredIn>
 			
-			<Declaration>- (void)setObject:(id)obj forKeyedSubscript:(id)key</Declaration>
+			<Declaration>- (void)setObject:(nonnull id)obj forKeyedSubscript:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>obj</Name>

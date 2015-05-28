@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/MBService.html">
+	<File path="Protocols/MBModuleLogger.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/MBService</TokenIdentifier>
-			<Abstract type="html">The MBService protocol is implemented by classes that provide runtime
-services that might not need to be running during the entire lifetime of the
-application.</Abstract>
-			<DeclaredIn>MBService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/MBModuleLogger</TokenIdentifier>
+			<Abstract type="html">This protocol is adopted by classes that wish to be used as loggers by the
+MBModuleLog.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
             
 			
 			<NodeRef refid="45"/>
@@ -15,45 +14,37 @@ application.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBService/startService</TokenIdentifier>
-			<Abstract type="html">Requests that the service start running.</Abstract>
-			<DeclaredIn>MBService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModuleLogger/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:</TokenIdentifier>
+			<Abstract type="html">Records the log message to the underlying logging subsystem.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)startService</Declaration>
-			
-			
-			<Anchor>//api/name/startService</Anchor>
-            <NodeRef refid="45"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBService/stopService</TokenIdentifier>
-			<Abstract type="html">Requests that the service stop running.</Abstract>
-			<DeclaredIn>MBService.h</DeclaredIn>
-			
-			<Declaration>- (void)stopService</Declaration>
-			
-			
-			<Anchor>//api/name/stopService</Anchor>
-            <NodeRef refid="45"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBService/configureService:</TokenIdentifier>
-			<Abstract type="html">Configures the service according to the keys and values contained in the
-specified dictionary.</Abstract>
-			<DeclaredIn>MBService.h</DeclaredIn>
-			
-			<Declaration>- (void)configureService:(NSDictionary *)params</Declaration>
+			<Declaration>+ (void)logMessage:(nonnull NSString *)msg atSeverity:(MBModuleLogSeverity)severity callingObject:(nullable id)caller callingSignature:(nonnull NSString *)signature callingFilePath:(nonnull NSString *)filePath callingFileLine:(NSUInteger)fileLine</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>params</Name>
-					<Abstract type="html">The configuration parameters for the service. Acceptable
-            configuration values are service-specific.</Abstract>
+					<Name>msg</Name>
+					<Abstract type="html">The message to record.</Abstract>
+				</Parameter><Parameter>
+					<Name>severity</Name>
+					<Abstract type="html">The severity level of the log message.</Abstract>
+				</Parameter><Parameter>
+					<Name>caller</Name>
+					<Abstract type="html">The object responsible for issuing this request to
+            log msg. May be nil if not called from an object scope.</Abstract>
+				</Parameter><Parameter>
+					<Name>signature</Name>
+					<Abstract type="html">The signature of the calling method or function.</Abstract>
+				</Parameter><Parameter>
+					<Name>filePath</Name>
+					<Abstract type="html">The filesystem path of the source code file containing
+            the calling method or function.</Abstract>
+				</Parameter><Parameter>
+					<Name>fileLine</Name>
+					<Abstract type="html">The line number within filePath specifying the
+            location of the code responsible for this request to log msg.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/configureService:</Anchor>
+			<Anchor>//api/name/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:</Anchor>
             <NodeRef refid="45"/>
 		</Token>
 		

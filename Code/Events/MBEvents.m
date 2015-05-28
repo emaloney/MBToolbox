@@ -24,7 +24,7 @@
 #pragma mark Posting events
 /******************************************************************************/
 
-+ (void) postEvent:(NSString*)event
++ (void) postEvent:(nonnull NSString*)event
 {
     debugLog(@"Posting event: %@", event);
 
@@ -32,7 +32,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:event object:nil];
 }
 
-+ (void) postEvent:(NSString*)event withSuffix:(NSString*)suffix
++ (void) postEvent:(nonnull NSString*)event withSuffix:(nullable NSString*)suffix
 {
     assert(event);
     
@@ -44,7 +44,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:event object:nil];
 }
 
-+ (void) postEvent:(NSString*)event withObject:(id)obj
++ (void) postEvent:(nonnull NSString*)event withObject:(nullable id)obj
 {
     debugLog(@"Posting event: %@ (with object parameter: %@)", event, obj);
 
@@ -52,7 +52,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:event object:obj];
 }
 
-+ (void) postEvent:(NSString*)event withUserInfo:(NSDictionary*)userInfo
++ (void) postEvent:(nonnull NSString*)event withUserInfo:(nullable NSDictionary*)userInfo
 {
     debugLog(@"Posting event: %@ (with userInfo parameter: %@)", event, userInfo);
 
@@ -60,7 +60,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:event object:nil userInfo:userInfo];
 }
 
-+ (void) postEvent:(NSString*)event fromSender:(id)sender
++ (void) postEvent:(nonnull NSString*)event fromSender:(nullable id)sender
 {
     debugLog(@"Posting event: %@ (from sender: %@)", event, sender);
 
@@ -72,7 +72,7 @@
 #pragma mark Constructing event-related names
 /******************************************************************************/
 
-+ (NSString*) name:(NSString*)name withSuffix:(NSString*)suffix
++ (nullable NSString*) name:(nullable NSString*)name withSuffix:(nullable NSString*)suffix
 {
     if (name && suffix) {
         return [NSString stringWithFormat:@"%@:%@", name, suffix];

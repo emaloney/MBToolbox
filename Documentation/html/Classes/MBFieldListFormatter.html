@@ -168,7 +168,7 @@ the specified object.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (instancetype)formatterForObject:(id)<em>obj</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull instancetype)formatterForObject:(nonnull id)<em>obj</em></code></div>
 
 		    
 			
@@ -245,7 +245,7 @@ an object&rsquo;s <code>description</code> method.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> value:(id)<em>val</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setField:(nonnull NSString *)<em>fieldName</em> value:(nullable id)<em>val</em></code></div>
 
 		    
 			
@@ -311,7 +311,7 @@ longer than the number of characters specified by the value of the constant
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> byTruncating:(NSString *)<em>val</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setField:(nonnull NSString *)<em>fieldName</em> byTruncating:(nonnull NSString *)<em>val</em></code></div>
 
 		    
 			
@@ -377,7 +377,7 @@ longer than <code>truncateAt</code> characters.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> byTruncating:(NSString *)<em>val</em> atCharacter:(NSUInteger)<em>truncateAt</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setField:(nonnull NSString *)<em>fieldName</em> byTruncating:(nonnull NSString *)<em>val</em> atCharacter:(NSUInteger)<em>truncateAt</em></code></div>
 
 		    
 			
@@ -450,7 +450,7 @@ that were removed by the truncation process.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> instance:(id)<em>obj</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setField:(nonnull NSString *)<em>fieldName</em> instance:(nullable id)<em>obj</em></code></div>
 
 		    
 			
@@ -513,7 +513,7 @@ that were removed by the truncation process.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> debug:(id)<em>obj</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setField:(nonnull NSString *)<em>fieldName</em> debug:(nullable id)<em>obj</em></code></div>
 
 		    
 			
@@ -578,7 +578,7 @@ and an optional debug descriptor. The debug descriptor is included if
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> pointer:(void *)<em>ptr</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setField:(nonnull NSString *)<em>fieldName</em> pointer:(nullable void *)<em>ptr</em></code></div>
 
 		    
 			
@@ -636,7 +636,7 @@ and an optional debug descriptor. The debug descriptor is included if
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> boolean:(BOOL)<em>val</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setField:(nonnull NSString *)<em>fieldName</em> boolean:(BOOL)<em>val</em></code></div>
 
 		    
 			
@@ -695,7 +695,7 @@ and an optional debug descriptor. The debug descriptor is included if
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setField:(NSString *)<em>fieldName</em> container:(id)<em>val</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setField:(nonnull NSString *)<em>fieldName</em> container:(nullable id)<em>val</em></code></div>
 
 		    
 			
@@ -760,7 +760,7 @@ passed-in dictionary.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)setFields:(NSDictionary *)<em>fields</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)setFields:(nonnull NSDictionary *)<em>fields</em></code></div>
 
 		    
 			
@@ -823,7 +823,7 @@ length of the string is greater than <code>truncateAt</code>.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSString *)truncateString:(NSString *)<em>val</em> atCharacter:(NSUInteger)<em>truncateAt</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull NSString *)truncateString:(nonnull NSString *)<em>val</em> atCharacter:(NSUInteger)<em>truncateAt</em></code></div>
 
 		    
 			
@@ -900,7 +900,7 @@ length of the string is greater than <code>truncateAt</code>.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)asString</code></div>
+			<div class="method-subsection method-declaration"><code>- (nonnull NSString *)asString</code></div>
 
 		    
 			
@@ -946,7 +946,7 @@ length of the string is greater than <code>truncateAt</code>.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)asStringWithIndentation:(NSString *)<em>indentation</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nonnull NSString *)asStringWithIndentation:(nonnull NSString *)<em>indentation</em></code></div>
 
 		    
 			
@@ -1010,7 +1010,7 @@ returned string.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)asStringWithIndentation</code></div>
+			<div class="method-subsection method-declaration"><code>- (nonnull NSString *)asStringWithIndentation</code></div>
 
 		    
 			
@@ -1070,7 +1070,7 @@ an object&rsquo;s <code>description</code> method.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)asDescription</code></div>
+			<div class="method-subsection method-declaration"><code>- (nonnull NSString *)asDescription</code></div>
 
 		    
 			
@@ -1119,7 +1119,7 @@ console output.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-02-04</p>
+						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

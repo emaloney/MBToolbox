@@ -39,7 +39,7 @@
 #pragma mark Reading
 /******************************************************************************/
 
-- (void) read:(void (^)())op
+- (void) read:(nonnull void (^)())op
 {
     debugTrace();
 
@@ -50,7 +50,7 @@
 #pragma mark Writing
 /******************************************************************************/
 
-- (void) enqueueWrite:(void (^)())op
+- (void) enqueueWrite:(nonnull void (^)())op
 {
     debugTrace();
 

@@ -49,16 +49,16 @@ MBImplementSingleton();
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-+ (instancetype) operationForWritingObject:(id)obj
-                                    toFile:(NSString*)path
-                                  forCache:(MBFilesystemCache*)fc
++ (nonnull instancetype) operationForWritingObject:(nonnull id)obj
+                                            toFile:(nonnull NSString*)path
+                                          forCache:(nonnull MBFilesystemCache*)fc
 {
     return [[self alloc] initWithObject:obj inCache:fc forFilePath:path];
 }
 
-- (instancetype) initWithObject:(id)obj 
-                        inCache:(MBFilesystemCache*)fc
-                    forFilePath:(NSString*)path
+- (nonnull instancetype) initWithObject:(nonnull id)obj
+                                inCache:(nonnull MBFilesystemCache*)fc
+                            forFilePath:(nonnull NSString*)path
 {
     self = [super initWithData:nil forFilePath:path];
     if (self) {

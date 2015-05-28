@@ -142,7 +142,7 @@ updates about network status changes.</Abstract>
     device. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierName</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *cellularCarrierName</Declaration>
 			
 			
 			<Anchor>//api/name/cellularCarrierName</Anchor>
@@ -155,7 +155,7 @@ updates about network status changes.</Abstract>
     device. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierName</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *cellularCarrierName</Declaration>
 			
 			
 			<Anchor>//api/name/cellularCarrierName</Anchor>
@@ -168,7 +168,7 @@ updates about network status changes.</Abstract>
     device. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierName</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *cellularCarrierName</Declaration>
 			
 			
 			<Anchor>//api/name/cellularCarrierName</Anchor>
@@ -181,7 +181,7 @@ updates about network status changes.</Abstract>
     with the device. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierCountry</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *cellularCarrierCountry</Declaration>
 			
 			
 			<Anchor>//api/name/cellularCarrierCountry</Anchor>
@@ -194,7 +194,7 @@ updates about network status changes.</Abstract>
     with the device. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierCountry</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *cellularCarrierCountry</Declaration>
 			
 			
 			<Anchor>//api/name/cellularCarrierCountry</Anchor>
@@ -207,7 +207,7 @@ updates about network status changes.</Abstract>
     with the device. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularCarrierCountry</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *cellularCarrierCountry</Declaration>
 			
 			
 			<Anchor>//api/name/cellularCarrierCountry</Anchor>
@@ -220,7 +220,7 @@ updates about network status changes.</Abstract>
     use by the device. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularConnectionType</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *cellularConnectionType</Declaration>
 			
 			
 			<Anchor>//api/name/cellularConnectionType</Anchor>
@@ -233,7 +233,7 @@ updates about network status changes.</Abstract>
     use by the device. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularConnectionType</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *cellularConnectionType</Declaration>
 			
 			
 			<Anchor>//api/name/cellularConnectionType</Anchor>
@@ -246,7 +246,7 @@ updates about network status changes.</Abstract>
     use by the device. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *cellularConnectionType</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *cellularConnectionType</Declaration>
 			
 			
 			<Anchor>//api/name/cellularConnectionType</Anchor>
@@ -261,7 +261,7 @@ updates about network status changes.</Abstract>
     property would return NO. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *carrierStatusDescription</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *carrierStatusDescription</Declaration>
 			
 			
 			<Anchor>//api/name/carrierStatusDescription</Anchor>
@@ -276,7 +276,7 @@ updates about network status changes.</Abstract>
     property would return NO. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *carrierStatusDescription</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *carrierStatusDescription</Declaration>
 			
 			
 			<Anchor>//api/name/carrierStatusDescription</Anchor>
@@ -291,7 +291,7 @@ updates about network status changes.</Abstract>
     property would return NO. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *carrierStatusDescription</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *carrierStatusDescription</Declaration>
 			
 			
 			<Anchor>//api/name/carrierStatusDescription</Anchor>
@@ -349,7 +349,7 @@ updates about network status changes.</Abstract>
     human-readable form. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *networkAvailabilityDescription</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *networkAvailabilityDescription</Declaration>
 			
 			
 			<Anchor>//api/name/networkAvailabilityDescription</Anchor>
@@ -362,7 +362,7 @@ updates about network status changes.</Abstract>
     human-readable form. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *networkAvailabilityDescription</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *networkAvailabilityDescription</Declaration>
 			
 			
 			<Anchor>//api/name/networkAvailabilityDescription</Anchor>
@@ -375,7 +375,7 @@ updates about network status changes.</Abstract>
     human-readable form. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *networkAvailabilityDescription</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *networkAvailabilityDescription</Declaration>
 			
 			
 			<Anchor>//api/name/networkAvailabilityDescription</Anchor>
@@ -388,7 +388,7 @@ updates about network status changes.</Abstract>
     Intended for use with debugging possible connectivity problems. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *reachabilityFlagsDescription</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *reachabilityFlagsDescription</Declaration>
 			
 			
 			<Anchor>//api/name/reachabilityFlagsDescription</Anchor>
@@ -401,7 +401,7 @@ updates about network status changes.</Abstract>
     Intended for use with debugging possible connectivity problems. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *reachabilityFlagsDescription</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *reachabilityFlagsDescription</Declaration>
 			
 			
 			<Anchor>//api/name/reachabilityFlagsDescription</Anchor>
@@ -414,7 +414,7 @@ updates about network status changes.</Abstract>
     Intended for use with debugging possible connectivity problems. </Abstract>
 			<DeclaredIn>MBNetworkMonitor.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *reachabilityFlagsDescription</Declaration>
+			<Declaration>@property (nullable, nonatomic, readonly) NSString *reachabilityFlagsDescription</Declaration>
 			
 			
 			<Anchor>//api/name/reachabilityFlagsDescription</Anchor>

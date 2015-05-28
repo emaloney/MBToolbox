@@ -17,7 +17,7 @@
 			<Abstract type="html">Returns the MBModuleLog associated with the receiver.</Abstract>
 			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) MBModuleLog *log</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) MBModuleLog *log</Declaration>
 			
 			
 			<Anchor>//api/name/log</Anchor>
@@ -29,7 +29,7 @@
 			<Abstract type="html">Returns the MBModuleLog associated with the receiver.</Abstract>
 			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) MBModuleLog *log</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) MBModuleLog *log</Declaration>
 			
 			
 			<Anchor>//api/name/log</Anchor>
@@ -41,7 +41,7 @@
 			<Abstract type="html">Returns the MBModuleLog associated with the receiver.</Abstract>
 			<DeclaredIn>MBModule.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) MBModuleLog *log</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) MBModuleLog *log</Declaration>
 			
 			
 			<Anchor>//api/name/log</Anchor>

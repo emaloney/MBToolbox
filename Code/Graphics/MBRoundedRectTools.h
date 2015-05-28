@@ -93,7 +93,7 @@
  
  @return    A new `CGPathRef` usable for drawing the rounded rectangle path.
  */
-+ (CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius;
++ (nonnull CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius;
 
 /*!
  Creates a new path for a rounded rectangle. The rectangle is adjusted to ensure
@@ -115,7 +115,7 @@
 
  @return    A new `CGPathRef` usable for drawing the rounded rectangle path.
  */
-+ (CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius forStrokeWidth:(CGFloat)width;
++ (nonnull CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius forStrokeWidth:(CGFloat)width;
 
 /*!
  Creates a new path for a rounded rectangle. The rectangle is adjusted by the
@@ -137,7 +137,7 @@
 
  @return    A new `CGPathRef` usable for drawing the rounded rectangle path.
  */
-+ (CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius insetBy:(CGFloat)inset;
++ (nonnull CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius insetBy:(CGFloat)inset;
 
 @end
 

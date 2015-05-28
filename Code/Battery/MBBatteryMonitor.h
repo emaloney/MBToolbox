@@ -12,7 +12,7 @@
 #pragma mark Constants
 /******************************************************************************/
 
-extern NSString* const kMBBatteryMonitorUpdateEvent;    //!< @"MBBatteryMonitor:update"
+extern NSString* const __nonnull kMBBatteryMonitorUpdateEvent;    //!< @"MBBatteryMonitor:update"
 
 /******************************************************************************/
 #pragma mark -
@@ -80,6 +80,6 @@ extern NSString* const kMBBatteryMonitorUpdateEvent;    //!< @"MBBatteryMonitor:
             current state of the device's battery. Will be `nil` if the
             `MBBatteryMonitor` service is not running.
  */
-- (MBBatteryState*) currentBatteryState;
+- (nullable MBBatteryState*) currentBatteryState;
 
 @end

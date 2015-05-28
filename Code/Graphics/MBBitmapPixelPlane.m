@@ -39,7 +39,7 @@
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-- (instancetype) initWithBitmapContext:(CGContextRef)bitmap
+- (nullable instancetype) initWithBitmapContext:(CGContextRef)bitmap
 {
     self = [super init];
     if (self) {
@@ -105,14 +105,14 @@
 #pragma mark Instantiation
 /******************************************************************************/
 
-+ (MBBitmapPixelPlane*) bitmapWithColumns:(NSUInteger)cols rows:(NSUInteger)rows
++ (nullable instancetype) bitmapWithColumns:(NSUInteger)cols rows:(NSUInteger)rows
 {
     debugTrace();
     
     return [self bitmapWithSize:(CGSize){cols, rows}];
 }
 
-+ (MBBitmapPixelPlane*) bitmapWithSize:(CGSize)size
++ (nullable instancetype) bitmapWithSize:(CGSize)size
 {
     debugTrace();
     
@@ -128,10 +128,10 @@
     return plane;
 }
 
-+ (MBBitmapPixelPlane*) bitmapWithSize:(CGSize)size 
-                        bitsPerChannel:(NSUInteger)bitsPerChannel
-                            colorSpace:(CGColorSpaceRef)space
-                            bitmapInfo:(CGBitmapInfo)info
++ (nullable instancetype) bitmapWithSize:(CGSize)size
+                          bitsPerChannel:(NSUInteger)bits
+                              colorSpace:(nonnull CGColorSpaceRef)space
+                              bitmapInfo:(CGBitmapInfo)info
 {
     debugTrace();
     
@@ -151,7 +151,7 @@
     NSUInteger bytesPerRow = (cols * bytesPerPixel);
     
     MBBitmapPixelPlane* plane = nil;
-    CGContextRef bitmap = CGBitmapContextCreate(NULL, cols, rows, bitsPerChannel, bytesPerRow, space, info);
+    CGContextRef bitmap = CGBitmapContextCreate(NULL, cols, rows, bits, bytesPerRow, space, info);
     if (bitmap) {
         plane = [[self alloc] initWithBitmapContext:bitmap];
     }
@@ -163,14 +163,14 @@
     return plane;
 }
 
-+ (MBBitmapPixelPlane*) bitmapWithUIImage:(UIImage*)image
++ (nullable instancetype) bitmapWithUIImage:(nonnull UIImage*)image
 {
     debugTrace();
     
     return [self bitmapWithCGImage:image.CGImage];
 }
 
-+ (MBBitmapPixelPlane*) bitmapWithCGImage:(CGImageRef)image
++ (nullable instancetype) bitmapWithCGImage:(nonnull CGImageRef)image
 {
     debugTrace();
     
@@ -204,7 +204,7 @@
     return plane;
 }
 
-+ (MBBitmapPixelPlane*) bitmapWithBitmapContext:(CGContextRef)bitmap
++ (nullable instancetype) bitmapWithBitmapContext:(nonnull CGContextRef)bitmap
 {
     debugTrace();
     
@@ -215,13 +215,13 @@
 #pragma mark Getting pixel information
 /******************************************************************************/
 
-+ (void) _extractChannelCount:(NSUInteger*)channelsPtr
-                bytesPerPixel:(NSUInteger*)bytesPerPixelPtr
-                    bigEndian:(BOOL*)isBigEndianPtr
-                     hasAlpha:(BOOL*)hasAlphaPtr
-                   alphaFirst:(BOOL*)alphaFirstPtr
-                 andPixelType:(MBBitmapPixelType*)pixelTypePtr
-                forColorSpace:(CGColorSpaceRef)colorSpace
++ (void) _extractChannelCount:(nullable inout NSUInteger*)channelsPtr
+                bytesPerPixel:(nullable inout NSUInteger*)bytesPerPixelPtr
+                    bigEndian:(nullable inout BOOL*)isBigEndianPtr
+                     hasAlpha:(nullable inout BOOL*)hasAlphaPtr
+                   alphaFirst:(nullable inout BOOL*)alphaFirstPtr
+                 andPixelType:(nullable inout MBBitmapPixelType*)pixelTypePtr
+                forColorSpace:(nonnull CGColorSpaceRef)colorSpace
               usingBitmapInfo:(CGBitmapInfo)bitmapInfo
 {
     verboseDebugTrace();
@@ -336,7 +336,7 @@
 #pragma mark Translating byte offsets
 /******************************************************************************/
 
-- (void*) _locationOfPixelAtColumn:(NSUInteger)col row:(NSUInteger)row
+- (nullable void*) _locationOfPixelAtColumn:(NSUInteger)col row:(NSUInteger)row
 {
     if (row >= _rowCount || col >= _columnCount) {
         errorLog(@"%@ got out-of-bounds coordinate (%lu,%lu); must be less than (%lu,%lu)", [self class], (unsigned long)col, (unsigned long)row, (unsigned long)_columnCount, (unsigned long)_rowCount);
@@ -349,7 +349,7 @@
     return dataStart;
 }
 
-- (void*) _locationOfPixelAtIndex:(NSUInteger)index
+- (nullable void*) _locationOfPixelAtIndex:(NSUInteger)index
 {
     if (index >= _pixelCount) {
         errorLog(@"%@ got out-of-bounds pixel index (%lu); must be less than (%lu)", [self class], (unsigned long)index, (unsigned long)_pixelCount);
@@ -366,7 +366,7 @@
 #pragma mark Accessing pixels
 /******************************************************************************/
 
-- (BOOL) _getPixel:(MBBitmapPixel*)pixel atLocation:(void*)loc
+- (BOOL) _getPixel:(nonnull inout MBBitmapPixel*)pixel atLocation:(void*)loc
 {
     if (!pixel || !loc)
         return NO;
@@ -442,7 +442,7 @@
     return YES;
 }
 
-- (BOOL) _setPixel:(MBBitmapPixel)pixel atLocation:(MBColorComponent*)loc
+- (BOOL) _setPixel:(MBBitmapPixel)pixel atLocation:(nonnull MBColorComponent*)loc
 {
     if (!loc)
         return NO;
@@ -509,14 +509,14 @@
     return YES;
 }
 
-- (BOOL) getPixel:(MBBitmapPixel*)pixel atColumn:(NSUInteger)col row:(NSUInteger)row
+- (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixel atColumn:(NSUInteger)col row:(NSUInteger)row
 {
     verboseDebugTrace();
 
     return [self _getPixel:pixel atLocation:[self _locationOfPixelAtColumn:col row:row]];
 }
 
-- (BOOL) getPixel:(MBBitmapPixel*)pixel atPoint:(CGPoint)point
+- (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixel atPoint:(CGPoint)point
 {
     verboseDebugTrace();
     
@@ -524,7 +524,7 @@
                                                                        row:(NSUInteger)round(point.y)]];
 }
 
-- (BOOL) getPixel:(MBBitmapPixel*)pixel atIndex:(NSUInteger)index
+- (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixel atIndex:(NSUInteger)index
 {
     verboseDebugTrace();
     

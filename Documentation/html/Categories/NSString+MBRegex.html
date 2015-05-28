@@ -189,7 +189,7 @@ regular expression pattern string.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSRegularExpression *)regularExpression</code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSRegularExpression *)regularExpression</code></div>
 
 		    
 			
@@ -237,7 +237,7 @@ regular expression pattern string.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)<em>options</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)<em>options</em></code></div>
 
 		    
 			
@@ -298,7 +298,7 @@ regular expression pattern string.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)<em>options</em> error:(inout NSError **)<em>errPtr</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)<em>options</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
 
 		    
 			
@@ -374,7 +374,7 @@ contained in the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)escapedRegexPattern</code></div>
+			<div class="method-subsection method-declaration"><code>- (nonnull NSString *)escapedRegexPattern</code></div>
 
 		    
 			
@@ -426,7 +426,7 @@ contained in the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)escapedRegexTemplate</code></div>
+			<div class="method-subsection method-declaration"><code>- (nonnull NSString *)escapedRegexTemplate</code></div>
 
 		    
 			
@@ -485,7 +485,7 @@ contained in the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSArray *)matchesWithRegex:(NSString *)<em>pattern</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)<em>pattern</em></code></div>
 
 		    
 			
@@ -506,7 +506,8 @@ contained in the receiver.</p>
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p>An array of <code>NSTextCheckingResult</code> objects representing the regular
-            expression pattern matches found within the receiver.</p>
+            expression pattern matches found within the receiver, or <code>nil</code>
+            if an error occurred.</p>
 			</div>
 			
 
@@ -544,7 +545,7 @@ contained in the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSArray *)matchesWithRegex:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
 
 		    
 			
@@ -571,7 +572,8 @@ contained in the receiver.</p>
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p>An array of <code>NSTextCheckingResult</code> objects representing the regular
-            expression pattern matches found within the receiver.</p>
+            expression pattern matches found within the receiver, or <code>nil</code>
+            if an error occurred.</p>
 			</div>
 			
 
@@ -609,7 +611,7 @@ contained in the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSArray *)matchesWithRegex:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
 
 		    
 			
@@ -642,7 +644,8 @@ contained in the receiver.</p>
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p>An array of <code>NSTextCheckingResult</code> objects representing the regular
-            expression pattern matches found within the receiver.</p>
+            expression pattern matches found within the receiver, or <code>nil</code>
+            if an error occurred.</p>
 			</div>
 			
 
@@ -680,7 +683,7 @@ contained in the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSArray *)matchesWithRegex:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(inout NSError **)<em>errPtr</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
 
 		    
 			
@@ -720,7 +723,8 @@ contained in the receiver.</p>
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p>An array of <code>NSTextCheckingResult</code> objects representing the regular
-            expression pattern matches found within the receiver.</p>
+            expression pattern matches found within the receiver, or <code>nil</code>
+            if an error occurred.</p>
 			</div>
 			
 
@@ -767,7 +771,7 @@ regular expression pattern.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(NSString *)<em>pattern</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(nonnull NSString *)<em>pattern</em></code></div>
 
 		    
 			
@@ -827,7 +831,7 @@ regular expression pattern.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
 
 		    
 			
@@ -893,7 +897,7 @@ regular expression pattern within the specified range.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
 
 		    
 			
@@ -965,7 +969,7 @@ regular expression pattern within the specified range.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(inout NSError **)<em>errPtr</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
 
 		    
 			
@@ -1052,7 +1056,7 @@ expression pattern.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(NSString *)<em>pattern</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)<em>pattern</em></code></div>
 
 		    
 			
@@ -1111,7 +1115,7 @@ expression pattern.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
 
 		    
 			
@@ -1176,7 +1180,7 @@ expression pattern.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
 
 		    
 			
@@ -1247,7 +1251,7 @@ expression pattern.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(inout NSError **)<em>errPtr</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
 
 		    
 			
@@ -1333,7 +1337,7 @@ found within the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSTextCheckingResult *)firstRegexMatch:(NSString *)<em>pattern</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)<em>pattern</em></code></div>
 
 		    
 			
@@ -1354,7 +1358,7 @@ found within the receiver.</p>
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p>An <code>NSTextCheckingResult</code> instance containing the results of the
-            match.</p>
+            match, or <code>nil</code> if an error occurred.</p>
 			</div>
 			
 
@@ -1393,7 +1397,7 @@ found within the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSTextCheckingResult *)firstRegexMatch:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
 
 		    
 			
@@ -1420,7 +1424,7 @@ found within the receiver.</p>
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p>An <code>NSTextCheckingResult</code> instance containing the results of the
-            match.</p>
+            match, or <code>nil</code> if an error occurred.</p>
 			</div>
 			
 
@@ -1459,7 +1463,7 @@ found within the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSTextCheckingResult *)firstRegexMatch:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
 
 		    
 			
@@ -1492,7 +1496,7 @@ found within the receiver.</p>
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p>An <code>NSTextCheckingResult</code> instance containing the results of the
-            match.</p>
+            match, or <code>nil</code> if an error occurred.</p>
 			</div>
 			
 
@@ -1531,7 +1535,7 @@ found within the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSTextCheckingResult *)firstRegexMatch:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(inout NSError **)<em>errPtr</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
 
 		    
 			
@@ -1571,7 +1575,7 @@ found within the receiver.</p>
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p>An <code>NSTextCheckingResult</code> instance containing the results of the
-            match.</p>
+            match, or <code>nil</code> if an error occurred.</p>
 			</div>
 			
 
@@ -1618,7 +1622,7 @@ the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(NSString *)<em>pattern</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)<em>pattern</em></code></div>
 
 		    
 			
@@ -1678,7 +1682,7 @@ the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
 
 		    
 			
@@ -1744,7 +1748,7 @@ the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
 
 		    
 			
@@ -1816,7 +1820,7 @@ the receiver.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(inout NSError **)<em>errPtr</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
 
 		    
 			
@@ -1903,7 +1907,7 @@ expression pattern with the replacement template provided.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)stringByReplacingRegexMatches:(NSString *)<em>pattern</em> withTemplate:(NSString *)<em>templ</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)<em>pattern</em> withTemplate:(nonnull NSString *)<em>templ</em></code></div>
 
 		    
 			
@@ -1929,7 +1933,7 @@ expression pattern with the replacement template provided.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The resulting string.</p>
+				<p>The resulting string, or <code>nil</code> if an error occurred.</p>
 			</div>
 			
 
@@ -1968,7 +1972,7 @@ expression pattern with the replacement template provided.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)stringByReplacingRegexMatches:(NSString *)<em>pattern</em> withTemplate:(NSString *)<em>templ</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)<em>pattern</em> withTemplate:(nonnull NSString *)<em>templ</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
 
 		    
 			
@@ -2000,7 +2004,7 @@ expression pattern with the replacement template provided.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The resulting string.</p>
+				<p>The resulting string, or <code>nil</code> if an error occurred.</p>
 			</div>
 			
 
@@ -2039,7 +2043,7 @@ expression pattern with the replacement template provided.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)stringByReplacingRegexMatches:(NSString *)<em>pattern</em> withTemplate:(NSString *)<em>templ</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)<em>pattern</em> withTemplate:(nonnull NSString *)<em>templ</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
 
 		    
 			
@@ -2077,7 +2081,7 @@ expression pattern with the replacement template provided.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The resulting string.</p>
+				<p>The resulting string, or <code>nil</code> if an error occurred.</p>
 			</div>
 			
 
@@ -2121,7 +2125,7 @@ expression pattern with the replacement template provided.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSString *)stringByReplacingRegexMatches:(NSString *)<em>pattern</em> withTemplate:(NSString *)<em>templ</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(inout NSError **)<em>errPtr</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)<em>pattern</em> withTemplate:(nonnull NSString *)<em>templ</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
 
 		    
 			
@@ -2166,7 +2170,7 @@ expression pattern with the replacement template provided.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>The resulting string.</p>
+				<p>The resulting string, or <code>nil</code> if an error occurred.</p>
 			</div>
 			
 
@@ -2205,7 +2209,7 @@ expression pattern with the replacement template provided.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-02-04</p>
+						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

@@ -35,7 +35,7 @@
  
  @return    The resulting image.
  */
-- (UIImage*) imageScaledToSize:(CGSize)newSize quality:(CGInterpolationQuality)quality;
+- (nonnull UIImage*) imageScaledToSize:(CGSize)newSize quality:(CGInterpolationQuality)quality;
 
 /*!
  Scales the receiver to the specified size.
@@ -49,7 +49,7 @@
 
  @return    The resulting image.
  */
-- (UIImage*) imageScaledToSize:(CGSize)newSize;
+- (nonnull UIImage*) imageScaledToSize:(CGSize)newSize;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Scaling images by a percentage of the original
@@ -71,7 +71,7 @@
 
  @return    The resulting image.
  */
-- (UIImage*) imageScaledByFactor:(CGFloat)scale quality:(CGInterpolationQuality)quality;
+- (nonnull UIImage*) imageScaledByFactor:(CGFloat)scale quality:(CGInterpolationQuality)quality;
 
 /*!
  Scales the receiver to a new size by applying the specified scale factor.
@@ -89,6 +89,6 @@
 
  @return    The resulting image.
  */
-- (UIImage*) imageScaledByFactor:(CGFloat)scale;
+- (nonnull UIImage*) imageScaledByFactor:(CGFloat)scale;
 
 @end

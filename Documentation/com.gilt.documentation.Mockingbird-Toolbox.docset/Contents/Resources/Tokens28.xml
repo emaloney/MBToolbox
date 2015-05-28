@@ -19,7 +19,7 @@ MBThreadsafeCache implementations.</Abstract>
 stored.</Abstract>
 			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (NSMutableDictionary *)internalCache</Declaration>
+			<Declaration>- (nonnull NSMutableDictionary *)internalCache</Declaration>
 			
 			
 			<Anchor>//api/name/internalCache</Anchor>
@@ -32,7 +32,7 @@ stored.</Abstract>
 in the cache.</Abstract>
 			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)internalIsKeyInCache:(id)key</Declaration>
+			<Declaration>- (BOOL)internalIsKeyInCache:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>
@@ -50,7 +50,7 @@ in the cache.</Abstract>
 			<Abstract type="html">Called internally to retrieve a cached object value given its key.</Abstract>
 			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (id)internalObjectForKey:(id)key</Declaration>
+			<Declaration>- (nullable id)internalObjectForKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>
@@ -68,7 +68,7 @@ in the cache.</Abstract>
 given key.</Abstract>
 			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (void)internalSetObject:(id)obj forKey:(id)key</Declaration>
+			<Declaration>- (void)internalSetObject:(nonnull id)obj forKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>obj</Name>
@@ -89,7 +89,7 @@ given key.</Abstract>
 key.</Abstract>
 			<DeclaredIn>MBThreadsafeCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (void)internalRemoveObjectForKey:(id)key</Declaration>
+			<Declaration>- (void)internalRemoveObjectForKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>

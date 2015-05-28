@@ -19,7 +19,7 @@ measurement tasks.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -44,7 +44,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -72,7 +72,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxSize:(CGSize)maxSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -97,7 +97,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth fractional:(BOOL)allowFractionalSize</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth fractional:(BOOL)allowFractionalSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -126,7 +126,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight fractional:(BOOL)allowFractionalSize</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight fractional:(BOOL)allowFractionalSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -158,7 +158,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize fractional:(BOOL)allowFractionalSize</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxSize:(CGSize)maxSize fractional:(BOOL)allowFractionalSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -187,7 +187,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth lineBreakMode:(NSLineBreakMode)lineMode</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth lineBreakMode:(NSLineBreakMode)lineMode</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -215,7 +215,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight lineBreakMode:(NSLineBreakMode)lineMode</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight lineBreakMode:(NSLineBreakMode)lineMode</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -246,7 +246,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize lineBreakMode:(NSLineBreakMode)lineMode</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxSize:(CGSize)maxSize lineBreakMode:(NSLineBreakMode)lineMode</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -274,7 +274,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth lineBreakMode:(NSLineBreakMode)lineMode fractional:(BOOL)allowFractionalSize</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth lineBreakMode:(NSLineBreakMode)lineMode fractional:(BOOL)allowFractionalSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -306,7 +306,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight lineBreakMode:(NSLineBreakMode)lineMode fractional:(BOOL)allowFractionalSize</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight lineBreakMode:(NSLineBreakMode)lineMode fractional:(BOOL)allowFractionalSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -341,7 +341,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize lineBreakMode:(NSLineBreakMode)lineMode fractional:(BOOL)allowFractionalSize</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxSize:(CGSize)maxSize lineBreakMode:(NSLineBreakMode)lineMode fractional:(BOOL)allowFractionalSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -373,7 +373,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth paragraphStyle:(NSParagraphStyle *)style</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth paragraphStyle:(nonnull NSParagraphStyle *)style</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -401,7 +401,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight paragraphStyle:(NSParagraphStyle *)style</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight paragraphStyle:(nonnull NSParagraphStyle *)style</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -432,7 +432,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize paragraphStyle:(NSParagraphStyle *)style</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxSize:(CGSize)maxSize paragraphStyle:(nonnull NSParagraphStyle *)style</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -460,7 +460,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth paragraphStyle:(NSParagraphStyle *)style fractional:(BOOL)allowFractionalSize</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth paragraphStyle:(nonnull NSParagraphStyle *)style fractional:(BOOL)allowFractionalSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -492,7 +492,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight paragraphStyle:(NSParagraphStyle *)style fractional:(BOOL)allowFractionalSize</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxWidth:(CGFloat)maxWidth maxHeight:(CGFloat)maxHeight paragraphStyle:(nonnull NSParagraphStyle *)style fractional:(BOOL)allowFractionalSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>
@@ -527,7 +527,7 @@ string in the font represented by the receiver.</Abstract>
 string in the font represented by the receiver.</Abstract>
 			<DeclaredIn>UIFont+MBStringSizing.h</DeclaredIn>
 			
-			<Declaration>- (CGSize)sizeString:(NSString *)str maxSize:(CGSize)maxSize paragraphStyle:(NSParagraphStyle *)style fractional:(BOOL)allowFractionalSize</Declaration>
+			<Declaration>- (CGSize)sizeString:(nonnull NSString *)str maxSize:(CGSize)maxSize paragraphStyle:(nonnull NSParagraphStyle *)style fractional:(BOOL)allowFractionalSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>str</Name>

@@ -29,7 +29,7 @@
  
  @param     event The name of the event to post.
  */
-+ (void) postEvent:(NSString*)event;
++ (void) postEvent:(nonnull NSString*)event;
 
 /*!
  Posts a notification event by constructing the event name
@@ -39,7 +39,7 @@
  
  @param     suffix The suffix of the event name to post.
  */
-+ (void) postEvent:(NSString*)event withSuffix:(NSString*)suffix;
++ (void) postEvent:(nonnull NSString*)event withSuffix:(nullable NSString*)suffix;
 
 /*!
  Posts a notification event containing the given object parameter.
@@ -50,7 +50,7 @@
             available in the `object` property of the `NSNotification`
             created for the event.
  */
-+ (void) postEvent:(NSString*)event withObject:(id)obj;
++ (void) postEvent:(nonnull NSString*)event withObject:(nullable id)obj;
 
 /*!
  Posts a notification event containing the given userInfo parameter.
@@ -61,7 +61,7 @@
             value will be available in the `userInfo` property of the
             `NSNotification` created for the event.
  */
-+ (void) postEvent:(NSString*)event withUserInfo:(NSDictionary*)userInfo;
++ (void) postEvent:(nonnull NSString*)event withUserInfo:(nullable NSDictionary*)userInfo;
 
 /*!
  Posts a notification event along with the object instance sending the event.
@@ -71,7 +71,7 @@
  @param     sender The sender of the event. This object will be available in
             the `object` property of the `NSNotification` created for the event.
  */
-+ (void) postEvent:(NSString*)event fromSender:(id)sender;
++ (void) postEvent:(nonnull NSString*)event fromSender:(nullable id)sender;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Constructing event-related names
@@ -95,7 +95,7 @@
  other objects) at runtime. These methods return construct and return event
  names.
  */
-+ (NSString*) name:(NSString*)name withSuffix:(NSString*)suffix;
++ (nullable NSString*) name:(nullable NSString*)name withSuffix:(nullable NSString*)suffix;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Posting memory warnings

@@ -37,12 +37,12 @@
 #pragma mark Memory management
 /******************************************************************************/
 
-+ (id) valueForClass:(Class)cls
++ (nullable id) valueForClass:(nonnull Class)cls
 {
     return [self valueForClass:cls withKey:nil];
 }
 
-+ (id) valueForClass:(Class)cls withKey:(NSString*)key
++ (nullable id) valueForClass:(nonnull Class)cls withKey:(nullable NSString*)key
 {
     debugTrace();
     
@@ -51,12 +51,12 @@
     return [[NSThread currentThread] threadDictionary][storageKey];
 }
 
-+ (void) setValue:(id)val forClass:(Class)cls
++ (void) setValue:(nullable id)val forClass:(nonnull Class)cls
 {
     return [self setValue:val forClass:cls withKey:nil];
 }
 
-+ (void) setValue:(id)val forClass:(Class)cls withKey:(NSString*)key
++ (void) setValue:(nullable id)val forClass:(nonnull Class)cls withKey:(nullable NSString*)key
 {
     debugTrace();
     
@@ -71,12 +71,15 @@
     }
 }
 
-+ (id) cachedValueForClass:(Class)cls usingInstantiator:(id (^)())instantiator
++ (nonnull id) cachedValueForClass:(nonnull Class)cls
+                 usingInstantiator:(__nonnull id (^ __nonnull)())instantiator
 {
     return [self cachedValueForClass:cls withKey:nil usingInstantiator:instantiator];
 }
 
-+ (id) cachedValueForClass:(Class)cls withKey:(NSString*)key usingInstantiator:(id (^)())instantiator
++ (nonnull id) cachedValueForClass:(nonnull Class)cls
+                           withKey:(nullable NSString*)key
+                 usingInstantiator:(__nonnull id (^ __nonnull)())instantiator
 {
     debugTrace();
     

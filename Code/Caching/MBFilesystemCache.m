@@ -40,11 +40,11 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
     UIBackgroundTaskIdentifier _taskID;
 }
 
-@property(nonatomic, strong) NSString* cacheDir;
+@property(nonnull, nonatomic, strong) NSString* cacheDir;
 @property(nonatomic, assign) NSTimeInterval maxAge;
 
-+ (MBCachePruneOperation*) operationForCacheDirectory:(NSString*)cacheDir
-                                               maxAge:(NSTimeInterval)ageInSeconds;
++ (nonnull MBCachePruneOperation*) operationForCacheDirectory:(nonnull NSString*)cacheDir
+                                                       maxAge:(NSTimeInterval)ageInSeconds;
 
 @end
 
@@ -105,15 +105,12 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 #pragma mark MBFilesystemCacheDelegate implementation
 /******************************************************************************/
  
-- (NSString*) filenameForCacheKey:(id)key
+- (nonnull NSString*) filenameForCacheKey:(nonnull id)key
 {
-    if (key) {
-        NSString* md5 = [[key description] MD5];
-        return [NSString stringWithFormat:@"%@.%@", md5, [self fileExtensionForCacheKey:key]];
-    }
-    return nil;
+    NSString* md5 = [[key description] MD5];
+    return [NSString stringWithFormat:@"%@.%@", md5, [self fileExtensionForCacheKey:key]];
 }
-            
+
 /******************************************************************************/
 #pragma mark File handling
 /******************************************************************************/
@@ -297,7 +294,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 #pragma mark Converting cache objects to/from NSData
 /******************************************************************************/
 
-- (NSData*) cacheDataFromObject:(id)cacheObj
+- (nullable NSData*) cacheDataFromObject:(nonnull id)cacheObj
 {
     NSData* cacheData = nil;
     if ([_cacheDelegate respondsToSelector:kCacheDelegateSelectorCacheDataFromObject]) {
@@ -311,7 +308,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
     return cacheData;
 }
 
-- (id) objectFromCacheData:(NSData*)cacheData
+- (nullable id) objectFromCacheData:(nonnull NSData*)cacheData
 {
     if ([_cacheDelegate respondsToSelector:kCacheDelegateSelectorObjectFromCacheData]) {
         return [_cacheDelegate objectFromCacheData:cacheData];

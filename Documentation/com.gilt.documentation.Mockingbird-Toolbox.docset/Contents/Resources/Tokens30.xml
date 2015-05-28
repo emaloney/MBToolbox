@@ -19,7 +19,7 @@ NSString and NSData instances.</Abstract>
 a hexadecimal-encoded byte array.</Abstract>
 			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>+ (NSData *)dataWithHexString:(NSString *)hexString</Declaration>
+			<Declaration>+ (nullable NSData *)dataWithHexString:(nonnull NSString *)hexString</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>hexString</Name>
@@ -39,7 +39,7 @@ a hexadecimal-encoded byte array.</Abstract>
 contained in the receiver.</Abstract>
 			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)hexString</Declaration>
+			<Declaration>- (nonnull NSString *)hexString</Declaration>
 			
 			<ReturnValue><Abstract type="html">A hex string.</Abstract></ReturnValue>
 			<Anchor>//api/name/hexString</Anchor>
@@ -51,7 +51,7 @@ contained in the receiver.</Abstract>
 			<Abstract type="html">Interprets the receiver as a byte-encoded string using the given encoding.</Abstract>
 			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)toStringUsingEncoding:(NSStringEncoding)encoding</Declaration>
+			<Declaration>- (nullable NSString *)toStringUsingEncoding:(NSStringEncoding)encoding</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>encoding</Name>
@@ -60,7 +60,8 @@ contained in the receiver.</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">An NSString containing the receiver&apos;s bytes interpreted
-            in ASCII format.</Abstract></ReturnValue>
+            as the specified encoding, or nil if the receiver could
+            not be interpreted using that encoding.</Abstract></ReturnValue>
 			<Anchor>//api/name/toStringUsingEncoding:</Anchor>
             <NodeRef refid="30"/>
 		</Token>
@@ -70,7 +71,7 @@ contained in the receiver.</Abstract>
 			<Abstract type="html">Interprets the receiver as a byte-encoded ASCII string.</Abstract>
 			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)toStringASCII</Declaration>
+			<Declaration>- (nullable NSString *)toStringASCII</Declaration>
 			
 			<ReturnValue><Abstract type="html">An NSString containing the receiver&apos;s bytes interpreted
             in ASCII format.</Abstract></ReturnValue>
@@ -83,7 +84,7 @@ contained in the receiver.</Abstract>
 			<Abstract type="html">Interprets the receiver as a byte-encoded UTF-8 string.</Abstract>
 			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)toStringUTF8</Declaration>
+			<Declaration>- (nullable NSString *)toStringUTF8</Declaration>
 			
 			<ReturnValue><Abstract type="html">An NSString containing the receiver&apos;s bytes interpreted
             in UTF-8 format.</Abstract></ReturnValue>
@@ -96,7 +97,7 @@ contained in the receiver.</Abstract>
 			<Abstract type="html">An alias for the toStringUTF8 method.</Abstract>
 			<DeclaredIn>NSData+MBStringConversion.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)toString</Declaration>
+			<Declaration>- (nullable NSString *)toString</Declaration>
 			
 			<ReturnValue><Abstract type="html">An NSString containing the receiver&apos;s bytes interpreted
             in UTF-8 format.</Abstract></ReturnValue>

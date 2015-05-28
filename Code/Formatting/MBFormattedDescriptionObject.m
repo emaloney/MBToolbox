@@ -18,16 +18,16 @@
 
 @implementation MBFormattedDescriptionObject
 
-- (void) addDescriptionFieldsTo:(MBFieldListFormatter*)fmt
+- (void) addDescriptionFieldsTo:(nonnull MBFieldListFormatter*)fmt
 {
 }
 
-- (NSString*) debugDescriptor
+- (nullable NSString*) debugDescriptor
 {
     return nil;
 }
 
-- (NSString*) consoleDescription
+- (nonnull NSString*) consoleDescription
 {
     MBFieldListFormatter* fmt = [MBFieldListFormatter formatterForObject:self];
     [fmt setField:@"debugDescriptor" value:[self debugDescriptor]];
@@ -40,7 +40,7 @@
     consoleLog(@"%@", [self consoleDescription]);
 }
 
-- (NSString*) description
+- (nonnull NSString*) description
 {
     return [self consoleDescription];
 }

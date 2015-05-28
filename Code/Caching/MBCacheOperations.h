@@ -74,9 +74,9 @@
 
  @return    The newly-created `MBFileWriteOperation` instance.
  */
-+ (MBCacheWriteOperation*) operationForWritingObject:(id)obj
-                                              toFile:(NSString*)path
-                                            forCache:(MBFilesystemCache*)fc;    
++ (nonnull instancetype) operationForWritingObject:(nonnull id)obj
+                                            toFile:(nonnull NSString*)path
+                                          forCache:(nonnull MBFilesystemCache*)fc;
 
 /*!
  Initializes the receiver so it can be used to write to the specified file.
@@ -91,9 +91,9 @@
 
  @return    The receiver.
  */
-- (instancetype) initWithObject:(id)obj
-                        inCache:(MBFilesystemCache*)fc
-                    forFilePath:(NSString*)path;
+- (nonnull instancetype) initWithObject:(nonnull id)obj
+                                inCache:(nonnull MBFilesystemCache*)fc
+                            forFilePath:(nonnull NSString*)path;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting information about the operation
@@ -102,10 +102,10 @@
 
 /*! Returns the cache object to be written to the filesystem by this 
     operation. */
-@property(nonatomic, readonly) id cacheObject;
+@property(nonnull, nonatomic, readonly) id cacheObject;
 
 /*! Returns the `MBFilesystemCache` instance responsible for managing the
     cache object associated with this operation. */
-@property(nonatomic, readonly) MBFilesystemCache* cache;
+@property(nonnull, nonatomic, readonly) MBFilesystemCache* cache;
 
 @end

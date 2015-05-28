@@ -15,14 +15,14 @@
 // NSNotificationCenter events fired upon network status changes
 // note that the MBNetworkMonitor service must be running for these
 // events to be fired.
-extern NSString* const kMBNetworkDidGoOnlineEvent;                  //!< @"MBNetwork:didGoOnline"
-extern NSString* const kMBNetworkDidGoOfflineEvent;                 //!< @"MBNetwork:didGoOffline"
-extern NSString* const kMBNetworkWifiConnectedEvent;                //!< @"MBNetwork:wifiConnected"
-extern NSString* const kMBNetworkWifiDisconnectedEvent;             //!< @"MBNetwork:wifiDisconnected"
-extern NSString* const kMBNetworkCarrierConnectionChangedEvent;     //!< @"MBNetwork:carrierConnectionChanged"
+extern NSString* const __nonnull kMBNetworkDidGoOnlineEvent;                  //!< @"MBNetwork:didGoOnline"
+extern NSString* const __nonnull kMBNetworkDidGoOfflineEvent;                 //!< @"MBNetwork:didGoOffline"
+extern NSString* const __nonnull kMBNetworkWifiConnectedEvent;                //!< @"MBNetwork:wifiConnected"
+extern NSString* const __nonnull kMBNetworkWifiDisconnectedEvent;             //!< @"MBNetwork:wifiDisconnected"
+extern NSString* const __nonnull kMBNetworkCarrierConnectionChangedEvent;     //!< @"MBNetwork:carrierConnectionChanged"
 
 // the string returned by the carrierStatusDescription property when the device has no carrier
-extern NSString* const kMBNetworkNoCarrierStatusDescription;        //!< @"no carrier"
+extern NSString* const __nonnull kMBNetworkNoCarrierStatusDescription;        //!< @"no carrier"
 
 /******************************************************************************/
 #pragma mark Types
@@ -108,21 +108,21 @@ typedef NS_OPTIONS(NSUInteger, MBNetworkAvailabilityFlags) {
 
 /*! Returns the name of the cellular carrier currently associated with the
     device. */
-@property(nonatomic, readonly) NSString* cellularCarrierName;
+@property(nullable, nonatomic, readonly) NSString* cellularCarrierName;
 
 /*! Returns the ISO country code of the cellular carrier currently associated
     with the device. */
-@property(nonatomic, readonly) NSString* cellularCarrierCountry;
+@property(nullable, nonatomic, readonly) NSString* cellularCarrierCountry;
 
 /*! Returns a string identifying the type of cellular connection currently in 
     use by the device. */
-@property(nonatomic, readonly) NSString* cellularConnectionType;
+@property(nullable, nonatomic, readonly) NSString* cellularConnectionType;
 
 /*! Returns a human-readable string describing the current state of the
     cellular carrier connection. Returns the constant
     `kMBNetworkNoCarrierStatusDescription` when the `hasCellularCarrier`
     property would return `NO`. */
-@property(nonatomic, readonly) NSString* carrierStatusDescription;
+@property(nonnull, nonatomic, readonly) NSString* carrierStatusDescription;
 
 /*! Indicates the current status of network availability by querying
     `SCNetworkReachabilityGetFlags` directly. Not very processor-efficient for
@@ -132,10 +132,10 @@ typedef NS_OPTIONS(NSUInteger, MBNetworkAvailabilityFlags) {
 
 /*! Returns a string describing the current `networkAvailability` property in
     human-readable form. */
-@property(nonatomic, readonly) NSString* networkAvailabilityDescription;
+@property(nonnull, nonatomic, readonly) NSString* networkAvailabilityDescription;
 
 /*! Returns the `SCNetworkReachabilityFlags` in a human-readable string form.
     Intended for use with debugging possible connectivity problems. */
-@property(nonatomic, readonly) NSString* reachabilityFlagsDescription;
+@property(nullable, nonatomic, readonly) NSString* reachabilityFlagsDescription;
 
 @end

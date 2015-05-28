@@ -30,13 +30,13 @@
 #pragma mark Object lifecycle
 /******************************************************************************/
 
-- (instancetype) init
+- (nonnull instancetype) init
 {
     return [self initWithExceptionProtection:NO ignoreMemoryWarnings:NO];
 }
 
-- (instancetype) initWithExceptionProtection:(BOOL)protect
-                        ignoreMemoryWarnings:(BOOL)ignore
+- (nonnull instancetype) initWithExceptionProtection:(BOOL)protect
+                                ignoreMemoryWarnings:(BOOL)ignore;
 {
     self = [super init];
     if (self) {
@@ -267,7 +267,7 @@
     }
 }
 
-- (BOOL) isKeyInCache:(id)key
+- (BOOL) isKeyInCache:(nonnull id)key
 {
     debugTrace();
     
@@ -279,7 +279,7 @@
     }
 }
 
-- (id) objectForKey:(id)key
+- (nullable id) objectForKey:(nonnull id)key
 {
 	debugTrace();
 
@@ -291,7 +291,7 @@
     }
 }
 
-- (void) setObject:(id)obj forKey:(id)key
+- (void) setObject:(nonnull id)obj forKey:(nonnull id)key
 {
 	debugTrace();
     
@@ -303,7 +303,7 @@
     }
 }
 
-- (void) removeObjectForKey:(id)key
+- (void) removeObjectForKey:(nonnull id)key
 {
 	debugTrace();
 
@@ -319,12 +319,12 @@
 #pragma mark Keyed subscripting support
 /******************************************************************************/
 
-- (id) objectForKeyedSubscript:(id)key
+- (nullable id) objectForKeyedSubscript:(nonnull id)key
 {
     return [self objectForKey:key];
 }
 
-- (void) setObject:(id)obj forKeyedSubscript:(id)key
+- (void) setObject:(nonnull id)obj forKeyedSubscript:(nonnull id)key
 {
     [self setObject:obj forKey:key];
 }

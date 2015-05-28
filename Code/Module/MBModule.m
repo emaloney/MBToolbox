@@ -49,7 +49,7 @@ MBImplementSingleton();
     return name;
 }
 
-+ (NSBundle*) resourceBundle
++ (nullable NSBundle*) resourceBundle
 {
     NSBundle* containingBundle = [NSBundle bundleForClass:self];
     NSString* moduleBundlePath = [containingBundle pathForResource:[self moduleName] ofType:@"bundle"];
@@ -60,12 +60,12 @@ MBImplementSingleton();
 #pragma mark Accessing the module log
 /******************************************************************************/
 
-+ (MBModuleLog*) log
++ (nonnull MBModuleLog*) log
 {
     return [[[self class] instance] log];
 }
 
-- (MBModuleLog*) log
+- (nonnull MBModuleLog*) log
 {
     return _log;
 }

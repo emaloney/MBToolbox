@@ -20,7 +20,7 @@ console log output.</Abstract>
 MBFieldListFormatter instance.</Abstract>
 			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>- (void)addDescriptionFieldsTo:(MBFieldListFormatter *)fmt</Declaration>
+			<Declaration>- (void)addDescriptionFieldsTo:(nonnull MBFieldListFormatter *)fmt</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fmt</Name>
@@ -38,7 +38,7 @@ MBFieldListFormatter instance.</Abstract>
 identifying an object instance within the debug console.</Abstract>
 			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)debugDescriptor</Declaration>
+			<Declaration>- (nullable NSString *)debugDescriptor</Declaration>
 			
 			<ReturnValue><Abstract type="html">If a non-nil value is returned by this method, a field named
             &quot;debugDescriptor&quot; will be added to the consoleDescription.</Abstract></ReturnValue>
@@ -53,7 +53,7 @@ addDescriptionFieldsTo: method to construct a description of the
 receiver intended for output to the console.</Abstract>
 			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)consoleDescription</Declaration>
+			<Declaration>- (nonnull NSString *)consoleDescription</Declaration>
 			
 			<ReturnValue><Abstract type="html">The console description.</Abstract></ReturnValue>
 			<Anchor>//api/name/consoleDescription</Anchor>
@@ -79,7 +79,7 @@ log.</Abstract>
 consoleDescription.</Abstract>
 			<DeclaredIn>MBFormattedDescriptionObject.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)description</Declaration>
+			<Declaration>- (nonnull NSString *)description</Declaration>
 			
 			<ReturnValue><Abstract type="html">The return value of calling the consoleDescription</Abstract></ReturnValue>
 			<Anchor>//api/name/description</Anchor>

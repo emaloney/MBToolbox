@@ -22,7 +22,7 @@
 #pragma mark Scaling images to specific sizes
 /******************************************************************************/
 
-- (UIImage*) imageScaledToSize:(CGSize)newSize quality:(CGInterpolationQuality)quality
+- (nonnull UIImage*) imageScaledToSize:(CGSize)newSize quality:(CGInterpolationQuality)quality
 {
     debugTrace();
     
@@ -40,7 +40,7 @@
     return newImage;
 }
 
-- (UIImage*) imageScaledToSize:(CGSize)newSize
+- (nonnull UIImage*) imageScaledToSize:(CGSize)newSize
 {
     debugTrace();
 
@@ -51,7 +51,7 @@
 #pragma mark Scaling images by a percentage of the original
 /******************************************************************************/
 
-- (UIImage*) imageScaledByFactor:(CGFloat)scale quality:(CGInterpolationQuality)quality
+- (nonnull UIImage*) imageScaledByFactor:(CGFloat)scale quality:(CGInterpolationQuality)quality
 {
     debugTrace();
     
@@ -65,7 +65,7 @@
                            quality:quality];
 }
 
-- (UIImage*) imageScaledByFactor:(CGFloat)scale
+- (nonnull UIImage*) imageScaledByFactor:(CGFloat)scale
 {
     debugTrace();
 

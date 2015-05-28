@@ -34,7 +34,7 @@
  @return    An `NSData` instance, or `nil` if `hexString` could not be
             intepreted as hexadecimal.
  */
-+ (NSData*) dataWithHexString:(NSString*)hexString;
++ (nullable NSData*) dataWithHexString:(nonnull NSString*)hexString;
 
 /*!
  Returns a string containing a hexadecimal representation of the bytes
@@ -42,7 +42,7 @@
  
  @return    A hex string.
  */
-- (NSString*) hexString;
+- (nonnull NSString*) hexString;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Interpreting bytes as strings
@@ -56,9 +56,10 @@
             receiver.
 
  @return    An `NSString` containing the receiver's bytes interpreted
-            in ASCII format.
+            as the specified encoding, or `nil` if the receiver could
+            not be interpreted using that encoding.
  */
-- (NSString*) toStringUsingEncoding:(NSStringEncoding)encoding;
+- (nullable NSString*) toStringUsingEncoding:(NSStringEncoding)encoding;
 
 /*!
  Interprets the receiver as a byte-encoded ASCII string.
@@ -66,7 +67,7 @@
  @return    An `NSString` containing the receiver's bytes interpreted
             in ASCII format.
  */
-- (NSString*) toStringASCII;
+- (nullable NSString*) toStringASCII;
 
 /*!
  Interprets the receiver as a byte-encoded UTF-8 string.
@@ -74,7 +75,7 @@
  @return    An `NSString` containing the receiver's bytes interpreted
             in UTF-8 format.
  */
-- (NSString*) toStringUTF8;
+- (nullable NSString*) toStringUTF8;
 
 /*!
  An alias for the `toStringUTF8` method.
@@ -82,6 +83,6 @@
  @return    An `NSString` containing the receiver's bytes interpreted
             in UTF-8 format.
  */
-- (NSString*) toString;
+- (nullable NSString*) toString;
 
 @end

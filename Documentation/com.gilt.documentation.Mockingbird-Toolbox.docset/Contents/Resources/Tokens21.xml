@@ -18,7 +18,7 @@ operation queues used within Mockingbird.</Abstract>
 			<Abstract type="html">Initializes the queue.</Abstract>
 			<DeclaredIn>MBOperationQueue.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)init</Declaration>
+			<Declaration>- (nonnull instancetype)init</Declaration>
 			
 			<ReturnValue><Abstract type="html">self</Abstract></ReturnValue>
 			<Anchor>//api/name/init</Anchor>
@@ -30,7 +30,7 @@ operation queues used within Mockingbird.</Abstract>
 			<Abstract type="html">Initializes the queue.</Abstract>
 			<DeclaredIn>MBOperationQueue.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithMaxConcurrentOperationCount:(NSInteger)cnt</Declaration>
+			<Declaration>- (nonnull instancetype)initWithMaxConcurrentOperationCount:(NSInteger)cnt</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cnt</Name>

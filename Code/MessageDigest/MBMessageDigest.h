@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSError+MBToolbox.h"
 
 /******************************************************************************/
 #pragma mark -
@@ -36,7 +37,7 @@
  
  @return    the MD5 hash, as binary NSData
  */
-+ (NSData*) MD5DataForString:(NSString*)src;
++ (nonnull NSData*) MD5DataForString:(nonnull NSString*)src;
 
 /*!
  Computes an MD5 hash given an input string.
@@ -45,7 +46,7 @@
  
  @return    the MD5 hash, as a lowercase hexadecimal string
  */
-+ (NSString*) MD5ForString:(NSString*)src;
++ (nonnull NSString*) MD5ForString:(nonnull NSString*)src;
 
 /*!
  Computes an MD5 hash from an `NSData` instance.
@@ -54,7 +55,7 @@
  
  @return    the MD5 hash, as a lowercase hexadecimal string
  */
-+ (NSString*) MD5ForData:(NSData*)src;
++ (nonnull NSString*) MD5ForData:(nonnull NSData*)src;
 
 /*!
  Computes an MD5 hash from an array of bytes.
@@ -65,7 +66,7 @@
  
  @return    the MD5 hash, as a lowercase hexadecimal string
  */
-+ (NSString*) MD5ForBytes:(const void*)bytes length:(size_t)len;
++ (nonnull NSString*) MD5ForBytes:(nonnull const void*)bytes length:(size_t)len;
 
 /*!
  Computes an MD5 hash for the contents of a file.
@@ -81,7 +82,7 @@
             occurs while attempting to read the file, `nil`
             is returned
  */
-+ (NSString*) MD5ForFileAtPath:(NSString*)path error:(inout NSError**)errPtr;
++ (nullable NSString*) MD5ForFileAtPath:(nonnull NSString*)path error:(NSErrorPtrPtr)errPtr;
 
 /*!
  Computes an MD5 hash for the contents of a file.
@@ -93,7 +94,7 @@
             occurs while attempting to read the file, `nil`
             is returned
  */
-+ (NSString*) MD5ForFileAtPath:(NSString*)path;
++ (nullable NSString*) MD5ForFileAtPath:(nonnull NSString*)path;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Creating SHA-1 message digests
@@ -107,7 +108,7 @@
  
  @return    the SHA-1 hash, as binary NSData
  */
-+ (NSData*) SHA1DataForString:(NSString*)src;
++ (nonnull NSData*) SHA1DataForString:(nonnull NSString*)src;
 
 /*!
  Computes an SHA-1 hash given an input string.
@@ -116,7 +117,7 @@
  
  @return    the SHA-1 hash, as a lowercase hexadecimal string
  */
-+ (NSString*) SHA1ForString:(NSString*)src;
++ (nonnull NSString*) SHA1ForString:(nonnull NSString*)src;
 
 /*!
  Computes an SHA-1 hash from an `NSData` instance.
@@ -125,7 +126,7 @@
  
  @return    the SHA-1 hash, as a lowercase hexadecimal string
  */
-+ (NSString*) SHA1ForData:(NSData*)src;
++ (nonnull NSString*) SHA1ForData:(nonnull NSData*)src;
 
 /*!
  Computes an SHA-1 hash from an array of bytes.
@@ -136,7 +137,7 @@
  
  @return    the SHA-1 hash, as a lowercase hexadecimal string
  */
-+ (NSString*) SHA1ForBytes:(const void*)bytes length:(size_t)len;
++ (nonnull NSString*) SHA1ForBytes:(nonnull const void*)bytes length:(size_t)len;
 
 /*!
  Computes an SHA-1 hash for the contents of a file.
@@ -152,7 +153,7 @@
             occurs while attempting to read the file, `nil`
             is returned
  */
-+ (NSString*) SHA1ForFileAtPath:(NSString*)path error:(inout NSError**)errPtr;
++ (nullable NSString*) SHA1ForFileAtPath:(nonnull NSString*)path error:(NSErrorPtrPtr)errPtr;
 
 /*!
  Computes an SHA-1 hash for the contents of a file.
@@ -164,6 +165,6 @@
             occurs while attempting to read the file, `nil`
             is returned
  */
-+ (NSString*) SHA1ForFileAtPath:(NSString*)path;
++ (nullable NSString*) SHA1ForFileAtPath:(nonnull NSString*)path;
 
 @end

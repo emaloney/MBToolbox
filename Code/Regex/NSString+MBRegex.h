@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSError+MBToolbox.h"
 
 /******************************************************************************/
 #pragma mark -
@@ -44,8 +45,8 @@
  
  @return    The number of matches performed.
  */
-- (NSUInteger) replaceRegexMatches:(NSString*)pattern
-                      withTemplate:(NSString*)templ;
+- (NSUInteger) replaceRegexMatches:(nonnull NSString*)pattern
+                      withTemplate:(nonnull NSString*)templ;
 
 /*!
  Performs a regular expression string replacement on the receiver.
@@ -64,8 +65,8 @@
 
  @return    The number of matches performed.
  */
-- (NSUInteger) replaceRegexMatches:(NSString*)pattern
-                      withTemplate:(NSString*)templ
+- (NSUInteger) replaceRegexMatches:(nonnull NSString*)pattern
+                      withTemplate:(nonnull NSString*)templ
                            options:(NSRegularExpressionOptions)options;
 
 /*!
@@ -90,8 +91,8 @@
 
  @return    The number of matches performed.
  */
-- (NSUInteger) replaceRegexMatches:(NSString*)pattern
-                      withTemplate:(NSString*)templ
+- (NSUInteger) replaceRegexMatches:(nonnull NSString*)pattern
+                      withTemplate:(nonnull NSString*)templ
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range;
 
@@ -121,11 +122,11 @@
 
  @return    The number of matches performed.
  */
-- (NSUInteger) replaceRegexMatches:(NSString*)pattern
-                      withTemplate:(NSString*)templ
+- (NSUInteger) replaceRegexMatches:(nonnull NSString*)pattern
+                      withTemplate:(nonnull NSString*)templ
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
-                             error:(inout NSError**)errPtr;
+                             error:(NSErrorPtrPtr)errPtr;
 @end
 
 /******************************************************************************/
@@ -157,7 +158,7 @@
  @return    The regular expression, or `nil` if the receiver could not be
             interpreted as a valid regular expression.
  */
-- (NSRegularExpression*) regularExpression;
+- (nullable NSRegularExpression*) regularExpression;
 
 /*!
  Returns an `NSRegularExpression` instance by treating the receiver as a
@@ -169,7 +170,7 @@
  @return    The regular expression, or `nil` if the receiver could not be
             interpreted as a valid regular expression.
  */
-- (NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options;
+- (nullable NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options;
 
 /*!
  Returns an `NSRegularExpression` instance by treating the receiver as a
@@ -185,8 +186,8 @@
  @return    The regular expression, or `nil` if the receiver could not be
             interpreted as a valid regular expression.
  */
-- (NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options
-                                                error:(inout NSError**)errPtr;
+- (nullable NSRegularExpression*) regularExpressionWithOptions:(NSRegularExpressionOptions)options
+                                                         error:(NSErrorPtrPtr)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Escaping
@@ -201,7 +202,7 @@
  
  @return    The escaped pattern string.
  */
-- (NSString*) escapedRegexPattern;
+- (nonnull NSString*) escapedRegexPattern;
 
 /*!
  Creates a new regular expression template string by escaping metacharacters
@@ -211,7 +212,7 @@
  
  @return    The escaped template string.
  */
-- (NSString*) escapedRegexTemplate;
+- (nonnull NSString*) escapedRegexTemplate;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Finding all pattern matches
@@ -224,9 +225,10 @@
  @param     pattern The regular expression pattern to match.
  
  @return    An array of `NSTextCheckingResult` objects representing the regular
-            expression pattern matches found within the receiver.
+            expression pattern matches found within the receiver, or `nil`
+            if an error occurred.
  */
-- (NSArray*) matchesWithRegex:(NSString*)pattern;
+- (nullable NSArray*) matchesWithRegex:(nonnull NSString*)pattern;
 
 /*!
  Matches the specified regular expression against the receiver.
@@ -237,10 +239,11 @@
             will occur.
 
  @return    An array of `NSTextCheckingResult` objects representing the regular
-            expression pattern matches found within the receiver.
+            expression pattern matches found within the receiver, or `nil`
+            if an error occurred.
  */
-- (NSArray*) matchesWithRegex:(NSString*)pattern
-                      options:(NSRegularExpressionOptions)options;
+- (nullable NSArray*) matchesWithRegex:(nonnull NSString*)pattern
+                               options:(NSRegularExpressionOptions)options;
 
 /*!
  Matches the specified regular expression against the receiver.
@@ -254,11 +257,12 @@
             will occur.
 
  @return    An array of `NSTextCheckingResult` objects representing the regular
-            expression pattern matches found within the receiver.
+            expression pattern matches found within the receiver, or `nil`
+            if an error occurred.
  */
-- (NSArray*) matchesWithRegex:(NSString*)pattern
-                      options:(NSRegularExpressionOptions)options
-                        range:(NSRange)range;
+- (nullable NSArray*) matchesWithRegex:(nonnull NSString*)pattern
+                               options:(NSRegularExpressionOptions)options
+                                 range:(NSRange)range;
 
 /*!
  Matches the specified regular expression against the receiver.
@@ -276,12 +280,13 @@
             will be updated to point to an `NSError` describing the problem.
 
  @return    An array of `NSTextCheckingResult` objects representing the regular
-            expression pattern matches found within the receiver.
+            expression pattern matches found within the receiver, or `nil`
+            if an error occurred.
  */
-- (NSArray*) matchesWithRegex:(NSString*)pattern
-                      options:(NSRegularExpressionOptions)options
-                        range:(NSRange)range
-                        error:(inout NSError**)errPtr;
+- (nullable NSArray*) matchesWithRegex:(nonnull NSString*)pattern
+                               options:(NSRegularExpressionOptions)options
+                                 range:(NSRange)range
+                                 error:(NSErrorPtrPtr)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Testing for pattern matches
@@ -297,7 +302,7 @@
  @return    `YES` if the receiver contained at least one match of `pattern`;
             `NO` if there were no matches.
  */
-- (BOOL) isMatchedByRegex:(NSString*)pattern;
+- (BOOL) isMatchedByRegex:(nonnull NSString*)pattern;
 
 /*!
  Determines if the receiver contains at least one match of the given
@@ -311,7 +316,7 @@
  @return    `YES` if the receiver contained at least one match of `pattern`;
             `NO` if there were no matches.
  */
-- (BOOL) isMatchedByRegex:(NSString*)pattern
+- (BOOL) isMatchedByRegex:(nonnull NSString*)pattern
                   options:(NSRegularExpressionOptions)options;
 
 /*!
@@ -329,7 +334,7 @@
  @return    `YES` if the receiver contained at least one match of `pattern`;
             `NO` if there were no matches.
  */
-- (BOOL) isMatchedByRegex:(NSString*)pattern
+- (BOOL) isMatchedByRegex:(nonnull NSString*)pattern
                   options:(NSRegularExpressionOptions)options
                     range:(NSRange)range;
 
@@ -352,10 +357,10 @@
  @return    `YES` if the receiver contained at least one match of `pattern`;
             `NO` if there were no matches.
  */
-- (BOOL) isMatchedByRegex:(NSString*)pattern
+- (BOOL) isMatchedByRegex:(nonnull NSString*)pattern
                   options:(NSRegularExpressionOptions)options
                     range:(NSRange)range
-                    error:(inout NSError**)errPtr;
+                    error:(NSErrorPtrPtr)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Counting pattern matches
@@ -370,7 +375,7 @@
  
  @return    The number of matches.
  */
-- (NSUInteger) numberOfRegexMatches:(NSString*)pattern;
+- (NSUInteger) numberOfRegexMatches:(nonnull NSString*)pattern;
 
 /*!
  Returns the number of matches found in the receiver of the given regular
@@ -383,7 +388,7 @@
 
  @return    The number of matches.
  */
-- (NSUInteger) numberOfRegexMatches:(NSString*)pattern
+- (NSUInteger) numberOfRegexMatches:(nonnull NSString*)pattern
                             options:(NSRegularExpressionOptions)options;
 
 /*!
@@ -400,7 +405,7 @@
 
  @return    The number of matches.
  */
-- (NSUInteger) numberOfRegexMatches:(NSString*)pattern
+- (NSUInteger) numberOfRegexMatches:(nonnull NSString*)pattern
                             options:(NSRegularExpressionOptions)options
                               range:(NSRange)range;
 
@@ -422,10 +427,10 @@
 
  @return    The number of matches.
  */
-- (NSUInteger) numberOfRegexMatches:(NSString*)pattern
+- (NSUInteger) numberOfRegexMatches:(nonnull NSString*)pattern
                             options:(NSRegularExpressionOptions)options
                               range:(NSRange)range
-                              error:(inout NSError**)errPtr;
+                              error:(NSErrorPtrPtr)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Finding the first pattern match
@@ -439,9 +444,9 @@
  @param     pattern The regular expression pattern to match.
  
  @return    An `NSTextCheckingResult` instance containing the results of the
-            match.
+            match, or `nil` if an error occurred.
  */
-- (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern;
+- (nullable NSTextCheckingResult*) firstRegexMatch:(nonnull NSString*)pattern;
 
 /*!
  Returns the first occurrence of the specified regular expression pattern
@@ -453,10 +458,10 @@
             will occur.
 
  @return    An `NSTextCheckingResult` instance containing the results of the
-            match.
+            match, or `nil` if an error occurred.
  */
-- (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern
-                                  options:(NSRegularExpressionOptions)options;
+- (nullable NSTextCheckingResult*) firstRegexMatch:(nonnull NSString*)pattern
+                                           options:(NSRegularExpressionOptions)options;
 
 /*!
  Returns the first occurrence of the specified regular expression pattern
@@ -471,11 +476,11 @@
             will occur.
 
  @return    An `NSTextCheckingResult` instance containing the results of the
-            match.
+            match, or `nil` if an error occurred.
  */
-- (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern
-                                  options:(NSRegularExpressionOptions)options
-                                    range:(NSRange)range;
+- (nullable NSTextCheckingResult*) firstRegexMatch:(nonnull NSString*)pattern
+                                           options:(NSRegularExpressionOptions)options
+                                             range:(NSRange)range;
 
 /*!
  Returns the first occurrence of the specified regular expression pattern
@@ -494,12 +499,12 @@
             will be updated to point to an `NSError` describing the problem.
 
  @return    An `NSTextCheckingResult` instance containing the results of the
-            match.
+            match, or `nil` if an error occurred.
  */
-- (NSTextCheckingResult*) firstRegexMatch:(NSString*)pattern
-                                  options:(NSRegularExpressionOptions)options
-                                    range:(NSRange)range
-                                    error:(inout NSError**)errPtr;
+- (nullable NSTextCheckingResult*) firstRegexMatch:(nonnull NSString*)pattern
+                                           options:(NSRegularExpressionOptions)options
+                                             range:(NSRange)range
+                                             error:(NSErrorPtrPtr)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Getting the range of the first pattern match
@@ -515,7 +520,7 @@
  @return    The range of the first match. Will be {`NSNotFound`, `0`} if there
             is no match.
  */
-- (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern;
+- (NSRange) rangeOfFirstRegexMatch:(nonnull NSString*)pattern;
 
 /*!
  Determines the range of the first match of the given regular expression within
@@ -529,7 +534,7 @@
  @return    The range of the first match. Will be {`NSNotFound`, `0`} if there
             is no match.
  */
-- (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern
+- (NSRange) rangeOfFirstRegexMatch:(nonnull NSString*)pattern
                            options:(NSRegularExpressionOptions)options;
 
 /*!
@@ -547,7 +552,7 @@
  @return    The range of the first match. Will be {`NSNotFound`, `0`} if there
             is no match.
  */
-- (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern
+- (NSRange) rangeOfFirstRegexMatch:(nonnull NSString*)pattern
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range;
 
@@ -570,10 +575,10 @@
  @return    The range of the first match. Will be {`NSNotFound`, `0`} if there
             is no match.
  */
-- (NSRange) rangeOfFirstRegexMatch:(NSString*)pattern
+- (NSRange) rangeOfFirstRegexMatch:(nonnull NSString*)pattern
                            options:(NSRegularExpressionOptions)options
                              range:(NSRange)range
-                             error:(inout NSError**)errPtr;
+                             error:(NSErrorPtrPtr)errPtr;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Creating a new string by replacing pattern matches
@@ -589,10 +594,10 @@
  @param     templ The template to use for replacing the regular expression
             matches.
  
- @return    The resulting string.
+ @return    The resulting string, or `nil` if an error occurred.
  */
-- (NSString*) stringByReplacingRegexMatches:(NSString*)pattern
-                               withTemplate:(NSString*)templ;
+- (nullable NSString*) stringByReplacingRegexMatches:(nonnull NSString*)pattern
+                                        withTemplate:(nonnull NSString*)templ;
 
 /*!
  Returns a new string by replacing each match of the specified regular 
@@ -606,11 +611,11 @@
  @param     options The regular expression options that govern how matching
             will occur.
  
- @return    The resulting string.
+ @return    The resulting string, or `nil` if an error occurred.
  */
-- (NSString*) stringByReplacingRegexMatches:(NSString*)pattern
-                               withTemplate:(NSString*)templ
-                                    options:(NSRegularExpressionOptions)options;
+- (nullable NSString*) stringByReplacingRegexMatches:(nonnull NSString*)pattern
+                                        withTemplate:(nonnull NSString*)templ
+                                             options:(NSRegularExpressionOptions)options;
 
 /*!
  Returns a new string by replacing each match of the specified regular 
@@ -629,12 +634,12 @@
  @param     range The range of characters in the receiver within which matching
             will occur.
 
- @return    The resulting string.
+ @return    The resulting string, or `nil` if an error occurred.
  */
-- (NSString*) stringByReplacingRegexMatches:(NSString*)pattern
-                               withTemplate:(NSString*)templ
-                                    options:(NSRegularExpressionOptions)options
-                                      range:(NSRange)range;
+- (nullable NSString*) stringByReplacingRegexMatches:(nonnull NSString*)pattern
+                                        withTemplate:(nonnull NSString*)templ
+                                             options:(NSRegularExpressionOptions)options
+                                               range:(NSRange)range;
 
 /*!
  Returns a new string by replacing each match of the specified regular 
@@ -657,12 +662,12 @@
             If this parameter is non-`nil` and an error occurs, `*errPtr`
             will be updated to point to an `NSError` describing the problem.
 
- @return    The resulting string.
+ @return    The resulting string, or `nil` if an error occurred.
  */
-- (NSString*) stringByReplacingRegexMatches:(NSString*)pattern
-                               withTemplate:(NSString*)templ
-                                    options:(NSRegularExpressionOptions)options
-                                      range:(NSRange)range
-                                      error:(inout NSError**)errPtr;
+- (nullable NSString*) stringByReplacingRegexMatches:(nonnull NSString*)pattern
+                                        withTemplate:(nonnull NSString*)templ
+                                             options:(NSRegularExpressionOptions)options
+                                               range:(NSRange)range
+                                               error:(NSErrorPtrPtr)errPtr;
 
 @end

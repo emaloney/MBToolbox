@@ -18,7 +18,7 @@ types.</Abstract>
 			<Abstract type="html">Posts a notification event.</Abstract>
 			<DeclaredIn>MBEvents.h</DeclaredIn>
 			
-			<Declaration>+ (void)postEvent:(NSString *)event</Declaration>
+			<Declaration>+ (void)postEvent:(nonnull NSString *)event</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>event</Name>
@@ -36,7 +36,7 @@ types.</Abstract>
 &quot;event:suffix&quot;.</Abstract>
 			<DeclaredIn>MBEvents.h</DeclaredIn>
 			
-			<Declaration>+ (void)postEvent:(NSString *)event withSuffix:(NSString *)suffix</Declaration>
+			<Declaration>+ (void)postEvent:(nonnull NSString *)event withSuffix:(nullable NSString *)suffix</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>event</Name>
@@ -56,7 +56,7 @@ types.</Abstract>
 			<Abstract type="html">Posts a notification event containing the given object parameter.</Abstract>
 			<DeclaredIn>MBEvents.h</DeclaredIn>
 			
-			<Declaration>+ (void)postEvent:(NSString *)event withObject:(id)obj</Declaration>
+			<Declaration>+ (void)postEvent:(nonnull NSString *)event withObject:(nullable id)obj</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>event</Name>
@@ -78,7 +78,7 @@ types.</Abstract>
 			<Abstract type="html">Posts a notification event containing the given userInfo parameter.</Abstract>
 			<DeclaredIn>MBEvents.h</DeclaredIn>
 			
-			<Declaration>+ (void)postEvent:(NSString *)event withUserInfo:(NSDictionary *)userInfo</Declaration>
+			<Declaration>+ (void)postEvent:(nonnull NSString *)event withUserInfo:(nullable NSDictionary *)userInfo</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>event</Name>
@@ -100,7 +100,7 @@ types.</Abstract>
 			<Abstract type="html">Posts a notification event along with the object instance sending the event.</Abstract>
 			<DeclaredIn>MBEvents.h</DeclaredIn>
 			
-			<Declaration>+ (void)postEvent:(NSString *)event fromSender:(id)sender</Declaration>
+			<Declaration>+ (void)postEvent:(nonnull NSString *)event fromSender:(nullable id)sender</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>event</Name>
@@ -121,7 +121,7 @@ types.</Abstract>
 			<Abstract type="html">Constructs a string for an event-related name with the given suffix.</Abstract>
 			<DeclaredIn>MBEvents.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)name:(NSString *)name withSuffix:(NSString *)suffix</Declaration>
+			<Declaration>+ (nullable NSString *)name:(nullable NSString *)name withSuffix:(nullable NSString *)suffix</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>name</Name>

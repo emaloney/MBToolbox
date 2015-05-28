@@ -38,7 +38,7 @@
             height components rounded up to the nearest integer (whole-pixel)
             value.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth;
 
 /*!
@@ -57,7 +57,7 @@
             height components rounded up to the nearest integer (whole-pixel)
             value.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight;
 
@@ -75,7 +75,7 @@
             height components rounded up to the nearest integer (whole-pixel)
             value.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize;
 
 /*----------------------------------------------------------------------------*/
@@ -100,7 +100,7 @@
 
  @return    The size required to draw the text string.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
            fractional:(BOOL)allowFractionalSize;
 
@@ -123,7 +123,7 @@
 
  @return    The size required to draw the text string.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
            fractional:(BOOL)allowFractionalSize;
@@ -145,7 +145,7 @@
 
  @return    The size required to draw the text string.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
            fractional:(BOOL)allowFractionalSize;
 
@@ -170,7 +170,7 @@
             height components rounded up to the nearest integer (whole-pixel)
             value.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
         lineBreakMode:(NSLineBreakMode)lineMode;
 
@@ -192,7 +192,7 @@
             height components rounded up to the nearest integer (whole-pixel)
             value.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
         lineBreakMode:(NSLineBreakMode)lineMode;
@@ -213,7 +213,7 @@
             height components rounded up to the nearest integer (whole-pixel)
             value.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
         lineBreakMode:(NSLineBreakMode)lineMode;
 
@@ -241,7 +241,7 @@
  
  @return    The size required to draw the text string.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
         lineBreakMode:(NSLineBreakMode)lineMode
            fractional:(BOOL)allowFractionalSize;
@@ -267,7 +267,7 @@
  
  @return    The size required to draw the text string.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
         lineBreakMode:(NSLineBreakMode)lineMode
@@ -292,7 +292,7 @@
  
  @return    The size required to draw the text string.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
         lineBreakMode:(NSLineBreakMode)lineMode
            fractional:(BOOL)allowFractionalSize;
@@ -318,9 +318,9 @@
             height components rounded up to the nearest integer (whole-pixel)
             value.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
-       paragraphStyle:(NSParagraphStyle*)style;
+       paragraphStyle:(nonnull NSParagraphStyle*)style;
 
 /*!
  Calculates the size of the bounding rectangle required to draw a given text 
@@ -340,10 +340,10 @@
             height components rounded up to the nearest integer (whole-pixel)
             value.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
-       paragraphStyle:(NSParagraphStyle*)style;
+       paragraphStyle:(nonnull NSParagraphStyle*)style;
 
 /*!
  Calculates the size of the bounding rectangle required to draw a given text 
@@ -361,9 +361,9 @@
             height components rounded up to the nearest integer (whole-pixel)
             value.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
-       paragraphStyle:(NSParagraphStyle*)style;
+       paragraphStyle:(nonnull NSParagraphStyle*)style;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Measuring fractional pixels with a specific paragraph style
@@ -389,9 +389,9 @@
  
  @return    The size required to draw the text string.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
-       paragraphStyle:(NSParagraphStyle*)style
+       paragraphStyle:(nonnull NSParagraphStyle*)style
            fractional:(BOOL)allowFractionalSize;
 
 /*!
@@ -415,10 +415,10 @@
  
  @return    The size required to draw the text string.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
-       paragraphStyle:(NSParagraphStyle*)style
+       paragraphStyle:(nonnull NSParagraphStyle*)style
            fractional:(BOOL)allowFractionalSize;
 
 /*!
@@ -440,9 +440,9 @@
  
  @return    The size required to draw the text string.
  */
-- (CGSize) sizeString:(NSString*)str
+- (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
-       paragraphStyle:(NSParagraphStyle*)style
+       paragraphStyle:(nonnull NSParagraphStyle*)style
            fractional:(BOOL)allowFractionalSize;
 
 @end

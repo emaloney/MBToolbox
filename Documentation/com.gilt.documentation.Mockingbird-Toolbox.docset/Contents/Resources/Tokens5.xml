@@ -19,7 +19,7 @@ for cache objects.</Abstract>
 a cache object to a file.</Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>+ (MBCacheWriteOperation *)operationForWritingObject:(id)obj toFile:(NSString *)path forCache:(MBFilesystemCache *)fc</Declaration>
+			<Declaration>+ (nonnull instancetype)operationForWritingObject:(nonnull id)obj toFile:(nonnull NSString *)path forCache:(nonnull MBFilesystemCache *)fc</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>obj</Name>
@@ -44,7 +44,7 @@ a cache object to a file.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to write to the specified file.</Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithObject:(id)obj inCache:(MBFilesystemCache *)fc forFilePath:(NSString *)path</Declaration>
+			<Declaration>- (nonnull instancetype)initWithObject:(nonnull id)obj inCache:(nonnull MBFilesystemCache *)fc forFilePath:(nonnull NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>obj</Name>
@@ -70,7 +70,7 @@ a cache object to a file.</Abstract>
     operation. </Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) id cacheObject</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) id cacheObject</Declaration>
 			
 			
 			<Anchor>//api/name/cacheObject</Anchor>
@@ -83,7 +83,7 @@ a cache object to a file.</Abstract>
     operation. </Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) id cacheObject</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) id cacheObject</Declaration>
 			
 			
 			<Anchor>//api/name/cacheObject</Anchor>
@@ -96,7 +96,7 @@ a cache object to a file.</Abstract>
     operation. </Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) id cacheObject</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) id cacheObject</Declaration>
 			
 			
 			<Anchor>//api/name/cacheObject</Anchor>
@@ -109,7 +109,7 @@ a cache object to a file.</Abstract>
     cache object associated with this operation. </Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) MBFilesystemCache *cache</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) MBFilesystemCache *cache</Declaration>
 			
 			
 			<Anchor>//api/name/cache</Anchor>
@@ -122,7 +122,7 @@ a cache object to a file.</Abstract>
     cache object associated with this operation. </Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) MBFilesystemCache *cache</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) MBFilesystemCache *cache</Declaration>
 			
 			
 			<Anchor>//api/name/cache</Anchor>
@@ -135,7 +135,7 @@ a cache object to a file.</Abstract>
     cache object associated with this operation. </Abstract>
 			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) MBFilesystemCache *cache</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) MBFilesystemCache *cache</Declaration>
 			
 			
 			<Anchor>//api/name/cache</Anchor>

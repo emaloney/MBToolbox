@@ -80,7 +80,7 @@ MBImplementSingleton();
 #pragma mark Battery state monitoring
 /******************************************************************************/
 
-- (MBBatteryState*) currentBatteryState
+- (nullable MBBatteryState*) currentBatteryState
 {
     UIDevice* device = [UIDevice currentDevice];
     UIDeviceBatteryState batteryState = device.batteryState;

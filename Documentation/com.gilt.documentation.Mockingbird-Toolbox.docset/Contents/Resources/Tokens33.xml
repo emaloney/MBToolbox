@@ -19,7 +19,7 @@ individual lines within a string.</Abstract>
 (0x09) character.</Abstract>
 			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByIndentingEachLineWithTab</Declaration>
+			<Declaration>- (nonnull NSString *)stringByIndentingEachLineWithTab</Declaration>
 			
 			<ReturnValue><Abstract type="html">The indented string.</Abstract></ReturnValue>
 			<Anchor>//api/name/stringByIndentingEachLineWithTab</Anchor>
@@ -32,7 +32,7 @@ individual lines within a string.</Abstract>
 specified number of tab (0x09) characters.</Abstract>
 			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByIndentingEachLineWithTabs:(NSUInteger)numberOfTabs</Declaration>
+			<Declaration>- (nonnull NSString *)stringByIndentingEachLineWithTabs:(NSUInteger)numberOfTabs</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>numberOfTabs</Name>
@@ -51,7 +51,7 @@ specified number of tab (0x09) characters.</Abstract>
 string.</Abstract>
 			<DeclaredIn>NSString+MBIndentation.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)stringByIndentingEachLineWithPrefix:(NSString *)prefix</Declaration>
+			<Declaration>- (nonnull NSString *)stringByIndentingEachLineWithPrefix:(nonnull NSString *)prefix</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>prefix</Name>

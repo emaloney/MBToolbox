@@ -18,7 +18,7 @@ of a view.</Abstract>
 			<Abstract type="html">Returns a UIImage instance containing a rendering of the receiver&apos;s content.</Abstract>
 			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
 			
-			<Declaration>- (UIImage *)snapshotImage</Declaration>
+			<Declaration>- (nonnull UIImage *)snapshotImage</Declaration>
 			
 			<ReturnValue><Abstract type="html">The image.</Abstract></ReturnValue>
 			<Anchor>//api/name/snapshotImage</Anchor>
@@ -31,7 +31,7 @@ of a view.</Abstract>
 content.</Abstract>
 			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
 			
-			<Declaration>- (CIImage *)coreImageSnapshot</Declaration>
+			<Declaration>- (nonnull CIImage *)coreImageSnapshot</Declaration>
 			
 			<ReturnValue><Abstract type="html">The image.</Abstract></ReturnValue>
 			<Anchor>//api/name/coreImageSnapshot</Anchor>
@@ -44,7 +44,7 @@ content.</Abstract>
 content.</Abstract>
 			<DeclaredIn>UIView+MBSnapshotImage.h</DeclaredIn>
 			
-			<Declaration>- (CGImageRef)coreGraphicsSnapshot</Declaration>
+			<Declaration>- (nonnull CGImageRef)coreGraphicsSnapshot</Declaration>
 			
 			<ReturnValue><Abstract type="html">The image.</Abstract></ReturnValue>
 			<Anchor>//api/name/coreGraphicsSnapshot</Anchor>

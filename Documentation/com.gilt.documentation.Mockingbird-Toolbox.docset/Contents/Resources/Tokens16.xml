@@ -18,7 +18,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an MD5 hash given an input string.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSData *)MD5DataForString:(NSString *)src</Declaration>
+			<Declaration>+ (nonnull NSData *)MD5DataForString:(nonnull NSString *)src</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>src</Name>
@@ -35,7 +35,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an MD5 hash given an input string.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForString:(NSString *)src</Declaration>
+			<Declaration>+ (nonnull NSString *)MD5ForString:(nonnull NSString *)src</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>src</Name>
@@ -52,7 +52,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an MD5 hash from an NSData instance.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForData:(NSData *)src</Declaration>
+			<Declaration>+ (nonnull NSString *)MD5ForData:(nonnull NSData *)src</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>src</Name>
@@ -69,7 +69,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an MD5 hash from an array of bytes.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForBytes:(const void *)bytes length:(size_t)len</Declaration>
+			<Declaration>+ (nonnull NSString *)MD5ForBytes:(nonnull const void *)bytes length:(size_t)len</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>bytes</Name>
@@ -89,7 +89,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an MD5 hash for the contents of a file.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForFileAtPath:(NSString *)path error:(inout NSError **)errPtr</Declaration>
+			<Declaration>+ (nullable NSString *)MD5ForFileAtPath:(nonnull NSString *)path error:(NSErrorPtrPtr)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -114,7 +114,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an MD5 hash for the contents of a file.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)MD5ForFileAtPath:(NSString *)path</Declaration>
+			<Declaration>+ (nullable NSString *)MD5ForFileAtPath:(nonnull NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -134,7 +134,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an SHA-1 hash given an input string.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSData *)SHA1DataForString:(NSString *)src</Declaration>
+			<Declaration>+ (nonnull NSData *)SHA1DataForString:(nonnull NSString *)src</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>src</Name>
@@ -151,7 +151,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an SHA-1 hash given an input string.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)SHA1ForString:(NSString *)src</Declaration>
+			<Declaration>+ (nonnull NSString *)SHA1ForString:(nonnull NSString *)src</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>src</Name>
@@ -168,7 +168,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an SHA-1 hash from an NSData instance.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)SHA1ForData:(NSData *)src</Declaration>
+			<Declaration>+ (nonnull NSString *)SHA1ForData:(nonnull NSData *)src</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>src</Name>
@@ -185,7 +185,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an SHA-1 hash from an array of bytes.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)SHA1ForBytes:(const void *)bytes length:(size_t)len</Declaration>
+			<Declaration>+ (nonnull NSString *)SHA1ForBytes:(nonnull const void *)bytes length:(size_t)len</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>bytes</Name>
@@ -205,7 +205,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an SHA-1 hash for the contents of a file.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)SHA1ForFileAtPath:(NSString *)path error:(inout NSError **)errPtr</Declaration>
+			<Declaration>+ (nullable NSString *)SHA1ForFileAtPath:(nonnull NSString *)path error:(NSErrorPtrPtr)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -230,7 +230,7 @@ sources.</Abstract>
 			<Abstract type="html">Computes an SHA-1 hash for the contents of a file.</Abstract>
 			<DeclaredIn>MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>+ (NSString *)SHA1ForFileAtPath:(NSString *)path</Declaration>
+			<Declaration>+ (nullable NSString *)SHA1ForFileAtPath:(nonnull NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>

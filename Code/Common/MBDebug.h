@@ -30,8 +30,8 @@
 
 #define __MBTriggerDebugBreakMsg(f, m)    if (DEBUG_MASTER) { NSLog(@"Breakpoint hit!\n\nEntering debugger due to %@%@\n\n\t• Type 'up 2' to see breakpoint position\n\t• Type 'fin' and then 'fin' again to select calling stack frame\n\t• Type 'c' to continue execution\n\n", f, (m ? [NSString stringWithFormat:@" -- %@", m] : @"")); kill(getpid(), SIGSTOP); }
 
-#define MBTriggerDebugBreak()             __triggerDebugBreakMsg(@"triggerDebugBreak()", nil)
+#define MBTriggerDebugBreak()             __MBTriggerDebugBreakMsg(@"triggerDebugBreak()", nil)
 
-#define MBTriggerDebugBreakIf(x)          if (DEBUG_MASTER && x) { NSString* call = [NSString stringWithFormat:@"triggerDebugBreakIf(%s)", #x]; __triggerDebugBreakMsg(call, nil); }
+#define MBTriggerDebugBreakIf(x)          if (DEBUG_MASTER && x) { NSString* call = [NSString stringWithFormat:@"triggerDebugBreakIf(%s)", #x]; __MBTriggerDebugBreakMsg(call, nil); }
 
-#define MBTriggerDebugBreakMsg(m)         __triggerDebugBreakMsg(@"triggerDebugBreakMsg()", m)
+#define MBTriggerDebugBreakMsg(m)         __MBTriggerDebugBreakMsg(@"triggerDebugBreakMsg()", m)

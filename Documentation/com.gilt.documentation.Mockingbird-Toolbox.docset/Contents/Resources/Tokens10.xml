@@ -19,7 +19,7 @@ filesystem.</Abstract>
 file from the filesystem.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>+ (MBFileDeleteOperation *)operationForDeletingFile:(NSString *)path</Declaration>
+			<Declaration>+ (nonnull instancetype)operationForDeletingFile:(nonnull NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -37,7 +37,7 @@ file from the filesystem.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to delete the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithFilePath:(NSString *)path</Declaration>
+			<Declaration>- (nonnull instancetype)initWithFilePath:(nonnull NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -54,7 +54,7 @@ file from the filesystem.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to delete the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithFilePath:(NSString *)path moveImmediately:(BOOL)moveNow</Declaration>
+			<Declaration>- (nonnull instancetype)initWithFilePath:(nonnull NSString *)path moveImmediately:(BOOL)moveNow</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -78,7 +78,7 @@ file from the filesystem.</Abstract>
 			<Abstract type="html">Returns the filesystem path of the file to be deleted by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *filePath</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
 			<Anchor>//api/name/filePath</Anchor>
@@ -90,7 +90,7 @@ file from the filesystem.</Abstract>
 			<Abstract type="html">Returns the filesystem path of the file to be deleted by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *filePath</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
 			<Anchor>//api/name/filePath</Anchor>
@@ -102,7 +102,7 @@ file from the filesystem.</Abstract>
 			<Abstract type="html">Returns the filesystem path of the file to be deleted by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *filePath</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
 			<Anchor>//api/name/filePath</Anchor>

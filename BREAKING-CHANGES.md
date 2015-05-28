@@ -16,5 +16,5 @@ This system assigns version numbers with three independent integer values separa
 
 - As of this version, **Xcode 6.3 or higher is required** to build this project.
 
-- Previously, the `NSError` class extension provided a  `errorByAddingUserInfoKey:value:` method. This method is now `errorByAddingOrRemovingUserInfoKey:value:` to better reflect the fact that values can be removed from the user info dictionary by passing `nil` as the value argument.
+- Previously, the `NSError` class extension provided an  `errorByAddingUserInfoKey:value:` method. This method now has the signature `errorByAddingOrRemovingUserInfoKey:value:` to better reflect the fact that values can be removed from the user info dictionary by passing `nil` as the value argument.
 

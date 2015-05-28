@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>MBFormattedDescription Protocol Reference</title>
+	<title>MBModuleLogger Protocol Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,13 +56,13 @@
 	
 
 	
-
-	
-	<optgroup label="Instance Methods">
+	<optgroup label="Class Methods">
 		
-		<option value="//api/name/addDescriptionFieldsTo:">- addDescriptionFieldsTo:</option>
+		<option value="//api/name/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:">+ logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:</option>
 		
 	</optgroup>
+	
+
 	
 	
 </select>
@@ -77,7 +77,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">MBFormattedDescription Protocol Reference</h1>
+					<h1 class="title">MBModuleLogger Protocol Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -86,7 +86,7 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>MBFormattedDescriptionObject.h</td>
+	<td>MBModuleLog.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -96,8 +96,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Adopted by classes that utilize an <a href="../Classes/MBFieldListFormatter.html"><code>MBFieldListFormatter</code></a> instance to create
-formatted output for an object&rsquo;s <code>description</code> method.</p>
+						<p>This protocol is adopted by classes that wish to be used as loggers by the
+<a href="../Classes/MBModuleLog.html"><code>MBModuleLog</code></a>.</p>
 					</div>
 					
 					
@@ -113,8 +113,8 @@ formatted output for an object&rsquo;s <code>description</code> method.</p>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/addDescriptionFieldsTo:" title="addDescriptionFieldsTo:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addDescriptionFieldsTo:">&ndash;&nbsp;addDescriptionFieldsTo:</a></code>
+	<a name="//api/name/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:" title="logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:">+&nbsp;logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -124,13 +124,12 @@ formatted output for an object&rsquo;s <code>description</code> method.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Asks the receiver to add any relevant fields to the passed-in
-<a href="../Classes/MBFieldListFormatter.html"><code>MBFieldListFormatter</code></a> instance.</p>
+				<p>Records the log message to the underlying logging subsystem.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)addDescriptionFieldsTo:(nonnull MBFieldListFormatter *)<em>fmt</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (void)logMessage:(nonnull NSString *)<em>msg</em> atSeverity:(MBModuleLogSeverity)<em>severity</em> callingObject:(nullable id)<em>caller</em> callingSignature:(nonnull NSString *)<em>signature</em> callingFilePath:(nonnull NSString *)<em>filePath</em> callingFileLine:(NSUInteger)<em>fileLine</em></code></div>
 
 		    
 			
@@ -139,8 +138,36 @@ formatted output for an object&rsquo;s <code>description</code> method.</p>
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>fmt</code></th>
-						<td><p>The formatter to which description fields should be added.</p></td>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>The message to record.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>severity</code></th>
+						<td><p>The severity level of the log message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>caller</code></th>
+						<td><p>The object responsible for issuing this request to
+            log <code>msg</code>. May be <code>nil</code> if not called from an object scope.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>signature</code></th>
+						<td><p>The signature of the calling method or function.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>filePath</code></th>
+						<td><p>The filesystem path of the source code file containing
+            the calling method or function.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fileLine</code></th>
+						<td><p>The line number within <code>filePath</code> specifying the
+            location of the code responsible for this request to log <code>msg</code>.</p></td>
 					</tr>
 				
 				</table>
@@ -160,7 +187,7 @@ formatted output for an object&rsquo;s <code>description</code> method.</p>
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">MBFormattedDescriptionObject.h</code></p>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
 			</div>
 			
 			

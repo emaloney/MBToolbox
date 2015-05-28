@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>MBNetworkAvailabilityFlags Constants Reference</title>
+	<title>MBModuleLogSeverity Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">MBNetworkAvailabilityFlags Constants Reference</h1>
+					<h1 class="title">MBModuleLogSeverity Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>MBNetworkMonitor.h</td>
+	<td>MBModuleLog.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,11 +75,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">MBNetworkAvailabilityFlags</h3>
+                    <h3 class="subsubtitle method-title">MBModuleLogSeverity</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Flags used to indicate the device&rsquo;s current network availability status.</p>
+                        <p>Specifies the relative importance of a log message.</p>
 					</div>
 					
 					
@@ -87,15 +87,17 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_OPTIONS(NSUInteger, MBNetworkAvailabilityFlags ) {<br>
+                        <code>typedef NS_ENUM(NSUInteger, MBModuleLogSeverity ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">MBNetworkAvailabilityOffline</a> = 0,<br>
+                            &nbsp;&nbsp; <a href="">MBModuleLogSeverityVerbose</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">MBNetworkAvailabilityOnline</a> = ( 1 &lt; &lt; 0 ),<br>
+                            &nbsp;&nbsp; <a href="">MBModuleLogSeverityDebug</a> = 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">MBNetworkAvailabilityViaWifi</a> = ( 1 &lt; &lt; 1 ),<br>
+                            &nbsp;&nbsp; <a href="">MBModuleLogSeverityInfo</a> = 3,<br>
                             
-                            &nbsp;&nbsp; <a href="">MBNetworkAvailabilityViaCarrier</a> = ( 1 &lt; &lt; 2 ),<br>
+                            &nbsp;&nbsp; <a href="">MBModuleLogSeverityWarning</a> = 4,<br>
+                            
+                            &nbsp;&nbsp; <a href="">MBModuleLogSeverityError</a> = 5,<br>
                             
                             };</code>
                     
@@ -105,11 +107,13 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="MBNetworkAvailabilityOffline"></a><code>MBNetworkAvailabilityOffline</code></dt>
+                            <dt><a name="" title="MBModuleLogSeverityVerbose"></a><code>MBModuleLogSeverityVerbose</code></dt>
 <dd>
 
 
-<p>The device has no network connection available.</p>
+<p>The lowest severity, used for detailed or frequently occurring
+        debugging and diagnostic information. Not intended for use in
+        production code.</p>
 
 
 
@@ -117,16 +121,17 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">MBNetworkMonitor.h</code>.
+		Declared In <code class="declared-in-ref">MBModuleLog.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="MBNetworkAvailabilityOnline"></a><code>MBNetworkAvailabilityOnline</code></dt>
+                            <dt><a name="" title="MBModuleLogSeverityDebug"></a><code>MBModuleLogSeverityDebug</code></dt>
 <dd>
 
 
-<p>A network connection is available on the device.</p>
+<p>Used for debugging and diagnostic information. Not intended for
+        use in production code.</p>
 
 
 
@@ -134,16 +139,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">MBNetworkMonitor.h</code>.
+		Declared In <code class="declared-in-ref">MBModuleLog.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="MBNetworkAvailabilityViaWifi"></a><code>MBNetworkAvailabilityViaWifi</code></dt>
+                            <dt><a name="" title="MBModuleLogSeverityInfo"></a><code>MBModuleLogSeverityInfo</code></dt>
 <dd>
 
 
-<p>Network connectivity is being provided by a wifi connection.</p>
+<p>Used to indicate something of interest that is not problematic.</p>
 
 
 
@@ -151,16 +156,18 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">MBNetworkMonitor.h</code>.
+		Declared In <code class="declared-in-ref">MBModuleLog.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="MBNetworkAvailabilityViaCarrier"></a><code>MBNetworkAvailabilityViaCarrier</code></dt>
+                            <dt><a name="" title="MBModuleLogSeverityWarning"></a><code>MBModuleLogSeverityWarning</code></dt>
 <dd>
 
 
-<p>Network connectivity is being provided by a carrier connection.</p>
+<p>Used to indicate that something appears amiss and potentially
+        problematic. The situation bears looking into before a larger
+        problem arises.</p>
 
 
 
@@ -168,7 +175,25 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">MBNetworkMonitor.h</code>.
+		Declared In <code class="declared-in-ref">MBModuleLog.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="MBModuleLogSeverityError"></a><code>MBModuleLogSeverityError</code></dt>
+<dd>
+
+
+<p>The highest severity, used to indicate that something has gone wrong;
+        a fatal error may be imminent.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">MBModuleLog.h</code>.
 	</p>
 	
 </dd>
@@ -185,7 +210,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+                        <p><code class="declared-in-ref">MBModuleLog.h</code></p>
                     </div>
                     
                     

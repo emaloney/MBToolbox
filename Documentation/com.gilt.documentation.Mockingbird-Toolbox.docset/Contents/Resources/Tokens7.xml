@@ -21,7 +21,7 @@ If a writer is executing when this method is called, the calling thread will
 be blocked until writing finishes. Multiple readers may execute simultaneously.</Abstract>
 			<DeclaredIn>MBConcurrentReadWriteCoordinator.h</DeclaredIn>
 			
-			<Declaration>- (void)read:(void ( ^ ) ( ))readOperation</Declaration>
+			<Declaration>- (void)read:(nonnull void ( ^ ) ( ))readOperation</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>readOperation</Name>
@@ -39,7 +39,7 @@ be blocked until writing finishes. Multiple readers may execute simultaneously.<
 executed only when there are no other readers or writers.</Abstract>
 			<DeclaredIn>MBConcurrentReadWriteCoordinator.h</DeclaredIn>
 			
-			<Declaration>- (void)enqueueWrite:(void ( ^ ) ( ))writeOperation</Declaration>
+			<Declaration>- (void)enqueueWrite:(nonnull void ( ^ ) ( ))writeOperation</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>writeOperation</Name>

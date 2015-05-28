@@ -14,12 +14,45 @@ given MBModule.</Abstract>
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/setLoggerClass:</TokenIdentifier>
+			<Abstract type="html">Sets the logger class used to log messages through MBModuleLog. By
+default, MBModuleLog is the logger class, unless overridden by a call
+to this method.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>+ (void)setLoggerClass:(nullable Class&lt;MBModuleLogger&gt;)loggerClass</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>loggerClass</Name>
+					<Abstract type="html">The Class implementing MBModuleLogger that
+            should be used as the logger. If nil is passed, the value is
+            reset to the default of MBModuleLog.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setLoggerClass:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/loggerClass</TokenIdentifier>
+			<Abstract type="html">Returns the logger class used to log messages through MBModuleLog.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull Class&lt;MBModuleLogger&gt;)loggerClass</Declaration>
+			
+			
+			<Anchor>//api/name/loggerClass</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/logForModuleClass:</TokenIdentifier>
 			<Abstract type="html">Creates and returns a new MBModuleLog instance for the specified module
 implementation class.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)logForModuleClass:(Class)moduleCls</Declaration>
+			<Declaration>+ (nonnull instancetype)logForModuleClass:(nonnull Class)moduleCls</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>moduleCls</Name>
@@ -37,7 +70,7 @@ implementation class.</Abstract>
 			<Abstract type="html">Creates and returns a new MBModuleLog instance for the specified module.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)logForModule:(NSObject&lt;MBModule&gt; *)module</Declaration>
+			<Declaration>+ (nonnull instancetype)logForModule:(nonnull NSObject&lt;MBModule&gt; *)module</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>module</Name>
@@ -54,7 +87,7 @@ implementation class.</Abstract>
 			<Abstract type="html">Issues a deprecation warning from the module associated with the receiver.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)issueDeprecationWarning:(NSString *)warning</Declaration>
+			<Declaration>- (void)issueDeprecationWarning:(nonnull NSString *)warning</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>warning</Name>
@@ -71,7 +104,7 @@ implementation class.</Abstract>
 			<Abstract type="html">Issues a deprecation warning from the module associated with the receiver.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)issueDeprecationWarningWithFormat:(NSString *)format, ...</Declaration>
+			<Declaration>- (void)issueDeprecationWarningWithFormat:(nonnull NSString *)format, ...</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>format</Name>
@@ -93,7 +126,7 @@ implementation class.</Abstract>
 			<Abstract type="html">Issues a not supported error from the module associated with the receiver.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)issueNotSupportedError:(NSString *)error</Declaration>
+			<Declaration>- (void)issueNotSupportedError:(nonnull NSString *)error</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>error</Name>
@@ -110,7 +143,7 @@ implementation class.</Abstract>
 			<Abstract type="html">Issues a not supported error from the module associated with the receiver.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>- (void)issueNotSupportedErrorWithFormat:(NSString *)format, ...</Declaration>
+			<Declaration>- (void)issueNotSupportedErrorWithFormat:(nonnull NSString *)format, ...</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>format</Name>

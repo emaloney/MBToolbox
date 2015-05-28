@@ -75,6 +75,7 @@
 						<NodeRef refid="44"/>
 						<NodeRef refid="45"/>
 						<NodeRef refid="46"/>
+						<NodeRef refid="47"/>
 						
 					</Subnodes>
 				</Node>
@@ -84,8 +85,9 @@
 					<Name>Constants</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="47"/>
 						<NodeRef refid="48"/>
+						<NodeRef refid="49"/>
+						<NodeRef refid="50"/>
 						
 					</Subnodes>
 				</Node>
@@ -1317,6 +1319,33 @@
             
         </Node>
 		<Node id="45" type="file" documentType="reference">
+            <Name>MBModuleLogger</Name>
+            <Path>Protocols/MBModuleLogger.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/MBModuleLogger.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/MBModuleLogger.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Protocols/MBModuleLogger.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="46" type="file" documentType="reference">
             <Name>MBService</Name>
             <Path>Protocols/MBService.html</Path>
             
@@ -1343,7 +1372,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="46" type="file" documentType="reference">
+		<Node id="47" type="file" documentType="reference">
             <Name>MBSingleton</Name>
             <Path>Protocols/MBSingleton.html</Path>
             
@@ -1371,12 +1400,17 @@
             
         </Node>
 		
-        <Node id="47" type="file" documentType="reference">
+        <Node id="48" type="file" documentType="reference">
             <Name>MBBitmapPixelType</Name>
             <Path>Constants/MBBitmapPixelType.html</Path>
             
         </Node>
-		<Node id="48" type="file" documentType="reference">
+		<Node id="49" type="file" documentType="reference">
+            <Name>MBModuleLogSeverity</Name>
+            <Path>Constants/MBModuleLogSeverity.html</Path>
+            
+        </Node>
+		<Node id="50" type="file" documentType="reference">
             <Name>MBNetworkAvailabilityFlags</Name>
             <Path>Constants/MBNetworkAvailabilityFlags.html</Path>
             

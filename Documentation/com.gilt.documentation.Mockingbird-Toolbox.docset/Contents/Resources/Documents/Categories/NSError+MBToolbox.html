@@ -78,7 +78,7 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/errorByAddingUserInfoKey:value:">- errorByAddingUserInfoKey:value:</option>
+		<option value="//api/name/errorByAddingOrRemovingUserInfoKey:value:">- errorByAddingOrRemovingUserInfoKey:value:</option>
 		
 	</optgroup>
 	
@@ -144,7 +144,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)<em>code</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull NSError *)mockingbirdErrorWithCode:(NSInteger)<em>code</em></code></div>
 
 		    
 			
@@ -203,7 +203,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)<em>code</em> userInfo:(NSDictionary *)<em>dict</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull NSError *)mockingbirdErrorWithCode:(NSInteger)<em>code</em> userInfo:(nullable NSDictionary *)<em>dict</em></code></div>
 
 		    
 			
@@ -267,7 +267,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSError *)mockingbirdErrorWithCode:(NSInteger)<em>code</em> userInfoKey:(NSString *)<em>key</em> value:(id)<em>val</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull NSError *)mockingbirdErrorWithCode:(NSInteger)<em>code</em> userInfoKey:(nonnull NSString *)<em>key</em> value:(nonnull id)<em>val</em></code></div>
 
 		    
 			
@@ -342,7 +342,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)<em>desc</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull NSError *)mockingbirdErrorWithDescription:(nonnull NSString *)<em>desc</em></code></div>
 
 		    
 			
@@ -408,7 +408,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)<em>desc</em> code:(NSInteger)<em>code</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull NSError *)mockingbirdErrorWithDescription:(nonnull NSString *)<em>desc</em> code:(NSInteger)<em>code</em></code></div>
 
 		    
 			
@@ -474,7 +474,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSError *)mockingbirdErrorWithDescription:(NSString *)<em>desc</em> code:(NSInteger)<em>code</em> userInfoKey:(NSString *)<em>key</em> value:(id)<em>val</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull NSError *)mockingbirdErrorWithDescription:(nonnull NSString *)<em>desc</em> code:(NSInteger)<em>code</em> userInfoKey:(nonnull NSString *)<em>key</em> value:(nonnull id)<em>val</em></code></div>
 
 		    
 			
@@ -556,7 +556,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSError *)mockingbirdErrorWithException:(NSException *)<em>ex</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull NSError *)mockingbirdErrorWithException:(nonnull NSException *)<em>ex</em></code></div>
 
 		    
 			
@@ -611,8 +611,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/errorByAddingUserInfoKey:value:" title="errorByAddingUserInfoKey:value:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/errorByAddingUserInfoKey:value:">&ndash;&nbsp;errorByAddingUserInfoKey:value:</a></code>
+	<a name="//api/name/errorByAddingOrRemovingUserInfoKey:value:" title="errorByAddingOrRemovingUserInfoKey:value:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/errorByAddingOrRemovingUserInfoKey:value:">&ndash;&nbsp;errorByAddingOrRemovingUserInfoKey:value:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -622,13 +622,13 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Creates a new <code>NSError</code> instance by adding the specified user info
-dictionary value to that of the receiver.</p>
+				<p>Creates and returns a new <code>NSError</code> instance based on the receiver by adding
+or removing the user info dictionary value for the given key.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSError *)errorByAddingUserInfoKey:(NSString *)<em>key</em> value:(id)<em>val</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (nonnull NSError *)errorByAddingOrRemovingUserInfoKey:(nonnull NSString *)<em>key</em> value:(nullable id)<em>val</em></code></div>
 
 		    
 			
@@ -644,7 +644,8 @@ dictionary value to that of the receiver.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>val</code></th>
-						<td><p>The value that will be associated with <code>key</code>.</p></td>
+						<td><p>The value that will be associated with <code>key</code>. If <code>nil</code>, any
+            existing value for <code>key</code> will be removed instead.</p></td>
 					</tr>
 				
 				</table>
@@ -689,7 +690,7 @@ dictionary value to that of the receiver.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-02-04</p>
+						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

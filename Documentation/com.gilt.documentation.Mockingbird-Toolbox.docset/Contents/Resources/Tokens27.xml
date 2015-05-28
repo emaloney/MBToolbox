@@ -18,7 +18,7 @@ MBFilesystemCache implementations.</Abstract>
 			<Abstract type="html">Accesses the NSFileManager instance used internally by the cache.</Abstract>
 			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (NSFileManager *)fileManager</Declaration>
+			<Declaration>- (nonnull NSFileManager *)fileManager</Declaration>
 			
 			<ReturnValue><Abstract type="html">The file manager.</Abstract></ReturnValue>
 			<Anchor>//api/name/fileManager</Anchor>
@@ -44,7 +44,7 @@ does not exist, it will be created.</Abstract>
 the given cache key.</Abstract>
 			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)fileExtensionForCacheKey:(id)key</Declaration>
+			<Declaration>- (nonnull NSString *)fileExtensionForCacheKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>
@@ -62,7 +62,7 @@ the given cache key.</Abstract>
 the given cache key.</Abstract>
 			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)filePathForCacheKey:(id)key</Declaration>
+			<Declaration>- (nonnull NSString *)filePathForCacheKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>key</Name>
@@ -79,14 +79,14 @@ the given cache key.</Abstract>
 			<Abstract type="html">Loads the cache object contained in the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (id)objectFromCacheFile:(NSString *)path</Declaration>
+			<Declaration>- (nullable id)objectFromCacheFile:(nonnull NSString *)path</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
 					<Abstract type="html">The path of the file to read.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The cache object.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">The cache object, or nil if it couldn&apos;t be read..</Abstract></ReturnValue>
 			<Anchor>//api/name/objectFromCacheFile:</Anchor>
             <NodeRef refid="27"/>
 		</Token>
@@ -97,7 +97,7 @@ the given cache key.</Abstract>
 given key.</Abstract>
 			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (void)objectLoaded:(id)cacheObj forKey:(id)key</Declaration>
+			<Declaration>- (void)objectLoaded:(nonnull id)cacheObj forKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cacheObj</Name>
@@ -118,7 +118,7 @@ given key.</Abstract>
 to determine whether the specified object should be stored in the memory cache.</Abstract>
 			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (void)storeObjectInMemoryCacheIfAppropriate:(id)cacheObj forKey:(id)key</Declaration>
+			<Declaration>- (void)storeObjectInMemoryCacheIfAppropriate:(nonnull id)cacheObj forKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cacheObj</Name>
@@ -141,7 +141,7 @@ to determine whether the specified object should be stored in the filesystem
 cache.</Abstract>
 			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
 			
-			<Declaration>- (void)storeObjectInFilesystemCacheIfAppropriate:(id)cacheObj forKey:(id)key</Declaration>
+			<Declaration>- (void)storeObjectInFilesystemCacheIfAppropriate:(nonnull id)cacheObj forKey:(nonnull id)key</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cacheObj</Name>

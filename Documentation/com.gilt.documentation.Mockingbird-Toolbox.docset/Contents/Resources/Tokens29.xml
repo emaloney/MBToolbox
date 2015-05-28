@@ -18,7 +18,7 @@ message digest hashes.</Abstract>
 			<Abstract type="html">Computes an MD5 hash from the contents of the receiver.</Abstract>
 			<DeclaredIn>NSData+MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)MD5</Declaration>
+			<Declaration>- (nonnull NSString *)MD5</Declaration>
 			
 			<ReturnValue><Abstract type="html">the MD5 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
 			<Anchor>//api/name/MD5</Anchor>
@@ -30,7 +30,7 @@ message digest hashes.</Abstract>
 			<Abstract type="html">Computes an SHA-1 hash from the contents of the receiver.</Abstract>
 			<DeclaredIn>NSData+MBMessageDigest.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)SHA1</Declaration>
+			<Declaration>- (nonnull NSString *)SHA1</Declaration>
 			
 			<ReturnValue><Abstract type="html">the SHA-1 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
 			<Anchor>//api/name/SHA1</Anchor>

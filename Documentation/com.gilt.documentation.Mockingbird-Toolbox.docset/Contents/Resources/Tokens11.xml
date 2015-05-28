@@ -18,7 +18,7 @@
 contents of the file specified.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>+ (MBFileReadOperation *)operationForReadingFromFile:(NSString *)path delegate:(NSObject&lt;MBFileReadOperationDelegate&gt; *)delegate</Declaration>
+			<Declaration>+ (nonnull instancetype)operationForReadingFromFile:(nonnull NSString *)path delegate:(nonnull NSObject&lt;MBFileReadOperationDelegate&gt; *)delegate</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -40,7 +40,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Initializes the receiver so it can be used to read from the specified file.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initForFilePath:(NSString *)path delegate:(NSObject&lt;MBFileReadOperationDelegate&gt; *)delegate</Declaration>
+			<Declaration>- (nonnull instancetype)initForFilePath:(nonnull NSString *)path delegate:(nonnull NSObject&lt;MBFileReadOperationDelegate&gt; *)delegate</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -61,7 +61,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Returns the filesystem path of the file to be read by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *filePath</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
 			<Anchor>//api/name/filePath</Anchor>
@@ -73,7 +73,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Returns the filesystem path of the file to be read by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *filePath</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
 			<Anchor>//api/name/filePath</Anchor>
@@ -85,7 +85,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Returns the filesystem path of the file to be read by the operation.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSString *filePath</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
 			<Anchor>//api/name/filePath</Anchor>
@@ -98,7 +98,7 @@ contents of the file specified.</Abstract>
     operation completes. </Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSObject&lt;MBFileReadOperationDelegate&gt; *delegate</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSObject&lt;MBFileReadOperationDelegate&gt; *delegate</Declaration>
 			
 			
 			<Anchor>//api/name/delegate</Anchor>
@@ -111,7 +111,7 @@ contents of the file specified.</Abstract>
     operation completes. </Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSObject&lt;MBFileReadOperationDelegate&gt; *delegate</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSObject&lt;MBFileReadOperationDelegate&gt; *delegate</Declaration>
 			
 			
 			<Anchor>//api/name/delegate</Anchor>
@@ -124,7 +124,7 @@ contents of the file specified.</Abstract>
     operation completes. </Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, readonly) NSObject&lt;MBFileReadOperationDelegate&gt; *delegate</Declaration>
+			<Declaration>@property (nonnull, nonatomic, readonly) NSObject&lt;MBFileReadOperationDelegate&gt; *delegate</Declaration>
 			
 			
 			<Anchor>//api/name/delegate</Anchor>
@@ -136,7 +136,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Called internally to read the file and convert its data into an object.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (id)readObjectFromFile:(NSString *)path error:(inout NSError **)errPtr</Declaration>
+			<Declaration>- (nullable id)readObjectFromFile:(nonnull NSString *)path error:(NSErrorPtrPtr)errPtr</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>path</Name>
@@ -158,7 +158,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Called internally when readObjectFromFile:error: completes successfully.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (void)readCompletedWithObject:(id)readObj</Declaration>
+			<Declaration>- (void)readCompletedWithObject:(nonnull id)readObj</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>readObj</Name>
@@ -176,7 +176,7 @@ contents of the file specified.</Abstract>
 			<Abstract type="html">Called internally when readObjectFromFile:error: fails.</Abstract>
 			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
 			
-			<Declaration>- (void)readFailedWithError:(NSError *)err</Declaration>
+			<Declaration>- (void)readFailedWithError:(nonnull NSError *)err</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>err</Name>

@@ -62,6 +62,10 @@
 		
 		<option value="//api/name/logForModuleClass:">+ logForModuleClass:</option>
 		
+		<option value="//api/name/loggerClass">+ loggerClass</option>
+		
+		<option value="//api/name/setLoggerClass:">+ setLoggerClass:</option>
+		
 	</optgroup>
 	
 
@@ -99,6 +103,9 @@
 	<th>Inherits from</th>
 	<td>NSObject</td>
 </tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/MBModuleLogger.html">MBModuleLogger</a></td>
+</tr><tr>
 	<th>Declared in</th>
 	<td>MBModuleLog.h</td>
 </tr>
@@ -120,6 +127,112 @@ given <a href="../Protocols/MBModule.html"><code>MBModule</code></a>.</p>
 					
 					<div class="section section-tasks">
 						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="MBModuleLogger support" name="task_MBModuleLogger support"></a>
+						<h2 class="task-title">MBModuleLogger support</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setLoggerClass:" title="setLoggerClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setLoggerClass:">+&nbsp;setLoggerClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the logger class used to log messages through <code>MBModuleLog</code>. By
+default, <code>MBModuleLog</code> is the logger class, unless overridden by a call
+to this method.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setLoggerClass:(nullable Class&lt;MBModuleLogger&gt;)<em>loggerClass</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>loggerClass</code></th>
+						<td><p>The <code>Class</code> implementing <a href="../Protocols/MBModuleLogger.html"><code>MBModuleLogger</code></a> that
+            should be used as the logger. If <code>nil</code> is passed, the value is
+            reset to the default of <code>MBModuleLog</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loggerClass" title="loggerClass"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loggerClass">+&nbsp;loggerClass</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the logger class used to log messages through <code>MBModuleLog</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nonnull Class&lt;MBModuleLogger&gt;)loggerClass</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
 						
 
 						<a title="Object lifecycle" name="task_Object lifecycle"></a>
@@ -144,7 +257,7 @@ implementation class.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (instancetype)logForModuleClass:(Class)<em>moduleCls</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull instancetype)logForModuleClass:(nonnull Class)<em>moduleCls</em></code></div>
 
 		    
 			
@@ -210,7 +323,7 @@ implementation class.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (instancetype)logForModule:(NSObject&lt;MBModule&gt; *)<em>module</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull instancetype)logForModule:(nonnull NSObject&lt;MBModule&gt; *)<em>module</em></code></div>
 
 		    
 			
@@ -283,7 +396,7 @@ implementation class.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarning:(NSString *)<em>warning</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarning:(nonnull NSString *)<em>warning</em></code></div>
 
 		    
 			
@@ -342,7 +455,7 @@ implementation class.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarningWithFormat:(NSString *)<em>format</em>, <em>...</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarningWithFormat:(nonnull NSString *)<em>format</em>, <em>...</em></code></div>
 
 		    
 			
@@ -408,7 +521,7 @@ implementation class.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedError:(NSString *)<em>error</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedError:(nonnull NSString *)<em>error</em></code></div>
 
 		    
 			
@@ -467,7 +580,7 @@ implementation class.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedErrorWithFormat:(NSString *)<em>format</em>, <em>...</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedErrorWithFormat:(nonnull NSString *)<em>format</em>, <em>...</em></code></div>
 
 		    
 			
@@ -529,7 +642,7 @@ implementation class.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-02-04</p>
+						<p class="copyright">Copyright &copy; 2015 Gilt Groupe. All rights reserved. Updated: 2015-05-28</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

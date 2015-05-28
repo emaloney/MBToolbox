@@ -17,7 +17,7 @@
 			<Abstract type="html">Scales the receiver to the specified size.</Abstract>
 			<DeclaredIn>UIImage+MBImageScaling.h</DeclaredIn>
 			
-			<Declaration>- (UIImage *)imageScaledToSize:(CGSize)newSize quality:(CGInterpolationQuality)quality</Declaration>
+			<Declaration>- (nonnull UIImage *)imageScaledToSize:(CGSize)newSize quality:(CGInterpolationQuality)quality</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>newSize</Name>
@@ -39,7 +39,7 @@
 			<Abstract type="html">Scales the receiver to the specified size.</Abstract>
 			<DeclaredIn>UIImage+MBImageScaling.h</DeclaredIn>
 			
-			<Declaration>- (UIImage *)imageScaledToSize:(CGSize)newSize</Declaration>
+			<Declaration>- (nonnull UIImage *)imageScaledToSize:(CGSize)newSize</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>newSize</Name>
@@ -58,7 +58,7 @@
 			<Abstract type="html">Scales the receiver to a new size by applying the specified scale factor.</Abstract>
 			<DeclaredIn>UIImage+MBImageScaling.h</DeclaredIn>
 			
-			<Declaration>- (UIImage *)imageScaledByFactor:(CGFloat)scale quality:(CGInterpolationQuality)quality</Declaration>
+			<Declaration>- (nonnull UIImage *)imageScaledByFactor:(CGFloat)scale quality:(CGInterpolationQuality)quality</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>scale</Name>
@@ -81,7 +81,7 @@
 			<Abstract type="html">Scales the receiver to a new size by applying the specified scale factor.</Abstract>
 			<DeclaredIn>UIImage+MBImageScaling.h</DeclaredIn>
 			
-			<Declaration>- (UIImage *)imageScaledByFactor:(CGFloat)scale</Declaration>
+			<Declaration>- (nonnull UIImage *)imageScaledByFactor:(CGFloat)scale</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>scale</Name>

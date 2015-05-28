@@ -7,9 +7,6 @@
 //
 
 #import "NSString+MBIndentation.h"
-#import "MBModuleLogMacros.h"
-
-#define DEBUG_LOCAL     0
 
 /******************************************************************************/
 #pragma mark -
@@ -20,8 +17,6 @@
 
 - (nonnull NSString*) stringByIndentingEachLineWithPrefix:(nonnull NSString*)prefix
 {
-    MBLogDebugTrace();
-
     //
     // you may ask yourself, how do I work this?
     //

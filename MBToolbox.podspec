@@ -410,7 +410,6 @@ Pod::Spec.new do |s|
 	# prefixes
 	#
 	s.subspec 'Indentation-NSString' do |ss|
-		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Strings/NSString+MBIndentation.{h,m}'
 		ss.public_header_files = 'Code/Strings/NSString+MBIndentation.h'
 	end

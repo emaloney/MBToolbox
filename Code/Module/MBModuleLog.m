@@ -133,7 +133,7 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 
 - (void) _memoryWarning
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     [MBThreadLocalStorage setValue:nil forClass:[self class]];
 }

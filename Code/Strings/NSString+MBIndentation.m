@@ -20,7 +20,7 @@
 
 - (nonnull NSString*) stringByIndentingEachLineWithPrefix:(nonnull NSString*)prefix
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     //
     // you may ask yourself, how do I work this?

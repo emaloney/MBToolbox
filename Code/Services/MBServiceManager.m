@@ -52,7 +52,7 @@ MBImplementSingleton();
 
 - (id) serviceForClass:(Class)serviceClass
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     if (![serviceClass respondsToSelector:@selector(instance)]) {
         MBLogError(@"The %@ class must respond to +[%@ instance] to be a valid Service", serviceClass, serviceClass);
@@ -78,7 +78,7 @@ MBImplementSingleton();
 
 - (void) attachToService:(MBService*)service
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     if (service) {
         NSString* canonicalServiceName = [[service class] description];
@@ -120,7 +120,7 @@ MBImplementSingleton();
 
 - (void) detachFromService:(MBService*)service
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     if (service && [service respondsToSelector:@selector(stopService)]) {
         NSString* canonicalServiceName = [[service class] description];

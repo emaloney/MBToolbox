@@ -285,7 +285,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
 
 - (void) startService
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     // listen to network reachability changes
     if (SCNetworkReachabilitySetCallback(_networkReach, NetworkMonitorReachabilityCallback, nil)) {
@@ -303,7 +303,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
 
 - (void) stopService
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     // stop listening for network reachability changes
     SCNetworkReachabilityUnscheduleFromRunLoop(_networkReach, CFRunLoopGetMain(), kCFRunLoopDefaultMode);

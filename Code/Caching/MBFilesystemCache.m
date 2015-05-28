@@ -93,7 +93,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (void) memoryWarning
 {
-	MBLogTraceDebug();
+	MBLogDebugTrace();
 	
     // freeing up pending cache writes
     // will help us release more memory
@@ -159,7 +159,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (id) objectFromCacheFile:(NSString*)path
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSError* err = nil;
     NSData* fileData = [NSData dataWithContentsOfFile:path options:NSDataReadingMapped error:&err];
@@ -277,7 +277,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (void) objectLoaded:(id)cacheObj forKey:(id)key
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     NSString* cacheFile = [_cacheDelegate filenameForCacheKey:key];
 
@@ -323,7 +323,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (void) clearFilesystemCache
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     MBFileDeleteOperation* op = [MBFileDeleteOperation operationForDeletingFile:_cacheDir];
     
@@ -332,7 +332,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (void) purgeCacheFilesOlderThan:(NSTimeInterval)ageInSeconds
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     MBCachePruneOperation* op = [MBCachePruneOperation operationForCacheDirectory:_cacheDir
                                                                            maxAge:ageInSeconds];
@@ -351,7 +351,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (BOOL) isKeyInCache:(id)key
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     NSString* cacheFile = [_cacheDelegate filenameForCacheKey:key];
     if ([super isKeyInCache:cacheFile]) {
@@ -364,7 +364,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (BOOL) isKeyInFilesystemCache:(id)key
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     // first, check to see if there's a file
     NSString* cacheFile = [_cacheDelegate filenameForCacheKey:key];
@@ -405,7 +405,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (BOOL) isKeyInMemoryCache:(id)key
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [super isKeyInCache:key];
 }
@@ -416,7 +416,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (id) objectForKeyInMemoryCache:(id)key
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     [self lock];
     id obj = [self internalCache][key];
@@ -461,7 +461,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (void) main
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     @autoreleasepool {
         @try {

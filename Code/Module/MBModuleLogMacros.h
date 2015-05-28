@@ -31,25 +31,26 @@
 /******************************************************************************/
 
 #define MBLogVerbose(...)           if (DEBUG_MODE_VERBOSE) MBLog(MBModuleLogSeverityVerbose, __VA_ARGS__)
+#define MBLogVerboseTrace()         if (DEBUG_MODE_VERBOSE) MBLogTrace(MBModuleLogSeverityVerbose)
+#define MBLogVerboseObject(x)       if (DEBUG_MODE_VERBOSE) MBLogObject(MBModuleLogSeverityVerbose, x)
+#define MBLogVerboseString(x)       if (DEBUG_MODE_VERBOSE) MBLogString(MBModuleLogSeverityVerbose, x)
+
 #define MBLogDebug(...)             if (DEBUG_MODE) MBLog(MBModuleLogSeverityDebug, __VA_ARGS__)
+#define MBLogDebugTrace()           if (DEBUG_MODE) MBLogTrace(MBModuleLogSeverityDebug)
+#define MBLogDebugObject(x)         if (DEBUG_MODE) MBLogObject(MBModuleLogSeverityDebug, x)
+#define MBLogDebugString(x)         if (DEBUG_MODE) MBLogString(MBModuleLogSeverityDebug, x)
+
 #define MBLogInfo(...)              MBLog(MBModuleLogSeverityInfo, __VA_ARGS__)
+#define MBLogInfoTrace()            MBLogTrace(MBModuleLogSeverityInfo)
+#define MBLogInfoObject(x)          MBLogObject(MBModuleLogSeverityInfo, x)
+#define MBLogInfoString(x)          MBLogString(MBModuleLogSeverityInfo, x)
+
 #define MBLogWarning(...)           MBLog(MBModuleLogSeverityWarning, __VA_ARGS__)
+#define MBLogWarningTrace()         MBLogTrace(MBModuleLogSeverityWarning)
+#define MBLogWarningObject(x)       MBLogObject(MBModuleLogSeverityWarning, x)
+#define MBLogWarningString(x)       MBLogString(MBModuleLogSeverityWarning, x)
+
 #define MBLogError(...)             MBLog(MBModuleLogSeverityError, __VA_ARGS__)
-
-#define MBLogTraceVerbose()         if (DEBUG_MODE_VERBOSE) MBLogTrace(MBModuleLogSeverityVerbose)
-#define MBLogTraceDebug()           if (DEBUG_MODE) MBLogTrace(MBModuleLogSeverityDebug)
-#define MBLogTraceInfo()            MBLogTrace(MBModuleLogSeverityInfo)
-#define MBLogTraceWarning()         MBLogTrace(MBModuleLogSeverityWarning)
-#define MBLogTraceError()           MBLogTrace(MBModuleLogSeverityError)
-
-#define MBLogObjectVerbose(x)       if (DEBUG_MODE_VERBOSE) MBLogObject(MBModuleLogSeverityVerbose, x)
-#define MBLogObjectDebug(x)         if (DEBUG_MODE) MBLogObject(MBModuleLogSeverityDebug, x)
-#define MBLogObjectInfo(x)          MBLogObject(MBModuleLogSeverityInfo, x)
-#define MBLogObjectWarning(x)       MBLogObject(MBModuleLogSeverityWarning, x)
-#define MBLogObjectError(x)         MBLogObject(MBModuleLogSeverityError, x)
-
-#define MBLogStringVerbose(x)       if (DEBUG_MODE_VERBOSE) MBLogString(MBModuleLogSeverityVerbose, x)
-#define MBLogStringDebug(x)         if (DEBUG_MODE) MBLogString(MBModuleLogSeverityDebug, x)
-#define MBLogStringInfo(x)          MBLogString(MBModuleLogSeverityInfo, x)
-#define MBLogStringWarning(x)       MBLogString(MBModuleLogSeverityWarning, x)
-#define MBLogStringError(x)         MBLogString(MBModuleLogSeverityError, x)
+#define MBLogErrorTrace()           MBLogTrace(MBModuleLogSeverityError)
+#define MBLogErrorObject(x)         MBLogObject(MBModuleLogSeverityError, x)
+#define MBLogErrorString(x)         MBLogString(MBModuleLogSeverityError, x)

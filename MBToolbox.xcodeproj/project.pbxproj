@@ -95,7 +95,7 @@
 		3B58EA061A65BB5800FDCB66 /* UIFont+MBStringSizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B47588819C0DF8000619FF1 /* UIFont+MBStringSizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B6A2DDB1A71589B00A5ED84 /* NSData+MBStringConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B6A2DD91A71589B00A5ED84 /* NSData+MBStringConversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B6A2DDC1A71589B00A5ED84 /* NSData+MBStringConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A2DDA1A71589B00A5ED84 /* NSData+MBStringConversion.m */; };
-		3B79DED01B16D97D0031D15A /* MBLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B79DECF1B16D97D0031D15A /* MBLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B79DED91B174CD30031D15A /* MBModuleLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B79DED81B174CD30031D15A /* MBModuleLogMacros.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,7 +175,7 @@
 		3B6A2DD91A71589B00A5ED84 /* NSData+MBStringConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MBStringConversion.h"; sourceTree = "<group>"; };
 		3B6A2DDA1A71589B00A5ED84 /* NSData+MBStringConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MBStringConversion.m"; sourceTree = "<group>"; };
 		3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBStringFunctions.m"; sourceTree = "<group>"; };
-		3B79DECF1B16D97D0031D15A /* MBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBLog.h; sourceTree = "<group>"; };
+		3B79DED81B174CD30031D15A /* MBModuleLogMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBModuleLogMacros.h; sourceTree = "<group>"; };
 		3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBMessageDigest.m"; sourceTree = "<group>"; };
 		3B968EE0198FF28D0061DA66 /* Test-NSString+MBIndentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-NSString+MBIndentation.m"; sourceTree = "<group>"; };
 		3BAC5A5A19894520003005AC /* MBModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBModule.h; sourceTree = "<group>"; };
@@ -425,6 +425,7 @@
 				3BAC5A5B19894520003005AC /* MBModule.m */,
 				3BAC5A5C19894520003005AC /* MBModuleLog.h */,
 				3BAC5A5D19894520003005AC /* MBModuleLog.m */,
+				3B79DED81B174CD30031D15A /* MBModuleLogMacros.h */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -434,7 +435,6 @@
 			children = (
 				3BF2D491199C915B002F0639 /* MBAssert.h */,
 				3BF2D492199C915B002F0639 /* MBDebug.h */,
-				3B79DECF1B16D97D0031D15A /* MBLog.h */,
 				3BF2D493199C915B002F0639 /* MBRuntime.h */,
 			);
 			path = Common;
@@ -456,6 +456,7 @@
 				3B58E9E61A65BB5700FDCB66 /* MBThreadsafeCache.h in Headers */,
 				3B58E9E71A65BB5700FDCB66 /* MBAssert.h in Headers */,
 				3B58E9E81A65BB5700FDCB66 /* MBDebug.h in Headers */,
+				3B79DED91B174CD30031D15A /* MBModuleLogMacros.h in Headers */,
 				3B58E9E91A65BB5700FDCB66 /* MBRuntime.h in Headers */,
 				3B58E9EA1A65BB5700FDCB66 /* MBConcurrentReadWriteCoordinator.h in Headers */,
 				3B58E9EB1A65BB5700FDCB66 /* MBThreadLocalStorage.h in Headers */,
@@ -479,7 +480,6 @@
 				3B6A2DDB1A71589B00A5ED84 /* NSData+MBStringConversion.h in Headers */,
 				3B58E9FD1A65BB5700FDCB66 /* MBFilesystemOperations.h in Headers */,
 				3B58E9FE1A65BB5700FDCB66 /* MBOperationQueue.h in Headers */,
-				3B79DED01B16D97D0031D15A /* MBLog.h in Headers */,
 				3B58E9FF1A65BB5800FDCB66 /* MBRegexCache.h in Headers */,
 				3B58EA001A65BB5800FDCB66 /* NSString+MBRegex.h in Headers */,
 				3B58EA011A65BB5800FDCB66 /* MBService.h in Headers */,

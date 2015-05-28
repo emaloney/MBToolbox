@@ -75,7 +75,7 @@ MBImplementSingleton();
 
 - (NSData*) dataForOperation
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [_cache cacheDataFromObject:_cacheObject];
 }

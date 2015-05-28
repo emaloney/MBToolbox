@@ -51,7 +51,7 @@ MBImplementSingleton();
 
 - (void) startService
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     [UIDevice currentDevice].batteryMonitoringEnabled = YES;
     
@@ -69,7 +69,7 @@ MBImplementSingleton();
 
 - (void) stopService
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     [UIDevice currentDevice].batteryMonitoringEnabled = NO;
 
@@ -99,7 +99,7 @@ MBImplementSingleton();
 
 - (void) _batteryStateUpdated
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     MBBatteryState* state = [self currentBatteryState];
     if (state) {

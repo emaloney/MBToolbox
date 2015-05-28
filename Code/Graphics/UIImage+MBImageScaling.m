@@ -24,7 +24,7 @@
 
 - (nonnull UIImage*) imageScaledToSize:(CGSize)newSize quality:(CGInterpolationQuality)quality
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     if (CGSizeEqualToSize(self.size, newSize)) {
         // do nothing if size isn't different
@@ -42,7 +42,7 @@
 
 - (nonnull UIImage*) imageScaledToSize:(CGSize)newSize
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     return [self imageScaledToSize:newSize quality:kCGInterpolationDefault];
 }
@@ -53,7 +53,7 @@
 
 - (nonnull UIImage*) imageScaledByFactor:(CGFloat)scale quality:(CGInterpolationQuality)quality
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     if (scale == 1.0) {
         // do nothing if scale wouldn't change image size
@@ -67,7 +67,7 @@
 
 - (nonnull UIImage*) imageScaledByFactor:(CGFloat)scale
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     return [self imageScaledByFactor:scale quality:kCGInterpolationDefault];
 }

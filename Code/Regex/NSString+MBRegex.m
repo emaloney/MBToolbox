@@ -29,7 +29,7 @@
                              range:(NSRange)range
                              error:(NSErrorPtrPtr)errPtr
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -103,14 +103,14 @@
 
 - (nonnull NSString*) escapedRegexPattern
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [NSRegularExpression escapedPatternForString:self];
 }
 
 - (nonnull NSString*) escapedRegexTemplate
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [NSRegularExpression escapedTemplateForString:self];
 }
@@ -124,7 +124,7 @@
                                  range:(NSRange)range
                                  error:(NSErrorPtrPtr)errPtr
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -146,7 +146,7 @@
                                options:(NSRegularExpressionOptions)options
                                  range:(NSRange)range
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     return [self matchesWithRegex:pattern options:options range:NSMakeRange(0, self.length) error:nil];
 }
@@ -201,7 +201,7 @@
                               range:(NSRange)range
                               error:(NSErrorPtrPtr)errPtr
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -246,7 +246,7 @@
                                              range:(NSRange)range
                                              error:(NSErrorPtrPtr)errPtr
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -291,7 +291,7 @@
                              range:(NSRange)range
                              error:(NSErrorPtrPtr)errPtr
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -337,7 +337,7 @@
                                                range:(NSRange)range
                                                error:(NSErrorPtrPtr)errPtr
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 

@@ -41,7 +41,7 @@
 
 - (void) read:(nonnull void (^)())op
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     dispatch_sync(_queue, op);
 }
@@ -52,7 +52,7 @@
 
 - (void) enqueueWrite:(nonnull void (^)())op
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     dispatch_barrier_async(_queue, op);
 }

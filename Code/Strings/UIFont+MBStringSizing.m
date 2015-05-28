@@ -22,8 +22,8 @@
 - (CGSize) sizeString:(nonnull NSString*)str
              maxWidth:(CGFloat)maxWidth
 {
-    MBLogTraceVerbose();
-    
+    MBLogVerboseTrace();
+
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, CGFLOAT_MAX}
               lineBreakMode:NSLineBreakByWordWrapping
@@ -34,8 +34,8 @@
              maxWidth:(CGFloat)maxWidth
             maxHeight:(CGFloat)maxHeight
 {
-    MBLogTraceVerbose();
-    
+    MBLogVerboseTrace();
+
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, maxHeight}
               lineBreakMode:NSLineBreakByWordWrapping
@@ -45,8 +45,8 @@
 - (CGSize) sizeString:(nonnull NSString*)str
               maxSize:(CGSize)maxSize
 {
-    MBLogTraceVerbose();
-    
+    MBLogVerboseTrace();
+
     return [self sizeString:str
                     maxSize:maxSize
               lineBreakMode:NSLineBreakByWordWrapping
@@ -57,8 +57,8 @@
              maxWidth:(CGFloat)maxWidth
            fractional:(BOOL)allowFractionalSize
 {
-    MBLogTraceVerbose();
-    
+    MBLogVerboseTrace();
+
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, CGFLOAT_MAX}
               lineBreakMode:NSLineBreakByWordWrapping
@@ -70,7 +70,7 @@
             maxHeight:(CGFloat)maxHeight
            fractional:(BOOL)allowFractionalSize
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, maxHeight}
@@ -82,7 +82,7 @@
               maxSize:(CGSize)maxSize
            fractional:(BOOL)allowFractionalSize
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:maxSize
@@ -94,7 +94,7 @@
              maxWidth:(CGFloat)maxWidth
         lineBreakMode:(NSLineBreakMode)lineMode
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, CGFLOAT_MAX}
@@ -107,7 +107,7 @@
             maxHeight:(CGFloat)maxHeight
         lineBreakMode:(NSLineBreakMode)lineMode
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, maxHeight}
@@ -119,7 +119,7 @@
               maxSize:(CGSize)maxSize
         lineBreakMode:(NSLineBreakMode)lineMode
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:maxSize
@@ -132,7 +132,7 @@
         lineBreakMode:(NSLineBreakMode)lineMode
            fractional:(BOOL)allowFractionalSize
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, CGFLOAT_MAX}
@@ -146,7 +146,7 @@
         lineBreakMode:(NSLineBreakMode)lineMode
            fractional:(BOOL)allowFractionalSize
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, maxHeight}
@@ -159,7 +159,7 @@
         lineBreakMode:(NSLineBreakMode)lineMode
            fractional:(BOOL)allowFractionalSize
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     NSMutableParagraphStyle* style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     style.lineBreakMode = NSLineBreakByWordWrapping;
@@ -174,7 +174,7 @@
              maxWidth:(CGFloat)maxWidth
        paragraphStyle:(nonnull NSParagraphStyle*)style
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, CGFLOAT_MAX}
@@ -187,7 +187,7 @@
             maxHeight:(CGFloat)maxHeight
        paragraphStyle:(nonnull NSParagraphStyle*)style
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, maxHeight}
@@ -199,7 +199,7 @@
               maxSize:(CGSize)maxSize
        paragraphStyle:(nonnull NSParagraphStyle*)style
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:maxSize
@@ -212,7 +212,7 @@
        paragraphStyle:(nonnull NSParagraphStyle*)style
            fractional:(BOOL)allowFractionalSize
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, CGFLOAT_MAX}
@@ -226,7 +226,7 @@
        paragraphStyle:(nonnull NSParagraphStyle*)style
            fractional:(BOOL)allowFractionalSize
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     return [self sizeString:str
                     maxSize:(CGSize){maxWidth, maxHeight}
@@ -239,7 +239,7 @@
        paragraphStyle:(nonnull NSParagraphStyle*)style
            fractional:(BOOL)allowFractionalSize
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     CGRect rect = [str boundingRectWithSize:maxSize
                                     options:(NSStringDrawingUsesFontLeading

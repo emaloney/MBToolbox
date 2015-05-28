@@ -42,7 +42,7 @@ MBImplementSingleton();
                                                        options:(NSRegularExpressionOptions)options
                                                          error:(NSErrorPtrPtr)errPtr
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSString* cacheKey = [NSString stringWithFormat:@"%@ 0x%lx", pattern, (unsigned long)options];
     NSRegularExpression* regex = nil;

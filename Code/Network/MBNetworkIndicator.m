@@ -52,7 +52,7 @@ MBImplementSingleton();
 
 - (void) operationStarted
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     OSAtomicIncrement32Barrier(&_operationCount);
 
@@ -77,7 +77,7 @@ MBImplementSingleton();
 
 - (void) operationsFinished:(int32_t)count
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     OSAtomicAdd32Barrier(-count, &_operationCount);
     
@@ -114,7 +114,7 @@ MBImplementSingleton();
 
 - (void) operationStarted
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     _operationCount++;
 
@@ -123,7 +123,7 @@ MBImplementSingleton();
 
 - (void) operationFinished
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     if (_operationCount > 0) {
         _operationCount--;
@@ -134,7 +134,7 @@ MBImplementSingleton();
 
 - (void) cancelOperations
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     if (_operationCount > 0) {
         [[MBNetworkIndicatorCoordinator instance] operationsFinished:_operationCount];

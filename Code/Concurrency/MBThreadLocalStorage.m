@@ -44,7 +44,7 @@
 
 + (nullable id) valueForClass:(nonnull Class)cls withKey:(nullable NSString*)key
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSString* storageKey = [self _storageKeyForClass:cls withUserKey:key];
     
@@ -58,7 +58,7 @@
 
 + (void) setValue:(nullable id)val forClass:(nonnull Class)cls withKey:(nullable NSString*)key
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSString* storageKey = [self _storageKeyForClass:cls withUserKey:key];
     
@@ -81,7 +81,7 @@
                            withKey:(nullable NSString*)key
                  usingInstantiator:(__nonnull id (^ __nonnull)())instantiator
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSString* storageKey = [self _storageKeyForClass:cls withUserKey:key];
     

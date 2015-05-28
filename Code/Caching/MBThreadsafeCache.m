@@ -70,7 +70,7 @@
 
 - (void) memoryWarning
 {
-	MBLogTraceDebug();
+	MBLogDebugTrace();
 	
 	[self clearMemoryCache];
 }
@@ -81,14 +81,14 @@
 
 - (void) lock
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     [_lock lock];
 }
 
 - (void) unlock
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     [_lock unlock];
 }
@@ -144,7 +144,7 @@
 
 - (BOOL) _isKeyInCacheProtected:(id)key
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     [_lock lock];
     @try {
@@ -201,7 +201,7 @@
 
 - (BOOL) _isKeyInCacheUnprotected:(id)key
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     [_lock lock];
     BOOL inCache = [self internalIsKeyInCache:key];
@@ -258,7 +258,7 @@
 
 - (void) clearMemoryCache
 {
-	MBLogTraceDebug();
+	MBLogDebugTrace();
 	
     if (_exceptionProtection) {
         [self _clearCacheProtected];
@@ -270,7 +270,7 @@
 
 - (BOOL) isKeyInCache:(nonnull id)key
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     if (_exceptionProtection) {
         return [self _isKeyInCacheProtected:key];
@@ -282,7 +282,7 @@
 
 - (nullable id) objectForKey:(nonnull id)key
 {
-	MBLogTraceDebug();
+	MBLogDebugTrace();
 
     if (_exceptionProtection) {
         return [self _objectForKeyProtected:key];
@@ -294,7 +294,7 @@
 
 - (void) setObject:(nonnull id)obj forKey:(nonnull id)key
 {
-	MBLogTraceDebug();
+	MBLogDebugTrace();
     
     if (_exceptionProtection) {
         [self _setObjectProtected:obj forKey:key];
@@ -306,7 +306,7 @@
 
 - (void) removeObjectForKey:(nonnull id)key
 {
-	MBLogTraceDebug();
+	MBLogDebugTrace();
 
     if (_exceptionProtection) {
         [self _removeObjectForKeyProtected:key];

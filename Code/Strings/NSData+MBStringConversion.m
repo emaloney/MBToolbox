@@ -21,7 +21,7 @@
 
 + (nullable NSData*) dataWithHexString:(nonnull NSString*)hexString
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     NSData *data;
     if (hexString) {
@@ -47,7 +47,7 @@
 
 - (nonnull NSString*) hexString
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     const unsigned char *input = [self bytes];
     long buflen = [self length] * 2;                // Each char is 1b or 0-255 which is hex '00'-'FF'
@@ -68,7 +68,7 @@
 
 - (nullable NSString*) toStringUsingEncoding:(NSStringEncoding)encoding
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [[NSString alloc] initWithData:self encoding:encoding];
 }

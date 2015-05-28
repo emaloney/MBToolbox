@@ -24,7 +24,7 @@
 
 - (nonnull UIImage*) snapshotImage
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0.0);
     [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:NO];
@@ -35,14 +35,14 @@
 
 - (nonnull CIImage*) coreImageSnapshot
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [CIImage imageWithCGImage:[self coreGraphicsSnapshot]];
 }
 
 - (nonnull CGImageRef) coreGraphicsSnapshot
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [self snapshotImage].CGImage;
 }

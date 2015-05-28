@@ -80,7 +80,7 @@
 
 + (nonnull CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius insetBy:(CGFloat)inset
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     if (inset) {
         rect = CGRectInset(rect, inset, inset);

@@ -107,14 +107,14 @@
 
 + (nullable instancetype) bitmapWithColumns:(NSUInteger)cols rows:(NSUInteger)rows
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [self bitmapWithSize:(CGSize){cols, rows}];
 }
 
 + (nullable instancetype) bitmapWithSize:(CGSize)size
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     
@@ -133,7 +133,7 @@
                               colorSpace:(nonnull CGColorSpaceRef)space
                               bitmapInfo:(CGBitmapInfo)info
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSUInteger channelCount = 0;
     NSUInteger bytesPerPixel = 0;
@@ -165,14 +165,14 @@
 
 + (nullable instancetype) bitmapWithUIImage:(nonnull UIImage*)image
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [self bitmapWithCGImage:image.CGImage];
 }
 
 + (nullable instancetype) bitmapWithCGImage:(nonnull CGImageRef)image
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSUInteger rows = CGImageGetHeight(image);
     NSUInteger cols = CGImageGetWidth(image);
@@ -206,7 +206,7 @@
 
 + (nullable instancetype) bitmapWithBitmapContext:(nonnull CGContextRef)bitmap
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [[self alloc] initWithBitmapContext:bitmap];
 }
@@ -224,7 +224,7 @@
                 forColorSpace:(nonnull CGColorSpaceRef)colorSpace
               usingBitmapInfo:(CGBitmapInfo)bitmapInfo
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
     
     MBBitmapPixelType type = MBBitmapPixelTypeUnknown;
     NSUInteger channels = 0;
@@ -511,45 +511,45 @@
 
 - (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixel atColumn:(NSUInteger)col row:(NSUInteger)row
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
 
     return [self _getPixel:pixel atLocation:[self _locationOfPixelAtColumn:col row:row]];
 }
 
 - (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixel atPoint:(CGPoint)point
 {
-    MBLogTraceVerbose();
-    
+    MBLogVerboseTrace();
+
     return [self _getPixel:pixel atLocation:[self _locationOfPixelAtColumn:(NSUInteger)round(point.x)
                                                                        row:(NSUInteger)round(point.y)]];
 }
 
 - (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixel atIndex:(NSUInteger)index
 {
-    MBLogTraceVerbose();
-    
+    MBLogVerboseTrace();
+
     return [self _getPixel:pixel atLocation:[self _locationOfPixelAtIndex:index]];
 }
 
 - (BOOL) setPixel:(MBBitmapPixel)pixel atColumn:(NSUInteger)col row:(NSUInteger)row
 {
-    MBLogTraceVerbose();
+    MBLogVerboseTrace();
 
     return [self _setPixel:pixel atLocation:[self _locationOfPixelAtColumn:col row:row]];
 }
 
 - (BOOL) setPixel:(MBBitmapPixel)pixel atPoint:(CGPoint)point
 {
-    MBLogTraceVerbose();
-    
+    MBLogVerboseTrace();
+
     return [self _setPixel:pixel atLocation:[self _locationOfPixelAtColumn:(NSUInteger)round(point.x)
                                                                        row:(NSUInteger)round(point.y)]];
 }
 
 - (BOOL) setPixel:(MBBitmapPixel)pixel atIndex:(NSUInteger)index
 {
-    MBLogTraceVerbose();
-    
+    MBLogVerboseTrace();
+
     return [self _setPixel:pixel atLocation:[self _locationOfPixelAtIndex:index]];
 }
 
@@ -559,7 +559,7 @@
 
 - (UIImage*) image
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     CGImageRef imageRef = CGBitmapContextCreateImage(_bitmap);
     UIImage* image = [UIImage imageWithCGImage:imageRef];

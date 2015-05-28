@@ -41,21 +41,21 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 + (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     return [NSError errorWithDomain:kMBErrorDomain code:code userInfo:nil];
 }
 
 + (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfo:(nullable NSDictionary*)dict
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [NSError errorWithDomain:kMBErrorDomain code:code userInfo:dict];
 }
 
 + (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(nonnull NSString*)key value:(nonnull id)val
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [NSError errorWithDomain:kMBErrorDomain
                                code:code
@@ -69,7 +69,7 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 + (nonnull NSError*) mockingbirdErrorWithDescription:(nonnull NSString*)desc code:(NSInteger)code
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     return [NSError errorWithDomain:kMBErrorDomain
                                code:code
@@ -78,7 +78,7 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 + (nonnull NSError*) mockingbirdErrorWithDescription:(nonnull NSString*)desc code:(NSInteger)code userInfoKey:(nonnull NSString*)key value:(id)val
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     return [NSError errorWithDomain:kMBErrorDomain
                                code:code
@@ -88,7 +88,7 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 + (nonnull NSError*) mockingbirdErrorWithException:(nonnull NSException*)ex
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSMutableDictionary* userInfo = [NSMutableDictionary dictionary];
     userInfo[kMBErrorUserInfoKeyException] = ex;
@@ -103,7 +103,7 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 - (nonnull NSError*) errorByAddingOrRemovingUserInfoKey:(nonnull NSString*)key value:(nullable id)val
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     NSMutableDictionary* userInfo = [self.userInfo mutableCopy];
     if (!userInfo) {

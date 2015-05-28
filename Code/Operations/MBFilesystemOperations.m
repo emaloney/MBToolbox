@@ -73,7 +73,7 @@ MBImplementSingleton();
 
 - (nullable id) readObjectFromFile:(nonnull NSString*)path error:(inout NSError**)err
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     NSData* fileData = [NSData dataWithContentsOfFile:path options:NSDataReadingMapped error:err];
     if (fileData) {
@@ -85,7 +85,7 @@ MBImplementSingleton();
 
 - (void) readCompletedWithObject:(nonnull id)readObj
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     if ([_delegate respondsToSelector:@selector(readCompletedWithObject:forOperation:)]) {
         [self performSelectorOnMainThread:@selector(_delegateReadCompletedWithObject:) withObject:readObj waitUntilDone:NO];
@@ -94,7 +94,7 @@ MBImplementSingleton();
 
 - (void) readFailedWithError:(nonnull NSError*)err
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     if ([_delegate respondsToSelector:@selector(readFailedWithError:forOperation:)]) {
         [self performSelectorOnMainThread:@selector(_delegateReadFailedWithError:) withObject:err waitUntilDone:NO];
@@ -107,7 +107,7 @@ MBImplementSingleton();
 
 - (void) main
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     @autoreleasepool {
         @try {
@@ -186,7 +186,7 @@ MBImplementSingleton();
 
 - (void) main
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
 
     @autoreleasepool {
         @try {
@@ -271,7 +271,7 @@ MBImplementSingleton();
 
 - (void) main
 {
-    MBLogTraceDebug();
+    MBLogDebugTrace();
     
     if (_pathExists) {
         @autoreleasepool {

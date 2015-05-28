@@ -38,4 +38,16 @@ Old Macro|New Macro|Comments
 `verboseDebugObj(`_object_`)`|`MBLogVerboseObject(`_object_`)`|*see above*
 `verboseDebugStr(`_string_`)`|`MBLogVerboseString(`_string_`)`|*see above*
 
+- The debug breakpoint triggering macros in `MBDebug.h` have been renamed to adopt the `MB` naming prefix:
+
+Old Macro|New Macro
+---------|---------
+`triggerDebugBreak()`|`MBTriggerDebugBreak()`
+`triggerDebugBreakIf(`_condition_`)`|`MBTriggerDebugBreakIf(`_condition_`)`
+`triggerDebugBreakMsg(`_message_`)`|`MBTriggerDebugBreakMsg(`_message_`)`
+
 - The `exceptionLog(`_exception_`)` macro has been removed and has not been replaced with a direct analogue; use `MBLogErrorObject(`_exception_`)` instead.
+
+- The code profiling macros `MBProfilingTimerStart()`, `MBProfilingTimerEnd()` and `MBProfilingTimerRestart()` have been removed from `MBDebug.h`. No replacements will be provided.
+
+

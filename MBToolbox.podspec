@@ -99,7 +99,7 @@ Pod::Spec.new do |s|
 	# specifies the MBThreadLocalStorage class
 	#
 	s.subspec 'ThreadLocalStorage' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Concurrency/MBThreadLocalStorage.{h,m}'
 		ss.public_header_files = 'Code/Concurrency/MBThreadLocalStorage.h'
 	end
@@ -140,7 +140,7 @@ Pod::Spec.new do |s|
 	# specifies the MBFieldListFormatter class
 	#
 	s.subspec 'FieldListFormatter' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Formatting/MBFieldListFormatter.{h,m}'
 		ss.public_header_files = 'Code/Formatting/MBFieldListFormatter.h'
 	end
@@ -358,6 +358,7 @@ Pod::Spec.new do |s|
 	# protocol
 	#
 	s.subspec 'ServiceManager' do |ss|
+		ss.dependency 'MBToolbox/Module'
 		ss.dependency 'MBToolbox/Singleton'
 		ss.source_files = 'Code/Services/*.{h,m}'
 		ss.public_header_files = 'Code/Services/*.h'
@@ -398,7 +399,7 @@ Pod::Spec.new do |s|
 	# between NSString and NSData instances
 	#
 	s.subspec 'StringConversions-NSData' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Strings/NSData+MBStringConversion.{h,m}'
 		ss.public_header_files = 'Code/Strings/NSData+MBStringConversion.h'
 	end
@@ -409,7 +410,7 @@ Pod::Spec.new do |s|
 	# prefixes
 	#
 	s.subspec 'Indentation-NSString' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Strings/NSString+MBIndentation.{h,m}'
 		ss.public_header_files = 'Code/Strings/NSString+MBIndentation.h'
 	end
@@ -419,7 +420,7 @@ Pod::Spec.new do |s|
 	# methods
 	#
 	s.subspec 'StringSizing-UIFont' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Strings/UIFont+MBStringSizing.{h,m}'
 		ss.public_header_files = 'Code/Strings/UIFont+MBStringSizing.h'
 	end

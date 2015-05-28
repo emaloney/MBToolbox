@@ -25,61 +25,14 @@
 #define DEBUG_MODE_VERBOSE              DEBUG_FLAG(DEBUG_LOCAL && DEBUG_VERBOSE)
 
 /******************************************************************************/
-#pragma mark Logging (low-level)
-/******************************************************************************/
-
-#if defined(__OBJC__)
-// applies when compiled into an Objective-C app
-#import "MBModuleLog.h"
-#define MBLog(severity, ...)        [[MBModuleLog loggerClass] logMessage:[NSString stringWithFormat:__VA_ARGS__] \
-                                                               atSeverity:severity \
-                                                            callingObject:self \
-                                                         callingSignature:[NSString stringWithUTF8String:__PRETTY_FUNCTION__] \
-                                                          callingFilePath:[NSString stringWithUTF8String:__FILE__] \
-                                                          callingFileLine:__LINE__]
-#else
-// applies when compiled into a C/C++ app
-#define MBLog(severity, ...)        NSLog(@"(%@:%u) %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:__VA_ARGS__])
-#endif
-
-#define MBLogTrace(severity)        MBLog(severity, @"%s", __PRETTY_FUNCTION__)
-
-#define MBLogObject(severity, x)    MBLog(severity, @"%@ = %@@%p: %@", @"" # x, [x class], x, [x description])
-
-#define MBLogString(severity, x)    MBLog(severity, @"\"%@\" (length: %lu)", x, (unsigned long)[x length])
-
-/******************************************************************************/
-#pragma mark Logging (high-level)
-/******************************************************************************/
-
-#define MBLogVerbose(...)           MBLog(MBModuleLogSeverityVerbose, __VA_ARGS__)
-#define MBLogDebug(...)             MBLog(MBModuleLogSeverityDebug, __VA_ARGS__)
-#define MBLogInfo(...)              MBLog(MBModuleLogSeverityInfo, __VA_ARGS__)
-#define MBLogWarning(...)           MBLog(MBModuleLogSeverityWarning, __VA_ARGS__)
-#define MBLogError(...)             MBLog(MBModuleLogSeverityError, __VA_ARGS__)
-
-#define MBLogTraceVerbose()         MBLogTrace(MBModuleLogSeverityVerbose)
-#define MBLogTraceDebug()           MBLogTrace(MBModuleLogSeverityDebug)
-#define MBLogTraceInfo()            MBLogTrace(MBModuleLogSeverityInfo)
-#define MBLogTraceWarning()         MBLogTrace(MBModuleLogSeverityWarning)
-#define MBLogTraceError()           MBLogTrace(MBModuleLogSeverityError)
-
-#define MBLogObjectVerbose(x)       MBLogObject(MBModuleLogSeverityVerbose, x)
-#define MBLogObjectDebug(x)         MBLogObject(MBModuleLogSeverityDebug, x)
-#define MBLogObjectInfo(x)          MBLogObject(MBModuleLogSeverityInfo, x)
-#define MBLogObjectWarning(x)       MBLogObject(MBModuleLogSeverityWarning, x)
-#define MBLogObjectError(x)         MBLogObject(MBModuleLogSeverityError, x)
-
-#define MBLogStringVerbose(x)       MBLogString(MBModuleLogSeverityVerbose, x)
-#define MBLogStringDebug(x)         MBLogString(MBModuleLogSeverityDebug, x)
-#define MBLogStringInfo(x)          MBLogString(MBModuleLogSeverityInfo, x)
-#define MBLogStringWarning(x)       MBLogString(MBModuleLogSeverityWarning, x)
-#define MBLogStringError(x)         MBLogString(MBModuleLogSeverityError, x)
-
-/******************************************************************************/
 #pragma mark Legacy logging macros (deprecated)
 /******************************************************************************/
 
+#import "MBLog.h"
+
+// we're keeping these in this .h file instead of moving them to
+// MBLog.h to avoid giving people the pain of having to shuffle
+// around their #imports as a result of that change.
 #define consoleLog(...)             MBLogInfo(__VA_ARGS__)
 #define consoleTrace()              MBLogTraceInfo()
 #define consoleObj(x)               MBLogObjectInfo(x)
@@ -97,7 +50,7 @@
 #define verboseDebugLog(...)        if (DEBUG_MODE_VERBOSE) MBLogVerbose(__VA_ARGS__)
 #define verboseDebugTrace()         if (DEBUG_MODE_VERBOSE) MBLogTraceVerbose()
 #define verboseDebugObj(x)          if (DEBUG_MODE_VERBOSE) MBLogObjectVerbose(x)
-#define verboseDebugStr(x)          if (DEBUG_MODE_VERBOSE) MBLogStringverbose(x)
+#define verboseDebugStr(x)          if (DEBUG_MODE_VERBOSE) MBLogStringVerbose(x)
 
 /******************************************************************************/
 #pragma mark Triggering the debugger

@@ -95,7 +95,7 @@
 		3B58EA061A65BB5800FDCB66 /* UIFont+MBStringSizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B47588819C0DF8000619FF1 /* UIFont+MBStringSizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B6A2DDB1A71589B00A5ED84 /* NSData+MBStringConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B6A2DD91A71589B00A5ED84 /* NSData+MBStringConversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B6A2DDC1A71589B00A5ED84 /* NSData+MBStringConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A2DDA1A71589B00A5ED84 /* NSData+MBStringConversion.m */; };
-		3B79DED91B174CD30031D15A /* MBModuleLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B79DED81B174CD30031D15A /* MBModuleLogMacros.h */; };
+		3B79DED91B174CD30031D15A /* MBModuleLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B79DED81B174CD30031D15A /* MBModuleLogMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

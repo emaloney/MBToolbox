@@ -34,7 +34,6 @@ FOUNDATION_EXPORT const unsigned char MBToolboxVersionString[];
 #import <MBToolbox/MBThreadsafeCache.h>
 #import <MBToolbox/MBAssert.h>
 #import <MBToolbox/MBDebug.h>
-#import <MBToolbox/MBLog.h>
 #import <MBToolbox/MBRuntime.h>
 #import <MBToolbox/MBConcurrentReadWriteCoordinator.h>
 #import <MBToolbox/NSError+MBToolbox.h>
@@ -52,6 +51,7 @@ FOUNDATION_EXPORT const unsigned char MBToolboxVersionString[];
 #import <MBToolbox/NSString+MBMessageDigest.h>
 #import <MBToolbox/MBModule.h>
 #import <MBToolbox/MBModuleLog.h>
+#import <MBToolbox/MBModuleLogMacros.h>
 #import <MBToolbox/MBNetworkIndicator.h>
 #import <MBToolbox/MBNetworkMonitor.h>
 #import <MBToolbox/MBFilesystemOperations.h>

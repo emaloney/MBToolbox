@@ -43,14 +43,14 @@ typedef NS_ENUM(NSUInteger, MBModuleLogSeverity) {
 
 /******************************************************************************/
 #pragma mark -
-#pragma mark MBModuleLogger protocol
+#pragma mark MBModuleLogRecorder protocol
 /******************************************************************************/
 
 /*!
  This protocol is adopted by classes that wish to be used as loggers by the
  `MBModuleLog`.
  */
-@protocol MBModuleLogger <NSObject>
+@protocol MBModuleLogRecorder <NSObject>
 
 /*!
  Records the log message to the underlying logging subsystem. 
@@ -88,10 +88,10 @@ typedef NS_ENUM(NSUInteger, MBModuleLogSeverity) {
  Instances of this class are used to issue log messages associated with a 
  given `MBModule`.
  */
-@interface MBModuleLog : NSObject < MBModuleLogger >
+@interface MBModuleLog : NSObject < MBModuleLogRecorder >
 
 /*******************************************************************************
- @name MBModuleLogger support
+ @name MBModuleLogRecorder support
  ******************************************************************************/
 
 /*!
@@ -99,16 +99,16 @@ typedef NS_ENUM(NSUInteger, MBModuleLogSeverity) {
  default, `MBModuleLog` is the logger class, unless overridden by a call
  to this method.
  
- @param     loggerClass The `Class` implementing `MBModuleLogger` that
+ @param     logRecorderClass The `Class` implementing `MBModuleLogRecorder` that
             should be used as the logger. If `nil` is passed, the value is
             reset to the default of `MBModuleLog`.
  */
-+ (void) setLoggerClass:(nullable Class<MBModuleLogger>)loggerClass;
++ (void) setLogRecorderClass:(nullable Class<MBModuleLogRecorder>)logRecorderClass;
 
 /*!
  Returns the logger class used to log messages through `MBModuleLog`.
  */
-+ (nonnull Class<MBModuleLogger>) loggerClass;
++ (nonnull Class<MBModuleLogRecorder>) logRecorderClass;
 
 /*******************************************************************************
  @name Object lifecycle

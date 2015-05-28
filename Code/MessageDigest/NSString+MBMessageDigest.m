@@ -8,7 +8,7 @@
 
 #import "NSString+MBMessageDigest.h"
 #import "MBMessageDigest.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 

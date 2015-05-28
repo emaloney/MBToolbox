@@ -6,8 +6,9 @@
 //  Copyright (c) 2010 Gilt Groupe. All rights reserved.
 //
 
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 #import "NSData+MBStringConversion.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
@@ -20,7 +21,7 @@
 
 + (nullable NSData*) dataWithHexString:(nonnull NSString*)hexString
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     NSData *data;
     if (hexString) {
@@ -46,7 +47,7 @@
 
 - (nonnull NSString*) hexString
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     const unsigned char *input = [self bytes];
     long buflen = [self length] * 2;                // Each char is 1b or 0-255 which is hex '00'-'FF'
@@ -67,7 +68,7 @@
 
 - (nullable NSString*) toStringUsingEncoding:(NSStringEncoding)encoding
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [[NSString alloc] initWithData:self encoding:encoding];
 }

@@ -10,7 +10,7 @@
 
 #import "MBBatteryMonitor.h"
 #import "MBEvents.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL		0
 
@@ -51,7 +51,7 @@ MBImplementSingleton();
 
 - (void) startService
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     [UIDevice currentDevice].batteryMonitoringEnabled = YES;
     
@@ -69,7 +69,7 @@ MBImplementSingleton();
 
 - (void) stopService
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     [UIDevice currentDevice].batteryMonitoringEnabled = NO;
 
@@ -99,14 +99,14 @@ MBImplementSingleton();
 
 - (void) _batteryStateUpdated
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     MBBatteryState* state = [self currentBatteryState];
     if (state) {
         [MBEvents postEvent:kMBBatteryMonitorUpdateEvent withObject:state];
     }
     else {
-        errorLog(@"Won't post %@ notification because the battery state or level is an unexpected value", kMBBatteryMonitorUpdateEvent);
+        MBLogError(@"Won't post %@ notification because the battery state or level is an unexpected value", kMBBatteryMonitorUpdateEvent);
     }
 }
 

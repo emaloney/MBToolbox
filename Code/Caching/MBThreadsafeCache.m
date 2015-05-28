@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import "MBThreadsafeCache.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
@@ -69,7 +70,7 @@
 
 - (void) memoryWarning
 {
-	debugTrace();
+	MBLogTraceDebug();
 	
 	[self clearMemoryCache];
 }
@@ -80,14 +81,14 @@
 
 - (void) lock
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     [_lock lock];
 }
 
 - (void) unlock
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     [_lock unlock];
 }
@@ -143,7 +144,7 @@
 
 - (BOOL) _isKeyInCacheProtected:(id)key
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     [_lock lock];
     @try {
@@ -200,7 +201,7 @@
 
 - (BOOL) _isKeyInCacheUnprotected:(id)key
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     [_lock lock];
     BOOL inCache = [self internalIsKeyInCache:key];
@@ -257,7 +258,7 @@
 
 - (void) clearMemoryCache
 {
-	debugTrace();
+	MBLogTraceDebug();
 	
     if (_exceptionProtection) {
         [self _clearCacheProtected];
@@ -269,7 +270,7 @@
 
 - (BOOL) isKeyInCache:(nonnull id)key
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     if (_exceptionProtection) {
         return [self _isKeyInCacheProtected:key];
@@ -281,7 +282,7 @@
 
 - (nullable id) objectForKey:(nonnull id)key
 {
-	debugTrace();
+	MBLogTraceDebug();
 
     if (_exceptionProtection) {
         return [self _objectForKeyProtected:key];
@@ -293,7 +294,7 @@
 
 - (void) setObject:(nonnull id)obj forKey:(nonnull id)key
 {
-	debugTrace();
+	MBLogTraceDebug();
     
     if (_exceptionProtection) {
         [self _setObjectProtected:obj forKey:key];
@@ -305,7 +306,7 @@
 
 - (void) removeObjectForKey:(nonnull id)key
 {
-	debugTrace();
+	MBLogTraceDebug();
 
     if (_exceptionProtection) {
         [self _removeObjectForKeyProtected:key];

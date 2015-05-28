@@ -7,7 +7,7 @@
 //
 
 #import "UIView+MBSnapshotImage.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL             0
 
@@ -24,7 +24,7 @@
 
 - (nonnull UIImage*) snapshotImage
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0.0);
     [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:NO];
@@ -35,14 +35,14 @@
 
 - (nonnull CIImage*) coreImageSnapshot
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [CIImage imageWithCGImage:[self coreGraphicsSnapshot]];
 }
 
 - (nonnull CGImageRef) coreGraphicsSnapshot
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [self snapshotImage].CGImage;
 }

@@ -13,11 +13,11 @@
 #import "NSString+MBIndentation.h"
 #import "MBThreadLocalStorage.h"
 #import "MBConcurrentReadWriteCoordinator.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
-static Class<MBModuleLogger> s_logger = nil;
+static Class<MBModuleLogRecorder> s_logger = nil;
 static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 
 /******************************************************************************/
@@ -39,20 +39,20 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
     }
 }
 
-+ (void) setLoggerClass:(nullable Class<MBModuleLogger>)loggerClass
++ (void) setLogRecorderClass:(nullable Class<MBModuleLogRecorder>)logRecorderClass
 {
     [s_readerWriter enqueueWrite:^{
-        if (loggerClass) {
-            s_logger = loggerClass;
+        if (logRecorderClass) {
+            s_logger = logRecorderClass;
         } else {
             s_logger = [MBModuleLog class];
         }
     }];
 }
 
-+ (nonnull Class<MBModuleLogger>) loggerClass
++ (nonnull Class<MBModuleLogRecorder>) logRecorderClass
 {
-    __block Class<MBModuleLogger> logger = nil;
+    __block Class<MBModuleLogRecorder> logger = nil;
     [s_readerWriter read:^{
         logger = s_logger;
     }];
@@ -133,7 +133,7 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 
 - (void) _memoryWarning
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     [MBThreadLocalStorage setValue:nil forClass:[self class]];
 }

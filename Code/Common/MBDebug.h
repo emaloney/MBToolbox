@@ -25,34 +25,6 @@
 #define DEBUG_MODE_VERBOSE              DEBUG_FLAG(DEBUG_LOCAL && DEBUG_VERBOSE)
 
 /******************************************************************************/
-#pragma mark Legacy logging macros (deprecated)
-/******************************************************************************/
-
-#import "MBLog.h"
-
-// we're keeping these in this .h file instead of moving them to
-// MBLog.h to avoid giving people the pain of having to shuffle
-// around their #imports as a result of that change.
-#define consoleLog(...)             MBLogInfo(__VA_ARGS__)
-#define consoleTrace()              MBLogTraceInfo()
-#define consoleObj(x)               MBLogObjectInfo(x)
-#define consoleStr(x)               MBLogStringInfo(x)
-
-#define errorLog(...)               MBLogError(__VA_ARGS__)
-#define errorObj(x)                 MBLogObjectError(x)
-#define errorStr(x)                 MBLogStringError(x)
-
-#define debugLog(...)               if (DEBUG_MODE) MBLogDebug(__VA_ARGS__)
-#define debugTrace()                if (DEBUG_MODE) MBLogTraceDebug()
-#define debugObj(x)                 if (DEBUG_MODE) MBLogObjectDebug(x)
-#define debugStr(x)                 if (DEBUG_MODE) MBLogStringDebug(x)
-
-#define verboseDebugLog(...)        if (DEBUG_MODE_VERBOSE) MBLogVerbose(__VA_ARGS__)
-#define verboseDebugTrace()         if (DEBUG_MODE_VERBOSE) MBLogTraceVerbose()
-#define verboseDebugObj(x)          if (DEBUG_MODE_VERBOSE) MBLogObjectVerbose(x)
-#define verboseDebugStr(x)          if (DEBUG_MODE_VERBOSE) MBLogStringVerbose(x)
-
-/******************************************************************************/
 #pragma mark Triggering the debugger
 /******************************************************************************/
 

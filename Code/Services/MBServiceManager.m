@@ -7,7 +7,7 @@
 //
 
 #import "MBServiceManager.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL         0
 
@@ -44,7 +44,7 @@ MBImplementSingleton();
 {
     Class cls = NSClassFromString(serviceClassName);
     if (!cls) {
-        errorLog(@"Couldn't get Class for Service: %@", serviceClassName);
+        MBLogError(@"Couldn't get Class for Service: %@", serviceClassName);
         return nil;
     }
     return [self serviceForClass:cls];
@@ -52,21 +52,21 @@ MBImplementSingleton();
 
 - (id) serviceForClass:(Class)serviceClass
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     if (![serviceClass respondsToSelector:@selector(instance)]) {
-        errorLog(@"The %@ class must respond to +[%@ instance] to be a valid Service", serviceClass, serviceClass);
+        MBLogError(@"The %@ class must respond to +[%@ instance] to be a valid Service", serviceClass, serviceClass);
         return nil;
     }
     
     if (![serviceClass conformsToProtocol:@protocol(MBService)]) {
-        errorLog(@"The %@ class must implement the Service protocol", serviceClass);
+        MBLogError(@"The %@ class must implement the Service protocol", serviceClass);
         return nil;
     }
     
     id instance = [serviceClass instance];
     if (!instance) {
-        errorLog(@"The +[%@ instance] method for the Service returned nil", serviceClass);
+        MBLogError(@"The +[%@ instance] method for the Service returned nil", serviceClass);
     }
     
     return instance;
@@ -78,7 +78,7 @@ MBImplementSingleton();
 
 - (void) attachToService:(MBService*)service
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     if (service) {
         NSString* canonicalServiceName = [[service class] description];
@@ -120,7 +120,7 @@ MBImplementSingleton();
 
 - (void) detachFromService:(MBService*)service
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     if (service && [service respondsToSelector:@selector(stopService)]) {
         NSString* canonicalServiceName = [[service class] description];

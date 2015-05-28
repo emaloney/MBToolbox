@@ -7,7 +7,7 @@
 //
 
 #import "MBFormattedDescriptionObject.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
@@ -37,7 +37,7 @@
 
 - (void) dump
 {
-    consoleLog(@"%@", [self consoleDescription]);
+    MBLogInfo(@"%@", [self consoleDescription]);
 }
 
 - (nonnull NSString*) description

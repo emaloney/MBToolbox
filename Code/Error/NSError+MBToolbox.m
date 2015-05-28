@@ -7,7 +7,7 @@
 //
 
 #import "NSError+MBToolbox.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
@@ -41,21 +41,21 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 + (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     return [NSError errorWithDomain:kMBErrorDomain code:code userInfo:nil];
 }
 
 + (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfo:(nullable NSDictionary*)dict
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [NSError errorWithDomain:kMBErrorDomain code:code userInfo:dict];
 }
 
 + (nonnull NSError*) mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(nonnull NSString*)key value:(nonnull id)val
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [NSError errorWithDomain:kMBErrorDomain
                                code:code
@@ -69,7 +69,7 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 + (nonnull NSError*) mockingbirdErrorWithDescription:(nonnull NSString*)desc code:(NSInteger)code
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [NSError errorWithDomain:kMBErrorDomain
                                code:code
@@ -78,7 +78,7 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 + (nonnull NSError*) mockingbirdErrorWithDescription:(nonnull NSString*)desc code:(NSInteger)code userInfoKey:(nonnull NSString*)key value:(id)val
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     return [NSError errorWithDomain:kMBErrorDomain
                                code:code
@@ -88,7 +88,7 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 + (nonnull NSError*) mockingbirdErrorWithException:(nonnull NSException*)ex
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSMutableDictionary* userInfo = [NSMutableDictionary dictionary];
     userInfo[kMBErrorUserInfoKeyException] = ex;
@@ -103,7 +103,7 @@ const NSInteger kMBErrorMessageInDescription    	= 999;
 
 - (nonnull NSError*) errorByAddingOrRemovingUserInfoKey:(nonnull NSString*)key value:(nullable id)val
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     NSMutableDictionary* userInfo = [self.userInfo mutableCopy];
     if (!userInfo) {

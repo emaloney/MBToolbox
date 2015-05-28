@@ -8,7 +8,7 @@
 
 #import "NSString+MBRegex.h"
 #import "MBRegexCache.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
@@ -29,7 +29,7 @@
                              range:(NSRange)range
                              error:(NSErrorPtrPtr)errPtr
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -39,7 +39,7 @@
         if (errPtr) {
             *errPtr = err;
         } else {
-            errorLog(@"Error attempting to create regular expression: %@", err);
+            MBLogError(@"Error attempting to create regular expression: %@", err);
         }
         return 0;
     }
@@ -103,14 +103,14 @@
 
 - (nonnull NSString*) escapedRegexPattern
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [NSRegularExpression escapedPatternForString:self];
 }
 
 - (nonnull NSString*) escapedRegexTemplate
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [NSRegularExpression escapedTemplateForString:self];
 }
@@ -124,7 +124,7 @@
                                  range:(NSRange)range
                                  error:(NSErrorPtrPtr)errPtr
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -134,7 +134,7 @@
         if (errPtr) {
             *errPtr = err;
         } else {
-            errorLog(@"Error attempting to create regular expression: %@", err);
+            MBLogError(@"Error attempting to create regular expression: %@", err);
         }
         return nil;
     }
@@ -146,7 +146,7 @@
                                options:(NSRegularExpressionOptions)options
                                  range:(NSRange)range
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     return [self matchesWithRegex:pattern options:options range:NSMakeRange(0, self.length) error:nil];
 }
@@ -201,7 +201,7 @@
                               range:(NSRange)range
                               error:(NSErrorPtrPtr)errPtr
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -211,7 +211,7 @@
         if (errPtr) {
             *errPtr = err;
         } else {
-            errorLog(@"Error attempting to create regular expression: %@", err);
+            MBLogError(@"Error attempting to create regular expression: %@", err);
         }
         return 0;
     }
@@ -246,7 +246,7 @@
                                              range:(NSRange)range
                                              error:(NSErrorPtrPtr)errPtr
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -256,7 +256,7 @@
         if (errPtr) {
             *errPtr = err;
         } else {
-            errorLog(@"Error attempting to create regular expression: %@", err);
+            MBLogError(@"Error attempting to create regular expression: %@", err);
         }
         return nil;
     }
@@ -291,7 +291,7 @@
                              range:(NSRange)range
                              error:(NSErrorPtrPtr)errPtr
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -301,7 +301,7 @@
         if (errPtr) {
             *errPtr = err;
         } else {
-            errorLog(@"Error attempting to create regular expression: %@", err);
+            MBLogError(@"Error attempting to create regular expression: %@", err);
         }
         return NSMakeRange(NSNotFound, 0);
     }
@@ -337,7 +337,7 @@
                                                range:(NSRange)range
                                                error:(NSErrorPtrPtr)errPtr
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSError* err = nil;
     NSRegularExpression* regex = [MBRegexCache regularExpressionWithPattern:pattern 
@@ -347,7 +347,7 @@
         if (errPtr) {
             *errPtr = err;
         } else {
-            errorLog(@"Error attempting to create regular expression: %@", err);
+            MBLogError(@"Error attempting to create regular expression: %@", err);
         }
         return nil;
     }

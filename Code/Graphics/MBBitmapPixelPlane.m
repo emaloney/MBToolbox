@@ -7,7 +7,7 @@
 //
 
 #import "MBBitmapPixelPlane.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL         0
 #define DEBUG_VERBOSE       0
@@ -73,23 +73,23 @@
                 _sizeInBytes = _pixelCount * _bytesPerPixel;
                 _channelMaximumValue = kBitmapColorChannelMaximumValue;
                 
-                debugLog(@"pixelCount: %lu", (unsigned long)_pixelCount);
-                debugLog(@"columnCount: %lu", (unsigned long)_columnCount);
-                debugLog(@"rowCount: %lu", (unsigned long)_rowCount);
-                debugLog(@"channelsPerPixel: %lu", (unsigned long)_channelsPerPixel);
-                debugLog(@"channelMaximumValue: 0x%X", _channelMaximumValue);
-                debugLog(@"bytesPerPixel: %lu", (unsigned long)_bytesPerPixel);
-                debugLog(@"sizeInBytes: %lu", (unsigned long)_sizeInBytes);
-                debugLog(@"usesAlphaChannel: %s", (_usesAlphaChannel ? "YES" : "NO"));
-                debugLog(@"alphaFirst: %s", (_alphaFirst ? "YES" : "NO"));
-                debugLog(@"bigEndian: %s", (_bigEndian ? "YES" : "NO"));
+                MBLogDebug(@"pixelCount: %lu", (unsigned long)_pixelCount);
+                MBLogDebug(@"columnCount: %lu", (unsigned long)_columnCount);
+                MBLogDebug(@"rowCount: %lu", (unsigned long)_rowCount);
+                MBLogDebug(@"channelsPerPixel: %lu", (unsigned long)_channelsPerPixel);
+                MBLogDebug(@"channelMaximumValue: 0x%X", _channelMaximumValue);
+                MBLogDebug(@"bytesPerPixel: %lu", (unsigned long)_bytesPerPixel);
+                MBLogDebug(@"sizeInBytes: %lu", (unsigned long)_sizeInBytes);
+                MBLogDebug(@"usesAlphaChannel: %s", (_usesAlphaChannel ? "YES" : "NO"));
+                MBLogDebug(@"alphaFirst: %s", (_alphaFirst ? "YES" : "NO"));
+                MBLogDebug(@"bigEndian: %s", (_bigEndian ? "YES" : "NO"));
             }
         }
         else {
             errorMsg = [NSString stringWithFormat:@"Parameter passed to %@ initializer does not appear to be a bitmap context", [self class]];
         }
         if (errorMsg) {
-            errorLog(@"%@", errorMsg);
+            MBLogError(@"%@", errorMsg);
             return nil;
         }
     }
@@ -107,14 +107,14 @@
 
 + (nullable instancetype) bitmapWithColumns:(NSUInteger)cols rows:(NSUInteger)rows
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [self bitmapWithSize:(CGSize){cols, rows}];
 }
 
 + (nullable instancetype) bitmapWithSize:(CGSize)size
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     
@@ -133,7 +133,7 @@
                               colorSpace:(nonnull CGColorSpaceRef)space
                               bitmapInfo:(CGBitmapInfo)info
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSUInteger channelCount = 0;
     NSUInteger bytesPerPixel = 0;
@@ -156,7 +156,7 @@
         plane = [[self alloc] initWithBitmapContext:bitmap];
     }
     else {
-        errorLog(@"CGBitmapContextCreate failed for %@", [self class]);
+        MBLogError(@"CGBitmapContextCreate failed for %@", [self class]);
     }
     CGContextRelease(bitmap);
 
@@ -165,14 +165,14 @@
 
 + (nullable instancetype) bitmapWithUIImage:(nonnull UIImage*)image
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [self bitmapWithCGImage:image.CGImage];
 }
 
 + (nullable instancetype) bitmapWithCGImage:(nonnull CGImageRef)image
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSUInteger rows = CGImageGetHeight(image);
     NSUInteger cols = CGImageGetWidth(image);
@@ -197,7 +197,7 @@
         plane = [[self alloc] initWithBitmapContext:bitmap];
     }
     else {
-        errorLog(@"CGBitmapContextCreate failed for %@", [self class]);
+        MBLogError(@"CGBitmapContextCreate failed for %@", [self class]);
     }
     CGContextRelease(bitmap);
     
@@ -206,7 +206,7 @@
 
 + (nullable instancetype) bitmapWithBitmapContext:(nonnull CGContextRef)bitmap
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [[self alloc] initWithBitmapContext:bitmap];
 }
@@ -224,7 +224,7 @@
                 forColorSpace:(nonnull CGColorSpaceRef)colorSpace
               usingBitmapInfo:(CGBitmapInfo)bitmapInfo
 {
-    verboseDebugTrace();
+    MBLogTraceVerbose();
     
     MBBitmapPixelType type = MBBitmapPixelTypeUnknown;
     NSUInteger channels = 0;
@@ -339,7 +339,7 @@
 - (nullable void*) _locationOfPixelAtColumn:(NSUInteger)col row:(NSUInteger)row
 {
     if (row >= _rowCount || col >= _columnCount) {
-        errorLog(@"%@ got out-of-bounds coordinate (%lu,%lu); must be less than (%lu,%lu)", [self class], (unsigned long)col, (unsigned long)row, (unsigned long)_columnCount, (unsigned long)_rowCount);
+        MBLogError(@"%@ got out-of-bounds coordinate (%lu,%lu); must be less than (%lu,%lu)", [self class], (unsigned long)col, (unsigned long)row, (unsigned long)_columnCount, (unsigned long)_rowCount);
         return nil;
     }
     
@@ -352,7 +352,7 @@
 - (nullable void*) _locationOfPixelAtIndex:(NSUInteger)index
 {
     if (index >= _pixelCount) {
-        errorLog(@"%@ got out-of-bounds pixel index (%lu); must be less than (%lu)", [self class], (unsigned long)index, (unsigned long)_pixelCount);
+        MBLogError(@"%@ got out-of-bounds pixel index (%lu); must be less than (%lu)", [self class], (unsigned long)index, (unsigned long)_pixelCount);
         return nil;
     }
     
@@ -511,14 +511,14 @@
 
 - (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixel atColumn:(NSUInteger)col row:(NSUInteger)row
 {
-    verboseDebugTrace();
+    MBLogTraceVerbose();
 
     return [self _getPixel:pixel atLocation:[self _locationOfPixelAtColumn:col row:row]];
 }
 
 - (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixel atPoint:(CGPoint)point
 {
-    verboseDebugTrace();
+    MBLogTraceVerbose();
     
     return [self _getPixel:pixel atLocation:[self _locationOfPixelAtColumn:(NSUInteger)round(point.x)
                                                                        row:(NSUInteger)round(point.y)]];
@@ -526,21 +526,21 @@
 
 - (BOOL) getPixel:(nonnull inout MBBitmapPixel*)pixel atIndex:(NSUInteger)index
 {
-    verboseDebugTrace();
+    MBLogTraceVerbose();
     
     return [self _getPixel:pixel atLocation:[self _locationOfPixelAtIndex:index]];
 }
 
 - (BOOL) setPixel:(MBBitmapPixel)pixel atColumn:(NSUInteger)col row:(NSUInteger)row
 {
-    verboseDebugTrace();
+    MBLogTraceVerbose();
 
     return [self _setPixel:pixel atLocation:[self _locationOfPixelAtColumn:col row:row]];
 }
 
 - (BOOL) setPixel:(MBBitmapPixel)pixel atPoint:(CGPoint)point
 {
-    verboseDebugTrace();
+    MBLogTraceVerbose();
     
     return [self _setPixel:pixel atLocation:[self _locationOfPixelAtColumn:(NSUInteger)round(point.x)
                                                                        row:(NSUInteger)round(point.y)]];
@@ -548,7 +548,7 @@
 
 - (BOOL) setPixel:(MBBitmapPixel)pixel atIndex:(NSUInteger)index
 {
-    verboseDebugTrace();
+    MBLogTraceVerbose();
     
     return [self _setPixel:pixel atLocation:[self _locationOfPixelAtIndex:index]];
 }
@@ -559,7 +559,7 @@
 
 - (UIImage*) image
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     CGImageRef imageRef = CGBitmapContextCreateImage(_bitmap);
     UIImage* image = [UIImage imageWithCGImage:imageRef];

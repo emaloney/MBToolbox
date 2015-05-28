@@ -7,7 +7,8 @@
 //
 
 #import "MBCacheOperations.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 #define DEBUG_VERBOSE   0
@@ -74,7 +75,7 @@ MBImplementSingleton();
 
 - (NSData*) dataForOperation
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [_cache cacheDataFromObject:_cacheObject];
 }

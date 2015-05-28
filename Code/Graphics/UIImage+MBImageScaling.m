@@ -7,7 +7,7 @@
 //
 
 #import "UIImage+MBImageScaling.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL             0
 
@@ -24,7 +24,7 @@
 
 - (nonnull UIImage*) imageScaledToSize:(CGSize)newSize quality:(CGInterpolationQuality)quality
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     if (CGSizeEqualToSize(self.size, newSize)) {
         // do nothing if size isn't different
@@ -42,7 +42,7 @@
 
 - (nonnull UIImage*) imageScaledToSize:(CGSize)newSize
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     return [self imageScaledToSize:newSize quality:kCGInterpolationDefault];
 }
@@ -53,7 +53,7 @@
 
 - (nonnull UIImage*) imageScaledByFactor:(CGFloat)scale quality:(CGInterpolationQuality)quality
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     if (scale == 1.0) {
         // do nothing if scale wouldn't change image size
@@ -67,7 +67,7 @@
 
 - (nonnull UIImage*) imageScaledByFactor:(CGFloat)scale
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     return [self imageScaledByFactor:scale quality:kCGInterpolationDefault];
 }

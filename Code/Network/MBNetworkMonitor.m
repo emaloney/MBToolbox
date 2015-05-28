@@ -20,7 +20,7 @@
 #import "MBNetworkMonitor.h"
 #import "MBServiceManager.h"
 #import "MBEvents.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL		0
 
@@ -71,12 +71,12 @@ MBImplementSingleton();
         zeroAddress.sin_family = AF_INET;
         _networkReach = SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, (const struct sockaddr*)&zeroAddress);
         if (!_networkReach) {
-            errorLog(@"%@ failed to create SCNetworkReachabilityRef", [self class]);
+            MBLogError(@"%@ failed to create SCNetworkReachabilityRef", [self class]);
         }
 
         _carrierNetworkInfo = [CTTelephonyNetworkInfo new];
 
-        debugLog(@"Current carrier info: %@", self.carrierStatusDescription);
+        MBLogDebug(@"Current carrier info: %@", self.carrierStatusDescription);
     }
     return (self);
 }
@@ -131,7 +131,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
 
 - (void) _networkIsNow:(BOOL)available
 {
-    debugLog(@"Network status is now %s", (available ? "ONLINE" : "OFFLINE"));
+    MBLogDebug(@"Network status is now %s", (available ? "ONLINE" : "OFFLINE"));
 
     if (_wasOnline != available) {
         _wasOnline = available;
@@ -142,7 +142,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
 
 - (void) _wifiIsNow:(BOOL)available
 {
-    debugLog(@"Wifi status is now %s", (available ? "CONNECTED" : "DISCONNECTED"));
+    MBLogDebug(@"Wifi status is now %s", (available ? "CONNECTED" : "DISCONNECTED"));
 
     if (_wasOnWifi != available) {
         _wasOnWifi = available;
@@ -153,7 +153,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
 
 - (void) _carrierRadioChanged
 {
-    debugLog(@"Carrier info changed to: %@", self.carrierStatusDescription);
+    MBLogDebug(@"Carrier info changed to: %@", self.carrierStatusDescription);
 
     [MBEvents postEvent:kMBNetworkCarrierConnectionChangedEvent fromSender:self];
 }
@@ -233,7 +233,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
         return [self _networkAvailabilityForReachabilityFlags:flags];
     }
     else {
-        errorLog(@"%@ couldn't determine current network availability", [self class]);
+        MBLogError(@"%@ couldn't determine current network availability", [self class]);
         return MBNetworkAvailabilityOffline;
     }
 }
@@ -285,17 +285,17 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
 
 - (void) startService
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     // listen to network reachability changes
     if (SCNetworkReachabilitySetCallback(_networkReach, NetworkMonitorReachabilityCallback, nil)) {
         if (!SCNetworkReachabilityScheduleWithRunLoop(_networkReach, CFRunLoopGetMain(), kCFRunLoopDefaultMode)) {
-            errorLog(@"%@ failed to schedule reachability callbacks", [self class]);
+            MBLogError(@"%@ failed to schedule reachability callbacks", [self class]);
         }
         [self _processNetworkAvailability:self.networkAvailability];
     }
     else {
-        errorLog(@"%@ failed to set reachability callback", [self class]);
+        MBLogError(@"%@ failed to set reachability callback", [self class]);
     }
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_carrierRadioChanged) name:CTRadioAccessTechnologyDidChangeNotification object:nil];
@@ -303,7 +303,7 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
 
 - (void) stopService
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     // stop listening for network reachability changes
     SCNetworkReachabilityUnscheduleFromRunLoop(_networkReach, CFRunLoopGetMain(), kCFRunLoopDefaultMode);

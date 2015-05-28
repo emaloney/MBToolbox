@@ -7,7 +7,7 @@
 //
 
 #import "MBRoundedRectTools.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL         0
 
@@ -80,7 +80,7 @@
 
 + (nonnull CGPathRef) newRoundedPathForRectangle:(CGRect)rect withRadius:(CGFloat)radius insetBy:(CGFloat)inset
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     if (inset) {
         rect = CGRectInset(rect, inset, inset);

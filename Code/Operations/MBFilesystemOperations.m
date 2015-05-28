@@ -8,7 +8,7 @@
 
 #import "MBFilesystemOperations.h"
 #import "NSError+MBToolbox.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
@@ -73,11 +73,11 @@ MBImplementSingleton();
 
 - (nullable id) readObjectFromFile:(nonnull NSString*)path error:(inout NSError**)err
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSData* fileData = [NSData dataWithContentsOfFile:path options:NSDataReadingMapped error:err];
     if (fileData) {
-        debugLog(@"Successfully read %lu bytes from file: %@", (unsigned long)[fileData length], path);
+        MBLogDebug(@"Successfully read %lu bytes from file: %@", (unsigned long)[fileData length], path);
         [self readCompletedWithObject:fileData];
     }
     return fileData;
@@ -85,7 +85,7 @@ MBImplementSingleton();
 
 - (void) readCompletedWithObject:(nonnull id)readObj
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     if ([_delegate respondsToSelector:@selector(readCompletedWithObject:forOperation:)]) {
         [self performSelectorOnMainThread:@selector(_delegateReadCompletedWithObject:) withObject:readObj waitUntilDone:NO];
@@ -94,7 +94,7 @@ MBImplementSingleton();
 
 - (void) readFailedWithError:(nonnull NSError*)err
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     if ([_delegate respondsToSelector:@selector(readFailedWithError:forOperation:)]) {
         [self performSelectorOnMainThread:@selector(_delegateReadFailedWithError:) withObject:err waitUntilDone:NO];
@@ -107,7 +107,7 @@ MBImplementSingleton();
 
 - (void) main
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     @autoreleasepool {
         @try {
@@ -122,12 +122,12 @@ MBImplementSingleton();
                                                 userInfoKey:kMBErrorUserInfoKeyFilePath
                                                       value:_filePath];
                 }
-                errorLog(@"%@ error while trying to load file at %@: %@", [self class], _filePath, [err localizedDescription]);
+                MBLogError(@"%@ error while trying to load file at %@: %@", [self class], _filePath, [err localizedDescription]);
                 [self readFailedWithError:err];
             }
         }
         @catch (NSException* ex) {
-            errorLog(@"%@ caught %@: %@", [self class], [ex name], [ex reason]);
+            MBLogError(@"%@ caught %@: %@", [self class], [ex name], [ex reason]);
         }
     }
 }
@@ -186,21 +186,21 @@ MBImplementSingleton();
 
 - (void) main
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     @autoreleasepool {
         @try {
             NSError* err = nil;
             NSData* data = [self dataForOperation];
             if (![data writeToFile:_filePath options:(NSDataWritingAtomic | NSDataWritingFileProtectionNone) error:&err]) {
-                errorLog(@"%@ error while trying to write the file at %@: %@", [self class], _filePath, [err localizedDescription]);
+                MBLogError(@"%@ error while trying to write the file at %@: %@", [self class], _filePath, [err localizedDescription]);
             }
             else {
-                debugLog(@"Successfully wrote %lu bytes to file: %@", (unsigned long)[data length], _filePath);
+                MBLogDebug(@"Successfully wrote %lu bytes to file: %@", (unsigned long)[data length], _filePath);
             }
         }
         @catch (NSException* ex) {
-            errorLog(@"%@ caught %@: %@", [self class], [ex name], [ex reason]);
+            MBLogError(@"%@ caught %@: %@", [self class], [ex name], [ex reason]);
         }
     }
 }
@@ -253,7 +253,7 @@ MBImplementSingleton();
                 
                 NSError* err = nil;
                 if (![_fileMgr moveItemAtPath:_filePath toPath:tempPath error:&err]) {
-                    errorLog(@"%@ error while trying to move-before-delete the file at %@ to %@: %@", [self class], _filePath, tempPath, [err localizedDescription]);
+                    MBLogError(@"%@ error while trying to move-before-delete the file at %@ to %@: %@", [self class], _filePath, tempPath, [err localizedDescription]);
                     _pathToDelete = path;
                 }
                 else {
@@ -271,7 +271,7 @@ MBImplementSingleton();
 
 - (void) main
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     if (_pathExists) {
         @autoreleasepool {
@@ -279,22 +279,22 @@ MBImplementSingleton();
                 NSError* err = nil;
                 if (![_fileMgr removeItemAtPath:_pathToDelete error:&err]) {
                     if (_pathToDelete == _filePath) {
-                        errorLog(@"%@ error while trying to delete the file at %@: %@", [self class], _filePath, [err localizedDescription]);
+                        MBLogError(@"%@ error while trying to delete the file at %@: %@", [self class], _filePath, [err localizedDescription]);
                     } else {
-                        errorLog(@"%@ error while trying to delete the file at %@ (originally at %@): %@", [self class], _pathToDelete, _filePath, [err localizedDescription]);
+                        MBLogError(@"%@ error while trying to delete the file at %@ (originally at %@): %@", [self class], _pathToDelete, _filePath, [err localizedDescription]);
                     }
                 }
                 else {
-                    debugLog(@"Successfully deleted file: %@", _filePath);
+                    MBLogDebug(@"Successfully deleted file: %@", _filePath);
                 }
             }
             @catch (NSException* ex) {
-                errorLog(@"%@ caught %@: %@", [self class], [ex name], [ex reason]);
+                MBLogError(@"%@ caught %@: %@", [self class], [ex name], [ex reason]);
             }
         }
     }
     else {
-        debugLog(@"Silently ignoring request to delete nonexistent file at %@", _filePath);
+        MBLogDebug(@"Silently ignoring request to delete nonexistent file at %@", _filePath);
     }
 }
 

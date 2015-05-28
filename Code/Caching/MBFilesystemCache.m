@@ -12,7 +12,8 @@
 #import "MBCacheOperations.h"
 #import "NSString+MBMessageDigest.h"
 #import "MBThreadsafeCache+Subclassing.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
@@ -70,7 +71,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
         _cacheName = name;
         _fm = [NSFileManager new];
         _cacheDir = [self _directoryPathForCacheNamed:name];
-        debugLog(@"%@ named %@ will use directory: %@", [self class], name, _cacheDir);
+        MBLogDebug(@"%@ named %@ will use directory: %@", [self class], name, _cacheDir);
         _cacheDelegate = delegate;
         
         _maxAgeOfCacheFiles = kMBFilesystemCacheDefaultMaxAge;
@@ -92,7 +93,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (void) memoryWarning
 {
-	debugTrace();
+	MBLogTraceDebug();
 	
     // freeing up pending cache writes
     // will help us release more memory
@@ -136,7 +137,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
                          attributes:nil
                               error:&err])
     {
-        errorLog(@"%@ error while trying to create cache directory at %@: %@", [self class], _cacheDir, [err localizedDescription]);
+        MBLogError(@"%@ error while trying to create cache directory at %@: %@", [self class], _cacheDir, [err localizedDescription]);
     }
 }
 
@@ -158,12 +159,12 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (id) objectFromCacheFile:(NSString*)path
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSError* err = nil;
     NSData* fileData = [NSData dataWithContentsOfFile:path options:NSDataReadingMapped error:&err];
     if (!fileData) {
-        errorLog(@"%@ error while trying to load the cache file at %@: %@", [self class], path, [err localizedDescription]);
+        MBLogError(@"%@ error while trying to load the cache file at %@: %@", [self class], path, [err localizedDescription]);
         return nil;
     }
     
@@ -276,7 +277,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (void) objectLoaded:(id)cacheObj forKey:(id)key
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     NSString* cacheFile = [_cacheDelegate filenameForCacheKey:key];
 
@@ -286,7 +287,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
         [self unlock];
     }
     else {
-        errorLog(@"%@ couldn't create cache filename for key: %@", [self class], key);
+        MBLogError(@"%@ couldn't create cache filename for key: %@", [self class], key);
     }
 }
 
@@ -322,7 +323,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (void) clearFilesystemCache
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     MBFileDeleteOperation* op = [MBFileDeleteOperation operationForDeletingFile:_cacheDir];
     
@@ -331,7 +332,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (void) purgeCacheFilesOlderThan:(NSTimeInterval)ageInSeconds
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     MBCachePruneOperation* op = [MBCachePruneOperation operationForCacheDirectory:_cacheDir
                                                                            maxAge:ageInSeconds];
@@ -350,7 +351,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (BOOL) isKeyInCache:(id)key
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     NSString* cacheFile = [_cacheDelegate filenameForCacheKey:key];
     if ([super isKeyInCache:cacheFile]) {
@@ -363,7 +364,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (BOOL) isKeyInFilesystemCache:(id)key
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     // first, check to see if there's a file
     NSString* cacheFile = [_cacheDelegate filenameForCacheKey:key];
@@ -376,27 +377,27 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
     NSError* err = nil;
     NSDictionary* fileAttr = [_fm attributesOfItemAtPath:path error:&err];
     if (!fileAttr) {
-        errorLog(@"%@ error while trying to determine attributes of cache file at %@: %@", [self class], path, [err localizedDescription]);
+        MBLogError(@"%@ error while trying to determine attributes of cache file at %@: %@", [self class], path, [err localizedDescription]);
         return NO;  // couldn't get attributes; act as though file doesn't exist
     }
     else {
         NSDate* modDate = [fileAttr fileModificationDate];
         if (modDate) {
-            debugLog(@"Mod date of file %@: %@", path, modDate);
+            MBLogDebug(@"Mod date of file %@: %@", path, modDate);
             
             NSTimeInterval now = [NSDate timeIntervalSinceReferenceDate];
             NSTimeInterval fileWrittenAt = [modDate timeIntervalSinceReferenceDate];
             if ((fileWrittenAt + _maxAgeOfCacheFiles) > now) {
-                debugLog(@"Cache file %@ is recent enough to use", path);
+                MBLogDebug(@"Cache file %@ is recent enough to use", path);
                 return YES; // we have a file, and it is recent enough to use
             }
             else {
-                debugLog(@"Cache file %@ is TOO OLD to use (it is %g seconds old)", path, (now - fileWrittenAt));
+                MBLogDebug(@"Cache file %@ is TOO OLD to use (it is %g seconds old)", path, (now - fileWrittenAt));
                 return NO;  // file too old; pretend it doesn't exist
             }
         }
         else {
-            errorLog(@"%@ couldn't determine modification date of file: %@", [self class], path);
+            MBLogError(@"%@ couldn't determine modification date of file: %@", [self class], path);
             return NO;  // coudn't determine mod date; pretend file doesn't exist
         }
     }
@@ -404,7 +405,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (BOOL) isKeyInMemoryCache:(id)key
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     return [super isKeyInCache:key];
 }
@@ -415,7 +416,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (id) objectForKeyInMemoryCache:(id)key
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     [self lock];
     id obj = [self internalCache][key];
@@ -460,7 +461,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (void) main
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     @autoreleasepool {
         @try {
@@ -477,7 +478,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
                 NSError* err = nil;
                 NSArray* files = [fileMgr contentsOfDirectoryAtPath:_cacheDir error:&err];
                 if (err) {
-                    errorLog(@"Error enumerating directory at path <%@>: %@ ", _cacheDir, err);
+                    MBLogError(@"Error enumerating directory at path <%@>: %@ ", _cacheDir, err);
                     return;
                 }
                 
@@ -490,28 +491,28 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
                     
                     NSDictionary* fileAttr = [fileMgr attributesOfItemAtPath:path error:&err];
                     if (err) {
-                        errorLog(@"%@ error while trying to determine attributes of cache file at %@: %@", [self class], path, [err localizedDescription]);
+                        MBLogError(@"%@ error while trying to determine attributes of cache file at %@: %@", [self class], path, [err localizedDescription]);
                     }
                     else {
                         NSDate* modDate = [fileAttr fileModificationDate];
                         if (modDate) {
-                            debugLog(@"Mod date of file %@: %@", path, modDate);
+                            MBLogDebug(@"Mod date of file %@: %@", path, modDate);
                             
                             NSTimeInterval fileWrittenAt = [modDate timeIntervalSinceReferenceDate];
                             if ((fileWrittenAt + _maxAge) > now) {
-                                debugLog(@"Cache file %@ is recent enough to keep", path);
+                                MBLogDebug(@"Cache file %@ is recent enough to keep", path);
                             }
                             else {
-                                debugLog(@"Cache file %@ is TOO OLD to keep (it is %g seconds old); deleting", path, (now - fileWrittenAt));
+                                MBLogDebug(@"Cache file %@ is TOO OLD to keep (it is %g seconds old); deleting", path, (now - fileWrittenAt));
                                 
                                 [fileMgr removeItemAtPath:path error:&err];
                                 if (err) {
-                                    errorLog(@"%@ error while deleting obsolete cache file at %@: %@", [self class], path, [err localizedDescription]);
+                                    MBLogError(@"%@ error while deleting obsolete cache file at %@: %@", [self class], path, [err localizedDescription]);
                                 }
                             }
                         }
                         else {
-                            errorLog(@"%@ couldn't determine modification date of file: %@", [self class], path);
+                            MBLogError(@"%@ couldn't determine modification date of file: %@", [self class], path);
                         }
                     }
                     
@@ -524,7 +525,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
             });
         }
         @catch (NSException* ex) {
-            errorLog(@"%@ caught %@: %@", [self class], [ex name], [ex reason]);
+            MBLogError(@"%@ caught %@: %@", [self class], [ex name], [ex reason]);
         }
     }
 }

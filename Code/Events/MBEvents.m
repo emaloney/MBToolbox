@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "MBEvents.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL         0
 
@@ -26,7 +26,7 @@
 
 + (void) postEvent:(nonnull NSString*)event
 {
-    debugLog(@"Posting event: %@", event);
+    MBLogDebug(@"Posting event: %@", event);
 
     assert(event);
     [[NSNotificationCenter defaultCenter] postNotificationName:event object:nil];
@@ -40,13 +40,13 @@
         event = [self name:event withSuffix:suffix];
     }
 
-    debugLog(@"Posting event: %@", event);
+    MBLogDebug(@"Posting event: %@", event);
     [[NSNotificationCenter defaultCenter] postNotificationName:event object:nil];
 }
 
 + (void) postEvent:(nonnull NSString*)event withObject:(nullable id)obj
 {
-    debugLog(@"Posting event: %@ (with object parameter: %@)", event, obj);
+    MBLogDebug(@"Posting event: %@ (with object parameter: %@)", event, obj);
 
     assert(event);
     [[NSNotificationCenter defaultCenter] postNotificationName:event object:obj];
@@ -54,7 +54,7 @@
 
 + (void) postEvent:(nonnull NSString*)event withUserInfo:(nullable NSDictionary*)userInfo
 {
-    debugLog(@"Posting event: %@ (with userInfo parameter: %@)", event, userInfo);
+    MBLogDebug(@"Posting event: %@ (with userInfo parameter: %@)", event, userInfo);
 
     assert(event);
     [[NSNotificationCenter defaultCenter] postNotificationName:event object:nil userInfo:userInfo];
@@ -62,7 +62,7 @@
 
 + (void) postEvent:(nonnull NSString*)event fromSender:(nullable id)sender
 {
-    debugLog(@"Posting event: %@ (from sender: %@)", event, sender);
+    MBLogDebug(@"Posting event: %@ (from sender: %@)", event, sender);
 
     assert(event);
     [[NSNotificationCenter defaultCenter] postNotificationName:event object:sender];

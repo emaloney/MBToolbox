@@ -10,7 +10,7 @@
 
 #import "MBMessageDigest.h"
 #import "NSError+MBToolbox.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
@@ -184,7 +184,7 @@
     NSError* err = nil;
     NSString* md5 = [self MD5ForFileAtPath:path error:&err];
     if (err) {
-        errorLog(@"Error while attempting to compute MD5 hash for file <%@>: %@", path, err);
+        MBLogError(@"Error while attempting to compute MD5 hash for file <%@>: %@", path, err);
     }
     return md5;
 }
@@ -305,7 +305,7 @@
     NSError* err = nil;
     NSString* sha1 = [self SHA1ForFileAtPath:path error:&err];
     if (err) {
-        errorLog(@"Error while attempting to compute SHA-1 hash for file <%@>: %@", path, err);
+        MBLogError(@"Error while attempting to compute SHA-1 hash for file <%@>: %@", path, err);
     }
     return sha1;
 }

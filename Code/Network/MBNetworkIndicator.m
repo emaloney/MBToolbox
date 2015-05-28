@@ -12,7 +12,7 @@
 #import "MBNetworkIndicator.h"
 #import "MBEvents.h"
 #import "MBSingleton.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
@@ -52,7 +52,7 @@ MBImplementSingleton();
 
 - (void) operationStarted
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     OSAtomicIncrement32Barrier(&_operationCount);
 
@@ -67,7 +67,7 @@ MBImplementSingleton();
     }
     [MBEvents postEvent:kMBNetworkOperationStartedEvent fromSender:self];
 
-    debugLog(@"Current operation count: %d", _operationCount);
+    MBLogDebug(@"Current operation count: %d", _operationCount);
 }
 
 - (void) operationFinished
@@ -77,7 +77,7 @@ MBImplementSingleton();
 
 - (void) operationsFinished:(int32_t)count
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     OSAtomicAdd32Barrier(-count, &_operationCount);
     
@@ -92,7 +92,7 @@ MBImplementSingleton();
         }
     }
 
-    debugLog(@"Current operation count: %d", _operationCount);
+    MBLogDebug(@"Current operation count: %d", _operationCount);
 }
 
 @end
@@ -114,7 +114,7 @@ MBImplementSingleton();
 
 - (void) operationStarted
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     _operationCount++;
 
@@ -123,7 +123,7 @@ MBImplementSingleton();
 
 - (void) operationFinished
 {
-    debugTrace();
+    MBLogTraceDebug();
 
     if (_operationCount > 0) {
         _operationCount--;
@@ -134,7 +134,7 @@ MBImplementSingleton();
 
 - (void) cancelOperations
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     if (_operationCount > 0) {
         [[MBNetworkIndicatorCoordinator instance] operationsFinished:_operationCount];

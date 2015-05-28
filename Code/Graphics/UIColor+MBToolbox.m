@@ -7,7 +7,7 @@
 //
 
 #import "UIColor+MBToolbox.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL         0
 
@@ -40,7 +40,7 @@ const CGFloat kHiliteColorBrightnessAdjust = 0.35;
 
 - (nonnull UIColor*) highlightColor
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     CGFloat h, s, b, a;
     [self getHue:&h saturation:&s brightness:&b alpha:&a];
@@ -51,7 +51,7 @@ const CGFloat kHiliteColorBrightnessAdjust = 0.35;
 
 - (nonnull UIColor*) colorWithBrightnessAdjustedByFactor:(CGFloat)adjustFactor
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     if (adjustFactor == 1.0)
         return self;

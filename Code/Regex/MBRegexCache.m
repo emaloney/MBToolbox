@@ -7,7 +7,7 @@
 //
 
 #import "MBRegexCache.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL                 0
 #define DEBUG_DISABLE_CACHING       0
@@ -28,7 +28,7 @@ MBImplementSingleton();
 - (nonnull instancetype) init
 {
     if (DEBUG_FLAG(DEBUG_DISABLE_CACHING)) {
-        errorLog(@"WARNING: %@ compiled with regular expression caching DISABLED!", [self class]);
+        MBLogError(@"WARNING: %@ compiled with regular expression caching DISABLED!", [self class]);
     }
     
     return [super init];
@@ -42,7 +42,7 @@ MBImplementSingleton();
                                                        options:(NSRegularExpressionOptions)options
                                                          error:(NSErrorPtrPtr)errPtr
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSString* cacheKey = [NSString stringWithFormat:@"%@ 0x%lx", pattern, (unsigned long)options];
     NSRegularExpression* regex = nil;
@@ -59,7 +59,7 @@ MBImplementSingleton();
             *errPtr = logError;
         }
         else if (logError) {
-            errorLog(@"Error %@ attempting to create NSRegularExpression instance from the pattern: %@", logError, pattern);
+            MBLogError(@"Error %@ attempting to create NSRegularExpression instance from the pattern: %@", logError, pattern);
         }
  
         if (regex && !DEBUG_FLAG(DEBUG_DISABLE_CACHING)) {

@@ -7,7 +7,7 @@
 //
 
 #import "MBThreadLocalStorage.h"
-#import "MBDebug.h"
+#import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
 
@@ -44,7 +44,7 @@
 
 + (nullable id) valueForClass:(nonnull Class)cls withKey:(nullable NSString*)key
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSString* storageKey = [self _storageKeyForClass:cls withUserKey:key];
     
@@ -58,7 +58,7 @@
 
 + (void) setValue:(nullable id)val forClass:(nonnull Class)cls withKey:(nullable NSString*)key
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSString* storageKey = [self _storageKeyForClass:cls withUserKey:key];
     
@@ -81,7 +81,7 @@
                            withKey:(nullable NSString*)key
                  usingInstantiator:(__nonnull id (^ __nonnull)())instantiator
 {
-    debugTrace();
+    MBLogTraceDebug();
     
     NSString* storageKey = [self _storageKeyForClass:cls withUserKey:key];
     
@@ -93,7 +93,7 @@
             threadLocal[storageKey] = val;
         }
         else {
-            errorLog(@"Cached object instantiator block unexpectedly returned a nil value");
+            MBLogError(@"Cached object instantiator block unexpectedly returned a nil value");
         }
     }
     return val;

@@ -7,9 +7,6 @@
 //
 
 #import "MBConcurrentReadWriteCoordinator.h"
-#import "MBModuleLogMacros.h"
-
-#define DEBUG_LOCAL     0
 
 /******************************************************************************/
 #pragma mark -
@@ -41,8 +38,6 @@
 
 - (void) read:(nonnull void (^)())op
 {
-    MBLogDebugTrace();
-
     dispatch_sync(_queue, op);
 }
 
@@ -52,8 +47,6 @@
 
 - (void) enqueueWrite:(nonnull void (^)())op
 {
-    MBLogDebugTrace();
-
     dispatch_barrier_async(_queue, op);
 }
 

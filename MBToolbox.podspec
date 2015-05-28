@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
 	# specifies the MBThreadsafeCache class and related items
 	#
 	s.subspec 'ThreadsafeCache' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Caching/MBThreadsafeCache*.{h,m}'
 		ss.public_header_files = 'Code/Caching/MBThreadsafeCache*.h'
 	end
@@ -91,7 +91,6 @@ Pod::Spec.new do |s|
 	# specifies the MBConcurrentReadWriteCoordinator class
 	#
 	s.subspec 'ConcurrentReadWriteCoordinator' do |ss|
-		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Concurrency/MBConcurrentReadWriteCoordinator.{h,m}'
 		ss.public_header_files = 'Code/Concurrency/MBConcurrentReadWriteCoordinator.h'
 	end
@@ -114,7 +113,7 @@ Pod::Spec.new do |s|
 	# to create, populate and manipulate NSError instances
 	#
 	s.subspec 'MBToolbox-NSError' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Error/*.{h,m}'
 		ss.public_header_files = 'Code/Error/*.h'
 	end
@@ -128,7 +127,7 @@ Pod::Spec.new do |s|
 	# of NSNotification events
 	#
 	s.subspec 'Events' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Events/*.{h,m}'
 		ss.public_header_files = 'Code/Events/*.h'
 	end
@@ -164,7 +163,7 @@ Pod::Spec.new do |s|
 	# specifies the MBBitmapPixelPlane class and related items
 	#
 	s.subspec 'BitmapPixelPlane' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/MBBitmapPixelPlane.{h,m}'
 		ss.public_header_files = 'Code/Graphics/MBBitmapPixelPlane.h'
 	end
@@ -181,7 +180,7 @@ Pod::Spec.new do |s|
 	# specifies the MBRoundedRectTools class
 	#
 	s.subspec 'RoundedRectTools' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/MBRoundedRectTools.{h,m}'
 		ss.public_header_files = 'Code/Graphics/MBRoundedRectTools.h'
 	end
@@ -191,7 +190,7 @@ Pod::Spec.new do |s|
 	# getting information about and modifying colors
 	#
 	s.subspec 'MBToolbox-UIColor' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/UIColor+MBToolbox.{h,m}'
 		ss.public_header_files = 'Code/Graphics/UIColor+MBToolbox.h'
 	end
@@ -200,7 +199,7 @@ Pod::Spec.new do |s|
 	# a UIImage class extension that adds methods for scaling images
 	#
 	s.subspec 'ImageScaling-UIImage' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/UIImage+MBImageScaling.{h,m}'
 		ss.public_header_files = 'Code/Graphics/UIImage+MBImageScaling.h'
 	end
@@ -210,7 +209,7 @@ Pod::Spec.new do |s|
 	# image snapshots of a view's contents
 	#
 	s.subspec 'SnapshotImage-UIView' do |ss|
-		ss.dependency 'MBToolbox/Common'
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/UIView+MBSnapshotImage.{h,m}'
 		ss.public_header_files = 'Code/Graphics/UIView+MBSnapshotImage.h'
 	end
@@ -224,6 +223,7 @@ Pod::Spec.new do |s|
 	#
 	s.subspec 'MessageDigest' do |ss|
 		ss.dependency 'MBToolbox/MBToolbox-NSError'
+		ss.dependency 'MBToolbox/Module'
 		ss.frameworks = 'Security'
 		ss.source_files = 'Code/MessageDigest/MBMessageDigest.{h,m}'
 		ss.public_header_files = 'Code/MessageDigest/MBMessageDigest.h'
@@ -269,6 +269,7 @@ Pod::Spec.new do |s|
 		ss.dependency 'MBToolbox/Singleton'
 		ss.dependency 'MBToolbox/Indentation-NSString'
 		ss.dependency 'MBToolbox/ThreadLocalStorage'
+		ss.dependency 'MBToolbox/ConcurrentReadWriteCoordinator'
 		ss.source_files = 'Code/Module/*.{h,m}'
 		ss.public_header_files = 'Code/Module/*.h'
 	end

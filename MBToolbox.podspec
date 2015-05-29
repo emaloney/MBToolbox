@@ -99,6 +99,7 @@ Pod::Spec.new do |s|
 	# specifies the MBThreadLocalStorage class
 	#
 	s.subspec 'ThreadLocalStorage' do |ss|
+		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Concurrency/MBThreadLocalStorage.{h,m}'
 		ss.public_header_files = 'Code/Concurrency/MBThreadLocalStorage.h'
 	end
@@ -330,6 +331,7 @@ Pod::Spec.new do |s|
 	# specifies the MBRegexCache singleton
 	#
 	s.subspec 'RegexCache' do |ss|
+		ss.dependency 'MBToolbox/MBToolbox-NSError'
 		ss.dependency 'MBToolbox/ThreadsafeCache'
 		ss.dependency 'MBToolbox/Singleton'
 		ss.source_files = 'Code/Regex/MBRegexCache.{h,m}'

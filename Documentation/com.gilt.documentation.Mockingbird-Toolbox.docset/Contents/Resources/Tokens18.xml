@@ -14,35 +14,35 @@ given MBModule.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/setLoggerClass:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/setLogRecorderClass:</TokenIdentifier>
 			<Abstract type="html">Sets the logger class used to log messages through MBModuleLog. By
 default, MBModuleLog is the logger class, unless overridden by a call
 to this method.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>+ (void)setLoggerClass:(nullable Class&lt;MBModuleLogger&gt;)loggerClass</Declaration>
+			<Declaration>+ (void)setLogRecorderClass:(nullable Class&lt;MBModuleLogRecorder&gt;)logRecorderClass</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>loggerClass</Name>
-					<Abstract type="html">The Class implementing MBModuleLogger that
+					<Name>logRecorderClass</Name>
+					<Abstract type="html">The Class implementing MBModuleLogRecorder that
             should be used as the logger. If nil is passed, the value is
             reset to the default of MBModuleLog.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/setLoggerClass:</Anchor>
+			<Anchor>//api/name/setLogRecorderClass:</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/loggerClass</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/logRecorderClass</TokenIdentifier>
 			<Abstract type="html">Returns the logger class used to log messages through MBModuleLog.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			
-			<Declaration>+ (nonnull Class&lt;MBModuleLogger&gt;)loggerClass</Declaration>
+			<Declaration>+ (nonnull Class&lt;MBModuleLogRecorder&gt;)logRecorderClass</Declaration>
 			
 			
-			<Anchor>//api/name/loggerClass</Anchor>
+			<Anchor>//api/name/logRecorderClass</Anchor>
             <NodeRef refid="18"/>
 		</Token>
 		

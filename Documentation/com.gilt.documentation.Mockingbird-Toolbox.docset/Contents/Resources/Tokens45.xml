@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/MBModuleLogger.html">
+	<File path="Protocols/MBModuleLogRecorder.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/MBModuleLogger</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intf/MBModuleLogRecorder</TokenIdentifier>
 			<Abstract type="html">This protocol is adopted by classes that wish to be used as loggers by the
 MBModuleLog.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
@@ -14,7 +14,7 @@ MBModuleLog.</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/MBModuleLogger/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModuleLogRecorder/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:</TokenIdentifier>
 			<Abstract type="html">Records the log message to the underlying logging subsystem.</Abstract>
 			<DeclaredIn>MBModuleLog.h</DeclaredIn>
 			

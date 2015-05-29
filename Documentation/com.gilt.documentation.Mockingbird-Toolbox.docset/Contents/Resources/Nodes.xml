@@ -1319,24 +1319,24 @@
             
         </Node>
 		<Node id="45" type="file" documentType="reference">
-            <Name>MBModuleLogger</Name>
-            <Path>Protocols/MBModuleLogger.html</Path>
+            <Name>MBModuleLogRecorder</Name>
+            <Path>Protocols/MBModuleLogRecorder.html</Path>
             
                 <Subnodes>
                 <Node type="section">
-                    <Path>Protocols/MBModuleLogger.html</Path>
+                    <Path>Protocols/MBModuleLogRecorder.html</Path>
                     <Name>Overview</Name>
                     <Anchor>overview</Anchor>
                 </Node>
                 <Node type="section">
-                    <Path>Protocols/MBModuleLogger.html</Path>
+                    <Path>Protocols/MBModuleLogRecorder.html</Path>
                     <Name>Tasks</Name>
                     <Anchor>tasks</Anchor>
                 </Node>
                 
                 
                 <Node type="section">
-                    <Path>Protocols/MBModuleLogger.html</Path>
+                    <Path>Protocols/MBModuleLogRecorder.html</Path>
                     <Name>Class Methods</Name>
                     <Anchor>class_methods</Anchor>
                 </Node>

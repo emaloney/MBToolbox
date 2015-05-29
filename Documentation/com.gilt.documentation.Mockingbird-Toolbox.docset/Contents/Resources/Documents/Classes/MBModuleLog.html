@@ -62,9 +62,9 @@
 		
 		<option value="//api/name/logForModuleClass:">+ logForModuleClass:</option>
 		
-		<option value="//api/name/loggerClass">+ loggerClass</option>
+		<option value="//api/name/logRecorderClass">+ logRecorderClass</option>
 		
-		<option value="//api/name/setLoggerClass:">+ setLoggerClass:</option>
+		<option value="//api/name/setLogRecorderClass:">+ setLogRecorderClass:</option>
 		
 	</optgroup>
 	
@@ -104,7 +104,7 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Conforms to</th>
-	<td><a href="../Protocols/MBModuleLogger.html">MBModuleLogger</a></td>
+	<td><a href="../Protocols/MBModuleLogRecorder.html">MBModuleLogRecorder</a></td>
 </tr><tr>
 	<th>Declared in</th>
 	<td>MBModuleLog.h</td>
@@ -129,13 +129,13 @@ given <a href="../Protocols/MBModule.html"><code>MBModule</code></a>.</p>
 						<a title="Tasks" name="tasks"></a>
 						
 
-						<a title="MBModuleLogger support" name="task_MBModuleLogger support"></a>
-						<h2 class="task-title">MBModuleLogger support</h2>
+						<a title="MBModuleLogRecorder support" name="task_MBModuleLogRecorder support"></a>
+						<h2 class="task-title">MBModuleLogRecorder support</h2>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/setLoggerClass:" title="setLoggerClass:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setLoggerClass:">+&nbsp;setLoggerClass:</a></code>
+	<a name="//api/name/setLogRecorderClass:" title="setLogRecorderClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setLogRecorderClass:">+&nbsp;setLogRecorderClass:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -152,7 +152,7 @@ to this method.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (void)setLoggerClass:(nullable Class&lt;MBModuleLogger&gt;)<em>loggerClass</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (void)setLogRecorderClass:(nullable Class&lt;MBModuleLogRecorder&gt;)<em>logRecorderClass</em></code></div>
 
 		    
 			
@@ -161,8 +161,8 @@ to this method.</p>
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>loggerClass</code></th>
-						<td><p>The <code>Class</code> implementing <a href="../Protocols/MBModuleLogger.html"><code>MBModuleLogger</code></a> that
+						<th scope="row" class="argument-name"><code>logRecorderClass</code></th>
+						<td><p>The <code>Class</code> implementing <a href="../Protocols/MBModuleLogRecorder.html"><code>MBModuleLogRecorder</code></a> that
             should be used as the logger. If <code>nil</code> is passed, the value is
             reset to the default of <code>MBModuleLog</code>.</p></td>
 					</tr>
@@ -191,8 +191,8 @@ to this method.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/loggerClass" title="loggerClass"></a>
-	<h3 class="method-title"><code><a href="#//api/name/loggerClass">+&nbsp;loggerClass</a></code>
+	<a name="//api/name/logRecorderClass" title="logRecorderClass"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logRecorderClass">+&nbsp;logRecorderClass</a></code>
 </h3>
 
 	<div class="method-info">
@@ -207,7 +207,7 @@ to this method.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (nonnull Class&lt;MBModuleLogger&gt;)loggerClass</code></div>
+			<div class="method-subsection method-declaration"><code>+ (nonnull Class&lt;MBModuleLogRecorder&gt;)logRecorderClass</code></div>
 
 		    
 			

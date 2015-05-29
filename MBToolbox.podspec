@@ -99,7 +99,6 @@ Pod::Spec.new do |s|
 	# specifies the MBThreadLocalStorage class
 	#
 	s.subspec 'ThreadLocalStorage' do |ss|
-		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Concurrency/MBThreadLocalStorage.{h,m}'
 		ss.public_header_files = 'Code/Concurrency/MBThreadLocalStorage.h'
 	end
@@ -268,7 +267,6 @@ Pod::Spec.new do |s|
 	s.subspec 'Module' do |ss|
 		ss.dependency 'MBToolbox/Singleton'
 		ss.dependency 'MBToolbox/Indentation-NSString'
-		ss.dependency 'MBToolbox/ThreadLocalStorage'
 		ss.dependency 'MBToolbox/ConcurrentReadWriteCoordinator'
 		ss.source_files = 'Code/Module/*.{h,m}'
 		ss.public_header_files = 'Code/Module/*.h'

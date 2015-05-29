@@ -11,7 +11,6 @@
 #import "MBModuleLog.h"
 #import "MBModule.h"
 #import "NSString+MBIndentation.h"
-#import "MBThreadLocalStorage.h"
 #import "MBConcurrentReadWriteCoordinator.h"
 #import "MBModuleLogMacros.h"
 
@@ -28,7 +27,7 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 @implementation MBModuleLog
 {
     NSString* _name;
-    BOOL _registeredForMemoryWarnings;
+    NSMutableSet* _issuedMessages;
 }
 
 + (void) initialize
@@ -116,15 +115,19 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
     self = [super init];
     if (self) {
         _name = moduleName;
+        _issuedMessages = [NSMutableSet new];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(_memoryWarning)
+                                                     name:UIApplicationDidReceiveMemoryWarningNotification
+                                                   object:nil];
     }
     return self;
 }
 
 - (void) dealloc
 {
-    if (_registeredForMemoryWarnings) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
-    }
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /******************************************************************************/
@@ -133,45 +136,33 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 
 - (void) _memoryWarning
 {
-    MBLogDebugTrace();
-
-    [MBThreadLocalStorage setValue:nil forClass:[self class]];
+    [_issuedMessages removeAllObjects];
 }
 
 /******************************************************************************/
 #pragma mark Warnings & Errors
 /******************************************************************************/
 
-- (void) _outputNotice:(NSString*)notice
+- (void) _issueMessage:(NSString*)message atSeverity:(MBModuleLogSeverity)severity
 {
-    if (!_registeredForMemoryWarnings) {
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(_memoryWarning)
-                                                     name:UIApplicationDidReceiveMemoryWarningNotification
-                                                   object:nil];
-
-        _registeredForMemoryWarnings = YES;
+    if (![NSThread isMainThread]) {
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self _issueMessage:message atSeverity:severity];
+        });
     }
-
-    NSMutableSet* issuedSet = [MBThreadLocalStorage cachedValueForClass:[self class]
-                                                      usingInstantiator:^(){ return [NSMutableSet set]; }];
-    
-    if (![issuedSet containsObject:notice]) {
-        NSLog(@"%@", notice);
-        [issuedSet addObject:notice];
+    else {
+        if (![_issuedMessages containsObject:message]) {
+            MBLog(severity, @"%@", message);
+            [_issuedMessages addObject:message];
+        }
     }
-}
-
-- (void) _issueNotice:(NSString*)notice
-{
-    [self performSelectorOnMainThread:@selector(_outputNotice:)
-                           withObject:notice
-                        waitUntilDone:NO];
 }
 
 - (void) issueDeprecationWarning:(NSString*)warning
 {
-    [self _issueNotice:[NSString stringWithFormat:@"\n\nDEPRECATION WARNING: Support will be dropped from a future version of the %@ module for Mockingbird:\n\n%@\n\n", _name, [warning stringByIndentingEachLineWithTab]]];
+    NSString* msg = [NSString stringWithFormat:@"\n\nDEPRECATED FEATURE IN USE: Support for this will be dropped from a future version of the %@ module for Mockingbird:\n\n%@\n\n", _name, [warning stringByIndentingEachLineWithTab]];
+
+    [self _issueMessage:msg atSeverity:MBModuleLogSeverityWarning];
 }
 
 - (void) issueDeprecationWarningWithFormat:(NSString*)format, ...
@@ -186,7 +177,9 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 
 - (void) issueNotSupportedError:(NSString*)error
 {
-    [self _issueNotice:[NSString stringWithFormat:@"\n\nERROR: The %@ module for Mockingbird does not support the following feature:\n\n%@\n\n", _name, [error stringByIndentingEachLineWithTab]]];
+    NSString* msg = [NSString stringWithFormat:@"The %@ module for Mockingbird does not support the following feature:\n\n%@\n\n", _name, [error stringByIndentingEachLineWithTab]];
+
+    [self _issueMessage:msg atSeverity:MBModuleLogSeverityError];
 }
 
 - (void) issueNotSupportedErrorWithFormat:(NSString*)format, ...

@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBToolbox"
-	s.version               = "1.1.0"
+	s.version               = "1.1.1"
 	s.summary               = "Mockingbird Toolbox"
 	s.description           = "General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
 	s.homepage              = "https://github.com/emaloney/MBToolbox"
@@ -53,6 +53,8 @@ Pod::Spec.new do |s|
 	# specifies the MBBatteryMonitor class and related items
 	#
 	s.subspec 'BatteryMonitor' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Events'
 		ss.dependency 'MBToolbox/ServiceManager'
 		ss.source_files = 'Code/Battery/*.{h,m}'
@@ -67,6 +69,8 @@ Pod::Spec.new do |s|
 	# specifies the MBThreadsafeCache class and related items
 	#
 	s.subspec 'ThreadsafeCache' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Caching/MBThreadsafeCache*.{h,m}'
 		ss.public_header_files = 'Code/Caching/MBThreadsafeCache*.h'
@@ -76,6 +80,8 @@ Pod::Spec.new do |s|
 	# specifies the MBFilesystemCache class and related items
 	#
 	s.subspec 'FilesystemCache' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/ThreadsafeCache'
 		ss.dependency 'MBToolbox/FilesystemOperations'
 		ss.dependency 'MBToolbox/MessageDigest-NSString'
@@ -91,6 +97,8 @@ Pod::Spec.new do |s|
 	# specifies the MBConcurrentReadWriteCoordinator class
 	#
 	s.subspec 'ConcurrentReadWriteCoordinator' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.source_files = 'Code/Concurrency/MBConcurrentReadWriteCoordinator.{h,m}'
 		ss.public_header_files = 'Code/Concurrency/MBConcurrentReadWriteCoordinator.h'
 	end
@@ -99,6 +107,8 @@ Pod::Spec.new do |s|
 	# specifies the MBThreadLocalStorage class
 	#
 	s.subspec 'ThreadLocalStorage' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Concurrency/MBThreadLocalStorage.{h,m}'
 		ss.public_header_files = 'Code/Concurrency/MBThreadLocalStorage.h'
@@ -113,6 +123,8 @@ Pod::Spec.new do |s|
 	# to create, populate and manipulate NSError instances
 	#
 	s.subspec 'MBToolbox-NSError' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Error/*.{h,m}'
 		ss.public_header_files = 'Code/Error/*.h'
@@ -127,6 +139,8 @@ Pod::Spec.new do |s|
 	# of NSNotification events
 	#
 	s.subspec 'Events' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Events/*.{h,m}'
 		ss.public_header_files = 'Code/Events/*.h'
@@ -140,6 +154,8 @@ Pod::Spec.new do |s|
 	# specifies the MBFieldListFormatter class
 	#
 	s.subspec 'FieldListFormatter' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Formatting/MBFieldListFormatter.{h,m}'
 		ss.public_header_files = 'Code/Formatting/MBFieldListFormatter.h'
@@ -150,6 +166,8 @@ Pod::Spec.new do |s|
 	# MBFormattedDescriptionObject classes
 	#
 	s.subspec 'FormattedDescriptionObject' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/FieldListFormatter'
 		ss.source_files = 'Code/Formatting/MBFormattedDescriptionObject.{h,m}'
 		ss.public_header_files = 'Code/Formatting/MBFormattedDescriptionObject.h'
@@ -163,6 +181,8 @@ Pod::Spec.new do |s|
 	# specifies the MBBitmapPixelPlane class and related items
 	#
 	s.subspec 'BitmapPixelPlane' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/MBBitmapPixelPlane.{h,m}'
 		ss.public_header_files = 'Code/Graphics/MBBitmapPixelPlane.h'
@@ -172,6 +192,8 @@ Pod::Spec.new do |s|
 	# specifies the declarations within the MBColorTools.h file
 	#
 	s.subspec 'ColorTools' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.source_files = 'Code/Graphics/MBColorTools.h'
 		ss.public_header_files = 'Code/Graphics/MBColorTools.h'
 	end
@@ -180,6 +202,8 @@ Pod::Spec.new do |s|
 	# specifies the MBRoundedRectTools class
 	#
 	s.subspec 'RoundedRectTools' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/MBRoundedRectTools.{h,m}'
 		ss.public_header_files = 'Code/Graphics/MBRoundedRectTools.h'
@@ -190,6 +214,8 @@ Pod::Spec.new do |s|
 	# getting information about and modifying colors
 	#
 	s.subspec 'MBToolbox-UIColor' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/UIColor+MBToolbox.{h,m}'
 		ss.public_header_files = 'Code/Graphics/UIColor+MBToolbox.h'
@@ -199,6 +225,8 @@ Pod::Spec.new do |s|
 	# a UIImage class extension that adds methods for scaling images
 	#
 	s.subspec 'ImageScaling-UIImage' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/UIImage+MBImageScaling.{h,m}'
 		ss.public_header_files = 'Code/Graphics/UIImage+MBImageScaling.h'
@@ -209,6 +237,8 @@ Pod::Spec.new do |s|
 	# image snapshots of a view's contents
 	#
 	s.subspec 'SnapshotImage-UIView' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/UIView+MBSnapshotImage.{h,m}'
 		ss.public_header_files = 'Code/Graphics/UIView+MBSnapshotImage.h'
@@ -222,6 +252,8 @@ Pod::Spec.new do |s|
 	# specifies the MBMessageDigest class
 	#
 	s.subspec 'MessageDigest' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/MBToolbox-NSError'
 		ss.dependency 'MBToolbox/Module'
 		ss.frameworks = 'Security'
@@ -234,6 +266,8 @@ Pod::Spec.new do |s|
 	# extension providing related convenience methods
 	# 
 	s.subspec 'MessageDigest-NSString' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/MessageDigest'
 		ss.source_files = 'Code/MessageDigest/NSString+MBMessageDigest.{h,m}'
 		ss.public_header_files = 'Code/MessageDigest/NSString+MBMessageDigest.h'
@@ -244,6 +278,8 @@ Pod::Spec.new do |s|
 	# extension providing related convenience methods
 	# 
 	s.subspec 'MessageDigest-NSData' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/MessageDigest'
 		ss.source_files = 'Code/MessageDigest/NSData+MBMessageDigest.{h,m}'
 		ss.public_header_files = 'Code/MessageDigest/NSData+MBMessageDigest.h'
@@ -254,6 +290,8 @@ Pod::Spec.new do |s|
 	# extensions
 	# 
 	s.subspec 'MessageDigest-Extensions' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/MessageDigest-NSString'
 		ss.dependency 'MBToolbox/MessageDigest-NSData'
 	end
@@ -266,6 +304,8 @@ Pod::Spec.new do |s|
 	# specifies the MBModule class and related items
 	#
 	s.subspec 'Module' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Singleton'
 		ss.dependency 'MBToolbox/Indentation-NSString'
 		ss.dependency 'MBToolbox/ConcurrentReadWriteCoordinator'
@@ -281,6 +321,8 @@ Pod::Spec.new do |s|
 	# specifies the MBNetworkIndicator singleton
 	#
 	s.subspec 'NetworkIndicator' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Events'
 		ss.dependency 'MBToolbox/Singleton'
 		ss.source_files = 'Code/Network/MBNetworkIndicator.{h,m}'
@@ -291,6 +333,8 @@ Pod::Spec.new do |s|
 	# specifies the MBNetworkMonitor service
 	#
 	s.subspec 'NetworkMonitor' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Events'
 		ss.dependency 'MBToolbox/ServiceManager'
 		ss.framework = 'SystemConfiguration'
@@ -307,6 +351,8 @@ Pod::Spec.new do |s|
 	# specifies the MBOperationQueue class
 	#
 	s.subspec 'OperationQueue' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/MBToolbox-NSError'
 		ss.source_files = 'Code/Operations/MBOperationQueue.{h,m}'
 		ss.public_header_files = 'Code/Operations/MBOperationQueue.h'
@@ -317,6 +363,8 @@ Pod::Spec.new do |s|
 	# operations
 	#
 	s.subspec 'FilesystemOperations' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/OperationQueue'
 		ss.dependency 'MBToolbox/Singleton'
 		ss.source_files = 'Code/Operations/MBFilesystemOperations.{h,m}'
@@ -331,6 +379,8 @@ Pod::Spec.new do |s|
 	# specifies the MBRegexCache singleton
 	#
 	s.subspec 'RegexCache' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/MBToolbox-NSError'
 		ss.dependency 'MBToolbox/ThreadsafeCache'
 		ss.dependency 'MBToolbox/Singleton'
@@ -344,6 +394,8 @@ Pod::Spec.new do |s|
 	# for efficiency, these implementations use the MBRegexCache
 	#
 	s.subspec 'Regex-NSString' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/RegexCache'
 		ss.source_files = 'Code/Regex/NSString+MBRegex.{h,m}'
 		ss.public_header_files = 'Code/Regex/NSString+MBRegex.h'
@@ -358,6 +410,8 @@ Pod::Spec.new do |s|
 	# protocol
 	#
 	s.subspec 'ServiceManager' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.dependency 'MBToolbox/Singleton'
 		ss.source_files = 'Code/Services/*.{h,m}'
@@ -375,6 +429,8 @@ Pod::Spec.new do |s|
 	# dispatch_once().
 	# 
 	s.subspec 'Singleton' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Singleton/MBSingleton.h'
 		ss.public_header_files = 'Code/Singleton/MBSingleton.h'
@@ -389,6 +445,8 @@ Pod::Spec.new do |s|
 	# functions, and the MBStringify() preprocessor macro
 	#
 	s.subspec 'StringFunctions' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Common'
 		ss.source_files = 'Code/Strings/MBStringFunctions.h'
 		ss.public_header_files = 'Code/Strings/MBStringFunctions.h'
@@ -399,6 +457,8 @@ Pod::Spec.new do |s|
 	# between NSString and NSData instances
 	#
 	s.subspec 'StringConversions-NSData' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Strings/NSData+MBStringConversion.{h,m}'
 		ss.public_header_files = 'Code/Strings/NSData+MBStringConversion.h'
@@ -410,6 +470,8 @@ Pod::Spec.new do |s|
 	# prefixes
 	#
 	s.subspec 'Indentation-NSString' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.source_files = 'Code/Strings/NSString+MBIndentation.{h,m}'
 		ss.public_header_files = 'Code/Strings/NSString+MBIndentation.h'
 	end
@@ -419,6 +481,8 @@ Pod::Spec.new do |s|
 	# methods
 	#
 	s.subspec 'StringSizing-UIFont' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Strings/UIFont+MBStringSizing.{h,m}'
 		ss.public_header_files = 'Code/Strings/UIFont+MBStringSizing.h'
@@ -438,6 +502,8 @@ Pod::Spec.new do |s|
 	# specifies the contents of the MBAssert.h file
 	#
 	s.subspec 'Assert' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.source_files = 'Code/Common/MBAssert.h'
 		ss.public_header_files = 'Code/Common/MBAssert.h'
 	end
@@ -446,6 +512,8 @@ Pod::Spec.new do |s|
 	# specifies the contents of the MBDebug.h file
 	#
 	s.subspec 'Debug' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.source_files = 'Code/Common/MBDebug.h'
 		ss.public_header_files = 'Code/Common/MBDebug.h'
 	end
@@ -454,6 +522,8 @@ Pod::Spec.new do |s|
 	# specifies the contents of the MBRuntime.h file
 	#
 	s.subspec 'Runtime' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.source_files = 'Code/Common/MBRuntime.h'
 		ss.public_header_files = 'Code/Common/MBRuntime.h'
 	end
@@ -462,6 +532,8 @@ Pod::Spec.new do |s|
 	# specifies the common Mockingbird Toolbox headers
 	#
 	s.subspec 'Common' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.dependency 'MBToolbox/Assert'
 		ss.dependency 'MBToolbox/Debug'
 		ss.dependency 'MBToolbox/Runtime'
@@ -481,6 +553,8 @@ Pod::Spec.new do |s|
 	#################################################################
 
 	s.subspec 'BuildControl' do |ss|
+		ss.platform = :ios, '8.0'
+		ss.ios.deployment_target = '7.0'
 		ss.preserve_paths = 'BuildControl/public/**'
 	end
 

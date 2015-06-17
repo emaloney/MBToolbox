@@ -1,6 +1,0 @@
-framework module MBToolbox {
-  umbrella header "MBToolbox.h"
-
-  export *
-  module * { export * }
-}

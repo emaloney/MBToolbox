@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 	s.documentation_url     = "https://rawgit.com/emaloney/MBToolbox/master/Documentation/html/index.html"
 	s.license               = { :type => 'MIT', :file => 'LICENSE' }
 	s.author                = { "Evan Coyne Maloney" => "emaloney@gilt.com" }
-	s.platform		= :ios
+	s.platform              = :ios
 	s.ios.deployment_target = '7.0'
 	s.requires_arc          = true
 

@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Gilt Groupe. All rights reserved.
 //
 
+#import "MBAvailability.h"
 #import "MBService.h"
 
 /******************************************************************************/
@@ -97,6 +98,8 @@ typedef NS_OPTIONS(NSUInteger, MBNetworkAvailabilityFlags) {
     querying `SCNetworkReachabilityGetFlags` directly. */
 @property(nonatomic, assign, readonly) BOOL isOnline;
 
+#if MB_BUILD_IOS
+
 /*! Indicates whether the network connection (if any) is via wifi. If called
     repeatedly, it is more efficient to have the service running to avoid
     querying `SCNetworkReachabilityGetFlags` directly. */
@@ -123,6 +126,8 @@ typedef NS_OPTIONS(NSUInteger, MBNetworkAvailabilityFlags) {
     `kMBNetworkNoCarrierStatusDescription` when the `hasCellularCarrier`
     property would return `NO`. */
 @property(nonnull, nonatomic, readonly) NSString* carrierStatusDescription;
+
+#endif
 
 /*! Indicates the current status of network availability by querying
     `SCNetworkReachabilityGetFlags` directly. Not very processor-efficient for

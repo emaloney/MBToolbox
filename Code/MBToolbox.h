@@ -26,7 +26,18 @@ FOUNDATION_EXPORT const unsigned char MBToolboxVersionString[];
 //
 
 // import the public headers
+
+#import <MBToolbox/MBAvailability.h>
+
+#if MB_BUILD_IOS
 #import <MBToolbox/MBBatteryMonitor.h>
+#import <MBToolbox/MBNetworkIndicator.h>
+#import <MBToolbox/UIColor+MBToolbox.h>
+#import <MBToolbox/UIImage+MBImageScaling.h>
+#import <MBToolbox/UIView+MBSnapshotImage.h>
+#import <MBToolbox/UIFont+MBStringSizing.h>
+#endif
+
 #import <MBToolbox/MBCacheOperations.h>
 #import <MBToolbox/MBFilesystemCache+Subclassing.h>
 #import <MBToolbox/MBFilesystemCache.h>
@@ -43,16 +54,12 @@ FOUNDATION_EXPORT const unsigned char MBToolboxVersionString[];
 #import <MBToolbox/MBBitmapPixelPlane.h>
 #import <MBToolbox/MBColorTools.h>
 #import <MBToolbox/MBRoundedRectTools.h>
-#import <MBToolbox/UIColor+MBToolbox.h>
-#import <MBToolbox/UIImage+MBImageScaling.h>
-#import <MBToolbox/UIView+MBSnapshotImage.h>
 #import <MBToolbox/MBMessageDigest.h>
 #import <MBToolbox/NSData+MBMessageDigest.h>
 #import <MBToolbox/NSString+MBMessageDigest.h>
 #import <MBToolbox/MBModule.h>
 #import <MBToolbox/MBModuleLog.h>
 #import <MBToolbox/MBModuleLogMacros.h>
-#import <MBToolbox/MBNetworkIndicator.h>
 #import <MBToolbox/MBNetworkMonitor.h>
 #import <MBToolbox/MBFilesystemOperations.h>
 #import <MBToolbox/MBOperationQueue.h>
@@ -64,7 +71,6 @@ FOUNDATION_EXPORT const unsigned char MBToolboxVersionString[];
 #import <MBToolbox/MBStringFunctions.h>
 #import <MBToolbox/NSData+MBStringConversion.h>
 #import <MBToolbox/NSString+MBIndentation.h>
-#import <MBToolbox/UIFont+MBStringSizing.h>
 #import <MBToolbox/MBThreadLocalStorage.h>
 
 #endif

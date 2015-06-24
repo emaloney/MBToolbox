@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MBAvailability.h"
+
 /******************************************************************************/
 #pragma mark -
 #pragma mark MBThreadsafeCache class
@@ -38,12 +40,16 @@
             do not leave locks in an inconsistent state. This adds overhead,
             and is generally not needed unless subclasses override primitive
             hooks that may throw exceptions.
- 
+
  @param     ignore If `YES`, the cache will not automatically clear itself when
             a memory warning occurs.
  */
+#if MB_BUILD_IOS
 - (nonnull instancetype) initWithExceptionProtection:(BOOL)protect
                                 ignoreMemoryWarnings:(BOOL)ignore;
+#else
+- (nonnull instancetype) initWithExceptionProtection:(BOOL)protect;
+#endif
 
 /*!
  The default initializer for `MBThreadsafeCache` instances.
@@ -142,7 +148,9 @@
  The default implementation simply calls `clearMemoryCache`; however, subclasses
  may override this to perform additional cleanup when a memory warning occurs.
  */
+#if MB_BUILD_IOS
 - (void) memoryWarning;
+#endif
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Manipulating the cache lock

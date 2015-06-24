@@ -6,9 +6,12 @@
 //  Copyright (c) 2009 Gilt Groupe. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "MBEvents.h"
+
+#if MB_BUILD_IOS
+#import <UIKit/UIKit.h>
+#endif
+
 #import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL         0
@@ -84,9 +87,11 @@
 #pragma mark Posting memory warnings
 /******************************************************************************/
 
+#if MB_BUILD_IOS
 + (void) postMemoryWarning
 {
     [self postEvent:UIApplicationDidReceiveMemoryWarningNotification];
 }
+#endif
 
 @end

@@ -6,7 +6,11 @@
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
+#import "MBAvailability.h"
+
+#if MB_BUILD_IOS
 #import <UIKit/UIKit.h>
+#endif
 
 #import "MBModuleLog.h"
 #import "MBModule.h"
@@ -117,18 +121,22 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
         _name = moduleName;
         _issuedMessages = [NSMutableSet new];
 
+#if MB_BUILD_IOS
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(_memoryWarning)
                                                      name:UIApplicationDidReceiveMemoryWarningNotification
                                                    object:nil];
+#endif
     }
     return self;
 }
 
+#if MB_BUILD_IOS
 - (void) dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+#endif
 
 /******************************************************************************/
 #pragma mark Memory management

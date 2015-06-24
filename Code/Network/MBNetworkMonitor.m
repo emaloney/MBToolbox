@@ -6,9 +6,14 @@
 //  Copyright (c) 2012 Gilt Groupe. All rights reserved.
 //
 
-#import <SystemConfiguration/SystemConfiguration.h>
+#import "MBNetworkMonitor.h"
+
+#if MB_BUILD_IOS
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
+#endif
+
+#import <SystemConfiguration/SystemConfiguration.h>
 #import <netinet/in.h>
 #import <sys/socket.h>
 #import <netinet/in.h>
@@ -17,7 +22,6 @@
 #import <ifaddrs.h>
 #import <netdb.h>
 
-#import "MBNetworkMonitor.h"
 #import "MBServiceManager.h"
 #import "MBEvents.h"
 #import "MBModuleLogMacros.h"
@@ -50,7 +54,9 @@ NSString* const kMBNetworkRadioAccessTechnologyPrefix       = @"CTRadioAccessTec
 @implementation MBNetworkMonitor
 {
     SCNetworkReachabilityRef _networkReach;
+#if MB_BUILD_IOS
     CTTelephonyNetworkInfo* _carrierNetworkInfo;
+#endif
     BOOL _wasOnline;
     BOOL _wasOnWifi;
 }
@@ -74,9 +80,10 @@ MBImplementSingleton();
             MBLogError(@"%@ failed to create SCNetworkReachabilityRef", [self class]);
         }
 
+#if MB_BUILD_IOS
         _carrierNetworkInfo = [CTTelephonyNetworkInfo new];
-
         MBLogDebug(@"Current carrier info: %@", self.carrierStatusDescription);
+#endif
     }
     return (self);
 }
@@ -106,12 +113,15 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
     
     if (flags & kSCNetworkReachabilityFlagsReachable) {
         retVal |= MBNetworkAvailabilityOnline;
+
+#if MB_BUILD_IOS
         if (flags & kSCNetworkReachabilityFlagsIsWWAN) {
             retVal |= MBNetworkAvailabilityViaCarrier;
         }
         else {
             retVal |= MBNetworkAvailabilityViaWifi;
         }
+#endif
     }
     
     return retVal;
@@ -151,12 +161,16 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
     }
 }
 
+#if MB_BUILD_IOS
+
 - (void) _carrierRadioChanged
 {
     MBLogDebug(@"Carrier info changed to: %@", self.carrierStatusDescription);
 
     [MBEvents postEvent:kMBNetworkCarrierConnectionChangedEvent fromSender:self];
 }
+
+#endif
 
 /******************************************************************************/
 #pragma mark Property handling
@@ -171,6 +185,8 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
         return ((self.networkAvailability & MBNetworkAvailabilityOnline) != 0);
     }
 }
+
+#if MB_BUILD_IOS
 
 - (BOOL) isWifiConnected
 {
@@ -226,6 +242,8 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
     return kMBNetworkNoCarrierStatusDescription;
 }
 
+#endif
+
 - (MBNetworkAvailabilityFlags) networkAvailability
 {
     SCNetworkReachabilityFlags flags = 0;
@@ -268,7 +286,9 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
         [flagStr appendFormat:@"%C", (unichar)((flags & kSCNetworkReachabilityFlagsConnectionOnDemand)   ? 'O' : '-')];     // O = On demand
         [flagStr appendFormat:@"%C", (unichar)((flags & kSCNetworkReachabilityFlagsIsLocalAddress)       ? 'L' : '-')];     // L = is local address
         [flagStr appendFormat:@"%C", (unichar)((flags & kSCNetworkReachabilityFlagsIsDirect)             ? 'D' : '-')];     // D = direct connection
+#if MB_BUILD_IOS
         [flagStr appendFormat:@"%C", (unichar)((flags & kSCNetworkReachabilityFlagsIsWWAN)               ? 'C' : '-')];     // C = carrier cell network
+#endif
         return flagStr;
     }
     return nil;
@@ -298,7 +318,9 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
         MBLogError(@"%@ failed to set reachability callback", [self class]);
     }
 
+#if MB_BUILD_IOS
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_carrierRadioChanged) name:CTRadioAccessTechnologyDidChangeNotification object:nil];
+#endif
 }
 
 - (void) stopService

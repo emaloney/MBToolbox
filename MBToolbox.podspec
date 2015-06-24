@@ -12,13 +12,15 @@ Pod::Spec.new do |s|
 	s.name                  = "MBToolbox"
 	s.version               = "1.1.4"
 	s.summary               = "Mockingbird Toolbox"
-	s.description           = "General-purpose utilities for iOS apps. The core module in the Mockingbird open-source project from Gilt Groupe."
+	s.description           = "General-purpose utilities for iOS and Mac apps. The core module in the Mockingbird open-source project from Gilt Groupe."
 	s.homepage              = "https://github.com/emaloney/MBToolbox"
 	s.documentation_url     = "https://rawgit.com/emaloney/MBToolbox/master/Documentation/html/index.html"
 	s.license               = { :type => 'MIT', :file => 'LICENSE' }
 	s.author                = { "Evan Coyne Maloney" => "emaloney@gilt.com" }
 	s.platform              = :ios
 	s.ios.deployment_target = '7.0'
+	s.osx.deployment_target = '10.8'
+
 	s.requires_arc          = true
 
 	s.source = {
@@ -53,6 +55,7 @@ Pod::Spec.new do |s|
 	# specifies the MBBatteryMonitor class and related items
 	#
 	s.subspec 'BatteryMonitor' do |ss|
+		ss.platform = :ios
 		ss.dependency 'MBToolbox/Events'
 		ss.dependency 'MBToolbox/ServiceManager'
 		ss.source_files = 'Code/Battery/*.{h,m}'
@@ -172,6 +175,7 @@ Pod::Spec.new do |s|
 	# specifies the declarations within the MBColorTools.h file
 	#
 	s.subspec 'ColorTools' do |ss|
+		ss.platform = :ios
 		ss.source_files = 'Code/Graphics/MBColorTools.h'
 		ss.public_header_files = 'Code/Graphics/MBColorTools.h'
 	end
@@ -190,6 +194,7 @@ Pod::Spec.new do |s|
 	# getting information about and modifying colors
 	#
 	s.subspec 'MBToolbox-UIColor' do |ss|
+		ss.platform = :ios
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/UIColor+MBToolbox.{h,m}'
 		ss.public_header_files = 'Code/Graphics/UIColor+MBToolbox.h'
@@ -199,6 +204,7 @@ Pod::Spec.new do |s|
 	# a UIImage class extension that adds methods for scaling images
 	#
 	s.subspec 'ImageScaling-UIImage' do |ss|
+		ss.platform = :ios
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/UIImage+MBImageScaling.{h,m}'
 		ss.public_header_files = 'Code/Graphics/UIImage+MBImageScaling.h'
@@ -209,6 +215,7 @@ Pod::Spec.new do |s|
 	# image snapshots of a view's contents
 	#
 	s.subspec 'SnapshotImage-UIView' do |ss|
+		ss.platform = :ios
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Graphics/UIView+MBSnapshotImage.{h,m}'
 		ss.public_header_files = 'Code/Graphics/UIView+MBSnapshotImage.h'
@@ -281,6 +288,7 @@ Pod::Spec.new do |s|
 	# specifies the MBNetworkIndicator singleton
 	#
 	s.subspec 'NetworkIndicator' do |ss|
+		ss.platform = :ios
 		ss.dependency 'MBToolbox/Events'
 		ss.dependency 'MBToolbox/Singleton'
 		ss.source_files = 'Code/Network/MBNetworkIndicator.{h,m}'
@@ -419,6 +427,7 @@ Pod::Spec.new do |s|
 	# methods
 	#
 	s.subspec 'StringSizing-UIFont' do |ss|
+		ss.platform = :ios
 		ss.dependency 'MBToolbox/Module'
 		ss.source_files = 'Code/Strings/UIFont+MBStringSizing.{h,m}'
 		ss.public_header_files = 'Code/Strings/UIFont+MBStringSizing.h'
@@ -443,6 +452,14 @@ Pod::Spec.new do |s|
 	end
 
 	#
+	# specifies the contents of the MBAvailability.h file
+	#
+	s.subspec 'Availability' do |ss|
+		ss.source_files = 'Code/Common/MBAvailability.h'
+		ss.public_header_files = 'Code/Common/MBAvailability.h'
+	end
+
+	#
 	# specifies the contents of the MBDebug.h file
 	#
 	s.subspec 'Debug' do |ss|
@@ -463,6 +480,7 @@ Pod::Spec.new do |s|
 	#
 	s.subspec 'Common' do |ss|
 		ss.dependency 'MBToolbox/Assert'
+		ss.dependency 'MBToolbox/Availability'
 		ss.dependency 'MBToolbox/Debug'
 		ss.dependency 'MBToolbox/Runtime'
 		ss.source_files = 'Code/MBToolbox.h'

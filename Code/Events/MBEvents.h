@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MBAvailability.h"
 
 /******************************************************************************/
 #pragma mark -
@@ -102,6 +103,7 @@
 /*!    @name Posting memory warnings                                          */
 /*----------------------------------------------------------------------------*/
 
+#if MB_BUILD_IOS
 /*!
  Posts an artificial memory warning using the event name contained in the
  `UIApplicationDidReceiveMemoryWarningNotification` constant.
@@ -110,5 +112,6 @@
  non-persistent memory footprints.
  */
 + (void) postMemoryWarning;
+#endif
 
 @end

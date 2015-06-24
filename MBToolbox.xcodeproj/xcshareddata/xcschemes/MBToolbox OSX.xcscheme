@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B968EE4199008E10061DA66"
-               BuildableName = "MBToolboxDocumentation"
-               BlueprintName = "MBToolboxDocumentation"
+               BlueprintIdentifier = "3BBA16351B3B28DF00D38F77"
+               BuildableName = "MBToolbox.framework"
+               BlueprintName = "MBToolbox OSX"
                ReferencedContainer = "container:MBToolbox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B58E9B01A65B7D300FDCB66"
+               BuildableName = "MBToolboxTests.xctest"
+               BlueprintName = "MBToolboxTests"
+               ReferencedContainer = "container:MBToolbox.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3BBA16351B3B28DF00D38F77"
+            BuildableName = "MBToolbox.framework"
+            BlueprintName = "MBToolbox OSX"
+            ReferencedContainer = "container:MBToolbox.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B968EE4199008E10061DA66"
-            BuildableName = "MBToolboxDocumentation"
-            BlueprintName = "MBToolboxDocumentation"
+            BlueprintIdentifier = "3BBA16351B3B28DF00D38F77"
+            BuildableName = "MBToolbox.framework"
+            BlueprintName = "MBToolbox OSX"
             ReferencedContainer = "container:MBToolbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B968EE4199008E10061DA66"
-            BuildableName = "MBToolboxDocumentation"
-            BlueprintName = "MBToolboxDocumentation"
+            BlueprintIdentifier = "3BBA16351B3B28DF00D38F77"
+            BuildableName = "MBToolbox.framework"
+            BlueprintName = "MBToolbox OSX"
             ReferencedContainer = "container:MBToolbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

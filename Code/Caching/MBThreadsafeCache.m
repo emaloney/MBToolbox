@@ -6,10 +6,12 @@
 //  Copyright (c) 2010 Gilt Groupe. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "MBThreadsafeCache.h"
-#import "MBModuleLogMacros.h"
+
+#if MB_BUILD_IOS
+#import <UIKit/UIKit.h>
+#endif
+
 #import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
@@ -23,7 +25,9 @@
 {
     NSRecursiveLock* _lock;
     BOOL _exceptionProtection;
+#if MB_BUILD_IOS
     BOOL _clearOnMemoryWarning;
+#endif
     NSMutableDictionary* _cache;
 }
 
@@ -33,47 +37,59 @@
 
 - (nonnull instancetype) init
 {
+#if MB_BUILD_IOS
     return [self initWithExceptionProtection:NO ignoreMemoryWarnings:NO];
+#else
+    return [self initWithExceptionProtection:NO];
+#endif
 }
 
 - (nonnull instancetype) initWithExceptionProtection:(BOOL)protect
-                                ignoreMemoryWarnings:(BOOL)ignore;
+#if MB_BUILD_IOS
+                                ignoreMemoryWarnings:(BOOL)ignore
+#endif
 {
     self = [super init];
     if (self) {
         _exceptionProtection = protect;
-        _clearOnMemoryWarning = !ignore;
-                
+
         _lock = [NSRecursiveLock new];
         _cache = [NSMutableDictionary new];
-        
+
+#if MB_BUILD_IOS
+        _clearOnMemoryWarning = !ignore;
         if (_clearOnMemoryWarning) {
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(memoryWarning)
                                                          name:UIApplicationDidReceiveMemoryWarningNotification
                                                        object:nil];
         }        
+#endif
     }
     return self;
 }
 
+#if MB_BUILD_IOS
 - (void) dealloc
 {
     if (_clearOnMemoryWarning) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
     }            
 }
+#endif
 
 /******************************************************************************/
 #pragma mark Memory management
 /******************************************************************************/
 
+#if MB_BUILD_IOS
 - (void) memoryWarning
 {
 	MBLogDebugTrace();
 	
 	[self clearMemoryCache];
 }
+#endif
 
 /******************************************************************************/
 #pragma mark Locking & unlocking (for external use)

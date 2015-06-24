@@ -192,7 +192,11 @@ MBImplementSingleton();
         @try {
             NSError* err = nil;
             NSData* data = [self dataForOperation];
-            if (![data writeToFile:_filePath options:(NSDataWritingAtomic | NSDataWritingFileProtectionNone) error:&err]) {
+            NSDataWritingOptions options = NSDataWritingAtomic;
+#if TARGET_OS_IPHONE
+            options |= NSDataWritingFileProtectionNone;
+#endif
+            if (![data writeToFile:_filePath options:options error:&err]) {
                 MBLogError(@"%@ error while trying to write the file at %@: %@", [self class], _filePath, [err localizedDescription]);
             }
             else {

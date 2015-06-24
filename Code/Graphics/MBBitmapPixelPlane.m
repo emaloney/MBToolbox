@@ -163,12 +163,26 @@
     return plane;
 }
 
+#if MB_BUILD_IOS
+
 + (nullable instancetype) bitmapWithUIImage:(nonnull UIImage*)image
 {
     MBLogDebugTrace();
     
     return [self bitmapWithCGImage:image.CGImage];
 }
+
+#elif MB_BUILD_OSX
+
++ (nullable instancetype) bitmapWithNSImage:(nonnull NSImage*)image
+{
+    MBLogDebugTrace();
+
+    CGImageRef cgImage = [image CGImageForProposedRect:nil context:nil hints:nil];
+    return [self bitmapWithCGImage:cgImage];
+}
+
+#endif
 
 + (nullable instancetype) bitmapWithCGImage:(nonnull CGImageRef)image
 {
@@ -557,7 +571,9 @@
 #pragma mark Getting images
 /******************************************************************************/
 
-- (UIImage*) image
+#if TARGET_OS_IPHONE
+
+- (nonnull UIImage*) image
 {
     MBLogDebugTrace();
     
@@ -566,5 +582,19 @@
     CFRelease(imageRef);
     return image;
 }
+
+#elif TARGET_OS_MAC
+
+- (nonnull NSImage*) image
+{
+    MBLogDebugTrace();
+
+    CGImageRef imageRef = CGBitmapContextCreateImage(_bitmap);
+    NSImage* image = [[NSImage alloc] initWithCGImage:imageRef size:NSZeroSize];
+    CFRelease(imageRef);
+    return image;
+}
+
+#endif
 
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#import "MBAvailability.h"
+
+#if MB_BUILD_IOS
 #import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
 
 /******************************************************************************/
 #pragma mark Types
@@ -190,6 +197,8 @@ typedef struct {
 /*!    @name Creating bitmaps from images                                     */
 /*----------------------------------------------------------------------------*/
 
+#if TARGET_OS_IPHONE
+
 /*!
  Creates a new `MBBitmapPixelPlane` populated using the content of the image
  data contained in the `UIImage` instance provided.
@@ -201,6 +210,22 @@ typedef struct {
             Returns `nil` if an error occurred.
  */
 + (nullable instancetype) bitmapWithUIImage:(nonnull UIImage*)image;
+
+#elif TARGET_OS_MAC
+
+/*!
+ Creates a new `MBBitmapPixelPlane` populated using the content of the image
+ data contained in the `NSImage` instance provided.
+
+ @param     image An image that will be used as the source content of the
+            returned `MBBitmapPixelPlane`.
+
+ @return    A new `MBBitmapPixelPlane` instance containing the image specified.
+            Returns `nil` if an error occurred.
+ */
++ (nullable instancetype) bitmapWithNSImage:(nonnull NSImage*)image;
+
+#endif
 
 /*!
  Creates a new `MBBitmapPixelPlane` populated using the content of the image
@@ -348,12 +373,26 @@ typedef struct {
 /*!    @name Creating an image representation of the bitmap                   */
 /*----------------------------------------------------------------------------*/
 
+#if MB_BUILD_IOS
+
 /*!
  Creates a `UIImage` instance containing a visual representation of the current
  contents of the receiver.
- 
+
  @return        A new `UIImage`.
  */
 - (nonnull UIImage*) image;
+
+#elif MB_BUILD_MAC
+
+/*!
+ Creates an `NSImage` instance containing a visual representation of the current
+ contents of the receiver.
+
+ @return        A new `NSImage`.
+ */
+- (nonnull NSImage*) image;
+
+#endif
 
 @end

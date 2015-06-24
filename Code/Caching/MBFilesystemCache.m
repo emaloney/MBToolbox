@@ -6,13 +6,16 @@
 //  Copyright (c) 2011 Gilt Groupe. All rights reserved.
 //
 
+#import "MBAvailability.h"
+
+#if MB_BUILD_IOS
 #import <UIKit/UIKit.h>
+#endif
 
 #import "MBFilesystemCache.h"
 #import "MBCacheOperations.h"
 #import "NSString+MBMessageDigest.h"
 #import "MBThreadsafeCache+Subclassing.h"
-#import "MBModuleLogMacros.h"
 #import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL     0
@@ -37,9 +40,11 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 /******************************************************************************/
 
 @interface MBCachePruneOperation : NSOperation
+#if MB_BUILD_IOS
 {
     UIBackgroundTaskIdentifier _taskID;
 }
+#endif
 
 @property(nonnull, nonatomic, strong) NSString* cacheDir;
 @property(nonatomic, assign) NSTimeInterval maxAge;
@@ -91,6 +96,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 #pragma mark Memory management
 /******************************************************************************/
 
+#if MB_BUILD_IOS
 - (void) memoryWarning
 {
 	MBLogDebugTrace();
@@ -101,6 +107,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
     
 	[super memoryWarning];
 }
+#endif
 
 /******************************************************************************/
 #pragma mark MBFilesystemCacheDelegate implementation
@@ -449,9 +456,11 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 - (instancetype) init
 {
     self = [super init];
+#if MB_BUILD_IOS
     if (self) {
         _taskID = UIBackgroundTaskInvalid;
     }
+#endif
     return self;
 }
 
@@ -465,13 +474,14 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
     
     @autoreleasepool {
         @try {
+#if MB_BUILD_IOS
             UIApplication* app = [UIApplication sharedApplication];
-            
             _taskID = [app beginBackgroundTaskWithExpirationHandler:^{
                 [app endBackgroundTask:_taskID];
                 _taskID = UIBackgroundTaskInvalid;
             }];
-            
+#endif
+
             NSFileManager* fileMgr = [NSFileManager new];
             dispatch_queue_t q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
             dispatch_async(q, ^{
@@ -486,7 +496,11 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
                 
                 NSUInteger i=0;
                 NSUInteger fileCnt = files.count;
+#if MB_BUILD_IOS
                 while (i < fileCnt && _taskID != UIBackgroundTaskInvalid) {
+#else
+                while (i < fileCnt) {
+#endif
                     NSString* path = [_cacheDir stringByAppendingPathComponent:files[i]];
                     
                     NSDictionary* fileAttr = [fileMgr attributesOfItemAtPath:path error:&err];
@@ -519,9 +533,11 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
                     i++;
                 }
                 
+#if MB_BUILD_IOS
                 if (_taskID != UIBackgroundTaskInvalid) {
                     [app endBackgroundTask:_taskID];
                 }
+#endif
             });
         }
         @catch (NSException* ex) {

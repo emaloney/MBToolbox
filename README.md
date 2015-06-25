@@ -2,7 +2,7 @@
 
 # Mockingbird Toolbox
 
-The Mockingbird Toolbox is a set of general-purpose utility code for use in iOS applications.
+The Mockingbird Toolbox is a set of general-purpose utility code for use in iOS and Mac OS X applications.
 
 The Toolbox is the lowest-level module in the Mockingbird Library open-source project from Gilt Groupe.
 
@@ -12,11 +12,11 @@ The Mockingbird Toolbox includes:
 
 ### Battery & Power Monitoring
 
-The `MBBatteryMonitor` class reports the device’s power status and battery level, and also posts events through the `NSNotificationCenter` when these values change.
+The `MBBatteryMonitor` class (iOS only) reports the device’s power status and battery level, and also posts events through the `NSNotificationCenter` when these values change.
 
 ### Network Monitoring
 
-The `MBNetworkMonitor` class provides details about the current status of the device’s wifi and carrier network, and can also be configured to post `NSNotificationCenter` events as network status changes occur.
+The `MBNetworkMonitor` class provides details about the current status of the device’s wifi and (if available) carrier network, and can also be configured to post `NSNotificationCenter` events as network status changes occur.
 
 ### Caching
 
@@ -46,13 +46,13 @@ Class extensions for `NSString` and `NSData` are also provided to simplify creat
 
 ### Network Activity Indicator
 
-The `MBNetworkIndicator` class provides a mechanism to coordinate the display of the status bar network activity indicator.
+The `MBNetworkIndicator` class (iOS only) provides a mechanism to coordinate the display of the status bar network activity indicator.
 
-### Colors
+### Colors (iOS only)
 
-Mockingbird Toolbox includes various utilities for creating, examining, and manipulating colors.
+Mockingbird Toolbox includes various utilities for creating, examining, and manipulating colors. 
 
-### Images
+### Images (iOS only)
 
 The Toolbox contains a `UIImage` class extension that adds methods for scaling images, as well as a `UIView` class extension for capturing the contents of a view as a `UIImage`, `CIImage` or `CGImageRef`.
 
@@ -104,7 +104,7 @@ When you integrate Mockingbird Toolbox using CocoaPods, you should reference hea
 	#import <MBToolbox/MBDebug.h>
 ```
 
-In the future, we may issue binary releases of Mockingbird Toolbox as iOS frameworks; using the notation above will allow you to seamlessly transition to using a framework.
+In the future, we may issue binary releases of Mockingbird Toolbox as frameworks; using the notation above will allow you to seamlessly transition to using a framework.
 
 If you are not using CocoaPods and are instead copying the Mockingbird Toolbox source into your project directly, you will need to reference those headers with “user header” notation:
 
@@ -129,7 +129,7 @@ Among the subspecs provided are:
 
 ##### Battery & Power Monitoring
 
-* *BatteryMonitor* - includes the `MBBatteryMonitor` class and related items
+* *BatteryMonitor* (iOS only) - includes the `MBBatteryMonitor` class and related items
 
 ##### Caching
 
@@ -149,11 +149,10 @@ Among the subspecs provided are:
 ##### Graphics
 
 * *BitmapPixelPlane* - includes the `MBBitmapPixelPlane` class and related items
-* *ColorTools* - specifies the declarations within the `MBColorTools.h` file
 * *RoundedRectTools* - specifies the `MBRoundedRectTools` class
-* *MBToolbox-UIColor* - a `UIColor` class extension that adds several methods for getting information about and modifying colors
-* *ImageScaling-UIImage* - a `UIImage` class extension that adds methods for scaling images
-* *SnapshotImage-UIView* - a `UIView` class extension that adds methods for acquiring image snapshots of a view's contents
+* *MBToolbox-UIColor* (iOS only) - a `UIColor` class extension that adds several methods for getting information about and modifying colors
+* *ImageScaling-UIImage* (iOS only) - a `UIImage` class extension that adds methods for scaling images
+* *SnapshotImage-UIView* (iOS only) - a `UIView` class extension that adds methods for acquiring image snapshots of a view's contents
 
 ##### Message Digests
 
@@ -164,7 +163,7 @@ Among the subspecs provided are:
 
 ##### Network
 
-* *NetworkIndicator* - specifies the `MBNetworkIndicator` class
+* *NetworkIndicator* (iOS only) - specifies the `MBNetworkIndicator` class
 * *NetworkMonitor* - specifies the `MBNetworkMonitor` service, a high-level replacement for `Reachability` that provides additional functionality
 
 ##### NSOperations
@@ -190,7 +189,7 @@ Among the subspecs provided are:
 * *StringFunctions* - declares the `MBForceString()` and `MBTrimString()` inline functions, and the `MBStringify()` preprocessor macro
 * *StringConversions-NSData* - an `NSData` class extension that adds methods for converting between hexadecimal strings and `NSData` instances, and also provides methods for interpreting `NSData` instances as byte data for `NSString`s of various encodings
 * *Indentation-NSString* - an `NSString` class extension that adds methods for indenting the individual lines in a string using tabs and arbitrary prefixes
-* *StringSizing-UIFont* - a `UIFont` class extension that adds methods for performing common text measurement tasks
+* *StringSizing-UIFont* (iOS only) - a `UIFont` class extension that adds methods for performing common text measurement tasks
 
 ##### ...and more
 
@@ -208,7 +207,7 @@ Mockingbird began life as AppFramework, created by Jesse Boyes.
 
 AppFramework found a home at Gilt Groupe and eventually became Mockingbird Library.
 
-In recent years, Mockingbird Library has been developed and maintained by Evan Coyne Maloney, Gilt Groupe’s principal iOS engineer.
+In recent years, Mockingbird Library has been developed and maintained by Evan Coyne Maloney, Distinguished Engineer at Gilt Tech.
 
 ### Copyright & License
 

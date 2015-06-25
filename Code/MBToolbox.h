@@ -32,6 +32,7 @@ FOUNDATION_EXPORT const unsigned char MBToolboxVersionString[];
 #if MB_BUILD_IOS
 #import <MBToolbox/MBBatteryMonitor.h>
 #import <MBToolbox/MBNetworkIndicator.h>
+#import <MBToolbox/MBColorTools.h>
 #import <MBToolbox/UIColor+MBToolbox.h>
 #import <MBToolbox/UIImage+MBImageScaling.h>
 #import <MBToolbox/UIView+MBSnapshotImage.h>
@@ -52,7 +53,6 @@ FOUNDATION_EXPORT const unsigned char MBToolboxVersionString[];
 #import <MBToolbox/MBFieldListFormatter.h>
 #import <MBToolbox/MBFormattedDescriptionObject.h>
 #import <MBToolbox/MBBitmapPixelPlane.h>
-#import <MBToolbox/MBColorTools.h>
 #import <MBToolbox/MBRoundedRectTools.h>
 #import <MBToolbox/MBMessageDigest.h>
 #import <MBToolbox/NSData+MBMessageDigest.h>

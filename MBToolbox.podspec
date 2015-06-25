@@ -173,15 +173,6 @@ Pod::Spec.new do |s|
 	end
 
 	#
-	# specifies the declarations within the MBColorTools.h file
-	#
-#	s.subspec 'ColorTools' do |ss|
-#		ss.platform = :ios
-#		ss.source_files = 'Code/Graphics/MBColorTools.h'
-#		ss.public_header_files = 'Code/Graphics/MBColorTools.h'
-#	end
-
-	#
 	# specifies the MBRoundedRectTools class
 	#
 	s.subspec 'RoundedRectTools' do |ss|

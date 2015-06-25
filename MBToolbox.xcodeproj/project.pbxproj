@@ -73,7 +73,6 @@
 		3B58E9EE1A65BB5700FDCB66 /* MBFieldListFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C8A198811BD009A2126 /* MBFieldListFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B58E9EF1A65BB5700FDCB66 /* MBFormattedDescriptionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C8C198811BD009A2126 /* MBFormattedDescriptionObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B58E9F01A65BB5700FDCB66 /* MBBitmapPixelPlane.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C8F198811BD009A2126 /* MBBitmapPixelPlane.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B58E9F11A65BB5700FDCB66 /* MBColorTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C91198811BD009A2126 /* MBColorTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B58E9F21A65BB5700FDCB66 /* MBRoundedRectTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C92198811BD009A2126 /* MBRoundedRectTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B58E9F31A65BB5700FDCB66 /* UIColor+MBToolbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C94198811BD009A2126 /* UIColor+MBToolbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B58E9F41A65BB5700FDCB66 /* UIImage+MBImageScaling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0F8C96198811BD009A2126 /* UIImage+MBImageScaling.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -189,7 +188,6 @@
 		3B0F8C8D198811BD009A2126 /* MBFormattedDescriptionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFormattedDescriptionObject.m; sourceTree = "<group>"; };
 		3B0F8C8F198811BD009A2126 /* MBBitmapPixelPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBitmapPixelPlane.h; sourceTree = "<group>"; };
 		3B0F8C90198811BD009A2126 /* MBBitmapPixelPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBitmapPixelPlane.m; sourceTree = "<group>"; };
-		3B0F8C91198811BD009A2126 /* MBColorTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBColorTools.h; sourceTree = "<group>"; };
 		3B0F8C92198811BD009A2126 /* MBRoundedRectTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRoundedRectTools.h; sourceTree = "<group>"; };
 		3B0F8C93198811BD009A2126 /* MBRoundedRectTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRoundedRectTools.m; sourceTree = "<group>"; };
 		3B0F8C94198811BD009A2126 /* UIColor+MBToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MBToolbox.h"; sourceTree = "<group>"; };
@@ -357,7 +355,6 @@
 			children = (
 				3B0F8C8F198811BD009A2126 /* MBBitmapPixelPlane.h */,
 				3B0F8C90198811BD009A2126 /* MBBitmapPixelPlane.m */,
-				3B0F8C91198811BD009A2126 /* MBColorTools.h */,
 				3B0F8C92198811BD009A2126 /* MBRoundedRectTools.h */,
 				3B0F8C93198811BD009A2126 /* MBRoundedRectTools.m */,
 				3B0F8C94198811BD009A2126 /* UIColor+MBToolbox.h */,
@@ -537,7 +534,6 @@
 				3B58E9EE1A65BB5700FDCB66 /* MBFieldListFormatter.h in Headers */,
 				3B58E9EF1A65BB5700FDCB66 /* MBFormattedDescriptionObject.h in Headers */,
 				3B58E9F01A65BB5700FDCB66 /* MBBitmapPixelPlane.h in Headers */,
-				3B58E9F11A65BB5700FDCB66 /* MBColorTools.h in Headers */,
 				3B58E9F21A65BB5700FDCB66 /* MBRoundedRectTools.h in Headers */,
 				3B58E9F31A65BB5700FDCB66 /* UIColor+MBToolbox.h in Headers */,
 				3B58E9F41A65BB5700FDCB66 /* UIImage+MBImageScaling.h in Headers */,

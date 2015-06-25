@@ -25,7 +25,8 @@ Pod::Spec.new do |s|
 
 	s.source = {
 		:git => 'https://github.com/emaloney/MBToolbox.git',
-		:branch => 'osx'
+#		:branch => 'osx'
+		:tag => 'test-podspec'
 #		:tag => s.version.to_s
 	}
 	
@@ -303,7 +304,7 @@ Pod::Spec.new do |s|
 		ss.dependency 'MBToolbox/Events'
 		ss.dependency 'MBToolbox/ServiceManager'
 		ss.framework = 'SystemConfiguration'
-		ss.framework = 'CoreTelephony'
+		ss.ios.framework = 'CoreTelephony'
 		ss.source_files = 'Code/Network/MBNetworkMonitor.{h,m}'
 		ss.public_header_files = 'Code/Network/MBNetworkMonitor.h'
 	end

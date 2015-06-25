@@ -25,8 +25,7 @@ Pod::Spec.new do |s|
 
 	s.source = {
 		:git => 'https://github.com/emaloney/MBToolbox.git',
-#		:branch => 'osx'
-		:tag => 'test-podspec'
+		:tag => 'test-podspec-1.1.5'
 #		:tag => s.version.to_s
 	}
 	

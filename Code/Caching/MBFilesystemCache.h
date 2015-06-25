@@ -206,7 +206,7 @@ extern const NSTimeInterval kMBFilesystemCacheDefaultMaxAge;
 @property(nonnull, nonatomic, readonly) NSString* cacheName;
 
 /*! Returns the `MBFilesystemCacheDelegate` used by the receiver. */
-@property(nonatomic, weak) id cacheDelegate;
+@property(nullable, nonatomic, weak) id cacheDelegate;
 
 /*! Returns the maximum age of the files in the cache, in seconds. Files that
     are older than this value will not be used by the cache and will

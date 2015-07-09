@@ -6,18 +6,38 @@
 //  Copyright (c) 2015 Gilt Groupe. All rights reserved.
 //
 
-#import <AvailabilityMacros.h>
+#import <TargetConditionals.h>
+
+#define MB_BUILD_IOS        0
+#define MB_BUILD_WATCHOS    0
+#define MB_BUILD_OSX        0
 
 #if TARGET_OS_IPHONE || TARGET_OS_SIMULATOR
 
-#ifndef MB_BUILD_IOS
-#define MB_BUILD_IOS    1
+#if TARGET_OS_WATCH
+
+#ifdef MB_BUILD_WATCHOS
+#undef MB_BUILD_WATCHOS
 #endif
 
-#elif TARGET_OS_MAC
+#define MB_BUILD_WATCHOS    1
 
-#ifndef MB_BUILD_OSX
-#define MB_BUILD_OSX    1
+#else                   // #if TARGET_OS_WATCH
+
+#ifdef MB_BUILD_IOS
+#undef MB_BUILD_IOS
 #endif
 
+#define MB_BUILD_IOS        1
+
+#endif                  // #else from #if TARGET_OS_WATCH
+
+#elif TARGET_OS_MAC     // #if TARGET_OS_IPHONE || TARGET_OS_SIMULATOR
+
+#ifdef MB_BUILD_OSX
+#undef MB_BUILD_OSX
 #endif
+
+#define MB_BUILD_OSX        1
+
+#endif                  // #elif TARGET_OS_MAC from #if TARGET_OS_IPHONE || TARGET_OS_SIMULATOR

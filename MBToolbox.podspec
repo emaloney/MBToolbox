@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
     s.name                  = "MBToolbox"
-    s.version               = "1.1.6"
+    s.version               = "1.1.7"
     s.summary               = "Mockingbird Toolbox"
     s.description           = "General-purpose utilities for iOS and Mac apps. The core module in the Mockingbird open-source project from Gilt Groupe."
     s.homepage              = "https://github.com/emaloney/MBToolbox"

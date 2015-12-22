@@ -59,6 +59,8 @@ typedef unsigned char MBColorComponent;
  Correctly interpreting the color data requires knowing the associated
  `MBBitmapPixelPlane`'s `pixelType`.
  */
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc11-extensions"
 typedef struct {
     union
     {
@@ -82,6 +84,7 @@ typedef struct {
         MBColorComponent channel4;
     };
 } MBBitmapPixel;
+#pragma clang diagnostic pop
 
 /******************************************************************************/
 #pragma mark -

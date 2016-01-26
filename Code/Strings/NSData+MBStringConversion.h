@@ -42,7 +42,7 @@
  
  @return    A hex string.
  */
-- (nonnull NSString*) hexString;
+- (nonnull NSString*) toStringHex;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Interpreting bytes as strings

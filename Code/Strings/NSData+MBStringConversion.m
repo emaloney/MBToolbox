@@ -45,7 +45,7 @@
     return data;
 }
 
-- (nonnull NSString*) hexString
+- (nonnull NSString*) toStringHex
 {
     MBLogDebugTrace();
 

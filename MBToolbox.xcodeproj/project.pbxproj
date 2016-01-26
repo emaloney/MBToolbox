@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		3B4BC3FF1C5815460032E5E9 /* Test-NSData+MBStringConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BC3FE1C5815460032E5E9 /* Test-NSData+MBStringConversion.m */; };
 		3B58D5D31B3B3D4F00C27D19 /* MBAvailability.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B58D5D21B3B3D4F00C27D19 /* MBAvailability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B58D5D41B3B3F8400C27D19 /* MBAvailability.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B58D5D21B3B3D4F00C27D19 /* MBAvailability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B58E9B21A65B7D300FDCB66 /* MBToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B58E9A71A65B7D300FDCB66 /* MBToolbox.framework */; };
@@ -224,6 +225,7 @@
 		3B3831B019882B93006A771F /* MBToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBToolbox.h; sourceTree = "<group>"; };
 		3B47588819C0DF8000619FF1 /* UIFont+MBStringSizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MBStringSizing.h"; sourceTree = "<group>"; };
 		3B47588919C0DF8000619FF1 /* UIFont+MBStringSizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MBStringSizing.m"; sourceTree = "<group>"; };
+		3B4BC3FE1C5815460032E5E9 /* Test-NSData+MBStringConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-NSData+MBStringConversion.m"; sourceTree = "<group>"; };
 		3B58D5D21B3B3D4F00C27D19 /* MBAvailability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAvailability.h; sourceTree = "<group>"; };
 		3B58E97E1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBConcurrentReadWriteCoordinator.h; sourceTree = "<group>"; };
 		3B58E97F1A65911E00FDCB66 /* MBConcurrentReadWriteCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBConcurrentReadWriteCoordinator.m; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 			children = (
 				3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */,
 				3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */,
+				3B4BC3FE1C5815460032E5E9 /* Test-NSData+MBStringConversion.m */,
 				3B968EE0198FF28D0061DA66 /* Test-NSString+MBIndentation.m */,
 			);
 			path = Tests;
@@ -780,6 +783,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4BC3FF1C5815460032E5E9 /* Test-NSData+MBStringConversion.m in Sources */,
 				3B58E9C01A65B90F00FDCB66 /* Test-MBMessageDigest.m in Sources */,
 				3B58E9C11A65B90F00FDCB66 /* Test-MBStringFunctions.m in Sources */,
 				3B58E9C21A65B90F00FDCB66 /* Test-NSString+MBIndentation.m in Sources */,

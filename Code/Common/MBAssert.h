@@ -10,9 +10,9 @@
 #pragma mark Preconditions & argument validation
 /******************************************************************************/
 
-#define MBArgNonNil(x)              { if (!x) { [[NSException exceptionWithName:@"Argument must not be nil" reason:[NSString stringWithFormat:@"The argument variable '%s' was nil, but it must not be. (%@:%u)", #x, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__] userInfo:nil] raise]; } }
+#define MBArgNonNil(x)              { if (!(x)) { [[NSException exceptionWithName:@"Argument must not be nil" reason:[NSString stringWithFormat:@"The argument variable '%s' was nil, but it must not be. (%@:%u)", #x, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__] userInfo:nil] raise]; } }
 
-#define MBExpect(x)                 { if (!x) { [[NSException exceptionWithName:@"Expectation not satisfied" reason:[NSString stringWithFormat:@"The expectation '%s' was false; it must be true. (%@:%u)", #x, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__] userInfo:nil] raise]; } }
+#define MBExpect(x)                 { if (!(x)) { [[NSException exceptionWithName:@"Expectation not satisfied" reason:[NSString stringWithFormat:@"The expectation '%s' was false; it must be true. (%@:%u)", #x, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__] userInfo:nil] raise]; } }
 
 /******************************************************************************/
 #pragma mark Unimplemented code exceptions

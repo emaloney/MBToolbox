@@ -22,7 +22,7 @@
 
 #define MBLogTrace(severity)        MBLog(severity, @"%s", __PRETTY_FUNCTION__)
 
-#define MBLogObject(severity, x)    MBLog(severity, @"%@ = %@@%p: %@", @"" # x, [x class], x, [x description])
+#define MBLogObject(severity, x)    MBLog(severity, @"%@ = %@@%p: %@", @"" # x, [x class], (void*)x, [x description])
 
 #define MBLogString(severity, x)    MBLog(severity, @"\"%@\" (length: %lu)", x, (unsigned long)[x length])
 

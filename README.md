@@ -1,5 +1,11 @@
 ![Gilt Tech logo](Documentation/images/gilt-tech-logo.png)
 
+# IMPORTANT NOTE
+
+This documentation is out of date with respect to Cocoapods integration below.
+
+Use of Cocoapods for Mockingbird Toolbox is no longer supported. Instead, you must embed the `MBToolbox.xcodeproj` in your own project file and select the appropriate framework for the target platform.
+
 # Mockingbird Toolbox
 
 The Mockingbird Toolbox is a set of general-purpose utility code for use in iOS and Mac OS X applications.

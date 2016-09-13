@@ -1,5 +1,21 @@
 ![Gilt Tech logo](Documentation/images/gilt-tech-logo.png)
 
+# IMPORTANT NOTE
+
+### TO-DO: Update to note removal of CocoaPods support
+
+This documentation is out of date with respect to CocoaPods integration below.
+
+Use of CocoaPods for Mockingbird Toolbox is no longer supported.
+
+If you wish to use a dependency manager, [Carthage](https://github.com/Carthage/Carthage) is supported. Just add the following line to your `Cartfile`, then run `carthage update`:
+
+```
+github "emaloney/MBToolbox" ~> 2.0.0  
+```
+
+Otherwise, you may embed the `MBToolbox.xcodeproj` within your own project and link against the appropriate framework for your target platform.
+
 # Mockingbird Toolbox
 
 The Mockingbird Toolbox is a set of general-purpose utility code for use in iOS and Mac OS X applications.

@@ -14,7 +14,7 @@ If you wish to use a dependency manager, [Carthage](https://github.com/Carthage/
 github "emaloney/MBToolbox" ~> 2.0.0  
 ```
 
-Otherwise, you may embed the `MBToolbox.xcodeproj` within your own project and link against the appropriate framework for your target platform.
+Otherwise, you may embed `MBToolbox.xcodeproj` within your own project and link against the appropriate framework for your target platform.
 
 # Mockingbird Toolbox
 

@@ -929,7 +929,6 @@
 				INFOPLIST_FILE = "BuildControl/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gilt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MBToolbox;
 				SKIP_INSTALL = YES;

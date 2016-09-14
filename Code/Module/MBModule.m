@@ -51,9 +51,7 @@ MBImplementSingleton();
 
 + (nullable NSBundle*) resourceBundle
 {
-    NSBundle* containingBundle = [NSBundle bundleForClass:self];
-    NSString* moduleBundlePath = [containingBundle pathForResource:[self moduleName] ofType:@"bundle"];
-    return [NSBundle bundleWithPath:moduleBundlePath];
+    return [NSBundle bundleForClass:self];
 }
 
 /******************************************************************************/

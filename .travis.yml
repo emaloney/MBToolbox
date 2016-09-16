@@ -14,4 +14,6 @@ install:
 
 script:
 - set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-iOS' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' clean test | xcpretty
+- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-iOS' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' build | xcpretty
 - set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-macOS' -destination 'platform=macOS' clean test | xcpretty
+- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-macOS' -destination 'platform=macOS' build | xcpretty

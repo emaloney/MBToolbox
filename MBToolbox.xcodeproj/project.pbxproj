@@ -98,6 +98,11 @@
 		3B6A2DDB1A71589B00A5ED84 /* NSData+MBStringConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B6A2DD91A71589B00A5ED84 /* NSData+MBStringConversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B6A2DDC1A71589B00A5ED84 /* NSData+MBStringConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A2DDA1A71589B00A5ED84 /* NSData+MBStringConversion.m */; };
 		3B79DED91B174CD30031D15A /* MBModuleLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B79DED81B174CD30031D15A /* MBModuleLogMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BB1665F1D8C40420004A0E9 /* MBToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBA16841B3B28DF00D38F77 /* MBToolbox.framework */; };
+		3BB166651D8C419C0004A0E9 /* Test-MBMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EDF198FF28D0061DA66 /* Test-MBMessageDigest.m */; };
+		3BB166661D8C419C0004A0E9 /* Test-MBStringFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */; };
+		3BB166671D8C419C0004A0E9 /* Test-NSData+MBStringConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BC3FE1C5815460032E5E9 /* Test-NSData+MBStringConversion.m */; };
+		3BB166681D8C419C0004A0E9 /* Test-NSString+MBIndentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B968EE0198FF28D0061DA66 /* Test-NSString+MBIndentation.m */; };
 		3BBA16381B3B28DF00D38F77 /* MBCacheOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C77198811BD009A2126 /* MBCacheOperations.m */; };
 		3BBA16391B3B28DF00D38F77 /* NSData+MBStringConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A2DDA1A71589B00A5ED84 /* NSData+MBStringConversion.m */; };
 		3BBA163A1B3B28DF00D38F77 /* MBFilesystemCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8C7A198811BD009A2126 /* MBFilesystemCache.m */; };
@@ -166,6 +171,13 @@
 			remoteGlobalIDString = 3B58E9A61A65B7D300FDCB66;
 			remoteInfo = MBToolbox;
 		};
+		3BB166601D8C40420004A0E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B2EF74319880F31009AD107 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BBA16351B3B28DF00D38F77;
+			remoteInfo = "MBToolbox OSX";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -232,7 +244,7 @@
 		3B58E9801A65911E00FDCB66 /* MBThreadLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBThreadLocalStorage.h; sourceTree = "<group>"; };
 		3B58E9811A65911E00FDCB66 /* MBThreadLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBThreadLocalStorage.m; sourceTree = "<group>"; };
 		3B58E9A71A65B7D300FDCB66 /* MBToolbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBToolbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B58E9B11A65B7D300FDCB66 /* MBToolboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBToolboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B58E9B11A65B7D300FDCB66 /* MBToolboxTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MBToolboxTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6A2DD91A71589B00A5ED84 /* NSData+MBStringConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MBStringConversion.h"; sourceTree = "<group>"; };
 		3B6A2DDA1A71589B00A5ED84 /* NSData+MBStringConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MBStringConversion.m"; sourceTree = "<group>"; };
 		3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBStringFunctions.m"; sourceTree = "<group>"; };
@@ -243,6 +255,7 @@
 		3BAC5A5B19894520003005AC /* MBModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBModule.m; sourceTree = "<group>"; };
 		3BAC5A5C19894520003005AC /* MBModuleLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBModuleLog.h; sourceTree = "<group>"; };
 		3BAC5A5D19894520003005AC /* MBModuleLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBModuleLog.m; sourceTree = "<group>"; };
+		3BB1665A1D8C40420004A0E9 /* MBToolboxTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MBToolboxTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBA16841B3B28DF00D38F77 /* MBToolbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBToolbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF2D491199C915B002F0639 /* MBAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAssert.h; sourceTree = "<group>"; };
 		3BF2D492199C915B002F0639 /* MBDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDebug.h; sourceTree = "<group>"; };
@@ -262,6 +275,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B58E9B21A65B7D300FDCB66 /* MBToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB166571D8C40420004A0E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB1665F1D8C40420004A0E9 /* MBToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,8 +481,9 @@
 			isa = PBXGroup;
 			children = (
 				3B58E9A71A65B7D300FDCB66 /* MBToolbox.framework */,
-				3B58E9B11A65B7D300FDCB66 /* MBToolboxTests.xctest */,
+				3B58E9B11A65B7D300FDCB66 /* MBToolboxTests iOS.xctest */,
 				3BBA16841B3B28DF00D38F77 /* MBToolbox.framework */,
+				3BB1665A1D8C40420004A0E9 /* MBToolboxTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -607,9 +629,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3B58E9A61A65B7D300FDCB66 /* MBToolbox iOS */ = {
+		3B58E9A61A65B7D300FDCB66 /* MBToolbox-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B58E9BA1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolbox iOS" */;
+			buildConfigurationList = 3B58E9BA1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolbox-iOS" */;
 			buildPhases = (
 				3B58E9A21A65B7D300FDCB66 /* Sources */,
 				3B58E9A31A65B7D300FDCB66 /* Frameworks */,
@@ -620,14 +642,14 @@
 			);
 			dependencies = (
 			);
-			name = "MBToolbox iOS";
+			name = "MBToolbox-iOS";
 			productName = MBToolbox;
 			productReference = 3B58E9A71A65B7D300FDCB66 /* MBToolbox.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3B58E9B01A65B7D300FDCB66 /* MBToolboxTests */ = {
+		3B58E9B01A65B7D300FDCB66 /* MBToolboxTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B58E9BD1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolboxTests" */;
+			buildConfigurationList = 3B58E9BD1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolboxTests-iOS" */;
 			buildPhases = (
 				3B58E9AD1A65B7D300FDCB66 /* Sources */,
 				3B58E9AE1A65B7D300FDCB66 /* Frameworks */,
@@ -638,14 +660,32 @@
 			dependencies = (
 				3B58E9B41A65B7D300FDCB66 /* PBXTargetDependency */,
 			);
-			name = MBToolboxTests;
+			name = "MBToolboxTests-iOS";
 			productName = MBToolboxTests;
-			productReference = 3B58E9B11A65B7D300FDCB66 /* MBToolboxTests.xctest */;
+			productReference = 3B58E9B11A65B7D300FDCB66 /* MBToolboxTests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3BBA16351B3B28DF00D38F77 /* MBToolbox OSX */ = {
+		3BB166591D8C40420004A0E9 /* MBToolboxTests-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BBA16811B3B28DF00D38F77 /* Build configuration list for PBXNativeTarget "MBToolbox OSX" */;
+			buildConfigurationList = 3BB166621D8C40420004A0E9 /* Build configuration list for PBXNativeTarget "MBToolboxTests-macOS" */;
+			buildPhases = (
+				3BB166561D8C40420004A0E9 /* Sources */,
+				3BB166571D8C40420004A0E9 /* Frameworks */,
+				3BB166581D8C40420004A0E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BB166611D8C40420004A0E9 /* PBXTargetDependency */,
+			);
+			name = "MBToolboxTests-macOS";
+			productName = "MBToolboxTests macOS";
+			productReference = 3BB1665A1D8C40420004A0E9 /* MBToolboxTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3BBA16351B3B28DF00D38F77 /* MBToolbox-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BBA16811B3B28DF00D38F77 /* Build configuration list for PBXNativeTarget "MBToolbox-macOS" */;
 			buildPhases = (
 				3BBA16361B3B28DF00D38F77 /* Sources */,
 				3BBA16551B3B28DF00D38F77 /* Frameworks */,
@@ -656,7 +696,7 @@
 			);
 			dependencies = (
 			);
-			name = "MBToolbox OSX";
+			name = "MBToolbox-macOS";
 			productName = MBToolbox;
 			productReference = 3BBA16841B3B28DF00D38F77 /* MBToolbox.framework */;
 			productType = "com.apple.product-type.framework";
@@ -675,9 +715,14 @@
 					};
 					3B58E9B01A65B7D300FDCB66 = {
 						CreatedOnToolsVersion = 6.2;
+						ProvisioningStyle = Manual;
 					};
 					3B968EE4199008E10061DA66 = {
 						CreatedOnToolsVersion = 6.0;
+					};
+					3BB166591D8C40420004A0E9 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -693,9 +738,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B58E9A61A65B7D300FDCB66 /* MBToolbox iOS */,
-				3BBA16351B3B28DF00D38F77 /* MBToolbox OSX */,
-				3B58E9B01A65B7D300FDCB66 /* MBToolboxTests */,
+				3B58E9A61A65B7D300FDCB66 /* MBToolbox-iOS */,
+				3BBA16351B3B28DF00D38F77 /* MBToolbox-macOS */,
+				3B58E9B01A65B7D300FDCB66 /* MBToolboxTests-iOS */,
+				3BB166591D8C40420004A0E9 /* MBToolboxTests-macOS */,
 				3B968EE4199008E10061DA66 /* MBToolboxDocumentation */,
 			);
 		};
@@ -710,6 +756,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3B58E9AF1A65B7D300FDCB66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB166581D8C40420004A0E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -790,6 +843,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BB166561D8C40420004A0E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB166651D8C419C0004A0E9 /* Test-MBMessageDigest.m in Sources */,
+				3BB166661D8C419C0004A0E9 /* Test-MBStringFunctions.m in Sources */,
+				3BB166671D8C419C0004A0E9 /* Test-NSData+MBStringConversion.m in Sources */,
+				3BB166681D8C419C0004A0E9 /* Test-NSString+MBIndentation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BBA16361B3B28DF00D38F77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -826,8 +890,13 @@
 /* Begin PBXTargetDependency section */
 		3B58E9B41A65B7D300FDCB66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B58E9A61A65B7D300FDCB66 /* MBToolbox iOS */;
+			target = 3B58E9A61A65B7D300FDCB66 /* MBToolbox-iOS */;
 			targetProxy = 3B58E9B31A65B7D300FDCB66 /* PBXContainerItemProxy */;
+		};
+		3BB166611D8C40420004A0E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BBA16351B3B28DF00D38F77 /* MBToolbox-macOS */;
+			targetProxy = 3BB166601D8C40420004A0E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -964,7 +1033,6 @@
 		3B58E9BE1A65B7D300FDCB66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "BuildControl/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gilt.tests.$(PRODUCT_NAME:rfc1034identifier)";
@@ -975,7 +1043,6 @@
 		3B58E9BF1A65B7D300FDCB66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = "BuildControl/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -995,6 +1062,43 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3BB166631D8C40420004A0E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "BuildControl/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gilt.MBToolboxTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3BB166641D8C40420004A0E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = "BuildControl/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gilt.MBToolboxTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1057,7 +1161,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B58E9BA1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolbox iOS" */ = {
+		3B58E9BA1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolbox-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B58E9BB1A65B7D300FDCB66 /* Debug */,
@@ -1066,7 +1170,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B58E9BD1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolboxTests" */ = {
+		3B58E9BD1A65B7D300FDCB66 /* Build configuration list for PBXNativeTarget "MBToolboxTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B58E9BE1A65B7D300FDCB66 /* Debug */,
@@ -1084,7 +1188,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BBA16811B3B28DF00D38F77 /* Build configuration list for PBXNativeTarget "MBToolbox OSX" */ = {
+		3BB166621D8C40420004A0E9 /* Build configuration list for PBXNativeTarget "MBToolboxTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BB166631D8C40420004A0E9 /* Debug */,
+				3BB166641D8C40420004A0E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3BBA16811B3B28DF00D38F77 /* Build configuration list for PBXNativeTarget "MBToolbox-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3BBA16821B3B28DF00D38F77 /* Debug */,

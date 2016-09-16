@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3BBA16351B3B28DF00D38F77"
                BuildableName = "MBToolbox.framework"
-               BlueprintName = "MBToolbox OSX"
+               BlueprintName = "MBToolbox-macOS"
                ReferencedContainer = "container:MBToolbox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B58E9B01A65B7D300FDCB66"
-               BuildableName = "MBToolboxTests.xctest"
-               BlueprintName = "MBToolboxTests"
+               BlueprintIdentifier = "3BB166591D8C40420004A0E9"
+               BuildableName = "MBToolboxTests-macOS.xctest"
+               BlueprintName = "MBToolboxTests-macOS"
                ReferencedContainer = "container:MBToolbox.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3BBA16351B3B28DF00D38F77"
             BuildableName = "MBToolbox.framework"
-            BlueprintName = "MBToolbox OSX"
+            BlueprintName = "MBToolbox-macOS"
             ReferencedContainer = "container:MBToolbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,7 +66,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3BBA16351B3B28DF00D38F77"
             BuildableName = "MBToolbox.framework"
-            BlueprintName = "MBToolbox OSX"
+            BlueprintName = "MBToolbox-macOS"
             ReferencedContainer = "container:MBToolbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,7 +84,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3BBA16351B3B28DF00D38F77"
             BuildableName = "MBToolbox.framework"
-            BlueprintName = "MBToolbox OSX"
+            BlueprintName = "MBToolbox-macOS"
             ReferencedContainer = "container:MBToolbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

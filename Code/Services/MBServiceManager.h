@@ -160,9 +160,6 @@
             isn't already running.
 
  @param     serviceClass The implementing class of the service class to detach.
-
- @return    If successful, the `MBService` instance that was attached. Will
-            return `nil` on failure.
  */
 - (void) detachFromServiceClass:(Class)serviceClass;
 
@@ -178,9 +175,6 @@
             isn't already running.
 
  @param     serviceClassName The name of the service class to attach.
-
- @return    If successful, the `MBService` instance that was attached. Will
-            return `nil` on failure.
  */
 - (void) detachFromServiceClassNamed:(NSString*)serviceClassName;
 

@@ -1,6 +1,29 @@
+# Finder/Mac OS X
+#
 .DS_Store
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 xcuserdata
 *.xccheckout
-Products/
-build/
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcscmblueprint
 
+# Carthage: we --use-submodules for our non-leaf dependencies
+#
+Carthage/*
+!Carthage/Checkouts/
+**/Carthage/

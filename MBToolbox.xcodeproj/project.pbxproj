@@ -244,7 +244,7 @@
 		3B58E9801A65911E00FDCB66 /* MBThreadLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBThreadLocalStorage.h; sourceTree = "<group>"; };
 		3B58E9811A65911E00FDCB66 /* MBThreadLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBThreadLocalStorage.m; sourceTree = "<group>"; };
 		3B58E9A71A65B7D300FDCB66 /* MBToolbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBToolbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B58E9B11A65B7D300FDCB66 /* MBToolboxTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "MBToolboxTests iOS.xctest"; path = "MBToolboxTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B58E9B11A65B7D300FDCB66 /* MBToolboxTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MBToolboxTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6A2DD91A71589B00A5ED84 /* NSData+MBStringConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MBStringConversion.h"; sourceTree = "<group>"; };
 		3B6A2DDA1A71589B00A5ED84 /* NSData+MBStringConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MBStringConversion.m"; sourceTree = "<group>"; };
 		3B6ED5331995C87A004652EB /* Test-MBStringFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test-MBStringFunctions.m"; sourceTree = "<group>"; };
@@ -481,7 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				3B58E9A71A65B7D300FDCB66 /* MBToolbox.framework */,
-				3B58E9B11A65B7D300FDCB66 /* MBToolboxTests iOS.xctest */,
+				3B58E9B11A65B7D300FDCB66 /* MBToolboxTests-iOS.xctest */,
 				3BBA16841B3B28DF00D38F77 /* MBToolbox.framework */,
 				3BB1665A1D8C40420004A0E9 /* MBToolboxTests-macOS.xctest */,
 			);
@@ -662,7 +662,7 @@
 			);
 			name = "MBToolboxTests-iOS";
 			productName = MBToolboxTests;
-			productReference = 3B58E9B11A65B7D300FDCB66 /* MBToolboxTests iOS.xctest */;
+			productReference = 3B58E9B11A65B7D300FDCB66 /* MBToolboxTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3BB166591D8C40420004A0E9 /* MBToolboxTests-macOS */ = {
@@ -1032,10 +1032,6 @@
 		3B58E9BE1A65B7D300FDCB66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "BuildControl/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -1048,10 +1044,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "BuildControl/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -1083,10 +1075,6 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "BuildControl/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -1107,10 +1095,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "BuildControl/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;

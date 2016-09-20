@@ -13,7 +13,7 @@ install:
   gem install xcpretty
 
 script:
-- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-iOS' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' clean build | xcpretty
-- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-iOS' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' test | xcpretty
-- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-macOS' -destination 'platform=macOS' clean build | xcpretty
-- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-macOS' -destination 'platform=macOS' test | xcpretty
+- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-iOS' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' -destination-timeout 120 clean build | xcpretty
+- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-iOS' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' -destination-timeout 120 test | xcpretty
+- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-macOS' -destination 'platform=macOS' -destination-timeout 120 clean build | xcpretty
+- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-macOS' -destination 'platform=macOS' -destination-timeout 120 test | xcpretty

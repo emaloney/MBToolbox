@@ -12,33 +12,33 @@
 
 /******************************************************************************/
 #pragma mark -
-#pragma mark MBModuleLogSeverity protocol
+#pragma mark MBLogSeverity protocol
 /******************************************************************************/
 
 /*!
  Specifies the relative importance of a log message.
  */
-typedef NS_ENUM(NSUInteger, MBModuleLogSeverity) {
+typedef NS_ENUM(NSUInteger, MBLogSeverity) {
     /*! The lowest severity, used for detailed or frequently occurring 
         debugging and diagnostic information. Not intended for use in
         production code. */
-    MBModuleLogSeverityVerbose  = 1,
+    MBLogSeverityVerbose  = 1,
 
     /*! Used for debugging and diagnostic information. Not intended for 
         use in production code. */
-    MBModuleLogSeverityDebug    = 2,
+    MBLogSeverityDebug    = 2,
 
     /*! Used to indicate something of interest that is not problematic. */
-    MBModuleLogSeverityInfo     = 3,
+    MBLogSeverityInfo     = 3,
 
     /*! Used to indicate that something appears amiss and potentially 
         problematic. The situation bears looking into before a larger
         problem arises. */
-    MBModuleLogSeverityWarning  = 4,
+    MBLogSeverityWarning  = 4,
 
     /*! The highest severity, used to indicate that something has gone wrong; 
         a fatal error may be imminent. */
-    MBModuleLogSeverityError    = 5
+    MBLogSeverityError    = 5
 };
 
 /******************************************************************************/
@@ -71,7 +71,7 @@ typedef NS_ENUM(NSUInteger, MBModuleLogSeverity) {
             location of the code responsible for this request to log `msg`.
  */
 + (void) logMessage:(nonnull NSString*)msg
-         atSeverity:(MBModuleLogSeverity)severity
+         atSeverity:(MBLogSeverity)severity
       callingObject:(nullable id)caller
    callingSignature:(nonnull NSString*)signature
     callingFilePath:(nonnull NSString*)filePath

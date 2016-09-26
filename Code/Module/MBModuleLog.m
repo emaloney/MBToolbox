@@ -62,22 +62,22 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
     return logger;
 }
 
-+ (nonnull NSString*) logTagForSeverity:(MBModuleLogSeverity)severity
++ (nonnull NSString*) logTagForSeverity:(MBLogSeverity)severity
 {
     switch (severity) {
-        case MBModuleLogSeverityVerbose:
+        case MBLogSeverityVerbose:
             return @"VERBOSE";
 
-        case MBModuleLogSeverityDebug:
+        case MBLogSeverityDebug:
             return @"  DEBUG";
 
-        case MBModuleLogSeverityInfo:
+        case MBLogSeverityInfo:
             return @"   INFO";
 
-        case MBModuleLogSeverityWarning:
+        case MBLogSeverityWarning:
             return @"WARNING";
 
-        case MBModuleLogSeverityError:
+        case MBLogSeverityError:
             return @"  ERROR";
 
         default:
@@ -86,7 +86,7 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 }
 
 + (void) logMessage:(nonnull NSString*)msg
-         atSeverity:(MBModuleLogSeverity)severity
+         atSeverity:(MBLogSeverity)severity
       callingObject:(nullable id)caller
    callingSignature:(nonnull NSString*)signature
     callingFilePath:(nonnull NSString*)filePath
@@ -151,7 +151,7 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 #pragma mark Warnings & Errors
 /******************************************************************************/
 
-- (void) _issueMessage:(NSString*)message atSeverity:(MBModuleLogSeverity)severity
+- (void) _issueMessage:(NSString*)message atSeverity:(MBLogSeverity)severity
 {
     if (![NSThread isMainThread]) {
         dispatch_sync(dispatch_get_main_queue(), ^{
@@ -170,7 +170,7 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 {
     NSString* msg = [NSString stringWithFormat:@"\n\nDEPRECATED FEATURE IN USE: Support for this will be dropped from a future version of the %@ module for Mockingbird:\n\n%@\n\n", _name, [warning stringByIndentingEachLineWithTab]];
 
-    [self _issueMessage:msg atSeverity:MBModuleLogSeverityWarning];
+    [self _issueMessage:msg atSeverity:MBLogSeverityWarning];
 }
 
 - (void) issueDeprecationWarningWithFormat:(NSString*)format, ...
@@ -187,7 +187,7 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 {
     NSString* msg = [NSString stringWithFormat:@"The %@ module for Mockingbird does not support the following feature:\n\n%@\n\n", _name, [error stringByIndentingEachLineWithTab]];
 
-    [self _issueMessage:msg atSeverity:MBModuleLogSeverityError];
+    [self _issueMessage:msg atSeverity:MBLogSeverityError];
 }
 
 - (void) issueNotSupportedErrorWithFormat:(NSString*)format, ...

@@ -1,6 +1,6 @@
 language: objective-c
 xcode_project: MBToolbox.xcodeproj
-osx_image: xcode8
+osx_image: xcode8.2
 
 git:
   depth: 1
@@ -13,7 +13,7 @@ install:
   gem install xcpretty
 
 script:
-- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-iOS' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' -destination-timeout 120 clean build | xcpretty
-- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-iOS' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' -destination-timeout 120 test | xcpretty
+- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-iOS' -destination 'platform=iOS Simulator,OS=10.2,name=iPad Pro (9.7 inch)' -destination-timeout 120 clean build | xcpretty
+- set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-iOS' -destination 'platform=iOS Simulator,OS=10.2,name=iPad Pro (9.7 inch)' -destination-timeout 120 test | xcpretty
 - set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-macOS' -destination 'platform=macOS' -destination-timeout 120 clean build | xcpretty
 - set -o pipefail && xcodebuild -project MBToolbox.xcodeproj -scheme 'MBToolbox-macOS' -destination 'platform=macOS' -destination-timeout 120 test | xcpretty

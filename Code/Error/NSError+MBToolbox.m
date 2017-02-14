@@ -31,6 +31,7 @@ const NSInteger kMBErrorRequestCancelled        	= 104;
 const NSInteger kMBErrorNotCompleted            	= 105;
 const NSInteger kMBErrorAmbiguousFrame            	= 106;
 const NSInteger kMBErrorInvalidImageData            = 107;
+const NSInteger kMBErrorInconsistentState           = 108;
 const NSInteger kMBErrorMessageInDescription    	= 999;
 
 /******************************************************************************/

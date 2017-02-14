@@ -38,6 +38,7 @@ extern const NSInteger kMBErrorRequestCancelled;            //!< 104
 extern const NSInteger kMBErrorNotCompleted;                //!< 105
 extern const NSInteger kMBErrorAmbiguousFrame;              //!< 106
 extern const NSInteger kMBErrorInvalidImageData;            //!< 107
+extern const NSInteger kMBErrorInconsistentState;           //!< 108
 extern const NSInteger kMBErrorMessageInDescription;        //!< 999 - generic error code indicating the error's details are in the localized description
 
 /******************************************************************************/

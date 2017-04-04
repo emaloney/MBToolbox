@@ -42,6 +42,11 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
     }
 }
 
++ (void) enable
+{
+    // we don't do anything; this hook is intended for subclasses
+}
+
 + (void) setLogRecorderClass:(nullable Class<MBModuleLogRecorder>)logRecorderClass
 {
     [s_readerWriter enqueueWrite:^{
@@ -50,6 +55,7 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
         } else {
             s_logger = [MBModuleLog class];
         }
+        [s_logger enable];
     }];
 }
 

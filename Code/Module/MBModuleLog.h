@@ -53,6 +53,14 @@ typedef NS_ENUM(NSUInteger, MBLogSeverity) {
 @protocol MBModuleLogRecorder <NSObject>
 
 /*!
+ Called prior to any first call to `logMessage:` to notify the log recorder
+ that it may be used in the future. 
+ 
+ Implementations would typically perform any needed set-up here.
+ */
++ (void) enable;
+
+/*!
  Records the log message to the underlying logging subsystem. 
  
  @param     msg The message to record.

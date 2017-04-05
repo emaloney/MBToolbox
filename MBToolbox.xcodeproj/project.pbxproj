@@ -273,7 +273,6 @@
 				3BA517D51E948F6D008BE58E /* Services */,
 				3BA517D91E948F6D008BE58E /* Singleton */,
 				3BA517DB1E948F6D008BE58E /* Strings */,
-				3BA517E31E948F6D008BE58E /* untitled folder */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -458,13 +457,6 @@
 				3BA517E21E948F6D008BE58E /* UIFont+MBStringSizing.m */,
 			);
 			path = Strings;
-			sourceTree = "<group>";
-		};
-		3BA517E31E948F6D008BE58E /* untitled folder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "untitled folder";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

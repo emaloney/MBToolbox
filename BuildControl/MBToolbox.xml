@@ -1,12 +1,13 @@
 <MBML>
 	<Var name="project:name" literal="MBToolbox"/>
+	<Var name="project:publisher" literal="Gilt Groupe"/>
 	<Var name="repo:owner" literal="emaloney"/>
 	<Var name="project:creator:name" literal="Evan Maloney"/>
 	<Var name="project:license" literal="MIT"/>
 	<Var name="project:bundlePrefix" literal="com.gilt.mockingbird"/>
-	<Var name="project:primaryLanguage" literal="Objective-C"/>
+	<Var name="project:language" literal="ObjC"/>
 
-	<Var name="project:description">A stand-alone set of Objective-C utility code for Apple Platforms.</Var>
+	<Var name="project:description">A stand-alone set of Objective-C utility code for Apple platforms</Var>
 	
 	<Var name="project:platforms" type="list">
 		<Var literal="iOS"/>

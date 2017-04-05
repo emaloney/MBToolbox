@@ -6,6 +6,7 @@
 	<Var name="project:license" literal="MIT"/>
 	<Var name="project:bundlePrefix" literal="com.gilt.mockingbird"/>
 	<Var name="project:language" literal="ObjC"/>
+	<Var name="project:grouping" literal="Mockingbird"/>
 
 	<Var name="project:description">A stand-alone set of Objective-C utility code for Apple platforms</Var>
 	

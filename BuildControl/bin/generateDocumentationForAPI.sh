@@ -28,29 +28,10 @@ exitWithError()
 	exit 2
 }
 
-removeStaleDocumentation()
+verifyResult()
 {
-	if [[ -d "$1" ]]; then
-		rm -rf "$1"
-		if [[ $? != 0 ]]; then
-			exitWithError "Couldn't remove stale documentation at: $1"
-		fi
-	fi
-}
-
-installDocumentation()
-{
-	if [[ ! -d "$1" ]]; then
-		exitWithError "Expected to find appledoc-generated documentation at: $1"
-	fi
-
-	removeStaleDocumentation "$2"
-	mkdir -p "$2"
-	
-	touch "$1"
-	cp -R "$1" "$2"
-	if [[ $? != 0 ]]; then
-		exitWithError "Couldn't install documentation from $1 at: $2"
+	if [[ $1 != 0 ]]; then
+		exitWithError "Command failed; exiting"
 	fi
 }
 
@@ -64,7 +45,7 @@ INDEX_OUTPUT_FILE="${TEMP_DIR}/README-rewritten.md"
 HTML_OUTPUT_DIR="${APPLEDOC_OUTPUT_DIR}/html"
 HTML_INSTALL_DIR="Documentation/API"
 DOCSET_OUTPUT_DIR="${APPLEDOC_OUTPUT_DIR}/docset"
-DOCSET_INSTALL_DIR="Documentation/docsets/${DOCSET_FILENAME}"
+DOCSET_INSTALL_DIR="${HTML_INSTALL_DIR}/docsets/${DOCSET_FILENAME}"
 ONLINE_ROOT_URL="https://rawgit.com/emaloney/MBToolbox/master/Documentation/API/"
 
 # verify that we can find the source code
@@ -75,6 +56,8 @@ fi
 
 # rewrite the links in the README.md file to work properly in the docset
 cat "$SOURCE_DIR/README.md" | sed sq${ONLINE_ROOT_URL}qqg > "${INDEX_OUTPUT_FILE}"
+
+echo "Building documentation..."
 
 # create the documentation
 find "$SOURCE_DIR" -name "*.h" ! -path "*/Private/*" -print0 | xargs -0 \
@@ -102,7 +85,13 @@ if [[ $? != 0 ]]; then
 fi
 
 # install the HTML and docset in the project's Documentation dir
-installDocumentation "$HTML_OUTPUT_DIR" "$HTML_INSTALL_DIR"
-installDocumentation "$DOCSET_OUTPUT_DIR" "$DOCSET_INSTALL_DIR"
+rm -rf "$HTML_INSTALL_DIR"
+mkdir -p "$HTML_INSTALL_DIR"
+cp -R "$HTML_OUTPUT_DIR"/* "$HTML_INSTALL_DIR"/.
+verifyResult $?
+
+mkdir -p "$DOCSET_INSTALL_DIR"
+cp -R "$DOCSET_OUTPUT_DIR" "$DOCSET_INSTALL_DIR"
+verifyResult $?
 
 echo "Success!"

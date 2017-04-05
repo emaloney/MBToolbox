@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBModuleLog.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBModuleLog</TokenIdentifier>
+			<Abstract type="html">Instances of this class are used to issue log messages associated with a
+given MBModule.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+            
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/setLogRecorderClass:</TokenIdentifier>
+			<Abstract type="html">Sets the logger class used to log messages through MBModuleLog. By
+default, MBModuleLog is the logger class, unless overridden by a call
+to this method.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>+ (void)setLogRecorderClass:(nullable Class&lt;MBModuleLogRecorder&gt;)logRecorderClass</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>logRecorderClass</Name>
+					<Abstract type="html">The Class implementing MBModuleLogRecorder that
+            should be used as the logger. If nil is passed, the value is
+            reset to the default of MBModuleLog.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setLogRecorderClass:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/logRecorderClass</TokenIdentifier>
+			<Abstract type="html">Returns the logger class used to log messages through MBModuleLog.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull Class&lt;MBModuleLogRecorder&gt;)logRecorderClass</Declaration>
+			
+			
+			<Anchor>//api/name/logRecorderClass</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/logForModuleClass:</TokenIdentifier>
+			<Abstract type="html">Creates and returns a new MBModuleLog instance for the specified module
+implementation class.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull instancetype)logForModuleClass:(nonnull Class)moduleCls</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>moduleCls</Name>
+					<Abstract type="html">The implementing class of the MBModule for which a
+            log is being created.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new MBModuleLog.</Abstract></ReturnValue>
+			<Anchor>//api/name/logForModuleClass:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBModuleLog/logForModule:</TokenIdentifier>
+			<Abstract type="html">Creates and returns a new MBModuleLog instance for the specified module.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull instancetype)logForModule:(nonnull NSObject&lt;MBModule&gt; *)module</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>module</Name>
+					<Abstract type="html">The MBModule for which a log is being created.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new MBModuleLog.</Abstract></ReturnValue>
+			<Anchor>//api/name/logForModule:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleLog/issueDeprecationWarning:</TokenIdentifier>
+			<Abstract type="html">Issues a deprecation warning from the module associated with the receiver.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>- (void)issueDeprecationWarning:(nonnull NSString *)warning</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>warning</Name>
+					<Abstract type="html">The warning message.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/issueDeprecationWarning:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleLog/issueDeprecationWarningWithFormat:</TokenIdentifier>
+			<Abstract type="html">Issues a deprecation warning from the module associated with the receiver.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>- (void)issueDeprecationWarningWithFormat:(nonnull NSString *)format, ...</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>format</Name>
+					<Abstract type="html">The format for the warning message, followed by zero or more
+            format parameters.</Abstract>
+				</Parameter><Parameter>
+					<Name>...</Name>
+					<Abstract type="html">A variable argument list of zero or more values referenced
+            within the format string.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/issueDeprecationWarningWithFormat:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleLog/issueNotSupportedError:</TokenIdentifier>
+			<Abstract type="html">Issues a not supported error from the module associated with the receiver.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>- (void)issueNotSupportedError:(nonnull NSString *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error message.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/issueNotSupportedError:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleLog/issueNotSupportedErrorWithFormat:</TokenIdentifier>
+			<Abstract type="html">Issues a not supported error from the module associated with the receiver.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>- (void)issueNotSupportedErrorWithFormat:(nonnull NSString *)format, ...</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>format</Name>
+					<Abstract type="html">The format for the error message, followed by zero or more
+            format parameters.</Abstract>
+				</Parameter><Parameter>
+					<Name>...</Name>
+					<Abstract type="html">A variable argument list of zero or more values referenced
+            within the format string.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/issueNotSupportedErrorWithFormat:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

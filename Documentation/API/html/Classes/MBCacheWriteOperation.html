@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBCacheWriteOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MBToolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/cache">cache</option>
+		
+		<option value="//api/name/cacheObject">cacheObject</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/operationForWritingObject:toFile:forCache:">+ operationForWritingObject:toFile:forCache:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithObject:inCache:forFilePath:">- initWithObject:inCache:forFilePath:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBCacheWriteOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/MBFileWriteOperation.html">MBFileWriteOperation</a> : NSOperation</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MBCacheOperations.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An <code>NSOperation</code> subclass used by <a href="../Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a>s to handle persistence
+for <a href="#//api/name/cache">cache</a> objects.</p>
+
+<p><code>MBCacheWriteOperation</code> instances are typically added to the
+<a href="../Classes/MBCacheWriteQueue.html"><code>MBCacheWriteQueue</code></a> singleton for performing <a href="#//api/name/cache">cache</a> operations such as this.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Object lifecycle" name="task_Object lifecycle"></a>
+						<h2 class="task-title">Object lifecycle</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/operationForWritingObject:toFile:forCache:" title="operationForWritingObject:toFile:forCache:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/operationForWritingObject:toFile:forCache:">+&nbsp;operationForWritingObject:toFile:forCache:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a new <code>MBCacheWriteOperation</code> instance that can be used to write
+a <a href="#//api/name/cache">cache</a> object to a file.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nonnull instancetype)operationForWritingObject:(nonnull id)<em>obj</em> toFile:(nonnull NSString *)<em>path</em> forCache:(nonnull MBFilesystemCache *)<em>fc</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>obj</code></th>
+						<td><p>The <a href="#//api/name/cache">cache</a> object to be written to a file.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>The filesystem path of the file to be written by the returned
+            operation.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fc</code></th>
+						<td><p>The <a href="../Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> responsible for managing the cached
+            object <code>obj</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The newly-created <a href="../Classes/MBFileWriteOperation.html"><code>MBFileWriteOperation</code></a> instance.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBCacheOperations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithObject:inCache:forFilePath:" title="initWithObject:inCache:forFilePath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithObject:inCache:forFilePath:">&ndash;&nbsp;initWithObject:inCache:forFilePath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes the receiver so it can be used to write to the specified file.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)initWithObject:(nonnull id)<em>obj</em> inCache:(nonnull MBFilesystemCache *)<em>fc</em> forFilePath:(nonnull NSString *)<em>path</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>obj</code></th>
+						<td><p>The <a href="#//api/name/cache">cache</a> object to be written to a file.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fc</code></th>
+						<td><p>The <a href="../Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> responsible for managing the cached
+            object <code>obj</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>The filesystem path of the file to be written by the returned
+            operation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBCacheOperations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Getting information about the operation" name="task_Getting information about the operation"></a>
+						<h2 class="task-title">Getting information about the operation</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/cacheObject" title="cacheObject"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cacheObject">&nbsp;&nbsp;cacheObject</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the <a href="#//api/name/cache">cache</a> object to be written to the filesystem by this
+    operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonnull, nonatomic, readonly) id cacheObject</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBCacheOperations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cache" title="cache"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cache">&nbsp;&nbsp;cache</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the <a href="../Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> instance responsible for managing the
+    cache object associated with this operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonnull, nonatomic, readonly) MBFilesystemCache *cache</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBCacheOperations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Gilt Groupe. All rights reserved. Updated: 2017-04-05</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

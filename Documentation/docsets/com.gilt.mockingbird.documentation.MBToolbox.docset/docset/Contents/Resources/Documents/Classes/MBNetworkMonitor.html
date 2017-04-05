@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBNetworkMonitor Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MBToolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/carrierStatusDescription">carrierStatusDescription</option>
+		
+		<option value="//api/name/cellularCarrierCountry">cellularCarrierCountry</option>
+		
+		<option value="//api/name/cellularCarrierName">cellularCarrierName</option>
+		
+		<option value="//api/name/cellularConnectionType">cellularConnectionType</option>
+		
+		<option value="//api/name/hasCellularCarrier">hasCellularCarrier</option>
+		
+		<option value="//api/name/isOnline">isOnline</option>
+		
+		<option value="//api/name/isWifiConnected">isWifiConnected</option>
+		
+		<option value="//api/name/networkAvailability">networkAvailability</option>
+		
+		<option value="//api/name/networkAvailabilityDescription">networkAvailabilityDescription</option>
+		
+		<option value="//api/name/reachabilityFlagsDescription">reachabilityFlagsDescription</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBNetworkMonitor Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/MBService.html">MBService</a></td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MBNetworkMonitor.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Provides a mechanism for determining network availability and requesting
+updates about network status changes.</p>
+
+<p>You can use this singleton to query the current network availability.</p>
+
+<p>The <code>MBNetworkMonitor</code> class also acts as a service that, when running, will
+post the following <code>NSNotificationCenter</code> events when the status of the network
+changes:</p>
+
+<ul>
+<li><p><code>MBNetwork:didGoOnline</code> — Indicates that the network has become available.
+This is also fired immediately if the network is available when the service
+starts.</p></li>
+<li><p><code>MBNetwork:didGoOffline</code> — Indicates that the network went offline. Sending
+network requests will fail when offline.</p></li>
+<li><p><code>MBNetwork:wifiConnected</code> — Indicates that a network connection became
+available through wifi.</p></li>
+<li><p><code>MBNetwork:wifiDisconnected</code> — Indicates that the wifi network connection
+is no longer available. A connection may still be available through a wireless
+carrier.</p></li>
+<li><p><code>MBNetwork:carrierConnectionChanged</code> — Indicates that the state of the
+carrier network connection changed.</p></li>
+</ul>
+<div class="note"><p><strong>Note:</strong> By default, changes in network status <em>do not</em> result in events
+            being fired. Notification events are posted <em>only</em> when the
+            <code>MBNetworkMonitor</code> service is running. If the network status needs
+            to be checked repeatedly, it is more efficient to utilize the
+            event-based mechanism provided by the service. Use the interface
+            provided by the <a href="../Classes/MBServiceManager.html"><code>MBServiceManager</code></a> to ensure that the service is
+            running when needed.</p></div>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Querying network status" name="task_Querying network status"></a>
+						
+<h2 class="task-title">Querying network status</h2>
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/isOnline" title="isOnline"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isOnline">&nbsp;&nbsp;isOnline</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Indicates whether a network is currently available to the device. If called
+    repeatedly, it is more efficient to have the service running to avoid
+    querying <code>SCNetworkReachabilityGetFlags</code> directly.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL isOnline</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isWifiConnected" title="isWifiConnected"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isWifiConnected">&nbsp;&nbsp;isWifiConnected</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Indicates whether the network connection (if any) is via wifi. If called
+    repeatedly, it is more efficient to have the service running to avoid
+    querying <code>SCNetworkReachabilityGetFlags</code> directly.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL isWifiConnected</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasCellularCarrier" title="hasCellularCarrier"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasCellularCarrier">&nbsp;&nbsp;hasCellularCarrier</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines whether the device currently has an associated cellular
+    carrier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL hasCellularCarrier</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cellularCarrierName" title="cellularCarrierName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cellularCarrierName">&nbsp;&nbsp;cellularCarrierName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the name of the cellular carrier currently associated with the
+    device.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nullable, nonatomic, readonly) NSString *cellularCarrierName</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cellularCarrierCountry" title="cellularCarrierCountry"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cellularCarrierCountry">&nbsp;&nbsp;cellularCarrierCountry</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the ISO country code of the cellular carrier currently associated
+    with the device.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nullable, nonatomic, readonly) NSString *cellularCarrierCountry</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cellularConnectionType" title="cellularConnectionType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cellularConnectionType">&nbsp;&nbsp;cellularConnectionType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a string identifying the type of cellular connection currently in
+    use by the device.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nullable, nonatomic, readonly) NSString *cellularConnectionType</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/carrierStatusDescription" title="carrierStatusDescription"></a>
+	<h3 class="method-title"><code><a href="#//api/name/carrierStatusDescription">&nbsp;&nbsp;carrierStatusDescription</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a human-readable string describing the current state of the
+    cellular carrier connection. Returns the constant
+    <code>kMBNetworkNoCarrierStatusDescription</code> when the <a href="#//api/name/hasCellularCarrier"><code>hasCellularCarrier</code></a>
+    property would return <code>NO</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonnull, nonatomic, readonly) NSString *carrierStatusDescription</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/networkAvailability" title="networkAvailability"></a>
+	<h3 class="method-title"><code><a href="#//api/name/networkAvailability">&nbsp;&nbsp;networkAvailability</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Indicates the current status of network availability by querying
+    <code>SCNetworkReachabilityGetFlags</code> directly. Not very processor-efficient for
+    repeated use; it&rsquo;s better to turn on the service and rely on the event-based
+    mechanism.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) MBNetworkAvailabilityFlags networkAvailability</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/networkAvailabilityDescription" title="networkAvailabilityDescription"></a>
+	<h3 class="method-title"><code><a href="#//api/name/networkAvailabilityDescription">&nbsp;&nbsp;networkAvailabilityDescription</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a string describing the current <a href="#//api/name/networkAvailability"><code>networkAvailability</code></a> property in
+    human-readable form.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonnull, nonatomic, readonly) NSString *networkAvailabilityDescription</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reachabilityFlagsDescription" title="reachabilityFlagsDescription"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reachabilityFlagsDescription">&nbsp;&nbsp;reachabilityFlagsDescription</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the <code>SCNetworkReachabilityFlags</code> in a human-readable string form.
+    Intended for use with debugging possible connectivity problems.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nullable, nonatomic, readonly) NSString *reachabilityFlagsDescription</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBNetworkMonitor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Gilt Groupe. All rights reserved. Updated: 2017-04-05</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

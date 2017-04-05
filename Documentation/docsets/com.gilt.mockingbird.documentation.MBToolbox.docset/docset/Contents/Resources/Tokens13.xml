@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBFilesystemCache.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBFilesystemCache</TokenIdentifier>
+			<Abstract type="html">An object cache implementation capable of persisting cache objects to the
+filesystem.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+            
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/initWithName:</TokenIdentifier>
+			<Abstract type="html">Initializes the receiver with the given name.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>- (nonnull instancetype)initWithName:(nonnull NSString *)name</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The name of the filesystem cache. Must not be nil, and must
+            not contain any characters that are illegal filename characters
+            in the local filesystem. This name will be used in the path of
+            the directory in which the receiver&apos;s files will be stored.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The receiver.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithName:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/initWithName:cacheDelegate:</TokenIdentifier>
+			<Abstract type="html">Initializes the receiver with the given name.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>- (nonnull instancetype)initWithName:(nonnull NSString *)name cacheDelegate:(nonnull id)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The name of the filesystem cache. Must not be nil, and must
+            not contain any characters that are illegal filename characters
+            in the local filesystem. This name will be used in the path of
+            the directory in which the receiver&apos;s files will be stored.</Abstract>
+				</Parameter><Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">The MBFilesystemCacheDelegate that will be used as
+            the receiver&apos;s delegate. Must not be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The receiver.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithName:cacheDelegate:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/setReadQueue:</TokenIdentifier>
+			<Abstract type="html">Returns the operation queue that will be used for performing filesystem
+    cache read operations. </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) MBCacheReadQueue *readQueue</Declaration>
+			
+			
+			<Anchor>//api/name/readQueue</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/readQueue</TokenIdentifier>
+			<Abstract type="html">Returns the operation queue that will be used for performing filesystem
+    cache read operations. </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) MBCacheReadQueue *readQueue</Declaration>
+			
+			
+			<Anchor>//api/name/readQueue</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBFilesystemCache/readQueue</TokenIdentifier>
+			<Abstract type="html">Returns the operation queue that will be used for performing filesystem
+    cache read operations. </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) MBCacheReadQueue *readQueue</Declaration>
+			
+			
+			<Anchor>//api/name/readQueue</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/setWriteQueue:</TokenIdentifier>
+			<Abstract type="html">Returns the operation queue that will be used for performing filesystem
+    cache write operations. </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) MBCacheWriteQueue *writeQueue</Declaration>
+			
+			
+			<Anchor>//api/name/writeQueue</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/writeQueue</TokenIdentifier>
+			<Abstract type="html">Returns the operation queue that will be used for performing filesystem
+    cache write operations. </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) MBCacheWriteQueue *writeQueue</Declaration>
+			
+			
+			<Anchor>//api/name/writeQueue</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBFilesystemCache/writeQueue</TokenIdentifier>
+			<Abstract type="html">Returns the operation queue that will be used for performing filesystem
+    cache write operations. </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) MBCacheWriteQueue *writeQueue</Declaration>
+			
+			
+			<Anchor>//api/name/writeQueue</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/setCacheName:</TokenIdentifier>
+			<Abstract type="html">Returns the name of the cache, which is used to determine the directory
+    in which cache files are stored. This is name provided when the receiver
+    is initialized. </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *cacheName</Declaration>
+			
+			
+			<Anchor>//api/name/cacheName</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/cacheName</TokenIdentifier>
+			<Abstract type="html">Returns the name of the cache, which is used to determine the directory
+    in which cache files are stored. This is name provided when the receiver
+    is initialized. </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *cacheName</Declaration>
+			
+			
+			<Anchor>//api/name/cacheName</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBFilesystemCache/cacheName</TokenIdentifier>
+			<Abstract type="html">Returns the name of the cache, which is used to determine the directory
+    in which cache files are stored. This is name provided when the receiver
+    is initialized. </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *cacheName</Declaration>
+			
+			
+			<Anchor>//api/name/cacheName</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/setCacheDelegate:</TokenIdentifier>
+			<Abstract type="html">Returns the MBFilesystemCacheDelegate used by the receiver.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, weak) id cacheDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/cacheDelegate</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/cacheDelegate</TokenIdentifier>
+			<Abstract type="html">Returns the MBFilesystemCacheDelegate used by the receiver.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, weak) id cacheDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/cacheDelegate</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBFilesystemCache/cacheDelegate</TokenIdentifier>
+			<Abstract type="html">Returns the MBFilesystemCacheDelegate used by the receiver.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nullable, nonatomic, weak) id cacheDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/cacheDelegate</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/setMaxAgeOfCacheFiles:</TokenIdentifier>
+			<Abstract type="html">Returns the maximum age of the files in the cache, in seconds. Files that
+    are older than this value will not be used by the cache and will
+    eventually be deleted. This defaults to the value of the constant 
+    kMBFilesystemCacheDefaultMaxAge (currently, 36 hours). </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSTimeInterval maxAgeOfCacheFiles</Declaration>
+			
+			
+			<Anchor>//api/name/maxAgeOfCacheFiles</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/maxAgeOfCacheFiles</TokenIdentifier>
+			<Abstract type="html">Returns the maximum age of the files in the cache, in seconds. Files that
+    are older than this value will not be used by the cache and will
+    eventually be deleted. This defaults to the value of the constant 
+    kMBFilesystemCacheDefaultMaxAge (currently, 36 hours). </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSTimeInterval maxAgeOfCacheFiles</Declaration>
+			
+			
+			<Anchor>//api/name/maxAgeOfCacheFiles</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBFilesystemCache/maxAgeOfCacheFiles</TokenIdentifier>
+			<Abstract type="html">Returns the maximum age of the files in the cache, in seconds. Files that
+    are older than this value will not be used by the cache and will
+    eventually be deleted. This defaults to the value of the constant 
+    kMBFilesystemCacheDefaultMaxAge (currently, 36 hours). </Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSTimeInterval maxAgeOfCacheFiles</Declaration>
+			
+			
+			<Anchor>//api/name/maxAgeOfCacheFiles</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/isKeyInCache:</TokenIdentifier>
+			<Abstract type="html">Determines whether the specified cache key represents an object currently
+in the cache.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isKeyInCache:(nonnull id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The cache key to check.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if there is an object associated with key in either the
+            filesystem or the memory cache; NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/isKeyInCache:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/isKeyInMemoryCache:</TokenIdentifier>
+			<Abstract type="html">Determines whether the specified cache key represents an object currently
+in the memory cache.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isKeyInMemoryCache:(nonnull id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The cache key to check.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if there is an object associated with key in the memory
+            cache; NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/isKeyInMemoryCache:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/isKeyInFilesystemCache:</TokenIdentifier>
+			<Abstract type="html">Determines whether the specified cache key represents an object currently
+in the filesystem cache.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isKeyInFilesystemCache:(nonnull id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The cache key to check.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if there is an object associated with key in the filesystem
+            cache; NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/isKeyInFilesystemCache:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/objectForKeyInMemoryCache:</TokenIdentifier>
+			<Abstract type="html">Retrieves an object from the memory cache, if it is there.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>- (nullable id)objectForKeyInMemoryCache:(nonnull id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The cache key of the object to retrieve.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The object instance, or nil if it was not in the cache.</Abstract></ReturnValue>
+			<Anchor>//api/name/objectForKeyInMemoryCache:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/clearFilesystemCache</TokenIdentifier>
+			<Abstract type="html">Deletes all of the cache objects currently in the filesystem cache.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>- (void)clearFilesystemCache</Declaration>
+			
+			
+			<Anchor>//api/name/clearFilesystemCache</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/purgeCacheFilesOlderThan:</TokenIdentifier>
+			<Abstract type="html">Deletes all cache files older than a certain age.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>- (void)purgeCacheFilesOlderThan:(NSTimeInterval)ageInSeconds</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>ageInSeconds</Name>
+					<Abstract type="html">The maximum age allowed for cache files. Files older
+            than this age will be deleted.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/purgeCacheFilesOlderThan:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/purgeOutOfDateCacheFiles</TokenIdentifier>
+			<Abstract type="html">Deletes all cache files older than the number of seconds specified by the
+maxAgeOfCacheFiles property.</Abstract>
+			<DeclaredIn>MBFilesystemCache.h</DeclaredIn>
+			
+			<Declaration>- (void)purgeOutOfDateCacheFiles</Declaration>
+			
+			
+			<Anchor>//api/name/purgeOutOfDateCacheFiles</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

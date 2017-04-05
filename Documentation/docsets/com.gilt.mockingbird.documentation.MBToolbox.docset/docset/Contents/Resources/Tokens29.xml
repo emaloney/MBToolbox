@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSData+MBMessageDigest.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSData(MBMessageDigest)</TokenIdentifier>
+			<Abstract type="html">Extends the NSData class by adding methods for computing secure, one-way
+message digest hashes.</Abstract>
+			<DeclaredIn>NSData+MBMessageDigest.h</DeclaredIn>
+            
+			
+			<NodeRef refid="29"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/MD5</TokenIdentifier>
+			<Abstract type="html">Computes an MD5 hash from the contents of the receiver.</Abstract>
+			<DeclaredIn>NSData+MBMessageDigest.h</DeclaredIn>
+			
+			<Declaration>- (nonnull NSString *)MD5</Declaration>
+			
+			<ReturnValue><Abstract type="html">the MD5 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
+			<Anchor>//api/name/MD5</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/SHA1</TokenIdentifier>
+			<Abstract type="html">Computes an SHA-1 hash from the contents of the receiver.</Abstract>
+			<DeclaredIn>NSData+MBMessageDigest.h</DeclaredIn>
+			
+			<Declaration>- (nonnull NSString *)SHA1</Declaration>
+			
+			<ReturnValue><Abstract type="html">the SHA-1 hash, as a lowercase hexadecimal string</Abstract></ReturnValue>
+			<Anchor>//api/name/SHA1</Anchor>
+            <NodeRef refid="29"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

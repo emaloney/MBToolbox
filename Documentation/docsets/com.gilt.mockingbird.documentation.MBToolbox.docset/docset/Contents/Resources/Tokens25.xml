@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBThreadLocalStorage.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBThreadLocalStorage</TokenIdentifier>
+			<Abstract type="html">Provides a mechanism for storing thread-specific data in a way that&apos;s designed
+to avoid key naming clashes.</Abstract>
+			<DeclaredIn>MBThreadLocalStorage.h</DeclaredIn>
+            
+			
+			<NodeRef refid="25"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBThreadLocalStorage/valueForClass:</TokenIdentifier>
+			<Abstract type="html">Returns the thread-local value associated with the specified class.</Abstract>
+			<DeclaredIn>MBThreadLocalStorage.h</DeclaredIn>
+			
+			<Declaration>+ (nullable id)valueForClass:(nonnull Class)cls</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cls</Name>
+					<Abstract type="html">The Class responsible for the thread-local value. Must
+            not be NULL.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The thread-local value, or nil if one was not previously set
+            on the calling thread for the specified class.</Abstract></ReturnValue>
+			<Anchor>//api/name/valueForClass:</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBThreadLocalStorage/valueForClass:withKey:</TokenIdentifier>
+			<Abstract type="html">Returns the thread-local value associated with the specified class and key.</Abstract>
+			<DeclaredIn>MBThreadLocalStorage.h</DeclaredIn>
+			
+			<Declaration>+ (nullable id)valueForClass:(nonnull Class)cls withKey:(nullable NSString *)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cls</Name>
+					<Abstract type="html">The Class responsible for the thread-local value. Must
+            not be NULL.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key associated with the value to retrieve. If nil, the
+            effect is the same as calling valueForClass:.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The thread-local value, or nil if one was not previously set
+            on the calling thread for the specified class.</Abstract></ReturnValue>
+			<Anchor>//api/name/valueForClass:withKey:</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBThreadLocalStorage/setValue:forClass:</TokenIdentifier>
+			<Abstract type="html">Sets a thread-local value for the given class.</Abstract>
+			<DeclaredIn>MBThreadLocalStorage.h</DeclaredIn>
+			
+			<Declaration>+ (void)setValue:(nullable id)val forClass:(nonnull Class)cls</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>val</Name>
+					<Abstract type="html">The value to store. Passing nil will remove a value stored
+            previously.</Abstract>
+				</Parameter><Parameter>
+					<Name>cls</Name>
+					<Abstract type="html">The Class responsible for the thread-local value. Must
+            not be NULL.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setValue:forClass:</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBThreadLocalStorage/setValue:forClass:withKey:</TokenIdentifier>
+			<Abstract type="html">Sets a thread-local value for the given class.</Abstract>
+			<DeclaredIn>MBThreadLocalStorage.h</DeclaredIn>
+			
+			<Declaration>+ (void)setValue:(nullable id)val forClass:(nonnull Class)cls withKey:(nullable NSString *)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>val</Name>
+					<Abstract type="html">The value to store. Passing nil will remove a value stored
+            previously.</Abstract>
+				</Parameter><Parameter>
+					<Name>cls</Name>
+					<Abstract type="html">The Class responsible for the thread-local value. Must
+            not be NULL.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key associated with the value being set. If nil, the
+            effect is the same as calling setValue:forClass:.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setValue:forClass:withKey:</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBThreadLocalStorage/cachedValueForClass:usingInstantiator:</TokenIdentifier>
+			<Abstract type="html">Allows use of thread-local storage as a lock-free cache. If the requested
+value is not in the cache, the block provided will be executed to create a
+new instance.</Abstract>
+			<DeclaredIn>MBThreadLocalStorage.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull id)cachedValueForClass:(nonnull Class)cls usingInstantiator:(__nonnull id ( ^ __nonnull ) ( ))instantiator</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cls</Name>
+					<Abstract type="html">The Class responsible for the thread-local value. Must
+            not be NULL.</Abstract>
+				</Parameter><Parameter>
+					<Name>instantiator</Name>
+					<Abstract type="html">A block used to create a new cached object instance.
+            This block will be executed only when there is not an existing
+            cached value in thread-local storage. It is considered an error
+            for the instantiator block to return nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The cached object, which should not be nil unless there is a
+            programming error within the instantiator block.</Abstract></ReturnValue>
+			<Anchor>//api/name/cachedValueForClass:usingInstantiator:</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBThreadLocalStorage/cachedValueForClass:withKey:usingInstantiator:</TokenIdentifier>
+			<Abstract type="html">Allows use of thread-local storage as a lock-free cache. If the requested
+value is not in the cache, the block provided will be executed to create a
+new instance.</Abstract>
+			<DeclaredIn>MBThreadLocalStorage.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull id)cachedValueForClass:(nonnull Class)cls withKey:(nullable NSString *)key usingInstantiator:(__nonnull id ( ^ __nonnull ) ( ))instantiator</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cls</Name>
+					<Abstract type="html">The Class responsible for the thread-local value. Must
+            not be NULL.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key associated with the cached value. If nil, the effect
+            is the same as calling cachedValueForClass:usingInstantiator:.</Abstract>
+				</Parameter><Parameter>
+					<Name>instantiator</Name>
+					<Abstract type="html">A block used to create a new cached object instance.
+            This block will be executed only when there is not an existing
+            cached value in thread-local storage. It is considered an error
+            for the instantiator block to return nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The cached object, which should not be nil unless there is a
+            programming error within the instantiator block.</Abstract></ReturnValue>
+			<Anchor>//api/name/cachedValueForClass:withKey:usingInstantiator:</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

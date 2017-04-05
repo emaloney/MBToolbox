@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/MBInstanceVendor.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/MBInstanceVendor</TokenIdentifier>
+			<Abstract type="html">Adopted by classes that provide instance accessors but that don&apos;t
+necessarily abide by singleton behavior.</Abstract>
+			<DeclaredIn>MBSingleton.h</DeclaredIn>
+            
+			
+			<NodeRef refid="43"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBInstanceVendor/instance</TokenIdentifier>
+			<Abstract type="html">Retreives the object instance currently vended by the receiver.</Abstract>
+			<DeclaredIn>MBSingleton.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)instance</Declaration>
+			
+			<ReturnValue><Abstract type="html">The current instance. Callers should not assume that the return
+            value will be the same every time this method is invoked.</Abstract></ReturnValue>
+			<Anchor>//api/name/instance</Anchor>
+            <NodeRef refid="43"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

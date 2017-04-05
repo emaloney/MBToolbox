@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>NSString(MBRegex) Category Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MBToolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/escapedRegexPattern">- escapedRegexPattern</option>
+		
+		<option value="//api/name/escapedRegexTemplate">- escapedRegexTemplate</option>
+		
+		<option value="//api/name/firstRegexMatch:">- firstRegexMatch:</option>
+		
+		<option value="//api/name/firstRegexMatch:options:">- firstRegexMatch:options:</option>
+		
+		<option value="//api/name/firstRegexMatch:options:range:">- firstRegexMatch:options:range:</option>
+		
+		<option value="//api/name/firstRegexMatch:options:range:error:">- firstRegexMatch:options:range:error:</option>
+		
+		<option value="//api/name/isMatchedByRegex:">- isMatchedByRegex:</option>
+		
+		<option value="//api/name/isMatchedByRegex:options:">- isMatchedByRegex:options:</option>
+		
+		<option value="//api/name/isMatchedByRegex:options:range:">- isMatchedByRegex:options:range:</option>
+		
+		<option value="//api/name/isMatchedByRegex:options:range:error:">- isMatchedByRegex:options:range:error:</option>
+		
+		<option value="//api/name/matchesWithRegex:">- matchesWithRegex:</option>
+		
+		<option value="//api/name/matchesWithRegex:options:">- matchesWithRegex:options:</option>
+		
+		<option value="//api/name/matchesWithRegex:options:range:">- matchesWithRegex:options:range:</option>
+		
+		<option value="//api/name/matchesWithRegex:options:range:error:">- matchesWithRegex:options:range:error:</option>
+		
+		<option value="//api/name/numberOfRegexMatches:">- numberOfRegexMatches:</option>
+		
+		<option value="//api/name/numberOfRegexMatches:options:">- numberOfRegexMatches:options:</option>
+		
+		<option value="//api/name/numberOfRegexMatches:options:range:">- numberOfRegexMatches:options:range:</option>
+		
+		<option value="//api/name/numberOfRegexMatches:options:range:error:">- numberOfRegexMatches:options:range:error:</option>
+		
+		<option value="//api/name/rangeOfFirstRegexMatch:">- rangeOfFirstRegexMatch:</option>
+		
+		<option value="//api/name/rangeOfFirstRegexMatch:options:">- rangeOfFirstRegexMatch:options:</option>
+		
+		<option value="//api/name/rangeOfFirstRegexMatch:options:range:">- rangeOfFirstRegexMatch:options:range:</option>
+		
+		<option value="//api/name/rangeOfFirstRegexMatch:options:range:error:">- rangeOfFirstRegexMatch:options:range:error:</option>
+		
+		<option value="//api/name/regularExpression">- regularExpression</option>
+		
+		<option value="//api/name/regularExpressionWithOptions:">- regularExpressionWithOptions:</option>
+		
+		<option value="//api/name/regularExpressionWithOptions:error:">- regularExpressionWithOptions:error:</option>
+		
+		<option value="//api/name/stringByReplacingRegexMatches:withTemplate:">- stringByReplacingRegexMatches:withTemplate:</option>
+		
+		<option value="//api/name/stringByReplacingRegexMatches:withTemplate:options:">- stringByReplacingRegexMatches:withTemplate:options:</option>
+		
+		<option value="//api/name/stringByReplacingRegexMatches:withTemplate:options:range:">- stringByReplacingRegexMatches:withTemplate:options:range:</option>
+		
+		<option value="//api/name/stringByReplacingRegexMatches:withTemplate:options:range:error:">- stringByReplacingRegexMatches:withTemplate:options:range:error:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">NSString(MBRegex) Category Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>NSString+MBRegex.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An <code>NSString</code> class extension that provides various methods for creating
+and utilizing regular expressions.</p>
+
+<p>To improve performance, these methods utilize the <a href="../Classes/MBRegexCache.html"><code>MBRegexCache</code></a> when
+possible.</p>
+
+<p>For additional information on the workings of regular expressions, see the
+Apple documentation for <code>NSRegularExpression</code>.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Creating regular expressions" name="task_Creating regular expressions"></a>
+						<h2 class="task-title">Creating regular expressions</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/regularExpression" title="regularExpression"></a>
+	<h3 class="method-title"><code><a href="#//api/name/regularExpression">&ndash;&nbsp;regularExpression</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <code>NSRegularExpression</code> instance by treating the receiver as a
+regular expression pattern string.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSRegularExpression *)regularExpression</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The regular expression, or <code>nil</code> if the receiver could not be
+            interpreted as a valid regular expression.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/regularExpressionWithOptions:" title="regularExpressionWithOptions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/regularExpressionWithOptions:">&ndash;&nbsp;regularExpressionWithOptions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <code>NSRegularExpression</code> instance by treating the receiver as a
+regular expression pattern string.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The options that govern the behavior of the returned
+            regular expression.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The regular expression, or <code>nil</code> if the receiver could not be
+            interpreted as a valid regular expression.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/regularExpressionWithOptions:error:" title="regularExpressionWithOptions:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/regularExpressionWithOptions:error:">&ndash;&nbsp;regularExpressionWithOptions:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <code>NSRegularExpression</code> instance by treating the receiver as a
+regular expression pattern string.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSRegularExpression *)regularExpressionWithOptions:(NSRegularExpressionOptions)<em>options</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The options that govern the behavior of the returned
+            regular expression.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errPtr</code></th>
+						<td><p>An optional pointer to storage for an <code>NSError</code> instance.
+            If this parameter is non-<code>nil</code> and an error occurs, <code>*errPtr</code>
+            will be updated to point to an <code>NSError</code> describing the problem.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The regular expression, or <code>nil</code> if the receiver could not be
+            interpreted as a valid regular expression.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Escaping" name="task_Escaping"></a>
+						<h2 class="task-title">Escaping</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/escapedRegexPattern" title="escapedRegexPattern"></a>
+	<h3 class="method-title"><code><a href="#//api/name/escapedRegexPattern">&ndash;&nbsp;escapedRegexPattern</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a new regular expression pattern string by escaping metacharacters
+contained in the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull NSString *)escapedRegexPattern</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The escaped pattern string.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Affected characters are escaped by prefixing them with backslashes.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/escapedRegexTemplate" title="escapedRegexTemplate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/escapedRegexTemplate">&ndash;&nbsp;escapedRegexTemplate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a new regular expression template string by escaping metacharacters
+contained in the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull NSString *)escapedRegexTemplate</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The escaped template string.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Affected characters are escaped by prefixing them with backslashes.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Finding all pattern matches" name="task_Finding all pattern matches"></a>
+						<h2 class="task-title">Finding all pattern matches</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/matchesWithRegex:" title="matchesWithRegex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchesWithRegex:">&ndash;&nbsp;matchesWithRegex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Matches the specified regular expression against the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)<em>pattern</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of <code>NSTextCheckingResult</code> objects representing the regular
+            expression pattern matches found within the receiver, or <code>nil</code>
+            if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matchesWithRegex:options:" title="matchesWithRegex:options:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchesWithRegex:options:">&ndash;&nbsp;matchesWithRegex:options:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Matches the specified regular expression against the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of <code>NSTextCheckingResult</code> objects representing the regular
+            expression pattern matches found within the receiver, or <code>nil</code>
+            if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matchesWithRegex:options:range:" title="matchesWithRegex:options:range:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchesWithRegex:options:range:">&ndash;&nbsp;matchesWithRegex:options:range:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Matches the specified regular expression against the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of <code>NSTextCheckingResult</code> objects representing the regular
+            expression pattern matches found within the receiver, or <code>nil</code>
+            if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matchesWithRegex:options:range:error:" title="matchesWithRegex:options:range:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchesWithRegex:options:range:error:">&ndash;&nbsp;matchesWithRegex:options:range:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Matches the specified regular expression against the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSArray *)matchesWithRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errPtr</code></th>
+						<td><p>An optional pointer to storage for an <code>NSError</code> instance.
+            If this parameter is non-<code>nil</code> and an error occurs, <code>*errPtr</code>
+            will be updated to point to an <code>NSError</code> describing the problem.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of <code>NSTextCheckingResult</code> objects representing the regular
+            expression pattern matches found within the receiver, or <code>nil</code>
+            if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Testing for pattern matches" name="task_Testing for pattern matches"></a>
+						<h2 class="task-title">Testing for pattern matches</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/isMatchedByRegex:" title="isMatchedByRegex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isMatchedByRegex:">&ndash;&nbsp;isMatchedByRegex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines if the receiver contains at least one match of the given
+regular expression pattern.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(nonnull NSString *)<em>pattern</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the receiver contained at least one match of <code>pattern</code>;
+            <code>NO</code> if there were no matches.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isMatchedByRegex:options:" title="isMatchedByRegex:options:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isMatchedByRegex:options:">&ndash;&nbsp;isMatchedByRegex:options:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines if the receiver contains at least one match of the given
+regular expression pattern.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the receiver contained at least one match of <code>pattern</code>;
+            <code>NO</code> if there were no matches.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isMatchedByRegex:options:range:" title="isMatchedByRegex:options:range:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isMatchedByRegex:options:range:">&ndash;&nbsp;isMatchedByRegex:options:range:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines if the receiver contains at least one match of the given
+regular expression pattern within the specified range.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the receiver contained at least one match of <code>pattern</code>;
+            <code>NO</code> if there were no matches.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isMatchedByRegex:options:range:error:" title="isMatchedByRegex:options:range:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isMatchedByRegex:options:range:error:">&ndash;&nbsp;isMatchedByRegex:options:range:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines if the receiver contains at least one match of the given
+regular expression pattern within the specified range.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchedByRegex:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errPtr</code></th>
+						<td><p>An optional pointer to storage for an <code>NSError</code> instance.
+            If this parameter is non-<code>nil</code> and an error occurs, <code>*errPtr</code>
+            will be updated to point to an <code>NSError</code> describing the problem.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the receiver contained at least one match of <code>pattern</code>;
+            <code>NO</code> if there were no matches.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Counting pattern matches" name="task_Counting pattern matches"></a>
+						<h2 class="task-title">Counting pattern matches</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/numberOfRegexMatches:" title="numberOfRegexMatches:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/numberOfRegexMatches:">&ndash;&nbsp;numberOfRegexMatches:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the number of matches found in the receiver of the given regular
+expression pattern.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)<em>pattern</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The number of matches.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/numberOfRegexMatches:options:" title="numberOfRegexMatches:options:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/numberOfRegexMatches:options:">&ndash;&nbsp;numberOfRegexMatches:options:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the number of matches found in the receiver of the given regular
+expression pattern.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The number of matches.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/numberOfRegexMatches:options:range:" title="numberOfRegexMatches:options:range:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/numberOfRegexMatches:options:range:">&ndash;&nbsp;numberOfRegexMatches:options:range:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the number of matches found in the receiver of the given regular
+expression pattern.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The number of matches.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/numberOfRegexMatches:options:range:error:" title="numberOfRegexMatches:options:range:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/numberOfRegexMatches:options:range:error:">&ndash;&nbsp;numberOfRegexMatches:options:range:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the number of matches found in the receiver of the given regular
+expression pattern.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfRegexMatches:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errPtr</code></th>
+						<td><p>An optional pointer to storage for an <code>NSError</code> instance.
+            If this parameter is non-<code>nil</code> and an error occurs, <code>*errPtr</code>
+            will be updated to point to an <code>NSError</code> describing the problem.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The number of matches.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Finding the first pattern match" name="task_Finding the first pattern match"></a>
+						<h2 class="task-title">Finding the first pattern match</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/firstRegexMatch:" title="firstRegexMatch:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/firstRegexMatch:">&ndash;&nbsp;firstRegexMatch:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the first occurrence of the specified regular expression pattern
+found within the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)<em>pattern</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An <code>NSTextCheckingResult</code> instance containing the results of the
+            match, or <code>nil</code> if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/firstRegexMatch:options:" title="firstRegexMatch:options:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/firstRegexMatch:options:">&ndash;&nbsp;firstRegexMatch:options:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the first occurrence of the specified regular expression pattern
+found within the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An <code>NSTextCheckingResult</code> instance containing the results of the
+            match, or <code>nil</code> if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/firstRegexMatch:options:range:" title="firstRegexMatch:options:range:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/firstRegexMatch:options:range:">&ndash;&nbsp;firstRegexMatch:options:range:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the first occurrence of the specified regular expression pattern
+found within the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An <code>NSTextCheckingResult</code> instance containing the results of the
+            match, or <code>nil</code> if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/firstRegexMatch:options:range:error:" title="firstRegexMatch:options:range:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/firstRegexMatch:options:range:error:">&ndash;&nbsp;firstRegexMatch:options:range:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the first occurrence of the specified regular expression pattern
+found within the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSTextCheckingResult *)firstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errPtr</code></th>
+						<td><p>An optional pointer to storage for an <code>NSError</code> instance.
+            If this parameter is non-<code>nil</code> and an error occurs, <code>*errPtr</code>
+            will be updated to point to an <code>NSError</code> describing the problem.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An <code>NSTextCheckingResult</code> instance containing the results of the
+            match, or <code>nil</code> if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Getting the range of the first pattern match" name="task_Getting the range of the first pattern match"></a>
+						<h2 class="task-title">Getting the range of the first pattern match</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/rangeOfFirstRegexMatch:" title="rangeOfFirstRegexMatch:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rangeOfFirstRegexMatch:">&ndash;&nbsp;rangeOfFirstRegexMatch:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines the range of the first match of the given regular expression within
+the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)<em>pattern</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The range of the first match. Will be {<code>NSNotFound</code>, <code>0</code>} if there
+            is no match.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rangeOfFirstRegexMatch:options:" title="rangeOfFirstRegexMatch:options:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rangeOfFirstRegexMatch:options:">&ndash;&nbsp;rangeOfFirstRegexMatch:options:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines the range of the first match of the given regular expression within
+the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The range of the first match. Will be {<code>NSNotFound</code>, <code>0</code>} if there
+            is no match.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rangeOfFirstRegexMatch:options:range:" title="rangeOfFirstRegexMatch:options:range:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rangeOfFirstRegexMatch:options:range:">&ndash;&nbsp;rangeOfFirstRegexMatch:options:range:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines the range of the first match of the given regular expression within
+the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The range of the first match. Will be {<code>NSNotFound</code>, <code>0</code>} if there
+            is no match.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rangeOfFirstRegexMatch:options:range:error:" title="rangeOfFirstRegexMatch:options:range:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rangeOfFirstRegexMatch:options:range:error:">&ndash;&nbsp;rangeOfFirstRegexMatch:options:range:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines the range of the first match of the given regular expression within
+the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSRange)rangeOfFirstRegexMatch:(nonnull NSString *)<em>pattern</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errPtr</code></th>
+						<td><p>An optional pointer to storage for an <code>NSError</code> instance.
+            If this parameter is non-<code>nil</code> and an error occurs, <code>*errPtr</code>
+            will be updated to point to an <code>NSError</code> describing the problem.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The range of the first match. Will be {<code>NSNotFound</code>, <code>0</code>} if there
+            is no match.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Creating a new string by replacing pattern matches" name="task_Creating a new string by replacing pattern matches"></a>
+						<h2 class="task-title">Creating a new string by replacing pattern matches</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/stringByReplacingRegexMatches:withTemplate:" title="stringByReplacingRegexMatches:withTemplate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stringByReplacingRegexMatches:withTemplate:">&ndash;&nbsp;stringByReplacingRegexMatches:withTemplate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a new string by replacing each match of the specified regular
+expression pattern with the replacement template provided.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)<em>pattern</em> withTemplate:(nonnull NSString *)<em>templ</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>templ</code></th>
+						<td><p>The template to use for replacing the regular expression
+            matches.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The resulting string, or <code>nil</code> if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stringByReplacingRegexMatches:withTemplate:options:" title="stringByReplacingRegexMatches:withTemplate:options:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stringByReplacingRegexMatches:withTemplate:options:">&ndash;&nbsp;stringByReplacingRegexMatches:withTemplate:options:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a new string by replacing each match of the specified regular
+expression pattern with the replacement template provided.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)<em>pattern</em> withTemplate:(nonnull NSString *)<em>templ</em> options:(NSRegularExpressionOptions)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>templ</code></th>
+						<td><p>The template to use for replacing the regular expression
+            matches.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The resulting string, or <code>nil</code> if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stringByReplacingRegexMatches:withTemplate:options:range:" title="stringByReplacingRegexMatches:withTemplate:options:range:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stringByReplacingRegexMatches:withTemplate:options:range:">&ndash;&nbsp;stringByReplacingRegexMatches:withTemplate:options:range:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a new string by replacing each match of the specified regular
+expression pattern with the replacement template provided.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)<em>pattern</em> withTemplate:(nonnull NSString *)<em>templ</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>templ</code></th>
+						<td><p>The template to use for replacing the regular expression
+            matches.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The resulting string, or <code>nil</code> if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Matching is constrained to the given range within the receiver.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stringByReplacingRegexMatches:withTemplate:options:range:error:" title="stringByReplacingRegexMatches:withTemplate:options:range:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stringByReplacingRegexMatches:withTemplate:options:range:error:">&ndash;&nbsp;stringByReplacingRegexMatches:withTemplate:options:range:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a new string by replacing each match of the specified regular
+expression pattern with the replacement template provided.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSString *)stringByReplacingRegexMatches:(nonnull NSString *)<em>pattern</em> withTemplate:(nonnull NSString *)<em>templ</em> options:(NSRegularExpressionOptions)<em>options</em> range:(NSRange)<em>range</em> error:(NSErrorPtrPtr)<em>errPtr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pattern</code></th>
+						<td><p>The regular expression pattern to match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>templ</code></th>
+						<td><p>The template to use for replacing the regular expression
+            matches.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>The regular expression options that govern how matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>range</code></th>
+						<td><p>The range of characters in the receiver within which matching
+            will occur.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errPtr</code></th>
+						<td><p>An optional pointer to storage for an <code>NSError</code> instance.
+            If this parameter is non-<code>nil</code> and an error occurs, <code>*errPtr</code>
+            will be updated to point to an <code>NSError</code> describing the problem.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The resulting string, or <code>nil</code> if an error occurred.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Matching is constrained to the given range within the receiver.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSString+MBRegex.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Gilt Groupe. All rights reserved. Updated: 2017-04-05</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

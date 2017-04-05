@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSError+MBToolbox.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSError(MBToolbox)</TokenIdentifier>
+			<Abstract type="html">An NSError class extension that provides Mockingbird-specific functionality.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+            
+			
+			<NodeRef refid="31"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithCode:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithCode:(NSInteger)code</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>code</Name>
+					<Abstract type="html">The error code.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithCode:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithCode:userInfo:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfo:(nullable NSDictionary *)dict</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>code</Name>
+					<Abstract type="html">The error code.</Abstract>
+				</Parameter><Parameter>
+					<Name>dict</Name>
+					<Abstract type="html">The user info dictionary for the returned error.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithCode:userInfo:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithCode:userInfoKey:value:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithCode:(NSInteger)code userInfoKey:(nonnull NSString *)key value:(nonnull id)val</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>code</Name>
+					<Abstract type="html">The error code.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key whose corresponding value will be stored in the
+            returned error&apos;s user info dictionary.</Abstract>
+				</Parameter><Parameter>
+					<Name>val</Name>
+					<Abstract type="html">The value that will be associated with key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithCode:userInfoKey:value:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithDescription:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithDescription:(nonnull NSString *)desc</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>desc</Name>
+					<Abstract type="html">The description of the error, which will be available through
+            the user info key NSLocalizedDescriptionKey as well as the
+            error&apos;s localizedDescription method.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithDescription:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithDescription:code:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithDescription:(nonnull NSString *)desc code:(NSInteger)code</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>desc</Name>
+					<Abstract type="html">The description of the error, which will be available through
+            the user info key NSLocalizedDescriptionKey as well as the
+            error&apos;s localizedDescription method.</Abstract>
+				</Parameter><Parameter>
+					<Name>code</Name>
+					<Abstract type="html">The error code.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithDescription:code:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithDescription:code:userInfoKey:value:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithDescription:(nonnull NSString *)desc code:(NSInteger)code userInfoKey:(nonnull NSString *)key value:(nonnull id)val</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>desc</Name>
+					<Abstract type="html">The description of the error, which will be available through
+            the user info key NSLocalizedDescriptionKey as well as the
+            error&apos;s localizedDescription method.</Abstract>
+				</Parameter><Parameter>
+					<Name>code</Name>
+					<Abstract type="html">The error code.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key whose corresponding value will be stored in the
+            returned error&apos;s user info dictionary.</Abstract>
+				</Parameter><Parameter>
+					<Name>val</Name>
+					<Abstract type="html">The value that will be associated with key.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithDescription:code:userInfoKey:value:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/mockingbirdErrorWithException:</TokenIdentifier>
+			<Abstract type="html">Constructs a new NSError instance in the error domain specified by the
+kMBErrorDomain constant.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull NSError *)mockingbirdErrorWithException:(nonnull NSException *)ex</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>ex</Name>
+					<Abstract type="html">The NSException to wrap in the returned error.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the specified settings.</Abstract></ReturnValue>
+			<Anchor>//api/name/mockingbirdErrorWithException:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/errorByAddingOrRemovingUserInfoKey:value:</TokenIdentifier>
+			<Abstract type="html">Creates and returns a new NSError instance based on the receiver by adding
+or removing the user info dictionary value for the given key.</Abstract>
+			<DeclaredIn>NSError+MBToolbox.h</DeclaredIn>
+			
+			<Declaration>- (nonnull NSError *)errorByAddingOrRemovingUserInfoKey:(nonnull NSString *)key value:(nullable id)val</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The key whose corresponding value will be stored in the
+            returned error&apos;s user info dictionary.</Abstract>
+				</Parameter><Parameter>
+					<Name>val</Name>
+					<Abstract type="html">The value that will be associated with key. If nil, any
+            existing value for key will be removed instead.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSError instance with the same settings as the receiver,
+            but with the specified user info value added.</Abstract></ReturnValue>
+			<Anchor>//api/name/errorByAddingOrRemovingUserInfoKey:value:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

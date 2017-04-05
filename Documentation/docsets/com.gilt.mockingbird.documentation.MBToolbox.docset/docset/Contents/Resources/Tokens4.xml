@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBCacheReadQueue.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBCacheReadQueue</TokenIdentifier>
+			<Abstract type="html">A singleton NSOperationQueue intended to be used for performing cache
+read operations.</Abstract>
+			<DeclaredIn>MBCacheOperations.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBModuleBase.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBModuleBase</TokenIdentifier>
+			<Abstract type="html">Modules are the mechanism by which functionality is added to Mockingbird.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+            
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleBase/setLog:</TokenIdentifier>
+			<Abstract type="html">Returns the MBModuleLog associated with the receiver.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) MBModuleLog *log</Declaration>
+			
+			
+			<Anchor>//api/name/log</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBModuleBase/log</TokenIdentifier>
+			<Abstract type="html">Returns the MBModuleLog associated with the receiver.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) MBModuleLog *log</Declaration>
+			
+			
+			<Anchor>//api/name/log</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBModuleBase/log</TokenIdentifier>
+			<Abstract type="html">Returns the MBModuleLog associated with the receiver.</Abstract>
+			<DeclaredIn>MBModule.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) MBModuleLog *log</Declaration>
+			
+			
+			<Anchor>//api/name/log</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

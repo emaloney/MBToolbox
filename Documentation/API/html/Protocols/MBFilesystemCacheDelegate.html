@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBFilesystemCacheDelegate Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MBToolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/cacheDataFromObject:">- cacheDataFromObject:</option>
+		
+		<option value="//api/name/filenameForCacheKey:">- filenameForCacheKey:</option>
+		
+		<option value="//api/name/objectFromCacheData:">- objectFromCacheData:</option>
+		
+		<option value="//api/name/shouldStoreObject:forKey:inFilesystemCache:">- shouldStoreObject:forKey:inFilesystemCache:</option>
+		
+		<option value="//api/name/shouldStoreObject:forKey:inMemoryCache:">- shouldStoreObject:forKey:inMemoryCache:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBFilesystemCacheDelegate Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>MBFilesystemCache.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This protocol is adopted by classes that wish to control the behavior of an
+<a href="../Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> instance.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/filenameForCacheKey:" title="filenameForCacheKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/filenameForCacheKey:">&ndash;&nbsp;filenameForCacheKey:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called by the <a href="../Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> to create a filename for a given cache
+key.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull NSString *)filenameForCacheKey:(nonnull id)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The cache key for which the filename is sought.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The filename for the given cache key.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The cache object associated with the given key will be stored in a file
+with the name returned by this method.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Converting cache objects to and from raw data" name="task_Converting cache objects to and from raw data"></a>
+						<h2 class="task-title">Converting cache objects to and from raw data</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/cacheDataFromObject:" title="cacheDataFromObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cacheDataFromObject:">&ndash;&nbsp;cacheDataFromObject:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Converts the specified cache object into an <code>NSData</code> instance that can be
+written to a file.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSData *)cacheDataFromObject:(nonnull id)<em>cacheObj</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cacheObj</code></th>
+						<td><p>The cache object for which the raw data should be
+            returned.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An <code>NSData</code> representation of the given cache object, or <code>nil</code> if
+            it could not be created.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> If cache objects are stored as <code>NSData</code> instances directly,
+            the delegate does not need to implement this method.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/objectFromCacheData:" title="objectFromCacheData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/objectFromCacheData:">&ndash;&nbsp;objectFromCacheData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Converts raw data representing a cache object into the cache object itself.
+Used to convert a file into an object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable id)objectFromCacheData:(nonnull NSData *)<em>cacheData</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cacheData</code></th>
+						<td><p>The raw data representing the cache object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The cache object created from the raw cache data, or <code>nil</code>
+            if it could not be created.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> If cache objects are stored as <code>NSData</code> instances directly,
+            the delegate does not need to implement this method.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Controlling what gets stored in the cache" name="task_Controlling what gets stored in the cache"></a>
+						<h2 class="task-title">Controlling what gets stored in the cache</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/shouldStoreObject:forKey:inMemoryCache:" title="shouldStoreObject:forKey:inMemoryCache:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldStoreObject:forKey:inMemoryCache:">&ndash;&nbsp;shouldStoreObject:forKey:inMemoryCache:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Asks the delegate whether or not the specified object should be stored in the
+memory cache.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)shouldStoreObject:(nonnull id)<em>cacheObj</em> forKey:(nonnull id)<em>key</em> inMemoryCache:(nonnull MBFilesystemCache *)<em>cache</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cacheObj</code></th>
+						<td><p>The object that may be stored in the memory cache.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The cache key associated with <code>cacheObj</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cache</code></th>
+						<td><p>The <a href="../Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> in which the object may be cached.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the <code>cacheObj</code> should be stored in the memory cache of
+            <code>cache</code>; <code>NO</code> otherwise.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> If the delegate does not implement this method, objects will
+            always be stored in the memory cache.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shouldStoreObject:forKey:inFilesystemCache:" title="shouldStoreObject:forKey:inFilesystemCache:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldStoreObject:forKey:inFilesystemCache:">&ndash;&nbsp;shouldStoreObject:forKey:inFilesystemCache:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Asks the delegate whether or not the specified object should be stored in the
+filesystem cache.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)shouldStoreObject:(nonnull id)<em>cacheObj</em> forKey:(nonnull id)<em>key</em> inFilesystemCache:(nonnull MBFilesystemCache *)<em>cache</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cacheObj</code></th>
+						<td><p>The object that may be stored in the filesystem cache.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The cache key associated with <code>cacheObj</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cache</code></th>
+						<td><p>The <a href="../Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> in which the object may be cached.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the <code>cacheObj</code> should be stored in the filesystem cache of
+            <code>cache</code>; <code>NO</code> otherwise.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> If the delegate does not implement this method, objects will
+            always be stored in the filesystem cache.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Gilt Groupe. All rights reserved. Updated: 2017-04-05</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBFileDeleteOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MBToolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/filePath">filePath</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/operationForDeletingFile:">+ operationForDeletingFile:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithFilePath:">- initWithFilePath:</option>
+		
+		<option value="//api/name/initWithFilePath:moveImmediately:">- initWithFilePath:moveImmediately:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBFileDeleteOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSOperation</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MBFilesystemOperations.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An <code>NSOperation</code> subclass that can be used to delete a file from the
+filesystem.</p>
+
+<p><code>MBFileDeleteOperation</code> instances are added to <code>NSOperationQueue</code>s to be
+performed.</p>
+
+<p>The <a href="../Classes/MBFilesystemOperationQueue.html"><code>MBFilesystemOperationQueue</code></a> singleton is available as a convenience
+for performing filesystem operations such as this.</p><div class="note"><p><strong>Note:</strong> This operation does not provide a mechanism to be notified of its
+            success or failure.</p></div>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Object lifecycle" name="task_Object lifecycle"></a>
+						<h2 class="task-title">Object lifecycle</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/operationForDeletingFile:" title="operationForDeletingFile:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/operationForDeletingFile:">+&nbsp;operationForDeletingFile:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a new <code>MBFileDeleteOperation</code> instance that can be used to delete a
+file from the filesystem.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nonnull instancetype)operationForDeletingFile:(nonnull NSString *)<em>path</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>The filesystem path of the file to be deleted by the returned
+            operation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The newly-created <code>MBFileDeleteOperation</code> instance.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The file at the specified path will be moved out-of-place
+            immediately on the calling thread, but the deletion won&rsquo;t occur
+            until the operation is executed by the <code>NSOperationQueue</code> to which
+            it was added.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemOperations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithFilePath:" title="initWithFilePath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithFilePath:">&ndash;&nbsp;initWithFilePath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes the receiver so it can be used to delete the specified file.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)initWithFilePath:(nonnull NSString *)<em>path</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>The filesystem path of the file to be deleted.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The file at the specified path will be moved out-of-place
+            immediately on the calling thread, but the deletion won&rsquo;t occur
+            until the operation is executed by the <code>NSOperationQueue</code> to which
+            it was added.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemOperations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithFilePath:moveImmediately:" title="initWithFilePath:moveImmediately:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithFilePath:moveImmediately:">&ndash;&nbsp;initWithFilePath:moveImmediately:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes the receiver so it can be used to delete the specified file.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)initWithFilePath:(nonnull NSString *)<em>path</em> moveImmediately:(BOOL)<em>moveNow</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>The filesystem path of the file to be deleted.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>moveNow</code></th>
+						<td><p>If <code>YES</code>, the file at the specified path will be moved
+            out-of-place immediately on the calling thread. Regardless of the
+            value of this parameter, the actual file deletion won&rsquo;t occur
+            until the operation is executed by the <code>NSOperationQueue</code> to which
+            it was added.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemOperations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Getting information about the operation" name="task_Getting information about the operation"></a>
+						<h2 class="task-title">Getting information about the operation</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/filePath" title="filePath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/filePath">&nbsp;&nbsp;filePath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the filesystem path of the file to be deleted by the operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonnull, nonatomic, readonly) NSString *filePath</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemOperations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Gilt Groupe. All rights reserved. Updated: 2017-04-05</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

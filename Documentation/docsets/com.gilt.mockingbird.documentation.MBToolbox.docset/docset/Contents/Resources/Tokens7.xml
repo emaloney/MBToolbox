@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBConcurrentReadWriteCoordinator.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBConcurrentReadWriteCoordinator</TokenIdentifier>
+			<Abstract type="html">The MBConcurrentReadWriteCoordinator uses Grand Central Dispatch to provide
+an efficient mechanism for enforcing orderly read/write access to a shared
+resource.</Abstract>
+			<DeclaredIn>MBConcurrentReadWriteCoordinator.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBConcurrentReadWriteCoordinator/read:</TokenIdentifier>
+			<Abstract type="html">Synchronously executes the read operation contained in the passed-in block.
+If a writer is executing when this method is called, the calling thread will
+be blocked until writing finishes. Multiple readers may execute simultaneously.</Abstract>
+			<DeclaredIn>MBConcurrentReadWriteCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (void)read:(nonnull void ( ^ ) ( ))readOperation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>readOperation</Name>
+					<Abstract type="html">The read operation.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/read:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBConcurrentReadWriteCoordinator/enqueueWrite:</TokenIdentifier>
+			<Abstract type="html">Enqueues a write operation for eventual execution. The passed-in block will be
+executed only when there are no other readers or writers.</Abstract>
+			<DeclaredIn>MBConcurrentReadWriteCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (void)enqueueWrite:(nonnull void ( ^ ) ( ))writeOperation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>writeOperation</Name>
+					<Abstract type="html">The write operation.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/enqueueWrite:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

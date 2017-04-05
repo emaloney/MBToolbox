@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBEvents.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBEvents</TokenIdentifier>
+			<Abstract type="html">Provides a simple interface for posting NSNotification events of various
+types.</Abstract>
+			<DeclaredIn>MBEvents.h</DeclaredIn>
+            
+			
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBEvents/postEvent:</TokenIdentifier>
+			<Abstract type="html">Posts a notification event.</Abstract>
+			<DeclaredIn>MBEvents.h</DeclaredIn>
+			
+			<Declaration>+ (void)postEvent:(nonnull NSString *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The name of the event to post.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/postEvent:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBEvents/postEvent:withSuffix:</TokenIdentifier>
+			<Abstract type="html">Posts a notification event by constructing the event name
+&quot;event:suffix&quot;.</Abstract>
+			<DeclaredIn>MBEvents.h</DeclaredIn>
+			
+			<Declaration>+ (void)postEvent:(nonnull NSString *)event withSuffix:(nullable NSString *)suffix</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The prefix of the event name to post.</Abstract>
+				</Parameter><Parameter>
+					<Name>suffix</Name>
+					<Abstract type="html">The suffix of the event name to post.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/postEvent:withSuffix:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBEvents/postEvent:withObject:</TokenIdentifier>
+			<Abstract type="html">Posts a notification event containing the given object parameter.</Abstract>
+			<DeclaredIn>MBEvents.h</DeclaredIn>
+			
+			<Declaration>+ (void)postEvent:(nonnull NSString *)event withObject:(nullable id)obj</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The name of the event to post.</Abstract>
+				</Parameter><Parameter>
+					<Name>obj</Name>
+					<Abstract type="html">The object to post with the event. This value will be
+            available in the object property of the NSNotification
+            created for the event.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/postEvent:withObject:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBEvents/postEvent:withUserInfo:</TokenIdentifier>
+			<Abstract type="html">Posts a notification event containing the given userInfo parameter.</Abstract>
+			<DeclaredIn>MBEvents.h</DeclaredIn>
+			
+			<Declaration>+ (void)postEvent:(nonnull NSString *)event withUserInfo:(nullable NSDictionary *)userInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The name of the event to post.</Abstract>
+				</Parameter><Parameter>
+					<Name>userInfo</Name>
+					<Abstract type="html">The user info dictionary to post with the event. This
+            value will be available in the userInfo property of the
+            NSNotification created for the event.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/postEvent:withUserInfo:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBEvents/postEvent:fromSender:</TokenIdentifier>
+			<Abstract type="html">Posts a notification event along with the object instance sending the event.</Abstract>
+			<DeclaredIn>MBEvents.h</DeclaredIn>
+			
+			<Declaration>+ (void)postEvent:(nonnull NSString *)event fromSender:(nullable id)sender</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The name of the event to post.</Abstract>
+				</Parameter><Parameter>
+					<Name>sender</Name>
+					<Abstract type="html">The sender of the event. This object will be available in
+            the object property of the NSNotification created for the event.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/postEvent:fromSender:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBEvents/name:withSuffix:</TokenIdentifier>
+			<Abstract type="html">Constructs a string for an event-related name with the given suffix.</Abstract>
+			<DeclaredIn>MBEvents.h</DeclaredIn>
+			
+			<Declaration>+ (nullable NSString *)name:(nullable NSString *)name withSuffix:(nullable NSString *)suffix</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The name to use for the root of the returned string. If
+            nil, this method returns nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>suffix</Name>
+					<Abstract type="html">The optional suffix to apply to name. If nil, this
+            method returns name.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">If name and suffix are both non-nil, the concatenation of
+            name, : and suffix is returned. Otherwise, the value of the
+            name parameter is returned.
+
+Some notification names are parameterized, based on the name of components (or
+other objects) at runtime. These methods return construct and return event
+names.</Abstract></ReturnValue>
+			<Anchor>//api/name/name:withSuffix:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBEvents/postMemoryWarning</TokenIdentifier>
+			<Abstract type="html">Posts an artificial memory warning using the event name contained in the
+UIApplicationDidReceiveMemoryWarningNotification constant.</Abstract>
+			<DeclaredIn>MBEvents.h</DeclaredIn>
+			
+			<Declaration>+ (void)postMemoryWarning</Declaration>
+			
+			
+			<Anchor>//api/name/postMemoryWarning</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

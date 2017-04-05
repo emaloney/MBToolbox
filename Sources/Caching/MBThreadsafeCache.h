@@ -33,6 +33,7 @@
 /*!    @name Object lifecycle                                                 */
 /*----------------------------------------------------------------------------*/
 
+#if MB_BUILD_UIKIT
 /*!
  Initializes a new `MBThreadsafeCache` instance.
  
@@ -44,10 +45,17 @@
  @param     ignore If `YES`, the cache will not automatically clear itself when
             a memory warning occurs.
  */
-#if MB_BUILD_UIKIT
 - (nonnull instancetype) initWithExceptionProtection:(BOOL)protect
                                 ignoreMemoryWarnings:(BOOL)ignore;
 #else
+/*!
+ Initializes a new `MBThreadsafeCache` instance.
+ 
+ @param     protect If `YES`, the cache will ensure that internal exceptions
+            do not leave locks in an inconsistent state. This adds overhead,
+            and is generally not needed unless subclasses override primitive
+            hooks that may throw exceptions.
+ */
 - (nonnull instancetype) initWithExceptionProtection:(BOOL)protect;
 #endif
 

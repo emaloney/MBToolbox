@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBModuleLog Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MBToolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/logForModule:">+ logForModule:</option>
+		
+		<option value="//api/name/logForModuleClass:">+ logForModuleClass:</option>
+		
+		<option value="//api/name/logRecorderClass">+ logRecorderClass</option>
+		
+		<option value="//api/name/setLogRecorderClass:">+ setLogRecorderClass:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/issueDeprecationWarning:">- issueDeprecationWarning:</option>
+		
+		<option value="//api/name/issueDeprecationWarningWithFormat:">- issueDeprecationWarningWithFormat:</option>
+		
+		<option value="//api/name/issueNotSupportedError:">- issueNotSupportedError:</option>
+		
+		<option value="//api/name/issueNotSupportedErrorWithFormat:">- issueNotSupportedErrorWithFormat:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBModuleLog Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/MBModuleLogRecorder.html">MBModuleLogRecorder</a></td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MBModuleLog.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Instances of this class are used to issue log messages associated with a
+given <a href="../Protocols/MBModule.html"><code>MBModule</code></a>.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="MBModuleLogRecorder support" name="task_MBModuleLogRecorder support"></a>
+						<h2 class="task-title">MBModuleLogRecorder support</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setLogRecorderClass:" title="setLogRecorderClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setLogRecorderClass:">+&nbsp;setLogRecorderClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the logger class used to log messages through <code>MBModuleLog</code>. By
+default, <code>MBModuleLog</code> is the logger class, unless overridden by a call
+to this method.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setLogRecorderClass:(nullable Class&lt;MBModuleLogRecorder&gt;)<em>logRecorderClass</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>logRecorderClass</code></th>
+						<td><p>The <code>Class</code> implementing <a href="../Protocols/MBModuleLogRecorder.html"><code>MBModuleLogRecorder</code></a> that
+            should be used as the logger. If <code>nil</code> is passed, the value is
+            reset to the default of <code>MBModuleLog</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logRecorderClass" title="logRecorderClass"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logRecorderClass">+&nbsp;logRecorderClass</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the logger class used to log messages through <code>MBModuleLog</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nonnull Class&lt;MBModuleLogRecorder&gt;)logRecorderClass</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Object lifecycle" name="task_Object lifecycle"></a>
+						<h2 class="task-title">Object lifecycle</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/logForModuleClass:" title="logForModuleClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logForModuleClass:">+&nbsp;logForModuleClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a new <code>MBModuleLog</code> instance for the specified module
+implementation class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nonnull instancetype)logForModuleClass:(nonnull Class)<em>moduleCls</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>moduleCls</code></th>
+						<td><p>The implementing class of the <a href="../Protocols/MBModule.html"><code>MBModule</code></a> for which a
+            log is being created.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new <code>MBModuleLog</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> This method is intended to be used only by <a href="../Protocols/MBModule.html"><code>MBModule</code></a>
+            implementations themselves. To retrieve the <code>MBModuleLog</code> for
+            a given module, acquire it from the module itself.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logForModule:" title="logForModule:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logForModule:">+&nbsp;logForModule:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a new <code>MBModuleLog</code> instance for the specified module.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nonnull instancetype)logForModule:(nonnull NSObject&lt;MBModule&gt; *)<em>module</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>module</code></th>
+						<td><p>The <a href="../Protocols/MBModule.html"><code>MBModule</code></a> for which a log is being created.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new <code>MBModuleLog</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> This method is intended to be used only by <a href="../Protocols/MBModule.html"><code>MBModule</code></a>
+            implementations themselves. To retrieve the <code>MBModuleLog</code> for
+            a given module, acquire it from the module itself.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Warnings &amp; Errors" name="task_Warnings &amp; Errors"></a>
+						<h2 class="task-title">Warnings &amp; Errors</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/issueDeprecationWarning:" title="issueDeprecationWarning:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/issueDeprecationWarning:">&ndash;&nbsp;issueDeprecationWarning:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Issues a deprecation warning from the module associated with the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarning:(nonnull NSString *)<em>warning</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>warning</code></th>
+						<td><p>The warning message.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The warning will be written to the console, possibly asynchronously.
+            Repeated issuances of the same warning may be squelched.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/issueDeprecationWarningWithFormat:" title="issueDeprecationWarningWithFormat:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/issueDeprecationWarningWithFormat:">&ndash;&nbsp;issueDeprecationWarningWithFormat:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Issues a deprecation warning from the module associated with the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)issueDeprecationWarningWithFormat:(nonnull NSString *)<em>format</em>, <em>...</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>format</code></th>
+						<td><p>The format for the warning message, followed by zero or more
+            format parameters.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>...</code></th>
+						<td><p>A variable argument list of zero or more values referenced
+            within the <code>format</code> string.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The warning will be written to the console, possibly asynchronously.
+            Repeated issuances of the same warning may be squelched.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/issueNotSupportedError:" title="issueNotSupportedError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/issueNotSupportedError:">&ndash;&nbsp;issueNotSupportedError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Issues a not supported error from the module associated with the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedError:(nonnull NSString *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error message.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The error will be written to the console, possibly asynchronously.
+            Repeated issuances of the same error may be squelched.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/issueNotSupportedErrorWithFormat:" title="issueNotSupportedErrorWithFormat:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/issueNotSupportedErrorWithFormat:">&ndash;&nbsp;issueNotSupportedErrorWithFormat:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Issues a not supported error from the module associated with the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)issueNotSupportedErrorWithFormat:(nonnull NSString *)<em>format</em>, <em>...</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>format</code></th>
+						<td><p>The format for the error message, followed by zero or more
+            format parameters.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>...</code></th>
+						<td><p>A variable argument list of zero or more values referenced
+            within the <code>format</code> string.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The error will be written to the console, possibly asynchronously.
+            Repeated issuances of the same error may be squelched.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Gilt Groupe. All rights reserved. Updated: 2017-04-05</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

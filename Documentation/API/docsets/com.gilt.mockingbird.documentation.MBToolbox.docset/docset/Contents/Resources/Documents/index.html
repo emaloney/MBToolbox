@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBToolbox Reference</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="index.html">MBToolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="hierarchy.html">Hierarchy</a></li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview-contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBToolbox Reference</h1>
+
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h2>Overview</h2>
+
+<p>The Mockingbird Toolbox is a set of general-purpose utility code for use in iOS applications.</p>
+
+<p>The Toolbox is the lowest-level module in the Mockingbird open-source project from Gilt Groupe.</p>
+
+<p>The Toolbox includes the following tools, which are compatible with all four Apple platforms—iOS, macOS, tvOS and watchOS—except where noted otherwise:</p>
+
+<h3>Battery &amp; Power Monitoring</h3>
+
+<p>The <a href="Classes/MBBatteryMonitor.html"><code>MBBatteryMonitor</code></a> class (iOS only) reports the device&rsquo;s power status and battery level, and also posts events through the <code>NSNotificationCenter</code> when these values change.</p>
+
+<h3>Network Monitoring</h3>
+
+<p>The <a href="Classes/MBNetworkMonitor.html"><code>MBNetworkMonitor</code></a> class (iOS, macOS, tvOS) provides details about the current status of the network, including:</p>
+
+<ul>
+<li>Whether the device currently has network connectivity</li>
+<li>Whether the device is currently connected via wifi</li>
+</ul>
+
+
+<p>On iOS, the class also provides carrier information, such as:</p>
+
+<ul>
+<li>Whether the device has an associated cellular carrier account</li>
+<li>Whether the device is currently connected through a cellular carrier</li>
+<li>The type of the current cellular connection, if any (eg. GPRS, Edge, HSDPA, LTE, etc.)</li>
+</ul>
+
+
+<p>The <a href="Classes/MBNetworkMonitor.html"><code>MBNetworkMonitor</code></a> can also be configured to post <code>NSNotificationCenter</code> events as network status changes occur.</p>
+
+<h3>Caching</h3>
+
+<p>Mockingbird Toolbox provides a simple but extensible caching architecture.</p>
+
+<p>The base of this architecture is provided by <a href="Classes/MBThreadsafeCache.html"><code>MBThreadsafeCache</code></a>, which implements a basic memory cache that can be safely shared across threads.</p>
+
+<p>The <a href="Classes/MBThreadsafeCache.html"><code>MBThreadsafeCache</code></a> does not implement an expiration policy. Instead, cache instances can be configured to purge themselves in response to memory warnings.</p>
+
+<p>The <a href="Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> is a subclass of <a href="Classes/MBThreadsafeCache.html"><code>MBThreadsafeCache</code></a> that adds a filesystem backing store to the memory cache.</p>
+
+<p>The storage behavior of an <a href="Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> instance can be customized through the use of an <a href="Protocols/MBFilesystemCacheDelegate.html"><code>MBFilesystemCacheDelegate</code></a>. Delegates can be used to override serialization and deserialization of cache objects, and for controlling whether or not a given object is stored in the memory or filesystem component of the cache.</p>
+
+<p>The <a href="Classes/MBFilesystemCache.html"><code>MBFilesystemCache</code></a> implements an age-based expiration mechanism, but the class also provides ample hooks for subclasses to supply alternate implementations.</p>
+
+<h3>Concurrency &amp; Threading</h3>
+
+<p><a href="Classes/MBConcurrentReadWriteCoordinator.html">The <code>MBConcurrentReadWriteCoordinator</code> class</a> uses Grand Central Dispatch to provide an efficient mechanism for enforcing orderly read/write access to a shared resource. The coordinator ensures that concurrent access to the shared resource follows consistent rules.</p>
+
+<p><a href="Classes/MBThreadLocalStorage.html">The <code>MBThreadLocalStorage</code> class</a> provides an interface for safely sharing thread-local storage among unrelated units of code.</p>
+
+<p>To prevent key clashes between different code using thread-local storage, values are accessed by specifying the requesting <code>Class</code>. Classes can store multiple values by providing an additional key string for each value.</p>
+
+<p>The <a href="Classes/MBThreadLocalStorage.html"><code>MBThreadLocalStorage</code></a> class also provides methods that allow treating thread-local storage as a lock-free cache. Objects that are expensive to create, such as <code>NSDateFormatter</code> instances, can be cached in thread-local storage without incurring the locking overhead required by a shared object cache like <a href="Classes/MBThreadsafeCache.html"><code>MBThreadsafeCache</code></a>.</p>
+
+<h3>Regular Expressions</h3>
+
+<p>To simplify working with regular expressions on iOS, macOS, tvOS and watchOS, the Mockingbird Toolbox provides <a href="Categories/NSString+MBRegex.html">an <code>NSString</code> class extension</a> and <a href="Categories/NSMutableString+MBRegex.html">an <code>NSMutableString</code> class extension</a> to help create, manipulate, and execute regular expressions.</p>
+
+<p>These extensions make use of <a href="Classes/MBRegexCache.html">the <code>MBRegexCache</code> singleton</a> for caching regular expressions, which can be expensive to create.</p>
+
+<h3>Message Digests</h3>
+
+<p><a href="Classes/MBMessageDigest.html">The <code>MBMessageDigest</code> class</a> provides a high-level API for generating MD5 and SHA-1 secure one-way hashes (also known as <em>message digests</em>). Message digests can be created from strings, <code>NSData</code> instances, byte arrays, and files.</p>
+
+<p>Class extensions for <a href="Categories/NSString+MBMessageDigest.html"><code>NSString</code></a> and <a href="Categories/NSData+MBMessageDigest.html"><code>NSData</code></a> are also provided to simplify creating message digests from existing objects.</p>
+
+<h3>Network Activity Indicator</h3>
+
+<p>The network activity indicator appearing in an iOS device&rsquo;s status bar is a shared resource the use of which needs to be coordinated if you have, say, multiple network operations running simultaneously on several threads.</p>
+
+<p>The Toolbox provides <a href="Classes/MBNetworkIndicator.html">the <code>MBNetworkIndicator</code> class</a> class (iOS only) to coordinate use of the status bar&rsquo;s network activity indicator.</p>
+
+<h3>Colors</h3>
+
+<p>The Toolbox contains <a href="Categories/UIColor+MBToolbox.html">a <code>UIColor</code> class extension</a> for iOS and tvOS that:</p>
+
+<ul>
+<li>Determines whether a color is opaque</li>
+<li>Determines whether a color is <em>light</em> or <em>dark</em> (depending on its brightness value)</li>
+<li>Can create an appropriate highlight color for a given color</li>
+<li>Can create a new color by adjusting an existing color&rsquo;s brightness</li>
+</ul>
+
+
+<p>The <code>MBColorTools.h</code> header file defines a set of macro functions for creating <code>UIColor</code> and <code>CGColorRef</code> instances from individual 8-bit RGB and RGBA components, as well as from RGB and RGBA hexadecimal values.</p>
+
+<h3>Images</h3>
+
+<p>The Toolbox contains a <code>UIImage</code> class extension compatible with iOS and tvOS that adds <a href="Categories/UIImage+MBImageScaling.html">methods for scaling images</a>, as well as <a href="UIView+MBSnapshotImage.html">a <code>UIView</code> class extension</a> for capturing the contents of a view as a <code>UIImage</code>, <code>CIImage</code> or <code>CGImageRef</code>.</p>
+
+<h3>Bitmaps</h3>
+
+<p><a href="Classes/MBBitmapPixelPlane.html">The <code>MBBitmapPixelPlane</code> class</a> represents a plane of pixels that can be accessed individually, regardless of the underlying pixel format. This allows direct extraction and manipulation of pixel data within a bitmap.</p>
+
+<p>Empty <a href="Classes/MBBitmapPixelPlane.html"><code>MBBitmapPixelPlane</code></a> instances can be created directly and populated manually. Instances can also be created using a source <code>UIImage</code>, <code>CGImage</code> or a bitmap-based <code>CGContextRef</code>.</p>
+
+<p>You can use <a href="Classes/MBBitmapPixelPlane.html"><code>MBBitmapPixelPlane</code></a> on iOS, macOS and tvOS.</p>
+
+<h3>Runtime Services</h3>
+
+<p>Certain services available at runtime are expensive to leave enabled for the duration of an application&rsquo;s lifetime.</p>
+
+<p>For example, just having the <code>UIDevice</code>&rsquo;s <code>batteryMonitoringEnabled</code> property always set to <code>YES</code> can cause <em>additional</em> battery drain, because an app that would otherwise remain suspended in the background will instead be periodically activated to process <code>UIDeviceBatteryLevelDidChangeNotification</code> and <code>UIDeviceBatteryStateDidChangeNotification</code> event notifications.</p>
+
+<p>The best practice for such services is to leave them disabled until they&rsquo;re needed, and then to disable them immediately once they’re needed no longer.</p>
+
+<p>If multiple units of code need access to these services, some mechanism is needed to coordinate when these services should be enabled and disabled.</p>
+
+<p><a href="Classes/MBServiceManager.html">The <code>MBServiceManager</code> class</a> is designed for such cases.</p>
+
+<p>Classes that provide interfaces for shared services adopt <a href="Protocols/MBService.html">the <code>MBService</code> protocol</a>, and clients that need access to that service coordinate by <em>attaching to</em> and <em>detaching from</em> that service through the <a href="Classes/MBServiceManager.html"><code>MBServiceManager</code></a>.</p>
+
+<p>The <a href="Classes/MBBatteryMonitor.html"><code>MBBatteryMonitor</code></a> and <a href="Classes/MBNetworkMonitor.html"><code>MBNetworkMonitor</code></a> classes are implemented as services in order to minimize their impact on the user&rsquo;s device.</p>
+
+<h3>Rounded Rectangles</h3>
+
+<p><a href="Classes/MBRoundedRectTools.html">The <code>MBRoundedRectTools</code> class</a> provides a set of tools for handling rounded rectangles, including methods to help size corner radii based on rectangle size, and methods for creating <code>CGPathRef</code>s that can be used to draw rounded rectangles.</p>
+
+<h3>String Formatting</h3>
+
+<p>Mockingbird Toolbox provides <a href="Categories/NSString+MBIndentation.html">an <code>NSString</code> class extension</a> with methods to indent the individual lines within a string using a single tab, multiple tabs, or an arbitrary prefix string.</p>
+
+<p>The static inline C function <code>MBForceString()</code> takes an <code>id</code> as a parameter and is guaranteed to return a non-<code>nil</code> <code>NSString</code>.</p>
+
+<p>The static inline C function <code>MBTrimString()</code> takes an <code>id</code> as a parameter and is guaranteed to return a non-<code>nil</code> <code>NSString</code> with no leading or trailing whitespace or newline characters.</p>
+
+<p><a href="Classes/MBFieldListFormatter.html">The <code>MBFieldListFormatter</code> class</a> can be used to create lists of fields that are displayed in an easy-to-read format when rendered in a monospaced font.</p>
+
+<h3>String Measurement</h3>
+
+<p>For iOS and tvOS, there&rsquo;s also <a href="Categories/UIFont+MBStringSizing.html">a <code>UIFont</code> class extension</a> that provides a simple API for performing common text measurement tasks.</p>
+
+<h3>&hellip;and more</h3>
+
+<p>There&rsquo;s even more to Mockingbird Toolbox, but we want to leave you with at least a few treats to find on your own!</p>
+
+<p>Discover more in the API documentation below, and also in the freely-available <a href="https://github.com/emaloney/MBToolbox/">Mockingbird Toolbox source code</a>.</p>
+						
+						
+					</div>
+					
+
+					<div class="index-container">
+						
+
+						
+						<div class="index-column">
+							<h2 class="index-title">Class References</h2>
+							<ul>
+								
+								<li><a href="Classes/MBBatteryMonitor.html">MBBatteryMonitor</a></li>
+								
+								<li><a href="Classes/MBBatteryState.html">MBBatteryState</a></li>
+								
+								<li><a href="Classes/MBBitmapPixelPlane.html">MBBitmapPixelPlane</a></li>
+								
+								<li><a href="Classes/MBCacheReadQueue.html">MBCacheReadQueue</a></li>
+								
+								<li><a href="Classes/MBCacheWriteOperation.html">MBCacheWriteOperation</a></li>
+								
+								<li><a href="Classes/MBCacheWriteQueue.html">MBCacheWriteQueue</a></li>
+								
+								<li><a href="Classes/MBConcurrentReadWriteCoordinator.html">MBConcurrentReadWriteCoordinator</a></li>
+								
+								<li><a href="Classes/MBEvents.html">MBEvents</a></li>
+								
+								<li><a href="Classes/MBFieldListFormatter.html">MBFieldListFormatter</a></li>
+								
+								<li><a href="Classes/MBFileDeleteOperation.html">MBFileDeleteOperation</a></li>
+								
+								<li><a href="Classes/MBFileReadOperation.html">MBFileReadOperation</a></li>
+								
+								<li><a href="Classes/MBFileWriteOperation.html">MBFileWriteOperation</a></li>
+								
+								<li><a href="Classes/MBFilesystemCache.html">MBFilesystemCache</a></li>
+								
+								<li><a href="Classes/MBFilesystemOperationQueue.html">MBFilesystemOperationQueue</a></li>
+								
+								<li><a href="Classes/MBFormattedDescriptionObject.html">MBFormattedDescriptionObject</a></li>
+								
+								<li><a href="Classes/MBMessageDigest.html">MBMessageDigest</a></li>
+								
+								<li><a href="Classes/MBModuleBase.html">MBModuleBase</a></li>
+								
+								<li><a href="Classes/MBModuleLog.html">MBModuleLog</a></li>
+								
+								<li><a href="Classes/MBNetworkIndicator.html">MBNetworkIndicator</a></li>
+								
+								<li><a href="Classes/MBNetworkMonitor.html">MBNetworkMonitor</a></li>
+								
+								<li><a href="Classes/MBOperationQueue.html">MBOperationQueue</a></li>
+								
+								<li><a href="Classes/MBRegexCache.html">MBRegexCache</a></li>
+								
+								<li><a href="Classes/MBRoundedRectTools.html">MBRoundedRectTools</a></li>
+								
+								<li><a href="Classes/MBServiceManager.html">MBServiceManager</a></li>
+								
+								<li><a href="Classes/MBThreadLocalStorage.html">MBThreadLocalStorage</a></li>
+								
+								<li><a href="Classes/MBThreadsafeCache.html">MBThreadsafeCache</a></li>
+								
+							</ul>
+						</div>
+						
+
+						
+						<div class="index-column">
+							
+							<h2 class="index-title">Protocol References</h2>
+							<ul>
+								
+								<li><a href="Protocols/MBFileReadOperationDelegate.html">MBFileReadOperationDelegate</a></li>
+								
+								<li><a href="Protocols/MBFilesystemCacheDelegate.html">MBFilesystemCacheDelegate</a></li>
+								
+								<li><a href="Protocols/MBFormattedDescription.html">MBFormattedDescription</a></li>
+								
+								<li><a href="Protocols/MBInstanceVendor.html">MBInstanceVendor</a></li>
+								
+								<li><a href="Protocols/MBModule.html">MBModule</a></li>
+								
+								<li><a href="Protocols/MBModuleLogRecorder.html">MBModuleLogRecorder</a></li>
+								
+								<li><a href="Protocols/MBService.html">MBService</a></li>
+								
+								<li><a href="Protocols/MBSingleton.html">MBSingleton</a></li>
+								
+							</ul>
+							
+
+							
+							<h2 class="index-title">Constant References</h2>
+							<ul>
+								
+									<li><a href="Constants/MBBitmapPixelType.html">MBBitmapPixelType</a></li>
+								
+									<li><a href="Constants/MBLogSeverity.html">MBLogSeverity</a></li>
+								
+									<li><a href="Constants/MBNetworkAvailabilityFlags.html">MBNetworkAvailabilityFlags</a></li>
+								
+							</ul>
+							
+
+							
+							<h2 class="index-title">Category References</h2>
+							<ul>
+								
+								<li><a href="Categories/MBFilesystemCache+ForSubclassEyesOnly.html">MBFilesystemCache(ForSubclassEyesOnly)</a></li>
+								
+								<li><a href="Categories/MBThreadsafeCache+ForSubclassEyesOnly.html">MBThreadsafeCache(ForSubclassEyesOnly)</a></li>
+								
+								<li><a href="Categories/NSData+MBMessageDigest.html">NSData(MBMessageDigest)</a></li>
+								
+								<li><a href="Categories/NSData+MBStringConversion.html">NSData(MBStringConversion)</a></li>
+								
+								<li><a href="Categories/NSError+MBToolbox.html">NSError(MBToolbox)</a></li>
+								
+								<li><a href="Categories/NSMutableString+MBRegex.html">NSMutableString(MBRegex)</a></li>
+								
+								<li><a href="Categories/NSString+MBIndentation.html">NSString(MBIndentation)</a></li>
+								
+								<li><a href="Categories/NSString+MBMessageDigest.html">NSString(MBMessageDigest)</a></li>
+								
+								<li><a href="Categories/NSString+MBRegex.html">NSString(MBRegex)</a></li>
+								
+								<li><a href="Categories/UIColor+MBToolbox.html">UIColor(MBToolbox)</a></li>
+								
+								<li><a href="Categories/UIFont+MBStringSizing.html">UIFont(MBStringSizing)</a></li>
+								
+								<li><a href="Categories/UIImage+MBImageScaling.html">UIImage(MBImageScaling)</a></li>
+								
+								<li><a href="Categories/UIView+MBSnapshotImage.html">UIView(MBSnapshotImage)</a></li>
+								
+							</ul>
+							
+						</div>
+						
+					</div>
+
+					<footer>
+						<div class="footer-copyright">
+							
+							<p class="copyright">Copyright &copy; 2017 Gilt Groupe. All rights reserved. Updated: 2017-04-05</p>
+							
+							
+							<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+							
+						</div>
+					</footer>
+				</main>
+			</div>
+		</div>
+	</article>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBFileDeleteOperation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBFileDeleteOperation</TokenIdentifier>
+			<Abstract type="html">An NSOperation subclass that can be used to delete a file from the
+filesystem.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MBFileDeleteOperation/operationForDeletingFile:</TokenIdentifier>
+			<Abstract type="html">Creates a new MBFileDeleteOperation instance that can be used to delete a
+file from the filesystem.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			
+			<Declaration>+ (nonnull instancetype)operationForDeletingFile:(nonnull NSString *)path</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>path</Name>
+					<Abstract type="html">The filesystem path of the file to be deleted by the returned
+            operation.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The newly-created MBFileDeleteOperation instance.</Abstract></ReturnValue>
+			<Anchor>//api/name/operationForDeletingFile:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFileDeleteOperation/initWithFilePath:</TokenIdentifier>
+			<Abstract type="html">Initializes the receiver so it can be used to delete the specified file.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			
+			<Declaration>- (nonnull instancetype)initWithFilePath:(nonnull NSString *)path</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>path</Name>
+					<Abstract type="html">The filesystem path of the file to be deleted.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The receiver.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithFilePath:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFileDeleteOperation/initWithFilePath:moveImmediately:</TokenIdentifier>
+			<Abstract type="html">Initializes the receiver so it can be used to delete the specified file.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			
+			<Declaration>- (nonnull instancetype)initWithFilePath:(nonnull NSString *)path moveImmediately:(BOOL)moveNow</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>path</Name>
+					<Abstract type="html">The filesystem path of the file to be deleted.</Abstract>
+				</Parameter><Parameter>
+					<Name>moveNow</Name>
+					<Abstract type="html">If YES, the file at the specified path will be moved
+            out-of-place immediately on the calling thread. Regardless of the
+            value of this parameter, the actual file deletion won&apos;t occur
+            until the operation is executed by the NSOperationQueue to which
+            it was added.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The receiver.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithFilePath:moveImmediately:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFileDeleteOperation/setFilePath:</TokenIdentifier>
+			<Abstract type="html">Returns the filesystem path of the file to be deleted by the operation.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
+			
+			
+			<Anchor>//api/name/filePath</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFileDeleteOperation/filePath</TokenIdentifier>
+			<Abstract type="html">Returns the filesystem path of the file to be deleted by the operation.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
+			
+			
+			<Anchor>//api/name/filePath</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBFileDeleteOperation/filePath</TokenIdentifier>
+			<Abstract type="html">Returns the filesystem path of the file to be deleted by the operation.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+			
+			<Declaration>@property (nonnull, nonatomic, readonly) NSString *filePath</Declaration>
+			
+			
+			<Anchor>//api/name/filePath</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

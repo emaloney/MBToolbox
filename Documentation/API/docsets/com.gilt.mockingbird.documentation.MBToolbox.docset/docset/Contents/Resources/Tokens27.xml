@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/MBFilesystemCache+ForSubclassEyesOnly.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/MBFilesystemCache(ForSubclassEyesOnly)</TokenIdentifier>
+			<Abstract type="html">The class extensions in this header file are intended for internal use only by
+MBFilesystemCache implementations.</Abstract>
+			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
+            
+			
+			<NodeRef refid="27"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/fileManager</TokenIdentifier>
+			<Abstract type="html">Accesses the NSFileManager instance used internally by the cache.</Abstract>
+			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (nonnull NSFileManager *)fileManager</Declaration>
+			
+			<ReturnValue><Abstract type="html">The file manager.</Abstract></ReturnValue>
+			<Anchor>//api/name/fileManager</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/ensureCacheDirectory</TokenIdentifier>
+			<Abstract type="html">Ensures that the cache directory used by the receiver exists. If the directory
+does not exist, it will be created.</Abstract>
+			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (void)ensureCacheDirectory</Declaration>
+			
+			
+			<Anchor>//api/name/ensureCacheDirectory</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/fileExtensionForCacheKey:</TokenIdentifier>
+			<Abstract type="html">Returns the file extension that should be used for the file associated with
+the given cache key.</Abstract>
+			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (nonnull NSString *)fileExtensionForCacheKey:(nonnull id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The cache key for which the file extension is sought.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The file extension.</Abstract></ReturnValue>
+			<Anchor>//api/name/fileExtensionForCacheKey:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/filePathForCacheKey:</TokenIdentifier>
+			<Abstract type="html">Returns the file path that should be used for the file associated with
+the given cache key.</Abstract>
+			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (nonnull NSString *)filePathForCacheKey:(nonnull id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The cache key for which the file path is sought.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The file path.</Abstract></ReturnValue>
+			<Anchor>//api/name/filePathForCacheKey:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/objectFromCacheFile:</TokenIdentifier>
+			<Abstract type="html">Loads the cache object contained in the specified file.</Abstract>
+			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (nullable id)objectFromCacheFile:(nonnull NSString *)path</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>path</Name>
+					<Abstract type="html">The path of the file to read.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The cache object, or nil if it couldn&apos;t be read..</Abstract></ReturnValue>
+			<Anchor>//api/name/objectFromCacheFile:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/objectLoaded:forKey:</TokenIdentifier>
+			<Abstract type="html">Notifies the cache that a cache object has been loaded into memory for the
+given key.</Abstract>
+			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (void)objectLoaded:(nonnull id)cacheObj forKey:(nonnull id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cacheObj</Name>
+					<Abstract type="html">The cache object that was loaded.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The cache key associated with the cache object.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/objectLoaded:forKey:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/storeObjectInMemoryCacheIfAppropriate:forKey:</TokenIdentifier>
+			<Abstract type="html">Consults the delegate&apos;s shouldStoreObject:forKey:inMemoryCache: method
+to determine whether the specified object should be stored in the memory cache.</Abstract>
+			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (void)storeObjectInMemoryCacheIfAppropriate:(nonnull id)cacheObj forKey:(nonnull id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cacheObj</Name>
+					<Abstract type="html">The object that may be stored in the cache.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The cache key to associate with cacheObj if the delegate
+            permits storage in the cache.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/storeObjectInMemoryCacheIfAppropriate:forKey:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilesystemCache/storeObjectInFilesystemCacheIfAppropriate:forKey:</TokenIdentifier>
+			<Abstract type="html">Consults the delegate&apos;s shouldStoreObject:forKey:inFilesystemCache: method
+to determine whether the specified object should be stored in the filesystem
+cache.</Abstract>
+			<DeclaredIn>MBFilesystemCache+Subclassing.h</DeclaredIn>
+			
+			<Declaration>- (void)storeObjectInFilesystemCacheIfAppropriate:(nonnull id)cacheObj forKey:(nonnull id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cacheObj</Name>
+					<Abstract type="html">The object that may be stored in the cache.</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">The cache key to associate with cacheObj if the delegate
+            permits storage in the cache.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/storeObjectInFilesystemCacheIfAppropriate:forKey:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

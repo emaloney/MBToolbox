@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBFilesystemCache Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MBToolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/cacheDelegate">cacheDelegate</option>
+		
+		<option value="//api/name/cacheName">cacheName</option>
+		
+		<option value="//api/name/maxAgeOfCacheFiles">maxAgeOfCacheFiles</option>
+		
+		<option value="//api/name/readQueue">readQueue</option>
+		
+		<option value="//api/name/writeQueue">writeQueue</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/clearFilesystemCache">- clearFilesystemCache</option>
+		
+		<option value="//api/name/initWithName:">- initWithName:</option>
+		
+		<option value="//api/name/initWithName:cacheDelegate:">- initWithName:cacheDelegate:</option>
+		
+		<option value="//api/name/isKeyInCache:">- isKeyInCache:</option>
+		
+		<option value="//api/name/isKeyInFilesystemCache:">- isKeyInFilesystemCache:</option>
+		
+		<option value="//api/name/isKeyInMemoryCache:">- isKeyInMemoryCache:</option>
+		
+		<option value="//api/name/objectForKeyInMemoryCache:">- objectForKeyInMemoryCache:</option>
+		
+		<option value="//api/name/purgeCacheFilesOlderThan:">- purgeCacheFilesOlderThan:</option>
+		
+		<option value="//api/name/purgeOutOfDateCacheFiles">- purgeOutOfDateCacheFiles</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBFilesystemCache Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/MBThreadsafeCache.html">MBThreadsafeCache</a> : NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/MBFilesystemCacheDelegate.html">MBFilesystemCacheDelegate</a></td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MBFilesystemCache.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An object cache implementation capable of persisting cache objects to the
+filesystem.</p>
+
+<p>Utilize the methods provided by the <a href="../Classes/MBThreadsafeCache.html"><code>MBThreadsafeCache</code></a> superclass to access
+data stored in an <code>MBFilesystemCache</code> if you do not care whether or not a
+cache object is loaded into memory when it is requested.</p><div class="note"><p><strong>Note:</strong> Classes that wish to subclass <code>MBFilesystemCache</code> should refer
+            to the internal <a href="../Categories/MBFilesystemCache+ForSubclassEyesOnly.html"><code>MBFilesystemCache(ForSubclassEyesOnly)</code></a> methods
+            declared in the header file <code>MBFilesystemCache+Subclassing.h</code>.</p></div>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Object lifecycle" name="task_Object lifecycle"></a>
+						<h2 class="task-title">Object lifecycle</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithName:" title="initWithName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithName:">&ndash;&nbsp;initWithName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes the receiver with the given name.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)initWithName:(nonnull NSString *)<em>name</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>The name of the filesystem cache. Must not be <code>nil</code>, and must
+            not contain any characters that are illegal filename characters
+            in the local filesystem. This name will be used in the path of
+            the directory in which the receiver&rsquo;s files will be stored.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The receiver will act as its own delegate unless the <a href="#//api/name/cacheDelegate"><code>cacheDelegate</code></a> property
+is explicitly set.</p><div class="warning"><p><strong>Warning:</strong> Do not use the same cache name for more than one <code>MBFilesystemCache</code>
+            at any given time. Unpredictable results will occur if you do.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithName:cacheDelegate:" title="initWithName:cacheDelegate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithName:cacheDelegate:">&ndash;&nbsp;initWithName:cacheDelegate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes the receiver with the given name.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)initWithName:(nonnull NSString *)<em>name</em> cacheDelegate:(nonnull id)<em>delegate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>The name of the filesystem cache. Must not be <code>nil</code>, and must
+            not contain any characters that are illegal filename characters
+            in the local filesystem. This name will be used in the path of
+            the directory in which the receiver&rsquo;s files will be stored.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>delegate</code></th>
+						<td><p>The <a href="../Protocols/MBFilesystemCacheDelegate.html"><code>MBFilesystemCacheDelegate</code></a> that will be used as
+            the receiver&rsquo;s delegate. Must not be <code>nil</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> Do not use the same cache name for more than one <code>MBFilesystemCache</code>
+            at any given time. Unpredictable results will occur if you do.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Cache properties" name="task_Cache properties"></a>
+						<h2 class="task-title">Cache properties</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/readQueue" title="readQueue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readQueue">&nbsp;&nbsp;readQueue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the operation queue that will be used for performing filesystem
+    cache read operations.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonnull, nonatomic, readonly) MBCacheReadQueue *readQueue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/writeQueue" title="writeQueue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/writeQueue">&nbsp;&nbsp;writeQueue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the operation queue that will be used for performing filesystem
+    cache write operations.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonnull, nonatomic, readonly) MBCacheWriteQueue *writeQueue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cacheName" title="cacheName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cacheName">&nbsp;&nbsp;cacheName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the name of the cache, which is used to determine the directory
+    in which cache files are stored. This is name provided when the receiver
+    is initialized.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonnull, nonatomic, readonly) NSString *cacheName</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cacheDelegate" title="cacheDelegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cacheDelegate">&nbsp;&nbsp;cacheDelegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the <a href="../Protocols/MBFilesystemCacheDelegate.html"><code>MBFilesystemCacheDelegate</code></a> used by the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nullable, nonatomic, weak) id cacheDelegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/maxAgeOfCacheFiles" title="maxAgeOfCacheFiles"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxAgeOfCacheFiles">&nbsp;&nbsp;maxAgeOfCacheFiles</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the maximum age of the files in the cache, in seconds. Files that
+    are older than this value will not be used by the cache and will
+    eventually be deleted. This defaults to the value of the constant
+    <code>kMBFilesystemCacheDefaultMaxAge</code> (currently, 36 hours).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSTimeInterval maxAgeOfCacheFiles</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Checking for objects in the cache" name="task_Checking for objects in the cache"></a>
+						<h2 class="task-title">Checking for objects in the cache</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/isKeyInCache:" title="isKeyInCache:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isKeyInCache:">&ndash;&nbsp;isKeyInCache:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines whether the specified cache key represents an object currently
+in the cache.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isKeyInCache:(nonnull id)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The cache key to check.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if there is an object associated with <code>key</code> in either the
+            filesystem or the memory cache; <code>NO</code> otherwise.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The filesystem cache and memory cache are both checked for the presence of
+an object with the specified key.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isKeyInMemoryCache:" title="isKeyInMemoryCache:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isKeyInMemoryCache:">&ndash;&nbsp;isKeyInMemoryCache:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines whether the specified cache key represents an object currently
+in the memory cache.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isKeyInMemoryCache:(nonnull id)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The cache key to check.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if there is an object associated with <code>key</code> in the memory
+            cache; <code>NO</code> otherwise.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isKeyInFilesystemCache:" title="isKeyInFilesystemCache:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isKeyInFilesystemCache:">&ndash;&nbsp;isKeyInFilesystemCache:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines whether the specified cache key represents an object currently
+in the filesystem cache.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isKeyInFilesystemCache:(nonnull id)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The cache key to check.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if there is an object associated with <code>key</code> in the filesystem
+            cache; <code>NO</code> otherwise.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Retrieving objects from the cache" name="task_Retrieving objects from the cache"></a>
+						<h2 class="task-title">Retrieving objects from the cache</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/objectForKeyInMemoryCache:" title="objectForKeyInMemoryCache:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/objectForKeyInMemoryCache:">&ndash;&nbsp;objectForKeyInMemoryCache:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Retrieves an object from the memory cache, if it is there.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable id)objectForKeyInMemoryCache:(nonnull id)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The cache key of the object to retrieve.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The object instance, or <code>nil</code> if it was not in the cache.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> This method <em>does not</em> attempt to load an object from the
+            filesystem cache. Use the <code>objectForKey:</code> method (declared by
+            the <a href="../Classes/MBThreadsafeCache.html"><code>MBThreadsafeCache</code></a> superclass) to retrieve objects regardless
+            of whether they&rsquo;re in the memory or filesystem caches.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Managing the filesystem cache" name="task_Managing the filesystem cache"></a>
+						<h2 class="task-title">Managing the filesystem cache</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/clearFilesystemCache" title="clearFilesystemCache"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clearFilesystemCache">&ndash;&nbsp;clearFilesystemCache</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Deletes all of the cache objects currently in the filesystem cache.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)clearFilesystemCache</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The memory cache is not affected by calls to this method.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/purgeCacheFilesOlderThan:" title="purgeCacheFilesOlderThan:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/purgeCacheFilesOlderThan:">&ndash;&nbsp;purgeCacheFilesOlderThan:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Deletes all cache files older than a certain age.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)purgeCacheFilesOlderThan:(NSTimeInterval)<em>ageInSeconds</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ageInSeconds</code></th>
+						<td><p>The maximum age allowed for cache files. Files older
+            than this age will be deleted.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The memory cache is not affected by calls to this method.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/purgeOutOfDateCacheFiles" title="purgeOutOfDateCacheFiles"></a>
+	<h3 class="method-title"><code><a href="#//api/name/purgeOutOfDateCacheFiles">&ndash;&nbsp;purgeOutOfDateCacheFiles</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Deletes all cache files older than the number of seconds specified by the
+<a href="#//api/name/maxAgeOfCacheFiles"><code>maxAgeOfCacheFiles</code></a> property.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)purgeOutOfDateCacheFiles</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The memory cache is not affected by calls to this method.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBFilesystemCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Gilt Groupe. All rights reserved. Updated: 2017-04-05</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

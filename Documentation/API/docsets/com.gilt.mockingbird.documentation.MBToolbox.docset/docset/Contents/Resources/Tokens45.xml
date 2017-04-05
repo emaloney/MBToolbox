@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/MBModuleLogRecorder.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/MBModuleLogRecorder</TokenIdentifier>
+			<Abstract type="html">This protocol is adopted by classes that wish to be used as loggers by the
+MBModuleLog.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+            
+			
+			<NodeRef refid="45"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModuleLogRecorder/enable</TokenIdentifier>
+			<Abstract type="html">Called prior to any first call to logMessage: to notify the log recorder
+that it may be used in the future.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>+ (void)enable</Declaration>
+			
+			
+			<Anchor>//api/name/enable</Anchor>
+            <NodeRef refid="45"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/MBModuleLogRecorder/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:</TokenIdentifier>
+			<Abstract type="html">Records the log message to the underlying logging subsystem.</Abstract>
+			<DeclaredIn>MBModuleLog.h</DeclaredIn>
+			
+			<Declaration>+ (void)logMessage:(nonnull NSString *)msg atSeverity:(MBLogSeverity)severity callingObject:(nullable id)caller callingSignature:(nonnull NSString *)signature callingFilePath:(nonnull NSString *)filePath callingFileLine:(NSUInteger)fileLine</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>msg</Name>
+					<Abstract type="html">The message to record.</Abstract>
+				</Parameter><Parameter>
+					<Name>severity</Name>
+					<Abstract type="html">The severity level of the log message.</Abstract>
+				</Parameter><Parameter>
+					<Name>caller</Name>
+					<Abstract type="html">The object responsible for issuing this request to
+            log msg. May be nil if not called from an object scope.</Abstract>
+				</Parameter><Parameter>
+					<Name>signature</Name>
+					<Abstract type="html">The signature of the calling method or function.</Abstract>
+				</Parameter><Parameter>
+					<Name>filePath</Name>
+					<Abstract type="html">The filesystem path of the source code file containing
+            the calling method or function.</Abstract>
+				</Parameter><Parameter>
+					<Name>fileLine</Name>
+					<Abstract type="html">The line number within filePath specifying the
+            location of the code responsible for this request to log msg.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:</Anchor>
+            <NodeRef refid="45"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBFilesystemOperationQueue.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBFilesystemOperationQueue</TokenIdentifier>
+			<Abstract type="html">A singleton NSOperationQueue intended to be used for performing general
+filesystem operations.</Abstract>
+			<DeclaredIn>MBFilesystemOperations.h</DeclaredIn>
+            
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

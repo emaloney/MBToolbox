@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>MBModuleLogRecorder Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">MBToolbox </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Gilt Groupe</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/enable">+ enable</option>
+		
+		<option value="//api/name/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:">+ logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">MBModuleLogRecorder Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>MBModuleLog.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This protocol is adopted by classes that wish to be used as loggers by the
+<a href="../Classes/MBModuleLog.html"><code>MBModuleLog</code></a>.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/enable" title="enable"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enable">+&nbsp;enable</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called prior to any first call to <code>logMessage:</code> to notify the log recorder
+that it may be used in the future.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)enable</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Implementations would typically perform any needed set-up here.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:" title="logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:">+&nbsp;logMessage:atSeverity:callingObject:callingSignature:callingFilePath:callingFileLine:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Records the log message to the underlying logging subsystem.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)logMessage:(nonnull NSString *)<em>msg</em> atSeverity:(MBLogSeverity)<em>severity</em> callingObject:(nullable id)<em>caller</em> callingSignature:(nonnull NSString *)<em>signature</em> callingFilePath:(nonnull NSString *)<em>filePath</em> callingFileLine:(NSUInteger)<em>fileLine</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>msg</code></th>
+						<td><p>The message to record.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>severity</code></th>
+						<td><p>The severity level of the log message.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>caller</code></th>
+						<td><p>The object responsible for issuing this request to
+            log <code>msg</code>. May be <code>nil</code> if not called from an object scope.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>signature</code></th>
+						<td><p>The signature of the calling method or function.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>filePath</code></th>
+						<td><p>The filesystem path of the source code file containing
+            the calling method or function.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fileLine</code></th>
+						<td><p>The line number within <code>filePath</code> specifying the
+            location of the code responsible for this request to log <code>msg</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">MBModuleLog.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Gilt Groupe. All rights reserved. Updated: 2017-04-05</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

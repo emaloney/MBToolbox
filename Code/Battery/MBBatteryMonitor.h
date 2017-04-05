@@ -6,6 +6,10 @@
 //  Copyright (c) 2011 Gilt Groupe. All rights reserved.
 //
 
+#import "MBAvailability.h"
+
+#if MB_BUILD_IOS
+
 #import "MBService.h"
 
 /******************************************************************************/
@@ -83,3 +87,5 @@ extern NSString* const __nonnull kMBBatteryMonitorUpdateEvent;    //!< @"MBBatte
 - (nullable MBBatteryState*) currentBatteryState;
 
 @end
+
+#endif

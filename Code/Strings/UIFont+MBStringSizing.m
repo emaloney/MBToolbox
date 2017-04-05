@@ -7,6 +7,9 @@
 //
 
 #import "UIFont+MBStringSizing.h"
+
+#if MB_BUILD_UIKIT
+
 #import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL         0
@@ -257,3 +260,5 @@
 }
 
 @end
+
+#endif

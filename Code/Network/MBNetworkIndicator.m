@@ -6,10 +6,13 @@
 //  Copyright (c) 2012 Gilt Groupe. All rights reserved.
 //
 
+#import "MBNetworkIndicator.h"
+
+#if MB_BUILD_IOS
+
 #import <UIKit/UIKit.h>
 #import <libkern/OSAtomic.h>
 
-#import "MBNetworkIndicator.h"
 #import "MBEvents.h"
 #import "MBSingleton.h"
 #import "MBModuleLogMacros.h"
@@ -144,3 +147,4 @@ MBImplementSingleton();
 
 @end
 
+#endif

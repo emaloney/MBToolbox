@@ -6,11 +6,13 @@
 //  Copyright (c) 2012 Gilt Groupe. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #import "MBAvailability.h"
 
-#if MB_BUILD_IOS
+#if !MB_BUILD_WATCHOS
+
+#import <Foundation/Foundation.h>
+
+#if MB_BUILD_UIKIT
 #import <UIKit/UIKit.h>
 #else
 #import <AppKit/AppKit.h>
@@ -200,7 +202,7 @@ typedef struct {
 /*!    @name Creating bitmaps from images                                     */
 /*----------------------------------------------------------------------------*/
 
-#if TARGET_OS_IPHONE
+#if MB_BUILD_UIKIT
 
 /*!
  Creates a new `MBBitmapPixelPlane` populated using the content of the image
@@ -214,7 +216,7 @@ typedef struct {
  */
 + (nullable instancetype) bitmapWithUIImage:(nonnull UIImage*)image;
 
-#elif TARGET_OS_MAC
+#elif MB_BUILD_MAC
 
 /*!
  Creates a new `MBBitmapPixelPlane` populated using the content of the image
@@ -376,7 +378,7 @@ typedef struct {
 /*!    @name Creating an image representation of the bitmap                   */
 /*----------------------------------------------------------------------------*/
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 
 /*!
  Creates a `UIImage` instance containing a visual representation of the current
@@ -399,3 +401,5 @@ typedef struct {
 #endif
 
 @end
+
+#endif

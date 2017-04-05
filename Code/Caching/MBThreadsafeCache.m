@@ -8,7 +8,7 @@
 
 #import "MBThreadsafeCache.h"
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 #import <UIKit/UIKit.h>
 #endif
 
@@ -25,7 +25,7 @@
 {
     NSRecursiveLock* _lock;
     BOOL _exceptionProtection;
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
     BOOL _clearOnMemoryWarning;
 #endif
     NSMutableDictionary* _cache;
@@ -37,7 +37,7 @@
 
 - (nonnull instancetype) init
 {
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
     return [self initWithExceptionProtection:NO ignoreMemoryWarnings:NO];
 #else
     return [self initWithExceptionProtection:NO];
@@ -45,7 +45,7 @@
 }
 
 - (nonnull instancetype) initWithExceptionProtection:(BOOL)protect
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
                                 ignoreMemoryWarnings:(BOOL)ignore
 #endif
 {
@@ -56,7 +56,7 @@
         _lock = [NSRecursiveLock new];
         _cache = [NSMutableDictionary new];
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
         _clearOnMemoryWarning = !ignore;
         if (_clearOnMemoryWarning) {
             [[NSNotificationCenter defaultCenter] addObserver:self
@@ -69,7 +69,7 @@
     return self;
 }
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 - (void) dealloc
 {
     if (_clearOnMemoryWarning) {
@@ -82,7 +82,7 @@
 #pragma mark Memory management
 /******************************************************************************/
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 - (void) memoryWarning
 {
 	MBLogDebugTrace();

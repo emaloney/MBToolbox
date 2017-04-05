@@ -103,7 +103,7 @@
 /*!    @name Posting memory warnings                                          */
 /*----------------------------------------------------------------------------*/
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 /*!
  Posts an artificial memory warning using the event name contained in the
  `UIApplicationDidReceiveMemoryWarningNotification` constant.

@@ -7,6 +7,9 @@
 //
 
 #import "MBAvailability.h"
+
+#if !MB_BUILD_WATCHOS
+
 #import "MBService.h"
 
 /******************************************************************************/
@@ -144,3 +147,5 @@ typedef NS_OPTIONS(NSUInteger, MBNetworkAvailabilityFlags) {
 @property(nullable, nonatomic, readonly) NSString* reachabilityFlagsDescription;
 
 @end
+
+#endif

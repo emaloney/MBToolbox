@@ -7,6 +7,9 @@
 //
 
 #import "UIColor+MBToolbox.h"
+
+#if MB_BUILD_UIKIT
+
 #import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL         0
@@ -64,3 +67,5 @@ const CGFloat kHiliteColorBrightnessAdjust = 0.35;
 }
 
 @end
+
+#endif

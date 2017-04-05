@@ -8,7 +8,7 @@
 
 #import "MBEvents.h"
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 #import <UIKit/UIKit.h>
 #endif
 
@@ -87,7 +87,7 @@
 #pragma mark Posting memory warnings
 /******************************************************************************/
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 + (void) postMemoryWarning
 {
     [self postEvent:UIApplicationDidReceiveMemoryWarningNotification];

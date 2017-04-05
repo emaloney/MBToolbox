@@ -6,9 +6,12 @@
 //  Copyright (c) 2011 Gilt Groupe. All rights reserved.
 //
 
+#import "MBBatteryMonitor.h"
+
+#if MB_BUILD_IOS
+
 #import <UIKit/UIKit.h>
 
-#import "MBBatteryMonitor.h"
 #import "MBEvents.h"
 #import "MBModuleLogMacros.h"
 
@@ -111,3 +114,5 @@ MBImplementSingleton();
 }
 
 @end
+
+#endif

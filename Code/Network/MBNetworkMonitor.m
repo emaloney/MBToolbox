@@ -8,6 +8,8 @@
 
 #import "MBNetworkMonitor.h"
 
+#if !MB_BUILD_WATCHOS
+
 #if MB_BUILD_IOS
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
@@ -335,3 +337,5 @@ static void NetworkMonitorReachabilityCallback(SCNetworkReachabilityRef target, 
 }
 
 @end
+
+#endif

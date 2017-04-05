@@ -8,7 +8,7 @@
 
 #import "MBAvailability.h"
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 #import <UIKit/UIKit.h>
 #endif
 
@@ -40,7 +40,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 /******************************************************************************/
 
 @interface MBCachePruneOperation : NSOperation
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 {
     UIBackgroundTaskIdentifier _taskID;
 }
@@ -96,7 +96,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 #pragma mark Memory management
 /******************************************************************************/
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 - (void) memoryWarning
 {
 	MBLogDebugTrace();
@@ -456,7 +456,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 - (instancetype) init
 {
     self = [super init];
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
     if (self) {
         _taskID = UIBackgroundTaskInvalid;
     }

@@ -8,36 +8,50 @@
 
 #import <TargetConditionals.h>
 
-#define MB_BUILD_IOS        0
-#define MB_BUILD_WATCHOS    0
-#define MB_BUILD_OSX        0
+#ifdef MB_BUILD_IOS
+#undef MB_BUILD_IOS
+#endif
 
-#if TARGET_OS_IPHONE || TARGET_OS_SIMULATOR
-
-#if TARGET_OS_WATCH
+#ifdef MB_BUILD_MACOS
+#undef MB_BUILD_MACOS
+#endif
 
 #ifdef MB_BUILD_WATCHOS
 #undef MB_BUILD_WATCHOS
 #endif
 
-#define MB_BUILD_WATCHOS    1
-
-#else                   // #if TARGET_OS_WATCH
-
-#ifdef MB_BUILD_IOS
-#undef MB_BUILD_IOS
+#ifdef MB_BUILD_TVOS
+#undef MB_BUILD_TVOS
 #endif
+
+#if     TARGET_OS_IOS
 
 #define MB_BUILD_IOS        1
+#define MB_BUILD_MACOS      0
+#define MB_BUILD_TVOS       0
+#define MB_BUILD_WATCHOS    0
 
-#endif                  // #else from #if TARGET_OS_WATCH
+#elif   TARGET_OS_TV
 
-#elif TARGET_OS_MAC     // #if TARGET_OS_IPHONE || TARGET_OS_SIMULATOR
+#define MB_BUILD_IOS        0
+#define MB_BUILD_MACOS      0
+#define MB_BUILD_TVOS       1
+#define MB_BUILD_WATCHOS    0
 
-#ifdef MB_BUILD_OSX
-#undef MB_BUILD_OSX
+#elif   TARGET_OS_WATCH
+
+#define MB_BUILD_IOS        0
+#define MB_BUILD_MACOS      0
+#define MB_BUILD_TVOS       0
+#define MB_BUILD_WATCHOS    1
+
+#elif   TARGET_OS_OSX
+
+#define MB_BUILD_IOS        0
+#define MB_BUILD_MACOS      1
+#define MB_BUILD_TVOS       0
+#define MB_BUILD_WATCHOS    0
+
 #endif
 
-#define MB_BUILD_OSX        1
-
-#endif                  // #elif TARGET_OS_MAC from #if TARGET_OS_IPHONE || TARGET_OS_SIMULATOR
+#define MB_BUILD_UIKIT      (MB_BUILD_IOS || MB_BUILD_TVOS)

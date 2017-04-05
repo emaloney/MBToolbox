@@ -28,16 +28,12 @@ FOUNDATION_EXPORT const unsigned char MBToolboxVersionString[];
 // import the public headers
 
 #import <MBToolbox/MBAvailability.h>
-
-#if MB_BUILD_IOS
 #import <MBToolbox/MBBatteryMonitor.h>
 #import <MBToolbox/MBNetworkIndicator.h>
 #import <MBToolbox/UIColor+MBToolbox.h>
 #import <MBToolbox/UIImage+MBImageScaling.h>
 #import <MBToolbox/UIView+MBSnapshotImage.h>
 #import <MBToolbox/UIFont+MBStringSizing.h>
-#endif
-
 #import <MBToolbox/MBCacheOperations.h>
 #import <MBToolbox/MBFilesystemCache+Subclassing.h>
 #import <MBToolbox/MBFilesystemCache.h>

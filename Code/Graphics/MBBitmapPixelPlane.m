@@ -7,6 +7,9 @@
 //
 
 #import "MBBitmapPixelPlane.h"
+
+#if !MB_BUILD_WATCHOS
+
 #import "MBModuleLogMacros.h"
 
 #define DEBUG_LOCAL         0
@@ -163,7 +166,7 @@
     return plane;
 }
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 
 + (nullable instancetype) bitmapWithUIImage:(nonnull UIImage*)image
 {
@@ -571,7 +574,7 @@
 #pragma mark Getting images
 /******************************************************************************/
 
-#if TARGET_OS_IPHONE
+#if MB_BUILD_UIKIT
 
 - (nonnull UIImage*) image
 {
@@ -583,7 +586,7 @@
     return image;
 }
 
-#elif TARGET_OS_MAC
+#else
 
 - (nonnull NSImage*) image
 {
@@ -598,3 +601,5 @@
 #endif
 
 @end
+
+#endif

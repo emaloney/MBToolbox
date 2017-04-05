@@ -6,7 +6,10 @@
 //  Copyright (c) 2011 Gilt Groupe. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "MBAvailability.h"
+
+#if MB_BUILD_UIKIT
+
 #import <UIKit/UIKit.h>
 
 /******************************************************************************/
@@ -92,3 +95,5 @@
 - (nonnull UIImage*) imageScaledByFactor:(CGFloat)scale;
 
 @end
+
+#endif

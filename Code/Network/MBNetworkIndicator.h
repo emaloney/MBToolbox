@@ -6,6 +6,10 @@
 //  Copyright (c) 2012 Gilt Groupe. All rights reserved.
 //
 
+#import "MBAvailability.h"
+
+#if MB_BUILD_IOS
+
 #import <Foundation/Foundation.h>
 
 /******************************************************************************/
@@ -68,3 +72,5 @@ extern NSString* const __nonnull kMBNetworkOperationFinishedEvent;     // "MBNet
 - (void) cancelOperations;
 
 @end
+
+#endif

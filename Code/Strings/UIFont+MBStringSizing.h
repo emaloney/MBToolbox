@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
+#import "MBAvailability.h"
+
+#if MB_BUILD_UIKIT
+
 #import <UIKit/UIKit.h>
 
 /******************************************************************************/
@@ -446,3 +450,5 @@
            fractional:(BOOL)allowFractionalSize;
 
 @end
+
+#endif

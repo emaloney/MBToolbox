@@ -44,7 +44,7 @@
  @param     ignore If `YES`, the cache will not automatically clear itself when
             a memory warning occurs.
  */
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 - (nonnull instancetype) initWithExceptionProtection:(BOOL)protect
                                 ignoreMemoryWarnings:(BOOL)ignore;
 #else
@@ -148,7 +148,7 @@
  The default implementation simply calls `clearMemoryCache`; however, subclasses
  may override this to perform additional cleanup when a memory warning occurs.
  */
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 - (void) memoryWarning;
 #endif
 

@@ -1,10 +1,4 @@
-## Overview
-
-The Mockingbird Toolbox is a set of general-purpose utility code for use in iOS applications.
-
-The Toolbox is the lowest-level module in the Mockingbird open-source project from Gilt Groupe.
-
-The Toolbox includes the following tools, which are compatible with all four Apple platforms—iOS, macOS, tvOS and watchOS—except where noted otherwise:
+The Mockingbird Toolbox includes the following tools, which are compatible with all four Apple platforms—iOS, macOS, tvOS and watchOS—except where noted otherwise:
 
 
 ### Battery & Power Monitoring

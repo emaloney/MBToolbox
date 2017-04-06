@@ -3,7 +3,9 @@
 
 # MBToolbox
 
-A stand-alone set of Objective-C utility code for Apple platforms
+The Mockingbird Toolbox is an Objective-C-based set of general-purpose utility code for use in iOS, macOS, tvOS and watchOS applications.
+	
+The Mockingbird Toolbox is the lowest-level module in the Gilt Groupe’s open source Mockingbird project.
 
 MBToolbox is part of the Mockingbird Library from [Gilt Tech](http://tech.gilt.com).
 
@@ -36,7 +38,7 @@ The simplest way to integrate MBToolbox is with the [Carthage](https://github.co
 First, add this line to your [`Cartfile`](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
 
 ```
-github "emaloney/MBToolbox" ~> 2.2.0
+github "emaloney/MBToolbox" ~> 3.0.0
 ```
 
 Then, use the `carthage` command to [update your dependencies](https://github.com/Carthage/Carthage#upgrading-frameworks).
@@ -51,13 +53,10 @@ import MBToolbox
 
 See [the Integration document](https://github.com/emaloney/MBToolbox/blob/master/INTEGRATION.md) for additional details on integrating MBToolbox into your project.
 
-## Overview
 
-The Mockingbird Toolbox is a set of general-purpose utility code for use in iOS applications.
+## MBToolbox Reference
 
-The Toolbox is the lowest-level module in the Mockingbird open-source project from Gilt Groupe.
-
-The Toolbox includes the following tools, which are compatible with all four Apple platforms—iOS, macOS, tvOS and watchOS—except where noted otherwise:
+The Mockingbird Toolbox includes the following tools, which are compatible with all four Apple platforms—iOS, macOS, tvOS and watchOS—except where noted otherwise:
 
 
 ### Battery & Power Monitoring

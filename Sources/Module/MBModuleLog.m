@@ -8,7 +8,7 @@
 
 #import "MBAvailability.h"
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 #import <UIKit/UIKit.h>
 #endif
 
@@ -127,7 +127,7 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
         _name = moduleName;
         _issuedMessages = [NSMutableSet new];
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(_memoryWarning)
                                                      name:UIApplicationDidReceiveMemoryWarningNotification
@@ -137,7 +137,7 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
     return self;
 }
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 - (void) dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

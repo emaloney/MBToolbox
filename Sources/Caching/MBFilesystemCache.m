@@ -474,7 +474,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
     
     @autoreleasepool {
         @try {
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
             UIApplication* app = [UIApplication sharedApplication];
             _taskID = [app beginBackgroundTaskWithExpirationHandler:^{
                 [app endBackgroundTask:_taskID];
@@ -496,7 +496,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
                 
                 NSUInteger i=0;
                 NSUInteger fileCnt = files.count;
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
                 while (i < fileCnt && _taskID != UIBackgroundTaskInvalid) {
 #else
                 while (i < fileCnt) {
@@ -533,7 +533,7 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
                     i++;
                 }
                 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
                 if (_taskID != UIBackgroundTaskInvalid) {
                     [app endBackgroundTask:_taskID];
                 }

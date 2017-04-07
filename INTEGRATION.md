@@ -5,7 +5,7 @@
 
 This document describes how to integrate MBToolbox into your application.
 
-MBToolbox is designed as a *universal Swift framework* with support for the following platforms within a single binary:
+MBToolbox is designed as a *universal framework* with support for the following platforms within a single binary:
 
 Platform|Latest supported OS|Oldest supported OS
 --------|-------------------|-------------------
@@ -14,7 +14,7 @@ Macintosh|macOS 10.12|macOS 10.11
 Apple TV|tvOS 10.2|tvOS 9.0
 Apple Watch|watchOS 3.2|watchOS 2.0
 
-MBToolbox uses **Swift 3.1** and **requires Xcode 8.3** to compile.
+MBToolbox **requires Xcode 8.3** to compile.
 
 ### Options for integration
 
@@ -23,6 +23,19 @@ There are two supported options for integration:
 - **[Carthage integration](#carthage-integration)** uses the [Carthage](https://github.com/Carthage/Carthage) dependency manager to add MBToolbox to your project.
 
 - **[Manual integration](#manual-integration)** involves embedding the `MBToolbox.xcodeproj` file within your project’s Xcode workspace.
+
+Once properly integrated, you can make use of [the API](https://rawgit.com/emaloney/MBToolbox/master/Documentation/API/index.html) provided by MBToolbox in any Objective-C file using the statement:
+
+```objc
+@import MBToolbox;
+```
+
+You can import the project from Swift with the statement:
+
+```swift
+import MBToolbox
+```
+
 
 ## Carthage Integration
 
@@ -105,13 +118,6 @@ Otherwise, it should go into **Linked Frameworks and Libraries**.
 
 Select the appropriate Build Scheme for your Target, and press `⌘-B` to try to build. If all goes well, your integration was successful!
 
-### You're done!
-
-Once properly integrated, you can make use of [the API](https://rawgit.com/emaloney/MBToolbox/master/Documentation/API/index.html) provided by MBToolbox using the statement:
-
-```swift
-import MBToolbox
-```
 
 ## Manual Integration
 
@@ -160,13 +166,6 @@ Otherwise, it should go into **Linked Frameworks and Libraries**.
 
 Select the appropriate Build Scheme for your Target, and press `⌘-B` to try to build. If all goes well, your integration was successful!
 
-### You're done!
-
-Once properly integrated, you can make use of [the API](https://rawgit.com/emaloney/MBToolbox/master/Documentation/API/index.html) provided by MBToolbox using the statement:
-
-```swift
-import MBToolbox
-```
 
 ## Further Reading
 

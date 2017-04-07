@@ -45,10 +45,10 @@ Then, use the `carthage` command to [update your dependencies](https://github.co
 
 Finally, you’ll need to [integrate MBToolbox into your project](https://github.com/emaloney/MBToolbox/blob/master/INTEGRATION.md) in order to use [the API](https://rawgit.com/emaloney/MBToolbox/master/Documentation/API/index.html) it provides.
 
-Once successfully integrated, just add the following `import` statement to any Swift file where you want to use MBToolbox:
+Once successfully integrated, just add the following statement to any Objective-C file where you want to use MBToolbox:
 
-```swift
-import MBToolbox
+```objc
+@import MBToolbox;
 ```
 
 See [the Integration document](https://github.com/emaloney/MBToolbox/blob/master/INTEGRATION.md) for additional details on integrating MBToolbox into your project.

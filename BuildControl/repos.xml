@@ -12,7 +12,7 @@
 	<Var name="platforms" type="map">
 		<Var name="xcode-8.3" type="map">
 			<Var name="iOS" type="map">
-				<Var name="runDestination" literal="platform=iOS Simulator,OS=10.3,name=iPad Pro (9.7 inch)"/> 
+				<Var name="runDestination" literal="platform=iOS Simulator,OS=10.3,name=iPad Air 2"/> 
 				<Var name="supportsUnitTests" boolean="T"/> 
 			</Var>
 			<Var name="macOS" type="map">
@@ -91,8 +91,14 @@
 	<Var name="project:container" type="dynamic" expression="^if($project:hasWorkspace|$project:workspace|$project:file)"/>
 
 	<Var name="project:framework" type="dynamic" expression="${project:name}.framework"/>
-	<Var name="project:import" type="dynamic" expression="import ${project:name}"/>
-	
+	<Var name="project:language:name" type="dynamic" expression="^if($project:language == ObjC|Objective-C|Swift)"/>
+	<Var name="project:import:swift" type="dynamic" expression="import ${project:name}"/>
+	<Var name="project:import:swift:block" type="dynamic" expression="```swift\n${project:import:swift}\n```"/>
+	<Var name="project:import:objc" type="dynamic" expression="@import ${project:name};"/>
+	<Var name="project:import:objc:block" type="dynamic" expression="```objc\n${project:import:objc}\n```"/>
+	<Var name="project:import" type="dynamic" expression="^if($project:language == ObjC|$project:import:objc|$project:import:swift)"/>
+	<Var name="project:import:block" type="dynamic" expression="^if($project:language == ObjC|$project:import:objc:block|$project:import:swift:block)"/>
+
 	<Var name="project:readme:description" type="dynamic" expression="^selectFirstValue($project:description:formats[markdown]|$project:description:formats[text]|$project:description)"/>
 	<Var name="project:readme:examples:file" type="dynamic" expression="../../${repo:name}/Sources/README.md"/>
 	<Var name="project:readme:examples" type="dynamic" expression="^if(^fileExists($project:readme:examples:file)|^fileContents($project:readme:examples:file))"/>

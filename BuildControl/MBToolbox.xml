@@ -8,8 +8,10 @@
 	<Var name="project:language" literal="ObjC"/>
 	<Var name="project:grouping" literal="Mockingbird"/>
 
-	<Var name="project:description">A stand-alone set of Objective-C utility code for Apple platforms</Var>
+	<Var name="project:description">The Mockingbird Toolbox is an Objective-C-based set of general-purpose utility code for use in iOS, macOS, tvOS and watchOS applications.
 	
+The Mockingbird Toolbox is the lowest-level module in the Gilt Groupe’s open source Mockingbird project.</Var>
+
 	<Var name="project:platforms" type="list">
 		<Var literal="iOS"/>
 		<Var literal="macOS"/>

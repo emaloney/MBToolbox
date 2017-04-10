@@ -44,10 +44,6 @@
 
 	<Var name="xcode:version" type="dynamic" expression="$versions[$branchForVersions][Xcode]"/>
 	<Var name="swift:version" type="dynamic" expression="$versions[$branchForVersions][Swift]"/>
-	<Var name="iOS:version:minimum" type="dynamic" expression="$versions[$branchForVersions][minimum][iOS]"/>
-	<Var name="macOS:version:minimum" type="dynamic" expression="$versions[$branchForVersions][minimum][macOS]"/>
-	<Var name="tvOS:version:minimum" type="dynamic" expression="$versions[$branchForVersions][minimum][tvOS]"/>
-	<Var name="watchOS:version:minimum" type="dynamic" expression="$versions[$branchForVersions][minimum][watchOS]"/>
 	<Var name="project:travisImage" type="dynamic" expression="$versions[$branchForVersions][Travis]"/>
 
 	<Var name="versions" type="map">
@@ -82,6 +78,16 @@
 	<Var name="supports:macOS" type="dynamic" expression="^containsValue($project:platforms|macOS)"/>
 	<Var name="supports:tvOS" type="dynamic" expression="^containsValue($project:platforms|tvOS)"/>
 	<Var name="supports:watchOS" type="dynamic" expression="^containsValue($project:platforms|watchOS)"/>
+
+	<Var name="platform:current:iOS" type="dynamic" expression="^if($project:platform:versions[current][iOS]|$project:platform:versions[current][iOS]|$versions[$repo:branch:settings][current][iOS])"/>
+	<Var name="platform:current:macOS" type="dynamic" expression="^if($project:platform:versions[current][macOS]|$project:platform:versions[current][macOS]|$versions[$repo:branch:settings][current][macOS])"/>
+	<Var name="platform:current:tvOS" type="dynamic" expression="^if($project:platform:versions[current][tvOS]|$project:platform:versions[current][tvOS]|$versions[$repo:branch:settings][current][tvOS])"/>
+	<Var name="platform:current:watchOS" type="dynamic" expression="^if($project:platform:versions[current][watchOS]|$project:platform:versions[current][watchOS]|$versions[$repo:branch:settings][current][watchOS])"/>
+	
+	<Var name="platform:minimum:iOS" type="dynamic" expression="^if($project:platform:versions[minimum][iOS]|$project:platform:versions[minimum][iOS]|$versions[$repo:branch:settings][minimum][iOS])"/>
+	<Var name="platform:minimum:macOS" type="dynamic" expression="^if($project:platform:versions[minimum][macOS]|$project:platform:versions[minimum][macOS]|$versions[$repo:branch:settings][minimum][macOS])"/>
+	<Var name="platform:minimum:tvOS" type="dynamic" expression="^if($project:platform:versions[minimum][tvOS]|$project:platform:versions[minimum][tvOS]|$versions[$repo:branch:settings][minimum][tvOS])"/>
+	<Var name="platform:minimum:watchOS" type="dynamic" expression="^if($project:platform:versions[minimum][watchOS]|$project:platform:versions[minimum][watchOS]|$versions[$repo:branch:settings][minimum][watchOS])"/>
 
 	<Var name="project:version" value="$ENV[FRAMEWORK_VERSION]"/> <!-- expect calling script to set this environment variable -->
 	<Var name="project:version:public" value="$ENV[FRAMEWORK_VERSION_PUBLIC]"/> <!-- expect calling script to set this environment variable -->

@@ -7,6 +7,7 @@
 	<Var name="project:bundlePrefix" literal="com.gilt.mockingbird"/>
 	<Var name="project:language" literal="ObjC"/>
 	<Var name="project:grouping" literal="Mockingbird"/>
+	<Var name="project:skeleton" literal="none"/>
 
 	<Var name="project:description">The Mockingbird Toolbox is an Objective-C-based set of general-purpose utility code for use in iOS, macOS, tvOS and watchOS applications.
 	

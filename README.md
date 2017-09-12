@@ -12,7 +12,7 @@ MBToolbox is part of the Mockingbird Library from [Gilt Tech](http://tech.gilt.c
 
 ### Xcode compatibility
 
-This is the `master` branch. It **requires Xcode 8.3** to compile.
+This is the `master` branch. It **requires Xcode 9.0** to compile.
 
 
 #### Current status

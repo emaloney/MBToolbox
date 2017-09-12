@@ -9,12 +9,12 @@ MBToolbox is designed as a *universal framework* with support for the following 
 
 Platform|Latest supported OS|Oldest supported OS
 --------|-------------------|-------------------
-iPhone/iPad|iOS 10.3|iOS 9.0
-Macintosh|macOS 10.12|macOS 10.11
-Apple TV|tvOS 10.2|tvOS 9.0
-Apple Watch|watchOS 3.2|watchOS 2.0
+iPhone/iPad|iOS 11.0|iOS 9.0
+Macintosh|macOS 10.13|macOS 10.11
+Apple TV|tvOS 11.0|tvOS 9.0
+Apple Watch|watchOS 4.0|watchOS 2.0
 
-MBToolbox **requires Xcode 8.3** to compile.
+MBToolbox **requires Xcode 9.0** to compile.
 
 ### Options for integration
 
@@ -39,7 +39,7 @@ import MBToolbox
 
 ## Carthage Integration
 
-Carthage is a third-party package dependency manager for Apple platforms. As of this writing, the current supported version of Carthage is 0.18.1.
+Carthage is a third-party package dependency manager for Apple platforms. As of this writing, the current supported version of Carthage is 0.25.0.
 
 Installing and using Carthage is beyond the scope of this document. If you do not have Carthage installed but would like to use it, [you can find installation instructions on the project page](https://github.com/Carthage/Carthage#installing-carthage). 
 
@@ -50,12 +50,12 @@ Within to your project’s root directory, Carthage-based projects will store a 
 To integrate MBToolbox in your workspace, you would start by adding the following line to the `Cartfile`:
 
 ```
-github "emaloney/MBToolbox" ~> 3.0.0
+github "emaloney/MBToolbox" ~> 3.1.0
 ```
 
-This specifies that Carthage use the latest version of MBToolbox that is API-compatible with 3.0, i.e. any 3.0.*x* version.
+This specifies that Carthage use the latest version of MBToolbox that is API-compatible with 3.1.0, i.e. any 3.1.*x* version.
 
-**Note:** Be sure to check the [latest releases](https://github.com/emaloney/MBToolbox/releases); there may be a newer version than 3.0 that is no longer API-compatible.
+**Note:** Be sure to check the [latest releases](https://github.com/emaloney/MBToolbox/releases); there may be a newer version than 3.1.0 that is no longer API-compatible.
 
 ### 2. Download MBToolbox using Carthage
 

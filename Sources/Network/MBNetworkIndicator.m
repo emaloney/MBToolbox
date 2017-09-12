@@ -60,10 +60,12 @@ MBImplementSingleton();
     OSAtomicIncrement32Barrier(&_operationCount);
 
     if (_operationCount > 0) {
-        UIApplication* app = [UIApplication sharedApplication];
-        if (!app.networkActivityIndicatorVisible) {
-            app.networkActivityIndicatorVisible = YES;
-        }
+        dispatch_barrier_async(dispatch_get_main_queue(), ^{
+            UIApplication* app = [UIApplication sharedApplication];
+            if (!app.networkActivityIndicatorVisible) {
+                app.networkActivityIndicatorVisible = YES;
+            }
+        });
     }
     if (_operationCount == 1) {
         [MBEvents postEvent:kMBNetworkActivityStartedEvent fromSender:self];
@@ -89,10 +91,12 @@ MBImplementSingleton();
     if (_operationCount == 0) {
         [MBEvents postEvent:kMBNetworkActivityFinishedEvent fromSender:self];
 
-        UIApplication* app = [UIApplication sharedApplication];
-        if (app.networkActivityIndicatorVisible) {
-            app.networkActivityIndicatorVisible = NO;
-        }
+        dispatch_barrier_async(dispatch_get_main_queue(), ^{
+            UIApplication* app = [UIApplication sharedApplication];
+            if (app.networkActivityIndicatorVisible) {
+                app.networkActivityIndicatorVisible = NO;
+            }
+        });
     }
 
     MBLogDebug(@"Current operation count: %d", _operationCount);

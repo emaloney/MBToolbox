@@ -141,7 +141,7 @@
             programming error within the instantiator block.
  */
 + (nonnull id) cachedValueForClass:(nonnull Class)cls
-                 usingInstantiator:(__nonnull id (^ __nonnull)())instantiator;
+                 usingInstantiator:(__nonnull id (^ __nonnull)(void))instantiator;
 
 /*!
  Allows use of thread-local storage as a lock-free cache. If the requested
@@ -171,7 +171,7 @@
  */
 + (nonnull id) cachedValueForClass:(nonnull Class)cls
                            withKey:(nullable NSString*)key
-                 usingInstantiator:(__nonnull id (^ __nonnull)())instantiator;
+                 usingInstantiator:(__nonnull id (^ __nonnull)(void))instantiator;
 
 @end
 

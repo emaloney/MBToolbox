@@ -36,7 +36,7 @@
 #pragma mark Reading
 /******************************************************************************/
 
-- (void) read:(nonnull void (^)())op
+- (void) read:(nonnull void (^)(void))op
 {
     dispatch_sync(_queue, op);
 }
@@ -45,7 +45,7 @@
 #pragma mark Writing
 /******************************************************************************/
 
-- (void) enqueueWrite:(nonnull void (^)())op
+- (void) enqueueWrite:(nonnull void (^)(void))op
 {
     dispatch_barrier_async(_queue, op);
 }

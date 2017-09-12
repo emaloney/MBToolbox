@@ -72,14 +72,14 @@
 }
 
 + (nonnull id) cachedValueForClass:(nonnull Class)cls
-                 usingInstantiator:(__nonnull id (^ __nonnull)())instantiator
+                 usingInstantiator:(__nonnull id (^ __nonnull)(void))instantiator
 {
     return [self cachedValueForClass:cls withKey:nil usingInstantiator:instantiator];
 }
 
 + (nonnull id) cachedValueForClass:(nonnull Class)cls
                            withKey:(nullable NSString*)key
-                 usingInstantiator:(__nonnull id (^ __nonnull)())instantiator
+                 usingInstantiator:(__nonnull id (^ __nonnull)(void))instantiator
 {
     MBLogDebugTrace();
     

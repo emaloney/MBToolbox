@@ -305,7 +305,9 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 - (nullable NSData*) cacheDataFromObject:(nonnull id)cacheObj
 {
     NSData* cacheData = nil;
-    if ([_cacheDelegate respondsToSelector:kCacheDelegateSelectorCacheDataFromObject]) {
+    if (_cacheDelegate
+        && _cacheDelegate != self
+        && [_cacheDelegate respondsToSelector:kCacheDelegateSelectorCacheDataFromObject]) {
         cacheData = [_cacheDelegate cacheDataFromObject:cacheObj];
     }
     else {
@@ -318,7 +320,10 @@ const NSTimeInterval kMBFilesystemCacheDefaultMaxAge    = 129600;       // 36 ho
 
 - (nullable id) objectFromCacheData:(nonnull NSData*)cacheData
 {
-    if ([_cacheDelegate respondsToSelector:kCacheDelegateSelectorObjectFromCacheData]) {
+    if (_cacheDelegate
+        && _cacheDelegate != self
+        && [_cacheDelegate respondsToSelector:kCacheDelegateSelectorObjectFromCacheData])
+    {
         return [_cacheDelegate objectFromCacheData:cacheData];
     }
     return cacheData;

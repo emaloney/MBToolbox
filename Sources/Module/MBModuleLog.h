@@ -114,6 +114,21 @@ typedef NS_ENUM(NSUInteger, MBLogSeverity) {
 + (void) setLogRecorderClass:(nullable Class<MBModuleLogRecorder>)logRecorderClass;
 
 /*!
+ Sets the logger class used to log messages through `MBModuleLog`. By
+ default, `MBModuleLog` is the logger class, unless overridden by a call
+ to this method.
+
+ @param     logRecorderClass The `Class` implementing `MBModuleLogRecorder` that
+            should be used as the logger. If `nil` is passed, the value is
+            reset to the default of `MBModuleLog`.
+
+ @param     completion A callback executed after `logRecorderClass` becomes
+            operative.
+ */
++ (void) setLogRecorderClass:(nullable Class<MBModuleLogRecorder>)logRecorderClass
+                  completion:(nullable void (^)(void))completion;
+
+/*!
  Returns the logger class used to log messages through `MBModuleLog`.
  */
 + (nonnull Class<MBModuleLogRecorder>) logRecorderClass;

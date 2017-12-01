@@ -21,7 +21,6 @@
 #define DEBUG_LOCAL     0
 
 static Class<MBModuleLogRecorder> s_logger = nil;
-static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 
 /******************************************************************************/
 #pragma mark -
@@ -37,7 +36,6 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 + (void) initialize
 {
     if (self == [MBModuleLog class]) {
-        s_readerWriter = [MBConcurrentReadWriteCoordinator new];
         s_logger = self;
     }
 }
@@ -49,23 +47,23 @@ static MBConcurrentReadWriteCoordinator* s_readerWriter = nil;
 
 + (void) setLogRecorderClass:(nullable Class<MBModuleLogRecorder>)logRecorderClass
 {
-    [s_readerWriter enqueueWrite:^{
-        if (logRecorderClass) {
-            s_logger = logRecorderClass;
-        } else {
-            s_logger = [MBModuleLog class];
-        }
-        [s_logger enable];
-    }];
+    return [self setLogRecorderClass:logRecorderClass completion:nil];
+}
+
++ (void) setLogRecorderClass:(nullable Class<MBModuleLogRecorder>)logRecorderClass
+                  completion:(nullable void (^)(void))completion
+{
+    if (logRecorderClass) {
+        s_logger = logRecorderClass;
+    } else {
+        s_logger = [MBModuleLog class];
+    }
+    [s_logger enable];
 }
 
 + (nonnull Class<MBModuleLogRecorder>) logRecorderClass
 {
-    __block Class<MBModuleLogRecorder> logger = nil;
-    [s_readerWriter read:^{
-        logger = s_logger;
-    }];
-    return logger;
+    return s_logger;
 }
 
 + (nonnull NSString*) logTagForSeverity:(MBLogSeverity)severity
